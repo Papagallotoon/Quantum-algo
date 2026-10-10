@@ -491,7 +491,7 @@
    }
   }
  },
- "createdAt": "2026-10-10T19:25:14.502Z",
+ "createdAt": "2026-10-10T19:29:09.365Z",
  "universe": 66,
  "summary": "Modèle ré-entraîné le 10/10 sur 66 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
@@ -766,6 +766,17 @@
  },
  "newsletter": {
   "lastSent": null,
-  "channels": []
+  "channels": [],
+  "diag": {
+   "SMTP_HOST": "present",
+   "SMTP_PORT": "present",
+   "SMTP_USER": "present",
+   "SMTP_PASS": "present",
+   "MAIL_TO": "absent",
+   "BREVO_API_KEY": "absent",
+   "CALLMEBOT_PHONE": "absent",
+   "CALLMEBOT_APIKEY": "absent",
+   "event": "workflow_dispatch"
+  }
  }
 }
