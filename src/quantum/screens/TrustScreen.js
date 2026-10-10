@@ -2,7 +2,7 @@
 // Aucun chiffre ici n'est invente : sans donnees du serveur, l'ecran le dit.
 
 import React from "react";
-import { View, Text, ScrollView, Pressable, RefreshControl } from "react-native";
+import { View, Text, ScrollView, Pressable, RefreshControl, Linking } from "react-native";
 import { C, T } from "../theme";
 import { useBrain } from "../Brain";
 import { HORIZON_KEYS, HORIZON_LABEL } from "../core/model.js";
@@ -58,6 +58,46 @@ export default function TrustScreen(props) {
           {b.status === "en ligne" ? "Synchronise avec le serveur." : b.status === "hors ligne" ? "Derniere version enregistree sur le telephone (hors ligne)." : "Serveur pas encore joignable" + (b.error ? " (" + b.error + ")" : "") + ". Voir server/README.md pour l'activer."}
         </Text>
       </Card>
+
+      {sg && (sg.brief || (sg.agenda && sg.agenda.today && sg.agenda.today.length) || (sg.news && sg.news.length)) ? (
+        <Card>
+          <Label>AUJOURD'HUI</Label>
+          {(sg.brief || []).map(function (b, i) {
+            return <Text key={"b" + i} style={[T.sans(11.5, "400"), { color: "rgba(232,234,236,0.8)", lineHeight: 17, marginBottom: 4 }]}>{"\u2022 " + b}</Text>;
+          })}
+          {sg.agenda && sg.agenda.today && sg.agenda.today.length ? (
+            <View style={{ marginTop: 8 }}>
+              <Text style={[T.mono(9, "500"), { color: C.dimmer, letterSpacing: 1.2, marginBottom: 6 }]}>AGENDA ECONOMIQUE (HEURE DE PARIS)</Text>
+              {sg.agenda.today.map(function (e, i) {
+                return (
+                  <View key={"a" + i} style={{ flexDirection: "row", gap: 10, paddingVertical: 5 }}>
+                    <Text style={[T.mono(11), { color: C.text, width: 44 }]}>{e.time}</Text>
+                    <Text style={[T.sans(11.5, "500"), { color: C.text, flex: 1 }]}>{(e.flag || "") + " " + e.title}</Text>
+                    <Text style={[T.mono(9.5), { color: e.impact === "fort" ? C.down : C.dim }]}>{e.impact.toUpperCase()}</Text>
+                  </View>
+                );
+              })}
+            </View>
+          ) : null}
+          {sg.earnings && sg.earnings.today && sg.earnings.today.length ? (
+            <Text style={[T.sans(11.5, "500"), { color: C.text, marginTop: 8 }]}>{"Resultats aujourd'hui : " + sg.earnings.today.map(function (e) { return e.name; }).join(", ")}</Text>
+          ) : null}
+          {sg.news && sg.news.length ? (
+            <View style={{ marginTop: 10 }}>
+              <Text style={[T.mono(9, "500"), { color: C.dimmer, letterSpacing: 1.2, marginBottom: 6 }]}>ACTUALITES A SURVEILLER</Text>
+              {sg.news.slice(0, 6).map(function (n, i) {
+                var c = n.tone === "positif" ? C.up : n.tone === "négatif" ? C.down : C.dim;
+                return (
+                  <Pressable key={"n" + i} onPress={function () { Linking.openURL(n.link).catch(function () {}); }} style={{ paddingVertical: 6, borderBottomWidth: 1, borderBottomColor: C.borderSoft }}>
+                    <Text style={[T.sans(12, "500"), { color: C.text, lineHeight: 17 }]}>{n.title}</Text>
+                    <Text style={[T.mono(9, "500"), { color: c, marginTop: 3 }]}>{(n.tone || "neutre").toUpperCase() + "  " + (n.source || "")}</Text>
+                  </Pressable>
+                );
+              })}
+            </View>
+          ) : null}
+        </Card>
+      ) : null}
 
       {sg && sg.picks && sg.picks.length ? (
         <Card>

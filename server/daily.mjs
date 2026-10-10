@@ -16,7 +16,8 @@ import { HORIZONS, HORIZON_KEYS, DEFAULT_MODEL, sigmaAt } from "../src/quantum/c
 import { evaluateAll, buildPlan, bestHorizon } from "../src/quantum/core/plan.js";
 import { trainAll } from "../src/quantum/core/learn.js";
 import { INDEX_DEFS, COMPONENTS, NEWS_NAMES, INDEX_QUERY } from "../src/quantum/core/universe.js";
-import { fetchMany, fetchHeadlines } from "./lib/fetch.mjs";
+import { fetchMany, fetchCandles } from "./lib/fetch.mjs";
+import { fetchAgenda, fetchFundamentals, fetchNasdaqEarnings, fetchNews, dedupeNews, parisDay } from "./lib/extras.mjs";
 import { buildLetter } from "./lib/letter.mjs";
 import { sendAll, channelsConfigured } from "./lib/send.mjs";
 
@@ -154,16 +155,41 @@ for (const it of items) {
   rows.push({ it, i, evals, plan, rank: (plan.pUp - 0.5) * rel, cur: it.c.currency });
 }
 const active = new Set(["ENTRER", "ATTENDRE_REPLI", "ATTENDRE_CONFIRMATION"]);
+// ---- details par valeur (perf, niveaux, moteurs du signal) ----
+const pct = (a, b) => (b ? (a / b - 1) * 100 : null);
+function details(r) {
+  const C = r.it.close, H = r.it.c.high, L = r.it.c.low, i = r.i, T = r.it.time;
+  const yearStart = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
+  let y0 = T.findIndex((t) => t >= yearStart); if (y0 < 1) y0 = 1;
+  const val = (id) => { const x = r.it.all.find((a) => a.id === id); return x ? x.value[i] : null; };
+  const hm = model.horizons[r.plan.horizon] || {};
+  const contrib = r.it.all.filter((a) => a.sig).map((a) => {
+    const sgn = a.sig[i]; const w = hm.weights ? (hm.weights[a.id] || 0) : 1;
+    return { name: a.name, c: (Number.isFinite(sgn) ? sgn : 0) * w };
+  }).filter((x) => x.c !== 0).sort((a, b) => b.c - a.c);
+  return {
+    perf: { w1: pct(C[i], C[i - 5]), m1: pct(C[i], C[i - 21]), m3: pct(C[i], C[i - 63]), ytd: pct(C[i], C[y0 - 1]) },
+    support: Math.min(...L.slice(i - 19, i + 1)), resistance: Math.max(...H.slice(i - 19, i + 1)),
+    sma50: val("sma50"), sma200: val("sma200"), rsi: val("rsi14"), vol: val("hv30"), rs63: val("rs63"),
+    pros: contrib.slice(0, 3).map((x) => x.name), cons: contrib.slice(-2).filter((x) => x.c < 0).reverse().map((x) => x.name),
+    why: r.plan.why || [],
+  };
+}
 const toPick = (r) => ({
   sym: r.it.sym, name: names[r.it.sym], h: r.plan.horizon, action: r.plan.action, actionLabel: r.plan.actionLabel,
   pUp: r.plan.pUp, expPct: r.plan.expPct, start: r.plan.start, zoneLo: r.plan.zoneLo, zoneHi: r.plan.zoneHi,
   stop: r.plan.stop, target: r.plan.target, rr: r.plan.rr, pTarget: r.plan.pTarget, holdDays: r.plan.holdDays,
   reviewDate: r.plan.reviewDate, validUntil: r.plan.validUntil, cur: r.cur, expectancy: r.plan.expectancy,
+  price: r.it.close[r.i], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]), sizePct: r.plan.sizePct, riskPct: r.plan.riskPct, gainPct: r.plan.gainPct,
+  ...details(r),
 });
 const picks = rows.filter((r) => active.has(r.plan.action) && (r.plan.expectancy ?? 0) > 0)
   .sort((a, b) => b.rank - a.rank).slice(0, config.maxPicks || 5).map(toPick);
 const avoid = rows.filter((r) => r.plan.action === "EVITER").sort((a, b) => a.rank - b.rank).slice(0, config.maxAvoid || 3).map(toPick);
 const watch = (config.watchlist || []).map((s) => rows.find((r) => r.it.sym === s)).filter(Boolean).map(toPick);
+// plus forts mouvements de la derniere seance dans l'univers suivi
+const moves = rows.map((r) => ({ sym: r.it.sym, name: names[r.it.sym], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]) })).filter((m) => Number.isFinite(m.chg)).sort((a, b) => b.chg - a.chg);
+const movers = { up: moves.slice(0, 3), down: moves.slice(-3).reverse() };
 const pickSet = new Set(picks.map((p) => p.sym + "|" + p.h));
 
 // une ligne de journal par valeur et par horizon (dedoublonnee si relance le meme jour)
@@ -185,6 +211,7 @@ const indices = INDEX_DEFS.filter((d) => !d.list && bySym[d.symbol]).map((d) => 
   return {
     id: d.id, label: d.label, price: it.close[i], chg: (it.close[i] / it.close[i - 1] - 1) * 100,
     p1S: evals["1S"].pUp, p1M: evals["1M"].pUp, trend: it.close[i] > s200 ? "au-dessus SMA 200" : "sous SMA 200",
+    w1: pct(it.close[i], it.close[i - 5]), m1: pct(it.close[i], it.close[i - 21]),
   };
 });
 
@@ -211,13 +238,72 @@ const track = {
 };
 
 const dateLabel = today.toLocaleDateString("fr-FR", { weekday: "long", day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Paris" });
-const signals = { date: iso, dateLabel, picks, avoid, indices };
+// ---------------------------------------------------------------------------
+// 6. Contexte du jour : agenda, resultats, marches, actualites
+// ---------------------------------------------------------------------------
+const CONTEXT = [
+  ["^VIX", "VIX (peur à Wall Street)"], ["^STOXX50E", "Euro Stoxx 50"], ["EURUSD=X", "Euro / dollar"],
+  ["BZ=F", "Pétrole Brent"], ["GC=F", "Or"], ["^TNX", "Taux US 10 ans"], ["BTC-USD", "Bitcoin"],
+];
+let agenda = { today: [], tomorrow: [] }, fundamentals = {}, context = [], marketNews = [], earnings = { today: [], week: [] };
+if (!FAKE) {
+  const pday = parisDay();
+  [agenda, fundamentals] = await Promise.all([fetchAgenda(pday), fetchFundamentals(stocks)]);
+  log(`agenda : ${agenda.ok ? agenda.today.length + " annonces aujourd'hui" : "indisponible (" + agenda.error + ")"} | donnees de fond : ${fundamentals.__error ? "indisponibles (" + fundamentals.__error + ")" : Object.keys(fundamentals).length + " valeurs"}`);
+  for (const [sym, label] of CONTEXT) {
+    try {
+      const c = await fetchCandles(sym, "3mo");
+      const n = c.close.length - 1;
+      context.push({ sym, label, last: c.close[n], chg: pct(c.close[n], c.close[n - 1]), m1: pct(c.close[n], c.close[Math.max(0, n - 21)]) });
+    } catch (e) { /* source facultative */ }
+  }
+  // resultats d'entreprises de l'univers suivi
+  const now = Date.now();
+  for (const s of stocks) {
+    const f = fundamentals[s];
+    if (!f || !f.earnings) continue;
+    const e = { sym: s, name: names[s], date: f.earnings, estimate: f.earningsEstimate };
+    const ed = parisDay(new Date(f.earnings));
+    if (ed === pday) earnings.today.push(e);
+    else if (ed > pday && f.earnings <= now + 7 * 86400e3) earnings.week.push(e);
+  }
+  if (fundamentals.__error) {
+    const us = new Set(stocks.filter((s) => !s.includes(".")));
+    for (const r of await fetchNasdaqEarnings(pday)) if (us.has(r.sym)) earnings.today.push({ sym: r.sym, name: names[r.sym], when: r.when });
+  }
+  earnings.week.sort((a, b) => a.date - b.date);
+  // fond + alerte resultats sur les selections
+  for (const p of [...picks, ...avoid, ...watch]) {
+    const f = fundamentals[p.sym];
+    if (!f) continue;
+    p.fund = { pe: f.pe, fpe: f.fpe, yield: f.yield, rating: f.rating, target: f.target, hi52: f.hi52, lo52: f.lo52 };
+    if (f.earnings && f.earnings > Date.now() && p.reviewDate && f.earnings <= new Date(p.reviewDate).getTime()) {
+      p.earningsWarning = `Résultats prévus le ${new Date(f.earnings).toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" })}${f.earningsEstimate ? " (date estimée)" : ""} : risque de forte variation pendant la position.`;
+    }
+  }
+  // actualites
+  const qs = ["Bourse de Paris CAC 40", "Wall Street Bourse", "BCE OR Fed taux d'intérêt", "pétrole OR dollar marchés"];
+  marketNews = dedupeNews((await Promise.all(qs.map((q) => fetchNews(q, 4)))).flat()).sort((a, b) => (b.time || 0) - (a.time || 0)).slice(0, 8);
+  for (const p of [...picks, ...watch]) p.news = await fetchNews((NEWS_NAMES[p.sym] || p.name) + " action", 2);
+}
+const vix = context.find((c) => c.sym === "^VIX");
+const mood = !vix ? null : vix.last < 15 ? "calme" : vix.last < 20 ? "normal" : vix.last < 30 ? "nerveux" : "en stress";
+const brief = [];
+if (vix) brief.push(`Climat de marché ${mood} (VIX ${vix.last.toFixed(1).replace(".", ",")}${vix.chg != null ? ", " + (vix.chg >= 0 ? "+" : "") + vix.chg.toFixed(1).replace(".", ",") + " % la veille" : ""}).`);
+const hi = agenda.today.filter((e) => e.impact === "fort");
+if (hi.length) brief.push(`${hi.length} annonce(s) à fort impact aujourd'hui, la première à ${hi[0].time} (${hi[0].title}, ${hi[0].country}) : volatilité possible autour de ces horaires.`);
+else if (agenda.ok) brief.push("Pas d'annonce macroéconomique majeure aujourd'hui.");
+if (earnings.today.length) brief.push(`Résultats aujourd'hui : ${earnings.today.map((e) => e.name).join(", ")}.`);
+const upIdx = indices.filter((x) => x.p1M >= 0.53).length, dnIdx = indices.filter((x) => x.p1M <= 0.47).length;
+brief.push(upIdx > dnIdx ? `Les indices penchent légèrement à la hausse à 1 mois (${upIdx} sur ${indices.length}).` : dnIdx > upIdx ? `Les indices penchent à la baisse à 1 mois (${dnIdx} sur ${indices.length}).` : "Pas de tendance nette des indices à 1 mois.");
+brief.push(picks.length ? `${picks.length} opportunité(s) retenue(s), surtout sur ${[...new Set(picks.map((p) => p.h))].map((h) => ({ "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" })[h]).join(" / ")}.` : "Aucune opportunité suffisamment solide aujourd'hui.");
+
+const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, news: marketNews };
 
 // ---------------------------------------------------------------------------
-// 6. Newsletter
+// 7. Newsletter
 // ---------------------------------------------------------------------------
-const headlines = FAKE ? [] : (await fetchHeadlines(INDEX_QUERY.cac + " ouverture", 3)).concat(await fetchHeadlines("Wall Street Bourse", 2));
-const letter = buildLetter({ dateLabel, indices, picks, avoid, watch, track, modelInfo: model, headlines, failed: Object.keys(failed) });
+const letter = buildLetter({ dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
 fs.writeFileSync(path.join(OUT, "newsletter.html"), letter.html);
 fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);
 
