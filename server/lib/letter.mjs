@@ -30,42 +30,54 @@ function newsList(items, small) {
   }).join("")}</ul>`;
 }
 
-function pickCard(p) {
-  const f = p.fund || {};
-  const perf = p.perf || {};
-  const fund = [
-    ok(f.pe) ? `PER ${f1(f.pe)}` : null,
-    ok(f.yield) ? `rendement ${f1(f.yield)} %` : null,
-    f.rating ? `analystes : ${esc(String(f.rating).replace("Strong Buy", "achat fort").replace("Buy", "achat").replace("Hold", "conserver").replace("Underperform", "sous-performance").replace("Sell", "vente"))}` : null,
-    ok(f.target) ? `objectif moyen ${f2(f.target)}` : null,
-  ].filter(Boolean).join(" · ");
+const ACTION = {
+  ENTRER: { t: "ACHETER", bg: "#dcfce7", c: "#166534", how: "Acheter dès l'ouverture" },
+  ATTENDRE_REPLI: { t: "ATTENDRE UN REPLI", bg: "#fef3c7", c: "#92400e", how: "Placer un ordre d'achat plus bas" },
+  ATTENDRE_CONFIRMATION: { t: "ATTENDRE LA CONFIRMATION", bg: "#fef3c7", c: "#92400e", how: "Acheter seulement si le cours dépasse le seuil" },
+};
+const rating = (r) => (!r ? null : String(r).replace(/^[\d.]+\s*-\s*/, "").replace("Strong Buy", "achat fort").replace("Buy", "achat").replace("Hold", "conserver").replace("Underperform", "sous-performance").replace("Sell", "vente"));
+const box = (label, value, sub, color, bg) => `<td style="width:33%;padding:4px"><div style="background:${bg};border-radius:10px;padding:10px 8px;text-align:center">
+  <div style="font-size:10px;letter-spacing:1px;color:${color};font-weight:700">${label}</div>
+  <div style="font-size:17px;font-weight:700;color:#111827;margin-top:3px">${value}</div>
+  <div style="font-size:11px;color:${color};margin-top:1px">${sub}</div></div></td>`;
+
+function pickCard(p, n) {
+  const a = ACTION[p.action] || { t: p.actionLabel.toUpperCase(), bg: "#f3f4f6", c: GREY, how: p.start };
+  const f = p.fund || {}, perf = p.perf || {};
+  const entry = p.action === "ATTENDRE_CONFIRMATION" ? `> ${f2(p.zoneLo)}` : `${f2(p.zoneLo)}–${f2(p.zoneHi)}`;
+  const sentence = p.action === "ENTRER"
+    ? `Acheter autour de <b>${f2(p.price)}</b>, viser <b>${f2(p.target)}</b>, sortir si le cours passe sous <b>${f2(p.stop)}</b>.`
+    : p.action === "ATTENDRE_REPLI"
+      ? `Ne pas acheter au cours actuel (${f2(p.price)}). Ordre d'achat entre <b>${f2(p.zoneLo)}</b> et <b>${f2(p.zoneHi)}</b>, valable jusqu'au ${dShort(p.validUntil)}.`
+      : `Acheter seulement si le cours clôture au-dessus de <b>${f2(p.zoneLo)}</b> d'ici le ${dShort(p.validUntil)}. Sinon, on oublie.`;
+  const details = [
+    `Perf. 1 mois ${sp1(perf.m1)} · 3 mois ${sp1(perf.m3)} · depuis janv. ${sp1(perf.ytd)}`,
+    `Support ${f2(p.support)} · résistance ${f2(p.resistance)} · RSI ${f1(p.rsi)}`,
+    [ok(f.pe) ? `PER ${f1(f.pe)}` : null, ok(f.yield) ? `rendement ${f1(f.yield)} %` : null, rating(f.rating) ? `analystes : ${rating(f.rating)}` : null, ok(f.target) ? `objectif analystes ${f2(f.target)}` : null].filter(Boolean).join(" · "),
+  ].filter(Boolean);
+  const reason = p.pros?.length ? `Signaux favorables : ${p.pros.slice(0, 3).join(", ")}.` : "";
   return `
-  <div style="border:1px solid #e5e7eb;border-radius:12px;padding:12px 14px;margin:12px 0">
+  <div style="border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin:14px 0">
     <table style="width:100%;border-collapse:collapse"><tr>
-      <td><b style="font-size:16px">${esc(p.name)}</b><div style="font-size:12px;color:${GREY}">${esc(p.sym)} · ${f2(p.price)} ${esc(p.cur)} (${sp(p.chg)} hier)</div></td>
-      <td style="text-align:right;vertical-align:top"><div style="color:${GREEN};font-weight:700;font-size:16px">${pc(p.pUp)}</div><div style="font-size:11px;color:${GREY}">de hausse sur ${HL[p.h]}</div></td>
+      <td style="vertical-align:top"><div style="font-size:12px;color:${GREY}">#${n} · ${esc(p.sym)}</div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div></td>
+      <td style="text-align:right;vertical-align:top"><div style="font-size:20px;font-weight:800;color:${GREEN}">${pc(p.pUp)}</div><div style="font-size:11px;color:${GREY}">chance de hausse</div></td>
     </tr></table>
-    <div style="margin:8px 0;padding:8px 10px;border-radius:8px;background:#f0fdf4;font-size:13px"><b>${esc(p.actionLabel)}</b> — ${esc(p.start)}</div>
-    ${p.earningsWarning ? `<div style="margin:6px 0;padding:7px 10px;border-radius:8px;background:#fffbeb;color:${AMBER};font-size:12px">⚠ ${esc(p.earningsWarning)}</div>` : ""}
-    <table style="width:100%;border-collapse:collapse">
-      ${row("Zone d'entrée", `${f2(p.zoneLo)} – ${f2(p.zoneHi)} ${esc(p.cur)} <span style="color:${GREY}">(ordre valable jusqu'au ${dShort(p.validUntil)})</span>`)}
-      ${row("Stop de protection", `<span style="color:${RED}">${f2(p.stop)}</span> <span style="color:${GREY}">(-${f1(p.riskPct)} %)</span>`)}
-      ${row("Objectif", `<span style="color:${GREEN}">${f2(p.target)}</span> <span style="color:${GREY}">(+${f1(p.gainPct)} %, gain/risque ${f1(p.rr)})</span>`)}
-      ${row("Objectif atteint avant le stop", `${pc(p.pTarget)} des scénarios simulés`)}
-      ${row("Durée", `${p.holdDays} séances, réévaluer le ${dShort(p.reviewDate)}`)}
-      ${row("Taille pour risquer 1 % du capital", `${Math.round(p.sizePct || 0)} % du capital`)}
-      ${row("Performance", `1 sem. ${sp1(perf.w1)} · 1 mois ${sp1(perf.m1)} · 3 mois ${sp1(perf.m3)} · depuis janv. ${sp1(perf.ytd)}`)}
-      ${row("Niveaux clés (20 j)", `support ${f2(p.support)} · résistance ${f2(p.resistance)}`)}
-      ${row("Moyennes", `SMA 50 ${f2(p.sma50)} · SMA 200 ${f2(p.sma200)}`)}
-      ${row("RSI · volatilité", `${f1(p.rsi)} · ${f1(p.vol)} %/an${ok(p.rs63) ? ` · vs indice 3 mois ${sp1(p.rs63)}` : ""}`)}
-      ${fund ? row("Fondamentaux", fund) : ""}
-    </table>
-    <div style="font-size:12px;margin-top:8px;line-height:1.45">
-      ${p.pros?.length ? `<div><span style="color:${GREEN};font-weight:600">Ce qui pousse :</span> ${esc(p.pros.join(", "))}</div>` : ""}
-      ${p.cons?.length ? `<div><span style="color:${RED};font-weight:600">Ce qui freine :</span> ${esc(p.cons.join(", "))}</div>` : ""}
-      ${(p.why || []).map((w) => `<div style="color:#4b5563">• ${esc(w)}</div>`).join("")}
+    <div style="margin:10px 0 8px"><span style="display:inline-block;background:${a.bg};color:${a.c};font-weight:800;font-size:12px;letter-spacing:.5px;padding:5px 10px;border-radius:999px">${a.t}</span>
+      <span style="font-size:12px;color:${GREY};margin-left:6px">horizon ${HL[p.h]} · revoir le ${dShort(p.reviewDate)}</span></div>
+    <div style="font-size:14px;line-height:1.45;margin-bottom:8px">${sentence}</div>
+    <table style="width:100%;border-collapse:collapse"><tr>
+      ${box("ENTRÉE", entry, esc(p.cur), "#1d4ed8", "#eff6ff")}
+      ${box("OBJECTIF", f2(p.target), "+" + f1(p.gainPct) + " %", GREEN, "#f0fdf4")}
+      ${box("STOP", f2(p.stop), "-" + f1(p.riskPct) + " %", RED, "#fef2f2")}
+    </tr></table>
+    <div style="font-size:12px;color:#374151;margin-top:8px;line-height:1.5">
+      🎯 Objectif atteint avant le stop dans <b>${pc(p.pTarget)}</b> des scénarios · gain/risque <b>${f1(p.rr)}</b><br>
+      💶 Mise conseillée : <b>${Math.round(p.sizePct || 0)} %</b> du capital maximum (pour ne perdre que 1 % si le stop est touché)
     </div>
-    ${p.news?.length ? `<div style="margin-top:8px;font-size:11px;color:${GREY};font-weight:600">ACTUALITÉ</div>${newsList(p.news, true)}` : ""}
+    ${p.earningsWarning ? `<div style="margin-top:8px;padding:7px 10px;border-radius:8px;background:#fffbeb;color:${AMBER};font-size:12px">⚠ ${esc(p.earningsWarning)}</div>` : ""}
+    ${reason ? `<div style="font-size:12px;color:#374151;margin-top:8px">✔ ${esc(reason)}</div>` : ""}
+    <div style="font-size:11px;color:#9ca3af;margin-top:8px;line-height:1.5;border-top:1px solid #f1f3f5;padding-top:6px">${details.map(esc).join("<br>")}</div>
+    ${p.news?.length ? `<div style="margin-top:4px">${newsList(p.news.slice(0, 1), true)}</div>` : ""}
   </div>`;
 }
 
@@ -101,7 +113,7 @@ export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, tr
 
   parts.push(card("Les indices", `<table style="width:100%;border-collapse:collapse"><tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("Hausse 1 sem.", true)}${th("Hausse 1 mois", true)}${th("Tendance")}</tr>${indices.map((x) => `<tr>${td(`<b>${esc(x.label)}</b>`)}${td(sp(x.chg), `text-align:right;color:${cchg(x.chg)}`)}${td(sp1(x.w1), "text-align:right")}${td(pc(x.p1S), `text-align:right;color:${col(x.p1S)};font-weight:600`)}${td(pc(x.p1M), `text-align:right;color:${col(x.p1M)};font-weight:600`)}${td(`<span style="font-size:12px">${esc(x.trend)}</span>`)}</tr>`).join("")}</table>`, "Probabilités calibrées sur l'historique : 50 % = pas d'avis."));
 
-  parts.push(card("Opportunités du jour", picks.length ? picks.map(pickCard).join("") : `<p style="color:${GREY}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</p>`, "Classées par avantage statistique, pondéré par la fiabilité mesurée du modèle sur l'horizon."));
+  parts.push(card("Opportunités du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<p style="color:${GREY}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</p>`, "De la plus solide à la moins solide. Entrée, objectif et stop sont des prix en devise de cotation."));
 
   if (avoid.length) parts.push(card("À éviter / alléger", `<table style="width:100%;border-collapse:collapse"><tr>${th("Valeur")}${th("Hausse", true)}${th("Horizon")}${th("Si détenue")}</tr>${avoid.map((p) => `<tr>${td(`<b>${esc(p.name)}</b><div style="font-size:11px;color:#9ca3af">1 mois ${sp1(p.perf?.m1)}</div>`)}${td(pc(p.pUp), `text-align:right;color:${RED};font-weight:600`)}${td(HL[p.h])}${td("protection sous " + f2(p.stop))}</tr>`).join("")}</table>`));
 
