@@ -29,7 +29,7 @@ git init
 git add .
 git commit -m "Quantum Algo v6"
 git branch -M main
-git remote add origin https://github.com/Papagallotoon/QA.git
+git remote add origin https://github.com/Papagallotoon/Quantum-algo.git
 git push -u origin main --force
 ```
 
