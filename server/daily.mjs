@@ -25,7 +25,8 @@ const OUT = path.join(HERE, "out");
 const args = new Set(process.argv.slice(2));
 const FAKE = args.has("--fake");
 const NO_SEND = args.has("--no-send") || process.env.DRY_RUN === "1";
-const FORCE_SEND = args.has("--force-send");
+// un lancement manuel (bouton "Run workflow") envoie la lettre meme le week-end
+const FORCE_SEND = args.has("--force-send") || process.env.GITHUB_EVENT_NAME === "workflow_dispatch";
 fs.mkdirSync(OUT, { recursive: true });
 
 const readJson = (f, d) => { try { return JSON.parse(fs.readFileSync(path.join(OUT, f), "utf8")); } catch { return d; } };
