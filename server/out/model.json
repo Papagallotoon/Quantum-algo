@@ -491,19 +491,19 @@
    }
   }
  },
- "createdAt": "2026-10-10T15:52:56.257Z",
+ "createdAt": "2026-10-10T15:56:02.875Z",
  "universe": 66,
- "summary": "Modèle ré-entraîné le 10/10 sur 66 valeurs et ~3 ans d'historique ; 4 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 10/10 sur 66 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
    "samples": 36074,
    "train": 28275,
    "val": 7733,
-   "configChanged": true,
-   "from": "vote",
+   "configChanged": false,
+   "from": 0.5,
    "to": 0.5,
    "bestIc": -0.0215,
-   "championIc": -0.0366,
+   "championIc": -0.0215,
    "configs": [
     {
      "alpha": "vote",
@@ -566,11 +566,11 @@
    "samples": 35810,
    "train": 27747,
    "val": 7733,
-   "configChanged": true,
-   "from": "vote",
+   "configChanged": false,
+   "from": 0.5,
    "to": 0.5,
    "bestIc": -0.0251,
-   "championIc": -0.056,
+   "championIc": -0.0251,
    "configs": [
     {
      "alpha": "vote",
@@ -633,11 +633,11 @@
    "samples": 34754,
    "train": 25740,
    "val": 7636,
-   "configChanged": true,
-   "from": "vote",
+   "configChanged": false,
+   "from": 0.5,
    "to": 0.5,
    "bestIc": 0.0305,
-   "championIc": -0.0298,
+   "championIc": 0.0305,
    "configs": [
     {
      "alpha": "vote",
@@ -700,11 +700,11 @@
    "samples": 31982,
    "train": 20436,
    "val": 7593,
-   "configChanged": true,
-   "from": "vote",
+   "configChanged": false,
+   "from": 0.5,
    "to": 0.5,
    "bestIc": 0.1262,
-   "championIc": -0.066,
+   "championIc": 0.1262,
    "configs": [
     {
      "alpha": "vote",
@@ -766,8 +766,6 @@
  },
  "newsletter": {
   "lastSent": null,
-  "channels": [
-   "e-mail (SMTP)"
-  ]
+  "channels": []
  }
 }
