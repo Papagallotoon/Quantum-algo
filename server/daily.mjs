@@ -224,9 +224,17 @@ fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);
 const day = new Date().toLocaleDateString("en-GB", { weekday: "short", timeZone: "Europe/Paris" });
 const weekday = !["Sat", "Sun"].includes(day);
 model.newsletter = { lastSent: champion?.newsletter?.lastSent || null, channels: channelsConfigured() };
+// diagnostic : indique seulement si chaque reglage est present (jamais sa valeur)
+const DIAG_KEYS = ["SMTP_HOST", "SMTP_PORT", "SMTP_USER", "SMTP_PASS", "MAIL_TO", "BREVO_API_KEY", "CALLMEBOT_PHONE", "CALLMEBOT_APIKEY"];
+model.newsletter.diag = Object.fromEntries(DIAG_KEYS.map((k) => [k, (process.env[k] || "").trim() ? "present" : "absent"]));
+model.newsletter.diag.event = process.env.GITHUB_EVENT_NAME || "local";
+log("reglages d'envoi :", JSON.stringify(model.newsletter.diag));
 if (NO_SEND) log("envoi desactive (--no-send) : apercu dans server/out/newsletter.html");
 else if (!weekday && !FORCE_SEND) log("week-end : pas d'envoi");
-else if (!channelsConfigured().length) log("aucun canal configure (voir server/README.md) : apercu dans server/out/newsletter.html");
+else if (!channelsConfigured().length) {
+  log("AUCUN CANAL CONFIGURE : les secrets SMTP_HOST et MAIL_TO (ou BREVO_API_KEY) sont vides pour cette execution.");
+  if (FORCE_SEND) process.exitCode = 3;   // lancement manuel : on rend l'echec visible (croix rouge)
+}
 else {
   const res = await sendAll({ subject: `Quantum Algo – ${dateLabel}`, ...letter });
   log("envoye :", res.done.join(", ") || "rien", res.errors.length ? "| erreurs : " + res.errors.join(" ; ") : "");
