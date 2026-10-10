@@ -1,24 +1,29 @@
 *Quantum Algo – samedi 10 octobre 2026*
 
-*Indices* (proba hausse 1 sem.)
-CAC 40 +0,95 % → 50 %
-S&P 500 +0,59 % → 50 %
-NASDAQ 100 +0,51 % → 50 %
-DOW JONES +0,83 % → 50 %
-DAX 40 +1,13 % → 50 %
-FTSE MIB +0,91 % → 50 %
-NIKKEI 225 -0,02 % → 50 %
+• Climat de marché calme (VIX 14,8, -3,7 % la veille).
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Pas de tendance nette des indices à 1 mois.
+• 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
 • JPMorgan – Attendre la confirmation (3 mois) 63 %
-  entrée 343,31-345,06, stop 325,83, objectif 377,46, revoir le 13/01
+  entrée 343,31-345,06, stop 325,83, objectif 375,80, revoir le 13/01
+  ⚠ résultats pendant la position
 • UniCredit – Attendre la confirmation (3 mois) 63 %
-  entrée 85,24-85,87, stop 78,94, objectif 98,42, revoir le 13/01
+  entrée 85,24-85,87, stop 78,94, objectif 98,74, revoir le 13/01
+  ⚠ résultats pendant la position
 • Michelin – Attendre la confirmation (3 mois) 62 %
-  entrée 34,07-34,25, stop 32,31, objectif 37,18, revoir le 13/01
+  entrée 34,07-34,25, stop 32,31, objectif 37,16, revoir le 13/01
 • Johnson & Johnson – Entrer (3 mois) 62 %
-  entrée 258,81-262,49, stop 245,65, objectif 290,09, revoir le 06/01
+  entrée 258,81-262,49, stop 245,65, objectif 289,24, revoir le 06/01
+  ⚠ résultats pendant la position
 • Intesa Sanpaolo – Attendre la confirmation (3 mois) 61 %
-  entrée 6,84-6,88, stop 6,42, objectif 7,68, revoir le 13/01
+  entrée 6,84-6,88, stop 6,42, objectif 7,66, revoir le 13/01
+  ⚠ résultats pendant la position
+
+*À lire*
+• BCE : le compte rendu de septembre éclaire une hausse de taux sans feuille de route (Revue économique de France)
+• La Fed peut faire une pause dans la hausse des taux d’intérêt avant que l’inflation n’atteigne 2 % (PortalCripto)
+• Accord Moscou-Washington sur le pétrole: quelles conséquences après la levée des sanctions américaines? (Leral.net)
 
 _Info statistique, pas un conseil._
