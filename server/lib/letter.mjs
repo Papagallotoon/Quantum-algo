@@ -12,6 +12,8 @@ const dShort = (d) => { if (!d) return "-"; const x = new Date(d); return `${Str
 const dFr = (ms) => new Date(ms).toLocaleDateString("fr-FR", { weekday: "short", day: "2-digit", month: "2-digit", timeZone: "Europe/Paris" });
 const hFr = (ms) => new Date(ms).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" });
 
+let SITE = "";
+const link = (hash, inner, style = "color:inherit;text-decoration:none") => SITE ? `<a href="${SITE}#/${hash}" style="${style}">${inner}</a>` : inner;
 const GREEN = "#1f9d63", RED = "#d2483a", GREY = "#6b7280", AMBER = "#b7791f";
 const col = (p) => (p >= 0.53 ? GREEN : p <= 0.47 ? RED : GREY);
 const cchg = (v) => (!ok(v) ? GREY : v >= 0 ? GREEN : RED);
@@ -19,7 +21,7 @@ const TONE = { positif: { c: GREEN, t: "▲ positif" }, négatif: { c: RED, t: "
 
 const th = (t, right) => `<th style="text-align:${right ? "right" : "left"};padding:6px 8px;font-size:11px;color:#6b7280;font-weight:600;border-bottom:1px solid #e5e7eb">${t}</th>`;
 const td = (t, s = "") => `<td style="padding:7px 8px;font-size:13px;border-bottom:1px solid #f1f3f5;${s}">${t}</td>`;
-const card = (title, body, sub = "") => `<div style="background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px"><h3 style="margin:0 0 ${sub ? 2 : 8}px;font-size:17px">${title}</h3>${sub ? `<div style="font-size:12px;color:${GREY};margin-bottom:8px">${sub}</div>` : ""}${body}</div>`;
+const card = (title, body, sub = "", hash) => `<div style="background:#fff;border-radius:14px;padding:16px 18px;margin-top:12px"><h3 style="margin:0 0 ${sub ? 2 : 8}px;font-size:17px">${hash && SITE ? link(hash, title + ' <span style="font-size:12px;color:#1f9d63;font-weight:600">voir sur le site →</span>') : title}</h3>${sub ? `<div style="font-size:12px;color:${GREY};margin-bottom:8px">${sub}</div>` : ""}${body}</div>`;
 const row = (k, v) => `<tr><td style="color:${GREY};padding:3px 0;font-size:13px;vertical-align:top">${k}</td><td style="text-align:right;font-size:13px;padding:3px 0">${v}</td></tr>`;
 
 function newsList(items, small) {
@@ -59,7 +61,7 @@ function pickCard(p, n) {
   return `
   <div style="border:1px solid #e5e7eb;border-radius:14px;padding:14px;margin:14px 0">
     <table style="width:100%;border-collapse:collapse"><tr>
-      <td style="vertical-align:top"><div style="font-size:12px;color:${GREY}">#${n} · ${esc(p.sym)}</div><div style="font-size:18px;font-weight:700">${esc(p.name)}</div></td>
+      <td style="vertical-align:top"><div style="font-size:12px;color:${GREY}">#${n} · ${esc(p.sym)}</div><div style="font-size:18px;font-weight:700">${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</div></td>
       <td style="text-align:right;vertical-align:top"><div style="font-size:20px;font-weight:800;color:${GREEN}">${pc(p.pUp)}</div><div style="font-size:11px;color:${GREY}">chance de hausse</div></td>
     </tr></table>
     <div style="margin:10px 0 8px"><span style="display:inline-block;background:${a.bg};color:${a.c};font-weight:800;font-size:12px;letter-spacing:.5px;padding:5px 10px;border-radius:999px">${a.t}</span>
@@ -78,16 +80,19 @@ function pickCard(p, n) {
     ${reason ? `<div style="font-size:12px;color:#374151;margin-top:8px">✔ ${esc(reason)}</div>` : ""}
     <div style="font-size:11px;color:#9ca3af;margin-top:8px;line-height:1.5;border-top:1px solid #f1f3f5;padding-top:6px">${details.map(esc).join("<br>")}</div>
     ${p.news?.length ? `<div style="margin-top:4px">${newsList(p.news.slice(0, 1), true)}</div>` : ""}
+    ${SITE ? `<div style="margin-top:10px">${link("v/" + encodeURIComponent(p.sym), "Voir le graphique, les 95 indicateurs et le détail →", "display:inline-block;background:#0a0c10;color:#4fdd9a;font-size:12px;font-weight:700;padding:8px 12px;border-radius:8px;text-decoration:none")}</div>` : ""}
   </div>`;
 }
 
-export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, failed }) {
+export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, failed }) {
+  SITE = siteUrl || "";
   const parts = [];
 
   parts.push(`<div style="background:#0a0c10;color:#e8eaec;border-radius:14px;padding:18px 20px">
       <div style="font-family:monospace;letter-spacing:2px;font-size:11px;color:#4fdd9a">QUANTUM ALGO</div>
       <div style="font-size:21px;font-weight:700;margin-top:4px">La lettre du matin</div>
       <div style="font-size:13px;color:#9aa1a9">${esc(dateLabel)}</div>
+      ${SITE ? `<div style="margin-top:12px"><a href="${SITE}" style="display:inline-block;background:#4fdd9a;color:#07120c;font-weight:700;font-size:13px;padding:8px 14px;border-radius:999px;text-decoration:none">Ouvrir le tableau de bord →</a></div>` : ""}
     </div>`);
 
   if (brief?.length) parts.push(card("L'essentiel", `<ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.5">${brief.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>`));
@@ -98,7 +103,7 @@ export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, tr
       ? `<table style="width:100%;border-collapse:collapse"><tr>${th("Heure")}${th("Annonce")}${th("Impact")}${th("Prévu / précédent", true)}</tr>${ev.map((e) => `<tr>${td(`<b>${esc(e.time)}</b>`)}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}</div>`)}${td(e.impact === "fort" ? `<span style="color:${RED};font-weight:700">●●● fort</span>` : e.impact === "férié" ? `<span style="color:${GREY}">férié</span>` : `<span style="color:${AMBER}">●● moyen</span>`)}${td(`${esc(e.forecast || "-")} / ${esc(e.previous || "-")}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`
       : `<p style="color:${GREY};margin:0">Aucune annonce importante prévue aujourd'hui.</p>`;
     const tmr = agenda.tomorrow?.length ? `<p style="font-size:12px;color:${GREY};margin:10px 0 0">Demain à surveiller : ${agenda.tomorrow.map((e) => `${e.time} ${e.flag} ${esc(e.title)}`).join(" · ")}</p>` : "";
-    parts.push(card("Agenda économique du jour", body + tmr, "Heures de Paris. Les annonces à fort impact font souvent bouger les marchés dans les minutes qui suivent."));
+    parts.push(card("Agenda économique du jour", body + tmr, "Heures de Paris. Les annonces à fort impact font souvent bouger les marchés dans les minutes qui suivent.", "today/agenda"));
   }
 
   if (earnings && (earnings.today?.length || earnings.week?.length)) {
@@ -111,20 +116,20 @@ export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, tr
     parts.push(card("Contexte de marché", `<table style="width:100%;border-collapse:collapse"><tr>${th("")}${th("Niveau", true)}${th("Veille", true)}${th("1 mois", true)}</tr>${context.map((c) => `<tr>${td(esc(c.label))}${td(f2(c.last), "text-align:right")}${td(sp(c.chg), `text-align:right;color:${c.sym === "^VIX" ? cchg(-c.chg) : cchg(c.chg)}`)}${td(sp1(c.m1), "text-align:right;color:" + GREY)}</tr>`).join("")}</table>`));
   }
 
-  parts.push(card("Les indices", `<table style="width:100%;border-collapse:collapse"><tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("Hausse 1 sem.", true)}${th("Hausse 1 mois", true)}${th("Tendance")}</tr>${indices.map((x) => `<tr>${td(`<b>${esc(x.label)}</b>`)}${td(sp(x.chg), `text-align:right;color:${cchg(x.chg)}`)}${td(sp1(x.w1), "text-align:right")}${td(pc(x.p1S), `text-align:right;color:${col(x.p1S)};font-weight:600`)}${td(pc(x.p1M), `text-align:right;color:${col(x.p1M)};font-weight:600`)}${td(`<span style="font-size:12px">${esc(x.trend)}</span>`)}</tr>`).join("")}</table>`, "Probabilités calibrées sur l'historique : 50 % = pas d'avis."));
+  parts.push(card("Les indices", `<table style="width:100%;border-collapse:collapse"><tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("Hausse 1 sem.", true)}${th("Hausse 1 mois", true)}${th("Tendance")}</tr>${indices.map((x) => `<tr>${td(`<b>${link("indices/" + x.id, esc(x.label))}</b>`)}${td(sp(x.chg), `text-align:right;color:${cchg(x.chg)}`)}${td(sp1(x.w1), "text-align:right")}${td(pc(x.p1S), `text-align:right;color:${col(x.p1S)};font-weight:600`)}${td(pc(x.p1M), `text-align:right;color:${col(x.p1M)};font-weight:600`)}${td(`<span style="font-size:12px">${esc(x.trend)}</span>`)}</tr>`).join("")}</table>`, "Probabilités calibrées sur l'historique : 50 % = pas d'avis.", "indices"));
 
-  parts.push(card("Opportunités du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<p style="color:${GREY}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</p>`, "De la plus solide à la moins solide. Entrée, objectif et stop sont des prix en devise de cotation."));
+  parts.push(card("Opportunités du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<p style="color:${GREY}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</p>`, "De la plus solide à la moins solide. Entrée, objectif et stop sont des prix en devise de cotation.", "today/opportunites"));
 
-  if (avoid.length) parts.push(card("À éviter / alléger", `<table style="width:100%;border-collapse:collapse"><tr>${th("Valeur")}${th("Hausse", true)}${th("Horizon")}${th("Si détenue")}</tr>${avoid.map((p) => `<tr>${td(`<b>${esc(p.name)}</b><div style="font-size:11px;color:#9ca3af">1 mois ${sp1(p.perf?.m1)}</div>`)}${td(pc(p.pUp), `text-align:right;color:${RED};font-weight:600`)}${td(HL[p.h])}${td("protection sous " + f2(p.stop))}</tr>`).join("")}</table>`));
+  if (avoid.length) parts.push(card("À éviter / alléger", `<table style="width:100%;border-collapse:collapse"><tr>${th("Valeur")}${th("Hausse", true)}${th("Horizon")}${th("Si détenue")}</tr>${avoid.map((p) => `<tr>${td(`<b>${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</b><div style="font-size:11px;color:#9ca3af">1 mois ${sp1(p.perf?.m1)}</div>`)}${td(pc(p.pUp), `text-align:right;color:${RED};font-weight:600`)}${td(HL[p.h])}${td("protection sous " + f2(p.stop))}</tr>`).join("")}</table>`));
 
-  if (watch.length) parts.push(card("Ta liste", `<table style="width:100%;border-collapse:collapse"><tr>${th("Valeur")}${th("Cours", true)}${th("Action")}${th("Hausse", true)}${th("Horizon")}</tr>${watch.map((p) => `<tr>${td(`<b>${esc(p.name)}</b>${p.earningsWarning ? `<div style="font-size:11px;color:${AMBER}">résultats à venir</div>` : ""}`)}${td(`${f2(p.price)}<div style="font-size:11px;color:${cchg(p.chg)}">${sp(p.chg)}</div>`, "text-align:right")}${td(esc(p.actionLabel))}${td(pc(p.pUp), `text-align:right;color:${col(p.pUp)};font-weight:600`)}${td(HL[p.h])}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => `<div style="margin-top:8px;font-size:11px;color:${GREY};font-weight:600">${esc(p.name.toUpperCase())}</div>${newsList(p.news.slice(0, 1), true)}`).join("")}`));
+  if (watch.length) parts.push(card("Ta liste", `<table style="width:100%;border-collapse:collapse"><tr>${th("Valeur")}${th("Cours", true)}${th("Action")}${th("Hausse", true)}${th("Horizon")}</tr>${watch.map((p) => `<tr>${td(`<b>${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</b>${p.earningsWarning ? `<div style="font-size:11px;color:${AMBER}">résultats à venir</div>` : ""}`)}${td(`${f2(p.price)}<div style="font-size:11px;color:${cchg(p.chg)}">${sp(p.chg)}</div>`, "text-align:right")}${td(esc(p.actionLabel))}${td(pc(p.pUp), `text-align:right;color:${col(p.pUp)};font-weight:600`)}${td(HL[p.h])}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => `<div style="margin-top:8px;font-size:11px;color:${GREY};font-weight:600">${esc(p.name.toUpperCase())}</div>${newsList(p.news.slice(0, 1), true)}`).join("")}`));
 
   if (movers && (movers.up?.length || movers.down?.length)) {
-    const li = (m) => `${esc(m.name)} <span style="color:${cchg(m.chg)};font-weight:600">${sp(m.chg)}</span>`;
+    const li = (m) => `${link("v/" + encodeURIComponent(m.sym), esc(m.name))} <span style="color:${cchg(m.chg)};font-weight:600">${sp(m.chg)}</span>`;
     parts.push(card("Plus forts mouvements d'hier", `<table style="width:100%"><tr><td style="vertical-align:top;font-size:13px;width:50%"><div style="color:${GREEN};font-weight:600;margin-bottom:4px">En hausse</div>${movers.up.map(li).join("<br>")}</td><td style="vertical-align:top;font-size:13px"><div style="color:${RED};font-weight:600;margin-bottom:4px">En baisse</div>${movers.down.map(li).join("<br>")}</td></tr></table>`));
   }
 
-  if (news?.length) parts.push(card("Actualités à surveiller", newsList(news), "Dernières 36 heures. La tonalité est estimée automatiquement à partir du titre."));
+  if (news?.length) parts.push(card("Actualités à surveiller", newsList(news), "Dernières 36 heures. La tonalité est estimée automatiquement à partir du titre.", "today/actus"));
 
   const trackRows = ["1J", "1S", "1M", "3M"].map((h) => {
     const x = track?.byHorizon?.[h];
@@ -135,7 +140,7 @@ export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, tr
   }).join("");
   parts.push(card("Le modèle se vérifie", `<table style="width:100%;border-collapse:collapse"><tr>${th("Horizon")}${th("Bonne direction en réel")}${th("Test sur 120 séances")}</tr>${trackRows}</table>
       <p style="font-size:12px;color:${GREY};margin:8px 0 0">${esc(modelInfo?.summary || "")}</p>
-      ${track?.picksSummary ? `<p style="font-size:12px;color:${GREY};margin:6px 0 0">Sélections passées : ${sp(track.picksSummary.avg)} en moyenne (${track.picksSummary.n} positions), contre ${sp(track.picksSummary.benchAvg)} pour l'ensemble des valeurs.</p>` : ""}`));
+      ${track?.picksSummary ? `<p style="font-size:12px;color:${GREY};margin:6px 0 0">Sélections passées : ${sp(track.picksSummary.avg)} en moyenne (${track.picksSummary.n} positions), contre ${sp(track.picksSummary.benchAvg)} pour l'ensemble des valeurs.</p>` : ""}`, "", "bilan"));
 
   const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"></head><body style="margin:0;background:#f4f5f7;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111827">
   <div style="max-width:660px;margin:0 auto;padding:16px">${parts.join("\n")}
@@ -154,6 +159,7 @@ export function buildLetter({ dateLabel, brief, indices, picks, avoid, watch, tr
   picks.forEach((p) => L.push(`• ${p.name} – ${p.actionLabel} (${HL[p.h]}) ${pc(p.pUp)}\n  entrée ${f2(p.zoneLo)}-${f2(p.zoneHi)}, stop ${f2(p.stop)}, objectif ${f2(p.target)}, revoir le ${dShort(p.reviewDate)}${p.earningsWarning ? "\n  ⚠ résultats pendant la position" : ""}`));
   if (avoid.length) { L.push("", "*À éviter*"); avoid.forEach((p) => L.push(`• ${p.name} ${pc(p.pUp)} (${HL[p.h]})`)); }
   if (news?.length) { L.push("", "*À lire*"); news.slice(0, 3).forEach((n) => L.push(`• ${n.title} (${n.source})`)); }
+  if (SITE) L.push("", "Détails : " + SITE);
   L.push("", "_Info statistique, pas un conseil._");
   const whatsapp = L.join("\n");
   const text = whatsapp.replace(/\*/g, "").replace(/_/g, "");

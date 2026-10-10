@@ -19,6 +19,7 @@ import { INDEX_DEFS, COMPONENTS, NEWS_NAMES, INDEX_QUERY } from "../src/quantum/
 import { fetchMany, fetchCandles } from "./lib/fetch.mjs";
 import { fetchAgenda, fetchFundamentals, fetchNasdaqEarnings, fetchNews, dedupeNews, parisDay } from "./lib/extras.mjs";
 import { buildLetter } from "./lib/letter.mjs";
+import { buildSite } from "./lib/site.mjs";
 import { sendAll, channelsConfigured } from "./lib/send.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
@@ -300,10 +301,21 @@ brief.push(picks.length ? `${picks.length} opportunité(s) retenue(s), surtout s
 
 const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, news: marketNews };
 
+// site public (GitHub Pages, dossier docs/) : memes informations que l'app
+const SITE_URL = (process.env.SITE_URL || config.siteUrl || "").replace(/\/?$/, "/");
+try {
+  buildSite({
+    outDir: path.join(HERE, "..", "docs"), templateDir: path.join(HERE, "site"),
+    items, bySym, indexDefs: INDEX_DEFS, components: COMPONENTS, names, model,
+    signals: { ...signals, watchNews: watch }, track, fundamentals, iso, dateLabel,
+  });
+  log("site genere dans docs/ (" + (SITE_URL || "adresse non configuree") + ")");
+} catch (e) { log("site : echec", e.message); }
+
 // ---------------------------------------------------------------------------
 // 7. Newsletter
 // ---------------------------------------------------------------------------
-const letter = buildLetter({ dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
+const letter = buildLetter({ siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
 fs.writeFileSync(path.join(OUT, "newsletter.html"), letter.html);
 fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);
 

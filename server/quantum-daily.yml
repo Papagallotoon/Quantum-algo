@@ -52,6 +52,6 @@ jobs:
         run: |
           git config user.name "quantum-bot"
           git config user.email "quantum-bot@users.noreply.github.com"
-          git add server/out
+          git add server/out docs
           git diff --cached --quiet || git commit -m "routine du $(date -u +%F)"
           git push

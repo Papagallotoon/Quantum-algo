@@ -1,7 +1,14 @@
 {
-  "watchlist": ["MC.PA", "TTE.PA", "AIR.PA", "NVDA", "MSFT"],
+  "watchlist": [
+    "MC.PA",
+    "TTE.PA",
+    "AIR.PA",
+    "NVDA",
+    "MSFT"
+  ],
   "maxPicks": 5,
   "maxAvoid": 3,
   "extraSymbols": [],
-  "extraIndex": {}
+  "extraIndex": {},
+  "siteUrl": "https://papagallotoon.github.io/Quantum-algo/"
 }
