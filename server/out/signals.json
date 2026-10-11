@@ -14,19 +14,19 @@
    "zoneLo": 343.30999755859375,
    "zoneHi": 345.05842794249196,
    "stop": 325.8256937196114,
-   "target": 377.1440470448205,
-   "rr": 1.9351099018762008,
-   "pTarget": 0.3045,
+   "target": 376.74950463288536,
+   "rr": 1.9125443816491097,
+   "pTarget": 0.32225,
    "holdDays": 63,
    "reviewDate": "2027-01-13T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.5488394853701961,
+   "expectancy": 1.8451914724997318,
    "price": 332.989990234375,
    "chg": 0.4737121305388392,
    "sizePct": 19.63532553084345,
    "riskPct": 5.092861834295468,
-   "gainPct": 9.855247364432554,
+   "gainPct": 9.740324287696978,
    "perf": {
     "w1": 0.18352047132845772,
     "m1": -5.817967944976521,
@@ -56,7 +56,7 @@
    "fund": {
     "pe": 14.266923,
     "fpe": 13.254667,
-    "yield": 2,
+    "yield": 1.99,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 366.5,
@@ -65,18 +65,18 @@
    "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
    "news": [
     {
+     "title": "Telecommunications Stocks Plunge Following Massive SpaceX Spectrum Acquisition",
+     "link": "https://news.google.com/rss/articles/CBMiekFVX3lxTE0xdF9lV3VmUlcxejF4SG5NenNaeDk1TjJ1a3dPUzJxdUZPZURVY1VyU282MnJPUTQteVJvNDVBVXVhY0RoeWNSOWJYTndMTnI5eV9hNnlnd2RvbnVQcFpnTjdGU1ZkYnQ1QjhrZE9YMXQ1bUlSNHpVZU5R?oc=5",
+     "source": "TIKR.com",
+     "time": 1791722929000,
+     "tone": "neutre"
+    },
+    {
      "title": "Four Analysts Raised Their Pfizer Targets in One Week Without an Upgrade. Here’s Where the Stock Could Go By 2030",
      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNVEowNTdBRkdwWTU0TmsybkNsOEI1Tjl6Z1ZhUWNmbWVEMEZyQWYzTG90cUp2R192a01qTWI2SXUxeWc1Q3JzdDQzaFRoWHdEWVlVT2hDOFRibDJOU1h2NDhxaE1SQnVjNHYtcnVFTUxySHN1VFVUZFREdm1rVGdwWFJGQmJaUTl3SHVmNzlmV1B2d0x1a1pCNXl1cHZYR1dnRm1mcHdwSWFPOFZETzlGNnNWZlVBVE51SE91QzM1d3htb1VmUTJUS3F2WGtseXY1ZVg1aG5TODM?oc=5",
      "source": "TIKR.com",
      "time": 1791649688000,
      "tone": "positif"
-    },
-    {
-     "title": "Où actions et obligations pourraient-elles se heurter ?",
-     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPTlhVblpCQTI1M05IQ1Vfc0x0S3dhYWNZUUtFZlZEaFBCeS1maHYybUtZb3ZXQnBySFBhSTNMQ0Qyb2tfTzZkd1F2WTZUR29PLVVDcmU3SUlOajNoeWxUTXp5VGs3QmxscFh6MG15ZzduOVFtQWYyUWN0REVqOHowZnZxOGtzVUh6VXZlTVRBMXFlRGlrOWZSWkwxY3NSX09uZUZJ?oc=5",
-     "source": "Yahoo Finance France",
-     "time": 1791631878000,
-     "tone": "neutre"
     }
    ]
   },
@@ -92,19 +92,19 @@
    "zoneLo": 85.23999786376953,
    "zoneHi": 85.86989239833106,
    "stop": 78.94105251815418,
-   "target": 97.75273540700383,
-   "rr": 1.9864813642087429,
-   "pTarget": 0.3315,
+   "target": 98.22641823737658,
+   "rr": 2.0616817040088775,
+   "pTarget": 0.331,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.563099472887841,
+   "expectancy": 2.929609561226763,
    "price": 76.12999725341797,
    "chg": 1.0619877909434638,
    "sizePct": 13.532423792675777,
    "riskPct": 7.389659201637146,
-   "gainPct": 14.679420291905846,
+   "gainPct": 15.235125174876153,
    "perf": {
     "w1": -3.449589439872769,
     "m1": -9.152751216014376,
@@ -155,19 +155,19 @@
    "zoneLo": 34.06999969482422,
    "zoneHi": 34.24619920412474,
    "stop": 32.308004601818986,
-   "target": 37.13609289211167,
-   "rr": 1.7401258434028712,
-   "pTarget": 0.3265,
+   "target": 37.28111157370223,
+   "rr": 1.822429524137431,
+   "pTarget": 0.2995,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.5780516217492964,
+   "expectancy": 1.367247083659355,
    "price": 33.40999984741211,
    "chg": 0.9975755685951215,
    "sizePct": 19.33603551455693,
    "riskPct": 5.171690956231233,
-   "gainPct": 8.999393087030874,
+   "gainPct": 9.42504228835034,
    "perf": {
     "w1": 1.1811004974009442,
     "m1": -0.32816410754578085,
@@ -205,10 +205,10 @@
    },
    "news": [
     {
-     "title": "Rugby : l'ASM Clermont a perdu le dernier ruck, tout un symbole après sa défaite face à l'UBB",
-     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOa2w1YzI5LU1CcHBON2hHOWY0OTNlRHFtajB0bGVmS3cxUlV3YWtKT0F6eUN1VWI1VVVPNWdsV25kV3NRWW5ydHVlRlh3bkZWQ1Z2NnE4cDNMX3hSNjdMNkRISEU0Y0RXREtSWkZzSkpSczNCbm12OFdFVVJ6b2VOcnhfTmlBemplLW5kczgzR2Y0RmtZcWdmMVlWa2NxOWVXTnRyN1dfeWFaTXFoRVZ0MzgybTRhS21sNVJlQ1NJb2xpTVpyUFUxOVk2QjJFSHJXNF9BMm93RVdfRXRfUmhYcml4bTB4ZWNWdGZwNQ?oc=5",
+     "title": "ASM - UBB : les images d'une soirée marquée par un combat acharné mais au final cruel pour les Clermontois",
+     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNazRiblRkeHlHMUZUMWNKRkJucmlvX0ZBRG8ybk5ONHIyXzlZeU9pZFhudHZVQ1BWZVZmUnRkWnJpdm84U0RXbDg2a0JBUDh1WFE4aXFfUEpQZnlBT0x2dnA2a1FfX3BqY0wxR1FOa1Z2UXpucDJ6YTVGTkthaFdSbFJEUFBaQU1saWdKNFJSNXozZ25ua1RZQTdhNDZYR1Zfc2RVZVhwWkEyQmlvVFE5SDJOOXVGMmNBb1RqblA1TnVoclhnbUVNRW9lUE9RdmxsaWxyMFpyRTMyVFdrMzZleXZlS3NZU0NRWXRNUThEZ0lGWElzOXdCaVhQNnI?oc=5",
      "source": "La Montagne",
-     "time": 1791690900000,
+     "time": 1791711000000,
      "tone": "neutre"
     },
     {
@@ -232,19 +232,19 @@
    "zoneLo": 258.80865353997683,
    "zoneHi": 262.492542001978,
    "stop": 245.65190903282968,
-   "target": 288.3750639506846,
-   "rr": 1.7060363662813394,
-   "pTarget": 0.32525,
+   "target": 289.04566382772424,
+   "rr": 1.748511404887037,
+   "pTarget": 0.32125,
    "holdDays": 63,
    "reviewDate": "2027-01-06T13:30:00.000Z",
    "validUntil": "2026-10-13T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.5362317282832463,
+   "expectancy": 1.6267938644167292,
    "price": 261.44000244140625,
    "chg": 1.9338705718249916,
    "sizePct": 16.55931439444006,
    "riskPct": 6.038897361208137,
-   "gainPct": 10.302578510461501,
+   "gainPct": 10.55908090901466,
    "perf": {
     "w1": 2.113035069290037,
     "m1": -1.843440416592712,
@@ -274,7 +274,7 @@
    "fund": {
     "pe": 30.294321,
     "fpe": 21.538969,
-    "yield": 2.07,
+    "yield": 2.09,
     "rating": "1.9 - Buy",
     "target": null,
     "hi52": 281.07,
@@ -283,17 +283,17 @@
    "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "Messi marque deux buts dans le 4-0 de l'Inter Miami et atteint les 23 en MLS",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGtqUXc1WU96bDNUcE1JTk5ER19OS21zaktlcG5Oa19HTG5MeldUbUJGb2dQUF9uaWRfTE0tVVJZOGFiQTNscUlLanBXMG92cXU1RVFVWTlfXzZiZTNGOHVqVm1YTG02MnJwazItb1lVUDlmb05qeXFzNEY3dnRnMEsyXzRsV0ZPZUV6VTEyVGdNZnVlMjZKUmhXZ2w1MUlrMURnRFowMVZxOUJZOE4ydEp0ZVZ5TXfSAbcBQVVfeXFMUExralF3NVlPemwzVHBNSU5OREdfTkttc2pLZXBuTmtfR0xuTHpXVG1CRm9nUFBfbmlkX0xNLVVSWThhYkEzbHFJS2pwVzBvdnF1NUVRVVk5X182YmUzRjh1alZtWExtNjJycGsyLW9ZVVA5Zm9OanlxczRGN3Z0ZzBLMl80bFdGT2VFelUxMlRnTWZ1ZTI2SlJoV2dsNTFJazFEZ0RaMDFWcTlCWThOMnRKdGVWeU13?oc=5",
-     "source": "Demócrata",
-     "time": 1791696366000,
+     "title": "Barnsley renforce son milieu avec Daniel Johnson jusqu'à la fin de la saison",
+     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBSY3Nld1k0TEtjNl9xN3JJUHZ2S05DaDVJX3hNclowYWFVOHF2cWxPcHVDQUZCelJXSEZJVFVmZlNwS0tKMURGNThqWjFQR0Q3RjE3UG11NlVYUldFT2tvTlZvV1UteWY0RmYtcktFNWRmV3VuaHg4?oc=5",
+     "source": "rdcsport.cd",
+     "time": 1791721347000,
      "tone": "neutre"
     },
     {
-     "title": "John Wick + À couteaux tirés : c’est quoi ce film Prime Video avec les stars de Better Call Saul et Game of Thrones ?",
-     "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE14T3RFSFg5UzhpUk42LV9PNDh6M2ZMRFB3NkExWHlLVDR2TTF5b3pzUVkxNDQzbVN1YVBJNWRSQnIwbzBwOWF1bXRCWS04eHNKbnRLZnNQSU9YUkJJT01NZXJoMm1nLTJRbHNXOFlZTFNoalpNaTV3S2FNMmpMZw?oc=5",
-     "source": "AlloCiné",
-     "time": 1791619200000,
+     "title": "Le directeur scientifique de MeiraGTx, Naylor, cède des actions pour 294.291$",
+     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUXlCNk9WSXVraThSaDVsdTVHS1RMcVlqaHZpZVJrU1prcTZBc1hUdURaRFNkeE9GYU01a01zR0xjYVVzbmpYbGt2eXozYWU1YWhZbTVMcVQ3TG5ydWxjaEFGcUNXelVVS3FoZ3FRdGFXbmpTMF96S21ra19vUzU2NmNFVy0tMnotZVg4YU5TSjR5OWxJUVIxSzlKaEV0QlhZa0UxeE5uTl9ZWVNIM2s1bUd3N0JGMTRTcXdZQXAtb2VtNU9VLW02aE1iS1BfZDFOOTZr?oc=5",
+     "source": "Investing.com France",
+     "time": 1791704760000,
      "tone": "neutre"
     }
    ]
@@ -310,19 +310,19 @@
    "zoneLo": 6.839000225067139,
    "zoneHi": 6.880986795755884,
    "stop": 6.4191345181796775,
-   "target": 7.625004579152069,
-   "rr": 1.8720375138796637,
-   "pTarget": 0.31625,
+   "target": 7.6122306306085985,
+   "rr": 1.8416136227784683,
+   "pTarget": 0.32275,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.6474557615614696,
+   "expectancy": 1.5193630243965577,
    "price": 6.116000175476074,
    "chg": 0.924096257843332,
    "sizePct": 16.28854205733033,
    "riskPct": 6.139284881853317,
-   "gainPct": 11.492971607223689,
+   "gainPct": 11.306190672538968,
    "perf": {
     "w1": -3.350187909103741,
     "m1": -8.195736852604284,
@@ -742,9 +742,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 82956.953125,
-   "chg": 0.05394447158681981,
-   "m1": 2.235993843401096
+   "last": 83027.6875,
+   "chg": 0.13925682892252933,
+   "m1": 2.3231667548280655
   }
  ],
  "movers": {
@@ -785,6 +785,41 @@
  },
  "news": [
   {
+   "title": "L’euro poursuit sa baisse, le dollar retrouve les 240 dinars algériens",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVXFnSXl6ZDMwaVNxLVNHaGo0QWc4dWVQRXNMTkduQWZSUEIxUGo4bEx0SDBDN08wX0VvOVJSY2hlVXhoVXZ1b1gwN0dKM25GeWdTaWNhZVVEN2dyT3ZyVS1sTGl5NW5IODhsVEdnTGFCc05TYmNqbkkwRl9DU01QLTBrU01aeXgwSVNmYy03a1lyQXV5c1F0QmV6bHQwakE?oc=5",
+   "source": "Visas & Voyages Algérie",
+   "time": 1791718603000,
+   "tone": "négatif"
+  },
+  {
+   "title": "XRP à l’aube d’un grand jour à Wall Street après un report inattendu",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV3U4b3czS0R2dEoycDkyQUV2UFVqcGd3MS1pQUNkbktTSE02RkhfQVdRRGhMdW9iR1pwVV94azNTTV9majFxUjJkcWNtOFFDcFNfR2RvWmxwOVpOYWlwX1FjM1RQSng5MDNONHNIRlg5dUgyUGN2bW5VeXRoSjNJTm5IeG9udUo5X2ZJWGo3dUZPbGl1aERabE9nTlFjcFhfRXp5ZFBROEtRUDlod0FqVDloRGtRSFU?oc=5",
+   "source": "www.crypto-insiders.fr",
+   "time": 1791715070000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Pétrole : Le marché mondial dans tous ses états - Actualités",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWEhHTnJWQ1RjVGFHa0JsYXJmaEl3bXBMOTU1MXlmM0RzcGNEdnJOSXpnc3kzcGd4Q1ZkdWhKeHRrbWV1eTFReU9Oc2wwMl8tbUFSX1pSMGROS0ZCc3ROcXZReU50T1ZkbjFNbkpLX3B5ZWp1LUNSeVBmR3drOG5ham1KQ3dyYjZHRUNHTGJLYw?oc=5",
+   "source": "Le soir d'Algérie",
+   "time": 1791714156000,
+   "tone": "neutre"
+  },
+  {
+   "title": "«La force du dollar face à l’euro vient aussi du cycle d’investissement dans l’IA»",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNjJBRG12QVBXVE1LaG1mVDh4SFlzTnpENGtOLUNOeWlzcHlnMmxBS3pMeHNGRjFJZzM5M2U0ZS1Ic2hEZmktYW55R09WZFJYR21WTmUwazZZTS1xRGtYVUZSLXIyOXZoYkdBajE3ZF9oVzd3cGlvTWxCMHdQMUd3TGZkZVp6SUdqWmo3bnpmN1lMTmRWRnVqQVdFajNhY3RwbnpTV1Q5cFh1MnZiZ2ZBMTU2OFdXbVJ3ckZldQ?oc=5",
+   "source": "L'Agefi",
+   "time": 1791712863000,
+   "tone": "neutre"
+  },
+  {
+   "title": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
+   "source": "Boursorama",
+   "time": 1791709310000,
+   "tone": "neutre"
+  },
+  {
    "title": "Les cours de l'or ont inversé la tendance après une baisse en milieu de semaine, les experts s'attendant à un retour progressif à la hausse des prix.",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVklzMk1nNEJrY09PdnN5bVpMenpMMTZHWGZUYng2WDN2SVVzQ0pKNE5HaFBoanlBbG9aWUJqZzF3SFFuUjFjSUlzcnlCOVBoWDY2a0prSjFwbmk3eDVxc1NvYnVhU2xHZkNKRWpJMjJyWkhLSy1jMHNuZWZlaUxXUzlyQ21VM0ZYOGQ1TmtXWHhsRlZNSlNiLXkxaXAtZm5tU2N3MDNGMkxfWGRrNEU4OFZXRlNMTjQ?oc=5",
    "source": "Vietnam.vn",
@@ -792,10 +827,10 @@
    "tone": "neutre"
   },
   {
-   "title": "NEXANS Cours Action NEX, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE82djB1RmVXWUNtdjFXVlVMVzFrdWlPUldOUnY5bnc1UWNHZ3VYTmNaM3lLdkIxTFFzNG4tWjZ6Q0p3dzZxZUFiUDdidHh1Rmpkc0E?oc=5",
+   "title": "VIRIDIEN Cours Action VIRI, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15WlZRN0ZxanJKSXNxYmE2WlgzcGRVNGhublZBWjhxS2YwT19NSzh1aWYwYWdTWlltRkdiZ3VjRlhvMDlmRFRDTndhY0ctc3U5U2JV?oc=5",
    "source": "Boursorama",
-   "time": 1791700739000,
+   "time": 1791704502000,
    "tone": "neutre"
   },
   {
@@ -804,41 +839,6 @@
    "source": "Boursorama",
    "time": 1791700033000,
    "tone": "neutre"
-  },
-  {
-   "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-   "source": "Boursorama",
-   "time": 1791699930000,
-   "tone": "neutre"
-  },
-  {
-   "title": "ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE90ZzVod2I0UkczbkNGZnVDSWV4WGhKLURFbVU1dVRSVGNPY3hYZ1Fnb096aG1MZFB0aWFDYXdSRTRKZWRveUU3TnVHdmxVSEpUMDVF?oc=5",
-   "source": "Boursorama",
-   "time": 1791696538000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Le prix de l'or mondial inverse la tendance en fin de semaine, la semaine prochaine confronté à un test majeur",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcjFCWlRtSUlMTHExTUFzQnkyN01lX2VYSU5lUURKN0t0V1locWRMRmJVdU12cG1xUEktd0hzeVQwekNaRzd3UGlrbVNkZ2RPTWNld181T0NOeDhVT3NmamRtdFgxUzBLelVBYTlhNU02cHRKbDZlVmJTOUxlaEwxQVNYd0IwdFMyMHhqSzE1WUoyTE5JMUZLM25zNGVfb1E1UUI0cHlTOXRLbTRMYkN1b0QtYm01SEk?oc=5",
-   "source": "Laodong.vn",
-   "time": 1791695031000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Taux de change du dollar américain le 11 octobre : Le dollar s’est légèrement affaibli dans un contexte d’anticipations de hausse des taux d’intérêt de la Fed.",
-   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZUtIR2tpUUdiSW1yZ21Gd1VNSWdwVEMzTzhUSjFrelhCc0E4cFljQk51ZWV5aWZCSkYwTWFIamdMenBrc3NTSVo0Z0VwZzJrYnZJTmdLUkZ2b2RGelNIc0RZeml0S3I1MGFpV1JvWVNWbjd5OEJscHJXd2lwNGVZQjR4aWJGSzlwTERWRnRnN25Lc2EyVnZXTWRaR0xCLUFIYTVLX0JZMFNjQQ?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1791691321000,
-   "tone": "positif"
-  },
-  {
-   "title": "Taux de change du dollar américain aujourd'hui, 11 octobre : le taux de change bancaire chute fortement après une semaine.",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRXNFMVlVS0pxOHlFaHRtaGpfek0tVHhZb01pNHoxck8tUm1feERic1ZxYWh2MjNneURIa0tSc3pycTZaSGFoQjhnalNFNFVMcHJZS3RqNVY4MFJmcXFyR0JmSzdFaDd4OFB2WWdMdVVVZlM3UGlXeWcxOWtIRjR5S1hTNE1OUldfMjZwZVFrVQ?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1791676310000,
-   "tone": "négatif"
   }
  ]
 }

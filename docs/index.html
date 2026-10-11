@@ -157,6 +157,7 @@
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function dfr(iso) { if (!iso) return "-"; var d = new Date(iso); return d.toLocaleDateString("fr-FR", { weekday: "short", day: "2-digit", month: "2-digit", timeZone: "Europe/Paris" }); }
   function ago(ms) { if (!ms) return ""; var h = Math.round((Date.now() - ms) / 3600e3); return h < 1 ? "à l'instant" : h < 24 ? "il y a " + h + " h" : "il y a " + Math.round(h / 24) + " j"; }
+  function moodOf(p) { return p >= 0.58 ? "avantage net" : p >= 0.53 ? "léger avantage" : p > 0.47 ? "≈ pile ou face" : p > 0.42 ? "plutôt baissier" : "nettement baissier"; }
   function pillCls(a) { return a === "ENTRER" ? "p-buy" : a === "EVITER" ? "p-avoid" : a === "NEUTRE" ? "p-flat" : "p-wait"; }
   function actLabel(a, l) { return a === "ENTRER" ? "ACHETER" : (l || a).toUpperCase(); }
 
@@ -172,7 +173,7 @@
       '<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">' +
       (label ? '<div class="mono dimmer" style="font-size:10px;letter-spacing:1.4px">' + esc(label) + '</div>' : '') +
       '<div class="' + (neutral ? "flat" : up ? "up" : "down") + '" style="font-size:' + Math.round(size / 4.2) + 'px;font-weight:800;letter-spacing:-1px">' + score + ' %</div>' +
-      '<div class="mono muted" style="font-size:11px">' + (up ? "de hausse" : "de baisse") + (neutral ? " · neutre" : "") + '</div></div></div>';
+      '<div class="mono muted" style="font-size:11px;text-align:center;line-height:1.4">' + (up ? "de chances de hausse" : "de chances de baisse") + '<br>' + moodOf(p) + '</div></div></div>';
   }
   function spark(h, w, hh, col) {
     if (!h || h.length < 2) return "";
@@ -212,7 +213,7 @@
     var score = Math.round((up ? e.p : 1 - e.p) * 100);
     return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '">' +
       '<div class="ring" style="border-color:' + col + ';color:' + col + '">' + score + '</div>' +
-      '<div class="grow"><div class="name">' + esc(a.name) + '</div><div class="small muted">' + f2(a.price) + ' ' + esc(a.cur) + ' · <span class="' + cls(a.chg) + '">' + sp(a.chg) + '</span>' + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
+      '<div class="grow" title="' + Math.round((up ? e.p : 1 - e.p) * 100) + ' chances sur 100 de ' + (up ? 'hausse' : 'baisse') + ' sur ' + esc(HL[h]) + '"><div class="name">' + esc(a.name) + '</div><div class="small muted">' + f2(a.price) + ' ' + esc(a.cur) + ' · <span class="' + cls(a.chg) + '">' + sp(a.chg) + '</span>' + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
       '<div style="display:none" class="hide-sm"></div>' + spark(a.hist, 70, 26, col) +
       '<div style="text-align:right;min-width:92px;flex:none"><span class="pill ' + pillCls(a.plan.action) + '">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span><div class="small dimmer" style="margin-top:4px">' + esc(HL[a.plan.h]) + '</div></div></a>';
   }
@@ -253,7 +254,7 @@
     h += '<div class="card" id="opportunites"><h2>Opportunités du jour</h2>';
     if (!t.picks.length) h += '<div class="empty">Aucune valeur ne présente un avantage suffisant aujourd\'hui.</div>';
     t.picks.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); });
-    h += '<p class="small dimmer" style="margin:10px 0 0">Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
+    h += '<p class="small dimmer" style="margin:10px 0 0">Le nombre dans le cercle = chances sur 100 de hausse à l\'horizon indiqué (ce n\'est pas une hausse en %). Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
     var ag = t.agenda;
     h += '<div class="grid2"><div class="card" id="agenda"><h2>Agenda économique (heure de Paris)</h2>';
     if (ag && ag.today && ag.today.length) {
@@ -307,7 +308,7 @@
     h += '</div><div class="card">' + (ref ? '<h2>Évolution</h2>' + chart(ref, st.h) + '<div class="kv" style="margin-top:8px"><span>Performance 1 mois · 3 mois · 1 an</span><span>' + sp(ref.perf.m1, 1) + ' · ' + sp(ref.perf.m3, 1) + ' · ' + sp(ref.perf.y1, 1) + '</span></div>' : '') + '</div></div>';
     var rows = idx.members.map(function (s) { return D.stocks[s]; }).filter(Boolean).sort(function (a, b) { return Math.abs(b.ev[st.h].p - 0.5) * (b.ev[st.h].p >= .5 ? 1 : .5) - Math.abs(a.ev[st.h].p - 0.5) * (a.ev[st.h].p >= .5 ? 1 : .5); });
     h += '<div class="card"><h2>Valeurs ' + esc(idx.name) + ' · horizon ' + esc(HL[st.h]) + '</h2>' + rows.map(function (a) { return stockRow(a, st.h); }).join("") +
-      '<p class="small dimmer">Le cercle indique la probabilité de hausse (vert) ou de baisse (rouge) sur l\'horizon choisi ; gris = pas d\'avis (entre 47 et 53 %). L\'étiquette donne l\'action du plan, calculé sur l\'horizon le plus fiable pour chaque valeur.</p></div>';
+      '<p class="small dimmer">Le nombre dans le cercle = chances sur 100 que l\'action termine plus haut (vert) ou plus bas (rouge) à l\'horizon choisi, et non une variation en %. Gris = pas d\'avis (entre 47 et 53 %, ≈ pile ou face). L\'étiquette donne l\'action du plan, calculé sur l\'horizon le plus fiable pour chaque valeur.</p></div>';
     return h;
   }
 
@@ -335,7 +336,7 @@
     }
     h += '<div class="card"><div class="hz">' + HK.map(function (k) {
       var e = a.ev[k]; return '<div data-h="' + k + '" class="' + (k === st.h ? "on" : "") + '"><div class="mono dimmer" style="font-size:10px">' + k + '</div><div style="font-size:17px;font-weight:800" class="' + pcls(e.p) + '">' + Math.round(e.p * 100) + '%</div><div class="mono dimmer" style="font-size:10px">' + sp(e.e, 1) + '</div></div>';
-    }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">Probabilité de hausse par horizon et rendement attendu. Touche un horizon pour mettre à jour le graphique.</p></div>';
+    }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">En gros : chances sur 100 que l\'action termine plus haut à cet horizon. En petit : variation moyenne attendue. Exemple : 55 % et +1,2 % = un peu plus d\'une chance sur deux de monter, pour un gain moyen attendu d\'environ 1,2 %. Touche un horizon pour mettre à jour le graphique.</p></div>';
     h += '<div class="card">' + chart(a, st.h) + '</div>';
     h += planCard(a);
     h += '<div class="grid2"><div class="card"><h2>Poids de chaque famille dans le score</h2>' + (a.fam || []).map(function (f) {
