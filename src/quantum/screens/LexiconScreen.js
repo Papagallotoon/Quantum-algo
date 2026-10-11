@@ -1,10 +1,23 @@
 import React, { useState } from "react";
-import { View, Text, ScrollView, Pressable, TextInput } from "react-native";
+import { View, Text, ScrollView, Pressable, TextInput, Linking } from "react-native";
 import { C, T } from "../theme";
 import { LEXICON, LEX_CATS } from "../lexicon";
+import { ScreenTitle } from "../components/UI";
+import Icon from "../components/Icons";
 
-function norm(s) {
-  return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+var SITE_LEARN = "https://papagallotoon.github.io/Quantum-algo/#/apprendre";
+var CAT_COL = { Trading: "#F5B740", Concepts: "#8B93FF", Tendance: "#34D399", Momentum: "#5EC8F2", Volatilite: "#FF6B5B", Volume: "#C9A7FF", Structure: "#EEF2F7" };
+var CAT_LABEL = { Volatilite: "Volatilité" };
+var STOP = { de: 1, du: 1, des: 1, la: 1, le: 1, les: 1, et: 1, a: 1, "à": 1, en: 1, d: 1, l: 1 };
+
+function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, ""); }
+function abbr(t) {
+  var first = String(t).split(/[\s(]/)[0];
+  if (/^[A-Z0-9+\/%-]{2,5}$/.test(first)) return first;
+  var w = String(t).replace(/\(.*\)/, "").split(/[\s'’-]+/).filter(function (x) { return x && !STOP[x.toLowerCase()]; });
+  if (w.length === 1) { var caps = w[0].replace(/[^A-Z]/g, ""); return caps.length >= 2 ? caps.slice(0, 4) : w[0].slice(0, 3).toUpperCase(); }
+  var a = w.slice(0, 3).map(function (x) { return x.charAt(0).toUpperCase(); }).join("");
+  return a || first.slice(0, 3).toUpperCase();
 }
 
 export default function LexiconScreen() {
@@ -18,89 +31,100 @@ export default function LexiconScreen() {
     var n = norm(q);
     return norm(e.t).indexOf(n) >= 0 || norm(e.s).indexOf(n) >= 0 || norm(e.l).indexOf(n) >= 0;
   });
+  var day = Math.floor(Date.now() / 86400000);
+  var td = LEXICON[day % LEXICON.length];
 
   return (
-    <View style={{ flex: 1 }}>
-      <View style={{ paddingHorizontal: 22, gap: 12 }}>
-        <Text style={[T.sans(26, "700"), { color: C.text, letterSpacing: -0.6 }]}>Lexique</Text>
+    <ScrollView showsVerticalScrollIndicator={false} keyboardShouldPersistTaps="handled"
+      contentContainerStyle={{ paddingHorizontal: 20, paddingBottom: 24, gap: 16 }}>
+      <ScreenTitle title="Apprendre" sub="Les mots de la bourse, expliqués simplement." />
 
-        <View style={{ flexDirection: "row", alignItems: "center", gap: 10, backgroundColor: C.card, borderWidth: 1, borderColor: C.border, borderRadius: 14, paddingHorizontal: 14 }}>
-          <Text style={[T.sans(13), { color: C.dimmer }]}>{"\u2315"}</Text>
-          <TextInput
-            value={q}
-            onChangeText={setQ}
-            placeholder="Chercher un terme"
-            placeholderTextColor="rgba(232,234,236,0.3)"
-            style={[T.sans(13, "400"), { color: C.text, flex: 1, paddingVertical: 12 }]}
-          />
-          {q ? (
-            <Pressable onPress={function () { setQ(""); }} hitSlop={10}>
-              <Text style={[T.sans(14), { color: C.dimmer }]}>{"\u00D7"}</Text>
-            </Pressable>
-          ) : null}
+      {td ? (
+        <Pressable onPress={function () { setCat("Tous"); setQ(""); setOpen(td.t); }}
+          style={{ borderRadius: 24, backgroundColor: "#161C2B", borderWidth: 1, borderColor: "rgba(139,147,255,0.35)", paddingHorizontal: 16, paddingVertical: 18, gap: 10 }}>
+          <View style={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between" }}>
+            <Text style={[T.sans(11.5, "600"), { color: C.brand, letterSpacing: 0.6 }]}>LE TERME DU JOUR</Text>
+            <Text style={[T.sans(11, "400"), { color: C.dim }]}>{CAT_LABEL[td.c] || td.c}</Text>
+          </View>
+          <Text style={[T.sans(20, "700"), { color: C.text, letterSpacing: -0.4 }]}>{td.t}</Text>
+          <Text style={[T.sans(13, "400"), { color: C.soft, lineHeight: 20 }]}>{td.s}</Text>
+        </Pressable>
+      ) : null}
+
+      <Pressable onPress={function () { Linking.openURL(SITE_LEARN).catch(function () {}); }} accessibilityRole="link"
+        style={{ flexDirection: "row", alignItems: "center", gap: 12, padding: 14, borderRadius: 18, backgroundColor: C.card, borderWidth: 1, borderColor: C.line }}>
+        <View style={{ width: 44, height: 44, borderRadius: 13, backgroundColor: C.brandBg, alignItems: "center", justifyContent: "center" }}>
+          <Icon name="learn" size={20} width={2} color={C.brand} />
         </View>
+        <View style={{ flex: 1, gap: 2 }}>
+          <Text style={[T.sans(14, "600"), { color: C.text }]}>Cours et quiz</Text>
+          <Text style={[T.sans(12, "400"), { color: C.dim }]}>Débutant, intermédiaire et pro, sur le site</Text>
+        </View>
+        <Icon name="chev" size={16} width={2} color={C.dim} />
+      </Pressable>
+
+      <View style={{ flexDirection: "row", alignItems: "center", gap: 10, height: 48, paddingHorizontal: 14, borderRadius: 16, backgroundColor: C.card, borderWidth: 1, borderColor: C.line }}>
+        <Icon name="search" size={18} color={C.dim} />
+        <TextInput value={q} onChangeText={setQ} placeholder="Chercher un terme" placeholderTextColor={C.dimmer} accessibilityLabel="Chercher un terme"
+          style={[T.sans(14, "400"), { color: C.text, flex: 1, paddingVertical: 10 }]} />
+        {q ? (
+          <Pressable onPress={function () { setQ(""); }} hitSlop={10} accessibilityLabel="Effacer">
+            <Icon name="close" size={16} color={C.dim} />
+          </Pressable>
+        ) : null}
       </View>
 
-      <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 22, gap: 7, alignItems: "center" }} style={{ flexGrow: 0, flexShrink: 0, height: 48, marginTop: 12 }}>
+      <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 8 }}>
         {LEX_CATS.map(function (c) {
           var on = c === cat;
           return (
             <Pressable key={c} onPress={function () { setCat(c); }}
-              style={{ paddingHorizontal: 14, paddingVertical: 9, borderRadius: 20,
-                backgroundColor: on ? C.ringUp : "rgba(255,255,255,0.07)",
-                borderWidth: 1, borderColor: on ? C.ringUp : "rgba(255,255,255,0.22)" }}>
-              <Text style={[T.mono(10.5), { color: on ? C.ink : "rgba(232,234,236,0.82)" }]}>{c}</Text>
+              style={{ height: 36, paddingHorizontal: 14, borderRadius: 999, justifyContent: "center", borderWidth: 1, borderColor: on ? C.brand : C.line2, backgroundColor: on ? C.brand : C.card }}>
+              <Text style={[T.sans(12.5, "600"), { color: on ? C.brandInk : C.soft }]}>{CAT_LABEL[c] || c}</Text>
             </Pressable>
           );
         })}
-      </ScrollView>
+      </View>
 
-      <ScrollView style={{ flex: 1 }} showsVerticalScrollIndicator={false} contentContainerStyle={{ paddingHorizontal: 22, paddingTop: 12, paddingBottom: 20, gap: 8 }}>
-        <Text style={[T.mono(10, "500"), { color: C.dimmer, letterSpacing: 1.2, marginBottom: 2 }]}>
-          {list.length + (list.length > 1 ? " ENTREES" : " ENTREE")}
-        </Text>
+      <Text style={[T.sans(12, "400"), { color: C.dim }]}>{list.length + (list.length > 1 ? " termes" : " terme")}</Text>
 
+      <View style={{ gap: 8 }}>
         {list.map(function (e) {
           var isOpen = open === e.t;
+          var col = CAT_COL[e.c] || C.brand;
           return (
-            <Pressable key={e.t} onPress={function () { setOpen(isOpen ? null : e.t); }}
-              style={{ backgroundColor: C.card, borderWidth: 1, borderColor: isOpen ? "rgba(79,221,154,0.28)" : C.border, borderRadius: 16, padding: 16 }}>
-              <View style={{ flexDirection: "row", alignItems: "flex-start", gap: 12 }}>
-                {e.em ? <Text style={{ fontSize: 20, marginTop: 1 }}>{e.em}</Text> : null}
-                <View style={{ flex: 1 }}>
-                  <Text style={[T.sans(14, "600"), { color: C.text, marginBottom: 5 }]}>{e.t}</Text>
-                  <Text style={[T.sans(11.5, "400"), { color: C.dim, lineHeight: 17 }]}>{e.s}</Text>
+            <View key={e.t} style={{ borderRadius: 18, backgroundColor: C.card, borderWidth: 1, borderColor: isOpen ? "rgba(139,147,255,0.4)" : C.line, overflow: "hidden" }}>
+              <Pressable onPress={function () { setOpen(isOpen ? null : e.t); }} accessibilityRole="button"
+                style={{ flexDirection: "row", alignItems: "center", gap: 12, paddingHorizontal: 14, paddingVertical: 12 }}>
+                <View style={{ width: 44, height: 44, borderRadius: 13, alignItems: "center", justifyContent: "center", backgroundColor: col + "22" }}>
+                  <Text style={[T.mono(11.5, "700"), { color: col }]}>{abbr(e.t)}</Text>
                 </View>
-                <Text style={[T.sans(13, "500"), { color: isOpen ? C.up : "rgba(232,234,236,0.3)", marginTop: 2 }]}>
-                  {isOpen ? "\u2212" : "+"}
-                </Text>
-              </View>
-
+                <View style={{ flex: 1, minWidth: 0, gap: 3 }}>
+                  <Text style={[T.sans(14, "600"), { color: C.text }]}>{e.t}</Text>
+                  <Text style={[T.sans(12, "400"), { color: C.dim }]}>{e.s}</Text>
+                </View>
+                <Icon name={isOpen ? "up" : "down"} size={16} width={2} color={C.dim} />
+              </Pressable>
               {isOpen ? (
-                <View style={{ marginTop: 14, paddingTop: 14, borderTopWidth: 1, borderTopColor: "rgba(255,255,255,0.07)", gap: 12 }}>
-                  <View>
-                    <Text style={[T.mono(9, "500"), { color: "rgba(232,234,236,0.42)", letterSpacing: 1.4, marginBottom: 7 }]}>COMMENT LE LIRE</Text>
-                    <Text style={[T.sans(12, "400"), { color: "rgba(232,234,236,0.75)", lineHeight: 19 }]}>{e.l}</Text>
-                  </View>
+                <View style={{ paddingLeft: 70, paddingRight: 14, paddingBottom: 14, gap: 10 }}>
+                  <Text style={[T.sans(12.5, "400"), { color: C.soft, lineHeight: 19 }]}>{e.l}</Text>
                   {e.e ? (
-                    <View style={{ backgroundColor: "rgba(255,255,255,0.04)", borderRadius: 11, padding: 12 }}>
-                      <Text style={[T.mono(9, "500"), { color: "rgba(232,234,236,0.38)", letterSpacing: 1.2, marginBottom: 6 }]}>EXEMPLE</Text>
-                      <Text style={[T.sans(11.5, "400"), { color: "rgba(232,234,236,0.7)", lineHeight: 17 }]}>{e.e}</Text>
+                    <View style={{ padding: 12, borderRadius: 12, backgroundColor: C.card2, gap: 4 }}>
+                      <Text style={[T.sans(10.5, "600"), { color: C.brand, letterSpacing: 0.5 }]}>EXEMPLE</Text>
+                      <Text style={[T.sans(12, "400"), { color: C.dim, lineHeight: 18 }]}>{e.e}</Text>
                     </View>
                   ) : null}
-                  <Text style={[T.mono(9, "500"), { color: C.dimmer, letterSpacing: 1 }]}>{e.c.toUpperCase()}</Text>
                 </View>
               ) : null}
-            </Pressable>
+            </View>
           );
         })}
-
         {list.length === 0 ? (
-          <View style={{ borderWidth: 1, borderColor: "rgba(255,255,255,0.14)", borderStyle: "dashed", borderRadius: 16, padding: 24, alignItems: "center" }}>
-            <Text style={[T.sans(12.5, "500"), { color: C.dim }]}>Aucun terme trouve</Text>
+          <View style={{ borderWidth: 1, borderColor: C.line2, borderStyle: "dashed", borderRadius: 18, padding: 24, alignItems: "center" }}>
+            <Text style={[T.sans(13, "500"), { color: C.dim }]}>Aucun terme trouvé</Text>
           </View>
         ) : null}
-      </ScrollView>
-    </View>
+      </View>
+    </ScrollView>
   );
 }

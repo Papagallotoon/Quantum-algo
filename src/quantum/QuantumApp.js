@@ -13,55 +13,21 @@ import NewsScreen from "./screens/NewsScreen";
 import LexiconScreen from "./screens/LexiconScreen";
 import SettingsScreen from "./screens/SettingsScreen";
 
-var TABS = [
-  { id: "market", label: "INDICES", shape: "circle" },
-  { id: "news", label: "ACTUS", shape: "lines" },
-  { id: "watch", label: "MA LISTE", shape: "diamond" },
-  { id: "trust", label: "BILAN", shape: "chart" },
-  { id: "lexicon", label: "LEXIQUE", shape: "square" },
-  { id: "settings", label: "REGLAGES", shape: "bars" },
-];
+import Icon from "./components/Icons";
+import { loadAsync } from "expo-font";
+import { FONTS, FONT_FILES } from "./theme";
 
-function TabIcon(props) {
-  var c = props.color;
-  if (props.shape === "lines") {
-    return (
-      <View style={{ width: 14, gap: 2.5, alignItems: "flex-start" }}>
-        <View style={{ height: 1.5, width: 14, backgroundColor: c }} />
-        <View style={{ height: 1.5, width: 10, backgroundColor: c }} />
-        <View style={{ height: 1.5, width: 13, backgroundColor: c }} />
-        <View style={{ height: 1.5, width: 8, backgroundColor: c }} />
-      </View>
-    );
-  }
-  if (props.shape === "chart") {
-    return (
-      <View style={{ width: 14, height: 14, flexDirection: "row", alignItems: "flex-end", gap: 2 }}>
-        <View style={{ width: 3, height: 6, backgroundColor: c }} />
-        <View style={{ width: 3, height: 10, backgroundColor: c }} />
-        <View style={{ width: 3, height: 14, backgroundColor: c }} />
-      </View>
-    );
-  }
-  if (props.shape === "bars") {
-    return (
-      <View style={{ width: 14, gap: 2.5 }}>
-        <View style={{ height: 1.5, backgroundColor: c }} />
-        <View style={{ height: 1.5, backgroundColor: c }} />
-        <View style={{ height: 1.5, backgroundColor: c }} />
-      </View>
-    );
-  }
-  var base = { width: 14, height: 14 };
-  if (props.shape === "circle") base.borderRadius = 7;
-  if (props.shape === "square") base.borderRadius = 3;
-  if (props.shape === "diamond") { base.width = 13; base.height = 13; base.transform = [{ rotate: "45deg" }]; }
-  return <View style={[base, props.active ? { backgroundColor: c } : { borderWidth: 1.5, borderColor: c }]} />;
-}
+var TABS = [
+  { id: "market", label: "Marchés", icon: "markets" },
+  { id: "news", label: "Actus", icon: "news" },
+  { id: "watch", label: "Ma liste", icon: "star" },
+  { id: "trust", label: "Bilan", icon: "bilan" },
+  { id: "lexicon", label: "Apprendre", icon: "learn" },
+];
 
 function Shell(props) {
   var state = props.state, setState = props.setState;
-  var activeTab = state.tab === "detail" ? (state.from || "market") : state.tab;
+  var activeTab = state.tab === "detail" ? (state.from || "market") : state.tab === "settings" ? "market" : state.tab;
 
   var body = null;
   if (state.tab === "market") body = <MarketScreen {...props} />;
@@ -74,22 +40,21 @@ function Shell(props) {
 
   return (
     <View style={{ flex: 1, backgroundColor: C.bg }}>
-      <StatusBar barStyle="light-content" />
-      <SafeAreaView edges={["top"]} style={{ flex: 1, backgroundColor: C.bgTop }}>
-        <View style={{ flex: 1, backgroundColor: C.bg, paddingTop: 6 }}>{body}</View>
+      <StatusBar barStyle="light-content" backgroundColor={C.bg} />
+      <SafeAreaView edges={["top"]} style={{ flex: 1, backgroundColor: C.bg }}>
+        <View style={{ flex: 1, backgroundColor: C.bg, paddingTop: 8 }}>{body}</View>
       </SafeAreaView>
-      <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "rgba(12,16,22,0.96)" }}>
-        <View style={{ flexDirection: "row", borderTopWidth: 1, borderTopColor: "rgba(255,255,255,0.07)", paddingTop: 12, paddingBottom: 10 }}>
+      <SafeAreaView edges={["bottom"]} style={{ backgroundColor: "rgba(13,17,25,0.97)", borderTopWidth: 1, borderTopColor: C.line }}>
+        <View style={{ flexDirection: "row", paddingHorizontal: 8, paddingTop: 6, paddingBottom: 4 }}>
           {TABS.map(function (t) {
             var on = t.id === activeTab;
-            var col = on ? C.ringUp : "rgba(232,234,236,0.45)";
+            var col = on ? C.brand : C.dim;
             return (
-              <Pressable key={t.id} onPress={function () { setState({ tab: t.id, detail: t.id === "market" ? null : state.detail }); }}
-                style={{ flex: 1, alignItems: "center", gap: 6 }}>
-                <View style={{ height: 14, justifyContent: "center" }}>
-                  <TabIcon shape={t.shape} color={col} active={on} />
-                </View>
-                <Text style={[T.mono(8.5), { color: on ? C.up : "rgba(232,234,236,0.45)", letterSpacing: 0.2 }]}>{t.label}</Text>
+              <Pressable key={t.id} accessibilityRole="button" accessibilityLabel={t.label}
+                onPress={function () { setState({ tab: t.id, detail: t.id === "market" ? null : state.detail }); }}
+                style={{ flex: 1, height: 56, alignItems: "center", justifyContent: "center", gap: 5 }}>
+                <Icon name={t.icon} color={col} width={on ? 2 : 1.8} />
+                <Text style={[T.sans(10.5, on ? "600" : "500"), { color: col }]}>{t.label}</Text>
               </Pressable>
             );
           })}
@@ -138,6 +103,16 @@ export default function QuantumApp() {
     AsyncStorage.setItem(PREFS, JSON.stringify({ watch: state.watch, horizon: state.horizon, sims: state.sims, index: state.index })).catch(function () {});
   }, [state.watch, state.horizon, state.sims, state.index]);
 
+  // polices de la refonte : on attend au plus 2,5 s, sinon polices systeme
+  var [fontsOk, setFontsOk] = useState(false);
+  useEffect(function () {
+    var done = false;
+    var finish = function (ok) { if (done) return; done = true; FONTS.ready = ok; setFontsOk(true); };
+    var t = setTimeout(function () { finish(false); }, 2500);
+    loadAsync(FONT_FILES).then(function () { clearTimeout(t); finish(true); }).catch(function () { clearTimeout(t); finish(false); });
+    return function () { clearTimeout(t); };
+  }, []);
+
   var setState = useCallback(function (patch) {
     setStateRaw(function (prev) { return Object.assign({}, prev, patch); });
   }, []);
@@ -162,6 +137,8 @@ export default function QuantumApp() {
   }, []);
 
   var shared = { state: state, setState: setState, open: open, back: back, toggleWatch: toggleWatch };
+
+  if (!fontsOk) return <View style={{ flex: 1, backgroundColor: C.bg }} />;
 
   return (
     <BrainProvider>

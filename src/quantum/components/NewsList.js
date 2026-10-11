@@ -8,20 +8,20 @@ export function NewsItem(props) {
   return (
     <Pressable
       onPress={function () { Linking.openURL(n.link).catch(function () {}); }}
-      style={{ flexDirection: "row", gap: 13, backgroundColor: C.card, borderWidth: 1, borderColor: C.border, borderRadius: 16, padding: 14 }}
+      style={{ flexDirection: "row", gap: 13, backgroundColor: C.card, borderWidth: 1, borderColor: C.line, borderRadius: 18, padding: 14 }}
     >
       <View style={{ flex: 1, minWidth: 0 }}>
-        <Text style={[T.sans(13, "600"), { color: C.text, lineHeight: 18, marginBottom: 7 }]} numberOfLines={3}>
+        <Text style={[T.sans(13.5, "600"), { color: C.text, lineHeight: 19, marginBottom: 7 }]} numberOfLines={3}>
           {n.title}
         </Text>
         <View style={{ flexDirection: "row", alignItems: "center", gap: 8 }}>
-          <Text style={[T.mono(9, "500"), { color: C.dimmer, letterSpacing: 0.8 }]} numberOfLines={1}>
-            {(n.publisher || "").toUpperCase()}
+          <Text style={[T.sans(11, "500"), { color: C.dim }]} numberOfLines={1}>
+            {n.publisher || ""}
           </Text>
           {n.time ? (
             <>
               <View style={{ width: 3, height: 3, borderRadius: 2, backgroundColor: "rgba(232,234,236,0.25)" }} />
-              <Text style={[T.mono(9, "500"), { color: C.dimmer }]}>{timeAgo(n.time)}</Text>
+              <Text style={[T.sans(11, "400"), { color: C.dim }]}>{timeAgo(n.time)}</Text>
             </>
           ) : null}
         </View>
@@ -42,7 +42,7 @@ export default function NewsList(props) {
   if (props.error && !props.items.length) {
     return (
       <View style={{ borderWidth: 1, borderColor: "rgba(224,92,75,0.35)", backgroundColor: "rgba(224,92,75,0.07)", borderRadius: 16, padding: 16 }}>
-        <Text style={[T.sans(12, "500"), { color: C.down, marginBottom: 4 }]}>Actualites indisponibles</Text>
+        <Text style={[T.sans(12, "500"), { color: C.down, marginBottom: 4 }]}>Actualités indisponibles</Text>
         <Text style={[T.sans(11, "400"), { color: C.dim, lineHeight: 16 }]}>{props.error}</Text>
       </View>
     );
@@ -50,7 +50,7 @@ export default function NewsList(props) {
   if (!props.items.length) {
     return (
       <View style={{ borderWidth: 1, borderColor: "rgba(255,255,255,0.12)", borderStyle: "dashed", borderRadius: 16, padding: 20, alignItems: "center" }}>
-        <Text style={[T.sans(12, "500"), { color: C.dim }]}>Aucune actualite recente</Text>
+        <Text style={[T.sans(12, "500"), { color: C.dim }]}>Aucune actualité récente</Text>
       </View>
     );
   }

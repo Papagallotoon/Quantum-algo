@@ -11,11 +11,11 @@ export default function Dial(props) {
   return (
     <View style={{ width: size, height: size, alignItems: "center", justifyContent: "center" }}>
       <Svg width={size} height={size} style={{ position: "absolute" }}>
-        <Circle cx={size / 2} cy={size / 2} r={r} stroke="rgba(255,255,255,0.09)" strokeWidth={stroke} fill="none" />
+        <Circle cx={size / 2} cy={size / 2} r={r} stroke="#232C3D" strokeWidth={stroke} fill="none" />
         <Circle
           cx={size / 2} cy={size / 2} r={r}
           stroke={props.color} strokeWidth={stroke} fill="none"
-          strokeDasharray={(c * pct) / 100 + " " + c}
+          strokeLinecap="round" strokeDasharray={(c * pct) / 100 + " " + c}
           transform={"rotate(-90 " + size / 2 + " " + size / 2 + ")"}
         />
       </Svg>
