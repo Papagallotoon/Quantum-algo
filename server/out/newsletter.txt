@@ -7,24 +7,24 @@
 
 *Opportunités*
 • JPMorgan – Attendre la confirmation (3 mois) 63 %
-  entrée 343,31-345,06, stop 325,83, objectif 376,54, revoir le 13/01
+  entrée 343,31-345,06, stop 325,83, objectif 378,31, revoir le 13/01
   ⚠ résultats pendant la position
 • UniCredit – Attendre la confirmation (3 mois) 63 %
-  entrée 85,24-85,87, stop 78,94, objectif 98,09, revoir le 13/01
+  entrée 85,24-85,87, stop 78,94, objectif 97,96, revoir le 13/01
   ⚠ résultats pendant la position
 • Michelin – Attendre la confirmation (3 mois) 62 %
-  entrée 34,07-34,25, stop 32,31, objectif 37,13, revoir le 13/01
+  entrée 34,07-34,25, stop 32,31, objectif 37,16, revoir le 13/01
 • Johnson & Johnson – Entrer (3 mois) 62 %
-  entrée 258,81-262,49, stop 245,65, objectif 290,36, revoir le 06/01
+  entrée 258,81-262,49, stop 245,65, objectif 290,13, revoir le 06/01
   ⚠ résultats pendant la position
 • Intesa Sanpaolo – Attendre la confirmation (3 mois) 61 %
-  entrée 6,84-6,88, stop 6,42, objectif 7,64, revoir le 13/01
+  entrée 6,84-6,88, stop 6,42, objectif 7,62, revoir le 13/01
   ⚠ résultats pendant la position
 
 *À lire*
+• NEXANS Cours Action NEX, Cotation Bourse Euronext Paris (Boursorama)
+• ENGIE Cours Action ENGI, Cotation Bourse Euronext Paris (Boursorama)
 • Le prix de l'or mondial inverse la tendance en fin de semaine, la semaine prochaine confronté à un test majeur (Laodong.vn)
-• BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris (Boursorama)
-• Taux de change du dollar américain le 11 octobre : Le dollar s’est légèrement affaibli dans un contexte d’anticipations de hausse des taux d’intérêt de la Fed. (Vietnam.vn)
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 

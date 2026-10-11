@@ -491,7 +491,7 @@
    }
   }
  },
- "createdAt": "2026-10-11T07:25:30.341Z",
+ "createdAt": "2026-10-11T07:38:59.240Z",
  "universe": 66,
  "summary": "Modèle ré-entraîné le 11/10 sur 66 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
@@ -779,7 +779,6 @@
    "CALLMEBOT_PHONE": "absent",
    "CALLMEBOT_APIKEY": "absent",
    "event": "workflow_dispatch"
-  },
-  "subscribers": 0
+  }
  }
 }
