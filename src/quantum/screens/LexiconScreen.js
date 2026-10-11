@@ -4,6 +4,8 @@ import { C, T } from "../theme";
 import { LEXICON, LEX_CATS } from "../lexicon";
 import { ScreenTitle } from "../components/UI";
 import Icon from "../components/Icons";
+import Diagram from "../components/Diagram";
+import { diagramFor } from "../diagrams";
 
 var SITE_LEARN = "https://papagallotoon.github.io/Quantum-algo/#/apprendre";
 var CAT_COL = { Trading: "#F5B740", Concepts: "#8B93FF", Tendance: "#34D399", Momentum: "#5EC8F2", Volatilite: "#FF6B5B", Volume: "#C9A7FF", Structure: "#EEF2F7" };
@@ -48,6 +50,7 @@ export default function LexiconScreen() {
           </View>
           <Text style={[T.sans(20, "700"), { color: C.text, letterSpacing: -0.4 }]}>{td.t}</Text>
           <Text style={[T.sans(13, "400"), { color: C.soft, lineHeight: 20 }]}>{td.s}</Text>
+          <Diagram diagram={diagramFor(td.t)} inset={72} showTitle={false} />
         </Pressable>
       ) : null}
 
@@ -105,6 +108,11 @@ export default function LexiconScreen() {
                 </View>
                 <Icon name={isOpen ? "up" : "down"} size={16} width={2} color={C.dim} />
               </Pressable>
+              {isOpen && diagramFor(e.t) ? (
+                <View style={{ paddingHorizontal: 14, paddingBottom: 10 }}>
+                  <Diagram diagram={diagramFor(e.t)} inset={70} />
+                </View>
+              ) : null}
               {isOpen ? (
                 <View style={{ paddingLeft: 70, paddingRight: 14, paddingBottom: 14, gap: 10 }}>
                   <Text style={[T.sans(12.5, "400"), { color: C.soft, lineHeight: 19 }]}>{e.l}</Text>
