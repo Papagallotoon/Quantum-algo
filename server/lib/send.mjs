@@ -32,6 +32,7 @@ async function smtp() {
   const port = Number(env("SMTP_PORT") || 465);
   transport = nodemailer.createTransport({
     host: env("SMTP_HOST"), port, secure: port === 465, pool: true, maxConnections: 1,
+    connectionTimeout: 20000, greetingTimeout: 15000, socketTimeout: 30000,
     auth: { user: env("SMTP_USER"), pass: env("SMTP_PASS") },
   });
   return transport;
@@ -47,7 +48,7 @@ async function sendSmtp(subject, html, text, to, headers) {
 export async function fetchSubscribers() {
   const api = env("SUBSCRIBE_API"), tok = env("SUBSCRIBE_TOKEN");
   if (!api || !tok) return { list: [], configured: false };
-  const res = await fetch(api.replace(/\/$/, "") + "/list", { headers: { Authorization: "Bearer " + tok } });
+  const res = await fetch(api.replace(/\/$/, "") + "/list", { headers: { Authorization: "Bearer " + tok }, signal: AbortSignal.timeout(20000) });
   if (!res.ok) throw new Error("liste des abonnes : HTTP " + res.status);
   const j = await res.json();
   return { list: j.subscribers || [], configured: true };

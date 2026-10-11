@@ -347,14 +347,21 @@ else {
   if (res.done.length) model.newsletter.lastSent = today.toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" });
   if (res.errors.length && !res.done.length) process.exitCode = 2;
   // abonnes inscrits sur le site
+  // diagnostic publie (sans aucune adresse) : nombre d'inscrits, envois, erreurs
+  const sd = { configured: !!(process.env.SUBSCRIBE_API && process.env.SUBSCRIBE_TOKEN), at: new Date().toISOString() };
   try {
     const subs = await fetchSubscribers();
+    sd.count = subs.list.length;
     if (subs.configured) {
-      const r = await sendToSubscribers(subs.list, `Quantum Algo – ${dateLabel}`, letter.html, letter.text, (process.env.MAIL_TO || "").split(","));
+      const owner = (process.env.MAIL_TO || "").split(",").map((x) => x.trim().toLowerCase());
+      sd.sameAsOwner = subs.list.filter((x) => owner.includes(x.email.toLowerCase())).length;
+      const r = await sendToSubscribers(subs.list, `Quantum Algo – ${dateLabel}`, letter.html, letter.text, owner);
+      sd.sent = r.done.length; sd.errors = r.errors.map((e) => e.replace(/^[^:]*:/, "").slice(0, 160));
       log(`abonnes : ${subs.list.length} inscrits, ${r.done.length} envois${r.errors.length ? ", " + r.errors.length + " erreurs (" + r.errors.slice(0, 3).join(" ; ") + ")" : ""}`);
       model.newsletter.subscribers = subs.list.length;
     }
-  } catch (e) { log("abonnes : " + e.message); }
+  } catch (e) { sd.error = e.message; log("abonnes : " + e.message); }
+  model.newsletter.subs = sd;
 }
 
 writeJson("model.json", model);

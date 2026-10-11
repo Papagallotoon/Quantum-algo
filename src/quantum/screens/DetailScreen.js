@@ -200,7 +200,7 @@ export default function DetailScreen(props) {
         <Card style={{ flexDirection: "row", alignItems: "center", gap: 18, paddingVertical: 13, paddingHorizontal: 18 }}>
           <Dial size={76} stroke={8} pct={s.score} color={ring}>
             <Text style={[T.sans(19, "700"), { color: color, letterSpacing: -0.6 }]}>{s.score + " %"}</Text>
-            <Text style={[T.mono(8, "500"), { color: "rgba(232,234,236,0.42)", letterSpacing: 1.2, marginTop: 3 }]}>{dir < 0 ? "BAISSE" : "HAUSSE"}</Text>
+            <Text style={[T.mono(7, "500"), { color: "rgba(232,234,236,0.42)", letterSpacing: 0.8, marginTop: 3, textAlign: "center" }]}>{dir < 0 ? "CHANCES\nDE BAISSE" : "CHANCES\nDE HAUSSE"}</Text>
           </Dial>
           <View style={{ flex: 1, gap: 9 }}>
             {[["Attendu (" + st.horizon + ")", s.expected], ["Intervalle 90 %", s.interval], ["Fiabilite mesuree", s.conf]].map(function (r, i) {

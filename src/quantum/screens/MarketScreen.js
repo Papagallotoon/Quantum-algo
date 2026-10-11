@@ -86,7 +86,7 @@ export default function MarketScreen(props) {
             {idx ? (
               <>
                 <Text style={[T.sans(44, "700"), { color: color, letterSpacing: -1.6, marginTop: 2 }]}>{score + " %"}</Text>
-                <Text style={[T.mono(10, "500"), { color: C.dim, marginTop: 2 }]}>{neutral ? (dir > 0 ? "de hausse - neutre" : "de baisse - neutre") : dir > 0 ? "de hausse" : "de baisse"}</Text>
+                <Text style={[T.mono(10, "500"), { color: C.dim, marginTop: 2, textAlign: "center" }]}>{(dir > 0 ? "de chances de hausse" : "de chances de baisse") + (neutral ? "\n≈ pile ou face" : "")}</Text>
               </>
             ) : data.loading ? (
               <ActivityIndicator color={C.dim} style={{ marginTop: 12 }} />
@@ -118,7 +118,7 @@ export default function MarketScreen(props) {
         </View>
 
         <Text style={[T.sans(10.5, "400"), { color: "rgba(232,234,236,0.38)", textAlign: "center", lineHeight: 16, paddingHorizontal: 20, marginBottom: 20 }]}>
-          {"Probabilite calibree sur l'historique reel, " + st.sims.toLocaleString("fr-FR") + " scenarios simules - information statistique, pas un conseil"}
+          {"Le chiffre = chances sur 100 que l'indice termine plus haut a cet horizon (pas une hausse en %). Calibre sur l'historique reel, " + st.sims.toLocaleString("fr-FR") + " scenarios simules - information statistique, pas un conseil"}
         </Text>
 
         {idxError ? (

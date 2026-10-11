@@ -69,7 +69,7 @@ export default function PlanCard(props) {
 
       {p.evals ? (
         <View style={{ marginTop: 12, paddingTop: 10, borderTopWidth: 1, borderTopColor: C.borderSoft }}>
-          <Text style={[T.mono(9, "500"), { color: "rgba(232,234,236,0.42)", letterSpacing: 1.2, marginBottom: 8 }]}>PROBABILITE DE HAUSSE PAR HORIZON</Text>
+          <Text style={[T.mono(9, "500"), { color: "rgba(232,234,236,0.42)", letterSpacing: 1.2, marginBottom: 8 }]}>CHANCES DE HAUSSE (SUR 100) PAR HORIZON</Text>
           <View style={{ flexDirection: "row", gap: 6 }}>
             {HORIZON_KEYS.map(function (h) {
               var e = p.evals[h], on = h === p.horizon;
