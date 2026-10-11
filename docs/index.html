@@ -505,7 +505,9 @@
   function diagram(key) {
     var d = LEARN.diagrams[key]; if (!d) return "";
     var h = '<div class="card" style="background:rgba(255,255,255,.03)"><div class="mono dimmer small" style="letter-spacing:1px;margin-bottom:10px">' + esc((d.title || "").toUpperCase()) + '</div>';
-    if (d.type === "zones") {
+    if (d.type === "svg") {
+      h += d.svg;
+    } else if (d.type === "zones") {
       h += '<div style="display:flex;gap:4px;border-radius:10px;overflow:hidden">' + d.zones.map(function (z) {
         return '<div style="flex:' + z.flex + ';background:' + z.bg + ';color:' + z.color + ';padding:12px 6px;text-align:center;font-size:12px;font-weight:700">' + esc(z.label) + '</div>';
       }).join("") + '</div>';
@@ -519,7 +521,7 @@
       var cs = d.candles, Hh = (d.height || 80) * 1.4, hi = Math.max.apply(null, cs.map(function (c) { return c.h; })) + 5, lo = Math.min.apply(null, cs.map(function (c) { return c.l; })) - 5;
       var sc = function (v) { return (hi - v) / (hi - lo) * Hh; }, step = 46, Wc = cs.length * step + 10;
       h += '<svg viewBox="0 0 ' + Wc + ' ' + (Hh + 22) + '" style="width:100%;max-width:' + Math.min(520, Wc * 1.6) + 'px">' + cs.map(function (c, i) {
-        var x = 10 + i * step + 12, up = c.c > c.o, doji = Math.abs(c.c - c.o) <= 1, col = doji ? "#facc15" : up ? "#22c55e" : "#fb7185";
+        var x = 10 + i * step + 12, up = c.c > c.o, doji = Math.abs(c.c - c.o) <= 1, col = doji ? "#F5B740" : up ? "#34D399" : "#FF6B5B";
         var top = sc(Math.max(c.o, c.c)), bot = sc(Math.min(c.o, c.c));
         return '<line x1="' + x + '" x2="' + x + '" y1="' + sc(c.h) + '" y2="' + sc(c.l) + '" stroke="' + col + '" stroke-width="2"/><rect x="' + (x - 9) + '" y="' + top + '" width="18" height="' + Math.max(bot - top, 3) + '" rx="2" fill="' + col + '"/>' +
           (d.labels && d.labels[i] ? '<text x="' + x + '" y="' + (Hh + 16) + '" text-anchor="middle" fill="rgba(238,242,247,.55)" font-size="9">' + esc(d.labels[i]) + '</text>' : '');
@@ -570,6 +572,11 @@
       (i < m.lessons.length - 1 ? '<a class="chip on" href="#/apprendre/m/' + mid + '/' + (i + 1) + '">Suivante →</a>' : '<a class="chip on" href="#/apprendre/quiz">Faire le quiz →</a>') + '</div>';
     return h;
   }
+  var LEXD = [[/CCI|MFI|ultimate/i, "rsi_svg"], [/ROC|TSI|awesome/i, "macd_svg"], [/volatilit/i, "bollinger"], [/ease of movement/i, "volume"], [/score|confiance|biais/i, "cone_svg"], [/stochastique|williams/i, "stochastique"], [/RSI|surachat/i, "rsi_svg"], [/^(SMA|EMA|HMA)|moyenne mobile/i, "mm_svg"], [/MACD/, "macd_svg"], [/divergence/i, "divergence"], [/ichimoku/i, "ichimoku"], [/bollinger|keltner|donchian|cart-type/i, "bollinger"], [/stop|take profit|ATR/i, "stop"], [/VWAP/, "vwap"], [/volume|OBV|chaikin|accumulation|force index|klinger/i, "volume"], [/fibonacci/i, "fibo_svg"], [/corr[ée]lation|b[êe]ta|force relative/i, "correlation"], [/monte|intervalle|m[ée]diane|probabilit/i, "cone_svg"], [/chandelier|doji|marteau|harami/i, "candles_svg"], [/ADX|DMI|choppiness|aroon|largeur|VIX/i, "regimes"], [/pivot|support|r[ée]sistance/i, "sr_svg"], [/supertrend|SAR|tendance/i, "tendance"], [/^PER\b/, "per_zones"], [/free cash/i, "fcf"], [/ROE|ROCE|WACC/, "roce_wacc"], [/dette/i, "dette"], [/DCF/, "dcf"], [/sharpe|drawdown/i, "drawdown"], [/kelly/i, "kelly"], [/consensus/i, "consensus"], [/PEA/, "pea"]];
+  function lexDiag(term) {
+    for (var i = 0; i < LEXD.length; i++) if (LEXD[i][0].test(term) && LEARN.diagrams[LEXD[i][1]]) return diagram(LEXD[i][1]);
+    return "";
+  }
   function pageLexique() {
     var L = LEARN.lexicon, cat = st.lexCat || "Tous", q = (st.lexQ || "").toLowerCase();
     var items = L.items.filter(function (x) { return (cat === "Tous" || x.c === cat) && (!q || (x.t + " " + x.s).toLowerCase().indexOf(q) >= 0); });
@@ -577,7 +584,7 @@
       '<input id="lexq" value="' + esc(st.lexQ || "") + '" placeholder="Chercher un terme…" style="width:100%;background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:10px 12px;font-size:15px;margin:6px 0 10px">' +
       '<div class="chips" style="margin-bottom:8px">' + L.cats.map(function (c) { return '<a class="chip' + (c === cat ? " on" : "") + '" data-lexcat="' + esc(c) + '">' + esc(c) + '</a>'; }).join("") + '</div>';
     h += items.map(function (x, i) {
-      return '<details class="card"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px"><span><b>' + esc(x.em || "") + ' ' + esc(x.t) + '</b><div class="small muted" style="margin-top:3px">' + esc(x.s) + '</div></span><span class="mono dimmer small">' + esc(x.c) + '</span></summary><div class="lesson" style="margin-top:12px">' + fmtLesson(x.l) + (x.e ? '<p class="small" style="color:var(--up)"><b>Exemple :</b> ' + esc(x.e) + '</p>' : '') + '</div></details>';
+      return '<details class="card"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px"><span><b>' + esc(x.em || "") + ' ' + esc(x.t) + '</b><div class="small muted" style="margin-top:3px">' + esc(x.s) + '</div></span><span class="mono dimmer small">' + esc(x.c) + '</span></summary><div class="lesson" style="margin-top:12px">' + lexDiag(x.t) + fmtLesson(x.l) + (x.e ? '<p class="small" style="color:var(--up)"><b>Exemple :</b> ' + esc(x.e) + '</p>' : '') + '</div></details>';
     }).join("") || '<div class="empty">Aucun terme ne correspond.</div>';
     return h;
   }
