@@ -131,7 +131,7 @@
       <a href="#/apprendre" data-r="apprendre">APPRENDRE</a>
     </nav>
     <a class="navnl" id="nlbtn">✉ NEWSLETTER</a>
-    <div class="search"><input id="q" placeholder="Chercher une valeur…" autocomplete="off"><div class="results" id="res"></div></div>
+    <div class="search"><input id="q" placeholder="Chercher une action (nom, symbole, secteur)…" autocomplete="off"><div class="results" id="res"></div></div>
   </div>
 </header>
 <main class="wrap" id="app"><div class="loading">CHARGEMENT…</div></main>
@@ -154,6 +154,13 @@
   function pc(p) { return ok(p) ? Math.round(p * 100) + " %" : "-"; }
   function cls(v) { return !ok(v) ? "flat" : v >= 0 ? "up" : "down"; }
   function pcls(p) { return p >= 0.53 ? "up" : p <= 0.47 ? "down" : "flat"; }
+  var FLAGC = { USD: "us", EUR: "eu", GBP: "gb", JPY: "jp", CNY: "cn", CHF: "ch", CAD: "ca", AUD: "au", NZD: "nz" };
+  function flag(e) {
+    var c = FLAGC[e && e.cur];
+    if (!c) return esc((e && e.flag) || "");
+    return '<img src="https://flagcdn.com/w40/' + c + '.png" alt="' + esc(e.country || e.cur) + '" title="' + esc(e.country || e.cur) + '" style="width:20px;height:14px;object-fit:cover;border-radius:2px;vertical-align:-2px;box-shadow:0 0 0 1px rgba(255,255,255,.15)">';
+  }
+  function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/’/g, "'"); }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function dfr(iso) { if (!iso) return "-"; var d = new Date(iso); return d.toLocaleDateString("fr-FR", { weekday: "short", day: "2-digit", month: "2-digit", timeZone: "Europe/Paris" }); }
   function ago(ms) { if (!ms) return ""; var h = Math.round((Date.now() - ms) / 3600e3); return h < 1 ? "à l'instant" : h < 24 ? "il y a " + h + " h" : "il y a " + Math.round(h / 24) + " j"; }
@@ -259,14 +266,14 @@
     h += '<div class="grid2"><div class="card" id="agenda"><h2>Agenda économique (heure de Paris)</h2>';
     if (ag && ag.today && ag.today.length) {
       h += '<table>' + ag.today.map(function (e) {
-        return '<tr><td style="width:70px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + esc(e.flag || "") + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
+        return '<tr><td style="width:70px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
       }).join("") + '</table>';
     } else h += '<div class="empty"><span class="pill d-now">AUJOURD\'HUI</span> ' + (ag && ag.ok ? "Aucune annonce importante." : "Agenda indisponible ce matin.") + '</div>';
     if (ag && ag.week && ag.week.length) {
       h += '<h2 style="margin-top:18px">À venir cette semaine · fort impact</h2><table>' + ag.week.map(function (e) {
-        return '<tr><td style="width:120px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel) + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + esc(e.flag || "") + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
+        return '<tr><td style="width:120px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel) + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
       }).join("") + '</table>';
-    } else if (ag && ag.tomorrow && ag.tomorrow.length) h += '<p class="small muted">Demain : ' + ag.tomorrow.map(function (e) { return esc(e.time + " " + (e.flag || "") + " " + e.title); }).join(" · ") + '</p>';
+    } else if (ag && ag.tomorrow && ag.tomorrow.length) h += '<p class="small muted">Demain : ' + ag.tomorrow.map(function (e) { return esc(e.time) + " " + flag(e) + " " + esc(e.title); }).join(" · ") + '</p>';
     var er = t.earnings;
     if (er && ((er.today || []).length || (er.week || []).length)) {
       h += '<h2 style="margin-top:18px">Résultats d\'entreprises</h2>';
@@ -494,18 +501,29 @@
     var sub = parts[1] || "";
     if (sub === "m") return pageLesson(parts[2], Number(parts[3] || 0));
     if (sub === "lexique") return pageLexique();
-    if (sub === "quiz") return pageQuiz();
+    if (sub === "quiz") return pageQuiz(parts[2] || "");
     if (sub === "q") return pageOneQuestion(parts[2]);
     var best = get("quizBest"), done = (get("lessonsDone") || "").split(",").filter(Boolean);
-    var h = '<h1>Apprendre</h1><p class="sub">Les bases de la bourse, les indicateurs, la gestion du risque et la méthode de Quantum Algo. Puis teste-toi avec le quiz.</p>';
+    var h = '<h1>Apprendre</h1><p class="sub">Un parcours complet en trois niveaux : débutant, intermédiaire et pro. La bourse, l’analyse technique, l’analyse fondamentale et la gestion du risque, puis un quiz par niveau pour te tester.</p>';
     h += '<div class="grid2"><a class="card" href="#/apprendre/quiz" style="display:block;border-color:rgba(79,221,154,.35)"><h2>Quiz</h2><div style="font-size:20px;font-weight:800">Teste tes connaissances</div><div class="small muted" style="margin-top:6px">10 questions tirées au hasard parmi ' + LEARN.quiz.length + ', avec l\'explication de chaque réponse.' + (best ? ' Meilleur score : <b class="up">' + esc(best) + '/10</b>' : '') + '</div></a>' +
       '<a class="card" href="#/apprendre/lexique" style="display:block"><h2>Lexique</h2><div style="font-size:20px;font-weight:800">' + LEARN.lexicon.items.length + ' définitions</div><div class="small muted" style="margin-top:6px">RSI, MACD, Bollinger, ATR, bêta… chaque indicateur expliqué avec un exemple.</div></a></div>';
-    LEARN.modules.forEach(function (m) {
-      var n = m.lessons.filter(function (_, i) { return done.indexOf(m.id + i) >= 0; }).length;
-      h += '<div class="card"><h2>' + esc(m.icon || "") + ' ' + esc(m.title) + ' <span class="dimmer">· ' + n + '/' + m.lessons.length + '</span></h2><div class="grid2" style="gap:8px">' + m.lessons.map(function (l, i) {
-        var ok_ = done.indexOf(m.id + i) >= 0;
-        return '<a class="mod" href="#/apprendre/m/' + m.id + '/' + i + '"><span class="' + (ok_ ? "up" : "dimmer") + '">' + (ok_ ? "✔" : "○") + '</span> ' + esc(l.title) + '</a>';
-      }).join("") + '</div></div>';
+    var LV = [["start", "🚀 Commencer", "La méthode Quantum Algo en 5 minutes."], ["deb", "🟢 Débutant", "La bourse, les premiers pas en analyse technique et fondamentale."], ["int", "🟡 Intermédiaire", "Indicateurs, figures chartistes, états financiers, valorisation, macro."], ["pro", "🔴 Pro", "Ichimoku, backtest, DCF, WACC, analyse sectorielle, gestion de portefeuille."], ["ref", "📖 Référence", "Glossaire complet."]];
+    var lvl = st.learnLvl || "all";
+    h += '<div class="chips" style="margin:18px 0 4px">' + [["all", "Tout"], ["deb", "Débutant"], ["int", "Intermédiaire"], ["pro", "Pro"]].map(function (c) { return '<a class="chip' + (c[0] === lvl ? " on" : "") + '" data-lvl="' + c[0] + '">' + c[1] + '</a>'; }).join("") + '</div>';
+    LV.forEach(function (L) {
+      if (lvl !== "all" && L[0] !== lvl && L[0] !== "start") return;
+      var mods = LEARN.modules.filter(function (m) { return (m.level || "int") === L[0]; });
+      if (!mods.length) return;
+      var tot = 0, dn = 0;
+      mods.forEach(function (m) { tot += m.lessons.length; dn += m.lessons.filter(function (_, i) { return done.indexOf(m.id + i) >= 0; }).length; });
+      h += '<div style="margin:26px 0 6px;display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap"><div><div style="font-size:21px;font-weight:800">' + L[1] + '</div><div class="small muted">' + esc(L[2]) + '</div></div><div class="mono small dimmer">' + dn + '/' + tot + ' leçons' + (L[0] !== "start" && L[0] !== "ref" && LEARN.quiz.some(function (x) { return x.lvl === L[0]; }) ? ' · <a href="#/apprendre/quiz/' + L[0] + '" class="up">quiz ' + L[1].replace(/^\S+\s/, "").toLowerCase() + ' →</a>' : '') + '</div></div>';
+      mods.forEach(function (m) {
+        var n = m.lessons.filter(function (_, i) { return done.indexOf(m.id + i) >= 0; }).length;
+        h += '<div class="card"><h2>' + esc(m.icon || "") + ' ' + esc(m.title) + ' <span class="dimmer">· ' + n + '/' + m.lessons.length + '</span></h2><div class="grid2" style="gap:8px">' + m.lessons.map(function (l, i) {
+          var ok_ = done.indexOf(m.id + i) >= 0;
+          return '<a class="mod" href="#/apprendre/m/' + m.id + '/' + i + '"><span class="' + (ok_ ? "up" : "dimmer") + '">' + (ok_ ? "✔" : "○") + '</span> ' + esc(l.title) + '</a>';
+        }).join("") + '</div></div>';
+      });
     });
     return h;
   }
@@ -532,10 +550,11 @@
     }).join("") || '<div class="empty">Aucun terme ne correspond.</div>';
     return h;
   }
-  function newQuiz() {
-    var pool = LEARN.quiz.slice();
+  function newQuiz(lvl) {
+    var pool = LEARN.quiz.filter(function (x) { return !lvl || x.lvl === lvl; });
+    if (pool.length < 5) pool = LEARN.quiz.slice();
     for (var i = pool.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = pool[i]; pool[i] = pool[j]; pool[j] = t; }
-    QZ = { qs: pool.slice(0, 10), i: 0, score: 0, answered: null };
+    QZ = { qs: pool.slice(0, 10), i: 0, score: 0, answered: null, lvl: lvl || "" };
   }
   function qBlock(q, answered, idx) {
     return '<div class="card"><div style="font-size:19px;font-weight:700;line-height:1.35">' + esc(q.q) + '</div>' + q.a.map(function (a, k) {
@@ -543,9 +562,11 @@
       return '<button class="opt' + c + '" data-ans="' + k + '"' + (answered != null ? " disabled" : "") + '>' + String.fromCharCode(65 + k) + '. ' + esc(a) + '</button>';
     }).join("") + (answered != null ? '<div class="' + (answered === q.ok ? "up" : "down") + '" style="font-weight:800;margin-top:14px">' + (answered === q.ok ? "✔ Bonne réponse !" : "✘ Pas tout à fait.") + '</div><p class="small" style="line-height:1.6;color:rgba(232,234,236,.8);margin:6px 0 0">' + esc(q.why) + '</p>' : '') + '</div>';
   }
-  function pageQuiz() {
-    if (!QZ) newQuiz();
-    var h = '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← Apprendre</a></div><h1>Quiz</h1>';
+  function pageQuiz(lvl) {
+    if (!QZ || QZ.lvl !== lvl) newQuiz(lvl);
+    var LN = { deb: "débutant", int: "intermédiaire", pro: "pro" };
+    var h = '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← Apprendre</a></div><h1>Quiz' + (LN[lvl] ? ' ' + LN[lvl] : '') + '</h1>' +
+      '<div class="chips" style="margin-bottom:10px">' + [["", "Tous niveaux"], ["deb", "Débutant"], ["int", "Intermédiaire"], ["pro", "Pro"]].map(function (c) { return '<a class="chip' + (c[0] === lvl ? " on" : "") + '" href="#/apprendre/quiz' + (c[0] ? "/" + c[0] : "") + '">' + c[1] + '</a>'; }).join("") + '</div>';
     if (QZ.i >= QZ.qs.length) {
       var best = Number(get("quizBest") || 0); if (QZ.score > best) put("quizBest", String(QZ.score));
       var msg = QZ.score >= 9 ? "Excellent, tu maîtrises le sujet !" : QZ.score >= 7 ? "Très bien ! Quelques points à revoir." : QZ.score >= 5 ? "Pas mal, les cours t'aideront à progresser." : "Commence par les cours, puis retente ta chance.";
@@ -572,7 +593,8 @@
       var y = window.scrollY; render(); window.scrollTo(0, y); return;
     }
     if (e.target.id === "qz-next") { QZ.i++; QZ.answered = null; render(); return; }
-    if (e.target.id === "qz-again") { newQuiz(); render(); return; }
+    if (e.target.id === "qz-again") { newQuiz(QZ ? QZ.lvl : ""); render(); return; }
+    var lv = e.target.closest("[data-lvl]"); if (lv) { st.learnLvl = lv.dataset.lvl; render(); return; }
     var lc = e.target.closest("[data-lexcat]"); if (lc) { st.lexCat = lc.dataset.lexcat; render(); }
   });
   document.addEventListener("input", function (e) {
@@ -610,10 +632,16 @@
   // recherche
   var q = document.getElementById("q"), res = document.getElementById("res");
   q.addEventListener("input", function () {
-    var v = q.value.trim().toLowerCase();
+    var v = norm(q.value.trim());
     if (!v || !D) { res.style.display = "none"; return; }
-    var hits = Object.keys(D.stocks).map(function (k) { return D.stocks[k]; }).filter(function (a) { return a.name.toLowerCase().indexOf(v) >= 0 || a.sym.toLowerCase().indexOf(v) >= 0; }).slice(0, 10);
-    res.innerHTML = hits.length ? hits.map(function (a) { return '<a href="#/v/' + encodeURIComponent(a.sym) + '"><span>' + esc(a.name) + '</span><span class="mono dimmer">' + esc(a.sym) + '</span></a>'; }).join("") : '<a><span class="muted">Aucune valeur suivie ne correspond</span></a>';
+    var all = Object.keys(D.stocks).map(function (k) { return D.stocks[k]; });
+    var hits = all.map(function (a) {
+      var n = norm(a.name), s = norm(a.sym), sec = norm(a.sector || "");
+      var sc = s === v || s.split(".")[0] === v ? 0 : n.indexOf(v) === 0 ? 1 : n.indexOf(v) >= 0 ? 2 : s.indexOf(v) >= 0 ? 3 : sec.indexOf(v) >= 0 ? 4 : -1;
+      return { a: a, sc: sc };
+    }).filter(function (x) { return x.sc >= 0; }).sort(function (x, y) { return x.sc - y.sc || x.a.name.localeCompare(y.a.name); }).slice(0, 12);
+    res.innerHTML = hits.length ? hits.map(function (x) { var a = x.a; return '<a href="#/v/' + encodeURIComponent(a.sym) + '"><span>' + esc(a.name) + (a.sector ? ' <span class="small dimmer">· ' + esc(a.sector) + '</span>' : '') + '</span><span class="mono dimmer">' + esc(a.sym) + '</span></a>'; }).join("")
+      : '<a><span class="muted">« ' + esc(q.value.trim()) + ' » n\'est pas encore suivie (' + all.length + ' valeurs analysées chaque matin)</span></a>';
     res.style.display = "block";
   });
   res.addEventListener("click", function () { res.style.display = "none"; q.value = ""; });

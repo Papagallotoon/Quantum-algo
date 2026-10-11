@@ -3,30 +3,227 @@
  "dateLabel": "dimanche 11 octobre 2026",
  "picks": [
   {
+   "sym": "CAT",
+   "name": "Caterpillar",
+   "h": "1M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.57841334808561,
+   "expPct": 1.9719255440364236,
+   "start": "Acheter seulement apres une cloture au-dessus de 876,95",
+   "zoneLo": 876.9500122070312,
+   "zoneHi": 884.8402413138629,
+   "stop": 819.0883320902665,
+   "target": 963.7425323821784,
+   "rr": 1.5,
+   "pTarget": 0.306,
+   "holdDays": 21,
+   "reviewDate": "2026-11-16T13:30:00.000Z",
+   "validUntil": "2026-10-30T13:30:00.000Z",
+   "cur": "USD",
+   "expectancy": 1.2025131414065175,
+   "price": 800.469970703125,
+   "chg": 0.5388201244452384,
+   "sizePct": 15.155972146632237,
+   "riskPct": 6.59805910386426,
+   "gainPct": 9.897088655796392,
+   "perf": {
+    "w1": -5.316885467067101,
+    "m1": -0.5627365586180155,
+    "m3": -14.063792083507964,
+    "ytd": 39.72977770277166
+   },
+   "support": 772.8599853515625,
+   "resistance": 876.9500122070312,
+   "sma50": 821.995400390625,
+   "sma200": 801.3289492797852,
+   "rsi": 44.59930408321897,
+   "vol": 30.999117947710413,
+   "rs63": -12.45671922179994,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "Momentum 3 mois (%)",
+    "Negative Volume Index"
+   ],
+   "cons": [
+    "Oscillateur de Chaikin",
+    "Retracement Fibonacci 61,8 %"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 58 % sur 1 mois, rendement median attendu +1,97 %."
+   ],
+   "fund": {
+    "pe": 34.458458,
+    "fpe": 24.69258,
+    "yield": 0.81,
+    "rating": "2.1 - Buy",
+    "target": null,
+    "hi52": 1073.46,
+    "lo52": 495.45
+   },
+   "earningsWarning": "Résultats prévus le 29/10/2026 : risque de forte variation pendant la position.",
+   "news": []
+  },
+  {
+   "sym": "SCR.PA",
+   "name": "SCOR",
+   "h": "1M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.5770862949408082,
+   "expPct": 1.0788207419030416,
+   "start": "Acheter seulement apres une cloture au-dessus de 33,48",
+   "zoneLo": 33.47999954223633,
+   "zoneHi": 33.65505720652265,
+   "stop": 32.19624333746998,
+   "target": 35.40563384938585,
+   "rr": 1.5,
+   "pTarget": 0.29025,
+   "holdDays": 21,
+   "reviewDate": "2026-11-16T07:00:00.000Z",
+   "validUntil": "2026-10-30T07:00:00.000Z",
+   "cur": "EUR",
+   "expectancy": 0.4547731774734945,
+   "price": 31.920000076293945,
+   "chg": 0.5037778534604964,
+   "sizePct": 26.079717798388284,
+   "riskPct": 3.834397318753961,
+   "gainPct": 5.751595978130942,
+   "perf": {
+    "w1": 0.6305194428401162,
+    "m1": -1.1152376599029457,
+    "m3": -1.420633034735308,
+    "ytd": 11.064719312807636
+   },
+   "support": 30.979999542236328,
+   "resistance": 33.47999954223633,
+   "sma50": 33.215199851989745,
+   "sma200": 31.262099933624267,
+   "rsi": 43.39646589425594,
+   "vol": 21.55853841231808,
+   "rs63": null,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "ADX (14) directionnel",
+    "SMA 200"
+   ],
+   "cons": [
+    "Qstick (14)",
+    "Ichimoku Tenkan / Kijun"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 58 % sur 1 mois, rendement median attendu +1,08 %."
+   ],
+   "fund": {
+    "pe": 7.061947,
+    "fpe": 7.03313,
+    "yield": 5.95,
+    "rating": "2.4 - Buy",
+    "target": null,
+    "hi52": 35.3,
+    "lo52": 25.3
+   },
+   "earningsWarning": "Résultats prévus le 30/10/2026 : risque de forte variation pendant la position.",
+   "news": []
+  },
+  {
+   "sym": "C",
+   "name": "Citigroup",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.5663245272892187,
+   "expPct": 3.6627538763765344,
+   "start": "Acheter seulement apres une cloture au-dessus de 134,72",
+   "zoneLo": 134.72000122070312,
+   "zoneHi": 135.64233004231343,
+   "stop": 125.49671300459997,
+   "target": 152.50522966552722,
+   "rr": 1.9282958558936116,
+   "pTarget": 0.30875,
+   "holdDays": 63,
+   "reviewDate": "2027-01-13T13:30:00.000Z",
+   "validUntil": "2026-10-30T13:30:00.000Z",
+   "cur": "USD",
+   "expectancy": 1.9072284947674591,
+   "price": 129.63999938964844,
+   "chg": 1.2179868334570187,
+   "sizePct": 14.606504542001872,
+   "riskPct": 6.846264943980543,
+   "gainPct": 13.20162431982739,
+   "perf": {
+    "w1": 0.8871590580921795,
+    "m1": -6.397112354044454,
+    "m3": -7.867249517462915,
+    "ytd": 11.09777759645243
+   },
+   "support": 123.56999969482422,
+   "resistance": 139.72000122070312,
+   "sma50": 133.6295994567871,
+   "sma200": 126.23864986419677,
+   "rsi": 44.670820689986805,
+   "vol": 20.6252724186482,
+   "rs63": -11.808524316350821,
+   "pros": [
+    "Negative Volume Index",
+    "Croisement SMA 50 / 200",
+    "SMA 200"
+   ],
+   "cons": [
+    "Qstick (14)",
+    "Balance of Power (14)"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,66 %."
+   ],
+   "fund": {
+    "pe": 14,
+    "fpe": 10.0107565,
+    "yield": 2.07,
+    "rating": "1.7 - Buy",
+    "target": null,
+    "hi52": 147.96,
+    "lo52": 95
+   },
+   "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
+   "news": [
+    {
+     "title": "Les grandes conférences saoudiennes auront lieu malgré l’attaque meurtrière contre un aéroport, assurent les organisateurs",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZGNUSGpKY0s2dDAzd1ZQWnFyc2l4RUdLYlRCcG93V01jaU5wc0laajVjSDQwT0I0ZGpESl9DUGx4N25aaGdTNU43NmllZERja2VUVWhxd3RTY25qak4yclhieFM4c1p2cGF0bnJVTTJZRGRUQTdJeGVBNUxqZnpvN3NlTHRNRlhpOFZLeHFJSlBna2tFb1JPYjBNYmg1VnJDeWFOWklRbWhiNHJrWHZEMmY0dlZ0YVR6d2JGOHJnbVJMcjlqRHFtY1dIZ09nMHY4YlUtdVZMTkl1UUVLdDNZWXBNU2RxZzNZWXpLLUpqUQ?oc=5",
+     "source": "Zonebourse Suisse",
+     "time": 1791631758000,
+     "tone": "neutre"
+    }
+   ]
+  },
+  {
    "sym": "JPM",
    "name": "JPMorgan",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.6313360472905791,
-   "expPct": 2.9138452633694634,
+   "pUp": 0.5662045600600071,
+   "expPct": 2.5532200395928406,
    "start": "Acheter seulement apres une cloture au-dessus de 343,31",
    "zoneLo": 343.30999755859375,
    "zoneHi": 345.05842794249196,
    "stop": 325.8256937196114,
-   "target": 376.64671337616335,
-   "rr": 1.9066653224844643,
-   "pTarget": 0.31225,
+   "target": 376.02139449353956,
+   "rr": 1.8709007368090769,
+   "pTarget": 0.31625,
    "holdDays": 63,
    "reviewDate": "2027-01-13T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.7275439958142715,
+   "expectancy": 1.4216637482161065,
    "price": 332.989990234375,
    "chg": 0.4737121305388392,
    "sizePct": 19.63532553084345,
    "riskPct": 5.092861834295468,
-   "gainPct": 9.710383051655791,
+   "gainPct": 9.52823895825022,
    "perf": {
     "w1": 0.18352047132845772,
     "m1": -5.817967944976521,
@@ -42,21 +239,21 @@
    "rs63": -4.401624707877049,
    "pros": [
     "Negative Volume Index",
-    "SMA 200",
-    "Croisement SMA 50 / 200"
+    "Croisement SMA 50 / 200",
+    "SMA 200"
    ],
    "cons": [
-    "SuperTrend (10,3)",
-    "Force Index (13)"
+    "Qstick (14)",
+    "Balance of Power (14)"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 63 % sur 3 mois, rendement median attendu +2,91 %."
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +2,55 %."
    ],
    "fund": {
     "pe": 14.266923,
     "fpe": 13.254667,
-    "yield": 1.99,
+    "yield": 1.98,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 366.5,
@@ -86,25 +283,25 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.6292742051403525,
-   "expPct": 4.524575372056505,
+   "pUp": 0.5658406276809455,
+   "expPct": 3.8538699149393896,
    "start": "Acheter seulement apres une cloture au-dessus de 85,24",
    "zoneLo": 85.23999786376953,
    "zoneHi": 85.86989239833106,
    "stop": 78.94105251815418,
-   "target": 98.57524058673067,
-   "rr": 2.117059601452758,
-   "pTarget": 0.3105,
+   "target": 97.78239114591786,
+   "rr": 1.9911894125068081,
+   "pTarget": 0.31025,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.7388148416488765,
+   "expectancy": 2.021112092736511,
    "price": 76.12999725341797,
    "chg": 1.0619877909434638,
    "sizePct": 13.532423792675777,
    "riskPct": 7.389659201637146,
-   "gainPct": 15.644348964289643,
+   "gainPct": 14.714211164333395,
    "perf": {
     "w1": -3.449589439872769,
     "m1": -9.152751216014376,
@@ -120,245 +317,27 @@
    "rs63": -1.4316898493100805,
    "pros": [
     "Negative Volume Index",
-    "SMA 200",
-    "Croisement SMA 50 / 200"
+    "Croisement SMA 50 / 200",
+    "SMA 200"
    ],
    "cons": [
-    "SuperTrend (10,3)",
-    "Chaikin Money Flow"
+    "Chaikin Money Flow",
+    "Qstick (14)"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 63 % sur 3 mois, rendement median attendu +4,52 %."
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,85 %."
    ],
    "fund": {
     "pe": 10.906877,
     "fpe": 9.053535,
-    "yield": 4.18,
+    "yield": 4.14,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 86.42,
     "lo52": 57.36
    },
    "earningsWarning": "Résultats prévus le 22/10/2026 : risque de forte variation pendant la position.",
-   "news": []
-  },
-  {
-   "sym": "ML.PA",
-   "name": "Michelin",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.6211360371974554,
-   "expPct": 2.538360397326289,
-   "start": "Acheter seulement apres une cloture au-dessus de 34,07",
-   "zoneLo": 34.06999969482422,
-   "zoneHi": 34.24619920412474,
-   "stop": 32.308004601818986,
-   "target": 37.30107243530753,
-   "rr": 1.8337580810014875,
-   "pTarget": 0.2925,
-   "holdDays": 63,
-   "reviewDate": "2027-01-13T07:00:00.000Z",
-   "validUntil": "2026-10-30T07:00:00.000Z",
-   "cur": "EUR",
-   "expectancy": 1.201251341796121,
-   "price": 33.40999984741211,
-   "chg": 0.9975755685951215,
-   "sizePct": 19.33603551455693,
-   "riskPct": 5.171690956231233,
-   "gainPct": 9.483630083431335,
-   "perf": {
-    "w1": 1.1811004974009442,
-    "m1": -0.32816410754578085,
-    "m3": -2.252780722319281,
-    "ytd": 18.014837434402466
-   },
-   "support": 32.7400016784668,
-   "resistance": 34.310001373291016,
-   "sma50": 34.0892000579834,
-   "sma200": 32.45790008544922,
-   "rsi": 46.668861974204255,
-   "vol": 17.543171233745873,
-   "rs63": 4.482365211445083,
-   "pros": [
-    "Negative Volume Index",
-    "SMA 200",
-    "Croisement SMA 50 / 200"
-   ],
-   "cons": [
-    "SuperTrend (10,3)",
-    "Force relative 3 mois vs indice (%)"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 62 % sur 3 mois, rendement median attendu +2,54 %."
-   ],
-   "fund": {
-    "pe": 3.2626953,
-    "fpe": 9.6005745,
-    "yield": 13.603385000000001,
-    "rating": "2.4 - Buy",
-    "target": null,
-    "hi52": 35.72,
-    "lo52": 25.51
-   },
-   "news": [
-    {
-     "title": "ASM - UBB : les images d'une soirée marquée par un combat acharné mais au final cruel pour les Clermontois",
-     "link": "https://news.google.com/rss/articles/CBMi_AFBVV95cUxNazRiblRkeHlHMUZUMWNKRkJucmlvX0ZBRG8ybk5ONHIyXzlZeU9pZFhudHZVQ1BWZVZmUnRkWnJpdm84U0RXbDg2a0JBUDh1WFE4aXFfUEpQZnlBT0x2dnA2a1FfX3BqY0wxR1FOa1Z2UXpucDJ6YTVGTkthaFdSbFJEUFBaQU1saWdKNFJSNXozZ25ua1RZQTdhNDZYR1Zfc2RVZVhwWkEyQmlvVFE5SDJOOXVGMmNBb1RqblA1TnVoclhnbUVNRW9lUE9RdmxsaWxyMFpyRTMyVFdrMzZleXZlS3NZU0NRWXRNUThEZ0lGWElzOXdCaVhQNnI?oc=5",
-     "source": "La Montagne",
-     "time": 1791711000000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Rugby : l'ASM Clermont a perdu le dernier ruck, tout un symbole après sa défaite face à l'UBB",
-     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOa2w1YzI5LU1CcHBON2hHOWY0OTNlRHFtajB0bGVmS3cxUlV3YWtKT0F6eUN1VWI1VVVPNWdsV25kV3NRWW5ydHVlRlh3bkZWQ1Z2NnE4cDNMX3hSNjdMNkRISEU0Y0RXREtSWkZzSkpSczNCbm12OFdFVVJ6b2VOcnhfTmlBemplLW5kczgzR2Y0RmtZcWdmMVlWa2NxOWVXTnRyN1dfeWFaTXFoRVZ0MzgybTRhS21sNVJlQ1NJb2xpTVpyUFUxOVk2QjJFSHJXNF9BMm93RVdfRXRfUmhYcml4bTB4ZWNWdGZwNQ?oc=5",
-     "source": "La Montagne",
-     "time": 1791690900000,
-     "tone": "neutre"
-    }
-   ]
-  },
-  {
-   "sym": "JNJ",
-   "name": "Johnson & Johnson",
-   "h": "3M",
-   "action": "ENTRER",
-   "actionLabel": "Entrer",
-   "pUp": 0.6172315982034268,
-   "expPct": 2.8734231339383687,
-   "start": "Des la prochaine seance",
-   "zoneLo": 258.80865353997683,
-   "zoneHi": 262.492542001978,
-   "stop": 245.65190903282968,
-   "target": 289.184116711763,
-   "rr": 1.7572808541457776,
-   "pTarget": 0.3085,
-   "holdDays": 63,
-   "reviewDate": "2027-01-06T13:30:00.000Z",
-   "validUntil": "2026-10-13T13:30:00.000Z",
-   "cur": "USD",
-   "expectancy": 1.4114544028875626,
-   "price": 261.44000244140625,
-   "chg": 1.9338705718249916,
-   "sizePct": 16.55931439444006,
-   "riskPct": 6.038897361208137,
-   "gainPct": 10.612038713002518,
-   "perf": {
-    "w1": 2.113035069290037,
-    "m1": -1.843440416592712,
-    "m3": 1.423755124394921,
-    "ytd": 26.330034451168373
-   },
-   "support": 251.1699981689453,
-   "resistance": 275.2300109863281,
-   "sma50": 265.33399963378906,
-   "sma200": 242.9193002319336,
-   "rsi": 46.710008614805936,
-   "vol": 17.75611372421792,
-   "rs63": -2.517519674492985,
-   "pros": [
-    "Negative Volume Index",
-    "SMA 200",
-    "Croisement SMA 50 / 200"
-   ],
-   "cons": [
-    "SuperTrend (10,3)",
-    "Chaikin Money Flow"
-   ],
-   "why": [
-    "Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-    "Probabilite de hausse 62 % sur 3 mois, rendement median attendu +2,87 %."
-   ],
-   "fund": {
-    "pe": 30.294321,
-    "fpe": 21.538969,
-    "yield": 2.09,
-    "rating": "1.9 - Buy",
-    "target": null,
-    "hi52": 281.07,
-    "lo52": 184.66
-   },
-   "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Barnsley renforce son milieu avec Daniel Johnson jusqu'à la fin de la saison",
-     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBSY3Nld1k0TEtjNl9xN3JJUHZ2S05DaDVJX3hNclowYWFVOHF2cWxPcHVDQUZCelJXSEZJVFVmZlNwS0tKMURGNThqWjFQR0Q3RjE3UG11NlVYUldFT2tvTlZvV1UteWY0RmYtcktFNWRmV3VuaHg4?oc=5",
-     "source": "rdcsport.cd",
-     "time": 1791721347000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Le directeur scientifique de MeiraGTx, Naylor, cède des actions pour 294.291$",
-     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPUXlCNk9WSXVraThSaDVsdTVHS1RMcVlqaHZpZVJrU1prcTZBc1hUdURaRFNkeE9GYU01a01zR0xjYVVzbmpYbGt2eXozYWU1YWhZbTVMcVQ3TG5ydWxjaEFGcUNXelVVS3FoZ3FRdGFXbmpTMF96S21ra19vUzU2NmNFVy0tMnotZVg4YU5TSjR5OWxJUVIxSzlKaEV0QlhZa0UxeE5uTl9ZWVNIM2s1bUd3N0JGMTRTcXdZQXAtb2VtNU9VLW02aE1iS1BfZDFOOTZr?oc=5",
-     "source": "Investing.com France",
-     "time": 1791704760000,
-     "tone": "neutre"
-    }
-   ]
-  },
-  {
-   "sym": "ISP.MI",
-   "name": "Intesa Sanpaolo",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.6126673592437525,
-   "expPct": 2.981658001867604,
-   "start": "Acheter seulement apres une cloture au-dessus de 6,84",
-   "zoneLo": 6.839000225067139,
-   "zoneHi": 6.880986795755884,
-   "stop": 6.4191345181796775,
-   "target": 7.605575973422316,
-   "rr": 1.8257641331032706,
-   "pTarget": 0.33375,
-   "holdDays": 63,
-   "reviewDate": "2027-01-13T07:00:00.000Z",
-   "validUntil": "2026-10-30T07:00:00.000Z",
-   "cur": "EUR",
-   "expectancy": 1.7426344680097638,
-   "price": 6.116000175476074,
-   "chg": 0.924096257843332,
-   "sizePct": 16.28854205733033,
-   "riskPct": 6.139284881853317,
-   "gainPct": 11.208886140190936,
-   "perf": {
-    "w1": -3.350187909103741,
-    "m1": -8.195736852604284,
-    "m3": -3.6243304762427875,
-    "ytd": 3.293365504741508
-   },
-   "support": 6.052000045776367,
-   "resistance": 6.839000225067139,
-   "sma50": 6.7025000095367435,
-   "sma200": 6.030945017337799,
-   "rsi": 31.820976311667806,
-   "vol": 25.23792605761843,
-   "rs63": 2.272043168839788,
-   "pros": [
-    "Negative Volume Index",
-    "SMA 200",
-    "Croisement SMA 50 / 200"
-   ],
-   "cons": [
-    "SuperTrend (10,3)",
-    "Chaikin Money Flow"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 61 % sur 3 mois, rendement median attendu +2,98 %."
-   ],
-   "fund": {
-    "pe": 10.921429,
-    "fpe": 9.354257,
-    "yield": 6.27,
-    "rating": "1.8 - Buy",
-    "target": null,
-    "hi52": 6.937,
-    "lo52": 4.8135
-   },
-   "earningsWarning": "Résultats prévus le 30/10/2026 : risque de forte variation pendant la position.",
    "news": []
   }
  ],
@@ -370,7 +349,7 @@
    "price": 7803.330078125,
    "chg": 0.9526919873496631,
    "p1S": 0.5,
-   "p1M": 0.5130172772750664,
+   "p1M": 0.537057304376128,
    "trend": "sous SMA 200",
    "w1": -1.1885222968885056,
    "m1": -3.8615124329217543
@@ -381,7 +360,7 @@
    "price": 7811.5400390625,
    "chg": 0.5946946000482844,
    "p1S": 0.5,
-   "p1M": 0.5154180016777054,
+   "p1M": 0.5249884083988844,
    "trend": "au-dessus SMA 200",
    "w1": 1.1501106054318866,
    "m1": 2.8957919582459413
@@ -392,7 +371,7 @@
    "price": 30883.150390625,
    "chg": 0.5120771135067814,
    "p1S": 0.5,
-   "p1M": 0.5198661603837675,
+   "p1M": 0.531245945658805,
    "trend": "au-dessus SMA 200",
    "w1": 0.2441602012468902,
    "m1": 6.114866005274688
@@ -403,7 +382,7 @@
    "price": 51654.94921875,
    "chg": 0.8262639817617545,
    "p1S": 0.5,
-   "p1M": 0.512532613906599,
+   "p1M": 0.5518612377088397,
    "trend": "au-dessus SMA 200",
    "w1": 0.9339911407278523,
    "m1": -0.7858626797945134
@@ -414,7 +393,7 @@
    "price": 25087.26953125,
    "chg": 1.1299196160605485,
    "p1S": 0.5,
-   "p1M": 0.5210624572160034,
+   "p1M": 0.5456471275392417,
    "trend": "au-dessus SMA 200",
    "w1": -0.5704433081129223,
    "m1": -1.0799228550619766
@@ -425,7 +404,7 @@
    "price": 49746,
    "chg": 0.9087589760233605,
    "p1S": 0.5,
-   "p1M": 0.5276444575224797,
+   "p1M": 0.5570858652055296,
    "trend": "au-dessus SMA 200",
    "w1": -1.4598973912010038,
    "m1": -3.9782268805373833
@@ -436,7 +415,7 @@
    "price": 69030.921875,
    "chg": -0.016203879199627735,
    "p1S": 0.5,
-   "p1M": 0.5245853366828146,
+   "p1M": 0.5286912266647635,
    "trend": "au-dessus SMA 200",
    "w1": 1.0561654675625531,
    "m1": 3.96247638007432
@@ -445,8 +424,8 @@
  "brief": [
   "Climat de marché calme (VIX 14,8, -3,7 % la veille).",
   "Pas d'annonce macroéconomique majeure aujourd'hui.",
-  "Pas de tendance nette des indices à 1 mois.",
-  "5 opportunité(s) retenue(s), surtout sur 3 mois."
+  "Les indices penchent légèrement à la hausse à 1 mois (5 sur 7).",
+  "5 opportunité(s) retenue(s), surtout sur 1 mois / 3 mois."
  ],
  "agenda": {
   "today": [],
@@ -693,6 +672,48 @@
     "name": "Johnson & Johnson",
     "date": 1791894600000,
     "estimate": false
+   },
+   {
+    "sym": "C",
+    "name": "Citigroup",
+    "date": 1791894600000,
+    "estimate": false
+   },
+   {
+    "sym": "GS",
+    "name": "Goldman Sachs",
+    "date": 1791894600000,
+    "estimate": false
+   },
+   {
+    "sym": "UNH",
+    "name": "UnitedHealth",
+    "date": 1791894600000,
+    "estimate": false
+   },
+   {
+    "sym": "BAC",
+    "name": "Bank of America",
+    "date": 1791981000000,
+    "estimate": false
+   },
+   {
+    "sym": "MS",
+    "name": "Morgan Stanley",
+    "date": 1791981000000,
+    "estimate": false
+   },
+   {
+    "sym": "ASML",
+    "name": "ASML",
+    "date": 1791981000000,
+    "estimate": false
+   },
+   {
+    "sym": "TRV",
+    "name": "Travelers",
+    "date": 1792153800000,
+    "estimate": false
    }
   ]
  },
@@ -742,44 +763,44 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 82995.3125,
-   "chg": 0.10020951184728233,
-   "m1": 2.28326786539208
+   "last": 83003.3671875,
+   "chg": 0.10992422804048108,
+   "m1": 2.293194447199154
   }
  ],
  "movers": {
   "up": [
    {
-    "sym": "CAP.PA",
-    "name": "Capgemini",
-    "chg": 3.7889081059547802
+    "sym": "AMP.MI",
+    "name": "Amplifon",
+    "chg": 6.8106287161317836
    },
    {
-    "sym": "SAP.DE",
-    "name": "SAP",
-    "chg": 3.7049137566805834
+    "sym": "MT.AS",
+    "name": "ArcelorMittal",
+    "chg": 5.643669291223352
    },
    {
-    "sym": "AMZN",
-    "name": "Amazon",
-    "chg": 3.294495472573211
+    "sym": "PLTR",
+    "name": "Palantir",
+    "chg": 5.166517927119818
    }
   ],
   "down": [
    {
+    "sym": "T",
+    "name": "AT&T",
+    "chg": -10.81624625365527
+   },
+   {
+    "sym": "VZ",
+    "name": "Verizon",
+    "chg": -10.140231074368577
+   },
+   {
     "sym": "DTE.DE",
     "name": "Deutsche Telekom",
     "chg": -7.938871288943272
-   },
-   {
-    "sym": "9984.T",
-    "name": "SoftBank",
-    "chg": -3.9238410596026507
-   },
-   {
-    "sym": "ORA.PA",
-    "name": "Orange",
-    "chg": -2.4956097461557025
    }
   ]
  },
@@ -820,13 +841,6 @@
    "tone": "neutre"
   },
   {
-   "title": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
-   "source": "Boursorama",
-   "time": 1791709310000,
-   "tone": "neutre"
-  },
-  {
    "title": "Les cours de l'or ont inversé la tendance après une baisse en milieu de semaine, les experts s'attendant à un retour progressif à la hausse des prix.",
    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVklzMk1nNEJrY09PdnN5bVpMenpMMTZHWGZUYng2WDN2SVVzQ0pKNE5HaFBoanlBbG9aWUJqZzF3SFFuUjFjSUlzcnlCOVBoWDY2a0prSjFwbmk3eDVxc1NvYnVhU2xHZkNKRWpJMjJyWkhLSy1jMHNuZWZlaUxXUzlyQ21VM0ZYOGQ1TmtXWHhsRlZNSlNiLXkxaXAtZm5tU2N3MDNGMkxfWGRrNEU4OFZXRlNMTjQ?oc=5",
    "source": "Vietnam.vn",
@@ -838,6 +852,13 @@
    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1hWEVfVzJlOVo2U2dJVHN1VjMzODgxQ2JDa2FIc1B3X0FsbEdtejJwdXF3M0tqV3IwVlZoakJoMDFIRV9MdDJuelowanUzYUd2YllWa1FNcXN2eklaZktla2NnbG12QQ?oc=5",
    "source": "TradingView",
    "time": 1791705517000,
+   "tone": "neutre"
+  },
+  {
+   "title": "VIRIDIEN Cours Action VIRI, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15WlZRN0ZxanJKSXNxYmE2WlgzcGRVNGhublZBWjhxS2YwT19NSzh1aWYwYWdTWlltRkdiZ3VjRlhvMDlmRFRDTndhY0ctc3U5U2JV?oc=5",
+   "source": "Boursorama",
+   "time": 1791704502000,
    "tone": "neutre"
   }
  ]

@@ -1,11 +1,12 @@
 {
- "updatedAt": "2026-10-11T13:47:04.432Z",
+ "updatedAt": "2026-10-11T14:05:24.669Z",
  "since": "10/10/2026",
  "byHorizon": null,
- "pending": 264,
+ "pending": 1044,
  "picks": [],
  "picksSummary": null,
  "changes": [
+  "11/10 - 1S : nouvelle configuration adoptee (vote a poids egaux), 48.9 % de bonnes directions sur 120 seances test",
   "10/10 - 3M : premier entrainement (ridge alpha=0.5), 58.0 % de bonnes directions sur 120 seances test",
   "10/10 - 1M : premier entrainement (ridge alpha=0.5), 56.3 % de bonnes directions sur 120 seances test",
   "10/10 - 1S : premier entrainement (ridge alpha=0.5), 50.2 % de bonnes directions sur 120 seances test",

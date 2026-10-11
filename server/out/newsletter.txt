@@ -2,8 +2,8 @@
 
 • Climat de marché calme (VIX 14,8, -3,7 % la veille).
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Pas de tendance nette des indices à 1 mois.
-• 5 opportunité(s) retenue(s), surtout sur 3 mois.
+• Les indices penchent légèrement à la hausse à 1 mois (5 sur 7).
+• 5 opportunité(s) retenue(s), surtout sur 1 mois / 3 mois.
 
 *À venir (fort impact)*
 lun. 12/10 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
@@ -14,19 +14,20 @@ mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentat
 mer. 14/10 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois)
 
 *Opportunités*
-• JPMorgan – Attendre la confirmation (3 mois) : 63 % de chances de hausse, variation attendue +2,9 %
-  entrée 343,31-345,06, stop 325,83, objectif 376,65, revoir le 13/01
+• Caterpillar – Attendre la confirmation (1 mois) : 58 % de chances de hausse, variation attendue +2,0 %
+  entrée 876,95-884,84, stop 819,09, objectif 963,74, revoir le 16/11
   ⚠ résultats pendant la position
-• UniCredit – Attendre la confirmation (3 mois) : 63 % de chances de hausse, variation attendue +4,5 %
-  entrée 85,24-85,87, stop 78,94, objectif 98,58, revoir le 13/01
+• SCOR – Attendre la confirmation (1 mois) : 58 % de chances de hausse, variation attendue +1,1 %
+  entrée 33,48-33,66, stop 32,20, objectif 35,41, revoir le 16/11
   ⚠ résultats pendant la position
-• Michelin – Attendre la confirmation (3 mois) : 62 % de chances de hausse, variation attendue +2,5 %
-  entrée 34,07-34,25, stop 32,31, objectif 37,30, revoir le 13/01
-• Johnson & Johnson – Entrer (3 mois) : 62 % de chances de hausse, variation attendue +2,9 %
-  entrée 258,81-262,49, stop 245,65, objectif 289,18, revoir le 06/01
+• Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
+  entrée 134,72-135,64, stop 125,50, objectif 152,51, revoir le 13/01
   ⚠ résultats pendant la position
-• Intesa Sanpaolo – Attendre la confirmation (3 mois) : 61 % de chances de hausse, variation attendue +3,0 %
-  entrée 6,84-6,88, stop 6,42, objectif 7,61, revoir le 13/01
+• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,6 %
+  entrée 343,31-345,06, stop 325,83, objectif 376,02, revoir le 13/01
+  ⚠ résultats pendant la position
+• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
+  entrée 85,24-85,87, stop 78,94, objectif 97,78, revoir le 13/01
   ⚠ résultats pendant la position
 
 *À lire*
