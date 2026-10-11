@@ -10,6 +10,6 @@
   "maxAvoid": 3,
   "extraSymbols": [],
   "extraIndex": {},
-  "siteUrl": "https://papagallotoon.github.io/Quantum-algo/"
-  "subscribeApi": "https://quantum-algo-newsletter.papagallotoon.workers.dev",
+  "siteUrl": "https://papagallotoon.github.io/Quantum-algo/",
+  "subscribeApi": "https://quantum-algo-newsletter.papagallotoon.workers.dev"
 }
