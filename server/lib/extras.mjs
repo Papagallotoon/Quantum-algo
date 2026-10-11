@@ -86,17 +86,27 @@ function frTitle(t) {
 }
 
 export async function fetchAgenda(day = parisDay()) {
-  const out = { today: [], tomorrow: [], ok: false };
+  const out = { today: [], tomorrow: [], week: [], ok: false };
   try {
-    const rows = await getJson("https://nfs.faireconomy.media/ff_calendar_thisweek.json");
-    const tomorrowD = new Date(new Date(day + "T12:00:00Z").getTime() + 86400000);
-    const tomorrow = parisDay(tomorrowD);
+    const urls = ["https://nfs.faireconomy.media/ff_calendar_thisweek.json", "https://nfs.faireconomy.media/ff_calendar_nextweek.json"];
+    const lists = await Promise.all(urls.map((u) => getJson(u).catch(() => [])));
+    const rows = lists.flat();
+    if (!rows.length) throw new Error("calendrier vide");
+    const dayMs = new Date(day + "T12:00:00Z").getTime();
+    const tomorrow = parisDay(new Date(dayMs + 86400000));
+    const limit = parisDay(new Date(dayMs + 7 * 86400000));
+    const seen = new Set();
     for (const r of rows) {
       if (!COUNTRY[r.country]) continue;
       if (r.impact !== "High" && r.impact !== "Medium" && r.impact !== "Holiday") continue;
+      const k = r.date + r.country + r.title;
+      if (seen.has(k)) continue;
+      seen.add(k);
       const d = new Date(r.date);
       const dd = parisDay(d);
       const ev = {
+        day: dd,
+        dayLabel: d.toLocaleDateString("fr-FR", { weekday: "short", day: "2-digit", month: "2-digit", timeZone: TZ }),
         time: /T00:00:00/.test(r.date) && r.impact === "Holiday" ? "toute la journée" : parisTime(d),
         ts: d.getTime(),
         cur: r.country, country: COUNTRY[r.country], flag: FLAG[r.country] || "",
@@ -105,10 +115,15 @@ export async function fetchAgenda(day = parisDay()) {
         forecast: r.forecast || "", previous: r.previous || "",
       };
       if (dd === day) out.today.push(ev);
-      else if (dd === tomorrow && r.impact === "High") out.tomorrow.push(ev);
+      else if (dd > day && dd <= limit) {
+        // a venir : on garde les annonces fortes et les jours feries (les moyennes surchargeraient)
+        if (ev.impact !== "moyen") out.week.push(ev);
+        if (dd === tomorrow && r.impact === "High") out.tomorrow.push(ev);
+      }
     }
     out.today.sort((a, b) => a.ts - b.ts);
     out.tomorrow.sort((a, b) => a.ts - b.ts);
+    out.week.sort((a, b) => a.ts - b.ts);
     out.ok = true;
   } catch (e) {
     out.error = e.message;

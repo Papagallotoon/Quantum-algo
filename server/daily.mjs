@@ -316,7 +316,14 @@ try {
 // ---------------------------------------------------------------------------
 // 7. Newsletter
 // ---------------------------------------------------------------------------
-const letter = buildLetter({ siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
+// question du jour (tourne sur toute la banque du quiz)
+let quizOfDay = null;
+try {
+  const L = JSON.parse(fs.readFileSync(path.join(HERE, "site", "learn.json"), "utf8"));
+  const doy = Math.floor((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000);
+  quizOfDay = L.quiz[doy % L.quiz.length];
+} catch (e) { /* facultatif */ }
+const letter = buildLetter({ quizOfDay, siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
 fs.writeFileSync(path.join(OUT, "newsletter.html"), letter.html);
 fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);
 

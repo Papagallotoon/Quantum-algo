@@ -86,6 +86,7 @@ export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, ind
   };
   fs.writeFileSync(path.join(outDir, "data.json"), JSON.stringify(data));
   fs.copyFileSync(path.join(templateDir, "index.html"), path.join(outDir, "index.html"));
+  if (fs.existsSync(path.join(templateDir, "learn.json"))) fs.copyFileSync(path.join(templateDir, "learn.json"), path.join(outDir, "learn.json"));
   fs.writeFileSync(path.join(outDir, ".nojekyll"), "");
   return data;
 }

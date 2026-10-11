@@ -50,6 +50,8 @@
   .p-wait { background: rgba(242,193,78,.15); color: var(--amber); }
   .p-avoid { background: rgba(224,92,75,.16); color: var(--down); }
   .p-flat { background: var(--card2); color: var(--dim); }
+  .d-now { background: rgba(79,221,154,.18); color: var(--up); }
+  .d-soon { background: rgba(251,146,60,.16); color: #fb923c; }
   .chips { display: flex; gap: 6px; flex-wrap: wrap; }
   .chip { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 8px 13px; border-radius: 20px; border: 1px solid rgba(255,255,255,.2); background: var(--card2); color: rgba(232,234,236,.82); cursor: pointer; }
   .chip.on { background: var(--ring); border-color: var(--ring); color: var(--ink); }
@@ -105,6 +107,16 @@
   .nl .x { position: absolute; top: 8px; right: 12px; color: var(--dim); cursor: pointer; font-size: 18px; }
   .navnl { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .8px; padding: 8px 12px; border-radius: 10px; background: rgba(79,221,154,.14); color: var(--up); cursor: pointer; border: 1px solid rgba(79,221,154,.35); }
   .legal h2 { margin-top: 22px; } .legal p, .legal li { line-height: 1.6; color: rgba(232,234,236,.8); font-size: 14.5px; }
+  .mod { display: block; padding: 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--border); cursor: pointer; }
+  .mod:hover { background: var(--card2); }
+  .lesson p { line-height: 1.65; font-size: 15.5px; color: rgba(232,234,236,.86); margin: 0 0 10px; }
+  .lesson li { line-height: 1.6; font-size: 15px; color: rgba(232,234,236,.86); }
+  .opt { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 8px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 15px; cursor: pointer; }
+  .opt:hover { background: var(--card2); }
+  .opt.good { border-color: rgba(79,221,154,.7); background: rgba(79,221,154,.12); }
+  .opt.bad { border-color: rgba(224,92,75,.7); background: rgba(224,92,75,.12); }
+  .progress { height: 6px; background: rgba(255,255,255,.08); border-radius: 3px; overflow: hidden; margin: 10px 0 4px; }
+  .progress div { height: 6px; background: var(--ring); }
   .loading { padding: 80px 0; text-align: center; color: var(--dim); font-family: var(--mono); letter-spacing: 1px; }
 </style>
 </head>
@@ -116,6 +128,7 @@
       <a href="#/" data-r="today">AUJOURD'HUI</a>
       <a href="#/indices" data-r="indices">INDICES</a>
       <a href="#/bilan" data-r="bilan">BILAN</a>
+      <a href="#/apprendre" data-r="apprendre">APPRENDRE</a>
     </nav>
     <a class="navnl" id="nlbtn">✉ NEWSLETTER</a>
     <div class="search"><input id="q" placeholder="Chercher une valeur…" autocomplete="off"><div class="results" id="res"></div></div>
@@ -245,15 +258,21 @@
     h += '<div class="grid2"><div class="card" id="agenda"><h2>Agenda économique (heure de Paris)</h2>';
     if (ag && ag.today && ag.today.length) {
       h += '<table>' + ag.today.map(function (e) {
-        return '<tr><td class="mono" style="width:60px"><b>' + esc(e.time) + '</b></td><td>' + esc(e.flag || "") + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
+        return '<tr><td style="width:70px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + esc(e.flag || "") + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
       }).join("") + '</table>';
-    } else h += '<div class="empty">' + (ag && ag.ok ? "Aucune annonce importante aujourd'hui." : "Agenda indisponible ce matin.") + '</div>';
-    if (ag && ag.tomorrow && ag.tomorrow.length) h += '<p class="small muted">Demain : ' + ag.tomorrow.map(function (e) { return esc(e.time + " " + (e.flag || "") + " " + e.title); }).join(" · ") + '</p>';
+    } else h += '<div class="empty"><span class="pill d-now">AUJOURD\'HUI</span> ' + (ag && ag.ok ? "Aucune annonce importante." : "Agenda indisponible ce matin.") + '</div>';
+    if (ag && ag.week && ag.week.length) {
+      h += '<h2 style="margin-top:18px">À venir cette semaine · fort impact</h2><table>' + ag.week.map(function (e) {
+        return '<tr><td style="width:120px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel) + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + esc(e.flag || "") + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
+      }).join("") + '</table>';
+    } else if (ag && ag.tomorrow && ag.tomorrow.length) h += '<p class="small muted">Demain : ' + ag.tomorrow.map(function (e) { return esc(e.time + " " + (e.flag || "") + " " + e.title); }).join(" · ") + '</p>';
     var er = t.earnings;
     if (er && ((er.today || []).length || (er.week || []).length)) {
       h += '<h2 style="margin-top:18px">Résultats d\'entreprises</h2>';
-      if (er.today.length) h += '<div style="font-size:14px;margin-bottom:6px"><b>Aujourd\'hui :</b> ' + er.today.map(function (e) { return '<a href="#/v/' + encodeURIComponent(e.sym) + '" style="text-decoration:underline">' + esc(e.name) + '</a>'; }).join(", ") + '</div>';
-      if (er.week.length) h += '<div class="small muted"><b>Cette semaine :</b> ' + er.week.map(function (e) { return esc(e.name) + " " + dfr(e.date); }).join(" · ") + '</div>';
+      h += er.today.concat(er.week).map(function (e) {
+        var now = er.today.indexOf(e) >= 0;
+        return '<a class="kv" href="#/v/' + encodeURIComponent(e.sym) + '"><span style="color:var(--text)">' + esc(e.name) + '</span><span class="pill ' + (now ? "d-now" : "d-soon") + '">' + (now ? "AUJOURD'HUI" : esc(dfr(e.date)).toUpperCase() + (e.estimate ? "*" : "")) + '</span></a>';
+      }).join("") + '<p class="small dimmer" style="margin:8px 0 0">Vert = aujourd\'hui · orange = dans les prochains jours' + (er.week.some(function (e) { return e.estimate; }) ? " · * date estimée" : "") + '</p>';
     }
     h += '</div><div class="card"><h2>Contexte de marché</h2>';
     if (t.context && t.context.length) h += '<table><tr><th></th><th class="r">NIVEAU</th><th class="r">VEILLE</th><th class="r">1 MOIS</th></tr>' + t.context.map(function (c) {
@@ -424,6 +443,141 @@
       '<div class="card"><h2>Tes droits</h2><p>Chaque lettre contient un lien de désinscription immédiate. Tu peux aussi demander l\'accès, la rectification ou la suppression de ton adresse en répondant à n\'importe quelle lettre. Tu peux introduire une réclamation auprès de la CNIL (cnil.fr).</p></div></div>';
   }
 
+
+  // ---------- apprendre : cours, lexique, quiz ----------
+  var LEARN = null, QZ = null;
+  function withLearn(cb) {
+    if (LEARN) return cb();
+    fetch("learn.json?t=" + Math.floor(Date.now() / 3600000)).then(function (r) { return r.json(); }).then(function (j) { LEARN = j; cb(); })
+      .catch(function () { document.getElementById("app").innerHTML = '<div class="loading">Contenu pédagogique indisponible.</div>'; });
+  }
+  function fmtLesson(t) {
+    var blocks = String(t || "").split(/\n\n+/);
+    return blocks.map(function (b) {
+      var lines = b.split("\n");
+      var bul = lines.filter(function (l) { return /^\s*[•\-]/.test(l); });
+      if (bul.length && bul.length >= lines.length - 1) {
+        var head = lines.length > bul.length ? '<p><b>' + esc(lines[0]) + '</b></p>' : '';
+        return head + '<ul>' + bul.map(function (l) { return '<li>' + esc(l.replace(/^\s*[•\-]\s*/, "")) + '</li>'; }).join("") + '</ul>';
+      }
+      return '<p>' + lines.map(esc).join("<br>") + '</p>';
+    }).join("");
+  }
+  function diagram(key) {
+    var d = LEARN.diagrams[key]; if (!d) return "";
+    var h = '<div class="card" style="background:rgba(255,255,255,.03)"><div class="mono dimmer small" style="letter-spacing:1px;margin-bottom:10px">' + esc((d.title || "").toUpperCase()) + '</div>';
+    if (d.type === "zones") {
+      h += '<div style="display:flex;gap:4px;border-radius:10px;overflow:hidden">' + d.zones.map(function (z) {
+        return '<div style="flex:' + z.flex + ';background:' + z.bg + ';color:' + z.color + ';padding:12px 6px;text-align:center;font-size:12px;font-weight:700">' + esc(z.label) + '</div>';
+      }).join("") + '</div>';
+    } else if (d.type === "histogram") {
+      var W = 420, H = d.height ? d.height * 1.6 : 90, n = d.bars.length, mx = Math.max.apply(null, d.bars.map(Math.abs)) || 1, bw = W / n;
+      h += '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:520px"><line x1="0" x2="' + W + '" y1="' + H / 2 + '" y2="' + H / 2 + '" stroke="rgba(255,255,255,.2)"/>' + d.bars.map(function (v, i) {
+        var bh = Math.abs(v) / mx * (H / 2 - 4);
+        return '<rect x="' + (i * bw + 3) + '" y="' + (v >= 0 ? H / 2 - bh : H / 2) + '" width="' + (bw - 6) + '" height="' + bh + '" rx="2" fill="' + (v >= 0 ? "#4fdd9a" : "#e05c4b") + '"/>';
+      }).join("") + '</svg>';
+    } else if (d.type === "candles") {
+      var cs = d.candles, Hh = (d.height || 80) * 1.4, hi = Math.max.apply(null, cs.map(function (c) { return c.h; })) + 5, lo = Math.min.apply(null, cs.map(function (c) { return c.l; })) - 5;
+      var sc = function (v) { return (hi - v) / (hi - lo) * Hh; }, step = 46, Wc = cs.length * step + 10;
+      h += '<svg viewBox="0 0 ' + Wc + ' ' + (Hh + 22) + '" style="width:100%;max-width:' + Math.min(520, Wc * 1.6) + 'px">' + cs.map(function (c, i) {
+        var x = 10 + i * step + 12, up = c.c > c.o, doji = Math.abs(c.c - c.o) <= 1, col = doji ? "#facc15" : up ? "#22c55e" : "#fb7185";
+        var top = sc(Math.max(c.o, c.c)), bot = sc(Math.min(c.o, c.c));
+        return '<line x1="' + x + '" x2="' + x + '" y1="' + sc(c.h) + '" y2="' + sc(c.l) + '" stroke="' + col + '" stroke-width="2"/><rect x="' + (x - 9) + '" y="' + top + '" width="18" height="' + Math.max(bot - top, 3) + '" rx="2" fill="' + col + '"/>' +
+          (d.labels && d.labels[i] ? '<text x="' + x + '" y="' + (Hh + 16) + '" text-anchor="middle" fill="rgba(232,234,236,.55)" font-size="9">' + esc(d.labels[i]) + '</text>' : '');
+      }).join("") + '</svg>';
+    }
+    return h + '</div>';
+  }
+  function pageLearn(parts) {
+    if (!LEARN) { withLearn(render); return '<div class="loading">CHARGEMENT…</div>'; }
+    var sub = parts[1] || "";
+    if (sub === "m") return pageLesson(parts[2], Number(parts[3] || 0));
+    if (sub === "lexique") return pageLexique();
+    if (sub === "quiz") return pageQuiz();
+    if (sub === "q") return pageOneQuestion(parts[2]);
+    var best = get("quizBest"), done = (get("lessonsDone") || "").split(",").filter(Boolean);
+    var h = '<h1>Apprendre</h1><p class="sub">Les bases de la bourse, les indicateurs, la gestion du risque et la méthode de Quantum Algo. Puis teste-toi avec le quiz.</p>';
+    h += '<div class="grid2"><a class="card" href="#/apprendre/quiz" style="display:block;border-color:rgba(79,221,154,.35)"><h2>Quiz</h2><div style="font-size:20px;font-weight:800">Teste tes connaissances</div><div class="small muted" style="margin-top:6px">10 questions tirées au hasard parmi ' + LEARN.quiz.length + ', avec l\'explication de chaque réponse.' + (best ? ' Meilleur score : <b class="up">' + esc(best) + '/10</b>' : '') + '</div></a>' +
+      '<a class="card" href="#/apprendre/lexique" style="display:block"><h2>Lexique</h2><div style="font-size:20px;font-weight:800">' + LEARN.lexicon.items.length + ' définitions</div><div class="small muted" style="margin-top:6px">RSI, MACD, Bollinger, ATR, bêta… chaque indicateur expliqué avec un exemple.</div></a></div>';
+    LEARN.modules.forEach(function (m) {
+      var n = m.lessons.filter(function (_, i) { return done.indexOf(m.id + i) >= 0; }).length;
+      h += '<div class="card"><h2>' + esc(m.icon || "") + ' ' + esc(m.title) + ' <span class="dimmer">· ' + n + '/' + m.lessons.length + '</span></h2><div class="grid2" style="gap:8px">' + m.lessons.map(function (l, i) {
+        var ok_ = done.indexOf(m.id + i) >= 0;
+        return '<a class="mod" href="#/apprendre/m/' + m.id + '/' + i + '"><span class="' + (ok_ ? "up" : "dimmer") + '">' + (ok_ ? "✔" : "○") + '</span> ' + esc(l.title) + '</a>';
+      }).join("") + '</div></div>';
+    });
+    return h;
+  }
+  function pageLesson(mid, i) {
+    var m = LEARN.modules.filter(function (x) { return x.id === mid; })[0];
+    if (!m || !m.lessons[i]) return '<h1>Leçon introuvable</h1><a class="chip" href="#/apprendre">← Retour</a>';
+    var l = m.lessons[i], done = (get("lessonsDone") || "").split(",").filter(Boolean);
+    if (done.indexOf(mid + i) < 0) { done.push(mid + i); put("lessonsDone", done.join(",")); }
+    var h = '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← ' + esc(m.title) + '</a></div><h1>' + esc(l.title) + '</h1><p class="sub">Leçon ' + (i + 1) + ' sur ' + m.lessons.length + '</p>';
+    if (l.diagramKey) h += diagram(l.diagramKey);
+    h += '<div class="card lesson">' + fmtLesson(l.content) + '</div><div style="display:flex;justify-content:space-between;margin-top:14px">' +
+      (i > 0 ? '<a class="chip" href="#/apprendre/m/' + mid + '/' + (i - 1) + '">← Précédente</a>' : '<span></span>') +
+      (i < m.lessons.length - 1 ? '<a class="chip on" href="#/apprendre/m/' + mid + '/' + (i + 1) + '">Suivante →</a>' : '<a class="chip on" href="#/apprendre/quiz">Faire le quiz →</a>') + '</div>';
+    return h;
+  }
+  function pageLexique() {
+    var L = LEARN.lexicon, cat = st.lexCat || "Tous", q = (st.lexQ || "").toLowerCase();
+    var items = L.items.filter(function (x) { return (cat === "Tous" || x.c === cat) && (!q || (x.t + " " + x.s).toLowerCase().indexOf(q) >= 0); });
+    var h = '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← Apprendre</a></div><h1>Lexique</h1>' +
+      '<input id="lexq" value="' + esc(st.lexQ || "") + '" placeholder="Chercher un terme…" style="width:100%;background:var(--card);border:1px solid var(--border);color:var(--text);border-radius:12px;padding:10px 12px;font-size:15px;margin:6px 0 10px">' +
+      '<div class="chips" style="margin-bottom:8px">' + L.cats.map(function (c) { return '<a class="chip' + (c === cat ? " on" : "") + '" data-lexcat="' + esc(c) + '">' + esc(c) + '</a>'; }).join("") + '</div>';
+    h += items.map(function (x, i) {
+      return '<details class="card"><summary style="cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:10px"><span><b>' + esc(x.em || "") + ' ' + esc(x.t) + '</b><div class="small muted" style="margin-top:3px">' + esc(x.s) + '</div></span><span class="mono dimmer small">' + esc(x.c) + '</span></summary><div class="lesson" style="margin-top:12px">' + fmtLesson(x.l) + (x.e ? '<p class="small" style="color:var(--up)"><b>Exemple :</b> ' + esc(x.e) + '</p>' : '') + '</div></details>';
+    }).join("") || '<div class="empty">Aucun terme ne correspond.</div>';
+    return h;
+  }
+  function newQuiz() {
+    var pool = LEARN.quiz.slice();
+    for (var i = pool.length - 1; i > 0; i--) { var j = Math.floor(Math.random() * (i + 1)); var t = pool[i]; pool[i] = pool[j]; pool[j] = t; }
+    QZ = { qs: pool.slice(0, 10), i: 0, score: 0, answered: null };
+  }
+  function qBlock(q, answered, idx) {
+    return '<div class="card"><div style="font-size:19px;font-weight:700;line-height:1.35">' + esc(q.q) + '</div>' + q.a.map(function (a, k) {
+      var c = answered == null ? "" : k === q.ok ? " good" : k === answered ? " bad" : "";
+      return '<button class="opt' + c + '" data-ans="' + k + '"' + (answered != null ? " disabled" : "") + '>' + String.fromCharCode(65 + k) + '. ' + esc(a) + '</button>';
+    }).join("") + (answered != null ? '<div class="' + (answered === q.ok ? "up" : "down") + '" style="font-weight:800;margin-top:14px">' + (answered === q.ok ? "✔ Bonne réponse !" : "✘ Pas tout à fait.") + '</div><p class="small" style="line-height:1.6;color:rgba(232,234,236,.8);margin:6px 0 0">' + esc(q.why) + '</p>' : '') + '</div>';
+  }
+  function pageQuiz() {
+    if (!QZ) newQuiz();
+    var h = '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← Apprendre</a></div><h1>Quiz</h1>';
+    if (QZ.i >= QZ.qs.length) {
+      var best = Number(get("quizBest") || 0); if (QZ.score > best) put("quizBest", String(QZ.score));
+      var msg = QZ.score >= 9 ? "Excellent, tu maîtrises le sujet !" : QZ.score >= 7 ? "Très bien ! Quelques points à revoir." : QZ.score >= 5 ? "Pas mal, les cours t'aideront à progresser." : "Commence par les cours, puis retente ta chance.";
+      return h + '<div class="card" style="text-align:center"><div style="font-size:54px;font-weight:800" class="' + (QZ.score >= 7 ? "up" : QZ.score >= 5 ? "flat" : "down") + '">' + QZ.score + '/10</div><p>' + msg + '</p><p class="small muted">Meilleur score : ' + Math.max(best, QZ.score) + '/10</p><button class="btn btn-main" id="qz-again">Rejouer avec 10 nouvelles questions</button> <a class="btn btn-sec" href="#/apprendre">Voir les cours</a></div>';
+    }
+    var q = QZ.qs[QZ.i];
+    h += '<div class="small muted">Question ' + (QZ.i + 1) + ' / ' + QZ.qs.length + ' · score ' + QZ.score + '</div><div class="progress"><div style="width:' + (QZ.i / QZ.qs.length * 100) + '%"></div></div>' + qBlock(q, QZ.answered);
+    if (QZ.answered != null) h += '<div style="text-align:right;margin-top:12px"><button class="btn btn-main" id="qz-next">' + (QZ.i === QZ.qs.length - 1 ? "Voir mon score" : "Question suivante →") + '</button></div>';
+    return h;
+  }
+  function pageOneQuestion(id) {
+    var q = LEARN.quiz.filter(function (x) { return x.id === id; })[0];
+    if (!q) return '<h1>Question introuvable</h1><a class="chip" href="#/apprendre/quiz">Faire le quiz</a>';
+    var ans = st.oneAns && st.oneAns.id === id ? st.oneAns.k : (location.hash.split("/")[4] != null ? Number(location.hash.split("/")[4]) : null);
+    return '<div style="margin-top:20px"><a class="chip" href="#/apprendre">← Apprendre</a></div><h1>La question du jour</h1>' + qBlock(q, ans) +
+      (ans != null ? '<div style="margin-top:12px"><a class="btn btn-main" href="#/apprendre/quiz">Faire le quiz complet →</a></div>' : '');
+  }
+  document.addEventListener("click", function (e) {
+    var b = e.target.closest("[data-ans]");
+    if (b) {
+      var k = Number(b.dataset.ans), hp = location.hash.replace(/^#\/?/, "").split("/");
+      if (hp[1] === "q") { st.oneAns = { id: hp[2], k: k }; }
+      else if (QZ && QZ.answered == null) { QZ.answered = k; if (k === QZ.qs[QZ.i].ok) QZ.score++; }
+      var y = window.scrollY; render(); window.scrollTo(0, y); return;
+    }
+    if (e.target.id === "qz-next") { QZ.i++; QZ.answered = null; render(); return; }
+    if (e.target.id === "qz-again") { newQuiz(); render(); return; }
+    var lc = e.target.closest("[data-lexcat]"); if (lc) { st.lexCat = lc.dataset.lexcat; render(); }
+  });
+  document.addEventListener("input", function (e) {
+    if (e.target.id === "lexq") { st.lexQ = e.target.value; var pos = e.target.selectionStart; render(); var n = document.getElementById("lexq"); if (n) { n.focus(); n.setSelectionRange(pos, pos); } }
+  });
+
   // ---------- routeur ----------
   function render() {
     var hash = location.hash.replace(/^#\/?/, ""), parts = hash.split("/"), r = parts[0] || "today", html;
@@ -431,6 +585,7 @@
     if (r === "conditions") html = pageConditions();
     else if (r === "confidentialite") html = pagePrivacy();
     else if (!accepted()) html = '<div class="loading" style="padding:120px 0">Accepte les conditions pour accéder au contenu.<br><br><a class="btn btn-main" id="reopen">Lire les conditions</a></div>';
+    else if (r === "apprendre") html = pageLearn(parts);
     else if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
     else if (r === "indices") html = pageIndices(parts[1]);
     else if (r === "bilan") html = pageBilan();

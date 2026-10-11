@@ -14,6 +14,7 @@ const hFr = (ms) => new Date(ms).toLocaleTimeString("fr-FR", { hour: "2-digit", 
 
 let SITE = "";
 const link = (hash, inner, style = "color:inherit;text-decoration:none") => SITE ? `<a href="${SITE}#/${hash}" style="${style}">${inner}</a>` : inner;
+const badge = (txt, today) => `<span style="display:inline-block;font-size:11px;font-weight:700;padding:2px 8px;border-radius:999px;background:${today ? "#dcfce7" : "#ffedd5"};color:${today ? "#166534" : "#c2410c"};white-space:nowrap">${txt}</span>`;
 const GREEN = "#1f9d63", RED = "#d2483a", GREY = "#6b7280", AMBER = "#b7791f";
 const col = (p) => (p >= 0.53 ? GREEN : p <= 0.47 ? RED : GREY);
 const cchg = (v) => (!ok(v) ? GREY : v >= 0 ? GREEN : RED);
@@ -84,7 +85,7 @@ function pickCard(p, n) {
   </div>`;
 }
 
-export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, failed }) {
+export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, failed }) {
   SITE = siteUrl || "";
   const parts = [];
 
@@ -100,16 +101,17 @@ export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, 
   if (agenda && (agenda.today?.length || agenda.ok)) {
     const ev = agenda.today || [];
     const body = ev.length
-      ? `<table style="width:100%;border-collapse:collapse"><tr>${th("Heure")}${th("Annonce")}${th("Impact")}${th("Prévu / précédent", true)}</tr>${ev.map((e) => `<tr>${td(`<b>${esc(e.time)}</b>`)}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}</div>`)}${td(e.impact === "fort" ? `<span style="color:${RED};font-weight:700">●●● fort</span>` : e.impact === "férié" ? `<span style="color:${GREY}">férié</span>` : `<span style="color:${AMBER}">●● moyen</span>`)}${td(`${esc(e.forecast || "-")} / ${esc(e.previous || "-")}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`
-      : `<p style="color:${GREY};margin:0">Aucune annonce importante prévue aujourd'hui.</p>`;
-    const tmr = agenda.tomorrow?.length ? `<p style="font-size:12px;color:${GREY};margin:10px 0 0">Demain à surveiller : ${agenda.tomorrow.map((e) => `${e.time} ${e.flag} ${esc(e.title)}`).join(" · ")}</p>` : "";
+      ? `<table style="width:100%;border-collapse:collapse"><tr>${th("Heure")}${th("Annonce")}${th("Impact")}${th("Prévu / précédent", true)}</tr>${ev.map((e) => `<tr>${td(badge(esc(e.time), true))}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}</div>`)}${td(e.impact === "fort" ? `<span style="color:${RED};font-weight:700">●●● fort</span>` : e.impact === "férié" ? `<span style="color:${GREY}">férié</span>` : `<span style="color:${AMBER}">●● moyen</span>`)}${td(`${esc(e.forecast || "-")} / ${esc(e.previous || "-")}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`
+      : `<p style="color:${GREY};margin:0">${badge("Aujourd'hui", true)} Aucune annonce importante prévue.</p>`;
+    const wk = agenda.week || [];
+    const tmr = wk.length ? `<div style="margin-top:14px;font-size:12px;font-weight:700;color:${GREY};letter-spacing:.5px">À VENIR CETTE SEMAINE (FORT IMPACT)</div><table style="width:100%;border-collapse:collapse;margin-top:4px">${wk.map((e) => `<tr>${td(badge(esc(e.dayLabel), false) + ` <b style="font-size:12px">${esc(e.time)}</b>`, "white-space:nowrap;width:1%")}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}${e.forecast ? " · prévu " + esc(e.forecast) : ""}</div>`)}</tr>`).join("")}</table>` : "";
     parts.push(card("Agenda économique du jour", body + tmr, "Heures de Paris. Les annonces à fort impact font souvent bouger les marchés dans les minutes qui suivent.", "today/agenda"));
   }
 
   if (earnings && (earnings.today?.length || earnings.week?.length)) {
-    const t = earnings.today?.length ? `<p style="margin:0 0 6px;font-size:14px"><b>Aujourd'hui :</b> ${earnings.today.map((e) => `${esc(e.name)}${e.when ? ` (${esc(e.when)})` : e.date ? ` (${hFr(e.date)})` : ""}`).join(", ")}</p>` : "";
-    const w = earnings.week?.length ? `<p style="margin:0;font-size:13px;color:#374151"><b>Cette semaine :</b> ${earnings.week.map((e) => `${esc(e.name)} ${dFr(e.date)}${e.estimate ? "*" : ""}`).join(" · ")}</p><p style="font-size:11px;color:#9ca3af;margin:4px 0 0">* date estimée</p>` : "";
-    parts.push(card("Résultats d'entreprises (valeurs suivies)", t + w));
+    const t = earnings.today?.length ? `<p style="margin:0 0 8px;font-size:14px;line-height:1.9">${earnings.today.map((e) => `${badge("Aujourd'hui" + (e.when ? " · " + esc(e.when) : e.date ? " · " + hFr(e.date) : ""), true)} <b>${link("v/" + encodeURIComponent(e.sym), esc(e.name))}</b>`).join("<br>")}</p>` : "";
+    const w = earnings.week?.length ? `<p style="margin:0;font-size:13px;line-height:1.9">${earnings.week.map((e) => `${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)} ${link("v/" + encodeURIComponent(e.sym), esc(e.name))}`).join("<br>")}</p>${earnings.week.some((e) => e.estimate) ? `<p style="font-size:11px;color:#9ca3af;margin:4px 0 0">* date estimée</p>` : ""}` : "";
+    parts.push(card("Résultats d'entreprises (valeurs suivies)", t + w, "Vert = aujourd'hui · orange = dans les prochains jours"));
   }
 
   if (context?.length) {
@@ -131,6 +133,14 @@ export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, 
 
   if (news?.length) parts.push(card("Actualités à surveiller", newsList(news), "Dernières 36 heures. La tonalité est estimée automatiquement à partir du titre.", "today/actus"));
 
+  if (quizOfDay) {
+    const q = quizOfDay;
+    const opts = q.a.map((a, k) => SITE
+      ? `<a href="${SITE}#/apprendre/q/${q.id}/${k}" style="display:block;margin:6px 0;padding:9px 12px;border:1px solid #e5e7eb;border-radius:10px;color:#111827;text-decoration:none;font-size:14px">${String.fromCharCode(65 + k)}. ${esc(a)}</a>`
+      : `<div style="margin:4px 0;font-size:14px">${String.fromCharCode(65 + k)}. ${esc(a)}</div>`).join("");
+    parts.push(card("🎓 La question du jour", `<div style="font-size:15px;font-weight:600;margin-bottom:6px">${esc(q.q)}</div>${opts}${SITE ? `<div style="font-size:12px;color:${GREY};margin-top:8px">Touche ta réponse pour voir la correction et l'explication. ${link("apprendre", "Cours et quiz complet →", "color:#1f9d63;font-weight:600;text-decoration:none")}</div>` : `<div style="font-size:12px;color:${GREY};margin-top:8px">Réponse : ${String.fromCharCode(65 + q.ok)} — ${esc(q.why)}</div>`}`));
+  }
+
   const trackRows = ["1J", "1S", "1M", "3M"].map((h) => {
     const x = track?.byHorizon?.[h];
     const live = x && x.nConf >= 20 ? pc(x.hitConf / x.nConf) + ` (${x.nConf})` : "en cours de mesure";
@@ -151,14 +161,17 @@ export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, 
   const L = [];
   L.push(`*Quantum Algo – ${dateLabel}*`, "");
   (brief || []).forEach((b) => L.push("• " + b));
+  const wkEv = agenda?.week || [];
   const hiEv = (agenda?.today || []).filter((e) => e.impact === "fort");
   if (hiEv.length) { L.push("", "*Agenda (fort impact)*"); hiEv.forEach((e) => L.push(`${e.time} ${e.flag} ${e.title}${e.forecast ? ` (prévu ${e.forecast})` : ""}`)); }
   if (earnings?.today?.length) L.push("", "*Résultats aujourd'hui* : " + earnings.today.map((e) => e.name).join(", "));
+  if (wkEv.length) { L.push("", "*À venir (fort impact)*"); wkEv.slice(0, 6).forEach((e) => L.push(`${e.dayLabel} ${e.time} ${e.flag} ${e.title}`)); }
   L.push("", "*Opportunités*");
   if (!picks.length) L.push("Aucune aujourd'hui.");
   picks.forEach((p) => L.push(`• ${p.name} – ${p.actionLabel} (${HL[p.h]}) ${pc(p.pUp)}\n  entrée ${f2(p.zoneLo)}-${f2(p.zoneHi)}, stop ${f2(p.stop)}, objectif ${f2(p.target)}, revoir le ${dShort(p.reviewDate)}${p.earningsWarning ? "\n  ⚠ résultats pendant la position" : ""}`));
   if (avoid.length) { L.push("", "*À éviter*"); avoid.forEach((p) => L.push(`• ${p.name} ${pc(p.pUp)} (${HL[p.h]})`)); }
   if (news?.length) { L.push("", "*À lire*"); news.slice(0, 3).forEach((n) => L.push(`• ${n.title} (${n.source})`)); }
+  if (quizOfDay) { L.push("", "*🎓 Question du jour* : " + quizOfDay.q); quizOfDay.a.forEach((a, k) => L.push(`${String.fromCharCode(65 + k)}. ${a}`)); if (SITE) L.push("Réponse : " + SITE + "#/apprendre/q/" + quizOfDay.id); }
   if (SITE) L.push("", "Détails : " + SITE);
   L.push("", "_Info statistique, pas un conseil._");
   const whatsapp = L.join("\n");
