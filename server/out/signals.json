@@ -14,19 +14,19 @@
    "zoneLo": 876.9500122070312,
    "zoneHi": 884.8402413138629,
    "stop": 819.0883320902665,
-   "target": 963.7425323821784,
-   "rr": 1.5,
-   "pTarget": 0.306,
+   "target": 966.0002373851249,
+   "rr": 1.5390190018400862,
+   "pTarget": 0.2865,
    "holdDays": 21,
    "reviewDate": "2026-11-16T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.2025131414065175,
+   "expectancy": 0.9760420551230415,
    "price": 800.469970703125,
    "chg": 0.5388201244452384,
    "sizePct": 15.155972146632237,
    "riskPct": 6.59805910386426,
-   "gainPct": 9.897088655796392,
+   "gainPct": 10.154538336111068,
    "perf": {
     "w1": -5.316885467067101,
     "m1": -0.5627365586180155,
@@ -79,12 +79,12 @@
    "stop": 32.19624333746998,
    "target": 35.40563384938585,
    "rr": 1.5,
-   "pTarget": 0.29025,
+   "pTarget": 0.28725,
    "holdDays": 21,
    "reviewDate": "2026-11-16T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.4547731774734945,
+   "expectancy": 0.4468963743406323,
    "price": 31.920000076293945,
    "chg": 0.5037778534604964,
    "sizePct": 26.079717798388284,
@@ -140,19 +140,19 @@
    "zoneLo": 134.72000122070312,
    "zoneHi": 135.64233004231343,
    "stop": 125.49671300459997,
-   "target": 152.50522966552722,
-   "rr": 1.9282958558936116,
-   "pTarget": 0.30875,
+   "target": 151.98473936404878,
+   "rr": 1.8718636714835322,
+   "pTarget": 0.321,
    "holdDays": 63,
    "reviewDate": "2027-01-13T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.9072284947674591,
+   "expectancy": 2.0340513985049746,
    "price": 129.63999938964844,
    "chg": 1.2179868334570187,
    "sizePct": 14.606504542001872,
    "riskPct": 6.846264943980543,
-   "gainPct": 13.20162431982739,
+   "gainPct": 12.815274633988416,
    "perf": {
     "w1": 0.8871590580921795,
     "m1": -6.397112354044454,
@@ -211,19 +211,19 @@
    "zoneLo": 343.30999755859375,
    "zoneHi": 345.05842794249196,
    "stop": 325.8256937196114,
-   "target": 376.02139449353956,
-   "rr": 1.8709007368090769,
-   "pTarget": 0.31625,
+   "target": 374.83420084040165,
+   "rr": 1.8030001978988008,
+   "pTarget": 0.328,
    "holdDays": 63,
    "reviewDate": "2027-01-13T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.4216637482161065,
+   "expectancy": 1.4609214331324867,
    "price": 332.989990234375,
    "chg": 0.4737121305388392,
    "sizePct": 19.63532553084345,
    "riskPct": 5.092861834295468,
-   "gainPct": 9.52823895825022,
+   "gainPct": 9.18243089510598,
    "perf": {
     "w1": 0.18352047132845772,
     "m1": -5.817967944976521,
@@ -289,19 +289,19 @@
    "zoneLo": 85.23999786376953,
    "zoneHi": 85.86989239833106,
    "stop": 78.94105251815418,
-   "target": 97.78239114591786,
-   "rr": 1.9911894125068081,
-   "pTarget": 0.31025,
+   "target": 97.31887182649761,
+   "rr": 1.9176025985264495,
+   "pTarget": 0.3285,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.021112092736511,
+   "expectancy": 2.074411692677046,
    "price": 76.12999725341797,
    "chg": 1.0619877909434638,
    "sizePct": 13.532423792675777,
    "riskPct": 7.389659201637146,
-   "gainPct": 14.714211164333395,
+   "gainPct": 14.170429687284278,
    "perf": {
     "w1": -3.449589439872769,
     "m1": -9.152751216014376,
@@ -763,9 +763,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 83003.3671875,
-   "chg": 0.10992422804048108,
-   "m1": 2.293194447199154
+   "last": 83600.5078125,
+   "chg": 0.8301323924537973,
+   "m1": 3.0291094363761983
   }
  ],
  "movers": {
@@ -806,6 +806,41 @@
  },
  "news": [
   {
+   "title": "Palantir : le géant de l’IA qui assume son soutien à Israël s’envole en Bourse",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPSFJMQ0RpdU81RjA1Z3ZxOFlmUV9TZ1R0eGtjMGxYY09WWUl2TW11VkFWSHc3R3k4WG9SUzYxa0ZWa0xxMnQ5ZGFGMm82UFhjSUdBdjEyanJFb1hJQTlJUll4S3R1Wk9wbVpFRFN3MjRYUGFJcVJGUlFHaDV0MEJSMEY4eXRWeVlxRl9pUlNFc0t2bGhaU2hrWVZIS0tNbGpSY2pUX1cwRXBQQ2tRbTc3Q2lXaks?oc=5",
+   "source": "IsraJ",
+   "time": 1791741826000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Bourse : BNP Paribas, Crédit agricole et SG plombés par l’envol des taux, opportunité d’investissement ou risque réel",
+   "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxNY2FVQ3N5WlZiRmw5SWl5UzJwTkNzMkZNZlZTLWFhRTVWWnRoWF91a0FLdkJrLVYzOUVzcDBJWlpKZG5aZUVqSkFSMEdKWVRCdThnZVBBdkJwRkE3WXVzNWVKTFJIVzV4Z253eHIwbUdlVHpFR2oxVjF6dnlISXBEVTVOd0FmVXBrSzNEMEFmRDlqQ2VZWWVTWl9EdzEyOHMzMGpuYUgySTZybVNieFlmeEFYc3BRTUtGWUlIMFRMbXdueVZBbjlfR3ZVQ0JSdlpkRTZPaGFGdXNjMzg0eFZMNmI0RmcyYXdIWjZKZkZiNW9JSTI1?oc=5",
+   "source": "Capital.fr",
+   "time": 1791738000000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Les traders pétroliers vont tester l’annonce de cessez-le-feu de Trump entre la Russie et l’Ukraine, mais le Bitcoin a réagi en premier",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBpWVh1UXZSUV9hYlNiMkZZSjRTQU5IdERQSVNvaVZHaUVLSDBpdXE3LW9tbHk3ajUycVpRZXUyOG5IRm9mb1hBWnVic3Uzdmg0YWZCVGlrRXU0MG50UWpoejhsNVpPVDFySGpDVTZFeUZ5YWxmOG5jdUlfOE8?oc=5",
+   "source": "BeInCrypto",
+   "time": 1791734760000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Bitway (BTW) : record à 1,69 dollar, marché mince",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE14UTZSelhTUG96cEVsSFZNRXNOSXN4VEYzdnRIY3hyOEltbWJFMUxlcndnbklBSUljbmcwRzBVbDBjQWRHZUUwQURDMWthbzN3NFJta2duMUk0YmZUcWRYZnNJdUpfVWNhbkV2OEZPd3BSMzBuWHJj?oc=5",
+   "source": "CryptoTicker",
+   "time": 1791732563000,
+   "tone": "positif"
+  },
+  {
+   "title": "Ainsi s'éveille le marché informel à Cuba : le dollar et l'euro commencent dimanche à la hausse",
+   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRTMwSmFzUUNyN3RXR0M3UkVYc1VIVklSRGpydXBWUFdVdnFsZ0Jmb25pV1VWQWg2cUdXVjZ2TDMyQVVLbHRpaC0yUGdIbGtsLWI4ZXcwQWU1dUR2MElsbHpCTFJmRmZFUTJBbUR6MkpqSkhvR2hXekt4TFlsWThtWjE1SHFtQXYyNTd0VGN1MnN1WUtiMHdhWjV0a1Z0VGdtaDMyVEdWMlJEOGhNMEh2bDB1Z3ZQcnVj?oc=5",
+   "source": "CiberCuba",
+   "time": 1791728537000,
+   "tone": "positif"
+  },
+  {
    "title": "Les cours de l'or se redressent après deux semaines de baisse, la Fed reste une inconnue.",
    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNYUwyeXJkcWNrSlpBQzEwT1oyR0ZjQmx2cmdIZFFJUHBYZ1JRcC11bXFEV1dmWXBaTllLVlQwQThtQ3BwX0ZRVGQ0SXZfQ1NJYzRwUFN4V3J1NkZKQ1VUN1BDQ2RnMlVVUzJZMEVWSzFJelgxWEhtVFRDa1ZnbDJKV1JZb3A?oc=5",
    "source": "Vietnam.vn",
@@ -813,52 +848,17 @@
    "tone": "négatif"
   },
   {
-   "title": "L’euro poursuit sa baisse, le dollar retrouve les 240 dinars algériens",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPVXFnSXl6ZDMwaVNxLVNHaGo0QWc4dWVQRXNMTkduQWZSUEIxUGo4bEx0SDBDN08wX0VvOVJSY2hlVXhoVXZ1b1gwN0dKM25GeWdTaWNhZVVEN2dyT3ZyVS1sTGl5NW5IODhsVEdnTGFCc05TYmNqbkkwRl9DU01QLTBrU01aeXgwSVNmYy03a1lyQXV5c1F0QmV6bHQwakE?oc=5",
-   "source": "Visas & Voyages Algérie",
-   "time": 1791718603000,
-   "tone": "négatif"
-  },
-  {
-   "title": "XRP à l’aube d’un grand jour à Wall Street après un report inattendu",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQV3U4b3czS0R2dEoycDkyQUV2UFVqcGd3MS1pQUNkbktTSE02RkhfQVdRRGhMdW9iR1pwVV94azNTTV9majFxUjJkcWNtOFFDcFNfR2RvWmxwOVpOYWlwX1FjM1RQSng5MDNONHNIRlg5dUgyUGN2bW5VeXRoSjNJTm5IeG9udUo5X2ZJWGo3dUZPbGl1aERabE9nTlFjcFhfRXp5ZFBROEtRUDlod0FqVDloRGtRSFU?oc=5",
-   "source": "www.crypto-insiders.fr",
-   "time": 1791715070000,
+   "title": "Jean-Louis Cussac (Perceval Finance Conseil) : le CAC 40 sur la défensive - 21/01",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVkV6c0RVNnlJaUt1QVlPOU9EVVYwbno4V204REFmUHN1dUFITWhtaW5GakJUV0dkT1ZtQ0pobThoWnd3YzZxRk1IQTFnSndaVXJYNE92UU15OEFOdURKSllISnNqdldTT0h0MzNhU3hma2xmVHVzYUxXajhfYS1ob1luNklEODFFQ0hhWTdPVkpmdktQYm9WMTZTZ0JPVER5cHc3OGhsZXdLdG5QY2VqVDlPUl8yTjRrVDQ5NE1qZFdMNVBYUVgycTRwQk1OSkk?oc=5",
+   "source": "Orange Actualités",
+   "time": 1791723983000,
    "tone": "neutre"
   },
   {
-   "title": "Pétrole : Le marché mondial dans tous ses états - Actualités",
-   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNWEhHTnJWQ1RjVGFHa0JsYXJmaEl3bXBMOTU1MXlmM0RzcGNEdnJOSXpnc3kzcGd4Q1ZkdWhKeHRrbWV1eTFReU9Oc2wwMl8tbUFSX1pSMGROS0ZCc3ROcXZReU50T1ZkbjFNbkpLX3B5ZWp1LUNSeVBmR3drOG5ham1KQ3dyYjZHRUNHTGJLYw?oc=5",
-   "source": "Le soir d'Algérie",
-   "time": 1791714156000,
-   "tone": "neutre"
-  },
-  {
-   "title": "«La force du dollar face à l’euro vient aussi du cycle d’investissement dans l’IA»",
-   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNNjJBRG12QVBXVE1LaG1mVDh4SFlzTnpENGtOLUNOeWlzcHlnMmxBS3pMeHNGRjFJZzM5M2U0ZS1Ic2hEZmktYW55R09WZFJYR21WTmUwazZZTS1xRGtYVUZSLXIyOXZoYkdBajE3ZF9oVzd3cGlvTWxCMHdQMUd3TGZkZVp6SUdqWmo3bnpmN1lMTmRWRnVqQVdFajNhY3RwbnpTV1Q5cFh1MnZiZ2ZBMTU2OFdXbVJ3ckZldQ?oc=5",
-   "source": "L'Agefi",
-   "time": 1791712863000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Les cours de l'or ont inversé la tendance après une baisse en milieu de semaine, les experts s'attendant à un retour progressif à la hausse des prix.",
-   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQVklzMk1nNEJrY09PdnN5bVpMenpMMTZHWGZUYng2WDN2SVVzQ0pKNE5HaFBoanlBbG9aWUJqZzF3SFFuUjFjSUlzcnlCOVBoWDY2a0prSjFwbmk3eDVxc1NvYnVhU2xHZkNKRWpJMjJyWkhLSy1jMHNuZWZlaUxXUzlyQ21VM0ZYOGQ1TmtXWHhsRlZNSlNiLXkxaXAtZm5tU2N3MDNGMkxfWGRrNEU4OFZXRlNMTjQ?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1791706922000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Prévision du prix du Brent alors que la crise Arabie saoudite–Houthi s'intensifie",
-   "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1hWEVfVzJlOVo2U2dJVHN1VjMzODgxQ2JDa2FIc1B3X0FsbEdtejJwdXF3M0tqV3IwVlZoakJoMDFIRV9MdDJuelowanUzYUd2YllWa1FNcXN2eklaZktla2NnbG12QQ?oc=5",
-   "source": "TradingView",
-   "time": 1791705517000,
-   "tone": "neutre"
-  },
-  {
-   "title": "VIRIDIEN Cours Action VIRI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15WlZRN0ZxanJKSXNxYmE2WlgzcGRVNGhublZBWjhxS2YwT19NSzh1aWYwYWdTWlltRkdiZ3VjRlhvMDlmRFRDTndhY0ctc3U5U2JV?oc=5",
+   "title": "La semaine à venir à Wall Street-Les résultats bancaires et l'IPC dominent l'actualité des marchés cette semai",
+   "link": "https://news.google.com/rss/articles/CBMi8AJBVV95cUxOckNqM2RvS3h0YTNRS3NkdmczZm5SSFZjTGVsRWFHRmhETnM3TWN4WVlwWmY3X3VvNG5qdVNMRmUwUFlpNWJUaVlMQmhzX2lwSUFzSFAtWTZHekp4bURGUGwxdjVhQ0VZX1phYlIydVJWQWFTYktjQ2ZpUl9GLWVoWm9JclprOC1FYnRidkxBTmg2Nm51bFVRV0JtSGh5OWUxeHFOenVObFF6X3F4THJCbW5NSUxjNndWY0haQWwzMHhsbUlBTFBBaXZ0QUhDYkNLaHlLbGNJNDRaNW5MY2ZoY3poM3lhRXRwbFM2RXRWVVdDVk1NUUN3N0JnaTlSeHZPcTR0NzFrcWxhZ05yWTVmUTJtbHk0TWlKM0lUS0pQd3N1RG1HOHN3SXRRalUtZHR6LXRCVDJ3U0IwUlNYc0JNNHlsMk1ZMGd5Skh5Rm5BMjZEUm5RWnZJMGhUdTFQTWFMZ0U0RzBUbjdqUkNPdUxXLdIB9gJBVV95cUxNTWxsaGlpYVZDYW5fOHRQd2RmYXp3X1hhN05mUlczTXVBZk5CdVhiblRGWl84U2V6Y0dYN2p0THJ3ZzZSQWs4SGZqTzcySXhUeTBVampzUW10M3QzZ202N01QX3lRVjdDQms5ZGJiOUstRjZhbnlZbERiZlVRUmtJYTJNQ0hLVldRaFBKTzByWTV0bThPNjNONWFKbFNISjZzX3Q1bEw2YlZuUzJUSjA0Z09wUlFyeGF2VndGRzFiUXFmTVFSd0xGUlNGV2lfSHVidmdVN3NBOXRxcVhTV1Y5RTdtZGdIaDJHd2RNY3pqcnBLYlZEdlVtc3ZWLXlKbGQzRVBrZVNsVjBMcUxWS0hDd052ZDZUVkVvbkljdUJ2SUhvdVN5M20wWUc3NmVqZE9zT1NWRmp6UXR4RThpOTNRbzNSQVMwUTJ5M3VqTG9OREwtM24wbXdqOW5valVGbGc5OXhoSEtxbWFGWExHSEF6WXJlWWliZw?oc=5",
    "source": "Boursorama",
-   "time": 1791704502000,
+   "time": 1791723643000,
    "tone": "neutre"
   }
  ]

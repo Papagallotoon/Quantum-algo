@@ -5,132 +5,154 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Quantum Algo</title>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='none' stroke='%234fdd9a' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%238B93FF'/%3E%3Ccircle cx='15' cy='15' r='7' fill='none' stroke='%230B0E1A' stroke-width='3'/%3E%3Cpath d='M20 20l5 5' stroke='%230B0E1A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg: #0a0c10; --top: #10161e; --card: rgba(255,255,255,0.045); --card2: rgba(255,255,255,0.07);
-    --border: rgba(255,255,255,0.08); --soft: rgba(255,255,255,0.05);
-    --text: #e8eaec; --dim: rgba(232,234,236,0.55); --dimmer: rgba(232,234,236,0.36);
-    --up: #5fe3a1; --down: #f0705f; --ring: #4fdd9a; --ringDown: #e05c4b; --amber: #f2c14e; --blue: #7cb4ff; --ink: #07120c;
-    --mono: ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    --bg: #0A0D13; --top: #0A0D13; --card: #131925; --card2: #1A2231; --line: #232C3D; --line2: #2A3446;
+    --border: #232C3D; --soft: #1F2737;
+    --text: #EEF2F7; --soft-t: #C9D1DE; --dim: #94A0B4; --dimmer: #6B778C;
+    --up: #34D399; --down: #FF6B5B; --ring: #34D399; --ringDown: #FF6B5B; --amber: #F5B740; --blue: #8B93FF; --brand: #8B93FF; --brandInk: #0B0E1A; --ink: #062016;
+    --mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, Consolas, monospace;
+    --sans: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
   }
   * { box-sizing: border-box; }
-  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+  html, body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
   a { color: inherit; text-decoration: none; }
+  button, input { font-family: inherit; }
   .wrap { max-width: 980px; margin: 0 auto; padding: 0 16px 60px; }
-  header { position: sticky; top: 0; z-index: 10; background: rgba(10,12,16,0.92); backdrop-filter: blur(10px); border-bottom: 1px solid var(--border); }
-  .bar { max-width: 980px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
-  .brand { font-family: var(--mono); font-weight: 700; letter-spacing: 2px; font-size: 12px; color: var(--dim); }
-  .brand b { color: var(--ring); }
-  nav { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--border); padding: 3px; border-radius: 12px; }
-  nav a { font-family: var(--mono); font-size: 11px; font-weight: 600; letter-spacing: .8px; padding: 7px 12px; border-radius: 9px; color: var(--dim); }
-  nav a.on { background: var(--ring); color: var(--ink); }
-  .search { flex: 1; min-width: 180px; position: relative; }
-  .search input { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 12px; padding: 9px 12px; font-size: 14px; outline: none; }
-  .search input:focus { border-color: rgba(79,221,154,.5); }
-  .results { position: absolute; top: 42px; left: 0; right: 0; background: #11161d; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; display: none; max-height: 340px; overflow-y: auto; }
-  .results a { display: flex; justify-content: space-between; padding: 10px 12px; font-size: 14px; border-bottom: 1px solid var(--soft); }
+  header { position: sticky; top: 0; z-index: 10; background: rgba(10,13,19,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid var(--line); }
+  .bar { max-width: 980px; margin: 0 auto; padding: 12px 16px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 16px; letter-spacing: -.3px; color: var(--text); }
+  .brand .logo { width: 34px; height: 34px; border-radius: 11px; background: var(--brand); display: flex; align-items: center; justify-content: center; flex: none; }
+  nav { display: flex; gap: 4px; background: var(--card); border: 1px solid var(--line); padding: 4px; border-radius: 14px; }
+  nav a { font-size: 13px; font-weight: 600; padding: 8px 13px; border-radius: 10px; color: var(--dim); }
+  nav a.on { background: var(--line); color: var(--text); }
+  nav a:hover { color: var(--text); }
+  .search { flex: 1; min-width: 200px; position: relative; }
+  .search input { width: 100%; height: 44px; background: var(--card); border: 1px solid var(--line); color: var(--text); border-radius: 16px; padding: 0 14px 0 40px; font-size: 14px; outline: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2394A0B4' stroke-width='1.8' stroke-linecap='round'%3E%3Ccircle cx='11' cy='11' r='7'/%3E%3Cpath d='M16 16l4 4'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-size: 18px; background-position: 13px center; }
+  .search input::placeholder { color: var(--dimmer); }
+  .search input:focus { border-color: var(--brand); }
+  .results { position: absolute; top: 50px; left: 0; right: 0; background: var(--card); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; display: none; max-height: 360px; overflow-y: auto; box-shadow: 0 16px 40px rgba(0,0,0,.45); }
+  .results a { display: flex; justify-content: space-between; gap: 10px; padding: 11px 14px; font-size: 14px; border-bottom: 1px solid var(--soft); }
   .results a:hover { background: var(--card2); }
-  h1 { font-size: 28px; letter-spacing: -.6px; margin: 22px 0 4px; }
-  h2 { font-size: 13px; font-family: var(--mono); letter-spacing: 1.4px; color: var(--dim); font-weight: 600; margin: 0 0 12px; text-transform: uppercase; }
-  .sub { color: var(--dim); font-size: 13px; margin: 0 0 16px; }
-  .card { background: var(--card); border: 1px solid var(--border); border-radius: 18px; padding: 16px; margin-top: 12px; }
-  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } h1 { font-size: 24px; } }
+  h1 { font-size: 28px; font-weight: 700; letter-spacing: -.8px; margin: 22px 0 6px; }
+  h2 { font-size: 15px; font-weight: 700; letter-spacing: -.2px; color: var(--text); margin: 0 0 12px; }
+  .sub { color: var(--dim); font-size: 13.5px; line-height: 1.5; margin: 0 0 16px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 22px; padding: 16px; margin-top: 14px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+  @media (max-width: 760px) { .grid2 { grid-template-columns: 1fr; } h1 { font-size: 26px; } }
   .muted { color: var(--dim); } .dimmer { color: var(--dimmer); }
-  .up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--dim); }
+  .up { color: var(--up); } .down { color: var(--down); } .flat { color: var(--soft-t); }
   .mono { font-family: var(--mono); }
   table { width: 100%; border-collapse: collapse; }
-  th { text-align: left; font-family: var(--mono); font-size: 10px; letter-spacing: 1px; color: var(--dimmer); font-weight: 600; padding: 6px 8px; border-bottom: 1px solid var(--border); }
-  td { padding: 9px 8px; border-bottom: 1px solid var(--soft); font-size: 14px; vertical-align: middle; }
+  th { text-align: left; font-size: 11px; color: var(--dim); font-weight: 500; padding: 6px 8px; border-bottom: 1px solid var(--line); }
+  td { padding: 10px 8px; border-bottom: 1px solid var(--soft); font-size: 14px; vertical-align: middle; }
   td.r, th.r { text-align: right; }
+  td.r { font-family: var(--mono); font-size: 13px; }
   tr.link { cursor: pointer; } tr.link:hover td { background: var(--soft); }
-  .pill { display: inline-block; font-family: var(--mono); font-size: 10.5px; font-weight: 700; letter-spacing: .6px; padding: 5px 10px; border-radius: 999px; }
-  .p-buy { background: rgba(79,221,154,.16); color: var(--up); }
-  .p-wait { background: rgba(242,193,78,.15); color: var(--amber); }
-  .p-avoid { background: rgba(224,92,75,.16); color: var(--down); }
-  .p-flat { background: var(--card2); color: var(--dim); }
-  .d-now { background: rgba(79,221,154,.18); color: var(--up); }
-  .d-soon { background: rgba(251,146,60,.16); color: #fb923c; }
-  .chips { display: flex; gap: 6px; flex-wrap: wrap; }
-  .chip { font-family: var(--mono); font-size: 11px; font-weight: 600; padding: 8px 13px; border-radius: 20px; border: 1px solid rgba(255,255,255,.2); background: var(--card2); color: rgba(232,234,236,.82); cursor: pointer; }
-  .chip.on { background: var(--ring); border-color: var(--ring); color: var(--ink); }
-  .row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--card); border: 1px solid var(--border); border-radius: 16px; margin-top: 8px; cursor: pointer; }
-  .row:hover { background: var(--card2); }
-  .ring { width: 42px; height: 42px; border-radius: 50%; border: 3px solid var(--dimmer); display: flex; align-items: center; justify-content: center; font-family: var(--mono); font-size: 12px; font-weight: 700; flex: none; }
+  .pill { display: inline-block; font-size: 11.5px; font-weight: 600; padding: 6px 12px; border-radius: 999px; white-space: nowrap; }
+  .p-buy { background: rgba(52,211,153,.13); color: var(--up); }
+  .p-wait { background: rgba(245,183,64,.13); color: var(--amber); }
+  .p-avoid { background: rgba(255,107,91,.13); color: var(--down); }
+  .p-flat { background: rgba(148,160,180,.14); color: var(--soft-t); }
+  .d-now { background: rgba(52,211,153,.14); color: var(--up); font-family: var(--mono); }
+  .d-soon { background: rgba(245,183,64,.13); color: var(--amber); }
+  .chips { display: flex; gap: 8px; flex-wrap: wrap; }
+  .chip { display: inline-flex; align-items: center; height: 40px; font-size: 13px; font-weight: 600; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line2); background: var(--card); color: var(--soft-t); cursor: pointer; }
+  .chip:hover { border-color: var(--brand); }
+  .chip.on { background: var(--brand); border-color: var(--brand); color: var(--brandInk); }
+  .row { display: flex; align-items: center; gap: 12px; padding: 12px 14px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; margin-top: 8px; cursor: pointer; }
+  .card .row { background: var(--bg); }
+  .row:hover { border-color: var(--line2); background: var(--card2); }
+  .tile { width: 52px; height: 48px; border-radius: 14px; flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; }
+  .tile b { font-family: var(--mono); font-size: 15px; font-weight: 700; line-height: 16px; }
+  .tile span { font-size: 8.5px; font-weight: 600; letter-spacing: .4px; }
+  .t-up { background: rgba(52,211,153,.13); color: var(--up); } .t-down { background: rgba(255,107,91,.13); color: var(--down); } .t-flat { background: rgba(148,160,180,.14); color: var(--soft-t); }
   .grow { flex: 1; min-width: 0; }
-  .name { font-weight: 600; font-size: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .name { font-weight: 600; font-size: 14.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
   .small { font-size: 12px; }
-  .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 10px 0; }
-  .box { border-radius: 12px; padding: 10px 8px; text-align: center; }
-  .box .l { font-family: var(--mono); font-size: 10px; letter-spacing: 1px; font-weight: 700; }
-  .box .v { font-size: 18px; font-weight: 700; margin-top: 3px; }
-  .box .s { font-size: 11px; margin-top: 2px; }
-  .b-in { background: rgba(124,180,255,.1); } .b-in .l, .b-in .s { color: var(--blue); }
-  .b-tg { background: rgba(79,221,154,.1); } .b-tg .l, .b-tg .s { color: var(--up); }
-  .b-st { background: rgba(224,92,75,.1); } .b-st .l, .b-st .s { color: var(--down); }
-  .kv { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; font-size: 13.5px; border-bottom: 1px solid var(--soft); }
+  .boxes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 12px 0; }
+  .box { border-radius: 14px; padding: 11px 10px; text-align: center; background: var(--card2); }
+  .box .l { font-size: 10.5px; font-weight: 500; color: var(--dim); }
+  .box .v { font-family: var(--mono); font-size: 16px; font-weight: 700; margin-top: 3px; }
+  .box .s { font-family: var(--mono); font-size: 11px; margin-top: 2px; }
+  .b-in .v, .b-in .s { color: var(--brand); }
+  .b-tg .v, .b-tg .s { color: var(--up); }
+  .b-st .v, .b-st .s { color: var(--down); }
+  .kv { display: flex; justify-content: space-between; gap: 12px; padding: 8px 0; font-size: 13.5px; border-bottom: 1px solid var(--soft); }
   .kv span:first-child { color: var(--dim); }
-  .bar2 { height: 6px; border-radius: 3px; background: rgba(255,255,255,.08); overflow: hidden; position: relative; }
-  .warn { background: rgba(242,193,78,.1); color: var(--amber); border-radius: 10px; padding: 8px 10px; font-size: 13px; margin-top: 8px; }
-  .news a { display: block; padding: 9px 0; border-bottom: 1px solid var(--soft); font-size: 14px; line-height: 1.35; }
+  .kv span:last-child { font-family: var(--mono); font-size: 13px; }
+  .bar2 { height: 6px; border-radius: 3px; background: var(--card2); overflow: hidden; position: relative; }
+  .warn { background: rgba(245,183,64,.1); color: var(--amber); border-radius: 12px; padding: 10px 12px; font-size: 13px; margin-top: 10px; }
+  .news a { display: block; padding: 10px 0; border-bottom: 1px solid var(--soft); font-size: 14px; line-height: 1.4; }
   .news a:hover { color: #fff; }
-  .tone { font-family: var(--mono); font-size: 10px; font-weight: 700; margin-right: 6px; }
+  .tone { font-size: 11px; font-weight: 600; margin-right: 6px; }
   .hz { display: grid; grid-template-columns: repeat(4, 1fr); gap: 6px; }
-  .hz > div { text-align: center; padding: 9px 4px; border-radius: 10px; border: 1px solid var(--border); cursor: pointer; }
-  .hz > div.on { border-color: rgba(79,221,154,.55); background: rgba(79,221,154,.08); }
-  .tabs { display: flex; background: var(--card2); border-radius: 10px; padding: 3px; gap: 2px; margin-top: 12px; }
-  .tabs a { flex: 1; text-align: center; font-family: var(--mono); font-size: 11px; letter-spacing: 1px; padding: 8px; border-radius: 7px; color: var(--dim); cursor: pointer; }
-  .tabs a.on { background: rgba(255,255,255,.13); color: var(--text); }
-  .back { font-size: 20px; color: var(--dim); cursor: pointer; margin-right: 8px; }
-  .disc { color: var(--dimmer); font-size: 12px; line-height: 1.6; margin-top: 28px; text-align: center; }
+  .hz > div { text-align: center; padding: 9px 4px; border-radius: 12px; border: 1px solid var(--line); cursor: pointer; }
+  .hz > div.on { border-color: var(--brand); background: rgba(139,147,255,.12); }
+  .tabs { display: flex; background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 4px; gap: 4px; margin-top: 14px; }
+  .tabs a { flex: 1; text-align: center; font-size: 13px; font-weight: 600; padding: 10px; border-radius: 10px; color: var(--dim); cursor: pointer; }
+  .tabs a.on { background: var(--line); color: var(--text); }
+  .back { width: 44px; height: 44px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); display: inline-flex; align-items: center; justify-content: center; font-size: 18px; color: var(--text); cursor: pointer; margin-right: 12px; flex: none; }
+  .disc { color: var(--dim); font-size: 12px; line-height: 1.6; margin-top: 28px; text-align: center; }
   .empty { color: var(--dim); font-size: 14px; padding: 6px 0; }
+  .act3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; margin: 4px 0 12px; }
+  .act3 div { height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 500; color: var(--dim); border: 1px solid var(--line2); }
+  .act3 .on0 { background: var(--up); color: #062016; border: 0; font-weight: 700; }
+  .act3 .on1 { background: var(--amber); color: #2A1C00; border: 0; font-weight: 700; }
+  .act3 .on2 { background: var(--down); color: #2A0A06; border: 0; font-weight: 700; }
+  .gauge-n { font-family: var(--mono); font-weight: 700; letter-spacing: -2px; font-size: 48px; line-height: 1; }
   @media (max-width: 560px) {
     .row { gap: 10px; padding: 11px 12px; }
     .row svg { display: none; }
-    .row .pill { font-size: 9.5px; padding: 4px 8px; }
+    .row .pill { font-size: 10.5px; padding: 5px 9px; }
     .row > div:last-child { min-width: 0 !important; }
     .chartlbl span:nth-child(2) { display: none; }
-    .boxes .v { font-size: 15px; }
+    .boxes .v { font-size: 14px; }
     td { padding: 8px 5px; font-size: 13px; }
+    nav a { padding: 8px 10px; font-size: 12.5px; }
   }
   .modal-bg { position: fixed; inset: 0; z-index: 50; background: rgba(5,7,10,.88); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 16px; }
-  .modal { max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto; background: #11161d; border: 1px solid var(--border); border-radius: 20px; padding: 22px; }
-  .modal h3 { margin: 4px 0 10px; font-size: 21px; }
-  .modal p, .modal li { color: rgba(232,234,236,.78); font-size: 14px; line-height: 1.55; }
-  .btn { display: inline-block; border: 0; cursor: pointer; font-weight: 700; font-size: 14px; padding: 11px 18px; border-radius: 12px; }
-  .btn-main { background: var(--ring); color: var(--ink); }
-  .btn-sec { background: var(--card2); color: var(--text); border: 1px solid var(--border); }
-  .nl { position: fixed; right: 16px; bottom: 16px; z-index: 40; width: 340px; max-width: calc(100vw - 32px); background: #11161d; border: 1px solid rgba(79,221,154,.35); border-radius: 18px; padding: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
-  .nl input[type=email] { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 12px; font-size: 14px; margin: 8px 0; outline: none; }
-  .nl label { display: flex; gap: 8px; font-size: 12px; color: var(--dim); line-height: 1.4; align-items: flex-start; }
-  .nl .x { position: absolute; top: 8px; right: 12px; color: var(--dim); cursor: pointer; font-size: 18px; }
-  .navnl { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .8px; padding: 8px 12px; border-radius: 10px; background: rgba(79,221,154,.14); color: var(--up); cursor: pointer; border: 1px solid rgba(79,221,154,.35); }
-  .legal h2 { margin-top: 22px; } .legal p, .legal li { line-height: 1.6; color: rgba(232,234,236,.8); font-size: 14.5px; }
-  .mod { display: block; padding: 14px; border-radius: 14px; background: var(--card); border: 1px solid var(--border); cursor: pointer; }
-  .mod:hover { background: var(--card2); }
-  .lesson p { line-height: 1.65; font-size: 15.5px; color: rgba(232,234,236,.86); margin: 0 0 10px; }
-  .lesson li { line-height: 1.6; font-size: 15px; color: rgba(232,234,236,.86); }
-  .opt { display: block; width: 100%; text-align: left; padding: 12px 14px; margin-top: 8px; border-radius: 12px; border: 1px solid var(--border); background: var(--card); color: var(--text); font-size: 15px; cursor: pointer; }
-  .opt:hover { background: var(--card2); }
-  .opt.good { border-color: rgba(79,221,154,.7); background: rgba(79,221,154,.12); }
-  .opt.bad { border-color: rgba(224,92,75,.7); background: rgba(224,92,75,.12); }
-  .progress { height: 6px; background: rgba(255,255,255,.08); border-radius: 3px; overflow: hidden; margin: 10px 0 4px; }
-  .progress div { height: 6px; background: var(--ring); }
-  .loading { padding: 80px 0; text-align: center; color: var(--dim); font-family: var(--mono); letter-spacing: 1px; }
+  .modal { max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 22px; }
+  .modal h3 { margin: 4px 0 10px; font-size: 21px; letter-spacing: -.4px; }
+  .modal p, .modal li { color: var(--soft-t); font-size: 14px; line-height: 1.6; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; min-height: 44px; border: 0; cursor: pointer; font-weight: 700; font-size: 14px; padding: 0 18px; border-radius: 12px; }
+  .btn-main { background: var(--brand); color: var(--brandInk); }
+  .btn-sec { background: var(--card2); color: var(--text); border: 1px solid var(--line2); }
+  .nl { position: fixed; right: 16px; bottom: 16px; z-index: 40; width: 340px; max-width: calc(100vw - 32px); background: var(--card); border: 1px solid rgba(139,147,255,.4); border-radius: 22px; padding: 18px; box-shadow: 0 16px 40px rgba(0,0,0,.5); }
+  .nl input[type=email] { width: 100%; height: 44px; background: var(--bg); border: 1px solid var(--line); color: var(--text); border-radius: 12px; padding: 0 12px; font-size: 14px; margin: 8px 0; outline: none; }
+  .nl input[type=email]:focus { border-color: var(--brand); }
+  .nl label { display: flex; gap: 8px; font-size: 12px; color: var(--dim); line-height: 1.45; align-items: flex-start; }
+  .nl .x { position: absolute; top: 10px; right: 14px; color: var(--dim); cursor: pointer; font-size: 18px; }
+  .navnl { display: inline-flex; align-items: center; gap: 6px; height: 44px; font-size: 13px; font-weight: 600; padding: 0 14px; border-radius: 14px; background: rgba(139,147,255,.12); color: var(--brand); cursor: pointer; border: 1px solid rgba(139,147,255,.4); }
+  .legal h2 { margin-top: 22px; } .legal p, .legal li { line-height: 1.65; color: var(--soft-t); font-size: 14.5px; }
+  .mod { display: block; padding: 14px; border-radius: 16px; background: var(--bg); border: 1px solid var(--line); cursor: pointer; font-size: 14px; }
+  .mod:hover { border-color: var(--line2); background: var(--card2); }
+  .lesson p { line-height: 1.7; font-size: 15.5px; color: var(--soft-t); margin: 0 0 12px; }
+  .lesson li { line-height: 1.65; font-size: 15px; color: var(--soft-t); }
+  .opt { display: block; width: 100%; text-align: left; min-height: 48px; padding: 12px 14px; margin-top: 8px; border-radius: 14px; border: 1px solid var(--line); background: var(--bg); color: var(--text); font-size: 15px; cursor: pointer; }
+  .opt:hover { border-color: var(--brand); }
+  .opt.good { border-color: rgba(52,211,153,.7); background: rgba(52,211,153,.12); }
+  .opt.bad { border-color: rgba(255,107,91,.7); background: rgba(255,107,91,.12); }
+  .progress { height: 6px; background: var(--card2); border-radius: 3px; overflow: hidden; margin: 10px 0 4px; }
+  .progress div { height: 6px; background: var(--brand); }
+  .loading { padding: 80px 0; text-align: center; color: var(--dim); }
 </style>
 </head>
 <body>
 <header>
   <div class="bar">
-    <a class="brand" href="#/"><b>●</b> QUANTUM ALGO</a>
+    <a class="brand" href="#/"><span class="logo"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B0E1A" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16 16l4 4"></path></svg></span>Quantum Algo</a>
     <nav id="nav">
-      <a href="#/" data-r="today">AUJOURD'HUI</a>
-      <a href="#/indices" data-r="indices">INDICES</a>
-      <a href="#/bilan" data-r="bilan">BILAN</a>
-      <a href="#/apprendre" data-r="apprendre">APPRENDRE</a>
+      <a href="#/" data-r="today">Aujourd'hui</a>
+      <a href="#/indices" data-r="indices">Marchés</a>
+      <a href="#/bilan" data-r="bilan">Bilan</a>
+      <a href="#/apprendre" data-r="apprendre">Apprendre</a>
     </nav>
-    <a class="navnl" id="nlbtn">✉ NEWSLETTER</a>
+    <a class="navnl" id="nlbtn"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M4 7l8 6 8-6"></path></svg>Lettre du matin</a>
     <div class="search"><input id="q" placeholder="Chercher une action (nom, symbole, secteur)…" autocomplete="off"><div class="results" id="res"></div></div>
   </div>
 </header>
@@ -166,27 +188,29 @@
   function ago(ms) { if (!ms) return ""; var h = Math.round((Date.now() - ms) / 3600e3); return h < 1 ? "à l'instant" : h < 24 ? "il y a " + h + " h" : "il y a " + Math.round(h / 24) + " j"; }
   function moodOf(p) { return p >= 0.58 ? "avantage net" : p >= 0.53 ? "léger avantage" : p > 0.47 ? "≈ pile ou face" : p > 0.42 ? "plutôt baissier" : "nettement baissier"; }
   function pillCls(a) { return a === "ENTRER" ? "p-buy" : a === "EVITER" ? "p-avoid" : a === "NEUTRE" ? "p-flat" : "p-wait"; }
-  function actLabel(a, l) { return a === "ENTRER" ? "ACHETER" : (l || a).toUpperCase(); }
+  function actLabel(a, l) { return a === "ENTRER" ? "Entrer" : a === "EVITER" ? "Éviter" : a === "NEUTRE" ? "Neutre" : String(l || a).charAt(0).toUpperCase() + String(l || a).slice(1).toLowerCase(); }
 
   // ---------- petits graphiques SVG ----------
-  function dial(p, size, stroke, label) {
-    var up = p >= 0.5, neutral = Math.abs(p - 0.5) < 0.03;
-    var score = Math.round((up ? p : 1 - p) * 100);
-    var col = neutral ? "rgba(232,234,236,.45)" : up ? "#4fdd9a" : "#e05c4b";
-    var r = (size - stroke) / 2, c = 2 * Math.PI * r;
-    return '<div style="position:relative;width:' + size + 'px;height:' + size + 'px;margin:0 auto">' +
-      '<svg width="' + size + '" height="' + size + '" style="position:absolute;inset:0"><circle cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke="rgba(255,255,255,.09)" stroke-width="' + stroke + '" fill="none"/>' +
-      '<circle cx="' + size / 2 + '" cy="' + size / 2 + '" r="' + r + '" stroke="' + col + '" stroke-width="' + stroke + '" fill="none" stroke-dasharray="' + (c * score / 100) + ' ' + c + '" transform="rotate(-90 ' + size / 2 + ' ' + size / 2 + ')" stroke-linecap="round"/></svg>' +
-      '<div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center">' +
-      (label ? '<div class="mono dimmer" style="font-size:10px;letter-spacing:1.4px">' + esc(label) + '</div>' : '') +
-      '<div class="' + (neutral ? "flat" : up ? "up" : "down") + '" style="font-size:' + Math.round(size / 4.2) + 'px;font-weight:800;letter-spacing:-1px">' + score + ' %</div>' +
-      '<div class="mono muted" style="font-size:11px;text-align:center;line-height:1.4">' + (up ? "de chances de hausse" : "de chances de baisse") + '<br>' + moodOf(p) + '</div></div></div>';
+  function dial(p, size, stroke, label, hz) {
+    var up = p >= 0.53, down = p <= 0.47;
+    var col = up ? "#34D399" : down ? "#FF6B5B" : "#C9D1DE", bg = up ? "rgba(52,211,153,.12)" : down ? "rgba(255,107,91,.12)" : "rgba(148,160,180,.14)";
+    var th = Math.PI * (1 - p), nx = (130 + 78 * Math.cos(th)).toFixed(1), ny = (130 - 78 * Math.sin(th)).toFixed(1);
+    var HLONG = { "1J": "demain", "1S": "dans une semaine", "1M": "dans un mois", "3M": "dans trois mois" };
+    return '<div style="position:relative;width:260px;height:150px;margin:6px auto 0"><svg width="260" height="150" viewBox="0 0 260 150" role="img" aria-label="' + Math.round(p * 100) + ' % de chances de hausse">' +
+      '<path d="M 30 130 A 100 100 0 0 1 120.6 30.4" fill="none" stroke="#FF6B5B" stroke-opacity="' + (down ? 1 : .22) + '" stroke-width="16"/>' +
+      '<path d="M 121.6 30.2 A 100 100 0 0 1 138.4 30.2" fill="none" stroke="#94A0B4" stroke-opacity="' + (!up && !down ? 1 : .3) + '" stroke-width="16"/>' +
+      '<path d="M 139.4 30.4 A 100 100 0 0 1 230 130" fill="none" stroke="#34D399" stroke-opacity="' + (up ? 1 : .22) + '" stroke-width="16"/>' +
+      '<line x1="130" y1="130" x2="' + nx + '" y2="' + ny + '" stroke="#EEF2F7" stroke-width="3.5" stroke-linecap="round"/><circle cx="130" cy="130" r="8" fill="#EEF2F7"/><circle cx="130" cy="130" r="3" fill="#131925"/></svg>' +
+      '<span class="small muted" style="position:absolute;left:14px;bottom:0;font-size:10.5px">Baisse</span><span class="small muted" style="position:absolute;right:14px;bottom:0;font-size:10.5px">Hausse</span></div>' +
+      '<div style="display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:-2px"><div class="gauge-n" style="color:' + col + '">' + Math.round(p * 100) + '<span style="font-size:22px;font-weight:600;letter-spacing:0">%</span></div>' +
+      '<div style="font-size:13.5px;color:#C9D1DE;text-align:center">de chances que ' + (label ? 'le ' + esc(label) : "l'indice") + ' finisse plus haut ' + (HLONG[hz] || "") + '</div>' +
+      '<span class="pill" style="margin-top:6px;background:' + bg + ';color:' + col + '">' + (up ? "Plutôt haussier" : down ? "Plutôt baissier" : "Pile ou face") + '</span></div>';
   }
   function spark(h, w, hh, col) {
     if (!h || h.length < 2) return "";
     var s = h.slice(-40), lo = Math.min.apply(null, s), hi = Math.max.apply(null, s), sp_ = hi - lo || 1;
     var pts = s.map(function (v, i) { return (i / (s.length - 1)) * w + "," + (hh - ((v - lo) / sp_) * hh * 0.86 - hh * 0.07); }).join(" ");
-    return '<svg width="' + w + '" height="' + hh + '"><polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="1.5"/></svg>';
+    return '<svg width="' + w + '" height="' + hh + '" aria-hidden="true" style="flex:none"><polyline points="' + pts + '" fill="none" stroke="' + col + '" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/></svg>';
   }
   function chart(a, h) {
     var W = 900, H = 220, split = W * 0.72, hist = a.hist || [];
@@ -194,35 +218,35 @@
     var mc = a.mc[h] || {}, lo = Math.min.apply(null, hist), hi = Math.max.apply(null, hist);
     if (ok(mc.lo)) lo = Math.min(lo, mc.lo); if (ok(mc.hi)) hi = Math.max(hi, mc.hi);
     var p = a.plan, levels = [];
-    if (p && ok(p.stop) && p.action !== "NEUTRE") levels.push([p.stop, "#e05c4b", "stop"]);
-    if (p && ok(p.target)) levels.push([p.target, "#4fdd9a", "objectif"]);
+    if (p && ok(p.stop) && p.action !== "NEUTRE") levels.push([p.stop, "#FF6B5B", "stop"]);
+    if (p && ok(p.target)) levels.push([p.target, "#34D399", "objectif"]);
     levels.forEach(function (l) { lo = Math.min(lo, l[0]); hi = Math.max(hi, l[0]); });
     var span = hi - lo || 1, y = function (v) { return H - ((v - lo) / span) * H * 0.88 - H * 0.06; };
     var pts = hist.map(function (v, i) { return [(i / (hist.length - 1)) * split, y(v)]; });
     var line = pts.map(function (q) { return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" ");
-    var last = pts[pts.length - 1], up = (a.ev[h] || {}).p >= 0.5, col = up ? "#4fdd9a" : "#e05c4b";
+    var last = pts[pts.length - 1], up = (a.ev[h] || {}).p >= 0.5, col = up ? "#34D399" : "#FF6B5B";
     var cone = ok(mc.lo) ? last[0] + "," + last[1] + " " + W + "," + y(mc.hi) + " " + W + "," + y(mc.lo) : "";
-    var lv = levels.map(function (l) { return '<line x1="0" x2="' + W + '" y1="' + y(l[0]) + '" y2="' + y(l[0]) + '" stroke="' + l[1] + '" stroke-dasharray="4 5" stroke-width="1" opacity=".7"/><text x="4" y="' + (y(l[0]) - 4) + '" fill="' + l[1] + '" font-size="11" font-family="monospace">' + l[2] + ' ' + f2(l[0]) + '</text>'; }).join("");
+    var lv = levels.map(function (l) { return '<line x1="0" x2="' + W + '" y1="' + y(l[0]) + '" y2="' + y(l[0]) + '" stroke="' + l[1] + '" stroke-dasharray="4 5" stroke-width="1" opacity=".7"/><text x="4" y="' + (y(l[0]) - 4) + '" fill="' + l[1] + '" font-size="11" font-family="JetBrains Mono, monospace">' + l[2] + ' ' + f2(l[0]) + '</text>'; }).join("");
     return '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:auto;display:block">' +
       '<defs><linearGradient id="g" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="' + col + '" stop-opacity=".28"/><stop offset="1" stop-color="' + col + '" stop-opacity="0"/></linearGradient></defs>' +
-      '<polygon points="' + line + ' ' + split + ',' + H + ' 0,' + H + '" fill="url(#g)"/>' + lv +
-      '<polyline points="' + line + '" fill="none" stroke="' + col + '" stroke-width="2"/>' +
+      lv +
+      '<polyline points="' + line + '" fill="none" stroke="#EEF2F7" stroke-width="2" stroke-linejoin="round"/>' +
       (cone ? '<polygon points="' + cone + '" fill="' + col + '" fill-opacity=".15"/>' : '') +
-      '<line x1="' + split + '" x2="' + split + '" y1="0" y2="' + H + '" stroke="rgba(232,234,236,.2)"/>' +
-      '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="4.5" fill="#e8eaec"/></svg>' +
-      '<div class="mono dimmer chartlbl" style="display:flex;justify-content:space-between;font-size:10px;letter-spacing:1px;margin-top:6px"><span>' + hist.length + ' SÉANCES</span><span>AUJOURD\'HUI</span><span style="color:' + col + '">PROJECTION ' + esc(HL[h]).toUpperCase() + ' (90 %)</span></div>';
+      '<line x1="' + split + '" x2="' + split + '" y1="0" y2="' + H + '" stroke="#2A3446" stroke-dasharray="3 4"/>' +
+      '<circle cx="' + last[0] + '" cy="' + last[1] + '" r="4.5" fill="#EEF2F7"/></svg>' +
+      '<div class="muted chartlbl" style="display:flex;justify-content:space-between;font-size:11px;margin-top:8px"><span>' + hist.length + ' séances</span><span>Aujourd\'hui</span><span style="color:' + col + ';font-weight:600">Projection ' + esc(HL[h]) + ' (90 %)</span></div>';
   }
 
   // ---------- blocs ----------
   function stockRow(a, h) {
     var e = a.ev[h] || {}, up = e.p >= 0.5, strong = Math.abs(e.p - 0.5) >= 0.03;
-    var col = !strong ? "rgba(232,234,236,.35)" : up ? "#4fdd9a" : "#e05c4b";
+    var col = !strong ? "#C9D1DE" : up ? "#34D399" : "#FF6B5B", tc = !strong ? "t-flat" : up ? "t-up" : "t-down";
     var score = Math.round((up ? e.p : 1 - e.p) * 100);
     return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '">' +
-      '<div class="ring" style="border-color:' + col + ';color:' + col + '">' + score + '</div>' +
-      '<div class="grow" title="' + Math.round((up ? e.p : 1 - e.p) * 100) + ' chances sur 100 de ' + (up ? 'hausse' : 'baisse') + ' sur ' + esc(HL[h]) + '"><div class="name">' + esc(a.name) + '</div><div class="small muted">' + f2(a.price) + ' ' + esc(a.cur) + ' · <span class="' + cls(a.chg) + '">' + sp(a.chg) + '</span>' + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
-      '<div style="display:none" class="hide-sm"></div>' + spark(a.hist, 70, 26, col) +
-      '<div style="text-align:right;min-width:92px;flex:none"><span class="pill ' + pillCls(a.plan.action) + '">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span><div class="small dimmer" style="margin-top:4px">' + esc(HL[a.plan.h]) + '</div></div></a>';
+      '<div class="tile ' + tc + '" title="' + score + ' chances sur 100 de ' + (up ? 'hausse' : 'baisse') + ' sur ' + esc(HL[h]) + '"><b>' + score + '</b><span>' + (!strong ? "NEUTRE" : up ? "HAUSSE" : "BAISSE") + '</span></div>' +
+      '<div class="grow"><div class="name">' + esc(a.name) + '</div><div class="small muted" style="margin-top:3px">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
+      spark(a.hist, 56, 26, col) +
+      '<div style="text-align:right;min-width:92px;flex:none"><div class="mono ' + cls(a.chg) + '" style="font-size:12.5px;font-weight:600">' + sp(a.chg) + '</div><span class="pill ' + pillCls(a.plan.action) + '" style="margin-top:5px;padding:4px 9px;font-size:11px">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span></div></a>';
   }
   function newsList(list) {
     if (!list || !list.length) return '<div class="empty">Pas d\'actualité récente.</div>';
@@ -239,14 +263,20 @@
       : act === "ATTENDRE_CONFIRMATION" ? "Acheter seulement si le cours clôture au-dessus de <b>" + f2(p.zoneLo) + "</b> d'ici le " + dfr(p.valid) + "."
       : act === "EVITER" ? "Le modèle penche à la baisse : pas d'achat. Si tu détiens la valeur, protection possible sous <b>" + f2(p.stop) + "</b>."
       : "Pas d'avantage statistique suffisant pour couvrir les frais : rester à l'écart.";
-    var html = '<div class="card"><h2>Plan de position</h2>' +
-      '<div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap"><span class="pill ' + pillCls(act) + '" style="font-size:12px">' + esc(actLabel(act, p.label)) + '</span><span class="small muted">horizon ' + esc(HL[p.h]) + (p.review ? ' · revoir le ' + dfr(p.review) : '') + '</span></div>' +
+    var g = act === "ENTRER" ? 0 : act === "EVITER" ? 2 : 1;
+    var bd = g === 0 ? "rgba(52,211,153,.35)" : g === 1 ? "rgba(245,183,64,.35)" : "rgba(255,107,91,.35)";
+    var html = '<div class="card" style="border-color:' + bd + ';border-radius:24px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h2 style="margin:0;font-size:17px">Que faire ?</h2><span class="small" style="padding:6px 10px;border-radius:9px;background:#1A2231;color:#C9D1DE">Horizon ' + esc(HL[p.h]) + '</span></div>' +
+      '<div class="act3">' + ["Entrer", "Attendre", "Éviter"].map(function (t, i) { return '<div class="' + (i === g ? "on" + i : "") + '">' + (i === g && i === 0 ? "✓ " : "") + t + '</div>'; }).join("") + '</div>' +
+      '<div class="small muted">' + esc(actLabel(act, p.label)) + (p.review ? ' · revoir le ' + dfr(p.review) : '') + '</div>' +
       '<p style="font-size:15px;line-height:1.5;margin:10px 0 4px">' + sentence + '</p>';
     if (active) {
-      html += '<div class="boxes"><div class="box b-in"><div class="l">ENTRÉE</div><div class="v">' + (act === "ATTENDRE_CONFIRMATION" ? "&gt; " + f2(p.zoneLo) : f2(p.zoneLo) + "–" + f2(p.zoneHi)) + '</div><div class="s">' + esc(a.cur) + '</div></div>' +
-        '<div class="box b-tg"><div class="l">OBJECTIF</div><div class="v">' + f2(p.target) + '</div><div class="s">+' + f1(p.gainPct) + ' %</div></div>' +
-        '<div class="box b-st"><div class="l">STOP</div><div class="v">' + f2(p.stop) + '</div><div class="s">-' + f1(p.riskPct) + ' %</div></div></div>' +
-        '<div class="small" style="line-height:1.7">🎯 Objectif atteint avant le stop dans <b>' + pc(p.pTarget) + '</b> des scénarios · gain/risque <b>' + f1(p.rr) + '</b><br>💶 Mise conseillée : <b>' + Math.round(p.sizePct || 0) + ' %</b> du capital maximum (pour ne perdre que 1 % si le stop est touché)<br>⏱ Durée : ' + p.hold + ' séances</div>';
+      html += '<div class="boxes"><div class="box b-st"><div class="l">Stop</div><div class="v">' + f2(p.stop) + '</div><div class="s">−' + f1(p.riskPct) + ' %</div></div><div class="box b-in"><div class="l">Entrée</div><div class="v">' + (act === "ATTENDRE_CONFIRMATION" ? "&gt; " + f2(p.zoneLo) : f2(p.zoneLo) + "–" + f2(p.zoneHi)) + '</div><div class="s">' + esc(a.cur) + '</div></div>' +
+        '<div class="box b-tg"><div class="l">Objectif</div><div class="v">' + f2(p.target) + '</div><div class="s">+' + f1(p.gainPct) + ' %</div></div></div>' +
+        '<div class="boxes" style="grid-template-columns:repeat(2,1fr);margin-top:0">' +
+        '<div class="box" style="text-align:left"><div class="l">Gain / risque</div><div class="v">' + f1(p.rr) + '×</div></div>' +
+        '<div class="box" style="text-align:left"><div class="l">Objectif avant stop</div><div class="v">' + pc(p.pTarget) + '</div></div>' +
+        '<div class="box" style="text-align:left"><div class="l">Garder</div><div class="v">' + p.hold + ' séances</div></div>' +
+        '<div class="box" style="text-align:left"><div class="l">Taille (1 % de risque)</div><div class="v" style="font-size:14px">' + Math.round(p.sizePct || 0) + ' % du capital</div></div></div>';
     }
     if (a.earnings && p.review && new Date(a.earnings) > new Date() && new Date(a.earnings) <= new Date(p.review)) html += '<div class="warn">⚠ Résultats prévus le ' + dfr(a.earnings) + ' : risque de forte variation pendant la position.</div>';
     if (!compact && p.why && p.why.length) html += '<div class="small muted" style="margin-top:10px;line-height:1.6">' + p.why.map(function (w) { return "• " + esc(w); }).join("<br>") + '</div>';
@@ -301,13 +331,14 @@
   function pageIndices(id) {
     var list = D.indices, idx = list.filter(function (x) { return x.id === id; })[0] || list[0];
     var ref = idx.data || (list.filter(function (x) { return x.id === idx.ref; })[0] || {}).data;
-    var h = '<h1>Indices</h1><div class="chips" style="margin:10px 0 14px">' + list.map(function (x) {
-      return '<a class="chip' + (x.id === idx.id ? " on" : "") + '" href="#/indices/' + x.id + '">' + esc(x.name) + '</a>';
+    var NICE = { NASDAQ: "Nasdaq", DOW: "Dow", NIKKEI: "Nikkei" };
+    var h = '<h1>Marchés</h1><div class="chips" style="margin:10px 0 14px">' + list.map(function (x) {
+      return '<a class="chip' + (x.id === idx.id ? " on" : "") + '" href="#/indices/' + x.id + '">' + esc(NICE[x.name] || x.name) + '</a>';
     }).join("") + '</div>';
-    h += '<div class="chips" style="margin-bottom:6px">' + HK.map(function (k) { return '<a class="chip' + (k === st.h ? " on" : "") + '" data-h="' + k + '">' + esc(HL[k]).toUpperCase() + '</a>'; }).join("") + '</div>';
+    h += '<div class="tabs" style="max-width:520px">' + HK.map(function (k) { return '<a class="' + (k === st.h ? "on" : "") + '" data-h="' + k + '">' + esc(HL[k]) + '</a>'; }).join("") + '</div>';
     h += '<div class="grid2"><div class="card" style="text-align:center">';
     if (ref) {
-      h += dial(ref.ev[st.h].p, 200, 18, (idx.data ? idx.label : "CAC 40") + " / " + st.h) +
+      h += dial(ref.ev[st.h].p, 200, 18, (idx.data ? idx.label : "CAC 40"), st.h) +
         '<div class="mono muted" style="margin-top:10px">' + f2(ref.price) + ' · <span class="' + cls(ref.chg) + '">' + sp(ref.chg) + '</span></div>' +
         '<div class="small muted" style="margin-top:6px">Rendement attendu ' + sp(ref.ev[st.h].e) + ' · intervalle 90 % ' + f2(ref.mc[st.h].lo) + ' – ' + f2(ref.mc[st.h].hi) + '</div>';
     } else h += '<div class="empty">Données de l\'indice indisponibles.</div>';
@@ -322,16 +353,16 @@
   function pageStock(sym) {
     var a = D.stocks[sym] || (D.indices.filter(function (x) { return x.data && x.data.sym === sym; })[0] || {}).data;
     if (!a) return '<h1>Valeur introuvable</h1><p class="sub">' + esc(sym) + ' ne fait pas partie des valeurs suivies.</p><a class="chip" href="#/">← Retour</a>';
-    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" onclick="history.length>1?history.back():location.hash=\'#/\'">←</a><div class="grow"><div style="font-size:24px;font-weight:700">' + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div></div>';
-    h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span style="font-size:32px;font-weight:800;letter-spacing:-1px">' + f2(a.price) + ' <span style="font-size:16px" class="muted">' + esc(a.cur) + '</span></span><span class="mono ' + cls(a.chg) + '">' + sp(a.chg) + '</span></div>';
-    h += '<div class="tabs"><a data-tab="est" class="' + (st.tab === "est" ? "on" : "") + '">ESTIMATION</a><a data-tab="tech" class="' + (st.tab === "tech" ? "on" : "") + '">TECHNIQUE</a></div>';
+    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" aria-label="Retour" onclick="history.length>1?history.back():location.hash=\'#/\'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a><div class="grow"><div style="font-size:24px;font-weight:700">' + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div></div>';
+    h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:34px;font-weight:700;letter-spacing:-1.4px">' + f2(a.price) + ' <span style="font-size:16px" class="muted">' + esc(a.cur) + '</span></span><span class="mono ' + cls(a.chg) + '">' + sp(a.chg) + '</span></div>';
+    h += '<div class="tabs"><a data-tab="est" class="' + (st.tab === "est" ? "on" : "") + '">Estimation</a><a data-tab="tech" class="' + (st.tab === "tech" ? "on" : "") + '">Technique</a></div>';
     if (st.tab === "tech") {
       var cats = ["Tous", "Tendance", "Momentum", "Volatilite", "Volume", "Structure", "Chandeliers"], v = a.votes, e = a.ev[st.h];
       h += '<div class="card"><div style="font-size:24px;font-weight:800" class="' + pcls(e.p) + '">' + esc(e.v) + '</div><div class="small muted" style="margin:4px 0 10px">' + v.directional + ' indicateurs directionnels · ' + v.info + ' informatifs · horizon ' + esc(HL[st.h]) + '</div>' +
         '<div style="display:flex;height:26px;border-radius:7px;overflow:hidden;gap:2px">' +
-        (v.buy ? '<div style="width:' + v.buy / v.directional * 100 + '%;background:#4fdd9a;color:#07120c" class="mono small"><b style="padding:5px 8px;display:block">' + v.buy + '</b></div>' : '') +
+        (v.buy ? '<div style="width:' + v.buy / v.directional * 100 + '%;background:#34D399;color:#07120c" class="mono small"><b style="padding:5px 8px;display:block">' + v.buy + '</b></div>' : '') +
         (v.neu ? '<div style="width:' + v.neu / v.directional * 100 + '%;background:rgba(255,255,255,.13)" class="mono small"><b style="padding:5px 8px;display:block">' + v.neu + '</b></div>' : '') +
-        (v.sell ? '<div style="width:' + v.sell / v.directional * 100 + '%;background:rgba(224,92,75,.55);text-align:right" class="mono small"><b style="padding:5px 8px;display:block">' + v.sell + '</b></div>' : '') +
+        (v.sell ? '<div style="width:' + v.sell / v.directional * 100 + '%;background:rgba(255,107,91,.55);text-align:right" class="mono small"><b style="padding:5px 8px;display:block">' + v.sell + '</b></div>' : '') +
         '</div><div class="mono dimmer" style="display:flex;justify-content:space-between;font-size:10px;margin-top:6px"><span>ACHAT</span><span>NEUTRE</span><span>VENTE</span></div></div>';
       h += '<div class="chips" style="margin:12px 0">' + cats.map(function (c) { return '<a class="chip' + (c === st.cat ? " on" : "") + '" data-cat="' + c + '">' + c + '</a>'; }).join("") + '</div>';
       var rows = a.tech.filter(function (r) { return st.cat === "Tous" || r[1] === st.cat; });
@@ -348,12 +379,12 @@
     h += planCard(a);
     h += '<div class="grid2"><div class="card"><h2>Poids de chaque famille dans le score</h2>' + (a.fam || []).map(function (f) {
       var pos = f[1] >= 0, w = Math.min(50, Math.abs(f[1]) / 2);
-      return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>' + esc(f[0]) + '</span><span class="mono ' + (f[1] === 0 ? "flat" : pos ? "up" : "down") + '">' + (pos ? "+" : "") + f[1] + '</span></div><div class="bar2"><div style="position:absolute;top:0;bottom:0;left:' + (pos ? 50 : 50 - w) + '%;width:' + w + '%;background:' + (pos ? "#4fdd9a" : "#e05c4b") + ';border-radius:3px"></div></div></div>';
+      return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>' + esc(f[0]) + '</span><span class="mono ' + (f[1] === 0 ? "flat" : pos ? "up" : "down") + '">' + (pos ? "+" : "") + f[1] + '</span></div><div class="bar2"><div style="position:absolute;top:0;bottom:0;left:' + (pos ? 50 : 50 - w) + '%;width:' + w + '%;background:' + (pos ? "#34D399" : "#FF6B5B") + ';border-radius:3px"></div></div></div>';
     }).join("") + '</div><div class="card"><h2>Chiffres clés</h2>' +
       kv("Performance 1 sem. · 1 mois", sp(a.perf.w1, 1) + " · " + sp(a.perf.m1, 1)) + kv("Performance 3 mois · 1 an", sp(a.perf.m3, 1) + " · " + sp(a.perf.y1, 1)) + kv("Depuis janvier", sp(a.perf.ytd, 1)) +
       (a.fund ? kv("PER (actuel · attendu)", f1(a.fund.pe) + " · " + f1(a.fund.fpe)) + kv("Rendement du dividende", ok(a.fund.yield) ? f1(a.fund.yield) + " %" : "-") + kv("Avis des analystes", esc(a.fund.rating || "-")) + kv("Objectif moyen des analystes", f2(a.fund.target)) + kv("Plus bas · plus haut 52 sem.", f2(a.fund.lo52) + " · " + f2(a.fund.hi52)) : '') +
       (a.earnings && new Date(a.earnings) > new Date() ? kv("Prochains résultats", dfr(a.earnings)) : '') + '</div></div>';
-    if (a.profile) h += '<div class="card"><h2>Secteur · ' + esc(a.sector || "") + '</h2><p style="margin:0;line-height:1.55;color:rgba(232,234,236,.75)">' + esc(a.profile) + '</p></div>';
+    if (a.profile) h += '<div class="card"><h2>Secteur · ' + esc(a.sector || "") + '</h2><p style="margin:0;line-height:1.55;color:rgba(238,242,247,.75)">' + esc(a.profile) + '</p></div>';
     if (a.news) h += '<div class="card"><h2>Actualités</h2>' + newsList(a.news) + '</div>';
     return h;
   }
@@ -392,7 +423,7 @@
     var m = document.createElement("div"); m.className = "modal-bg"; m.id = "terms";
     m.innerHTML = '<div class="modal"><div class="mono" style="font-size:11px;letter-spacing:2px;color:var(--ring)">QUANTUM ALGO</div><h3>Avant d\'entrer</h3>' + termsText() +
       '<p class="small dimmer">En cliquant sur « J\'accepte », tu reconnais avoir lu et compris ces conditions. <a href="#/conditions" style="text-decoration:underline">Conditions complètes</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>' +
-      '<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;position:sticky;bottom:-22px;background:#11161d;padding:12px 0 16px"><button class="btn btn-main" id="t-ok">J\'accepte</button><button class="btn btn-sec" id="t-no">Je refuse</button></div><div id="t-msg"></div></div>';
+      '<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;position:sticky;bottom:-22px;background:#131925;padding:12px 0 16px"><button class="btn btn-main" id="t-ok">J\'accepte</button><button class="btn btn-sec" id="t-no">Je refuse</button></div><div id="t-msg"></div></div>';
     document.body.appendChild(m);
     document.getElementById("t-ok").onclick = function () { put("terms", TERMS_V); m.remove(); render(); setTimeout(maybeNewsletter, 4000); };
     document.getElementById("t-no").onclick = function () {
@@ -482,7 +513,7 @@
       var W = 420, H = d.height ? d.height * 1.6 : 90, n = d.bars.length, mx = Math.max.apply(null, d.bars.map(Math.abs)) || 1, bw = W / n;
       h += '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;max-width:520px"><line x1="0" x2="' + W + '" y1="' + H / 2 + '" y2="' + H / 2 + '" stroke="rgba(255,255,255,.2)"/>' + d.bars.map(function (v, i) {
         var bh = Math.abs(v) / mx * (H / 2 - 4);
-        return '<rect x="' + (i * bw + 3) + '" y="' + (v >= 0 ? H / 2 - bh : H / 2) + '" width="' + (bw - 6) + '" height="' + bh + '" rx="2" fill="' + (v >= 0 ? "#4fdd9a" : "#e05c4b") + '"/>';
+        return '<rect x="' + (i * bw + 3) + '" y="' + (v >= 0 ? H / 2 - bh : H / 2) + '" width="' + (bw - 6) + '" height="' + bh + '" rx="2" fill="' + (v >= 0 ? "#34D399" : "#FF6B5B") + '"/>';
       }).join("") + '</svg>';
     } else if (d.type === "candles") {
       var cs = d.candles, Hh = (d.height || 80) * 1.4, hi = Math.max.apply(null, cs.map(function (c) { return c.h; })) + 5, lo = Math.min.apply(null, cs.map(function (c) { return c.l; })) - 5;
@@ -491,7 +522,7 @@
         var x = 10 + i * step + 12, up = c.c > c.o, doji = Math.abs(c.c - c.o) <= 1, col = doji ? "#facc15" : up ? "#22c55e" : "#fb7185";
         var top = sc(Math.max(c.o, c.c)), bot = sc(Math.min(c.o, c.c));
         return '<line x1="' + x + '" x2="' + x + '" y1="' + sc(c.h) + '" y2="' + sc(c.l) + '" stroke="' + col + '" stroke-width="2"/><rect x="' + (x - 9) + '" y="' + top + '" width="18" height="' + Math.max(bot - top, 3) + '" rx="2" fill="' + col + '"/>' +
-          (d.labels && d.labels[i] ? '<text x="' + x + '" y="' + (Hh + 16) + '" text-anchor="middle" fill="rgba(232,234,236,.55)" font-size="9">' + esc(d.labels[i]) + '</text>' : '');
+          (d.labels && d.labels[i] ? '<text x="' + x + '" y="' + (Hh + 16) + '" text-anchor="middle" fill="rgba(238,242,247,.55)" font-size="9">' + esc(d.labels[i]) + '</text>' : '');
       }).join("") + '</svg>';
     }
     return h + '</div>';
@@ -505,7 +536,7 @@
     if (sub === "q") return pageOneQuestion(parts[2]);
     var best = get("quizBest"), done = (get("lessonsDone") || "").split(",").filter(Boolean);
     var h = '<h1>Apprendre</h1><p class="sub">Un parcours complet en trois niveaux : débutant, intermédiaire et pro. La bourse, l’analyse technique, l’analyse fondamentale et la gestion du risque, puis un quiz par niveau pour te tester.</p>';
-    h += '<div class="grid2"><a class="card" href="#/apprendre/quiz" style="display:block;border-color:rgba(79,221,154,.35)"><h2>Quiz</h2><div style="font-size:20px;font-weight:800">Teste tes connaissances</div><div class="small muted" style="margin-top:6px">10 questions tirées au hasard parmi ' + LEARN.quiz.length + ', avec l\'explication de chaque réponse.' + (best ? ' Meilleur score : <b class="up">' + esc(best) + '/10</b>' : '') + '</div></a>' +
+    h += '<div class="grid2"><a class="card" href="#/apprendre/quiz" style="display:block;border-color:rgba(52,211,153,.35)"><h2>Quiz</h2><div style="font-size:20px;font-weight:800">Teste tes connaissances</div><div class="small muted" style="margin-top:6px">10 questions tirées au hasard parmi ' + LEARN.quiz.length + ', avec l\'explication de chaque réponse.' + (best ? ' Meilleur score : <b class="up">' + esc(best) + '/10</b>' : '') + '</div></a>' +
       '<a class="card" href="#/apprendre/lexique" style="display:block"><h2>Lexique</h2><div style="font-size:20px;font-weight:800">' + LEARN.lexicon.items.length + ' définitions</div><div class="small muted" style="margin-top:6px">RSI, MACD, Bollinger, ATR, bêta… chaque indicateur expliqué avec un exemple.</div></a></div>';
     var LV = [["start", "🚀 Commencer", "La méthode Quantum Algo en 5 minutes."], ["deb", "🟢 Débutant", "La bourse, les premiers pas en analyse technique et fondamentale."], ["int", "🟡 Intermédiaire", "Indicateurs, figures chartistes, états financiers, valorisation, macro."], ["pro", "🔴 Pro", "Ichimoku, backtest, DCF, WACC, analyse sectorielle, gestion de portefeuille."], ["ref", "📖 Référence", "Glossaire complet."]];
     var lvl = st.learnLvl || "all";
@@ -560,7 +591,7 @@
     return '<div class="card"><div style="font-size:19px;font-weight:700;line-height:1.35">' + esc(q.q) + '</div>' + q.a.map(function (a, k) {
       var c = answered == null ? "" : k === q.ok ? " good" : k === answered ? " bad" : "";
       return '<button class="opt' + c + '" data-ans="' + k + '"' + (answered != null ? " disabled" : "") + '>' + String.fromCharCode(65 + k) + '. ' + esc(a) + '</button>';
-    }).join("") + (answered != null ? '<div class="' + (answered === q.ok ? "up" : "down") + '" style="font-weight:800;margin-top:14px">' + (answered === q.ok ? "✔ Bonne réponse !" : "✘ Pas tout à fait.") + '</div><p class="small" style="line-height:1.6;color:rgba(232,234,236,.8);margin:6px 0 0">' + esc(q.why) + '</p>' : '') + '</div>';
+    }).join("") + (answered != null ? '<div class="' + (answered === q.ok ? "up" : "down") + '" style="font-weight:800;margin-top:14px">' + (answered === q.ok ? "✔ Bonne réponse !" : "✘ Pas tout à fait.") + '</div><p class="small" style="line-height:1.6;color:rgba(238,242,247,.8);margin:6px 0 0">' + esc(q.why) + '</p>' : '') + '</div>';
   }
   function pageQuiz(lvl) {
     if (!QZ || QZ.lvl !== lvl) newQuiz(lvl);

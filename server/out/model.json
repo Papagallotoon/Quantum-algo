@@ -408,9 +408,9 @@
    }
   }
  },
- "createdAt": "2026-10-11T14:05:24.669Z",
+ "createdAt": "2026-10-11T18:56:42.638Z",
  "universe": 261,
- "summary": "Modèle ré-entraîné le 11/10 sur 261 valeurs et ~3 ans d'historique ; 1 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 11/10 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
    "samples": 142724,
@@ -483,11 +483,11 @@
    "samples": 141680,
    "train": 109746,
    "val": 30629,
-   "configChanged": true,
-   "from": 0.5,
+   "configChanged": false,
+   "from": "vote",
    "to": "vote",
    "bestIc": -0.0175,
-   "championIc": -0.0366,
+   "championIc": -0.0175,
    "configs": [
     {
      "alpha": "vote",
@@ -674,7 +674,7 @@
   "subscribers": 2,
   "subs": {
    "configured": true,
-   "at": "2026-10-11T14:06:12.956Z",
+   "at": "2026-10-11T18:57:27.942Z",
    "count": 2,
    "sameAsOwner": 0,
    "sent": 2,
