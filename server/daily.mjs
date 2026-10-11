@@ -20,7 +20,7 @@ import { fetchMany, fetchCandles } from "./lib/fetch.mjs";
 import { fetchAgenda, fetchFundamentals, fetchNasdaqEarnings, fetchNews, dedupeNews, parisDay } from "./lib/extras.mjs";
 import { buildLetter } from "./lib/letter.mjs";
 import { buildSite } from "./lib/site.mjs";
-import { sendAll, channelsConfigured } from "./lib/send.mjs";
+import { sendAll, channelsConfigured, fetchSubscribers, sendToSubscribers } from "./lib/send.mjs";
 
 const HERE = path.dirname(fileURLToPath(import.meta.url));
 const OUT = path.join(HERE, "out");
@@ -305,6 +305,7 @@ const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, ea
 const SITE_URL = (process.env.SITE_URL || config.siteUrl || "").replace(/\/?$/, "/");
 try {
   buildSite({
+    subscribeApi: process.env.SUBSCRIBE_API || config.subscribeApi || null,
     outDir: path.join(HERE, "..", "docs"), templateDir: path.join(HERE, "site"),
     items, bySym, indexDefs: INDEX_DEFS, components: COMPONENTS, names, model,
     signals: { ...signals, watchNews: watch }, track, fundamentals, iso, dateLabel,
@@ -338,6 +339,15 @@ else {
   log("envoye :", res.done.join(", ") || "rien", res.errors.length ? "| erreurs : " + res.errors.join(" ; ") : "");
   if (res.done.length) model.newsletter.lastSent = today.toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" });
   if (res.errors.length && !res.done.length) process.exitCode = 2;
+  // abonnes inscrits sur le site
+  try {
+    const subs = await fetchSubscribers();
+    if (subs.configured) {
+      const r = await sendToSubscribers(subs.list, `Quantum Algo – ${dateLabel}`, letter.html, letter.text, (process.env.MAIL_TO || "").split(","));
+      log(`abonnes : ${subs.list.length} inscrits, ${r.done.length} envois${r.errors.length ? ", " + r.errors.length + " erreurs (" + r.errors.slice(0, 3).join(" ; ") + ")" : ""}`);
+      model.newsletter.subscribers = subs.list.length;
+    }
+  } catch (e) { log("abonnes : " + e.message); }
 }
 
 writeJson("model.json", model);

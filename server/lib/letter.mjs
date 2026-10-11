@@ -144,7 +144,7 @@ export function buildLetter({ siteUrl, dateLabel, brief, indices, picks, avoid, 
 
   const html = `<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width"></head><body style="margin:0;background:#f4f5f7;font-family:-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:#111827">
   <div style="max-width:660px;margin:0 auto;padding:16px">${parts.join("\n")}
-    <p style="font-size:11px;color:#9ca3af;line-height:16px;margin-top:14px">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, calendrier ForexFactory, Google Actualités). Ce n'est pas un conseil en investissement personnalisé : les performances passées ne préjugent pas des performances futures et tout investissement en actions peut entraîner une perte en capital.${failed?.length ? ` Données indisponibles ce matin : ${esc(failed.join(", "))}.` : ""}</p>
+    <p style="font-size:11px;color:#9ca3af;line-height:16px;margin-top:14px">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, calendrier ForexFactory, Google Actualités). Ce n'est pas un conseil en investissement personnalisé : les performances passées ne préjugent pas des performances futures et tout investissement en actions peut entraîner une perte en capital.{{UNSUB}}${failed?.length ? ` Données indisponibles ce matin : ${esc(failed.join(", "))}.` : ""}</p>
   </div></body></html>`;
 
   // ---- version courte (WhatsApp) ----

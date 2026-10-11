@@ -50,7 +50,7 @@ function assetData(it, model, extra) {
   };
 }
 
-export function buildSite({ outDir, templateDir, items, bySym, indexDefs, components, names, model, signals, track, fundamentals, iso, dateLabel }) {
+export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, indexDefs, components, names, model, signals, track, fundamentals, iso, dateLabel }) {
   fs.mkdirSync(outDir, { recursive: true });
   const indexOfSym = {};
   for (const d of indexDefs) for (const s of components[d.id] || []) (indexOfSym[s] ||= []).push(d.id);
@@ -79,7 +79,7 @@ export function buildSite({ outDir, templateDir, items, bySym, indexDefs, compon
   }
   const horizonsInfo = Object.fromEntries(HORIZON_KEYS.map((h) => [h, model.horizons[h]?.oos || null]));
   const data = {
-    date: iso, dateLabel, generatedAt: new Date().toISOString(),
+    date: iso, dateLabel, generatedAt: new Date().toISOString(), subscribeApi: subscribeApi || null,
     model: { version: model.version, source: model.source, summary: model.summary, oos: horizonsInfo, changes: track.changes || [] },
     today: { brief: signals.brief || [], agenda: signals.agenda || null, earnings: signals.earnings || null, context: signals.context || [], movers: signals.movers || null, news: signals.news || [], picks: (signals.picks || []).map((p) => p.sym), avoid: (signals.avoid || []).map((p) => p.sym) },
     track, indices, stocks,

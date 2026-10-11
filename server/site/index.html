@@ -92,6 +92,19 @@
     .boxes .v { font-size: 15px; }
     td { padding: 8px 5px; font-size: 13px; }
   }
+  .modal-bg { position: fixed; inset: 0; z-index: 50; background: rgba(5,7,10,.88); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 16px; }
+  .modal { max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto; background: #11161d; border: 1px solid var(--border); border-radius: 20px; padding: 22px; }
+  .modal h3 { margin: 4px 0 10px; font-size: 21px; }
+  .modal p, .modal li { color: rgba(232,234,236,.78); font-size: 14px; line-height: 1.55; }
+  .btn { display: inline-block; border: 0; cursor: pointer; font-weight: 700; font-size: 14px; padding: 11px 18px; border-radius: 12px; }
+  .btn-main { background: var(--ring); color: var(--ink); }
+  .btn-sec { background: var(--card2); color: var(--text); border: 1px solid var(--border); }
+  .nl { position: fixed; right: 16px; bottom: 16px; z-index: 40; width: 340px; max-width: calc(100vw - 32px); background: #11161d; border: 1px solid rgba(79,221,154,.35); border-radius: 18px; padding: 16px; box-shadow: 0 10px 40px rgba(0,0,0,.5); }
+  .nl input[type=email] { width: 100%; background: var(--card); border: 1px solid var(--border); color: var(--text); border-radius: 10px; padding: 10px 12px; font-size: 14px; margin: 8px 0; outline: none; }
+  .nl label { display: flex; gap: 8px; font-size: 12px; color: var(--dim); line-height: 1.4; align-items: flex-start; }
+  .nl .x { position: absolute; top: 8px; right: 12px; color: var(--dim); cursor: pointer; font-size: 18px; }
+  .navnl { font-family: var(--mono); font-size: 11px; font-weight: 700; letter-spacing: .8px; padding: 8px 12px; border-radius: 10px; background: rgba(79,221,154,.14); color: var(--up); cursor: pointer; border: 1px solid rgba(79,221,154,.35); }
+  .legal h2 { margin-top: 22px; } .legal p, .legal li { line-height: 1.6; color: rgba(232,234,236,.8); font-size: 14.5px; }
   .loading { padding: 80px 0; text-align: center; color: var(--dim); font-family: var(--mono); letter-spacing: 1px; }
 </style>
 </head>
@@ -104,6 +117,7 @@
       <a href="#/indices" data-r="indices">INDICES</a>
       <a href="#/bilan" data-r="bilan">BILAN</a>
     </nav>
+    <a class="navnl" id="nlbtn">✉ NEWSLETTER</a>
     <div class="search"><input id="q" placeholder="Chercher une valeur…" autocomplete="off"><div class="results" id="res"></div></div>
   </div>
 </header>
@@ -311,7 +325,7 @@
     }).join("") + '</div><div class="card"><h2>Chiffres clés</h2>' +
       kv("Performance 1 sem. · 1 mois", sp(a.perf.w1, 1) + " · " + sp(a.perf.m1, 1)) + kv("Performance 3 mois · 1 an", sp(a.perf.m3, 1) + " · " + sp(a.perf.y1, 1)) + kv("Depuis janvier", sp(a.perf.ytd, 1)) +
       (a.fund ? kv("PER (actuel · attendu)", f1(a.fund.pe) + " · " + f1(a.fund.fpe)) + kv("Rendement du dividende", ok(a.fund.yield) ? f1(a.fund.yield) + " %" : "-") + kv("Avis des analystes", esc(a.fund.rating || "-")) + kv("Objectif moyen des analystes", f2(a.fund.target)) + kv("Plus bas · plus haut 52 sem.", f2(a.fund.lo52) + " · " + f2(a.fund.hi52)) : '') +
-      (a.earnings ? kv("Prochains résultats", dfr(a.earnings)) : '') + '</div></div>';
+      (a.earnings && new Date(a.earnings) > new Date() ? kv("Prochains résultats", dfr(a.earnings)) : '') + '</div></div>';
     if (a.profile) h += '<div class="card"><h2>Secteur · ' + esc(a.sector || "") + '</h2><p style="margin:0;line-height:1.55;color:rgba(232,234,236,.75)">' + esc(a.profile) + '</p></div>';
     if (a.news) h += '<div class="card"><h2>Actualités</h2>' + newsList(a.news) + '</div>';
     return h;
@@ -335,15 +349,95 @@
     return h;
   }
 
+
+  // ---------- avertissement, conditions, newsletter ----------
+  var TERMS_V = "2026-10";
+  function accepted() { return get("terms") === TERMS_V; }
+  function termsText() {
+    return '<p><b>Quantum Algo fournit des informations statistiques générées automatiquement</b> à partir de données de marché différées (Yahoo Finance), d\'un calendrier économique (ForexFactory) et d\'actualités publiques (Google Actualités).</p>' +
+      '<ul><li>Ce n\'est <b>pas un conseil en investissement personnalisé</b> : les analyses ne tiennent compte ni de ta situation, ni de tes objectifs, ni de ta tolérance au risque.</li>' +
+      '<li>Les probabilités, zones d\'entrée, objectifs et stops sont des <b>estimations</b> qui peuvent se révéler fausses. Les performances passées ne préjugent pas des performances futures.</li>' +
+      '<li>Investir en actions comporte un <b>risque de perte en capital</b>, partielle ou totale. N\'investis que des sommes dont tu peux supporter la perte.</li>' +
+      '<li>Les données peuvent être incomplètes, retardées ou erronées. Vérifie toujours les cours auprès de ton courtier avant d\'agir.</li>' +
+      '<li>Tu restes seul responsable de tes décisions d\'investissement. L\'éditeur ne peut être tenu responsable des pertes éventuelles.</li></ul>';
+  }
+  function showTerms() {
+    var m = document.createElement("div"); m.className = "modal-bg"; m.id = "terms";
+    m.innerHTML = '<div class="modal"><div class="mono" style="font-size:11px;letter-spacing:2px;color:var(--ring)">QUANTUM ALGO</div><h3>Avant d\'entrer</h3>' + termsText() +
+      '<p class="small dimmer">En cliquant sur « J\'accepte », tu reconnais avoir lu et compris ces conditions. <a href="#/conditions" style="text-decoration:underline">Conditions complètes</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>' +
+      '<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;position:sticky;bottom:-22px;background:#11161d;padding:12px 0 16px"><button class="btn btn-main" id="t-ok">J\'accepte</button><button class="btn btn-sec" id="t-no">Je refuse</button></div><div id="t-msg"></div></div>';
+    document.body.appendChild(m);
+    document.getElementById("t-ok").onclick = function () { put("terms", TERMS_V); m.remove(); render(); setTimeout(maybeNewsletter, 4000); };
+    document.getElementById("t-no").onclick = function () {
+      document.getElementById("t-msg").innerHTML = '<p class="warn" style="margin-top:14px">Sans acceptation des conditions, le contenu du site n\'est pas accessible. Tu peux changer d\'avis à tout moment en cliquant sur « J\'accepte ».</p>';
+    };
+  }
+  function nlForm(inModal) {
+    return '<div class="mono" style="font-size:10.5px;letter-spacing:1.4px;color:var(--ring)">LA LETTRE DU MATIN</div>' +
+      '<div style="font-size:16px;font-weight:700;margin:6px 0 4px">Reçois l\'analyse chaque matin à 7 h 30</div>' +
+      '<div class="small muted">Agenda du jour, opportunités avec entrée, objectif et stop, valeurs à éviter. Gratuit, désinscription en un clic.</div>' +
+      '<form id="nlf"><input type="email" id="nle" placeholder="ton@email.fr" required autocomplete="email"><input type="text" id="nlw" style="display:none" tabindex="-1" autocomplete="off">' +
+      '<label><input type="checkbox" id="nlc" required> <span>J\'accepte de recevoir la lettre quotidienne de Quantum Algo et que mon adresse soit conservée à cette seule fin, jusqu\'à ma désinscription (<a href="#/confidentialite" style="text-decoration:underline">confidentialité</a>).</span></label>' +
+      '<button class="btn btn-main" style="width:100%;margin-top:10px" type="submit">S\'inscrire</button><div id="nlm" class="small" style="margin-top:8px"></div></form>';
+  }
+  function bindForm() {
+    var f = document.getElementById("nlf"); if (!f) return;
+    f.onsubmit = function (e) {
+      e.preventDefault();
+      var msg = document.getElementById("nlm");
+      if (!D || !D.subscribeApi) { msg.innerHTML = '<span class="down">Inscription pas encore ouverte. Reviens bientôt !</span>'; return; }
+      if (!document.getElementById("nlc").checked) { msg.innerHTML = '<span class="down">Coche la case de consentement.</span>'; return; }
+      msg.innerHTML = '<span class="muted">Envoi…</span>';
+      fetch(D.subscribeApi.replace(/\/$/, "") + "/subscribe", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: document.getElementById("nle").value, consent: true, website: document.getElementById("nlw").value }) })
+        .then(function (r) { return r.json(); })
+        .then(function (j) {
+          if (j.ok) { put("nl", "done"); f.innerHTML = '<p class="up" style="font-weight:700;margin:10px 0 0">✔ ' + (j.already ? "Tu es déjà inscrit." : "C'est noté ! Première lettre demain matin (jours de semaine).") + '</p>'; }
+          else msg.innerHTML = '<span class="down">' + esc(j.error || "Erreur, réessaie.") + '</span>';
+        }).catch(function () { msg.innerHTML = '<span class="down">Service indisponible, réessaie plus tard.</span>'; });
+    };
+  }
+  function showNewsletter() {
+    var old = document.getElementById("nlbox"); if (old) old.remove();
+    var b = document.createElement("div"); b.className = "nl"; b.id = "nlbox";
+    b.innerHTML = '<span class="x" id="nlx">×</span>' + nlForm();
+    document.body.appendChild(b); bindForm();
+    document.getElementById("nlx").onclick = function () { put("nlLater", String(Date.now())); b.remove(); };
+  }
+  function maybeNewsletter() {
+    if (!accepted() || get("nl") === "done") return;
+    var later = Number(get("nlLater") || 0);
+    if (Date.now() - later < 14 * 86400e3) return;
+    showNewsletter();
+  }
+  document.getElementById("nlbtn").onclick = showNewsletter;
+
+  function pageConditions() {
+    return '<div class="legal"><h1>Conditions d\'utilisation</h1><p class="sub">Version ' + TERMS_V + '</p><div class="card">' + termsText() + '</div>' +
+      '<div class="card"><h2>Méthode</h2><p>Les estimations combinent près de 100 indicateurs techniques, pondérés par un modèle statistique ré-entraîné chaque jour et évalué sur des séances qu\'il n\'a jamais vues. Les résultats réels sont publiés dans l\'onglet <a href="#/bilan" style="text-decoration:underline">Bilan</a>, y compris lorsqu\'ils sont mauvais.</p></div>' +
+      '<div class="card"><h2>Ton accord</h2><p>' + (accepted() ? 'Tu as accepté ces conditions sur cet appareil.' : 'Tu n\'as pas encore accepté ces conditions.') + '</p><button class="btn btn-sec" id="revoke">' + (accepted() ? "Retirer mon accord" : "Accepter maintenant") + '</button></div></div>';
+  }
+  function pagePrivacy() {
+    return '<div class="legal"><h1>Confidentialité</h1><div class="card"><h2>Ce que nous collectons</h2><p>Uniquement ton adresse e-mail, si tu t\'inscris à la lettre du matin, avec la date de ton inscription et de ton consentement. Aucun compte, aucun cookie publicitaire, aucun traçage. Ton accord aux conditions et tes préférences d\'affichage sont gardés dans ton navigateur et ne nous sont pas transmis.</p></div>' +
+      '<div class="card"><h2>Pourquoi</h2><p>Seulement pour t\'envoyer la lettre quotidienne. Ton adresse n\'est ni vendue, ni louée, ni partagée.</p></div>' +
+      '<div class="card"><h2>Où et combien de temps</h2><p>Ton adresse est conservée dans un espace de stockage privé (Cloudflare) et utilisée par le service d\'envoi (Gmail), jusqu\'à ta désinscription. Elle est alors supprimée.</p></div>' +
+      '<div class="card"><h2>Tes droits</h2><p>Chaque lettre contient un lien de désinscription immédiate. Tu peux aussi demander l\'accès, la rectification ou la suppression de ton adresse en répondant à n\'importe quelle lettre. Tu peux introduire une réclamation auprès de la CNIL (cnil.fr).</p></div></div>';
+  }
+
   // ---------- routeur ----------
   function render() {
     var hash = location.hash.replace(/^#\/?/, ""), parts = hash.split("/"), r = parts[0] || "today", html;
     var anchor = null;
-    if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
+    if (r === "conditions") html = pageConditions();
+    else if (r === "confidentialite") html = pagePrivacy();
+    else if (!accepted()) html = '<div class="loading" style="padding:120px 0">Accepte les conditions pour accéder au contenu.<br><br><a class="btn btn-main" id="reopen">Lire les conditions</a></div>';
+    else if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
     else if (r === "indices") html = pageIndices(parts[1]);
     else if (r === "bilan") html = pageBilan();
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
-    document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.</p>';
+    document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.<br><a href="#/conditions" style="text-decoration:underline">Conditions</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>';
+    var ro = document.getElementById("reopen"); if (ro) ro.onclick = function () { if (!document.getElementById("terms")) showTerms(); };
+    var rv = document.getElementById("revoke"); if (rv) rv.onclick = function () { if (accepted()) { put("terms", ""); render(); showTerms(); } else showTerms(); };
     [].forEach.call(document.querySelectorAll("#nav a"), function (a) { a.classList.toggle("on", a.getAttribute("data-r") === (r === "v" ? "" : r)); });
     if (anchor && document.getElementById(anchor)) document.getElementById(anchor).scrollIntoView(); else window.scrollTo(0, 0);
   }
@@ -369,7 +463,11 @@
   res.addEventListener("click", function () { res.style.display = "none"; q.value = ""; });
   document.addEventListener("click", function (e) { if (!e.target.closest(".search")) res.style.display = "none"; });
 
-  fetch("data.json?t=" + Math.floor(Date.now() / 300000)).then(function (r) { return r.json(); }).then(function (d) { D = d; render(); })
+  fetch("data.json?t=" + Math.floor(Date.now() / 300000)).then(function (r) { return r.json(); }).then(function (d) {
+    D = d; render();
+    var hr = location.hash.replace(/^#\/?/, "");
+    if (!accepted() && !/^(conditions|confidentialite)/.test(hr)) showTerms(); else setTimeout(maybeNewsletter, 6000);
+  })
     .catch(function () { document.getElementById("app").innerHTML = '<div class="loading">Données indisponibles pour le moment. Réessaie dans quelques minutes.</div>'; });
 })();
 </script>

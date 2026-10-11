@@ -25,17 +25,47 @@ async function sendBrevo(subject, html, text) {
   if (!res.ok) throw new Error(`Brevo ${res.status}: ${await res.text()}`);
 }
 
-async function sendSmtp(subject, html, text) {
+let transport = null;
+async function smtp() {
+  if (transport) return transport;
   const nodemailer = (await import("nodemailer")).default;
   const port = Number(env("SMTP_PORT") || 465);
-  const t = nodemailer.createTransport({
-    host: env("SMTP_HOST"), port, secure: port === 465,
+  transport = nodemailer.createTransport({
+    host: env("SMTP_HOST"), port, secure: port === 465, pool: true, maxConnections: 1,
     auth: { user: env("SMTP_USER"), pass: env("SMTP_PASS") },
   });
-  await t.sendMail({
-    from: `"${env("MAIL_FROM_NAME") || "Quantum Algo"}" <${env("MAIL_FROM") || env("SMTP_USER")}>`,
-    to: env("MAIL_TO"), subject, html, text,
-  });
+  return transport;
+}
+const FROM = () => `"${env("MAIL_FROM_NAME") || "Quantum Algo"}" <${env("MAIL_FROM") || env("SMTP_USER")}>`;
+async function sendSmtp(subject, html, text, to, headers) {
+  const t = await smtp();
+  await t.sendMail({ from: FROM(), to: to || env("MAIL_TO"), subject, html, text, headers });
+}
+
+// Abonnes inscrits sur le site (service Cloudflare) : un e-mail individuel chacun,
+// avec son lien de desinscription personnel.
+export async function fetchSubscribers() {
+  const api = env("SUBSCRIBE_API"), tok = env("SUBSCRIBE_TOKEN");
+  if (!api || !tok) return { list: [], configured: false };
+  const res = await fetch(api.replace(/\/$/, "") + "/list", { headers: { Authorization: "Bearer " + tok } });
+  if (!res.ok) throw new Error("liste des abonnes : HTTP " + res.status);
+  const j = await res.json();
+  return { list: j.subscribers || [], configured: true };
+}
+export async function sendToSubscribers(list, subject, html, text, exclude) {
+  const done = [], errors = [];
+  const skip = new Set((exclude || []).map((e) => e.toLowerCase()));
+  for (const s of list) {
+    if (skip.has(s.email.toLowerCase())) continue;
+    const foot = `<br><br><a href="${s.unsub}" style="color:#9ca3af">Se désinscrire de la lettre du matin</a>`;
+    try {
+      if (env("SMTP_HOST")) await sendSmtp(subject, html.replace("{{UNSUB}}", foot), text + "\n\nSe désinscrire : " + s.unsub, s.email, { "List-Unsubscribe": `<${s.unsub}>` });
+      else throw new Error("SMTP non configure");
+      done.push(s.email);
+    } catch (e) { errors.push(`${s.email}: ${e.message}`); }
+    await new Promise((r) => setTimeout(r, 1200)); // rester sous les limites de Gmail
+  }
+  return { done, errors };
 }
 
 async function sendCallMeBot(text) {
@@ -72,8 +102,9 @@ async function sendTwilio(text) {
 export async function sendAll({ subject, html, text, whatsapp }) {
   const done = [], errors = [];
   const tryIt = async (name, fn) => { try { await fn(); done.push(name); } catch (e) { errors.push(`${name}: ${e.message}`); } };
-  if (env("BREVO_API_KEY") && env("MAIL_TO")) await tryIt("e-mail", () => sendBrevo(subject, html, text));
-  else if (env("SMTP_HOST") && env("MAIL_TO")) await tryIt("e-mail", () => sendSmtp(subject, html, text));
+  const own = html.replace("{{UNSUB}}", "");
+  if (env("BREVO_API_KEY") && env("MAIL_TO")) await tryIt("e-mail", () => sendBrevo(subject, own, text));
+  else if (env("SMTP_HOST") && env("MAIL_TO")) await tryIt("e-mail", () => sendSmtp(subject, own, text));
   if (env("CALLMEBOT_PHONE") && env("CALLMEBOT_APIKEY")) await tryIt("WhatsApp", () => sendCallMeBot(whatsapp));
   if (env("TWILIO_SID") && env("TWILIO_TOKEN") && env("WHATSAPP_TO")) await tryIt("WhatsApp Twilio", () => sendTwilio(whatsapp));
   return { done, errors };

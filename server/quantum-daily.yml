@@ -45,6 +45,8 @@ jobs:
           TWILIO_TOKEN: ${{ secrets.TWILIO_TOKEN }}
           TWILIO_FROM: ${{ secrets.TWILIO_FROM }}
           WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
+          SUBSCRIBE_API: ${{ secrets.SUBSCRIBE_API }}
+          SUBSCRIBE_TOKEN: ${{ secrets.SUBSCRIBE_TOKEN }}
         run: node daily.mjs
 
       - name: Publier le modele et le bilan (lus par l'app)

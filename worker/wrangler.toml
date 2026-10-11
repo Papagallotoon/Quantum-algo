@@ -1,0 +1,13 @@
+name = "quantum-algo-newsletter"
+main = "index.js"
+compatibility_date = "2026-01-01"
+
+# Espace de stockage prive des inscrits.
+# Remplace l'id ci-dessous par celui affiche par :  npx wrangler kv namespace create SUBS
+[[kv_namespaces]]
+binding = "SUBS"
+id = "18d22ac8153a49268f514782aeaa3373"
+
+[vars]
+# Seul ton site a le droit d'appeler /subscribe depuis un navigateur
+ALLOWED_ORIGIN = "https://papagallotoon.github.io"
