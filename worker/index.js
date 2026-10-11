@@ -64,13 +64,15 @@ export default {
     if (url.pathname === "/unsubscribe") {
       const email = String(url.searchParams.get("e") || "").trim().toLowerCase();
       const t = String(url.searchParams.get("t") || "");
-      if (!email || t !== (await hmac(env.SECRET, email))) return page("Lien invalide", "Ce lien de désinscription n'est pas valide. Réponds simplement à un e-mail de la lettre pour être retiré de la liste.");
+      if (!email || !env.SECRET || t !== (await hmac(env.SECRET, email))) return page("Lien invalide", "Ce lien de désinscription n'est pas valide. Réponds simplement à un e-mail de la lettre pour être retiré de la liste.");
       await env.SUBS.delete("sub:" + email);
       return page("Désinscription confirmée", "Tu ne recevras plus la lettre du matin à l'adresse " + email.replace(/[<>&"]/g, "") + ". Ton adresse a été supprimée.");
     }
 
     if (url.pathname === "/list") {
       if (!env.ADMIN_TOKEN || req.headers.get("authorization") !== "Bearer " + env.ADMIN_TOKEN) return json({ ok: false }, 401, env);
+      if (!env.SECRET) return json({ ok: false, error: "secret SECRET manquant : npx wrangler secret put SECRET" }, 500, env);
+      if (!env.SUBS) return json({ ok: false, error: "espace KV SUBS non relie (wrangler.toml)" }, 500, env);
       const out = [];
       let cursor;
       do {

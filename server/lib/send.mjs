@@ -49,7 +49,7 @@ export async function fetchSubscribers() {
   const api = env("SUBSCRIBE_API"), tok = env("SUBSCRIBE_TOKEN");
   if (!api || !tok) return { list: [], configured: false };
   const res = await fetch(api.replace(/\/$/, "") + "/list", { headers: { Authorization: "Bearer " + tok }, signal: AbortSignal.timeout(20000) });
-  if (!res.ok) throw new Error("liste des abonnes : HTTP " + res.status);
+  if (!res.ok) { let m = ""; try { m = (await res.json()).error || ""; } catch (e) {} throw new Error("liste des abonnes : HTTP " + res.status + (m ? " - " + m : "")); }
   const j = await res.json();
   return { list: j.subscribers || [], configured: true };
 }
