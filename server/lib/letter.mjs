@@ -101,18 +101,22 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
   if (brief?.length) parts.push(card("L'essentiel", `<ul style="margin:0;padding-left:18px;font-size:14px;line-height:1.5">${brief.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>`));
 
   if (agenda && (agenda.today?.length || agenda.ok)) {
-    const ev = agenda.today || [];
+    const MAXA = 8;
+    const allToday = agenda.today || [], allWeek = agenda.week || [];
+    const ev = allToday.slice(0, MAXA);
+    const more = allToday.length + allWeek.length - MAXA;
     const body = ev.length
       ? `<table style="width:100%;border-collapse:collapse"><tr>${th("Heure")}${th("Annonce")}${th("Impact")}${th("Prévu / précédent", true)}</tr>${ev.map((e) => `<tr>${td(badge(esc(e.time), true))}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}</div>`)}${td(e.impact === "fort" ? `<span style="color:${RED};font-weight:700">●●● fort</span>` : e.impact === "férié" ? `<span style="color:${GREY}">férié</span>` : `<span style="color:${AMBER}">●● moyen</span>`)}${td(`${esc(e.forecast || "-")} / ${esc(e.previous || "-")}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`
       : `<p style="color:${GREY};margin:0">${badge("Aujourd'hui", true)} Aucune annonce importante prévue.</p>`;
-    const wk = agenda.week || [];
+    const wk = allWeek.slice(0, Math.max(0, MAXA - ev.length));
     const tmr = wk.length ? `<div style="margin-top:14px;font-size:12px;font-weight:700;color:${GREY};letter-spacing:.5px">À VENIR CETTE SEMAINE (FORT IMPACT)</div><table style="width:100%;border-collapse:collapse;margin-top:4px">${wk.map((e) => `<tr>${td(badge(esc(e.dayLabel), false) + ` <b style="font-size:12px">${esc(e.time)}</b>`, "white-space:nowrap;width:1%")}${td(`${e.flag} ${esc(e.title)}<div style="font-size:11px;color:#9ca3af">${esc(e.country)}${e.forecast ? " · prévu " + esc(e.forecast) : ""}</div>`)}</tr>`).join("")}</table>` : "";
-    parts.push(card("Agenda économique du jour", body + tmr, "Heures de Paris. Les annonces à fort impact font souvent bouger les marchés dans les minutes qui suivent.", "today/agenda"));
+    const rest = SITE ? `<div style="margin-top:12px;text-align:center">${link("today/agenda", (more > 0 ? `Lire la suite : ${more} autre${more > 1 ? "s" : ""} annonce${more > 1 ? "s" : ""}` : "Voir l'agenda complet") + " sur le site →", "display:inline-block;font-size:13px;font-weight:700;color:#1f9d63;text-decoration:none;border:1px solid #bbf7d0;border-radius:999px;padding:7px 14px")}</div>` : "";
+    parts.push(card("Agenda économique du jour", body + tmr + rest, "Heures de Paris. Les annonces à fort impact font souvent bouger les marchés dans les minutes qui suivent.", "today/agenda"));
   }
 
   if (earnings && (earnings.today?.length || earnings.week?.length)) {
     const t = earnings.today?.length ? `<p style="margin:0 0 8px;font-size:14px;line-height:1.9">${earnings.today.map((e) => `${badge("Aujourd'hui" + (e.when ? " · " + esc(e.when) : e.date ? " · " + hFr(e.date) : ""), true)} <b>${link("v/" + encodeURIComponent(e.sym), esc(e.name))}</b>`).join("<br>")}</p>` : "";
-    const w = earnings.week?.length ? `<p style="margin:0;font-size:13px;line-height:1.9">${earnings.week.map((e) => `${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)} ${link("v/" + encodeURIComponent(e.sym), esc(e.name))}`).join("<br>")}</p>${earnings.week.some((e) => e.estimate) ? `<p style="font-size:11px;color:#9ca3af;margin:4px 0 0">* date estimée</p>` : ""}` : "";
+    const w = earnings.week?.length ? `<p style="margin:0;font-size:13px;line-height:1.9">${earnings.week.slice(0, 10).map((e) => `${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)} ${link("v/" + encodeURIComponent(e.sym), esc(e.name))}`).join("<br>")}</p>${earnings.week.length > 10 ? `<p style="margin:6px 0 0;font-size:13px">${link("today/agenda", `+ ${earnings.week.length - 10} autres résultats cette semaine sur le site →`, "color:#1f9d63;font-weight:700;text-decoration:none")}</p>` : ""}${earnings.week.some((e) => e.estimate) ? `<p style="font-size:11px;color:#9ca3af;margin:4px 0 0">* date estimée</p>` : ""}` : "";
     parts.push(card("Résultats d'entreprises (valeurs suivies)", t + w, "Vert = aujourd'hui · orange = dans les prochains jours"));
   }
 
