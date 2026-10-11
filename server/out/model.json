@@ -1,5 +1,5 @@
 {
- "version": "2026-10-10",
+ "version": "2026-10-11",
  "source": "learned",
  "features": [
   "sma20",
@@ -491,9 +491,9 @@
    }
   }
  },
- "createdAt": "2026-10-10T21:12:18.991Z",
+ "createdAt": "2026-10-11T07:25:30.341Z",
  "universe": 66,
- "summary": "Modèle ré-entraîné le 10/10 sur 66 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 11/10 sur 66 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
    "samples": 36074,
@@ -765,7 +765,7 @@
   }
  },
  "newsletter": {
-  "lastSent": "10/10/2026",
+  "lastSent": "11/10/2026",
   "channels": [
    "e-mail (SMTP)"
   ],
@@ -779,6 +779,7 @@
    "CALLMEBOT_PHONE": "absent",
    "CALLMEBOT_APIKEY": "absent",
    "event": "workflow_dispatch"
-  }
+  },
+  "subscribers": 0
  }
 }

@@ -1,6 +1,6 @@
 {
- "date": "2026-10-10",
- "dateLabel": "samedi 10 octobre 2026",
+ "date": "2026-10-11",
+ "dateLabel": "dimanche 11 octobre 2026",
  "picks": [
   {
    "sym": "JPM",
@@ -14,19 +14,19 @@
    "zoneLo": 343.30999755859375,
    "zoneHi": 345.05842794249196,
    "stop": 325.8256937196114,
-   "target": 377.73388890221105,
-   "rr": 1.9688454090386558,
-   "pTarget": 0.30225,
+   "target": 376.54134994613526,
+   "rr": 1.9006391500386859,
+   "pTarget": 0.32925,
    "holdDays": 63,
    "reviewDate": "2027-01-13T13:30:00.000Z",
    "validUntil": "2026-10-30T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.7192633307181715,
+   "expectancy": 1.903038990160973,
    "price": 332.989990234375,
    "chg": 0.4737121305388392,
    "sizePct": 19.63532553084345,
    "riskPct": 5.092861834295468,
-   "gainPct": 10.027057641320821,
+   "gainPct": 9.679692587999805,
    "perf": {
     "w1": 0.18352047132845772,
     "m1": -5.817967944976521,
@@ -92,19 +92,19 @@
    "zoneLo": 85.23999786376953,
    "zoneHi": 85.86989239833106,
    "stop": 78.94105251815418,
-   "target": 98.21471804915437,
-   "rr": 2.059824220322287,
-   "pTarget": 0.30925,
+   "target": 98.09003676641875,
+   "rr": 2.0400302269004498,
+   "pTarget": 0.32125,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.617946318419296,
+   "expectancy": 2.690383010483245,
    "price": 76.12999725341797,
    "chg": 1.0619877909434638,
    "sizePct": 13.532423792675777,
    "riskPct": 7.389659201637146,
-   "gainPct": 15.221399003459645,
+   "gainPct": 15.075128137832822,
    "perf": {
     "w1": -3.449589439872769,
     "m1": -9.152751216014376,
@@ -141,22 +141,7 @@
     "lo52": 57.36
    },
    "earningsWarning": "Résultats prévus le 22/10/2026 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Les Bourses européennes progressent ; Fincantieri tire le MIB vers le haut",
-     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNVzdSS1E2YjJUN0Jpa0s5RmxVNG5iSVBucl9Wc2JxNHZ1VS1KVWFQUjB6cFd3Rjg3bmxUc2U3VldfQXR3d0thVU5vRjZxUVhmQlF4YU9vLUJfdGhpVjFOVGNkc21PaXBmRVRkemJLeVU1VkowdWM4WFBJZlJIMEtLTFA2LVNhS1UwU2tkV2U0S2xBVHJoN3hIZUF1d1pjUkh4a3BPbDhaaVpGLTVfdUlkNl9rbUZBVDhJT19IUktNNE1KT2ZzZlktWUFBREo?oc=5",
-     "source": "Zonebourse Suisse",
-     "time": 1791561713000,
-     "tone": "positif"
-    },
-    {
-     "title": "Bruxelles fixe le 16 novembre pour décider de l'OPA de UniCredit sur Commerzbank",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOcFAySEtPTC1Cc2JZNFk0U01PT3d5SWVEbGdXc0RLbE4yLUQ5SGw1X2tNVXhLVjN6SUV4WTk0YWJvd2F3LWNZUjJUUjg0YmpJdm1wQ003TzFrelYzUGQzWHdGMGUwYzhRWjZTcHY0YmllNTVyZFZMQ20zbTFYeTI1c3otZmZIRUFHUjB1TTFkOXF2ZkUxOUZaOTZxWENnR3NCOGJXMDl6eDdpU0VhdjUyZE5YUDJ2cXlmZGfSAb8BQVVfeXFMUGNreklFZmQ0N0dwUGlGU0pCQVZLbS1Vd01iMVhsSVhYaTVPVHR5QUhvdzRsTVg2MkZNbEJLY25SSGJDcVRIQjluZXNBbFZVV09jX2tKX0tmaFNsamh1azJ4WnV4d3lIOWlDUUVsNnVQN1lvR29PMHpVSlFqQzY5UDdQSmo5M2pfM2VJanh4QXRjYzQ5NXBGMzNuV2kwMHJySTBzY0FuSG0wcTlDa2NLR19FVExXdFo5T3ZBSlBHN0E?oc=5",
-     "source": "Demócrata",
-     "time": 1791561516000,
-     "tone": "neutre"
-    }
-   ]
+   "news": []
   },
   {
    "sym": "ML.PA",
@@ -170,19 +155,19 @@
    "zoneLo": 34.06999969482422,
    "zoneHi": 34.24619920412474,
    "stop": 32.308004601818986,
-   "target": 37.21494228295639,
-   "rr": 1.7848759060776993,
-   "pTarget": 0.3225,
+   "target": 37.126315228935816,
+   "rr": 1.7345766433996084,
+   "pTarget": 0.33,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.4591511760030478,
+   "expectancy": 1.5198766744773626,
    "price": 33.40999984741211,
    "chg": 0.9975755685951215,
    "sizePct": 19.33603551455693,
    "riskPct": 5.171690956231233,
-   "gainPct": 9.230826581457062,
+   "gainPct": 8.970694339559683,
    "perf": {
     "w1": 1.1811004974009442,
     "m1": -0.32816410754578085,
@@ -220,17 +205,17 @@
    },
    "news": [
     {
-     "title": "DIRECT - Top 14 : vivez le match ASM Clermont - Union Bordeaux Bègles en intégralité avec ICI Pays d'Auvergne",
-     "link": "https://news.google.com/rss/articles/CBMikAJBVV95cUxONlFoV001MTZBa0R0MjdxaDF0bnk0TzNramJBWWtnOE5XXzhTalRJenMtYlJhR05NT25EWkRRQWFLOFNwS1ZyWlFycXktMDJZcFhxMnFHeEZMVlp3R2VsYm53eWVVc3hYelBUbUVTQlVRekF6aHQ5VWtRMDh5Y2ZlLUw4czA4TERjbHRjZUVNMU5rdFVvc2V5cG1WN3dtd0hNVGs4Y3Q3cXptRlJyNmJFR1JlSEVXdmFvRXpEdXZzSjhqZXk2WFltcWgxOF9IMVdyTUFNcFNtclZ4X29pZFBxWUNvYmdYc1ZtRF95bEE1Z1d4NUVLUWNVSkE3U3ZhSHRYc0duNGI1SFFSYlVGVy15bw?oc=5",
-     "source": "ici.fr",
-     "time": 1791656104000,
+     "title": "Rugby : l'ASM Clermont a perdu le dernier ruck, tout un symbole après sa défaite face à l'UBB",
+     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOa2w1YzI5LU1CcHBON2hHOWY0OTNlRHFtajB0bGVmS3cxUlV3YWtKT0F6eUN1VWI1VVVPNWdsV25kV3NRWW5ydHVlRlh3bkZWQ1Z2NnE4cDNMX3hSNjdMNkRISEU0Y0RXREtSWkZzSkpSczNCbm12OFdFVVJ6b2VOcnhfTmlBemplLW5kczgzR2Y0RmtZcWdmMVlWa2NxOWVXTnRyN1dfeWFaTXFoRVZ0MzgybTRhS21sNVJlQ1NJb2xpTVpyUFUxOVk2QjJFSHJXNF9BMm93RVdfRXRfUmhYcml4bTB4ZWNWdGZwNQ?oc=5",
+     "source": "La Montagne",
+     "time": 1791690900000,
      "tone": "neutre"
     },
     {
-     "title": "CAC 40, Capgemini, Airbus, Safran, Michelin, Legrand… les actions en Bourse au programme de Momentum",
-     "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxNSTJYWGV2eEdMWExIbmxnbHlfN3VGbVM2NEVVQVhvRVB0S1dRQmlLdmx0eDZPWGRQS0ZhY0x6QmRUT1Vwa0dwcU9oRjRlS1ZuWWRNbktqMTFWcTVKc1FKMVFqNDdPOEdpdG1NWGJETHFyNWNvVzZHYWRqckRKNWNmN3lPcDBoMzJFSHIzUXBzNUlGMVNvVDlfWWNHTDVKQ19rTjIzaUtRcVVGRGlnaGJoOThNWF9yR2RHY1ZZeW5MRXBZbUdlUjFWeWdORE84MHNNRy1uRGpLeHk1RWQyVWc?oc=5",
-     "source": "Capital.fr",
-     "time": 1791613800000,
+     "title": "Une première défaite au Michelin après une semaine agitée : pour l'ASM Clermont, clairement pas les réponses attendues",
+     "link": "https://news.google.com/rss/articles/CBMiiAJBVV95cUxNWG96NjFkd2I3TkZMSVpmUmRUWS1rMGRSczVlRU0xMkI1V2labEVtTThEREVJVkstZFBiZ0dXNlpPbmFUc1Zpa0poRU9BSEgyMG8zQXBYWWk5ZnBNZ041NnJ1cWdRN2RPQjNJZGdzbG02aHFGXzZ2OTlaOE5pZGNGaWo4UjBVVUo3YWUwcmotX0E5WGNYdzhWejVxVnVpOUFmNW1va2d6cl9vTFVlRlBTY3BlVXlybExKZDNGRF9peHhSVXAzUFo4eUUyVy1IMElnalJrMVZJZEFZVm8zN09IV0xheEtlYml2czZGTThBQk9WY0gwVjZwVjBiNFVhcDZDRVhpOHdrb1Y?oc=5",
+     "source": "L’Éveil de la Haute-Loire",
+     "time": 1791670200000,
      "tone": "neutre"
     }
    ]
@@ -247,19 +232,19 @@
    "zoneLo": 258.80865353997683,
    "zoneHi": 262.492542001978,
    "stop": 245.65190903282968,
-   "target": 289.35344559938756,
-   "rr": 1.7680059545896705,
-   "pTarget": 0.2975,
+   "target": 290.36107281745916,
+   "rr": 1.831827924221813,
+   "pTarget": 0.31225,
    "holdDays": 63,
    "reviewDate": "2027-01-06T13:30:00.000Z",
    "validUntil": "2026-10-13T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.4480897319909143,
+   "expectancy": 1.7347811020641284,
    "price": 261.44000244140625,
    "chg": 1.9338705718249916,
    "sizePct": 16.55931439444006,
    "riskPct": 6.038897361208137,
-   "gainPct": 10.676806493771835,
+   "gainPct": 11.062220817770486,
    "perf": {
     "w1": 2.113035069290037,
     "m1": -1.843440416592712,
@@ -298,17 +283,17 @@
    "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
    "news": [
     {
+     "title": "Messi marque deux buts dans le 4-0 de l'Inter Miami et atteint les 23 en MLS",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTGtqUXc1WU96bDNUcE1JTk5ER19OS21zaktlcG5Oa19HTG5MeldUbUJGb2dQUF9uaWRfTE0tVVJZOGFiQTNscUlLanBXMG92cXU1RVFVWTlfXzZiZTNGOHVqVm1YTG02MnJwazItb1lVUDlmb05qeXFzNEY3dnRnMEsyXzRsV0ZPZUV6VTEyVGdNZnVlMjZKUmhXZ2w1MUlrMURnRFowMVZxOUJZOE4ydEp0ZVZ5TXfSAbcBQVVfeXFMUExralF3NVlPemwzVHBNSU5OREdfTkttc2pLZXBuTmtfR0xuTHpXVG1CRm9nUFBfbmlkX0xNLVVSWThhYkEzbHFJS2pwVzBvdnF1NUVRVVk5X182YmUzRjh1alZtWExtNjJycGsyLW9ZVVA5Zm9OanlxczRGN3Z0ZzBLMl80bFdGT2VFelUxMlRnTWZ1ZTI2SlJoV2dsNTFJazFEZ0RaMDFWcTlCWThOMnRKdGVWeU13?oc=5",
+     "source": "Demócrata",
+     "time": 1791696366000,
+     "tone": "neutre"
+    },
+    {
      "title": "John Wick + À couteaux tirés : c’est quoi ce film Prime Video avec les stars de Better Call Saul et Game of Thrones ?",
      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE14T3RFSFg5UzhpUk42LV9PNDh6M2ZMRFB3NkExWHlLVDR2TTF5b3pzUVkxNDQzbVN1YVBJNWRSQnIwbzBwOWF1bXRCWS04eHNKbnRLZnNQSU9YUkJJT01NZXJoMm1nLTJRbHNXOFlZTFNoalpNaTV3S2FNMmpMZw?oc=5",
      "source": "AlloCiné",
      "time": 1791619200000,
-     "tone": "neutre"
-    },
-    {
-     "title": "The Criminals",
-     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE1mTkJyaVVCSmMwd2dGWk9UNXExODZSQVE4UExlbEwxaXlJQnBtZzdrX2pYUm1neTVxSkd4RVlrejBnRGdWUXJyMk80U1RwX0ZyaWNZLW15Z28wcGZhOXhLWThkRVZTQkk?oc=5",
-     "source": "SensCritique",
-     "time": 1791568948000,
      "tone": "neutre"
     }
    ]
@@ -325,19 +310,19 @@
    "zoneLo": 6.839000225067139,
    "zoneHi": 6.880986795755884,
    "stop": 6.4191345181796775,
-   "target": 7.634421516870986,
-   "rr": 1.8944659655594307,
-   "pTarget": 0.3145,
+   "target": 7.64223349964904,
+   "rr": 1.9130718737103163,
+   "pTarget": 0.2975,
    "holdDays": 63,
    "reviewDate": "2027-01-13T07:00:00.000Z",
    "validUntil": "2026-10-30T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.5846565026988324,
+   "expectancy": 1.5217710719053927,
    "price": 6.116000175476074,
    "chg": 0.924096257843332,
    "sizePct": 16.28854205733033,
    "riskPct": 6.139284881853317,
-   "gainPct": 11.63066626154466,
+   "gainPct": 11.744893232168542,
    "perf": {
     "w1": -3.350187909103741,
     "m1": -8.195736852604284,
@@ -374,15 +359,7 @@
     "lo52": 4.8135
    },
    "earningsWarning": "Résultats prévus le 30/10/2026 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Piazza Affari, vendredi, la contrevaleur des échanges atteint EUR 2,9 milliards",
-     "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPcHhXdHJ5dnBkUElrTGhiR1lRRm1KbGFTdFlfMDRtcE1wYlRMbWh2aDhDcjFlWHdGSXB3aTR3UndiYThROXV6bjJHQ1RDbzRKeHdJQ0NvUi1nUjYydGJVRnBIWEtGejU3R2tUVENRUjlkWUNPN0dSUnpPZGM0aFlpTHQ5U3ZVNjQ2UEc5OVh5RnZMV3V4a3dIZ3ZBbDcwOEl0NEI5ZWs1VVVHb05TaHd1ZXhQc3NOZFBIT05VRlk5c1NkNlYzOUJGM3N6UndmY0hIVWhN?oc=5",
-     "source": "Zonebourse Suisse",
-     "time": 1791562394000,
-     "tone": "neutre"
-    }
-   ]
+   "news": []
   }
  ],
  "avoid": [],
@@ -539,9 +516,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 82947.5234375,
-   "chg": 0.48603393038131326,
-   "m1": 2.109769933595307
+   "last": 82999.1875,
+   "chg": 0.10488312894896268,
+   "m1": 2.2880434081431034
   }
  ],
  "movers": {
@@ -582,60 +559,60 @@
  },
  "news": [
   {
-   "title": "BCE : le compte rendu de septembre éclaire une hausse de taux sans feuille de route",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMjhaU0RNazV4RzF5SUZkbWQ1TXRBQUxsVkFRY0lNWjUwZjF4Y0lQdlpsSk9pczdoTDl2MFk0T0wxYXVUZkREMThjUlpVV0MtQ1Y5MGtfdzZOX0RlZ0lwMnRLaFpwamp3ZHpfWVRYTlROYkZIREduMmJUSEliYkNVb3ZrSzlMTkRZTW9xQzNRZUNLcENvdWJOb0N2R1NZSWFueXd2TA?oc=5",
-   "source": "Revue économique de France",
-   "time": 1791648540000,
-   "tone": "positif"
-  },
-  {
-   "title": "La Fed peut faire une pause dans la hausse des taux d’intérêt avant que l’inflation n’atteigne 2 %",
-   "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQUXhRbVMxOU83bkJMQlJWM25fSk9iODlSTDhjQm9aQVA4a1hwVmVqZWMzUlRyWHZ1MmlneGtrQm1rR3M5cVd3Q1RUeTNNa3NKYTk1dkZmNEYwM1VJcXMwNFlmVUN0aE5jaFJpYkFlaGdtaXhnalBZTjY0dXgwUU03U3JyVnRDZ1pldEIwejhpZGk1NlJHaHhaX2VUYU5KbUxMZnE3anBJc3lQekF4OVg5WVV5bDlfblRETXB4YmQxdkZ5RUMxVUE?oc=5",
-   "source": "PortalCripto",
-   "time": 1791637837000,
-   "tone": "positif"
-  },
-  {
-   "title": "Accord Moscou-Washington sur le pétrole: quelles conséquences après la levée des sanctions américaines?",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQSF9ZZGNid2RyT0Voc0hJUVRVN08tSnlhUEZiaHNMZTgtV3YzQTVMeUE3elFnS1JnWTF4QUxxejl6YmI2dW5OTHZNS3pRT0JCOTFzcmFWWHBadnFuRGltUjBEVG5DUDZNVFVJUVlqSGtrdDItQUtDSDF0RnZuUWJpb3hFNzM0X2owa25zRHRLWFQwVEhpS25ncVBBRllDcjZmdXRYZXAwdkFSZHhXN3FtZm9kbFplVHNKOVZXQjdUMWt5b0FEVV9DdDFFTlRYX2p4U3c?oc=5",
-   "source": "Leral.net",
-   "time": 1791633480000,
+   "title": "Le prix de l'or mondial inverse la tendance en fin de semaine, la semaine prochaine confronté à un test majeur",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPcjFCWlRtSUlMTHExTUFzQnkyN01lX2VYSU5lUURKN0t0V1locWRMRmJVdU12cG1xUEktd0hzeVQwekNaRzd3UGlrbVNkZ2RPTWNld181T0NOeDhVT3NmamRtdFgxUzBLelVBYTlhNU02cHRKbDZlVmJTOUxlaEwxQVNYd0IwdFMyMHhqSzE1WUoyTE5JMUZLM25zNGVfb1E1UUI0cHlTOXRLbTRMYkN1b0QtYm01SEk?oc=5",
+   "source": "Laodong.vn",
+   "time": 1791695031000,
    "tone": "neutre"
   },
   {
-   "title": "Marchés mondiaux : le prix de l’or dépasse les 4 200 $/once, les actions américaines s’envolent dans l’attente de la décision de la Fed.",
-   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPeWdVb1JrUW9nRjg4RW44a0hralNoOXdnWFI4WWQwdDlzd3ppNk02ZldhT29EWkR5X29mdGF6cFREWDZ6WWpESDR3Rll2V1ZFd09lZFRtSk90cFJ5UXJlWXBhdE51dmc4ZmUyaGF1WjlIVkpsNEktWDB4aVZ3QjBUMG5rWjZRM203TjdCcWJHbmhhOVEyNmJQd0dfTm1vRkRwdkN2M2gwOWJpUnZfS1dUekhOYmdQYWNHZUxDNFRR?oc=5",
+   "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
+   "source": "Boursorama",
+   "time": 1791692684000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Taux de change du dollar américain le 11 octobre : Le dollar s’est légèrement affaibli dans un contexte d’anticipations de hausse des taux d’intérêt de la Fed.",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNZUtIR2tpUUdiSW1yZ21Gd1VNSWdwVEMzTzhUSjFrelhCc0E4cFljQk51ZWV5aWZCSkYwTWFIamdMenBrc3NTSVo0Z0VwZzJrYnZJTmdLUkZ2b2RGelNIc0RZeml0S3I1MGFpV1JvWVNWbjd5OEJscHJXd2lwNGVZQjR4aWJGSzlwTERWRnRnN25Lc2EyVnZXTWRaR0xCLUFIYTVLX0JZMFNjQQ?oc=5",
    "source": "Vietnam.vn",
-   "time": 1791632744000,
+   "time": 1791691321000,
    "tone": "positif"
   },
   {
-   "title": "EDENRED Cours Action EDEN, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1VckxBZWtfRDJhQmU5NG81d1FVZk1mXzVlWHVsTHZiMkE1NElIRG9rU283WTdjSk9nNTNaSEdQWFF0M3diUDJ1c3NhbHY2ZDQyVUhj?oc=5",
+   "title": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
    "source": "Boursorama",
-   "time": 1791628946000,
+   "time": 1791690787000,
    "tone": "neutre"
   },
   {
-   "title": "SEB Cours Action SK, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCeUwzX0lSYXdhcHhCMXVxNDNqaDBnQ3FhMWliV29PVUt1VUItc29HMEtlYTZRLXphUkpja2pvYUlsMzNaS0FFQ3ZmOVJTRE5n?oc=5",
+   "title": "VIRIDIEN Cours Action VIRI, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE15WlZRN0ZxanJKSXNxYmE2WlgzcGRVNGhublZBWjhxS2YwT19NSzh1aWYwYWdTWlltRkdiZ3VjRlhvMDlmRFRDTndhY0ctc3U5U2JV?oc=5",
    "source": "Boursorama",
-   "time": 1791628945000,
+   "time": 1791685644000,
    "tone": "neutre"
   },
   {
-   "title": "VALEO Cours Action FR, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1rRnJjVFhnNjZBLWgtWkN0ZHBOeW1NY2JmQmlMQVJWbHRleUg4Um9HdXFhdkZiUG84VTg0NzJvS2loWXJIbGFfYktyRFVORjFo?oc=5",
+   "title": "TF1 Cours Action TFI, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE10WnByb0Nka2lHcWUzQTdMRWNZd3pydDhyUmIyV2pzOUtrY1VuTlJHVGdBaEhzT2VEMF9seWtFbklYUGdjSmRuR1g4RHFyLWUxQWc?oc=5",
    "source": "Boursorama",
-   "time": 1791626740000,
+   "time": 1791685575000,
    "tone": "neutre"
   },
   {
-   "title": "Les experts prévoient que le prix de l'or pourrait chuter à 4 000 dollars l'once.",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQMk5nNHdSSnp3dWVyUlo5QXl2aG5Dd2h2eUlOaXV4cG5fdERpTm1hQ2p5Zkk5YVdZSVRlMmhkemFjdFNTNjF5bjZtcEdncWxvc0tPY1h1NGlBUmhseWRCWTRWRW14RXp2RUlwbmFnNXkwRWtLSHBud1JGZlB2LVVTTzBFOS0yclZDOHc?oc=5",
+   "title": "Taux de change du dollar américain aujourd'hui, 11 octobre : le taux de change bancaire chute fortement après une semaine.",
+   "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNRXNFMVlVS0pxOHlFaHRtaGpfek0tVHhZb01pNHoxck8tUm1feERic1ZxYWh2MjNneURIa0tSc3pycTZaSGFoQjhnalNFNFVMcHJZS3RqNVY4MFJmcXFyR0JmSzdFaDd4OFB2WWdMdVVVZlM3UGlXeWcxOWtIRjR5S1hTNE1OUldfMjZwZVFrVQ?oc=5",
    "source": "Vietnam.vn",
-   "time": 1791625601000,
+   "time": 1791676310000,
    "tone": "négatif"
+  },
+  {
+   "title": "Taux de change du dollar américain aujourd'hui (11 octobre) : Le dollar américain enregistre sa quatrième semaine consécutive de hausse.",
+   "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNajRQUXJpWVZfWjU2b2V2eHdtaUNpQ3RwRDd6VEVfaW9WSlFJWmJFSVRJdkJIRzVqU2EzTkcwSng5aVlzLTRDODRUYWFlQ2ZCbXBtV05LMkVYbmE1Q2FSd3B5NVY5ZjhOTC1hNWs1WVliZjZIRkRIQmxNZ0xMdmNLYnBCXzMyQ2hsUWhydnhyZkxSc3VpVENtV0MzZWItcmxI?oc=5",
+   "source": "Vietnam.vn",
+   "time": 1791675714000,
+   "tone": "positif"
   }
  ]
 }
