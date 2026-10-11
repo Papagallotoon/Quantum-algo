@@ -408,7 +408,7 @@
    }
   }
  },
- "createdAt": "2026-10-11T19:13:10.890Z",
+ "createdAt": "2026-10-11T19:20:20.846Z",
  "universe": 261,
  "summary": "Modèle ré-entraîné le 11/10 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
@@ -674,7 +674,7 @@
   "subscribers": 2,
   "subs": {
    "configured": true,
-   "at": "2026-10-11T19:13:47.131Z",
+   "at": "2026-10-11T19:21:05.994Z",
    "count": 2,
    "sameAsOwner": 0,
    "sent": 2,
