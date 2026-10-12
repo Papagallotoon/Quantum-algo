@@ -1,46 +1,44 @@
-*Quantum Algo – dimanche 11 octobre 2026*
+*Quantum Algo – lundi 12 octobre 2026*
 
-• Climat de marché calme (VIX 14,8, -3,7 % la veille).
+• Climat de marché normal (VIX 15,4, +3,8 % la veille).
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Les indices penchent légèrement à la hausse à 1 mois (5 sur 7).
-• 5 opportunité(s) retenue(s), surtout sur 1 mois / 3 mois.
+• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *À venir (fort impact)*
-lun. 12/10 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
-lun. 12/10 13:00 🇺🇸 Jour férié (marché fermé ou réduit)
-lun. 12/10 14:00 🇨🇦 Jour férié (marché fermé ou réduit)
 mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)
 mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un an)
 mer. 14/10 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois)
+mer. 14/10 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un an)
+jeu. 15/10 02:30 🇦🇺 Employment Change
+jeu. 15/10 02:30 🇦🇺 Taux de chômage
 
 *Opportunités*
-• Caterpillar – Attendre la confirmation (1 mois) : 58 % de chances de hausse, variation attendue +2,0 %
-  entrée 876,95-884,84, stop 819,09, objectif 963,74, revoir le 16/11
-  ⚠ résultats pendant la position
-• SCOR – Attendre la confirmation (1 mois) : 58 % de chances de hausse, variation attendue +1,1 %
-  entrée 33,48-33,66, stop 32,20, objectif 35,41, revoir le 16/11
-  ⚠ résultats pendant la position
 • Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
-  entrée 134,72-135,64, stop 125,50, objectif 153,33, revoir le 13/01
+  entrée 134,72-135,64, stop 125,50, objectif 152,43, revoir le 13/01
   ⚠ résultats pendant la position
 • JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,6 %
-  entrée 343,31-345,06, stop 325,83, objectif 373,95, revoir le 13/01
+  entrée 343,31-345,06, stop 325,83, objectif 375,05, revoir le 13/01
   ⚠ résultats pendant la position
-• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
-  entrée 85,24-85,87, stop 78,94, objectif 97,23, revoir le 13/01
+• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
+  entrée 29,22-29,42, stop 27,20, objectif 33,05, revoir le 14/01
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
+  entrée 3524,50-3551,30, stop 3256,52, objectif 4112,42, revoir le 13/01
+• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
+  entrée 27,69-27,91, stop 25,46, objectif 31,28, revoir le 14/01
   ⚠ résultats pendant la position
 
 *À lire*
-• Palantir : le géant de l’IA qui assume son soutien à Israël s’envole en Bourse (IsraJ)
-• Bourse : BNP Paribas, Crédit agricole et SG plombés par l’envol des taux, opportunité d’investissement ou risque réel (Capital.fr)
-• Les traders pétroliers vont tester l’annonce de cessez-le-feu de Trump entre la Russie et l’Ukraine, mais le Bitcoin a réagi en premier (BeInCrypto)
+• L'Europe ouvre dans le vert grâce au récul du pétrole (Zonebourse)
+• L'Europe progresse avec la légère baisse du pétrole (ABC Bourse)
+• Bourse Zurich: ouverture en hausse (Zonebourse Suisse)
 
-*🎓 Question du jour* : Que représente un ETF ?
-A. Une action d'une seule entreprise
-B. Un fonds coté qui réplique un indice
-C. Un prêt à un État
-D. Un produit à effet de levier obligatoire
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q32
+*🎓 Question du jour* : Le jour du détachement du dividende, le cours…
+A. monte du montant du dividende
+B. baisse mécaniquement du montant du dividende
+C. ne bouge pas
+D. est suspendu
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q33
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
