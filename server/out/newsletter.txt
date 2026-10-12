@@ -1,8 +1,8 @@
 *Quantum Algo – lundi 12 octobre 2026*
 
-• Climat de marché normal (VIX 15,4, +3,8 % la veille).
+• Climat de marché normal (VIX 15,5, +4,2 % la veille).
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• Les indices penchent légèrement à la hausse à 1 mois (4 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *À venir (fort impact)*
@@ -15,23 +15,23 @@ jeu. 15/10 02:30 🇦🇺 Taux de chômage
 
 *Opportunités*
 • Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
-  entrée 134,72-135,64, stop 125,50, objectif 152,43, revoir le 13/01
+  entrée 134,72-135,64, stop 125,50, objectif 151,98, revoir le 13/01
   ⚠ résultats pendant la position
 • JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,6 %
-  entrée 343,31-345,06, stop 325,83, objectif 375,05, revoir le 13/01
+  entrée 343,31-345,06, stop 325,83, objectif 374,74, revoir le 13/01
   ⚠ résultats pendant la position
 • Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 29,22-29,42, stop 27,20, objectif 33,05, revoir le 14/01
+  entrée 29,22-29,43, stop 27,16, objectif 32,94, revoir le 14/01
 • Sumitomo Mitsui – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
-  entrée 3524,50-3551,30, stop 3256,52, objectif 4112,42, revoir le 13/01
-• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 27,69-27,91, stop 25,46, objectif 31,28, revoir le 14/01
+  entrée 3524,50-3551,30, stop 3256,52, objectif 4141,57, revoir le 13/01
+• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
+  entrée 85,24-85,85, stop 79,14, objectif 97,15, revoir le 14/01
   ⚠ résultats pendant la position
 
 *À lire*
-• L'Europe ouvre dans le vert grâce au récul du pétrole (Zonebourse)
-• L'Europe progresse avec la légère baisse du pétrole (ABC Bourse)
-• Bourse Zurich: ouverture en hausse (Zonebourse Suisse)
+• ROI — Le pari de Wall Street sur l’IA est désormais impossible à atteindre : McGeever (Zonebourse Suisse)
+• ROI-Le pari de Wall Street sur l'IA est désormais trop important pour échouer : McGeever (Boursorama)
+• Diesel russe, tensions au Moyen-Orient et résultats trimestriels... les dossiers sous surveillance en ce début de semaine (Investir Les Echos)
 
 *🎓 Question du jour* : Le jour du détachement du dividende, le cours…
 A. monte du montant du dividende
