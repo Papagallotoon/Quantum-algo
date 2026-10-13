@@ -1,9 +1,12 @@
-*Quantum Algo – lundi 12 octobre 2026*
+*Quantum Algo – mardi 13 octobre 2026*
 
-• Climat de marché normal (VIX 15,5, +4,2 % la veille).
+• Climat de marché normal (VIX 15,3, +0,8 % la veille).
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Les indices penchent légèrement à la hausse à 1 mois (4 sur 7).
+• Résultats aujourd'hui : JPMorgan, Johnson & Johnson, Citigroup, Goldman Sachs, UnitedHealth.
+• Les indices penchent légèrement à la hausse à 1 mois (7 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
+
+*Résultats aujourd'hui* : JPMorgan, Johnson & Johnson, Citigroup, Goldman Sachs, UnitedHealth
 
 *À venir (fort impact)*
 mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)
@@ -14,31 +17,35 @@ jeu. 15/10 02:30 🇦🇺 Employment Change
 jeu. 15/10 02:30 🇦🇺 Taux de chômage
 
 *Opportunités*
-• Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
-  entrée 134,72-135,64, stop 125,50, objectif 151,98, revoir le 13/01
+• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,0 %
+  entrée 342,00-343,70, stop 325,05, objectif 375,32, revoir le 14/01
+• AXA – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,7 %
+  entrée 44,31-44,54, stop 42,02, objectif 48,53, revoir le 15/01
+• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +13,4 %
+  entrée 7363,85-7669,26, stop 6273,10, objectif 10903,35, revoir le 08/01
   ⚠ résultats pendant la position
-• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,6 %
-  entrée 343,31-345,06, stop 325,83, objectif 374,74, revoir le 13/01
+• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
+  entrée 29,22-29,43, stop 27,12, objectif 33,11, revoir le 15/01
+• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
+  entrée 85,24-85,86, stop 79,05, objectif 98,48, revoir le 15/01
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 29,22-29,43, stop 27,16, objectif 32,94, revoir le 14/01
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
-  entrée 3524,50-3551,30, stop 3256,52, objectif 4141,57, revoir le 13/01
-• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
-  entrée 85,24-85,85, stop 79,14, objectif 97,15, revoir le 14/01
-  ⚠ résultats pendant la position
+
+*À éviter*
+• Toyota : 44 % de chances de hausse seulement (1 mois)
+• A2A : 46 % de chances de hausse seulement (1 mois)
+• Nexi : 46 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• ROI — Le pari de Wall Street sur l’IA est désormais impossible à atteindre : McGeever (Zonebourse Suisse)
-• ROI-Le pari de Wall Street sur l'IA est désormais trop important pour échouer : McGeever (Boursorama)
-• Diesel russe, tensions au Moyen-Orient et résultats trimestriels... les dossiers sous surveillance en ce début de semaine (Investir Les Echos)
+• Wall Street hésite après les comptes des grandes banques (Boursier.com)
+• Les Bourses mondiales se tournent vers la saison des résultats (Zonebourse Suisse)
+• Financial Street : Secteurs à fort potentiel face à la hausse des taux d'intérêt (Vietnam.vn)
 
-*🎓 Question du jour* : Le jour du détachement du dividende, le cours…
-A. monte du montant du dividende
-B. baisse mécaniquement du montant du dividende
-C. ne bouge pas
-D. est suspendu
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q33
+*🎓 Question du jour* : Quel est l'avantage principal du PEA après 5 ans ?
+A. Aucun impôt ni prélèvement
+B. Les gains échappent à l'impôt sur le revenu (prélèvements sociaux seulement)
+C. On peut y acheter des actions américaines
+D. Il n'a pas de plafond
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q34
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 

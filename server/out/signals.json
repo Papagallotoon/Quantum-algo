@@ -1,162 +1,223 @@
 {
- "date": "2026-10-12",
- "dateLabel": "lundi 12 octobre 2026",
+ "date": "2026-10-13",
+ "dateLabel": "mardi 13 octobre 2026",
  "picks": [
-  {
-   "sym": "C",
-   "name": "Citigroup",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5661418593778031,
-   "expPct": 3.6556286693371076,
-   "start": "Acheter seulement apres une cloture au-dessus de 134,72",
-   "zoneLo": 134.72000122070312,
-   "zoneHi": 135.64233004231343,
-   "stop": 125.49671300459997,
-   "target": 151.98338781280776,
-   "rr": 1.8717171346726522,
-   "pTarget": 0.3365,
-   "holdDays": 63,
-   "reviewDate": "2027-01-13T13:30:00.000Z",
-   "validUntil": "2026-10-30T13:30:00.000Z",
-   "cur": "USD",
-   "expectancy": 2.1553648287737577,
-   "price": 129.63999938964844,
-   "chg": 1.2179868334570187,
-   "sizePct": 14.606504542001872,
-   "riskPct": 6.846264943980543,
-   "gainPct": 12.814271404157084,
-   "perf": {
-    "w1": 0.8871590580921795,
-    "m1": -6.397112354044454,
-    "m3": -7.867249517462915,
-    "ytd": 11.09777759645243
-   },
-   "support": 123.56999969482422,
-   "resistance": 139.72000122070312,
-   "sma50": 133.6295994567871,
-   "sma200": 126.23864986419677,
-   "rsi": 44.670820689986805,
-   "vol": 20.6252724186482,
-   "rs63": -11.808524316350821,
-   "pros": [
-    "Negative Volume Index",
-    "Croisement SMA 50 / 200",
-    "SMA 200"
-   ],
-   "cons": [
-    "Qstick (14)",
-    "Balance of Power (14)"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,66 %."
-   ],
-   "fund": {
-    "pe": 14,
-    "fpe": 10.0107565,
-    "yield": 2.07,
-    "rating": "1.7 - Buy",
-    "target": null,
-    "hi52": 147.96,
-    "lo52": 95
-   },
-   "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Citigroup cherche à accélérer ses efforts pour répondre aux injonctions réglementaires",
-     "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPZ1AwVHFsMmZ5V3lqdXdyRUxhVWZnZzRzV05SUEhEcWxXdW5ZbVBvbEx3MVBhZkFlTEF5UW9JQWp6WEllN1FQNExOUXI3QUVuYXYzWkZBX0p1ZUs4WkgwUkl1OEtlUks4aXZwNzBOeGhxTjFUM3UtT2VlVElSb2h1TkFsUDBLOEtreFdqNlNWSV94TTlKc1FwR3hoTnVyYl9JTzdPdWdiSTVnRW1TQ0NoR3BOVWRtbWZxQVBoU1JZNm5NNUxURmRqa0RtQlhjVWlDcTdEd3ZlR2pSeUgwUjhF?oc=5",
-     "source": "Zonebourse Suisse",
-     "time": 1791803647000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Citi cherche à résoudre rapidement ses problèmes réglementaires aux États-Unis",
-     "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxOZWFvZnJhREJxM3ZLcC11NDQ0dks0VXZvMVdxVmZENFNWZUNDTklYSVVKaGJtV2haWG9kbnBWbG9sMDFvV0p0cjJSa01WODFWeFF5azc1akNGQTYwZzliemZXUXhUX3F4bjhRdl9aT0MtZDE1YWNPUHpfbVk1aDNiUVl4UDZwZDZPUG52MGoybjc3RVZfTVo4cEszSHlicGs3bWJQdjdoVkFMVW1IMy1QaTdEVWduQ2R3WDAzV0o0dUZJRnBkVEc1NUY0NU10dDBhMnZNRQ?oc=5",
-     "source": "Zonebourse Suisse",
-     "time": 1791799369000,
-     "tone": "neutre"
-    }
-   ]
-  },
   {
    "sym": "JPM",
    "name": "JPMorgan",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5660374647291458,
-   "expPct": 2.554648294366779,
-   "start": "Acheter seulement apres une cloture au-dessus de 343,31",
-   "zoneLo": 343.30999755859375,
-   "zoneHi": 345.05842794249196,
-   "stop": 325.8256937196114,
-   "target": 374.7363202553042,
-   "rr": 1.797402000452744,
-   "pTarget": 0.3455,
+   "pUp": 0.5749655335052779,
+   "expPct": 2.954258482791561,
+   "start": "Acheter seulement apres une cloture au-dessus de 342,00",
+   "zoneLo": 342,
+   "zoneHi": 343.6953283444094,
+   "stop": 325.0467165559059,
+   "target": 375.32256896772145,
+   "rr": 1.965552518342977,
+   "pTarget": 0.30275,
    "holdDays": 63,
-   "reviewDate": "2027-01-13T13:30:00.000Z",
-   "validUntil": "2026-10-30T13:30:00.000Z",
+   "reviewDate": "2027-01-14T13:30:00.000Z",
+   "validUntil": "2026-11-02T13:30:00.000Z",
    "cur": "USD",
-   "expectancy": 1.6783516525344804,
-   "price": 332.989990234375,
-   "chg": 0.4737121305388392,
-   "sizePct": 19.63532553084345,
-   "riskPct": 5.092861834295468,
-   "gainPct": 9.153920048992108,
+   "expectancy": 1.6222757433748887,
+   "price": 334.29998779296875,
+   "chg": 0.39340448572393605,
+   "sizePct": 20.17308335154039,
+   "riskPct": 4.957100422249736,
+   "gainPct": 9.743441218632004,
    "perf": {
-    "w1": 0.18352047132845772,
-    "m1": -5.817967944976521,
-    "m3": -0.46034990898914385,
-    "ytd": 3.342433422155877
+    "w1": 0.5776469348188318,
+    "m1": -6.15614140219114,
+    "m3": -2.505184312315434,
+    "ytd": 3.7489871908949146
    },
    "support": 325.07000732421875,
    "resistance": 355.6000061035156,
-   "sma50": 350.1441998291016,
-   "sma200": 322.1362008666992,
-   "rsi": 38.268979445563716,
-   "vol": 16.874647564171283,
-   "rs63": -4.401624707877049,
+   "sma50": 349.7943994140625,
+   "sma200": 322.17805084228513,
+   "rsi": 40.63815273202048,
+   "vol": 16.614973211676343,
+   "rs63": -6.00020983843732,
    "pros": [
-    "Negative Volume Index",
     "Croisement SMA 50 / 200",
-    "SMA 200"
+    "SMA 200",
+    "Negative Volume Index"
    ],
    "cons": [
-    "Qstick (14)",
-    "Balance of Power (14)"
+    "Momentum 6 mois (%)",
+    "VWAP 20 j"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +2,55 %."
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +2,95 %."
    ],
    "fund": {
-    "pe": 14.266923,
-    "fpe": 13.254667,
-    "yield": 1.98,
+    "pe": 14.32305,
+    "fpe": 13.306811,
+    "yield": 1.97,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 366.5,
     "lo52": 279.1
    },
-   "earningsWarning": "Résultats prévus le 13/10/2026 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "iPhone 18 Pro : JPMorgan doute d'une baisse de la demande et relève son objectif de cours à 360 dollars",
-     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNbm5GalZ4THJTblJ4NzYwRUhCYU9lb1RrWUZlUGRyNU96ZGpsZWtHZllZM2hna1RHWTdJMVRSNlNfWF9rREdLcjlBUDNHWlFNMjdEdWloSXVZNVpxc05GQnp4M0FsTHp4V1B2dVRYTmQwWFR6MkFKaHBqNW1hcjNBVFNLc19Eam93Y1Zia2VJQ0ZJbzQyUmxCZnVCd3VxemZJUzhLOU9DTHZSMDZvM3VuWUo2RzhkYjQ0Q1BOd0RKdHY?oc=5",
-     "source": "iPhoneAddict.fr",
-     "time": 1791807016000,
+     "title": "Les bénéfices de JPMorgan au troisième trimestre 2026 ne répondent pas aux estimations des analystes.",
+     "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1WNFBnYUtBVG9VN3FCck9VVk03QXpXbnNDUF9nSkhkZDhFNllWc1Z0RjNVZnJpV2w2NnY0MUNUaFkxYkJvN1B6OVg4QUtRcm1XbzhTOXFJUEx3bGhsTngtTVRXZHNjc1hwWGRFOWxEVC1Ud0pucXlPUWlkSFY?oc=5",
+     "source": "Quartz en Français",
+     "time": 1791894922000,
      "tone": "neutre"
     },
     {
-     "title": "Pari perdu pour Trump : le pétrole reste orienté à la hausse",
-     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNYUE4RzdWal9EWDRVY0c2THl3MUFRR1BURmx5S1h6eDI2Y1NlTUtIV1YzRzFWLWhqOEFWei1rNGc4ZXBvZnl3djl6UXNTOXAySXdkVFVoZ3JNYmhoTzRFUFRhUjZDRnN4N2E2NDN3RjJfNWlueTNnakRvSVE3WHBfX01NQnhhcDhrWmZ6MGVQZDJQTmduSGdSdzZiN1diV04xNmhWRlB1MkdMeURLTmZOVUZTeDgwd21qem0w?oc=5",
-     "source": "Zonebourse",
-     "time": 1791806851000,
-     "tone": "positif"
+     "title": "Les résultats du troisième trimestre 2026 de JPMorgan déçoivent ; Goldman Sachs fait un grand succès.",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPLTM5X1BIWm96aElzNWpKLVdySVJ4RFNBLUoxSmNUQlBFcUd6ZlJ4WXNkUWFVd2lDV0VBdjNPSG5ISUlYVDdWM0FuOEoyQmpJZGhRSzJIc3RHQk84TEg0RThCZWdoSXNXTUtrTnVYeVNiSnV2QlUyNW1MTzlCM2xJLUZZazl1bHpf?oc=5",
+     "source": "Quartz en Français",
+     "time": 1791894322000,
+     "tone": "neutre"
     }
    ]
+  },
+  {
+   "sym": "CS.PA",
+   "name": "AXA",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.5736543981846196,
+   "expPct": 2.6959339639891278,
+   "start": "Acheter seulement apres une cloture au-dessus de 44,31",
+   "zoneLo": 44.310001373291016,
+   "zoneHi": 44.539090813970624,
+   "stop": 42.01910696649496,
+   "target": 48.52872635364131,
+   "rr": 1.841518739508565,
+   "pTarget": 0.30825,
+   "holdDays": 63,
+   "reviewDate": "2027-01-15T07:00:00.000Z",
+   "validUntil": "2026-11-03T07:00:00.000Z",
+   "cur": "EUR",
+   "expectancy": 1.506693829318765,
+   "price": 42.09000015258789,
+   "chg": 1.3728316197974433,
+   "sizePct": 19.341791241815038,
+   "riskPct": 5.170151965233184,
+   "gainPct": 9.520931730083943,
+   "perf": {
+    "w1": -0.14235200739951548,
+    "m1": -2.5468824012438107,
+    "m3": -4.210283413610694,
+    "ytd": 2.7587917318670163
+   },
+   "support": 41.369998931884766,
+   "resistance": 45.20000076293945,
+   "sma50": 43.70099983215332,
+   "sma200": 41.44434984207153,
+   "rsi": 42.19197350852214,
+   "vol": 20.518494629921367,
+   "rs63": 2.403904932362233,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "SMA 200",
+    "Negative Volume Index"
+   ],
+   "cons": [
+    "Qstick (14)",
+    "Force relative 3 mois vs indice (%)"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +2,70 %."
+   ],
+   "fund": {
+    "pe": 11.345014,
+    "fpe": 9.39939,
+    "yield": 5.59,
+    "rating": "1.7 - Buy",
+    "target": null,
+    "hi52": 45.66,
+    "lo52": 36.55
+   },
+   "news": [
+    {
+     "title": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris",
+     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
+     "source": "Boursorama",
+     "time": 1791888643000,
+     "tone": "neutre"
+    },
+    {
+     "title": "MSH crée une nouvelle entité dédiée aux captives au Luxembourg",
+     "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQWUlZMGEzRFo1XzFLTFJKMzczaEN0cTFuWXhoMlZBYVdjcTdid0tmTmhlOGFBNHZQRTVMT3lUX1lDZHFrRzAteTFhWWhablFTZG9IaVM4OWNUV3JtY2d3M013MEJFR2pkY3JVR2pRMm9HZXIwd1dDR1RkVWdtQi1DRW9aWXQ1SVFpUHpFZFRfSzFMRkt4dFlWcWd6aXFIQlVJbmZtQ2JPWkZVc294dVFQa1p2MGRhRFNFMjdNVEpWRQ?oc=5",
+     "source": "Zonebourse Suisse",
+     "time": 1791886857000,
+     "tone": "neutre"
+    }
+   ]
+  },
+  {
+   "sym": "6981.T",
+   "name": "Murata",
+   "h": "3M",
+   "action": "ENTRER",
+   "actionLabel": "Entrer",
+   "pUp": 0.5734529128880604,
+   "expPct": 13.43519144076366,
+   "start": "Des la prochaine seance",
+   "zoneLo": 7363.849483489709,
+   "zoneHi": 7669.260206604116,
+   "stop": 6273.096900938254,
+   "target": 10903.354283859993,
+   "rr": 2.5375096798539345,
+   "pTarget": 0.32825,
+   "holdDays": 63,
+   "reviewDate": "2027-01-08T00:00:00.000Z",
+   "validUntil": "2026-10-15T00:00:00.000Z",
+   "cur": "JPY",
+   "expectancy": 7.50183110970375,
+   "price": 7582,
+   "chg": -4.868255959849432,
+   "sizePct": 5.792636601926427,
+   "riskPct": 17.263295951750802,
+   "gainPct": 43.8057805837509,
+   "perf": {
+    "w1": -13.299028016009151,
+    "m1": 7.959561440979646,
+    "m3": -16.0075329566855,
+    "ytd": 133.57979051139864
+   },
+   "support": 6806,
+   "resistance": 8980,
+   "sma50": 7562.64,
+   "sma200": 6182.7,
+   "rsi": 44.57774847126069,
+   "vol": 59.43382086732476,
+   "rs63": -17.441969105248123,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "SMA 200",
+    "Negative Volume Index"
+   ],
+   "cons": [
+    "Momentum 6 mois (%)",
+    "Awesome Oscillator"
+   ],
+   "why": [
+    "Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +13,44 %."
+   ],
+   "fund": {
+    "pe": 59.396786,
+    "fpe": 31.955156,
+    "yield": 0.88,
+    "rating": "1.4 - Strong Buy",
+    "target": null,
+    "hi52": 12895,
+    "lo52": 2710.5
+   },
+   "earningsWarning": "Résultats prévus le 30/10/2026 : risque de forte variation pendant la position.",
+   "news": []
   },
   {
    "sym": "MB.MI",
@@ -164,131 +225,69 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5655612729044301,
-   "expPct": 3.3731403610868904,
+   "pUp": 0.5723743039755771,
+   "expPct": 3.6086953742772154,
    "start": "Acheter seulement apres une cloture au-dessus de 29,22",
    "zoneLo": 29.219999313354492,
-   "zoneHi": 29.42571838931367,
-   "stop": 27.16280855376271,
-   "target": 32.94103520108864,
-   "rr": 1.8087947704336986,
-   "pTarget": 0.31825,
+   "zoneHi": 29.429789788457434,
+   "stop": 27.12209456232507,
+   "target": 33.1084469597776,
+   "rr": 1.8534910340972754,
+   "pTarget": 0.30875,
    "holdDays": 63,
-   "reviewDate": "2027-01-14T07:00:00.000Z",
-   "validUntil": "2026-11-02T07:00:00.000Z",
+   "reviewDate": "2027-01-15T07:00:00.000Z",
+   "validUntil": "2026-11-03T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.8870126044910054,
-   "price": 25.559999465942383,
-   "chg": 1.2678276455073245,
-   "sizePct": 14.20383558360564,
-   "riskPct": 7.040351840978929,
-   "gainPct": 12.73455159197595,
+   "expectancy": 2.0687568974675785,
+   "price": 25.56999969482422,
+   "chg": 1.3074482040355218,
+   "sizePct": 13.928182058321056,
+   "riskPct": 7.179687886134244,
+   "gainPct": 13.307487124566642,
    "perf": {
-    "w1": -1.6923097463754533,
-    "m1": -11.557094106140852,
-    "m3": -6.201836822229789,
-    "ytd": 43.7166133552799
+    "w1": -1.653847327599156,
+    "m1": -11.522491237580867,
+    "m3": -6.165138734590025,
+    "ytd": 43.772841800417005
    },
    "support": 24.3799991607666,
    "resistance": 29.219999313354492,
-   "sma50": 28.011799888610838,
-   "sma200": 22.548274955749513,
-   "rsi": 33.66166223740092,
-   "vol": 29.37824240352702,
-   "rs63": -1.7352172194746385,
+   "sma50": 28.011999893188477,
+   "sma200": 22.54832495689392,
+   "rsi": 33.77717831517397,
+   "vol": 29.396631176851667,
+   "rs63": -1.8183949689683065,
    "pros": [
-    "Negative Volume Index",
     "Croisement SMA 50 / 200",
-    "SMA 200"
+    "SMA 200",
+    "Negative Volume Index"
    ],
    "cons": [
     "Chaikin Money Flow",
-    "Qstick (14)"
+    "Momentum 6 mois (%)"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,37 %."
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,61 %."
    ],
    "fund": {
-    "pe": 16.927153,
-    "fpe": 13.69364,
+    "pe": 17.14094,
+    "fpe": 13.739752,
     "yield": 4.99,
-    "rating": null,
+    "rating": "3.3 - Hold",
     "target": null,
     "hi52": 29.22,
     "lo52": 14.98
    },
    "news": [
     {
-     "title": "Mediobanca relève son objectif de cours sur Tryg à 190 couronnes danoises (contre 188), réitère sa recommandation de surperformance – Bloomberg News (BN)",
-     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxOcVplNE1MMWpteGtwdXkxaDNEaFVzQ1FKVTZOUGJLemxXd0lfSVNmYVAzei01WWJfZW5hdzBmeVo4TjNzdmVESXpvQWwybTdSWm1pRFhJbnk0RFVxdXctV1FlVS04Y21KMmdtMVV6dXlIMkNrWFp1TWFBVThxS0hPMVVFM0RlWkI4VVpKSFhWclFHbXBLcXJhSExQNVNWZ1Naa0VtS01FODYzWDZoLTdsTmdZNmpOYVM5TEd6SXR0UDdvREdFSGtXZXBVcnBDSWVxSDh4MklqR19qM2hsNnpwY1FLOTNuUFlQLThHaTdR?oc=5",
+     "title": "MPS conteste la prime et les conditions d’Intesa et défend son propre plan",
+     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxNV1lkTWlsZ09kNEZGTU5rNWE2Nk9MV043cVZrN0hiTk1xdUs1RDcxTnphWl9mNVZ1S0tQTXZTdlJRVXVBVEtMaS1ld2xLT3VIZzZBay1ndElZd1ZIX0lSQWtDRGJYVTRBREpKR3hzYUViS2ZkOEVNbFpLR2gycVNkQWNkMTl4d3JVcE12aXhnWHVhYkhLdzJNd0xXQXFid05qQkg2UThxeTl0UG0wcUVsbVBVb0xXZFVkNFZMZ0pQS0QwQkNjZmhfaXo2UXYxWk8t?oc=5",
      "source": "Zonebourse Suisse",
-     "time": 1791783432000,
-     "tone": "positif"
+     "time": 1791868476000,
+     "tone": "neutre"
     }
    ]
-  },
-  {
-   "sym": "8316.T",
-   "name": "Sumitomo Mitsui",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5654722174295147,
-   "expPct": 4.453026862561549,
-   "start": "Acheter seulement apres une cloture au-dessus de 3524,50",
-   "zoneLo": 3524.5,
-   "zoneHi": 3551.2983251774317,
-   "stop": 3256.5167482256843,
-   "target": 4141.56579463715,
-   "rr": 2.3026282073657995,
-   "pTarget": 0.29425,
-   "holdDays": 63,
-   "reviewDate": "2027-01-13T00:00:00.000Z",
-   "validUntil": "2026-10-30T00:00:00.000Z",
-   "cur": "JPY",
-   "expectancy": 2.1138802708223303,
-   "price": 3256,
-   "chg": -1.2435547467394614,
-   "sizePct": 13.151941312243597,
-   "riskPct": 7.6034402546266335,
-   "gainPct": 17.507896003323882,
-   "perf": {
-    "w1": -1.9572417946401632,
-    "m1": -6.65137614678899,
-    "m3": -4.403992953611269,
-    "ytd": 29.180718111485817
-   },
-   "support": 3245,
-   "resistance": 3524.5,
-   "sma50": 3404.38,
-   "sma200": 3019.04,
-   "rsi": 40.9060517363362,
-   "vol": 29.438023474851953,
-   "rs63": -5.537886005498938,
-   "pros": [
-    "Negative Volume Index",
-    "Croisement SMA 50 / 200",
-    "SMA 200"
-   ],
-   "cons": [
-    "Chaikin Money Flow",
-    "Qstick (14)"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +4,45 %."
-   ],
-   "fund": {
-    "pe": 14.599587,
-    "fpe": 10.245115,
-    "yield": 2.76,
-    "rating": "1.9 - Buy",
-    "target": null,
-    "hi52": 3630,
-    "lo52": 1934
-   },
-   "news": []
   },
   {
    "sym": "UCG.MI",
@@ -296,204 +295,378 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5653826697179144,
-   "expPct": 3.709941949397111,
+   "pUp": 0.5716830488954442,
+   "expPct": 3.9332845356509383,
    "start": "Acheter seulement apres une cloture au-dessus de 85,24",
    "zoneLo": 85.23999786376953,
-   "zoneHi": 85.84954282141693,
-   "stop": 79.14454828729552,
-   "target": 97.15138870725073,
-   "rr": 1.9541447589779743,
-   "pTarget": 0.335,
+   "zoneHi": 85.85918577665201,
+   "stop": 79.0481187349448,
+   "target": 98.48000877505555,
+   "rr": 2.138286396717674,
+   "pTarget": 0.30325,
    "holdDays": 63,
-   "reviewDate": "2027-01-14T07:00:00.000Z",
-   "validUntil": "2026-11-02T07:00:00.000Z",
+   "reviewDate": "2027-01-15T07:00:00.000Z",
+   "validUntil": "2026-11-03T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.028872773644847,
-   "price": 76.2300033569336,
-   "chg": 0.13136228441297249,
-   "sizePct": 13.984201951692246,
-   "riskPct": 7.150926477280948,
-   "gainPct": 13.973945497415393,
+   "expectancy": 2.2407523637051074,
+   "price": 77.37000274658203,
+   "chg": 1.6288001285963416,
+   "sizePct": 13.766418253702037,
+   "riskPct": 7.264053594558498,
+   "gainPct": 15.532626986272561,
    "perf": {
-    "w1": -4.473683657015326,
-    "m1": -10.496647885653498,
-    "m3": -6.224624802073575,
-    "ytd": 7.48731715325035
+    "w1": -3.0451130479277055,
+    "m1": -9.158149101859813,
+    "m3": -4.822239051293387,
+    "ytd": 9.09476134259275
    },
    "support": 75.02999877929688,
    "resistance": 85.23999786376953,
-   "sma50": 83.03380004882813,
-   "sma200": 75.01149993896485,
-   "rsi": 35.11500195104853,
-   "vol": 27.975518936124455,
-   "rs63": -1.7580051993184242,
+   "sma50": 83.05660003662109,
+   "sma200": 75.01719993591308,
+   "rsi": 39.168211218515864,
+   "vol": 28.513419285503826,
+   "rs63": -0.47549528567166766,
    "pros": [
-    "Negative Volume Index",
     "Croisement SMA 50 / 200",
-    "SMA 200"
+    "SMA 200",
+    "Negative Volume Index"
    ],
    "cons": [
     "Chaikin Money Flow",
-    "Qstick (14)"
+    "Momentum 6 mois (%)"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,71 %."
+    "Probabilite de hausse 57 % sur 3 mois, rendement median attendu +3,93 %."
    ],
    "fund": {
-    "pe": 10.921204,
-    "fpe": 9.065428,
+    "pe": 11.097561,
+    "fpe": 9.204772,
     "yield": 4.14,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 86.42,
     "lo52": 57.36
    },
-   "earningsWarning": "Résultats prévus le 22/10/2026 : risque de forte variation pendant la position.",
+   "earningsWarning": "Résultats prévus le 09/11/2026 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "À l’approche de la publication des résultats, devez-vous acheter ou vendre l’action ASML ?",
-     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOR2E3UDlJNlRWbHJHTWN6ZFAxTEZsY2xHR2xLU0d0RE9DS0hIdHh5NzNISUhsekxSaE5Lem9vdldzdm5ISEhuTnNaTUNzUjViWkRVZlp1VGRSazRQNjZQWVFRLUlaWUJxem1LLU96Q2NBRXB6OWRGZ0hEcGtKR0o2Q3dOYjgxemg2clg3NGlBWV81dTQzNy1GRDJhT194U1lMU2NvMV83b0tNUDhjT19GZ0lKMjRFS3hyUGdseEFBOFlOQQ?oc=5",
-     "source": "Morningstar",
-     "time": 1791801733000,
+     "title": "Bourse de Milan : Mps en ligne avec le secteur, les analystes estiment que les chiffres ne permettent pas d’approuver les offres sur Bpm et B. Generali",
+     "link": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxNcWpOTFVha3hDaVlsd1RjdzNnMzR1VUttQjAyMzU1bWRhTjRKMEFaY3dBRkp6S3djcUlWM3FnaVBxZVBqY1hkdmwxNElMMGcyRWpWVF90T0JOVEJiQkhFWUlTX2xTOFU3WDJzbUE3ZVFZLTBFaVRBbmJEWEQxXzdpN05lRmpyN1ZDZFpyWmZSZnBkcjNDUUtaWk9GSXUySExWY2h4d0lsZHBQeWZJdHJCdUtRU285QWJ3NzQ2SVU3SEhNNGxOOTlGTDlWOEl3R1pETjBkLTdyYUdVZmtyTUdvM3VZSXJ2a2pVWTZYemdR?oc=5",
+     "source": "Zonebourse Suisse",
+     "time": 1791890810000,
      "tone": "neutre"
+    },
+    {
+     "title": "La Bourse de Milan poursuit sa progression prudente, les banques en vedette, les valeurs technologiques réduisent leurs pertes de moitié",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOc1J6RGVXOHZrWW9uVTB1R1E0aGRoUzRFZVhzNjhwOFRqaTctYUthYjdqXzJjNWRGc2NoeklsTURiWEZyZWVMd1MxTHQxOV95RXFVTU54X3h0SXVsMFRkQzU0aWVocU9SbEdMTGs3QmdQUVo2LXVFVE1MVEVkUzZXcXFrbHVFOEl2aUx3ckRCOVdCN3pFcGtnTkFpM2lmaENhZWJodUFGTGI1RElyam1pcWdoVGgycWtlMy1pTjNQQ2hiNmFLcWFzZEFYWEMyUGFIdkhyQ2N3cmxRMEVVT0lUV1dpRGExTy12amxjTGZuOA?oc=5",
+     "source": "Zonebourse Suisse",
+     "time": 1791889493000,
+     "tone": "négatif"
     }
    ]
   }
  ],
- "avoid": [],
+ "avoid": [
+  {
+   "sym": "7203.T",
+   "name": "Toyota",
+   "h": "1M",
+   "action": "EVITER",
+   "actionLabel": "Eviter / alleger",
+   "pUp": 0.4376595865156772,
+   "expPct": -1.1267619406828189,
+   "start": "Pas d'achat pour l'instant",
+   "stop": 2857.117985865972,
+   "reviewDate": "2026-10-20T00:00:00.000Z",
+   "cur": "JPY",
+   "price": 2984,
+   "chg": 2.5253392887820025,
+   "perf": {
+    "w1": 3.1277000172801106,
+    "m1": 0.5221492336196842,
+    "m3": 3.2883350640360076,
+    "ytd": -11.084624553039335
+   },
+   "support": 2853,
+   "resistance": 3068,
+   "sma50": 3015.34,
+   "sma200": 3174.15,
+   "rsi": 51.85991707989083,
+   "vol": 26.250236361748325,
+   "rs63": 1.8538989154733843,
+   "pros": [
+    "Vortex (14)",
+    "Croisement EMA 20 / 50",
+    "Awesome Oscillator"
+   ],
+   "cons": [
+    "Croisement SMA 50 / 200",
+    "Negative Volume Index"
+   ],
+   "why": [
+    "Probabilite de hausse de 44 % sur 1 mois : le modele penche a la baisse.",
+    "Le cours est sous sa moyenne 50 jours.",
+    "Si tu detiens deja la valeur : protection possible sous 2857,12."
+   ],
+   "fund": {
+    "pe": 8.49223,
+    "fpe": 9.203628,
+    "yield": 3.44,
+    "rating": "1.7 - Buy",
+    "target": null,
+    "hi52": 4000,
+    "lo52": 2686
+   }
+  },
+  {
+   "sym": "A2A.MI",
+   "name": "A2A",
+   "h": "1M",
+   "action": "EVITER",
+   "actionLabel": "Eviter / alleger",
+   "pUp": 0.4563029046970479,
+   "expPct": -0.5078499192443187,
+   "start": "Pas d'achat pour l'instant",
+   "stop": 2.256657131240546,
+   "reviewDate": "2026-10-20T07:00:00.000Z",
+   "cur": "EUR",
+   "price": 2.3559999465942383,
+   "chg": 3.88007334630478,
+   "perf": {
+    "w1": 5.935250487450228,
+    "m1": -0.6745376292769945,
+    "m3": 0.21267017746717798,
+    "ytd": 1.991342205807456
+   },
+   "support": 2.2219998836517334,
+   "resistance": 2.381999969482422,
+   "sma50": 2.3001999950408933,
+   "sma200": 2.3530799984931945,
+   "rsi": 60.30989434531516,
+   "vol": 23.25140587993012,
+   "rs63": 4.559413943088897,
+   "pros": [
+    "Force relative 1 mois vs indice (%)",
+    "Vortex (14)",
+    "Croisement EMA 20 / 50"
+   ],
+   "cons": [
+    "Croisement SMA 50 / 200",
+    "Negative Volume Index"
+   ],
+   "why": [
+    "Probabilite de hausse de 46 % sur 1 mois : le modele penche a la baisse.",
+    "Si tu detiens deja la valeur : protection possible sous 2,26."
+   ],
+   "fund": {
+    "pe": 11.219048,
+    "fpe": 11.156887,
+    "yield": 4.59,
+    "rating": "2.0 - Buy",
+    "target": null,
+    "hi52": 2.744,
+    "lo52": 2.129
+   }
+  },
+  {
+   "sym": "NEXI.MI",
+   "name": "Nexi",
+   "h": "1M",
+   "action": "EVITER",
+   "actionLabel": "Eviter / alleger",
+   "pUp": 0.4616456659115373,
+   "expPct": -0.6319020778292606,
+   "start": "Pas d'achat pour l'instant",
+   "stop": 4.089530289868637,
+   "reviewDate": "2026-10-20T07:00:00.000Z",
+   "cur": "EUR",
+   "price": 4.311999797821045,
+   "chg": 2.568977205845413,
+   "perf": {
+    "w1": 6.627092957183822,
+    "m1": 3.1085517126571593,
+    "m3": 3.6538450957754876,
+    "ytd": 2.1558777322253864
+   },
+   "support": 4.011000156402588,
+   "resistance": 4.330999851226807,
+   "sma50": 4.212199993133545,
+   "sma200": 3.73662499666214,
+   "rsi": 60.62910830284803,
+   "vol": 23.14988613218999,
+   "rs63": 8.000588861397206,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "SMA 200",
+    "Force relative 1 mois vs indice (%)"
+   ],
+   "cons": [
+    "Negative Volume Index",
+    "Momentum 3 mois (%)"
+   ],
+   "why": [
+    "Probabilite de hausse de 46 % sur 1 mois : le modele penche a la baisse.",
+    "Si tu detiens deja la valeur : protection possible sous 4,09."
+   ],
+   "fund": {
+    "pe": null,
+    "fpe": 6.570432,
+    "yield": 7.14,
+    "rating": "2.9 - Hold",
+    "target": null,
+    "hi52": 4.875,
+    "lo52": 2.643
+   }
+  }
+ ],
  "indices": [
   {
    "id": "cac",
    "label": "CAC 40",
-   "price": 7822.89013671875,
-   "chg": 0.2506629656559456,
+   "price": 7828,
+   "chg": -0.062299982707614276,
    "p1S": 0.5,
-   "p1M": 0.5314831630303425,
+   "p1M": 0.5305465051904826,
    "trend": "sous SMA 200",
-   "w1": -0.14309187778764887,
-   "m1": -4.362957417633506
+   "w1": -0.47132225202377587,
+   "m1": -3.569692610855568
   },
   {
    "id": "spx",
    "label": "S&P 500",
-   "price": 7811.5400390625,
-   "chg": 0.5946946000482844,
+   "price": 7807.240234375,
+   "chg": -0.05504426356388592,
    "p1S": 0.5,
-   "p1M": 0.5225409946858128,
+   "p1M": 0.5316159706422189,
    "trend": "au-dessus SMA 200",
-   "w1": 1.1501106054318866,
-   "m1": 2.8957919582459413
+   "w1": 0.428225525326531,
+   "m1": 1.9623958047367385
   },
   {
    "id": "ndx",
    "label": "NASDAQ 100",
-   "price": 30883.150390625,
-   "chg": 0.5120771135067814,
+   "price": 30664.69921875,
+   "chg": -0.7073474341572128,
    "p1S": 0.5,
-   "p1M": 0.5285782703578924,
+   "p1M": 0.5394419597148974,
    "trend": "au-dessus SMA 200",
-   "w1": 0.2441602012468902,
-   "m1": 6.114866005274688
+   "w1": -1.3249273134911754,
+   "m1": 4.413784967001599
   },
   {
    "id": "dji",
    "label": "DOW JONES",
-   "price": 51654.94921875,
-   "chg": 0.8262639817617545,
+   "price": 51850.55078125,
+   "chg": 0.3786695475619606,
    "p1S": 0.5,
-   "p1M": 0.5468356487561169,
+   "p1M": 0.5491153537368949,
    "trend": "au-dessus SMA 200",
-   "w1": 0.9339911407278523,
-   "m1": -0.7858626797945134
+   "w1": 1.1364857181737298,
+   "m1": -1.374725253333109
   },
   {
    "id": "dax",
    "label": "DAX 40",
-   "price": 25253.08984375,
-   "chg": 0.6609739345824206,
+   "price": 25294.26953125,
+   "chg": 0.06563040577733936,
    "p1S": 0.5,
-   "p1M": 0.5333828856311007,
+   "p1M": 0.5323251504093307,
    "trend": "au-dessus SMA 200",
-   "w1": -0.004439234917197332,
-   "m1": -1.23382269622353
+   "w1": -0.6087420668557941,
+   "m1": -0.5760076525667124
   },
   {
    "id": "mib",
    "label": "FTSE MIB",
-   "price": 50070,
-   "chg": 0.6513086479314811,
+   "price": 50132.828125,
+   "chg": 0.19551938642949906,
    "p1S": 0.5,
-   "p1M": 0.5475002629674229,
+   "p1M": 0.5450037380439582,
    "trend": "au-dessus SMA 200",
-   "w1": -1.4719193986382773,
-   "m1": -4.650365630712983
+   "w1": -2.2008386004955027,
+   "m1": -2.8979292161382175
   },
   {
    "id": "nkx",
    "label": "NIKKEI 225",
-   "price": 69030.921875,
-   "chg": -0.016203879199627735,
+   "price": 67777.5234375,
+   "chg": -1.8157057785924247,
    "p1S": 0.5,
-   "p1M": 0.5266334354857077,
+   "p1M": 0.5418615713506005,
    "trend": "au-dessus SMA 200",
-   "w1": 1.0561654675625531,
-   "m1": 3.96247638007432
+   "w1": -3.1014057770195613,
+   "m1": 3.8428391781457405
   }
  ],
  "brief": [
-  "Climat de marché normal (VIX 15,5, +4,2 % la veille).",
+  "Climat de marché normal (VIX 15,3, +0,8 % la veille).",
   "Pas d'annonce macroéconomique majeure aujourd'hui.",
-  "Les indices penchent légèrement à la hausse à 1 mois (4 sur 7).",
+  "Résultats aujourd'hui : JPMorgan, Johnson & Johnson, Citigroup, Goldman Sachs, UnitedHealth.",
+  "Les indices penchent légèrement à la hausse à 1 mois (7 sur 7).",
   "5 opportunité(s) retenue(s), surtout sur 3 mois."
  ],
  "agenda": {
-  "today": [
+  "today": [],
+  "tomorrow": [
    {
-    "day": "2026-10-12",
-    "dayLabel": "lun. 12/10",
-    "time": "01:00",
-    "ts": 1791759600000,
-    "cur": "JPY",
-    "country": "Japon",
-    "flag": "🇯🇵",
-    "title": "Jour férié (marché fermé ou réduit)",
-    "original": "Bank Holiday",
-    "impact": "férié",
-    "forecast": "",
-    "previous": ""
-   },
-   {
-    "day": "2026-10-12",
-    "dayLabel": "lun. 12/10",
-    "time": "13:00",
-    "ts": 1791802800000,
+    "day": "2026-10-14",
+    "dayLabel": "mer. 14/10",
+    "time": "14:30",
+    "ts": 1791981000000,
     "cur": "USD",
     "country": "Etats-Unis",
     "flag": "🇺🇸",
-    "title": "Jour férié (marché fermé ou réduit)",
-    "original": "Bank Holiday",
-    "impact": "férié",
-    "forecast": "",
-    "previous": ""
+    "title": "Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)",
+    "original": "Core CPI m/m",
+    "impact": "fort",
+    "forecast": "0.2%",
+    "previous": "0.3%"
    },
    {
-    "day": "2026-10-12",
-    "dayLabel": "lun. 12/10",
-    "time": "14:00",
-    "ts": 1791806400000,
-    "cur": "CAD",
-    "country": "Canada",
-    "flag": "🇨🇦",
-    "title": "Jour férié (marché fermé ou réduit)",
-    "original": "Bank Holiday",
-    "impact": "férié",
-    "forecast": "",
-    "previous": ""
+    "day": "2026-10-14",
+    "dayLabel": "mer. 14/10",
+    "time": "14:30",
+    "ts": 1791981000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation sous-jacente (CPI hors énergie et alimentation) (sur un an)",
+    "original": "Core CPI y/y",
+    "impact": "fort",
+    "forecast": "2.5%",
+    "previous": "2.4%"
+   },
+   {
+    "day": "2026-10-14",
+    "dayLabel": "mer. 14/10",
+    "time": "14:30",
+    "ts": 1791981000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.6%",
+    "previous": "0.4%"
+   },
+   {
+    "day": "2026-10-14",
+    "dayLabel": "mer. 14/10",
+    "time": "14:30",
+    "ts": 1791981000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation (indice des prix à la consommation) (sur un an)",
+    "original": "CPI y/y",
+    "impact": "fort",
+    "forecast": "3.6%",
+    "previous": "3.4%"
    }
   ],
-  "tomorrow": [],
   "week": [
    {
     "day": "2026-10-14",
@@ -562,7 +735,7 @@
     "title": "Employment Change",
     "original": "Employment Change",
     "impact": "fort",
-    "forecast": "20.0K",
+    "forecast": "19.6K",
     "previous": "39.5K"
    },
    {
@@ -618,7 +791,7 @@
     "title": "Ventes au détail hors automobile (sur un mois)",
     "original": "Core Retail Sales m/m",
     "impact": "fort",
-    "forecast": "0.5%",
+    "forecast": "0.6%",
     "previous": "1.4%"
    },
    {
@@ -632,7 +805,7 @@
     "title": "Prix à la production (sur un mois)",
     "original": "PPI m/m",
     "impact": "fort",
-    "forecast": "0.5%",
+    "forecast": "0.6%",
     "previous": "0.4%"
    },
    {
@@ -681,8 +854,7 @@
   "ok": true
  },
  "earnings": {
-  "today": [],
-  "week": [
+  "today": [
    {
     "sym": "JPM",
     "name": "JPMorgan",
@@ -712,7 +884,9 @@
     "name": "UnitedHealth",
     "date": 1791894600000,
     "estimate": false
-   },
+   }
+  ],
+  "week": [
    {
     "sym": "BAC",
     "name": "Bank of America",
@@ -736,6 +910,30 @@
     "name": "Travelers",
     "date": 1792153800000,
     "estimate": false
+   },
+   {
+    "sym": "GE",
+    "name": "GE Aerospace",
+    "date": 1792499400000,
+    "estimate": false
+   },
+   {
+    "sym": "GM",
+    "name": "General Motors",
+    "date": 1792499400000,
+    "estimate": false
+   },
+   {
+    "sym": "RTX",
+    "name": "RTX Raytheon",
+    "date": 1792499400000,
+    "estimate": false
+   },
+   {
+    "sym": "MMM",
+    "name": "3M",
+    "date": 1792499400000,
+    "estimate": false
    }
   ]
  },
@@ -743,144 +941,144 @@
   {
    "sym": "^VIX",
    "label": "VIX (peur à Wall Street)",
-   "last": 15.470000267028809,
-   "chg": 4.245283746382267,
-   "m1": -2.335857840876554
+   "last": 15.329999923706055,
+   "chg": 0.7889538807239971,
+   "m1": -10.350879639053801
   },
   {
    "sym": "^STOXX50E",
    "label": "Euro Stoxx 50",
-   "last": 6203.68017578125,
-   "chg": 0.4909807450125703,
-   "m1": -1.9201140416305051
+   "last": 6181.7900390625,
+   "chg": -0.31316343096475796,
+   "m1": -1.2553526338835108
   },
   {
    "sym": "EURUSD=X",
    "label": "Euro / dollar",
-   "last": 1.118067979812622,
-   "chg": -0.28845968820243595,
-   "m1": -3.6974540036105896
+   "last": 1.1193194389343262,
+   "chg": -0.17685205886733835,
+   "m1": -3.589662078784417
   },
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 106.58999633789062,
-   "chg": 1.785709602166996,
-   "m1": 1.8927403842717627
+   "last": 104.70999908447266,
+   "chg": -1.8190364872479714,
+   "m1": -0.9178664060390029
   },
   {
    "sym": "GC=F",
    "label": "Or",
-   "last": 4193.5,
-   "chg": -0.5407538776571852,
-   "m1": -4.885570258223471
+   "last": 4210.5,
+   "chg": 0.4748699918868393,
+   "m1": -3.2491533701774267
   },
   {
    "sym": "^TNX",
    "label": "Taux US 10 ans",
-   "last": 5.240000247955322,
-   "chg": -0.07627212271191786,
-   "m1": 5.326640168897168
+   "last": 5.191999912261963,
+   "chg": -0.9160278807790578,
+   "m1": 4.65631824617736
   },
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 82542.90625,
-   "chg": -1.3582334077616887,
-   "m1": -4.688072978202507
+   "last": 83177.453125,
+   "chg": 1.7304871346222717,
+   "m1": -3.475396126872299
   }
  ],
  "movers": {
   "up": [
    {
-    "sym": "PLTR",
-    "name": "Palantir",
-    "chg": 5.166517927119818
+    "sym": "RCO.PA",
+    "name": "Remy Cointreau",
+    "chg": 7.109450502472203
    },
    {
-    "sym": "PANW",
-    "name": "Palo Alto Networks",
-    "chg": 5.089083758920165
+    "sym": "ALO.PA",
+    "name": "Alstom",
+    "chg": 5.512812063930905
    },
    {
-    "sym": "VK.PA",
-    "name": "Vallourec",
-    "chg": 5.032147648938223
+    "sym": "RI.PA",
+    "name": "Pernod Ricard",
+    "chg": 5.259736922121339
    }
   ],
   "down": [
    {
-    "sym": "T",
-    "name": "AT&T",
-    "chg": -10.81624625365527
+    "sym": "9984.T",
+    "name": "SoftBank",
+    "chg": -8.4956057211787
    },
    {
-    "sym": "VZ",
-    "name": "Verizon",
-    "chg": -10.140231074368577
+    "sym": "ERA.PA",
+    "name": "Eramet",
+    "chg": -8.20829930660385
    },
    {
-    "sym": "9983.T",
-    "name": "Fast Retailing (Uniqlo)",
-    "chg": -4.037433155080217
+    "sym": "SOI.PA",
+    "name": "Soitec",
+    "chg": -7.908717810465326
    }
   ]
  },
  "news": [
   {
-   "title": "ROI — Le pari de Wall Street sur l’IA est désormais impossible à atteindre : McGeever",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdnhwYjk4Z2Zjb29hdTJxSW5reDV0MmktT3dPRjB5TWlmTUZsSlNVeHVOUkdFWGI0eDFjcjdlcFZFX09reDA5OEE2Ymg2cUFGYlhhVmM1bTBxRzBmaS1EQkRYWkRMdkpXdDVVanpMVHg2dHBaU3NkWmcyREJNaWRFVk5nMlhKN1luSEhwTTk0OVQ4RWFLUkNfYXpuenlNZHpLOVh0ZnFOMElubFRGRzQyMTNDcVZpUVlhQ3FrTjVsOXFBUmQzdzV6WnpUbmpveHZSeEhBRnl2NEZJTmty?oc=5",
-   "source": "Zonebourse Suisse",
-   "time": 1791810152000,
-   "tone": "neutre"
-  },
-  {
-   "title": "ROI-Le pari de Wall Street sur l'IA est désormais trop important pour échouer : McGeever",
-   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPMVY2Y2UxbjYxQzdEUFRDSjhaMG4xb0RWWDZwMjQ3cXYta25vYWdoUEd6ZEdPQUVNNVlBaTBBaHFMYXNZT2NQVjZQekVHSkR2bkx2UllrbGJZMnBCR3FCU1F2Z2FUWlEwMGprNXJvbDF0Q0Z4RFV3ZDFYUGQxaHR4SGNRRXpjNU52ZkFKcWk0VURZaENIVjA2cmJmN2xpd1R3anp5LVhobTFOOHZ2TzBJM3ZCRi04emROWHVUT0N5b2RraDlla25NLWYyMzlJUl9wY0NaeG1sYVJPV21nOExsUS13LXRxd2lZRXRoXzk4d0o1RHZ5TGE40gH8AUFVX3lxTE9va196OHhCaGgyeVNXQ1RlZUM5Y2o3NWlWZ1phSDNmWHh4d1B1SE91V21WaWhnZ2NCSU5hbTZGa251Y0N6ZGhURU5ILVRjUkZBTU9UbmVFLW9BLW9WMFAwN0RiejVmblo1R2gxZjlyemtkMjNyMURRbW5hdWM5bTBNY3Y0TkNJajVIUG9MOGNrNjhDd05iVnVZcGtJTHUyODJRenZ1dG96S09GQWRsSlh0cnNlX0NablMyTERFSi03MXVMamVocTF4RGlDYUxXdlhlNkV4eXRjTWdrajFlVFFkU2p3dGphZ2VEQTNTV3Zjem9YN1JQSE5jSEU4dA?oc=5",
-   "source": "Boursorama",
-   "time": 1791810103000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Diesel russe, tensions au Moyen-Orient et résultats trimestriels... les dossiers sous surveillance en ce début de semaine",
-   "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxOS0xRMHY2YVdwM2tzY05BdWpaeWRfXzBaX3NCa1ZMM0UyTENfR0VBVzBJQV80SzE0b0xPU21fbktubXEyb1R2YmEzZWMwRkpCemRmbnlfY3RMS2xyZzJCRVdWT2ZwM1JHSk1aVUJXVzFfZlJDVFJmVGhweHBfLUFxbE5zOHRoRDJEMHdkRmcyRHNzVW9PMWV4YXp6OXo5Z0x3UHg4Y0FXNk45d1l0b2tBcm5ZbU9oNmhjNkVfOERUbFloT3hPckZNOTlSd1Y1NkRrUk9lbXVRUWVhaXZfSXZPbFhHX2x6MWhtN29seDAzeWtFQWY2TUR2cG9YRWw5dXlEcW1CeGxyZlBNNFV6WmRDV2tsb2s5WTA?oc=5",
-   "source": "Investir Les Echos",
-   "time": 1791810032000,
-   "tone": "négatif"
-  },
-  {
-   "title": "Wall Street campe proche des sommets avant la vague des résultats",
-   "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPZmZCT3ZvUGhOOXF3SDhCaEhNT2hlb0t6cWdjYy1JVF9pRGQ5VTFXR1VOYnZZWVMyU2pWTzEzNHlEZ1c5WFhCdkNFc1ZYa1RhaG5WTlFmZmxWb21HMGctOEpjcUdMaG1YWWFQVERaMldYaFRyc0p5UEVMdkZyT1RsYU1xNGVtcjVDeHMtOUZ0SmdqY01ZM3F1a2pZSTdMdHNZNS1TS1ZSZ0JNdVBiRnBZb0Z6cER3MWNFTzkxQXJRTy1RMDRK?oc=5",
+   "title": "Wall Street hésite après les comptes des grandes banques",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPWC1VNGNXUnpMRVVOZlh6WGkzMFJYSGZBVTFqTnlCSDdQQXhackN3a2pzV1UtTDlxTEJONjNCRk9nd3c3dEszQ0k2TWtIcmRDWldWUjdqT1NKcGlYVVMzN3l2ZFk4SGxtRU9WU1F4SFRaN2dJVUVfTU5EWmQ0MHB6VFM1VDFaVE5hQm0tM1FRa0FCMWNDYVhtUzhFTXRZeFFQQTR4TDdmT0VzQ25NR0Y4WC01UkhhYTA?oc=5",
    "source": "Boursier.com",
-   "time": 1791810001000,
+   "time": 1791895635000,
    "tone": "neutre"
   },
   {
-   "title": "Les marchés boursiers asiatiques ont affiché des performances mitigées avant la publication des résultats des entreprises américaines.",
-   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPN29nbW9qa1ZxdjktOHg3QXNxc2JmeVBTc2RqSW1SVlp0Ulh1OVNMaXUxZEg2V0E4bFFSUk5CaHNsMGJKVGNDYWlSQnNmbm4xUTBEMzY2UmtGQkJDN25PV2VlUEZibHpBRzV6N0N5ZURNZmlfQ1d6bW5vUEJiV1BlNkFJMTBDamNyTzEydXNDZFdhc3VBY3o5U2h6TUtoQlVta1djS05KTHc?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1791809828000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Wall Street devrait ouvrir sans grand changement, le pétrole s’envolant avant une série de résultats clés",
-   "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPZFI5OVRIbl81d2xMWVBwMWpqOERxaXgyOU1JOFl2TjVHTjgwN3UyVkg0Q3JFclR0MkhxYXViNUM1QVFnOUdKS3h2aWVkSGk3SWNidHB5ak1ZYTBWMlFhRkxQOXE5WHNTcGN3NVFMZjVwemRlQmlVejd4STdFUmZFaUhYbTZKVFdlVC1ibmZGWWxxenFVSktaSkV3dWRIQXJheHNzd0RLd3A3SEJORUFqQl81UkprdElWLXhZZ0E3WUxHbENsT21RdHUyVEpGRElPVDVGZXZNeDJ3eTI5MFJtNFkySTNqUTBNN2xvcmlyYw?oc=5",
+   "title": "Les Bourses mondiales se tournent vers la saison des résultats",
+   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNM2NaZUVFWkRiM2lNUk12VFJKekZqeXB3RnZkZ2NQU1hUc0c3Qk5YdkdxenQtZnIwUUU3Qi1lUi1sWkd6aFZwQndKZVV5MXBqSS1GR2lQSmhnazVOZHVpMzZfeHJwa3NOckVlRkx0bDlKTDFoT3RvSHEzU0szR01PdzhBdDBhaUFDVjRCdEYzMjVwaC05WThMb0lGZC15NmtRWl9wSnN6d2U0MXJHcmc4ZVlfNVJMeG80U1d2MTBfWQ?oc=5",
    "source": "Zonebourse Suisse",
-   "time": 1791809733000,
+   "time": 1791895166000,
    "tone": "neutre"
   },
   {
-   "title": "Bank of America prévoit deux nouvelles hausses des taux d’intérêt par la Fed en 2026",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPWWR1OW84S1AzdGVPT0c0dGN0ZXhJTWxyQWtVbHhqRllFZ0hRUThzV2l3MHRGalhMdFJkMTU0QnpaVE80MkFSMWFURnFMS202V3JMd3JwQ1F3MTBnVUh6NnJJS1J3ZzBQbjEwLWQ1bGR4UXd2czFJbjFMdktpR0xDSjUwaHJNYkd0ZUR1WG4xVDM3ZzR0OThhS1R4bnI5eGFBUFI2TGxkd1dsb0d1YXc?oc=5",
-   "source": "Business AM",
-   "time": 1791808320000,
+   "title": "Financial Street : Secteurs à fort potentiel face à la hausse des taux d'intérêt",
+   "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQRHQzYW1taFJuSlAzNmVJZ1Q1Qkp6RG80Q3FOczdPMW9hcTNVbVZtZVpLY3BJT2tPSG1lWjZLaVQyb3Y2UzBvUmhxZUE2R01ocTRnR1RQNDloQ1h3WEV6RVg2eDBzN0NOWm1ROGw2ejBHb09nOUdoSXFPanZidVNGODl2OHQ0Z29PZE5fa1JpMWQ3Q1U5Ulcwa1VTNFgwa3FqSENnUy1SWDg?oc=5",
+   "source": "Vietnam.vn",
+   "time": 1791894747000,
    "tone": "positif"
   },
   {
-   "title": "Deuxième consultation de l'OPRED : orientations sur la dérogation à la décision 98/3 de la convention OSPAR - Actualités et statistiques",
-   "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxObS1iTUVueFEyYm44SDg1OE1hUWVlVlRPSzc2Q1JNUVcyd21SNUUyTTN0cEs5SnVYSzVhOWJVX04ybE5jdVNuMkp3aXpKWDJHSnZTUkZiUDMzRUYyWE0xWmFNZE1CbHNCdWRVNk1UNGQ0bklHZVotaHFSV1ctMjAtalRHMXJ1bUpOWWpLRVd0LU0zb2NvdU5US0RfbGloZUtQVzFDUmtUcVpJd3VLeENMd3VQcGREeDZwUlFFMi1Daw?oc=5",
-   "source": "IndexBox",
-   "time": 1791805222000,
+   "title": "Bourse: ce qui bouge sur les marchés avant l’ouverture mardi",
+   "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOSTZxaFUyb05uQzRnLXR1bTNiQlptWUU4OVlOd1JrVkYtWUVLQzJzUEg1dkJ0Um5RaDdGU2ZWbXpyWmNiVzZURU9QU1BkQlh0djU3eDREcWRXN2NNNkVMS2NkSXFCbDBlMG9nNVRZM1h6Z25Jd3pRdDRZbXRzeEtNRldnNVlWWnpXaUZ1dnBCaFhfZzNrcUIzNzUzZTFBaUE5dFRIc2tqZXdCYlhpN0lN?oc=5",
+   "source": "Les Affaires",
+   "time": 1791892457000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Le prix de l'or inverse la tendance à la hausse, le marché concentre son attention sur les données sur l'inflation américaine",
+   "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPbWpWbW5FNlozV0doNEJfZ0cxa1NyZzRBT1AwN01hbmNINVpRYzZhVXcxaVFxOGlHdEQ5dFY3Q2JVc2txVjFocmdxS2dCLW1acWlTU1d3Sy1KRHlVRDA0MUxMVHdZbVJpWnY5OVdJd3Itc1N1MnI2eTNERHYxQTF1MExWWEpuZ0hfRmVLaThsZ1o4R2h5cmlQYWx2ck04UmZxMVI0dXUtLUJ2bmtVX1dJZFM4bW1lNVU?oc=5",
+   "source": "Laodong.vn",
+   "time": 1791891704000,
+   "tone": "positif"
+  },
+  {
+   "title": "Wall Street vue dans le désordre, l'Europe à un pic d'une semaine",
+   "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQTG4xM2ZVbHJNaGk0bDRJWGdjMXhnY295MkplYnI0WDNOeEFxeTVFTU40OWRRVjFFNWltaEk1TkU0TkVOcF9jNVJtTXFscERPYUo5OFJzZWJkNmZVMDJjajdTN1A2ZmU1bjBDVjJTa3d4SWNMXzJIMmxMMmlrQU1wRW5vQXBNVGlSanBwekxLYlJoUENnU05DaGdPOWZDQm5nLXRsZmJzZjVnbFFvTl84eWIxdWdCWmhEUjBvazIzZE40dw?oc=5",
+   "source": "Zonebourse Suisse",
+   "time": 1791891483000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Cac 40 : Faisant fi de la baisse de LVMH (et du luxe dans son ensemble), la Bourse de Paris avance",
+   "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxNWnhYTEJvNnZKdmtLQkdjUFcwamltZUYtNml6cVByRjNzS0ZIV0hYWFpCdnp5RXlwTzYtcnZJXzJ6OTFCT1hPcGZFVjd4Z3BFM180RmpCMXczcEVfSkE3NGxLejJZdXQ5emFBQ1Z3a0h5SWV1OUVaaVp1RDFfSzdTa1N2OTJSYVVqeE9GRlA1cTVMaUUwSE8ybDVNaDkxM1BhemgyLUFVLVpqQk9WemFTQ0ZEeDRGbW8wYkZxNUNZc0xxUFd0WkxyOHYyeXNjRWx5cjJ1cTk4d1ZwczdLWDdjcC1JWlR5R3NwU2JxZXJ3QUswTnh0dzNr?oc=5",
+   "source": "BFM Bourse",
+   "time": 1791891260000,
+   "tone": "négatif"
+  },
+  {
+   "title": "ORANGE Cours Action ORA, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5xbmc4M190bm42S2JJRXBNNW9RdndWY09pU0ZXOU1FMC1wdksyT0hIeVlGU1h0aTZKSGFTOHA0MlhCS2tYSkZSeUpwblJnX2l0Z0E?oc=5",
+   "source": "Boursorama",
+   "time": 1791888643000,
    "tone": "neutre"
   }
  ]
