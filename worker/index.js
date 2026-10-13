@@ -88,4 +88,20 @@ export default {
 
     return json({ ok: true, service: "quantum-algo-newsletter" }, 200, env);
   },
+
+  // Reveil programme (voir [triggers] dans wrangler.toml) : lance la routine GitHub a l'heure dite.
+  // Deux reveils (heure d'ete / d'hiver) : seul celui qui tombe a 7 h 45, heure de Paris, declenche.
+  async scheduled(event, env, ctx) {
+    const now = new Date();
+    const parts = Object.fromEntries(new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", weekday: "short", hour12: false }).formatToParts(now).map((p) => [p.type, p.value]));
+    if (Number(parts.hour) !== Number(env.SEND_HOUR_PARIS || 7)) return;
+    if (!env.GH_TOKEN) { console.log("GH_TOKEN manquant : npx wrangler secret put GH_TOKEN"); return; }
+    const repo = env.GH_REPO || "Papagallotoon/Quantum-algo";
+    const res = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/quantum-daily.yml/dispatches`, {
+      method: "POST",
+      headers: { Authorization: "Bearer " + env.GH_TOKEN, Accept: "application/vnd.github+json", "User-Agent": "quantum-algo-worker", "Content-Type": "application/json" },
+      body: JSON.stringify({ ref: "main" }),
+    });
+    console.log("declenchement de la routine :", res.status, res.status === 204 ? "ok" : await res.text());
+  },
 };

@@ -2,8 +2,9 @@ name: Quantum Algo - routine du matin
 
 on:
   schedule:
-    # du lundi au vendredi a 05:20 UTC = 7 h 20 a Paris (heure d'ete), 6 h 20 en hiver
-    - cron: "20 5 * * 1-5"
+    # Le lancement principal vient du service Cloudflare a 7 h 45 (heure de Paris).
+    # Ce cron GitHub n'est qu'un filet de securite (souvent en retard) : il n'envoie rien si la lettre est deja partie.
+    - cron: "0 8 * * 1-5"
   workflow_dispatch: {}   # bouton "Run workflow" pour lancer a la main
 
 permissions:

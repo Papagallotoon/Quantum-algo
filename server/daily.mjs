@@ -338,6 +338,7 @@ model.newsletter.diag.event = process.env.GITHUB_EVENT_NAME || "local";
 log("reglages d'envoi :", JSON.stringify(model.newsletter.diag));
 if (NO_SEND) log("envoi desactive (--no-send) : apercu dans server/out/newsletter.html");
 else if (!weekday && !FORCE_SEND) log("week-end : pas d'envoi");
+else if (!FORCE_SEND && model.newsletter.lastSent === today.toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" })) log("lettre deja envoyee aujourd'hui : pas de second envoi");
 else if (!channelsConfigured().length) {
   log("AUCUN CANAL CONFIGURE : les secrets SMTP_HOST et MAIL_TO (ou BREVO_API_KEY) sont vides pour cette execution.");
   if (FORCE_SEND) process.exitCode = 3;   // lancement manuel : on rend l'echec visible (croix rouge)
