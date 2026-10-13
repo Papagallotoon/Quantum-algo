@@ -244,9 +244,11 @@ const dateLabel = today.toLocaleDateString("fr-FR", { weekday: "long", day: "num
 // 6. Contexte du jour : agenda, resultats, marches, actualites
 // ---------------------------------------------------------------------------
 const CONTEXT = [
-  ["^VIX", "VIX (peur à Wall Street)"], ["^STOXX50E", "Euro Stoxx 50"], ["EURUSD=X", "Euro / dollar"],
+  ["^FCHI", "CAC 40"], ["^SBF120", "SBF 120"], ["^DJI", "Dow Jones"], ["^IXIC", "Nasdaq"], ["^N225", "Nikkei 225"],
+  ["^STOXX50E", "Euro Stoxx 50"], ["EURUSD=X", "Euro / dollar"],
   ["BZ=F", "Pétrole Brent"], ["GC=F", "Or"], ["^TNX", "Taux US 10 ans"], ["BTC-USD", "Bitcoin"],
 ];
+let vixCtx = null;
 let agenda = { today: [], tomorrow: [] }, fundamentals = {}, context = [], marketNews = [], earnings = { today: [], week: [] };
 if (!FAKE) {
   const pday = parisDay();
@@ -259,6 +261,11 @@ if (!FAKE) {
       context.push({ sym, label, last: c.close[n], chg: pct(c.close[n], c.close[n - 1]), m1: pct(c.close[n], c.close[Math.max(0, n - 21)]) });
     } catch (e) { /* source facultative */ }
   }
+  // le VIX ne figure plus dans le tableau, mais sert encore a "L'essentiel"
+  try {
+    const c = await fetchCandles("^VIX", "3mo"); const n = c.close.length - 1;
+    vixCtx = { sym: "^VIX", last: c.close[n], chg: pct(c.close[n], c.close[n - 1]) };
+  } catch (e) { /* facultatif */ }
   // resultats d'entreprises de l'univers suivi
   const now = Date.now();
   for (const s of stocks) {
@@ -288,7 +295,7 @@ if (!FAKE) {
   marketNews = dedupeNews((await Promise.all(qs.map((q) => fetchNews(q, 4)))).flat()).sort((a, b) => (b.time || 0) - (a.time || 0)).slice(0, 8);
   for (const p of [...picks, ...watch]) p.news = await fetchNews((NEWS_NAMES[p.sym] || p.name) + " action", 2);
 }
-const vix = context.find((c) => c.sym === "^VIX");
+const vix = vixCtx;
 const mood = !vix ? null : vix.last < 15 ? "calme" : vix.last < 20 ? "normal" : vix.last < 30 ? "nerveux" : "en stress";
 const brief = [];
 if (vix) brief.push(`Climat de marché ${mood} (VIX ${vix.last.toFixed(1).replace(".", ",")}${vix.chg != null ? ", " + (vix.chg >= 0 ? "+" : "") + vix.chg.toFixed(1).replace(".", ",") + " % la veille" : ""}).`);
