@@ -1,51 +1,59 @@
-*Quantum Algo – mardi 13 octobre 2026*
+*Quantum Algo – mercredi 14 octobre 2026*
 
-• Climat de marché normal (VIX 15,3, +0,8 % la veille).
-• Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : JPMorgan, Johnson & Johnson, Citigroup, Goldman Sachs, UnitedHealth.
-• Les indices penchent légèrement à la hausse à 1 mois (7 sur 7).
+• Climat de marché normal (VIX 15,8, +3,4 % la veille).
+• 4 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois), Etats-Unis) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Bank of America, Morgan Stanley, ASML.
+• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : JPMorgan, Johnson & Johnson, Citigroup, Goldman Sachs, UnitedHealth
+*Agenda (fort impact)*
+14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois) (prévu 0.2%)
+14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un an) (prévu 2.5%)
+14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.6%)
+14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un an) (prévu 3.6%)
+
+*Résultats aujourd'hui* : Bank of America, Morgan Stanley, ASML
 
 *À venir (fort impact)*
-mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)
-mer. 14/10 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un an)
-mer. 14/10 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois)
-mer. 14/10 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un an)
 jeu. 15/10 02:30 🇦🇺 Employment Change
 jeu. 15/10 02:30 🇦🇺 Taux de chômage
+jeu. 15/10 08:00 🇬🇧 Croissance du PIB (sur un mois)
+jeu. 15/10 14:30 🇺🇸 Prix à la production (sur un mois)
+jeu. 15/10 14:30 🇺🇸 Ventes au détail hors automobile (sur un mois)
+jeu. 15/10 14:30 🇺🇸 Prix à la production (sur un mois)
 
 *Opportunités*
-• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,0 %
-  entrée 342,00-343,70, stop 325,05, objectif 375,32, revoir le 14/01
-• AXA – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,7 %
-  entrée 44,31-44,54, stop 42,02, objectif 48,53, revoir le 15/01
-• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +13,4 %
-  entrée 7363,85-7669,26, stop 6273,10, objectif 10903,35, revoir le 08/01
+• Tokyo Electron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +9,3 %
+  entrée 10977,10-11345,16, stop 9662,60, objectif 14917,78, revoir le 11/01
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
-  entrée 29,22-29,43, stop 27,12, objectif 33,11, revoir le 15/01
-• UniCredit – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
-  entrée 85,24-85,86, stop 79,05, objectif 98,48, revoir le 15/01
+• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,5 %
+  entrée 338,75-340,61, stop 320,18, objectif 370,72, revoir le 15/01
   ⚠ résultats pendant la position
+• GE Aerospace – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,0 %
+  entrée 324,08-326,31, stop 301,78, objectif 372,40, revoir le 15/01
+  ⚠ résultats pendant la position
+• Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
+  entrée 132,25-133,29, stop 121,88, objectif 152,47, revoir le 15/01
+  ⚠ résultats pendant la position
+• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
+  entrée 29,15-29,35, stop 27,19, objectif 32,83, revoir le 18/01
 
 *À éviter*
-• Toyota : 44 % de chances de hausse seulement (1 mois)
-• A2A : 46 % de chances de hausse seulement (1 mois)
-• Nexi : 46 % de chances de hausse seulement (1 mois)
+• IBM : 46 % de chances de hausse seulement (1 mois)
+• Itochu : 46 % de chances de hausse seulement (1 mois)
+• Campari : 47 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• Wall Street hésite après les comptes des grandes banques (Boursier.com)
-• Les Bourses mondiales se tournent vers la saison des résultats (Zonebourse Suisse)
-• Financial Street : Secteurs à fort potentiel face à la hausse des taux d'intérêt (Vietnam.vn)
+• L’inflation américaine atteint 3,7 %, Bitcoin et l’or reculent, la Fed relèvera-t-elle ses taux en octobre ? (BeInCrypto)
+• BCE : une nouvelle hausse des taux plus tôt que prévu ? (Boursier.com)
+• Wall Street sous pression, avec les banques et l'inflation (Boursier.com)
 
-*🎓 Question du jour* : Quel est l'avantage principal du PEA après 5 ans ?
-A. Aucun impôt ni prélèvement
-B. Les gains échappent à l'impôt sur le revenu (prélèvements sociaux seulement)
-C. On peut y acheter des actions américaines
-D. Il n'a pas de plafond
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q34
+*🎓 Question du jour* : Une action à 10 € est-elle moins chère qu'une action à 500 € ?
+A. Oui, toujours
+B. Non, il faut comparer le prix aux bénéfices
+C. Oui si elle verse un dividende
+D. Non, c'est l'inverse
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q35
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
