@@ -1,59 +1,53 @@
-*Quantum Algo – mercredi 14 octobre 2026*
+*Quantum Algo – jeudi 15 octobre 2026*
 
-• Climat de marché normal (VIX 15,8, +3,4 % la veille).
-• 4 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois), Etats-Unis) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Bank of America, Morgan Stanley, ASML.
-• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• Climat de marché normal (VIX 17,4, +3,3 % la veille).
+• 7 annonce(s) à fort impact aujourd'hui, la première à 02:30 (Employment Change, Australie) : volatilité possible autour de ces horaires.
+• Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
-14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois) (prévu 0.2%)
-14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un an) (prévu 2.5%)
-14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.6%)
-14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un an) (prévu 3.6%)
-
-*Résultats aujourd'hui* : Bank of America, Morgan Stanley, ASML
+02:30 🇦🇺 Employment Change (prévu 19.6K)
+02:30 🇦🇺 Taux de chômage (prévu 4.6%)
+08:00 🇬🇧 Croissance du PIB (sur un mois) (prévu -0.1%)
+14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.3%)
+14:30 🇺🇸 Ventes au détail hors automobile (sur un mois) (prévu 0.6%)
+14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.6%)
+14:30 🇺🇸 Ventes au détail (sur un mois) (prévu 0.3%)
 
 *À venir (fort impact)*
-jeu. 15/10 02:30 🇦🇺 Employment Change
-jeu. 15/10 02:30 🇦🇺 Taux de chômage
-jeu. 15/10 08:00 🇬🇧 Croissance du PIB (sur un mois)
-jeu. 15/10 14:30 🇺🇸 Prix à la production (sur un mois)
-jeu. 15/10 14:30 🇺🇸 Ventes au détail hors automobile (sur un mois)
-jeu. 15/10 14:30 🇺🇸 Prix à la production (sur un mois)
+ven. 16/10 04:00 🇬🇧 BOE Gov Bailey Speaks
+ven. 16/10 05:30 🇺🇸 Fed Chairman Warsh Speaks
 
 *Opportunités*
-• Tokyo Electron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +9,3 %
-  entrée 10977,10-11345,16, stop 9662,60, objectif 14917,78, revoir le 11/01
+• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,0 %
+  entrée 55,25-55,65, stop 51,24, objectif 62,55, revoir le 18/01
+• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,7 %
+  entrée 344,36-346,29, stop 325,02, objectif 377,94, revoir le 18/01
   ⚠ résultats pendant la position
-• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,5 %
-  entrée 338,75-340,61, stop 320,18, objectif 370,72, revoir le 15/01
+• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +13,9 %
+  entrée 6522,60-6839,56, stop 5390,58, objectif 9780,83, revoir le 12/01
   ⚠ résultats pendant la position
-• GE Aerospace – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,0 %
-  entrée 324,08-326,31, stop 301,78, objectif 372,40, revoir le 15/01
+• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
+  entrée 28,45-28,64, stop 26,52, objectif 32,25, revoir le 19/01
+• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,3 %
+  entrée 26,67-26,88, stop 24,53, objectif 29,88, revoir le 19/01
   ⚠ résultats pendant la position
-• Citigroup – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,9 %
-  entrée 132,25-133,29, stop 121,88, objectif 152,47, revoir le 15/01
-  ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
-  entrée 29,15-29,35, stop 27,19, objectif 32,83, revoir le 18/01
 
 *À éviter*
 • IBM : 46 % de chances de hausse seulement (1 mois)
-• Itochu : 46 % de chances de hausse seulement (1 mois)
-• Campari : 47 % de chances de hausse seulement (1 mois)
+• Nintendo : 47 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• L’inflation américaine atteint 3,7 %, Bitcoin et l’or reculent, la Fed relèvera-t-elle ses taux en octobre ? (BeInCrypto)
-• BCE : une nouvelle hausse des taux plus tôt que prévu ? (Boursier.com)
-• Wall Street sous pression, avec les banques et l'inflation (Boursier.com)
+• Wall Street : nouvelle correction en vue pour le Nasdaq (Boursier.com)
+• L'euro recule à de nouveaux plus bas face au dollar et à la livre malgré les hausses de la BCE (Yahoo Finance France)
+• La présidente de la Fed de San Francisco a déclaré que d'autres hausses de taux sont probables mais pas urgentes. (fr.qz.com)
 
-*🎓 Question du jour* : Une action à 10 € est-elle moins chère qu'une action à 500 € ?
-A. Oui, toujours
-B. Non, il faut comparer le prix aux bénéfices
-C. Oui si elle verse un dividende
-D. Non, c'est l'inverse
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q35
+*🎓 Question du jour* : Une tendance haussière se reconnaît à…
+A. des plus hauts et des plus bas de plus en plus hauts
+B. un RSI au-dessus de 70
+C. un volume en baisse
+D. une moyenne mobile plate
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q36
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
