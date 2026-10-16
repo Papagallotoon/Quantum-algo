@@ -1,53 +1,47 @@
-*Quantum Algo – jeudi 15 octobre 2026*
+*Quantum Algo – vendredi 16 octobre 2026*
 
-• Climat de marché normal (VIX 17,4, +3,3 % la veille).
-• 7 annonce(s) à fort impact aujourd'hui, la première à 02:30 (Employment Change, Australie) : volatilité possible autour de ces horaires.
-• Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
+• Climat de marché normal (VIX 16,5, -2,4 % la veille).
+• 2 annonce(s) à fort impact aujourd'hui, la première à 04:00 (BOE Gov Bailey Speaks, Royaume-Uni) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Travelers.
+• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
-02:30 🇦🇺 Employment Change (prévu 19.6K)
-02:30 🇦🇺 Taux de chômage (prévu 4.6%)
-08:00 🇬🇧 Croissance du PIB (sur un mois) (prévu -0.1%)
-14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.3%)
-14:30 🇺🇸 Ventes au détail hors automobile (sur un mois) (prévu 0.6%)
-14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.6%)
-14:30 🇺🇸 Ventes au détail (sur un mois) (prévu 0.3%)
+04:00 🇬🇧 BOE Gov Bailey Speaks
+05:30 🇺🇸 Fed Chairman Warsh Speaks
 
-*À venir (fort impact)*
-ven. 16/10 04:00 🇬🇧 BOE Gov Bailey Speaks
-ven. 16/10 05:30 🇺🇸 Fed Chairman Warsh Speaks
+*Résultats aujourd'hui* : Travelers
 
 *Opportunités*
-• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,0 %
-  entrée 55,25-55,65, stop 51,24, objectif 62,55, revoir le 18/01
-• JPMorgan – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +2,7 %
-  entrée 344,36-346,29, stop 325,02, objectif 377,94, revoir le 18/01
+• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,7 %
+  entrée 906,92-940,97, stop 785,30, objectif 1286,56, revoir le 12/01
+• ASML – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +6,4 %
+  entrée 1629,84-1668,48, stop 1491,83, objectif 2020,79, revoir le 12/01
+• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
+  entrée 54,93-55,32, stop 51,00, objectif 61,64, revoir le 19/01
   ⚠ résultats pendant la position
-• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +13,9 %
-  entrée 6522,60-6839,56, stop 5390,58, objectif 9780,83, revoir le 12/01
+• Texas Instruments – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +4,8 %
+  entrée 274,93-280,80, stop 253,95, objectif 326,20, revoir le 12/01
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
-  entrée 28,45-28,64, stop 26,52, objectif 32,25, revoir le 19/01
-• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,3 %
-  entrée 26,67-26,88, stop 24,53, objectif 29,88, revoir le 19/01
+• Tokyo Electron – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +9,6 %
+  entrée 12915,00-13078,22, stop 11282,75, objectif 17292,01, revoir le 20/01
   ⚠ résultats pendant la position
 
 *À éviter*
 • IBM : 46 % de chances de hausse seulement (1 mois)
-• Nintendo : 47 % de chances de hausse seulement (1 mois)
+• Thales : 47 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• Wall Street : nouvelle correction en vue pour le Nasdaq (Boursier.com)
-• L'euro recule à de nouveaux plus bas face au dollar et à la livre malgré les hausses de la BCE (Yahoo Finance France)
-• La présidente de la Fed de San Francisco a déclaré que d'autres hausses de taux sont probables mais pas urgentes. (fr.qz.com)
+• LE BRIEF MATINAL DU 16 octobre : L'Europe attendue en hausse après le redressement de Wall Street (Zonebourse)
+• Agenda des sociétés pour la journée -Cac 40 (ABC Bourse)
+• Kevin Warsh, de la Fed, voit des vents porteurs pour l’économie américaine et reste muet sur la trajectoire des taux (Zonebourse Suisse)
 
-*🎓 Question du jour* : Une tendance haussière se reconnaît à…
-A. des plus hauts et des plus bas de plus en plus hauts
-B. un RSI au-dessus de 70
-C. un volume en baisse
-D. une moyenne mobile plate
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q36
+*🎓 Question du jour* : Une résistance cassée devient souvent…
+A. un nouveau support
+B. sans importance
+C. une résistance plus forte
+D. un signal de vente
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q37
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
