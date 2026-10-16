@@ -8,6 +8,7 @@ import SwipePager from "../components/SwipePager";
 import StockRow from "../components/StockRow";
 import Gauge from "../components/Gauge";
 import Icon from "../components/Icons";
+import { flagOf } from "../flags";
 import { Chips, Segmented, Pill } from "../components/UI";
 
 var H_LONG = { "1J": "demain", "1S": "dans une semaine", "1M": "dans un mois", "3M": "dans trois mois" };
@@ -31,7 +32,7 @@ function MiniCard(props) {
         <Icon name={props.up ? "trendUp" : "trendDown"} size={14} width={2.4} color={props.up ? C.up : C.down} />
         <Text style={[T.sans(11.5, "500"), { color: C.dim }]}>{props.title}</Text>
       </View>
-      <Text style={[T.sans(15, "600"), { color: C.text }]} numberOfLines={1}>{s.name}</Text>
+      <Text style={[T.sans(15, "600"), { color: C.text }]} numberOfLines={1}>{(flagOf(s.symbol || s.id) ? flagOf(s.symbol || s.id) + " " : "") + s.name}</Text>
       <View style={{ flexDirection: "row", alignItems: "baseline", justifyContent: "space-between" }}>
         <Text style={[T.mono(22, "700"), { color: props.up ? C.up : C.down }]}>{s.score + " %"}</Text>
         <Text style={[T.sans(11, "600"), { color: props.up ? C.up : C.down }]}>{props.up ? "de hausse" : "de baisse"}</Text>
@@ -96,7 +97,7 @@ export default function MarketScreen(props) {
         <SearchBar onSelect={openSearched} />
       </View>
 
-      <Chips items={INDEX_DEFS.map(function (i) { return { id: i.id, label: i.name === "NASDAQ" ? "Nasdaq" : i.name === "NIKKEI" ? "Nikkei" : i.name === "DOW" ? "Dow" : i.name }; })}
+      <Chips items={INDEX_DEFS.map(function (i) { return { id: i.id, label: flagOf(i.id) + " " + (i.name === "NASDAQ" ? "Nasdaq" : i.name === "NIKKEI" ? "Nikkei" : i.name === "DOW" ? "Dow" : i.name) }; })}
         value={st.index} onChange={function (id) { props.setState({ index: id }); }} />
 
       <SwipePager canPrev canNext onPrev={function () { goTo(-1); }} onNext={function () { goTo(1); }}>

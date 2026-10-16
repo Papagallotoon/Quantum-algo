@@ -2,6 +2,7 @@ import React from "react";
 import { View, Text, Pressable } from "react-native";
 import Svg, { Polyline } from "react-native-svg";
 import { C, T } from "../theme";
+import { flagOf } from "../flags";
 
 function sparkPts(src) {
   if (!src || src.length < 2) return null;
@@ -29,7 +30,7 @@ export default function StockRow(props) {
         <Text style={[T.sans(8.5, "600"), { color: color, letterSpacing: 0.4 }]}>{word}</Text>
       </View>
       <View style={{ flex: 1, minWidth: 0, gap: 3 }}>
-        <Text style={[T.sans(14.5, "600"), { color: C.text }]} numberOfLines={1}>{s.name}</Text>
+        <Text style={[T.sans(14.5, "600"), { color: C.text }]} numberOfLines={1}>{(flagOf(s.symbol || s.id) ? flagOf(s.symbol || s.id) + " " : "") + s.name}</Text>
         <Text style={[T.sans(11.5, "400"), { color: C.dim }]} numberOfLines={1}>{String(s.sub || "").replace(" / ", " · ")}</Text>
       </View>
       {pts ? (

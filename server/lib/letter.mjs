@@ -1,4 +1,5 @@
 // Mise en page de la lettre du matin : HTML (e-mail) et texte court (WhatsApp).
+import { flagOf } from "./flags.mjs";
 // Design "refonte" : fond nuit, cartes sobres, chiffres en mono, vert / corail pour le sens, indigo pour l'action.
 
 const HL = { "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" };
@@ -25,6 +26,7 @@ const cchg = (v) => (!ok(v) ? DIM : v >= 0 ? UP : DOWN);
 
 let SITE = "";
 const link = (hash, inner, style = `color:inherit;text-decoration:none`) => SITE ? `<a href="${SITE}#/${hash}" style="${style}">${inner}</a>` : inner;
+const fl = (sym) => { const f = flagOf(sym); return f ? f + "&nbsp;" : ""; };
 const mono = (s, c = TXT, size = 13, w = 600) => `<span style="font-family:${MONO};font-size:${size}px;font-weight:${w};color:${c};white-space:nowrap">${s}</span>`;
 const chip = (txt, c, bg, size = 11) => `<span style="display:inline-block;font-size:${size}px;font-weight:600;padding:4px 10px;border-radius:999px;background:${bg};color:${c};white-space:nowrap">${txt}</span>`;
 const badge = (txt, today) => chip(txt, today ? UP : ALERT, today ? "rgba(52,211,153,0.12)" : "rgba(245,183,64,0.12)");
@@ -91,7 +93,7 @@ function pickCard(p, n) {
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
       <td style="vertical-align:top">
         <div style="font-family:${MONO};font-size:11px;color:${DIM};letter-spacing:1px">${String(n).padStart(2, "0")} · ${esc(p.sym)}</div>
-        <div style="font-size:17px;font-weight:700;color:${TXT};margin-top:3px">${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</div>
+        <div style="font-size:17px;font-weight:700;color:${TXT};margin-top:3px">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</div>
       </td>
       <td style="vertical-align:top;text-align:right;white-space:nowrap">
         <div style="font-family:${MONO};font-size:26px;font-weight:700;color:${col(p.pUp)};letter-spacing:-1px;line-height:28px">${Math.round(p.pUp * 100)}<span style="font-size:14px">%</span></div>
@@ -160,27 +162,27 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
   }
 
   if (earnings && (earnings.today?.length || earnings.week?.length)) {
-    const t = earnings.today?.length ? earnings.today.map((e) => `<div style="padding:6px 0;font-size:13.5px">${badge("Aujourd'hui" + (e.when ? " · " + esc(e.when) : e.date ? " · " + hFr(e.date) : ""), true)}&nbsp; <b style="color:${TXT}">${link("v/" + encodeURIComponent(e.sym), esc(e.name))}</b></div>`).join("") : "";
-    const w = earnings.week?.length ? earnings.week.slice(0, 10).map((e) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)}&nbsp; ${link("v/" + encodeURIComponent(e.sym), esc(e.name))}</div>`).join("") + (earnings.week.length > 10 ? `<div style="margin-top:10px">${btn("today/agenda", `${earnings.week.length - 10} autres résultats`)}</div>` : "") + (earnings.week.some((e) => e.estimate) ? `<div style="font-size:11px;color:${DIM};margin-top:6px">* date estimée</div>` : "") : "";
+    const t = earnings.today?.length ? earnings.today.map((e) => `<div style="padding:6px 0;font-size:13.5px">${badge("Aujourd'hui" + (e.when ? " · " + esc(e.when) : e.date ? " · " + hFr(e.date) : ""), true)}&nbsp; <b style="color:${TXT}">${link("v/" + encodeURIComponent(e.sym), fl(e.sym) + esc(e.name))}</b></div>`).join("") : "";
+    const w = earnings.week?.length ? earnings.week.slice(0, 10).map((e) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)}&nbsp; ${link("v/" + encodeURIComponent(e.sym), fl(e.sym) + esc(e.name))}</div>`).join("") + (earnings.week.length > 10 ? `<div style="margin-top:10px">${btn("today/agenda", `${earnings.week.length - 10} autres résultats`)}</div>` : "") + (earnings.week.some((e) => e.estimate) ? `<div style="font-size:11px;color:${DIM};margin-top:6px">* date estimée</div>` : "") : "";
     parts.push(card("Résultats d'entreprises", t + w, "Valeurs suivies. Vert : aujourd'hui · ambre : dans les prochains jours."));
   }
 
   if (context?.length) {
-    parts.push(card("Contexte de marché", `${T0}<tr>${th("")}${th("Niveau", true)}${th("Veille", true)}${th("1 mois", true)}</tr>${context.map((c) => `<tr>${td(esc(c.label))}${td(mono(f2(c.last), TXT, 12.5), "text-align:right")}${td(mono(sp(c.chg), c.sym === "^VIX" ? cchg(-c.chg) : cchg(c.chg), 12.5), "text-align:right")}${td(mono(sp1(c.m1), DIM, 12), "text-align:right")}</tr>`).join("")}</table>`));
+    parts.push(card("Contexte de marché", `${T0}<tr>${th("")}${th("Niveau", true)}${th("Veille", true)}${th("1 mois", true)}</tr>${context.map((c) => `<tr>${td(fl(c.sym) + esc(c.label))}${td(mono(f2(c.last), TXT, 12.5), "text-align:right")}${td(mono(sp(c.chg), c.sym === "^VIX" ? cchg(-c.chg) : cchg(c.chg), 12.5), "text-align:right")}${td(mono(sp1(c.m1), DIM, 12), "text-align:right")}</tr>`).join("")}</table>`));
   }
 
-  parts.push(card("Les indices", `${T0}<tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("1 mois", true)}</tr>${indices.map((x) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("indices/" + x.id, esc(x.label))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(x.trend)}</div>`)}${td(mono(sp(x.chg), cchg(x.chg), 12.5), "text-align:right")}${td(mono(pc(x.p1S), col(x.p1S), 13, 700), "text-align:right")}${td(mono(pc(x.p1M), col(x.p1M), 13, 700), "text-align:right")}</tr>`).join("")}</table>`,
+  parts.push(card("Les indices", `${T0}<tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("1 mois", true)}</tr>${indices.map((x) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("indices/" + x.id, fl(x.id) + esc(x.label))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(x.trend)}</div>`)}${td(mono(sp(x.chg), cchg(x.chg), 12.5), "text-align:right")}${td(mono(pc(x.p1S), col(x.p1S), 13, 700), "text-align:right")}${td(mono(pc(x.p1M), col(x.p1M), 13, 700), "text-align:right")}</tr>`).join("")}</table>`,
     "Les pourcentages sont des chances de hausse sur 100 à l'horizon indiqué, pas des variations. Autour de 50 % : pas d'avis.", "indices"));
 
   parts.push(card("Opportunités du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<div style="font-size:13.5px;color:${DIM}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</div>`,
     "De la plus solide à la moins solide. « 58 % » = 58 chances sur 100 de finir plus haut à l'horizon indiqué.", "today/opportunites"));
 
-  if (avoid.length) parts.push(card("À éviter", `${T0}<tr>${th("Valeur")}${th("Hausse", true)}${th("Si détenue", true)}</tr>${avoid.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${HL[p.h]} · 1 mois ${sp1(p.perf?.m1)}</div>`)}${td(mono(pc(p.pUp), DOWN, 13, 700), "text-align:right")}${td(`<span style="font-size:12px;color:${DIM}">stop</span> ${mono(f2(p.stop), SOFT, 12)}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`));
+  if (avoid.length) parts.push(card("À éviter", `${T0}<tr>${th("Valeur")}${th("Hausse", true)}${th("Si détenue", true)}</tr>${avoid.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${HL[p.h]} · 1 mois ${sp1(p.perf?.m1)}</div>`)}${td(mono(pc(p.pUp), DOWN, 13, 700), "text-align:right")}${td(`<span style="font-size:12px;color:${DIM}">stop</span> ${mono(f2(p.stop), SOFT, 12)}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`));
 
-  if (watch.length) parts.push(card("Ta liste", `${T0}<tr>${th("Valeur")}${th("Cours", true)}${th("Hausse", true)}</tr>${watch.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(p.actionLabel)} · ${HL[p.h]}${p.earningsWarning ? ` · <span style="color:${ALERT}">résultats à venir</span>` : ""}</div>`)}${td(mono(f2(p.price), TXT, 12.5) + `<div>${mono(sp(p.chg), cchg(p.chg), 11)}</div>`, "text-align:right")}${td(mono(pc(p.pUp), col(p.pUp), 13, 700), "text-align:right")}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => newsList(p.news.slice(0, 1), true)).join("")}`));
+  if (watch.length) parts.push(card("Ta liste", `${T0}<tr>${th("Valeur")}${th("Cours", true)}${th("Hausse", true)}</tr>${watch.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(p.actionLabel)} · ${HL[p.h]}${p.earningsWarning ? ` · <span style="color:${ALERT}">résultats à venir</span>` : ""}</div>`)}${td(mono(f2(p.price), TXT, 12.5) + `<div>${mono(sp(p.chg), cchg(p.chg), 11)}</div>`, "text-align:right")}${td(mono(pc(p.pUp), col(p.pUp), 13, 700), "text-align:right")}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => newsList(p.news.slice(0, 1), true)).join("")}`));
 
   if (movers && (movers.up?.length || movers.down?.length)) {
-    const li = (m) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${link("v/" + encodeURIComponent(m.sym), esc(m.name))} ${mono(sp(m.chg), cchg(m.chg), 12)}</div>`;
+    const li = (m) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${link("v/" + encodeURIComponent(m.sym), fl(m.sym) + esc(m.name))} ${mono(sp(m.chg), cchg(m.chg), 12)}</div>`;
     parts.push(card("Plus forts mouvements d'hier", `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="50%" style="vertical-align:top;padding-right:8px"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${UP};margin-bottom:4px">HAUSSE</div>${movers.up.map(li).join("")}</td><td style="vertical-align:top"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${DOWN};margin-bottom:4px">BAISSE</div>${movers.down.map(li).join("")}</td></tr></table>`));
   }
 

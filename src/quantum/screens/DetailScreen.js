@@ -12,6 +12,7 @@ import NewsList from "../components/NewsList";
 import Dial from "../components/Dial";
 import PriceChart from "../components/PriceChart";
 import Icon from "../components/Icons";
+import { flagOf } from "../flags";
 import { Card, Segmented, Chips, Stat } from "../components/UI";
 
 function Row(props) {
@@ -83,7 +84,7 @@ export default function DetailScreen(props) {
           <Icon name="back" size={18} width={2} color={C.text} />
         </Pressable>
         <View style={{ flex: 1, minWidth: 0, gap: 2 }}>
-          <Text style={[T.sans(18, "700"), { color: C.text, letterSpacing: -0.3 }]} numberOfLines={1}>{s.name}</Text>
+          <Text style={[T.sans(18, "700"), { color: C.text, letterSpacing: -0.3 }]} numberOfLines={1}>{(flagOf(s.symbol || s.id) ? flagOf(s.symbol || s.id) + " " : "") + s.name}</Text>
           <Text style={[T.mono(11.5, "500"), { color: C.dim }]} numberOfLines={1}>{String(s.ticker || "").replace(" / ", " · ")}</Text>
         </View>
         <Pressable onPress={function () { props.toggleWatch(s.id); }} accessibilityLabel="Suivre cette valeur"

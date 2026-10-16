@@ -8,6 +8,7 @@ import { useBrain } from "../Brain";
 import { HORIZON_KEYS, HORIZON_LABEL } from "../core/model.js";
 import { Card, CardTitle, ScreenTitle, Segmented, Stat } from "../components/UI";
 import Icon from "../components/Icons";
+import { flagOf } from "../flags";
 
 function pc(v) { return v == null || isNaN(v) ? "-" : (v * 100).toFixed(1).replace(".", ",") + " %"; }
 function sp(v) { return v == null || isNaN(v) ? "-" : (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(2).replace(".", ",") + " %"; }
@@ -104,7 +105,7 @@ export default function TrustScreen(props) {
               <Pressable key={p.sym + p.h} onPress={function () { props.open(p.sym); }} accessibilityRole="button"
                 style={{ flexDirection: "row", alignItems: "center", gap: 12, paddingVertical: 10, borderTopWidth: 1, borderTopColor: C.borderSoft }}>
                 <View style={{ flex: 1, minWidth: 0, gap: 2 }}>
-                  <Text style={[T.sans(14, "600"), { color: C.text }]} numberOfLines={1}>{p.name}</Text>
+                  <Text style={[T.sans(14, "600"), { color: C.text }]} numberOfLines={1}>{(flagOf(p.sym) ? flagOf(p.sym) + " " : "") + p.name}</Text>
                   <Text style={[T.sans(11.5, "400"), { color: C.dim }]}>{p.actionLabel + " · " + (HORIZON_LABEL[p.h] || p.h)}</Text>
                 </View>
                 <Text style={[T.mono(15, "700"), { color: C.up }]}>{Math.round(p.pUp * 100) + " %"}</Text>

@@ -182,6 +182,17 @@
     if (!c) return esc((e && e.flag) || "");
     return '<img src="https://flagcdn.com/w40/' + c + '.png" alt="' + esc(e.country || e.cur) + '" title="' + esc(e.country || e.cur) + '" style="width:20px;height:14px;object-fit:cover;border-radius:2px;vertical-align:-2px;box-shadow:0 0 0 1px rgba(255,255,255,.15)">';
   }
+  // drapeau du marche de cotation (symbole Yahoo ou identifiant d'indice)
+  var SUF = { PA: "fr", DE: "de", F: "de", MI: "it", T: "jp", AS: "nl", L: "gb", SW: "ch", MC: "es", BR: "be" };
+  var SPEC = { "^FCHI": "fr", "^SBF120": "fr", "^GSPC": "us", "^NDX": "us", "^IXIC": "us", "^DJI": "us", "^GDAXI": "de", "FTSEMIB.MI": "it", "^N225": "jp", cac: "fr", sbf: "fr", srd: "fr", spx: "us", ndx: "us", dji: "us", dax: "de", mib: "it", nkx: "jp" };
+  var CNAME = { fr: "France", de: "Allemagne", it: "Italie", jp: "Japon", nl: "Pays-Bas", gb: "Royaume-Uni", ch: "Suisse", es: "Espagne", be: "Belgique", us: "États-Unis" };
+  function flagSym(sym, big) {
+    var s = String(sym || ""), c = SPEC[s];
+    if (!c) { var m = /\.([A-Z]{1,3})$/.exec(s); c = m ? SUF[m[1]] : (s && s.charAt(0) !== "^" ? "us" : null); }
+    if (!c) return "";
+    var w = big ? 22 : 16, h = big ? 16 : 12;
+    return '<img src="https://flagcdn.com/w40/' + c + '.png" alt="' + CNAME[c] + '" title="' + CNAME[c] + '" style="width:' + w + 'px;height:' + h + 'px;object-fit:cover;border-radius:2px;vertical-align:-1px;margin-right:6px;box-shadow:0 0 0 1px rgba(255,255,255,.15)">';
+  }
   function norm(s) { return String(s || "").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g, "").replace(/’/g, "'"); }
   function esc(s) { return String(s == null ? "" : s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;"); }
   function dfr(iso) { if (!iso) return "-"; var d = new Date(iso); return d.toLocaleDateString("fr-FR", { weekday: "short", day: "2-digit", month: "2-digit", timeZone: "Europe/Paris" }); }
@@ -244,7 +255,7 @@
     var score = Math.round((up ? e.p : 1 - e.p) * 100);
     return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '">' +
       '<div class="tile ' + tc + '" title="' + score + ' chances sur 100 de ' + (up ? 'hausse' : 'baisse') + ' sur ' + esc(HL[h]) + '"><b>' + score + '</b><span>' + (!strong ? "NEUTRE" : up ? "HAUSSE" : "BAISSE") + '</span></div>' +
-      '<div class="grow"><div class="name">' + esc(a.name) + '</div><div class="small muted" style="margin-top:3px">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
+      '<div class="grow"><div class="name">' + flagSym(a.sym) + esc(a.name) + '</div><div class="small muted" style="margin-top:3px">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
       spark(a.hist, 56, 26, col) +
       '<div style="text-align:right;min-width:92px;flex:none"><div class="mono ' + cls(a.chg) + '" style="font-size:12.5px;font-weight:600">' + sp(a.chg) + '</div><span class="pill ' + pillCls(a.plan.action) + '" style="margin-top:5px;padding:4px 9px;font-size:11px">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span></div></a>';
   }
@@ -309,7 +320,7 @@
       h += '<h2 style="margin-top:18px">Résultats d\'entreprises</h2>';
       h += er.today.concat(er.week).map(function (e) {
         var now = er.today.indexOf(e) >= 0;
-        return '<a class="kv" href="#/v/' + encodeURIComponent(e.sym) + '"><span style="color:var(--text)">' + esc(e.name) + '</span><span class="pill ' + (now ? "d-now" : "d-soon") + '">' + (now ? "AUJOURD'HUI" : esc(dfr(e.date)).toUpperCase() + (e.estimate ? "*" : "")) + '</span></a>';
+        return '<a class="kv" href="#/v/' + encodeURIComponent(e.sym) + '"><span style="color:var(--text)">' + flagSym(e.sym) + esc(e.name) + '</span><span class="pill ' + (now ? "d-now" : "d-soon") + '">' + (now ? "AUJOURD'HUI" : esc(dfr(e.date)).toUpperCase() + (e.estimate ? "*" : "")) + '</span></a>';
       }).join("") + '<p class="small dimmer" style="margin:8px 0 0">Vert = aujourd\'hui · orange = dans les prochains jours' + (er.week.some(function (e) { return e.estimate; }) ? " · * date estimée" : "") + '</p>';
     }
     h += '</div><div class="card"><h2>Contexte de marché</h2>';
@@ -319,8 +330,8 @@
     }).join("") + '</table>'; else h += '<div class="empty">Indisponible.</div>';
     if (t.movers) {
       h += '<h2 style="margin-top:18px">Plus forts mouvements d\'hier</h2><div class="grid2" style="gap:6px">' +
-        '<div>' + (t.movers.up || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + esc(m.name) + '</span><span class="up">' + sp(m.chg) + '</span></a>'; }).join("") + '</div>' +
-        '<div>' + (t.movers.down || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + esc(m.name) + '</span><span class="down">' + sp(m.chg) + '</span></a>'; }).join("") + '</div></div>';
+        '<div>' + (t.movers.up || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="up">' + sp(m.chg) + '</span></a>'; }).join("") + '</div>' +
+        '<div>' + (t.movers.down || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="down">' + sp(m.chg) + '</span></a>'; }).join("") + '</div></div>';
     }
     h += '</div></div>';
     if (t.avoid.length) { h += '<div class="card"><h2>À éviter / alléger</h2>'; t.avoid.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); }); h += '</div>'; }
@@ -333,7 +344,7 @@
     var ref = idx.data || (list.filter(function (x) { return x.id === idx.ref; })[0] || {}).data;
     var NICE = { NASDAQ: "Nasdaq", DOW: "Dow", NIKKEI: "Nikkei" };
     var h = '<h1>Marchés</h1><div class="chips" style="margin:10px 0 14px">' + list.map(function (x) {
-      return '<a class="chip' + (x.id === idx.id ? " on" : "") + '" href="#/indices/' + x.id + '">' + esc(NICE[x.name] || x.name) + '</a>';
+      return '<a class="chip' + (x.id === idx.id ? " on" : "") + '" href="#/indices/' + x.id + '">' + flagSym(x.id) + esc(NICE[x.name] || x.name) + '</a>';
     }).join("") + '</div>';
     h += '<div class="tabs" style="max-width:520px">' + HK.map(function (k) { return '<a class="' + (k === st.h ? "on" : "") + '" data-h="' + k + '">' + esc(HL[k]) + '</a>'; }).join("") + '</div>';
     h += '<div class="grid2"><div class="card" style="text-align:center">';
@@ -353,7 +364,7 @@
   function pageStock(sym) {
     var a = D.stocks[sym] || (D.indices.filter(function (x) { return x.data && x.data.sym === sym; })[0] || {}).data;
     if (!a) return '<h1>Valeur introuvable</h1><p class="sub">' + esc(sym) + ' ne fait pas partie des valeurs suivies.</p><a class="chip" href="#/">← Retour</a>';
-    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" aria-label="Retour" onclick="history.length>1?history.back():location.hash=\'#/\'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a><div class="grow"><div style="font-size:24px;font-weight:700">' + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div></div>';
+    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" aria-label="Retour" onclick="history.length>1?history.back():location.hash=\'#/\'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a><div class="grow"><div style="font-size:24px;font-weight:700">' + flagSym(a.sym, true) + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div></div>';
     h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:34px;font-weight:700;letter-spacing:-1.4px">' + f2(a.price) + ' <span style="font-size:16px" class="muted">' + esc(a.cur) + '</span></span><span class="mono ' + cls(a.chg) + '">' + sp(a.chg) + '</span></div>';
     h += '<div class="tabs"><a data-tab="est" class="' + (st.tab === "est" ? "on" : "") + '">Estimation</a><a data-tab="tech" class="' + (st.tab === "tech" ? "on" : "") + '">Technique</a></div>';
     if (st.tab === "tech") {
@@ -678,7 +689,7 @@
       var sc = s === v || s.split(".")[0] === v ? 0 : n.indexOf(v) === 0 ? 1 : n.indexOf(v) >= 0 ? 2 : s.indexOf(v) >= 0 ? 3 : sec.indexOf(v) >= 0 ? 4 : -1;
       return { a: a, sc: sc };
     }).filter(function (x) { return x.sc >= 0; }).sort(function (x, y) { return x.sc - y.sc || x.a.name.localeCompare(y.a.name); }).slice(0, 12);
-    res.innerHTML = hits.length ? hits.map(function (x) { var a = x.a; return '<a href="#/v/' + encodeURIComponent(a.sym) + '"><span>' + esc(a.name) + (a.sector ? ' <span class="small dimmer">· ' + esc(a.sector) + '</span>' : '') + '</span><span class="mono dimmer">' + esc(a.sym) + '</span></a>'; }).join("")
+    res.innerHTML = hits.length ? hits.map(function (x) { var a = x.a; return '<a href="#/v/' + encodeURIComponent(a.sym) + '"><span>' + flagSym(a.sym) + esc(a.name) + (a.sector ? ' <span class="small dimmer">· ' + esc(a.sector) + '</span>' : '') + '</span><span class="mono dimmer">' + esc(a.sym) + '</span></a>'; }).join("")
       : '<a><span class="muted">« ' + esc(q.value.trim()) + ' » n\'est pas encore suivie (' + all.length + ' valeurs analysées chaque matin)</span></a>';
     res.style.display = "block";
   });
