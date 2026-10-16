@@ -1,9 +1,9 @@
 *Quantum Algo – vendredi 16 octobre 2026*
 
-• Climat de marché normal (VIX 16,5, -2,4 % la veille).
+• Climat de marché normal (VIX 16,0, -2,9 % la veille).
 • 2 annonce(s) à fort impact aujourd'hui, la première à 04:00 (BOE Gov Bailey Speaks, Royaume-Uni) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : Travelers.
-• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
@@ -13,28 +13,29 @@
 *Résultats aujourd'hui* : Travelers
 
 *Opportunités*
-• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,7 %
-  entrée 906,92-940,97, stop 785,30, objectif 1286,56, revoir le 12/01
+• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,5 %
+  entrée 906,92-940,97, stop 785,30, objectif 1273,17, revoir le 12/01
 • ASML – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +6,4 %
-  entrée 1629,84-1668,48, stop 1491,83, objectif 2020,79, revoir le 12/01
-• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 54,93-55,32, stop 51,00, objectif 61,64, revoir le 19/01
+  entrée 1629,84-1668,48, stop 1491,83, objectif 2024,44, revoir le 12/01
+• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
+  entrée 54,93-55,32, stop 51,00, objectif 61,49, revoir le 19/01
   ⚠ résultats pendant la position
 • Texas Instruments – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +4,8 %
-  entrée 274,93-280,80, stop 253,95, objectif 326,20, revoir le 12/01
+  entrée 274,93-280,80, stop 253,95, objectif 325,30, revoir le 12/01
   ⚠ résultats pendant la position
 • Tokyo Electron – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +9,6 %
-  entrée 12915,00-13078,22, stop 11282,75, objectif 17292,01, revoir le 20/01
+  entrée 12915,00-13078,22, stop 11282,75, objectif 17513,93, revoir le 20/01
   ⚠ résultats pendant la position
 
 *À éviter*
 • IBM : 46 % de chances de hausse seulement (1 mois)
-• Thales : 47 % de chances de hausse seulement (1 mois)
+• Vallourec : 46 % de chances de hausse seulement (1 mois)
+• Itochu : 47 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• LE BRIEF MATINAL DU 16 octobre : L'Europe attendue en hausse après le redressement de Wall Street (Zonebourse)
-• Agenda des sociétés pour la journée -Cac 40 (ABC Bourse)
-• Kevin Warsh, de la Fed, voit des vents porteurs pour l’économie américaine et reste muet sur la trajectoire des taux (Zonebourse Suisse)
+• Wall Street prévue en ordre dispersé à l'ouverture (Zonebourse Suisse)
+• Kevin Warsh, président de la Fed, refuse de spéculer sur les taux d’intérêt (Business AM)
+• Travelers attendu en net recul après un 3e trimestre mitigé (Bourse Direct)
 
 *🎓 Question du jour* : Une résistance cassée devient souvent…
 A. un nouveau support
