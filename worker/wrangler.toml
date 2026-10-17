@@ -14,7 +14,7 @@ ALLOWED_ORIGIN = "https://papagallotoon.github.io"
 GH_REPO = "Papagallotoon/Quantum-algo"
 SEND_HOUR_PARIS = "7"
 
-# Lancement de la routine du matin : 7 h 45 a Paris (lettre recue vers 8 h), du lundi au vendredi.
+# Lancement de la routine du matin : 7 h 45 a Paris (lettre recue vers 8 h), tous les jours, week-end compris.
 # 05:45 UTC = 7 h 45 l'ete, 06:45 UTC = 7 h 45 l'hiver ; le code ne garde que le bon.
 [triggers]
-crons = ["45 5 * * 1-5", "45 6 * * 1-5"]
+crons = ["45 5 * * *", "45 6 * * *"]
