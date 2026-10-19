@@ -298,7 +298,14 @@ if (!FAKE) {
 const vix = vixCtx;
 const mood = !vix ? null : vix.last < 15 ? "calme" : vix.last < 20 ? "normal" : vix.last < 30 ? "nerveux" : "en stress";
 const brief = [];
-if (vix) brief.push(`Climat de marché ${mood} (VIX ${vix.last.toFixed(1).replace(".", ",")}${vix.chg != null ? ", " + (vix.chg >= 0 ? "+" : "") + vix.chg.toFixed(1).replace(".", ",") + " % la veille" : ""}).`);
+// Ligne d'ouverture : le CAC 40 (niveau, veille, 1 mois, tendance, chances de hausse a 1 mois)
+const cac = indices.find((x) => x.id === "cac");
+if (cac) {
+  const fr1 = (v) => (v >= 0 ? "+" : "−") + Math.abs(v).toFixed(1).replace(".", ",") + " %";
+  const lvl = Math.round(cac.price).toLocaleString("fr-FR");
+  const p = cac.p1M, view = p >= 0.53 ? `${Math.round(p * 100)} % de chances de hausse à 1 mois` : p <= 0.47 ? `seulement ${Math.round(p * 100)} % de chances de hausse à 1 mois` : "pas d'avis net à 1 mois (≈ pile ou face)";
+  brief.push(`CAC 40 à ${lvl} points : ${fr1(cac.chg)} à la dernière séance, ${fr1(cac.m1)} sur un mois, ${cac.trend === "sous SMA 200" ? "sous" : "au-dessus de"} sa moyenne 200 jours ; ${view}${mood ? `, climat de marché ${mood}` : ""}.`);
+} else if (vix) brief.push(`Climat de marché ${mood}.`);
 const hi = agenda.today.filter((e) => e.impact === "fort");
 if (hi.length) brief.push(`${hi.length} annonce(s) à fort impact aujourd'hui, la première à ${hi[0].time} (${hi[0].title}, ${hi[0].country}) : volatilité possible autour de ces horaires.`);
 else if (agenda.ok) brief.push("Pas d'annonce macroéconomique majeure aujourd'hui.");
