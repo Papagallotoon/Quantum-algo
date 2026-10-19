@@ -86,22 +86,62 @@ export default {
       return json({ ok: true, count: out.length, subscribers: out }, 200, env);
     }
 
+    // Etat des derniers reveils programmes (aucune donnee sensible)
+    if (url.pathname === "/cron-status") {
+      const log = JSON.parse((await env.SUBS.get("cron:log")) || "[]");
+      return json({ ok: true, parisHourNow: parisHour(new Date()), sendHour: Number(env.SEND_HOUR_PARIS || 7), tokenConfigured: !!env.GH_TOKEN, last: log }, 200, env);
+    }
+    // Lancement immediat pour tester : /cron-test?key=<ADMIN_TOKEN>
+    if (url.pathname === "/cron-test") {
+      if (!env.ADMIN_TOKEN || url.searchParams.get("key") !== env.ADMIN_TOKEN) return json({ ok: false, error: "cle invalide" }, 401, env);
+      const r = await dispatch(env);
+      await note(env, { at: new Date().toISOString(), cron: "test manuel", parisHour: parisHour(new Date()), ...r });
+      return json({ ...r, explication: r.ok ? "Routine lancee : la lettre arrive dans 5 minutes environ." : r.status === 401 ? "Cle GitHub invalide ou expiree." : r.status === 403 || r.status === 404 ? "La cle GitHub n'a pas le droit Actions: Read and write sur Quantum-algo." : "Voir le detail de l'erreur." }, r.ok ? 200 : 500, env);
+    }
+
     return json({ ok: true, service: "quantum-algo-newsletter" }, 200, env);
   },
 
   // Reveil programme (voir [triggers] dans wrangler.toml) : lance la routine GitHub a l'heure dite.
-  // Deux reveils (heure d'ete / d'hiver) : seul celui qui tombe a 7 h 45, heure de Paris, declenche.
+  // Deux reveils (heure d'ete / d'hiver) : seul celui qui tombe a 7 h, heure de Paris, declenche.
   async scheduled(event, env, ctx) {
-    const now = new Date();
-    const parts = Object.fromEntries(new Intl.DateTimeFormat("fr-FR", { timeZone: "Europe/Paris", hour: "2-digit", minute: "2-digit", weekday: "short", hour12: false }).formatToParts(now).map((p) => [p.type, p.value]));
-    if (Number(parts.hour) !== Number(env.SEND_HOUR_PARIS || 7)) return;
-    if (!env.GH_TOKEN) { console.log("GH_TOKEN manquant : npx wrangler secret put GH_TOKEN"); return; }
-    const repo = env.GH_REPO || "Papagallotoon/Quantum-algo";
-    const res = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/quantum-daily.yml/dispatches`, {
-      method: "POST",
-      headers: { Authorization: "Bearer " + env.GH_TOKEN, Accept: "application/vnd.github+json", "User-Agent": "quantum-algo-worker", "Content-Type": "application/json" },
-      body: JSON.stringify({ ref: "main" }),
-    });
-    console.log("declenchement de la routine :", res.status, res.status === 204 ? "ok" : await res.text());
+    const hour = parisHour(new Date());
+    if (hour !== Number(env.SEND_HOUR_PARIS || 7)) {
+      await note(env, { at: new Date().toISOString(), cron: event.cron, parisHour: hour, skipped: "pas l'heure de Paris prevue" });
+      return;
+    }
+    const r = await dispatch(env);
+    await note(env, { at: new Date().toISOString(), cron: event.cron, parisHour: hour, ...r });
   },
 };
+
+function parisHour(d) {
+  const h = new Intl.DateTimeFormat("en-GB", { timeZone: "Europe/Paris", hour: "numeric", hourCycle: "h23" }).format(d);
+  return parseInt(h, 10);
+}
+
+// Demande a GitHub de lancer la routine (bouton "Run workflow")
+async function dispatch(env) {
+  if (!env.GH_TOKEN) return { ok: false, status: 0, error: "secret GH_TOKEN absent : npx wrangler secret put GH_TOKEN" };
+  const repo = env.GH_REPO || "Papagallotoon/Quantum-algo";
+  try {
+    const res = await fetch(`https://api.github.com/repos/${repo}/actions/workflows/quantum-daily.yml/dispatches`, {
+      method: "POST",
+      headers: { Authorization: "Bearer " + env.GH_TOKEN, Accept: "application/vnd.github+json", "User-Agent": "quantum-algo-worker", "Content-Type": "application/json", "X-GitHub-Api-Version": "2022-11-28" },
+      body: JSON.stringify({ ref: "main" }),
+    });
+    const body = res.status === 204 ? "" : (await res.text()).slice(0, 300);
+    return { ok: res.status === 204, status: res.status, error: body || undefined };
+  } catch (e) {
+    return { ok: false, status: 0, error: String(e).slice(0, 300) };
+  }
+}
+
+// Garde une trace des 10 derniers reveils (sans aucun secret) pour /cron-status
+async function note(env, entry) {
+  try {
+    const prev = JSON.parse((await env.SUBS.get("cron:log")) || "[]");
+    prev.unshift(entry);
+    await env.SUBS.put("cron:log", JSON.stringify(prev.slice(0, 10)));
+  } catch (e) { /* facultatif */ }
+}
