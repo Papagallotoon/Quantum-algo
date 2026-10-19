@@ -1,48 +1,48 @@
-*Quantum Algo – dimanche 18 octobre 2026*
+*Quantum Algo – lundi 19 octobre 2026*
 
-• Climat de marché normal (VIX 20,0, +21,4 % la veille).
-• Pas d'annonce macroéconomique majeure aujourd'hui.
+• CAC 40 à 7 833 points : −1,6 % à la dernière séance, −2,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• 3 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Inflation (indice des prix à la consommation) (sur un mois), Canada) : volatilité possible autour de ces horaires.
 • Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
+*Agenda (fort impact)*
+14:30 🇨🇦 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.2%)
+14:30 🇨🇦 Median CPI y/y (prévu 2.0%)
+14:30 🇨🇦 Trimmed CPI y/y (prévu 1.9%)
+
 *À venir (fort impact)*
-lun. 19/10 14:30 🇨🇦 Inflation (indice des prix à la consommation) (sur un mois)
-lun. 19/10 14:30 🇨🇦 Median CPI y/y
-lun. 19/10 14:30 🇨🇦 Trimmed CPI y/y
 mer. 21/10 08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an)
 dim. 25/10 02:00 🇨🇭 Daylight Saving Time Shift
 dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
+dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
 
 *Opportunités*
-• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 54,93-55,33, stop 50,98, objectif 61,35, revoir le 20/01
+• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +12,8 %
+  entrée 894,36-928,50, stop 772,43, objectif 1287,66, revoir le 14/01
+• RWE – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +3,8 %
+  entrée 56,46-57,38, stop 53,18, objectif 64,36, revoir le 14/01
   ⚠ résultats pendant la position
-• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,3 %
-  entrée 854,24-888,68, stop 731,27, objectif 1224,41, revoir le 13/01
 • Tokyo Electron – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +9,6 %
-  entrée 12915,00-13078,22, stop 11282,75, objectif 17230,39, revoir le 20/01
+  entrée 12915,00-13078,22, stop 11282,75, objectif 17234,05, revoir le 20/01
   ⚠ résultats pendant la position
-• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +12,7 %
-  entrée 6674,68-6990,13, stop 5548,09, objectif 9759,08, revoir le 13/01
+• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,2 %
+  entrée 54,93-55,31, stop 51,15, objectif 61,52, revoir le 21/01
   ⚠ résultats pendant la position
-• Texas Instruments – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +4,4 %
-  entrée 272,22-278,19, stop 250,90, objectif 321,70, revoir le 13/01
+• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +12,4 %
+  entrée 6674,68-6990,13, stop 5548,09, objectif 9820,99, revoir le 13/01
   ⚠ résultats pendant la position
-
-*À éviter*
-• Itochu : 47 % de chances de hausse seulement (1 mois)
 
 *À lire*
-• Menace de "lundi noir" sur le Bitcoin : ce seuil critique qui va décider du sort de votre portefeuille crypto (Bourse Inside)
-• Le prix de l'or la semaine prochaine est au tournant, les investisseurs penchent vers une baisse (Laodong.vn)
-• J’ai remarqué qu’il existe maintenant un étrange indice, le CAC 40 CHF. D’où vient-il ? À quoi peut-il bien servir ? (Le Figaro Bourse)
+• Wall Street prend son inspiration avant une nouvelle salve de publications (Zonebourse Suisse)
+• Bourse: Wall Street repart en avant, le Nasdaq à la manœuvre (Les Affaires)
+• Les marchés boursiers européens dans le rouge en raison des troubles politiques en France (Business AM)
 
-*🎓 Question du jour* : Que mesure le PER ?
-A. Le rendement du dividende
-B. Le nombre d'années de bénéfices payées
-C. La dette de l'entreprise
-D. La volatilité
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q39
+*🎓 Question du jour* : Après une publication de résultats, qu'est-ce qui fait le plus bouger le cours ?
+A. Le chiffre brut
+B. L'écart avec ce qu'attendaient les analystes et les prévisions
+C. La longueur du communiqué
+D. L'heure de publication
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q40
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
