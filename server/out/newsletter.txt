@@ -1,14 +1,12 @@
-*Quantum Algo – lundi 19 octobre 2026*
+*Quantum Algo – mardi 20 octobre 2026*
 
-• CAC 40 à 7 833 points : −1,6 % à la dernière séance, −2,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• 3 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Inflation (indice des prix à la consommation) (sur un mois), Canada) : volatilité possible autour de ces horaires.
+• CAC 40 à 7 796 points : −0,9 % à la dernière séance, −4,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : OVHcloud, GE Aerospace, General Motors, Netflix, RTX Raytheon, 3M, Deutsche Boerse.
 • Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-14:30 🇨🇦 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.2%)
-14:30 🇨🇦 Median CPI y/y (prévu 2.0%)
-14:30 🇨🇦 Trimmed CPI y/y (prévu 1.9%)
+*Résultats aujourd'hui* : OVHcloud, GE Aerospace, General Motors, Netflix, RTX Raytheon, 3M, Deutsche Boerse
 
 *À venir (fort impact)*
 mer. 21/10 08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an)
@@ -17,32 +15,31 @@ dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
 dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
 
 *Opportunités*
-• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +12,8 %
-  entrée 894,36-928,50, stop 772,43, objectif 1287,66, revoir le 14/01
-• RWE – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +3,8 %
-  entrée 56,46-57,38, stop 53,18, objectif 64,36, revoir le 14/01
+• RWE – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
+  entrée 56,57-57,48, stop 53,32, objectif 64,14, revoir le 15/01
   ⚠ résultats pendant la position
-• Tokyo Electron – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +9,6 %
-  entrée 12915,00-13078,22, stop 11282,75, objectif 17234,05, revoir le 20/01
+• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,0 %
+  entrée 880,35-914,72, stop 757,59, objectif 1234,11, revoir le 14/01
+• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
+  entrée 54,93-55,33, stop 50,97, objectif 61,68, revoir le 21/01
   ⚠ résultats pendant la position
-• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,2 %
-  entrée 54,93-55,31, stop 51,15, objectif 61,52, revoir le 21/01
+• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
+  entrée 26,60-26,83, stop 24,36, objectif 29,97, revoir le 22/01
   ⚠ résultats pendant la position
-• Murata – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +12,4 %
-  entrée 6674,68-6990,13, stop 5548,09, objectif 9820,99, revoir le 13/01
-  ⚠ résultats pendant la position
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
+  entrée 3473,00-3500,36, stop 3199,35, objectif 4070,10, revoir le 22/01
 
 *À lire*
-• Wall Street prend son inspiration avant une nouvelle salve de publications (Zonebourse Suisse)
-• Bourse: Wall Street repart en avant, le Nasdaq à la manœuvre (Les Affaires)
-• Les marchés boursiers européens dans le rouge en raison des troubles politiques en France (Business AM)
+• La remontée du pétrole et la débâcle d'Elice incitent Wall Street à la prudence (Zonebourse Suisse)
+• Wall Street dans le rouge, après une vague de publications trimestrielles (Boursier.com)
+• La Fed ne bougera pas en octobre, mais relèvera de nouveau ses taux en décembre, selon la quasi-totalité des économistes (Zonebourse Suisse)
 
-*🎓 Question du jour* : Après une publication de résultats, qu'est-ce qui fait le plus bouger le cours ?
-A. Le chiffre brut
-B. L'écart avec ce qu'attendaient les analystes et les prévisions
-C. La longueur du communiqué
-D. L'heure de publication
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q40
+*🎓 Question du jour* : La capitalisation boursière se calcule…
+A. cours × nombre d'actions
+B. bénéfice × 10
+C. chiffre d'affaires - dettes
+D. cours ÷ bénéfice
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q41
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
