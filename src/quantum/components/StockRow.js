@@ -3,6 +3,7 @@ import { View, Text, Pressable } from "react-native";
 import Svg, { Polyline } from "react-native-svg";
 import { C, T } from "../theme";
 import { flagOf } from "../flags";
+import Icon from "./Icons";
 
 function sparkPts(src) {
   if (!src || src.length < 2) return null;
@@ -38,11 +39,19 @@ export default function StockRow(props) {
           <Polyline points={pts} fill="none" stroke={color} strokeWidth={1.8} strokeLinejoin="round" strokeLinecap="round" />
         </Svg>
       ) : null}
-      {chg != null && !isNaN(chg) ? (
-        <Text style={[T.mono(12.5, "600"), { width: 62, textAlign: "right", color: chg >= 0 ? C.up : C.down }]}>
-          {(chg >= 0 ? "+" : "") + chg.toFixed(2).replace(".", ",") + " %"}
-        </Text>
-      ) : null}
+      <View style={{ width: 62, alignItems: "flex-end", gap: 6 }}>
+        {chg != null && !isNaN(chg) ? (
+          <Text style={[T.mono(12.5, "600"), { textAlign: "right", color: chg >= 0 ? C.up : C.down }]}>
+            {(chg >= 0 ? "+" : "") + chg.toFixed(2).replace(".", ",") + " %"}
+          </Text>
+        ) : null}
+        {props.onToggle ? (
+          <Pressable onPress={props.onToggle} hitSlop={12} accessibilityRole="button"
+            accessibilityLabel={props.watched ? "Retirer de mes valeurs" : "Ajouter à mes valeurs"}>
+            <Icon name="heart" size={19} width={1.9} color={props.watched ? C.heart : C.dimmer} fill={props.watched ? C.heart : null} />
+          </Pressable>
+        ) : null}
+      </View>
     </Pressable>
   );
 }

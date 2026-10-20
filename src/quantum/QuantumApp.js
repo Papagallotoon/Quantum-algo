@@ -20,7 +20,7 @@ import { FONTS, FONT_FILES } from "./theme";
 var TABS = [
   { id: "market", label: "Marchés", icon: "markets" },
   { id: "news", label: "Actus", icon: "news" },
-  { id: "watch", label: "Ma liste", icon: "star" },
+  { id: "watch", label: "Mes valeurs", icon: "heart" },
   { id: "trust", label: "Bilan", icon: "bilan" },
   { id: "lexicon", label: "Apprendre", icon: "learn" },
 ];

@@ -197,7 +197,8 @@ export default function MarketScreen(props) {
           ) : (
             <View style={{ gap: 8 }}>
               {rows.map(function (s) {
-                return <StockRow key={s.id} stock={s} onPress={function () { props.open(s.id); }} />;
+                return <StockRow key={s.id} stock={s} onPress={function () { props.open(s.id); }}
+                  watched={props.state.watch.indexOf(s.id) >= 0} onToggle={function () { props.toggleWatch(s.id); }} />;
               })}
             </View>
           )}

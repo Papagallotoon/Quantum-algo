@@ -87,11 +87,11 @@ export default function DetailScreen(props) {
           <Text style={[T.sans(18, "700"), { color: C.text, letterSpacing: -0.3 }]} numberOfLines={1}>{(flagOf(s.symbol || s.id) ? flagOf(s.symbol || s.id) + " " : "") + s.name}</Text>
           <Text style={[T.mono(11.5, "500"), { color: C.dim }]} numberOfLines={1}>{String(s.ticker || "").replace(" / ", " · ")}</Text>
         </View>
-        <Pressable onPress={function () { props.toggleWatch(s.id); }} accessibilityLabel="Suivre cette valeur"
+        <Pressable onPress={function () { props.toggleWatch(s.id); }} accessibilityLabel={watched ? "Retirer de mes valeurs" : "Ajouter à mes valeurs"}
           style={{ height: 44, paddingHorizontal: 14, borderRadius: 14, flexDirection: "row", alignItems: "center", gap: 7, borderWidth: 1,
-            borderColor: watched ? "rgba(245,183,64,0.5)" : C.line, backgroundColor: watched ? C.alertBg : C.card }}>
-          <Icon name="star" size={16} width={2} color={watched ? C.alert : C.soft} fill={watched ? C.alert : null} />
-          <Text style={[T.sans(12.5, "600"), { color: watched ? C.alert : C.soft }]}>{watched ? "Suivie" : "Suivre"}</Text>
+            borderColor: watched ? "rgba(255,77,109,0.5)" : C.line, backgroundColor: watched ? C.heartBg : C.card }}>
+          <Icon name="heart" size={16} width={2} color={watched ? C.heart : C.soft} fill={watched ? C.heart : null} />
+          <Text style={[T.sans(12.5, "600"), { color: watched ? C.heart : C.soft }]}>{watched ? "Suivie" : "Suivre"}</Text>
         </Pressable>
       </View>
       <Segmented items={[{ id: "est", label: "Estimation" }, { id: "tech", label: "Technique" }]} value={st.detailTab}

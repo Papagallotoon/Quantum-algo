@@ -30,6 +30,8 @@ export const C = {
   flatBg: "rgba(148,160,180,0.14)",
   brandBg: "rgba(139,147,255,0.12)",
   alertBg: "rgba(245,183,64,0.12)",
+  heart: "#FF4D6D",
+  heartBg: "rgba(255,77,109,0.13)",
 };
 
 // Couleurs selon une probabilite de hausse (entre 47 et 53 % = pile ou face)
