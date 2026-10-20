@@ -4,6 +4,7 @@ import Svg, { Polyline } from "react-native-svg";
 import { C, T } from "../theme";
 import { flagOf } from "../flags";
 import Icon from "./Icons";
+import { qaSig } from "../brief";
 
 function sparkPts(src) {
   if (!src || src.length < 2) return null;
@@ -16,8 +17,9 @@ function sparkPts(src) {
 // Ligne d'une valeur : pastille de score, nom, mini-graphique, variation du jour
 export default function StockRow(props) {
   var s = props.stock;
-  var dir = s.dir || 1;
-  var strong = s.score >= 53;
+  var g = qaSig(s.pUp, props.base);
+  var dir = g ? g : s.dir || 1;
+  var strong = g !== 0;
   var color = !strong ? C.soft : dir < 0 ? C.down : C.up;
   var bg = !strong ? C.flatBg : dir < 0 ? C.downBg : C.upBg;
   var word = !strong ? "NEUTRE" : dir < 0 ? "BAISSE" : "HAUSSE";

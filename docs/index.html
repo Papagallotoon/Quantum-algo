@@ -105,15 +105,32 @@
   .act3 .on1 { background: var(--amber); color: #2A1C00; border: 0; font-weight: 700; }
   .act3 .on2 { background: var(--down); color: #2A0A06; border: 0; font-weight: 700; }
   .gauge-n { font-family: var(--mono); font-weight: 700; letter-spacing: -2px; font-size: 48px; line-height: 1; }
+  .heart { display: inline-flex; align-items: center; justify-content: center; width: 30px; height: 30px; border-radius: 10px; cursor: pointer; color: var(--dim); flex: none; }
+  .heart:hover { color: #FF4D6D; background: rgba(255,77,109,.1); }
+  .heart.on { color: #FF4D6D; }
+  .heart.on svg { fill: #FF4D6D; }
+  .heartbtn { display: inline-flex; align-items: center; gap: 7px; height: 44px; padding: 0 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); color: var(--soft-t); font-weight: 600; font-size: 13px; cursor: pointer; flex: none; }
+  .heartbtn.on { color: #FF4D6D; border-color: rgba(255,77,109,.5); background: rgba(255,77,109,.13); }
+  .heartbtn.on svg { fill: #FF4D6D; }
+  .amber { color: var(--amber); }
+  .unit { font-family: var(--sans); font-size: 9.5px; font-weight: 500; color: var(--dim); margin-left: 4px; }
+  .brief .b-todo { margin: 0 0 12px; font-size: 14.5px; line-height: 1.55; }
+  .brief .b-l { display: grid; grid-template-columns: 96px 1fr; gap: 10px; padding: 9px 0; border-top: 1px solid var(--soft); }
+  .brief .b-l span { font-size: 11px; font-weight: 600; letter-spacing: .4px; text-transform: uppercase; color: var(--brand); padding-top: 2px; }
+  .brief .b-l p { margin: 0; font-size: 13.5px; line-height: 1.55; color: var(--soft-t); }
   @media (max-width: 560px) {
+    .brief .b-l { grid-template-columns: 1fr; gap: 3px; }
+    .unit { display: none; }
     .row { gap: 10px; padding: 11px 12px; }
-    .row svg { display: none; }
+    .row > svg { display: none; }
     .row .pill { font-size: 10.5px; padding: 5px 9px; }
     .row > div:last-child { min-width: 0 !important; }
     .chartlbl span:nth-child(2) { display: none; }
     .boxes .v { font-size: 14px; }
     td { padding: 8px 5px; font-size: 13px; }
-    nav a { padding: 8px 10px; font-size: 12.5px; }
+    nav a { padding: 8px 8px; font-size: 12px; }
+    nav { overflow-x: auto; max-width: 100%; }
+    nav a { white-space: nowrap; flex: none; }
   }
   .modal-bg { position: fixed; inset: 0; z-index: 50; background: rgba(5,7,10,.88); backdrop-filter: blur(6px); display: flex; align-items: center; justify-content: center; padding: 16px; }
   .modal { max-width: 560px; width: 100%; max-height: 90vh; overflow-y: auto; background: var(--card); border: 1px solid var(--line); border-radius: 24px; padding: 22px; }
@@ -149,6 +166,7 @@
     <nav id="nav">
       <a href="#/" data-r="today">Aujourd'hui</a>
       <a href="#/indices" data-r="indices">Marchés</a>
+      <a href="#/mes-valeurs" data-r="mes-valeurs">Mes valeurs</a>
       <a href="#/bilan" data-r="bilan">Bilan</a>
       <a href="#/apprendre" data-r="apprendre">Apprendre</a>
     </nav>
@@ -167,6 +185,132 @@
   var st = { h: get("h") || "1M", tab: "est", cat: "Tous" };
   function get(k) { try { return localStorage.getItem("qa." + k); } catch (e) { return null; } }
   function put(k, v) { try { localStorage.setItem("qa." + k, v); } catch (e) {} }
+  // valeurs suivies (coeur), gardees dans ce navigateur
+  function wl() { try { var x = JSON.parse(get("watch") || "[]"); return Array.isArray(x) ? x : []; } catch (e) { return []; } }
+  function isW(sym) { return wl().indexOf(sym) >= 0; }
+  function toggleW(sym) { var l = wl(), i = l.indexOf(sym); if (i >= 0) l.splice(i, 1); else l.push(sym); put("watch", JSON.stringify(l)); }
+  var HEART_SVG = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.6-4.7-9.4-9.3C1.3 7.9 3.3 4.5 6.8 4.5c2.1 0 3.7 1.1 5.2 3.1 1.5-2 3.1-3.1 5.2-3.1 3.5 0 5.5 3.4 4.2 6.7-1.8 4.6-9.4 9.3-9.4 9.3z"/></svg>';
+  function heart(sym) { var on = isW(sym); return '<span class="heart' + (on ? ' on' : '') + '" role="button" tabindex="0" data-watch="' + esc(sym) + '" title="' + (on ? 'Retirer de mes valeurs' : 'Ajouter à mes valeurs') + '" aria-label="' + (on ? 'Retirer de mes valeurs' : 'Ajouter à mes valeurs') + '">' + HEART_SVG + '</span>'; }
+
+  // ---------- resume "en bref" : technique + fondamental + modele + verdict ----------
+  // x = { name, isIndex, price, hl (libelle horizon), p, perf:{m1,m3,y1}, sma50, sma200, rsi,
+  //       fam:[[famille, poids]], action, plan:{zoneLo,zoneHi,stop,target}, fund:{pe,fpe,yield,rating,hi52,lo52},
+  //       earnings (ms), breadth:{up,down,n}, cur }
+  var BF_FAM = { Tendance: "la tendance", Momentum: "l'élan récent (momentum)", Volume: "les volumes", Structure: "la structure du graphique", Volatilite: "la volatilité", Chandeliers: "les figures de chandeliers" };
+  function bfOk(v) { return v != null && isFinite(v); }
+  function bfN(v, d) { return Number(v).toFixed(d == null ? 1 : d).replace(".", ","); }
+  function bfP(v) { return (v >= 0 ? "+" : "−") + bfN(Math.abs(v)) + " %"; }
+  function bfPx(v) { return bfOk(v) ? Number(v).toFixed(v >= 1000 ? 0 : 2).replace(".", ",") : "-"; }
+  // niveau habituel : a 3 mois les actions montent un peu plus souvent qu'elles ne baissent,
+  // donc on compare la probabilite a la mediane de toutes les valeurs, pas a 50 %
+  function bfBase(b) { return bfOk(b) ? b : 0.5; }
+  function qaSig(p, base) {
+    if (!bfOk(p)) return 0;
+    var d = p - bfBase(base);
+    return p >= 0.53 && d >= 0.02 ? 1 : p <= 0.47 && d <= -0.02 ? -1 : 0;
+  }
+  function bfStrength(p, base) {
+    var b = bfBase(base), d = p - b, ad = Math.abs(d);
+    if (ad < 0.02) return b > 0.52 ? "c'est le niveau habituel à cet horizon (en moyenne " + Math.round(b * 100) + " % pour toutes les valeurs, car les actions montent un peu plus souvent qu'elles ne baissent) : pas de signal particulier" : "pas d'avantage net (≈ pile ou face)";
+    var w = ad >= 0.08 ? "un avantage net" : ad >= 0.04 ? "un léger avantage" : "un très léger avantage";
+    return w + (d > 0 ? " à la hausse" : " à la baisse") + (b > 0.52 ? " par rapport à la normale (" + Math.round(b * 100) + " %)" : "");
+  }
+  function qaVerdictLabel(p, base) {
+    var g = qaSig(p, base), b = bfBase(base);
+    if (!g) return b > 0.52 ? "Niveau habituel (≈ " + Math.round(b * 100) + " %)" : "Pile ou face";
+    var d = Math.abs(p - b);
+    return d >= 0.08 ? (g > 0 ? "Haussier" : "Baissier") : d >= 0.04 ? (g > 0 ? "Plutôt haussier" : "Plutôt baissier") : (g > 0 ? "Légèrement haussier" : "Légèrement baissier");
+  }
+  function qaBrief(x) {
+    var out = { tech: null, fund: null, model: null, todo: null, warn: null };
+    // technique
+    var t = [];
+    if (bfOk(x.sma200) && bfOk(x.price)) {
+      var a200 = x.price >= x.sma200;
+      var s = a200 ? "au-dessus de sa moyenne 200 j (tendance de fond haussière)" : "sous sa moyenne 200 j (tendance de fond baissière)";
+      if (bfOk(x.sma50)) {
+        if (a200 && x.price < x.sma50) s += ", mais en repli à court terme (sous la moyenne 50 j)";
+        else if (!a200 && x.price > x.sma50) s += ", mais en rebond à court terme (au-dessus de la moyenne 50 j)";
+      }
+      t.push(s);
+    }
+    if (x.perf && bfOk(x.perf.m1) && bfOk(x.perf.m3)) t.push(bfP(x.perf.m1) + " sur 1 mois, " + bfP(x.perf.m3) + " sur 3 mois");
+    if (bfOk(x.rsi)) t.push(x.rsi >= 70 ? "RSI " + Math.round(x.rsi) + " : surachat, une pause est fréquente" : x.rsi <= 30 ? "RSI " + Math.round(x.rsi) + " : survente, un rebond technique est possible" : "RSI " + Math.round(x.rsi) + " : ni surachat ni survente");
+    if (t.length) out.tech = t.join(" ; ").replace(/^./, function (c) { return c.toUpperCase(); }) + ".";
+    // fondamental (actions) ou composants (indices)
+    if (x.isIndex && x.breadth && x.breadth.n) {
+      var b = x.breadth;
+      out.fund = !b.up && !b.down ? "Aucune des " + b.n + " valeurs ne se distingue sur " + x.hl + " : toutes sont au niveau habituel." : b.up + " valeur" + (b.up > 1 ? "s" : "") + " sur " + b.n + " penche" + (b.up > 1 ? "nt" : "") + " à la hausse sur " + x.hl + ", " + b.down + " à la baisse" + (b.up > b.down * 1.5 ? " : la majorité soutient l'indice." : b.down > b.up * 1.5 ? " : la majorité pèse sur l'indice." : " : avis partagés.");
+    } else if (x.fund) {
+      var f = x.fund, g = [];
+      if (bfOk(f.pe) && bfOk(f.fpe) && f.pe > 0 && f.fpe > 0) {
+        g.push(f.fpe < f.pe * 0.85 ? "bénéfices attendus en hausse (PER " + bfN(f.pe) + " → " + bfN(f.fpe) + " l'an prochain)" : f.fpe > f.pe * 1.15 ? "bénéfices attendus en baisse (PER " + bfN(f.pe) + " → " + bfN(f.fpe) + ")" : "bénéfices attendus stables (PER " + bfN(f.fpe) + ")");
+        if (f.fpe < 11) g.push("valorisation modeste");
+        else if (f.fpe > 30) g.push("valorisation exigeante");
+      } else if (bfOk(f.pe) && f.pe > 0) g.push("PER " + bfN(f.pe));
+      else if (bfOk(f.pe) && f.pe < 0) g.push("entreprise en perte");
+      var rn = f.rating ? parseFloat(String(f.rating).replace(",", ".")) : NaN;
+      if (bfOk(rn)) g.push(rn <= 1.8 ? "analystes très positifs" : rn <= 2.5 ? "analystes positifs" : rn <= 3.3 ? "analystes neutres" : "analystes négatifs");
+      if (bfOk(f.yield) && f.yield >= 3) g.push("dividende " + bfN(f.yield) + " %");
+      if (bfOk(f.hi52) && bfOk(x.price) && f.hi52 > 0) {
+        var dh = (x.price / f.hi52 - 1) * 100;
+        g.push(dh > -5 ? "proche de son plus haut annuel" : dh < -25 ? "à " + bfP(dh) + " de son plus haut annuel" : "");
+      }
+      g = g.filter(Boolean);
+      if (g.length) out.fund = g.join(", ").replace(/^./, function (c) { return c.toUpperCase(); }) + ".";
+    }
+    // modele
+    if (bfOk(x.p)) {
+      var g = qaSig(x.p, x.base);
+      var m = Math.round(x.p * 100) + " % de chances de hausse sur " + x.hl + " : " + bfStrength(x.p, x.base) + ".";
+      if (g) {
+        var fam = (x.fam || []).filter(function (q) { return Math.abs(q[1]) >= 3; }).slice().sort(function (q, r) { return r[1] - q[1]; });
+        var pos = fam.filter(function (q) { return q[1] > 0; })[0], neg = fam.filter(function (q) { return q[1] < 0; }).slice(-1)[0];
+        if (pos || neg) m += (pos ? " Soutient : " + (BF_FAM[pos[0]] || pos[0]) + "." : "") + (neg ? " Freine : " + (BF_FAM[neg[0]] || neg[0]) + "." : "");
+        var past = x.perf && bfOk(x.perf.m3) ? x.perf.m3 : x.perf && bfOk(x.perf.m1) ? x.perf.m1 : null;
+        if (past != null && ((past < -2 && g > 0) || (past > 2 && g < 0)))
+          m += " Ce chiffre parle de l'avenir (" + x.hl + "), pas du passé : " + (past < 0 ? "malgré la baisse récente, le modèle voit un rebond plus probable que d'habitude." : "malgré la hausse récente, le modèle voit un essoufflement plus probable que d'habitude.");
+      }
+      out.model = m;
+      out.sig = g;
+    }
+    // que faire
+    var pl = x.plan || {}, cur = x.cur ? " " + x.cur : "";
+    var A = {
+      ENTRER: ["Entrer", "tendance haussière, indicateurs favorables et cours pas trop étiré" + (bfOk(pl.stop) ? ". Achat autour de " + bfPx(x.price) + cur + ", sortie si le cours passe sous " + bfPx(pl.stop) + ", objectif " + bfPx(pl.target) : "") + "."],
+      ATTENDRE_REPLI: ["Attendre un repli", "le contexte est favorable mais le cours est monté trop vite" + (bfOk(pl.zoneLo) ? " ; ordre d'achat entre " + bfPx(pl.zoneLo) + " et " + bfPx(pl.zoneHi) : "") + "."],
+      ATTENDRE_CONFIRMATION: ["Attendre", "la tendance de court terme n'a pas encore tourné à la hausse" + (bfOk(pl.zoneLo) ? " ; acheter seulement après une clôture au-dessus de " + bfPx(pl.zoneLo) : "") + "."],
+      NEUTRE: ["Rester à l'écart", "l'avantage est trop faible pour couvrir les frais. Si tu la détiens, rien ne presse."],
+      EVITER: ["Éviter / alléger", "le modèle penche à la baisse" + (bfOk(pl.stop) ? " ; si tu la détiens, protection possible sous " + bfPx(pl.stop) : "") + "."],
+    };
+    if (A[x.action]) out.todo = { word: A[x.action][0], text: A[x.action][1], action: x.action };
+    if (x.earnings && x.earnings > Date.now() && x.earnings - Date.now() < 30 * 864e5)
+      out.warn = "Résultats le " + new Date(x.earnings).toLocaleDateString("fr-FR", { day: "numeric", month: "long" }) + " : le cours peut fortement bouger ce jour-là.";
+    return out;
+  }
+  function bfTech(a, name) { var r = (a.tech || []).filter(function (q) { return q[0] === name; })[0]; if (!r) return NaN; var v = parseFloat(String(r[2]).replace(/\s/g, "").replace(",", ".")); return v; }
+  function briefFor(a, h, extra) {
+    return qaBrief(Object.assign({ name: a.name, price: a.price, cur: a.cur, hl: HL[h], p: a.ev[h] && a.ev[h].p, perf: a.perf,
+      sma50: bfTech(a, "SMA 50"), sma200: bfTech(a, "SMA 200"), rsi: bfTech(a, "RSI (14)"), fam: a.fam,
+      action: a.plan && a.plan.action, plan: a.plan, fund: a.fund, earnings: a.earnings ? new Date(a.earnings).getTime() : null }, extra || {}));
+  }
+  var BASE = {};
+  function computeBase() {
+    HK.forEach(function (h) {
+      var ps = Object.keys(D.stocks).map(function (k) { var e = D.stocks[k].ev[h]; return e ? e.p : null; }).filter(ok).sort(function (a, b) { return a - b; });
+      BASE[h] = ps.length ? ps[ps.length >> 1] : 0.5;
+    });
+  }
+  function briefHtml(b, title, isIndex) {
+    var col = { ENTRER: "up", EVITER: "down", NEUTRE: "flat" };
+    var h = '<div class="card brief"><h2>' + esc(title) + '</h2>';
+    if (b.todo) h += '<p class="b-todo"><b class="' + (col[b.todo.action] || "amber") + '">' + esc(b.todo.word) + ' :</b> ' + esc(b.todo.text) + '</p>';
+    [["Technique", b.tech], [isIndex ? "Les valeurs" : "Fondamental", b.fund], ["Le modèle", b.model]].forEach(function (r) {
+      if (r[1]) h += '<div class="b-l"><span>' + r[0] + '</span><p>' + esc(r[1]) + '</p></div>';
+    });
+    if (b.warn) h += '<div class="warn">' + esc(b.warn) + '</div>';
+    return h + '</div>';
+  }
 
   // ---------- format ----------
   function ok(v) { return v != null && isFinite(v); }
@@ -175,7 +319,7 @@
   function sp(v, d) { return ok(v) ? (v >= 0 ? "+" : "") + Number(v).toFixed(d == null ? 2 : d).replace(".", ",") + " %" : "-"; }
   function pc(p) { return ok(p) ? Math.round(p * 100) + " %" : "-"; }
   function cls(v) { return !ok(v) ? "flat" : v >= 0 ? "up" : "down"; }
-  function pcls(p) { return p >= 0.53 ? "up" : p <= 0.47 ? "down" : "flat"; }
+  function pcls(p, h) { var g = qaSig(p, BASE[h || st.h]); return g > 0 ? "up" : g < 0 ? "down" : "flat"; }
   var FLAGC = { USD: "us", EUR: "eu", GBP: "gb", JPY: "jp", CNY: "cn", CHF: "ch", CAD: "ca", AUD: "au", NZD: "nz" };
   function flag(e) {
     var c = FLAGC[e && e.cur];
@@ -203,7 +347,7 @@
 
   // ---------- petits graphiques SVG ----------
   function dial(p, size, stroke, label, hz) {
-    var up = p >= 0.53, down = p <= 0.47;
+    var g = qaSig(p, BASE[hz]), up = g > 0, down = g < 0;
     var col = up ? "#34D399" : down ? "#FF6B5B" : "#C9D1DE", bg = up ? "rgba(52,211,153,.12)" : down ? "rgba(255,107,91,.12)" : "rgba(148,160,180,.14)";
     var th = Math.PI * (1 - p), nx = (130 + 78 * Math.cos(th)).toFixed(1), ny = (130 - 78 * Math.sin(th)).toFixed(1);
     var HLONG = { "1J": "demain", "1S": "dans une semaine", "1M": "dans un mois", "3M": "dans trois mois" };
@@ -215,7 +359,7 @@
       '<span class="small muted" style="position:absolute;left:14px;bottom:0;font-size:10.5px">Baisse</span><span class="small muted" style="position:absolute;right:14px;bottom:0;font-size:10.5px">Hausse</span></div>' +
       '<div style="display:flex;flex-direction:column;align-items:center;gap:6px;margin-top:-2px"><div class="gauge-n" style="color:' + col + '">' + Math.round(p * 100) + '<span style="font-size:22px;font-weight:600;letter-spacing:0">%</span></div>' +
       '<div style="font-size:13.5px;color:#C9D1DE;text-align:center">de chances que ' + (label ? 'le ' + esc(label) : "l'indice") + ' finisse plus haut ' + (HLONG[hz] || "") + '</div>' +
-      '<span class="pill" style="margin-top:6px;background:' + bg + ';color:' + col + '">' + (up ? "Plutôt haussier" : down ? "Plutôt baissier" : "Pile ou face") + '</span></div>';
+      '<span class="pill" style="margin-top:6px;background:' + bg + ';color:' + col + '">' + esc(qaVerdictLabel(p, BASE[hz])) + '</span></div>';
   }
   function spark(h, w, hh, col) {
     if (!h || h.length < 2) return "";
@@ -235,7 +379,7 @@
     var span = hi - lo || 1, y = function (v) { return H - ((v - lo) / span) * H * 0.88 - H * 0.06; };
     var pts = hist.map(function (v, i) { return [(i / (hist.length - 1)) * split, y(v)]; });
     var line = pts.map(function (q) { return q[0].toFixed(1) + "," + q[1].toFixed(1); }).join(" ");
-    var last = pts[pts.length - 1], up = (a.ev[h] || {}).p >= 0.5, col = up ? "#34D399" : "#FF6B5B";
+    var last = pts[pts.length - 1], cg = qaSig((a.ev[h] || {}).p, BASE[h]), col = cg > 0 ? "#34D399" : cg < 0 ? "#FF6B5B" : "#94A0B4";
     var cone = ok(mc.lo) ? last[0] + "," + last[1] + " " + W + "," + y(mc.hi) + " " + W + "," + y(mc.lo) : "";
     var lv = levels.map(function (l) { return '<line x1="0" x2="' + W + '" y1="' + y(l[0]) + '" y2="' + y(l[0]) + '" stroke="' + l[1] + '" stroke-dasharray="4 5" stroke-width="1" opacity=".7"/><text x="4" y="' + (y(l[0]) - 4) + '" fill="' + l[1] + '" font-size="11" font-family="JetBrains Mono, monospace">' + l[2] + ' ' + f2(l[0]) + '</text>'; }).join("");
     return '<svg viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;height:auto;display:block">' +
@@ -250,14 +394,14 @@
 
   // ---------- blocs ----------
   function stockRow(a, h) {
-    var e = a.ev[h] || {}, up = e.p >= 0.5, strong = Math.abs(e.p - 0.5) >= 0.03;
+    var e = a.ev[h] || {}, g = qaSig(e.p, BASE[h]), strong = g !== 0, up = strong ? g > 0 : e.p >= 0.5;
     var col = !strong ? "#C9D1DE" : up ? "#34D399" : "#FF6B5B", tc = !strong ? "t-flat" : up ? "t-up" : "t-down";
     var score = Math.round((up ? e.p : 1 - e.p) * 100);
     return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '">' +
       '<div class="tile ' + tc + '" title="' + score + ' chances sur 100 de ' + (up ? 'hausse' : 'baisse') + ' sur ' + esc(HL[h]) + '"><b>' + score + '</b><span>' + (!strong ? "NEUTRE" : up ? "HAUSSE" : "BAISSE") + '</span></div>' +
       '<div class="grow"><div class="name">' + flagSym(a.sym) + esc(a.name) + '</div><div class="small muted" style="margin-top:3px">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector) : '') + '</div></div>' +
       spark(a.hist, 56, 26, col) +
-      '<div style="text-align:right;min-width:92px;flex:none"><div class="mono ' + cls(a.chg) + '" style="font-size:12.5px;font-weight:600">' + sp(a.chg) + '</div><span class="pill ' + pillCls(a.plan.action) + '" style="margin-top:5px;padding:4px 9px;font-size:11px">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span></div></a>';
+      '<div style="text-align:right;min-width:92px;flex:none"><div style="display:flex;align-items:center;justify-content:flex-end;gap:4px;margin:-6px -6px 0 0"><span class="mono ' + cls(a.chg) + '" style="font-size:12.5px;font-weight:600" title="Variation sur la dernière séance">' + sp(a.chg) + '<span class="unit">séance</span></span>' + heart(a.sym) + '</div><span class="pill ' + pillCls(a.plan.action) + '" style="margin-top:5px;padding:4px 9px;font-size:11px">' + esc(actLabel(a.plan.action, a.plan.label)) + '</span></div></a>';
   }
   function newsList(list) {
     if (!list || !list.length) return '<div class="empty">Pas d\'actualité récente.</div>';
@@ -350,26 +494,31 @@
     h += '<div class="grid2"><div class="card" style="text-align:center">';
     if (ref) {
       h += dial(ref.ev[st.h].p, 200, 18, (idx.data ? idx.label : "CAC 40"), st.h) +
-        '<div class="mono muted" style="margin-top:10px">' + f2(ref.price) + ' · <span class="' + cls(ref.chg) + '">' + sp(ref.chg) + '</span></div>' +
-        '<div class="small muted" style="margin-top:6px">Rendement attendu ' + sp(ref.ev[st.h].e) + ' · intervalle 90 % ' + f2(ref.mc[st.h].lo) + ' – ' + f2(ref.mc[st.h].hi) + '</div>';
+        '<div class="mono muted" style="margin-top:10px">' + f2(ref.price) + ' pts · <span class="' + cls(ref.chg) + '">' + sp(ref.chg) + '</span> <span class="small dimmer" style="font-family:var(--sans)">sur la dernière séance</span></div>' +
+        '<div class="small muted" style="margin-top:6px;line-height:1.5">Variation moyenne attendue sur ' + esc(HL[st.h]) + ' : <b class="' + cls(ref.ev[st.h].e) + '">' + sp(ref.ev[st.h].e) + '</b><br>9 fois sur 10, entre ' + f2(ref.mc[st.h].lo) + ' et ' + f2(ref.mc[st.h].hi) + ' pts dans ' + esc(HL[st.h]) + '</div>';
     } else h += '<div class="empty">Données de l\'indice indisponibles.</div>';
     if (idx.note) h += '<p class="small muted">' + esc(idx.note) + '. Le cadran reprend le CAC 40.</p>';
-    h += '</div><div class="card">' + (ref ? '<h2>Évolution</h2>' + chart(ref, st.h) + '<div class="kv" style="margin-top:8px"><span>Performance 1 mois · 3 mois · 1 an</span><span>' + sp(ref.perf.m1, 1) + ' · ' + sp(ref.perf.m3, 1) + ' · ' + sp(ref.perf.y1, 1) + '</span></div>' : '') + '</div></div>';
+    h += '</div><div class="card">' + (ref ? '<h2>Évolution</h2>' + chart(ref, st.h) + '<div class="small dimmer" style="margin-top:12px">Ce qui s’est passé (performance passée)</div><div class="boxes" style="margin-top:6px">' + [["1 mois", ref.perf.m1], ["3 mois", ref.perf.m3], ["1 an", ref.perf.y1]].map(function (x) { return '<div class="box"><div class="l">' + x[0] + '</div><div class="v ' + cls(x[1]) + '">' + sp(x[1], 1) + '</div></div>'; }).join("") + '</div>' : '') + '</div></div>';
+    if (ref) {
+      var mem = idx.members.map(function (s) { return D.stocks[s]; }).filter(Boolean);
+      var br = { n: mem.length, up: mem.filter(function (a) { return qaSig(a.ev[st.h].p, BASE[st.h]) > 0; }).length, down: mem.filter(function (a) { return qaSig(a.ev[st.h].p, BASE[st.h]) < 0; }).length };
+      h += briefHtml(briefFor(ref, st.h, { isIndex: true, breadth: br, action: null, base: BASE[st.h], name: idx.data ? idx.label : "CAC 40" }), "Pourquoi ce chiffre ?", true);
+    }
     var rows = idx.members.map(function (s) { return D.stocks[s]; }).filter(Boolean).sort(function (a, b) { return Math.abs(b.ev[st.h].p - 0.5) * (b.ev[st.h].p >= .5 ? 1 : .5) - Math.abs(a.ev[st.h].p - 0.5) * (a.ev[st.h].p >= .5 ? 1 : .5); });
     h += '<div class="card"><h2>Valeurs ' + esc(idx.name) + ' · horizon ' + esc(HL[st.h]) + '</h2>' + rows.map(function (a) { return stockRow(a, st.h); }).join("") +
-      '<p class="small dimmer">Le nombre dans le cercle = chances sur 100 que l\'action termine plus haut (vert) ou plus bas (rouge) à l\'horizon choisi, et non une variation en %. Gris = pas d\'avis (entre 47 et 53 %, ≈ pile ou face). L\'étiquette donne l\'action du plan, calculé sur l\'horizon le plus fiable pour chaque valeur.</p></div>';
+      '<p class="small dimmer">Le nombre dans le cercle = chances sur 100 que l\'action termine plus haut (vert) ou plus bas (rouge) à l\'horizon choisi, et non une variation en %. Gris = pas de signal : proche de 50 % (pile ou face), ou proche du niveau habituel à 3 mois (≈ ' + Math.round((BASE['3M'] || .5) * 100) + ' % pour toutes les actions, qui montent un peu plus souvent qu\'elles ne baissent). À droite : variation de la dernière séance. L\'étiquette donne l\'action du plan, calculé sur l\'horizon le plus fiable pour chaque valeur.</p></div>';
     return h;
   }
 
   function pageStock(sym) {
     var a = D.stocks[sym] || (D.indices.filter(function (x) { return x.data && x.data.sym === sym; })[0] || {}).data;
     if (!a) return '<h1>Valeur introuvable</h1><p class="sub">' + esc(sym) + ' ne fait pas partie des valeurs suivies.</p><a class="chip" href="#/">← Retour</a>';
-    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" aria-label="Retour" onclick="history.length>1?history.back():location.hash=\'#/\'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a><div class="grow"><div style="font-size:24px;font-weight:700">' + flagSym(a.sym, true) + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div></div>';
-    h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:34px;font-weight:700;letter-spacing:-1.4px">' + f2(a.price) + ' <span style="font-size:16px" class="muted">' + esc(a.cur) + '</span></span><span class="mono ' + cls(a.chg) + '">' + sp(a.chg) + '</span></div>';
+    var h = '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" aria-label="Retour" onclick="history.length>1?history.back():location.hash=\'#/\'"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></a><div class="grow"><div style="font-size:24px;font-weight:700">' + flagSym(a.sym, true) + esc(a.name) + '</div><div class="mono dimmer small">' + esc(a.sym) + (a.sector ? ' · ' + esc(a.sector).toUpperCase() : '') + '</div></div>' + (D.stocks[a.sym] ? '<span class="heartbtn' + (isW(a.sym) ? ' on' : '') + '" role="button" tabindex="0" data-watch="' + esc(a.sym) + '">' + HEART_SVG + (isW(a.sym) ? 'Suivie' : 'Suivre') + '</span>' : '') + '</div>';
+    h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:34px;font-weight:700;letter-spacing:-1.4px">' + f2(a.price) + ' <span style="font-size:16px" class="muted">' + esc(a.cur) + '</span></span><span class="mono ' + cls(a.chg) + '">' + sp(a.chg) + '</span><span class="small dimmer">sur la dernière séance</span></div>';
     h += '<div class="tabs"><a data-tab="est" class="' + (st.tab === "est" ? "on" : "") + '">Estimation</a><a data-tab="tech" class="' + (st.tab === "tech" ? "on" : "") + '">Technique</a></div>';
     if (st.tab === "tech") {
       var cats = ["Tous", "Tendance", "Momentum", "Volatilite", "Volume", "Structure", "Chandeliers"], v = a.votes, e = a.ev[st.h];
-      h += '<div class="card"><div style="font-size:24px;font-weight:800" class="' + pcls(e.p) + '">' + esc(e.v) + '</div><div class="small muted" style="margin:4px 0 10px">' + v.directional + ' indicateurs directionnels · ' + v.info + ' informatifs · horizon ' + esc(HL[st.h]) + '</div>' +
+      h += '<div class="card"><div style="font-size:24px;font-weight:800" class="' + pcls(e.p) + '">' + esc(qaVerdictLabel(e.p, BASE[st.h])) + '</div><div class="small muted" style="margin:4px 0 10px">' + v.directional + ' indicateurs directionnels · ' + v.info + ' informatifs · horizon ' + esc(HL[st.h]) + '</div>' +
         '<div style="display:flex;height:26px;border-radius:7px;overflow:hidden;gap:2px">' +
         (v.buy ? '<div style="width:' + v.buy / v.directional * 100 + '%;background:#34D399;color:#07120c" class="mono small"><b style="padding:5px 8px;display:block">' + v.buy + '</b></div>' : '') +
         (v.neu ? '<div style="width:' + v.neu / v.directional * 100 + '%;background:rgba(255,255,255,.13)" class="mono small"><b style="padding:5px 8px;display:block">' + v.neu + '</b></div>' : '') +
@@ -383,8 +532,9 @@
       }).join("") + '</table></div>';
       return h;
     }
+    if (D.stocks[a.sym] && a.plan) h += briefHtml(briefFor(a, a.plan.h, { base: BASE[a.plan.h] }), "En bref · horizon " + HL[a.plan.h], false);
     h += '<div class="card"><div class="hz">' + HK.map(function (k) {
-      var e = a.ev[k]; return '<div data-h="' + k + '" class="' + (k === st.h ? "on" : "") + '"><div class="mono dimmer" style="font-size:10px">' + k + '</div><div style="font-size:17px;font-weight:800" class="' + pcls(e.p) + '">' + Math.round(e.p * 100) + '%</div><div class="mono dimmer" style="font-size:10px">' + sp(e.e, 1) + '</div></div>';
+      var e = a.ev[k]; return '<div data-h="' + k + '" class="' + (k === st.h ? "on" : "") + '"><div class="mono dimmer" style="font-size:10px">' + k + '</div><div style="font-size:17px;font-weight:800" class="' + pcls(e.p, k) + '">' + Math.round(e.p * 100) + '%</div><div class="mono dimmer" style="font-size:10px">' + sp(e.e, 1) + '</div></div>';
     }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">En gros : chances sur 100 que l\'action termine plus haut à cet horizon. En petit : variation moyenne attendue. Exemple : 55 % et +1,2 % = un peu plus d\'une chance sur deux de monter, pour un gain moyen attendu d\'environ 1,2 %. Touche un horizon pour mettre à jour le graphique.</p></div>';
     h += '<div class="card">' + chart(a, st.h) + '</div>';
     h += planCard(a);
@@ -650,6 +800,22 @@
     if (e.target.id === "lexq") { st.lexQ = e.target.value; var pos = e.target.selectionStart; render(); var n = document.getElementById("lexq"); if (n) { n.focus(); n.setSelectionRange(pos, pos); } }
   });
 
+  function pageWatch() {
+    var list = wl().filter(function (s) { return D.stocks[s]; });
+    var h = '<h1>Mes valeurs</h1><p class="sub">' + (list.length ? list.length + (list.length > 1 ? ' valeurs suivies' : ' valeur suivie') + ', avec l\'estimation du jour.' : 'Les valeurs que tu suis, avec l\'estimation du jour.') + '</p>';
+    if (!list.length) return h + '<div class="card" style="text-align:center;padding:34px 20px"><span class="heart on" style="width:auto;height:auto;cursor:default">' + HEART_SVG.replace('width="18" height="18"', 'width="34" height="34"') + '</span><div style="font-weight:700;margin-top:10px">Aucune valeur suivie</div><p class="small muted" style="margin:8px 0 16px">Touche le cœur à côté d\'une valeur (dans Aujourd\'hui, Marchés ou sur sa fiche) pour la retrouver ici. La liste est gardée dans ce navigateur.</p><a class="btn btn-main" href="#/indices">Voir les marchés</a></div>';
+    return h + '<div class="card">' + list.map(function (s) { var a = D.stocks[s]; return stockRow(a, a.plan.h); }).join("") + '</div>';
+  }
+
+  // coeur : ajouter / retirer sans ouvrir la fiche
+  document.addEventListener("click", function (e) {
+    var w = e.target.closest && e.target.closest("[data-watch]");
+    if (!w) return;
+    e.preventDefault(); e.stopPropagation();
+    toggleW(w.dataset.watch);
+    var y = window.scrollY; render(); window.scrollTo(0, y);
+  }, true);
+
   // ---------- routeur ----------
   function render() {
     var hash = location.hash.replace(/^#\/?/, ""), parts = hash.split("/"), r = parts[0] || "today", html;
@@ -661,6 +827,7 @@
     else if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
     else if (r === "indices") html = pageIndices(parts[1]);
     else if (r === "bilan") html = pageBilan();
+    else if (r === "mes-valeurs") html = pageWatch();
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
     document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.<br><a href="#/conditions" style="text-decoration:underline">Conditions</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>';
     var ro = document.getElementById("reopen"); if (ro) ro.onclick = function () { if (!document.getElementById("terms")) showTerms(); };
@@ -697,7 +864,7 @@
   document.addEventListener("click", function (e) { if (!e.target.closest(".search")) res.style.display = "none"; });
 
   fetch("data.json?t=" + Math.floor(Date.now() / 300000)).then(function (r) { return r.json(); }).then(function (d) {
-    D = d; render();
+    D = d; computeBase(); render();
     var hr = location.hash.replace(/^#\/?/, "");
     if (!accepted() && !/^(conditions|confidentialite)/.test(hr)) showTerms(); else setTimeout(maybeNewsletter, 6000);
   })

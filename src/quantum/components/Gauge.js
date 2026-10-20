@@ -6,7 +6,7 @@ import { C, T, tone } from "../theme";
 // Jauge en demi-cercle : corail (baisse) - gris (pile ou face) - vert (hausse)
 export default function Gauge(props) {
   var p = props.pUp == null ? 0.5 : Math.max(0, Math.min(1, props.pUp));
-  var t = tone(props.pUp);
+  var t = tone(props.pUp, props.base);
   var up = t.c === C.up, down = t.c === C.down;
   var th = Math.PI * (1 - p);
   var nx = (130 + 78 * Math.cos(th)).toFixed(1), ny = (130 - 78 * Math.sin(th)).toFixed(1);

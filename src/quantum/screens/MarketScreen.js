@@ -10,6 +10,10 @@ import Gauge from "../components/Gauge";
 import Icon from "../components/Icons";
 import { flagOf } from "../flags";
 import { Chips, Segmented, Pill } from "../components/UI";
+import { useFund, baseOf } from "../fund";
+import { briefForAsset, qaSig } from "../brief";
+import BriefCard from "../components/BriefCard";
+import { HORIZON_LABEL } from "../core/model.js";
 
 var H_LONG = { "1J": "demain", "1S": "dans une semaine", "1M": "dans un mois", "3M": "dans trois mois" };
 var H_ITEMS = [{ id: "1J", label: "1 jour" }, { id: "1S", label: "1 sem." }, { id: "1M", label: "1 mois" }, { id: "3M", label: "3 mois" }];
@@ -60,14 +64,16 @@ export default function MarketScreen(props) {
   var idx = data.index && !data.index.error ? data.index : null;
   var idxError = data.error || (data.index && data.index.error ? data.index.error : null);
   var label = def.list ? "CAC 40" : def.label;
-  var t = tone(idx ? idx.pUp : null);
+  var F = useFund();
+  var base = baseOf(F, st.horizon);
+  var t = tone(idx ? idx.pUp : null, base);
   var open = idx && idx.marketState === "REGULAR";
 
   var rows = data.assets.slice().sort(function (a, b) {
     return st.sortByScore ? (b.dir * b.score) - (a.dir * a.score) : a.name.localeCompare(b.name);
   });
-  var best = rows.filter(function (s) { return s.dir > 0 && s.score >= 53; }).sort(function (a, b) { return b.score - a.score; })[0];
-  var worst = rows.filter(function (s) { return s.dir < 0 && s.score >= 53; }).sort(function (a, b) { return b.score - a.score; })[0];
+  var best = rows.filter(function (s) { return qaSig(s.pUp, base) > 0; }).sort(function (a, b) { return b.score - a.score; })[0];
+  var worst = rows.filter(function (s) { return qaSig(s.pUp, base) < 0; }).sort(function (a, b) { return b.score - a.score; })[0];
 
   return (
     <View style={{ flex: 1 }}>
@@ -115,13 +121,14 @@ export default function MarketScreen(props) {
             {idx ? (
               <View style={{ paddingHorizontal: 10, paddingVertical: 6, borderRadius: 10, backgroundColor: idx.changeRaw >= 0 ? C.upBg : C.downBg }}>
                 <Text style={[T.mono(13, "600"), { color: idx.changeRaw >= 0 ? C.up : C.down }]}>{idx.change}</Text>
+                <Text style={[T.sans(9.5, "500"), { color: C.dim, textAlign: "center", marginTop: 1 }]}>dernière séance</Text>
               </View>
             ) : null}
           </View>
 
           {idx ? (
             <>
-              <Gauge pUp={idx.pUp} />
+              <Gauge pUp={idx.pUp} base={base} />
               <View style={{ alignItems: "center", gap: 6, marginTop: -4 }}>
                 <View style={{ flexDirection: "row", alignItems: "baseline", gap: 4 }}>
                   <Text style={[T.mono(48, "700"), { color: t.c, letterSpacing: -2 }]}>{Math.round(idx.pUp * 100)}</Text>
@@ -149,11 +156,18 @@ export default function MarketScreen(props) {
             </Pressable>
             {help ? (
               <Text style={[T.sans(12.5, "400"), { color: C.dim, lineHeight: 19, marginTop: 10 }]}>
-                {"Ce n'est pas une hausse en %, c'est une probabilité. Entre 47 et 53 %, c'est pile ou face. Calibré sur l'historique réel, " + st.sims.toLocaleString("fr-FR") + " scénarios simulés. Information statistique, pas un conseil."}
+                {"Ce n'est pas une hausse en %, c'est une probabilité. Entre 47 et 53 %, c'est pile ou face. À 3 mois, le niveau habituel est d'environ " + Math.round((baseOf(F, "3M") || 0.56) * 100) + " % pour toutes les actions (elles montent un peu plus souvent qu'elles ne baissent) : seul un écart à ce niveau est un signal. Calibré sur l'historique réel, " + st.sims.toLocaleString("fr-FR") + " scénarios simulés. Information statistique, pas un conseil."}
               </Text>
             ) : null}
           </View>
         </View>
+
+        {idx && idx._candles ? (
+          <BriefCard isIndex title="Pourquoi ce chiffre ?" brief={briefForAsset(idx, null, F, {
+            isIndex: true, horizon: st.horizon, hl: HORIZON_LABEL[st.horizon] || st.horizon, fam: idx.factors,
+            breadth: { n: data.assets.length, up: data.assets.filter(function (s) { return qaSig(s.pUp, base) > 0; }).length, down: data.assets.filter(function (s) { return qaSig(s.pUp, base) < 0; }).length },
+          })} />
+        ) : null}
 
         {idxError ? (
           <View style={{ borderWidth: 1, borderColor: "rgba(255,107,91,0.4)", backgroundColor: "rgba(255,107,91,0.08)", borderRadius: 18, padding: 16 }}>
@@ -198,7 +212,7 @@ export default function MarketScreen(props) {
             <View style={{ gap: 8 }}>
               {rows.map(function (s) {
                 return <StockRow key={s.id} stock={s} onPress={function () { props.open(s.id); }}
-                  watched={props.state.watch.indexOf(s.id) >= 0} onToggle={function () { props.toggleWatch(s.id); }} />;
+                  base={base} watched={props.state.watch.indexOf(s.id) >= 0} onToggle={function () { props.toggleWatch(s.id); }} />;
               })}
             </View>
           )}

@@ -85,6 +85,20 @@ export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, ind
     track, indices, stocks,
   };
   fs.writeFileSync(path.join(outDir, "data.json"), JSON.stringify(data));
+  // fichier leger pour l'appli : fondamentaux + niveau habituel des probabilites par horizon
+  const base = {};
+  for (const h of HORIZON_KEYS) {
+    const ps = Object.values(stocks).map((a) => a.ev?.[h]?.p).filter((v) => v != null && isFinite(v)).sort((a, b) => a - b);
+    base[h] = ps.length ? +ps[ps.length >> 1].toFixed(4) : 0.5;
+  }
+  const fund = {};
+  for (const [sym, a] of Object.entries(stocks)) {
+    const f = { ...(a.fund || {}) }; delete f.cap; delete f.target;
+    if (a.earnings) f.earn = a.earnings;
+    for (const k of Object.keys(f)) if (f[k] == null) delete f[k];
+    if (Object.keys(f).length) fund[sym] = f;
+  }
+  fs.writeFileSync(path.join(outDir, "fund.json"), JSON.stringify({ date: iso, base, f: fund }));
   fs.copyFileSync(path.join(templateDir, "index.html"), path.join(outDir, "index.html"));
   if (fs.existsSync(path.join(templateDir, "learn.json"))) fs.copyFileSync(path.join(templateDir, "learn.json"), path.join(outDir, "learn.json"));
   fs.writeFileSync(path.join(outDir, ".nojekyll"), "");

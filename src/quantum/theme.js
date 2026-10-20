@@ -1,3 +1,4 @@
+import { qaSig, qaVerdictLabel } from "./brief";
 import { Platform } from "react-native";
 
 // Systeme visuel "refonte" : fond bleu nuit, vert / corail reserves au sens,
@@ -35,11 +36,13 @@ export const C = {
 };
 
 // Couleurs selon une probabilite de hausse (entre 47 et 53 % = pile ou face)
-export function tone(pUp) {
+// base : niveau habituel a cet horizon (a 3 mois, ~56 % pour toutes les actions)
+export function tone(pUp, base) {
   if (pUp == null || isNaN(pUp)) return { c: C.soft, bg: C.flatBg, label: "Pile ou face", word: "NEUTRE" };
-  if (pUp >= 0.53) return { c: C.up, bg: C.upBg, label: "Plutôt haussier", word: "HAUSSE" };
-  if (pUp <= 0.47) return { c: C.down, bg: C.downBg, label: "Plutôt baissier", word: "BAISSE" };
-  return { c: C.soft, bg: C.flatBg, label: "Pile ou face", word: "NEUTRE" };
+  var g = qaSig(pUp, base), label = qaVerdictLabel(pUp, base);
+  if (g > 0) return { c: C.up, bg: C.upBg, label: label, word: "HAUSSE" };
+  if (g < 0) return { c: C.down, bg: C.downBg, label: label, word: "BAISSE" };
+  return { c: C.soft, bg: C.flatBg, label: label, word: "NEUTRE" };
 }
 
 // Polices : Sora (texte) et JetBrains Mono (chiffres), chargees au demarrage.

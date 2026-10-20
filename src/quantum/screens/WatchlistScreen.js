@@ -5,9 +5,11 @@ import { useMarketData } from "../MarketData";
 import StockRow from "../components/StockRow";
 import { ScreenTitle } from "../components/UI";
 import Icon from "../components/Icons";
+import { useFund, baseOf } from "../fund";
 
 export default function WatchlistScreen(props) {
   var md = useMarketData();
+  var F = useFund();
 
   // les valeurs suivies hors indice courant doivent etre chargees pour s'afficher
   useEffect(function () {
@@ -37,7 +39,7 @@ export default function WatchlistScreen(props) {
         <View style={{ gap: 8 }}>
           {items.map(function (s) {
             return <StockRow key={s.id} stock={s} onPress={function () { props.open(s.id); }}
-                  watched={props.state.watch.indexOf(s.id) >= 0} onToggle={function () { props.toggleWatch(s.id); }} />;
+                  base={baseOf(F, props.state.horizon)} watched={props.state.watch.indexOf(s.id) >= 0} onToggle={function () { props.toggleWatch(s.id); }} />;
           })}
         </View>
       )}

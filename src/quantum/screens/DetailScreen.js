@@ -6,6 +6,9 @@ import { CATS } from "../core/signals.js";
 import { HORIZON_LABEL } from "../core/model.js";
 import { planFor } from "../model/build";
 import PlanCard from "../components/PlanCard";
+import BriefCard from "../components/BriefCard";
+import { useFund, baseOf } from "../fund";
+import { briefForAsset, qaSig } from "../brief";
 import { useNews } from "../useNews";
 import { newsQuery } from "../universe";
 import NewsList from "../components/NewsList";
@@ -27,6 +30,7 @@ function Row(props) {
 export default function DetailScreen(props) {
   var st = props.state;
   var md = useMarketData();
+  var F = useFund();
   var win = useWindowDimensions();
   var s = md.getAsset(st.detail);
   var pending = !!md.loading[st.detail];
@@ -66,8 +70,9 @@ export default function DetailScreen(props) {
     );
   }
 
-  var dir = s.dir;
-  var strongS = s.score >= 53;
+  var gS = qaSig(s.pUp, baseOf(F, st.horizon));
+  var dir = gS ? gS : s.dir;
+  var strongS = gS !== 0;
   var color = !strongS ? C.soft : dir < 0 ? C.down : C.up;
   var cons = s.cons;
   var watched = st.watch.indexOf(s.id) >= 0;
@@ -183,7 +188,10 @@ export default function DetailScreen(props) {
         <View style={{ flexDirection: "row", alignItems: "baseline", gap: 10 }}>
           <Text style={[T.mono(34, "700"), { color: C.text, letterSpacing: -1.4 }]}>{s.price}</Text>
           <Text style={[T.mono(14, "600"), { color: s.changeRaw >= 0 ? C.up : C.down }]}>{s.change}</Text>
+          <Text style={[T.sans(11, "400"), { color: C.dim }]}>dernière séance</Text>
         </View>
+
+        {plan ? <BriefCard title={"En bref · horizon " + plan.horizonLabel} brief={briefForAsset(s, plan, F, { fam: plan.horizon === st.horizon ? s.factors : null })} /> : null}
 
         <Card style={{ paddingTop: 14, paddingBottom: 12 }}>
           <PriceChart width={chartW} color={color} history={s.history} p05={s.mc.p05} p95={s.mc.p95} median={s.mc.median} hLabel={hLabel} />
