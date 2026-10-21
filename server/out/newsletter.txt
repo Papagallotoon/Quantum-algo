@@ -1,45 +1,48 @@
-*Quantum Algo – mardi 20 octobre 2026*
+*Quantum Algo – mercredi 21 octobre 2026*
 
-• CAC 40 à 7 796 points : −0,9 % à la dernière séance, −4,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : OVHcloud, GE Aerospace, General Motors, Netflix, RTX Raytheon, 3M, Deutsche Boerse.
+• CAC 40 à 7 838 points : −0,4 % à la dernière séance, −3,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• 1 annonce(s) à fort impact aujourd'hui, la première à 08:00 (Inflation (indice des prix à la consommation) (sur un an), Royaume-Uni) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Meta Facebook, Abbott, IBM, AT&T, Thermo Fisher, Tesla, Texas Instruments, SAP.
 • Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : OVHcloud, GE Aerospace, General Motors, Netflix, RTX Raytheon, 3M, Deutsche Boerse
+*Agenda (fort impact)*
+08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an) (prévu 3.4%)
+
+*Résultats aujourd'hui* : Meta Facebook, Abbott, IBM, AT&T, Thermo Fisher, Tesla, Texas Instruments, SAP
 
 *À venir (fort impact)*
-mer. 21/10 08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an)
 dim. 25/10 02:00 🇨🇭 Daylight Saving Time Shift
 dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
 dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
 
 *Opportunités*
-• RWE – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +3,6 %
-  entrée 56,57-57,48, stop 53,32, objectif 64,14, revoir le 15/01
-  ⚠ résultats pendant la position
-• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +11,0 %
-  entrée 880,35-914,72, stop 757,59, objectif 1234,11, revoir le 14/01
 • Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,4 %
-  entrée 54,93-55,33, stop 50,97, objectif 61,68, revoir le 21/01
+  entrée 54,93-55,33, stop 50,98, objectif 61,38, revoir le 22/01
   ⚠ résultats pendant la position
-• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
-  entrée 26,60-26,83, stop 24,36, objectif 29,97, revoir le 22/01
+• RWE – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +3,5 %
+  entrée 56,52-57,44, stop 53,22, objectif 64,36, revoir le 14/01
   ⚠ résultats pendant la position
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
-  entrée 3473,00-3500,36, stop 3199,35, objectif 4070,10, revoir le 22/01
+• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +10,9 %
+  entrée 871,94-905,72, stop 751,28, objectif 1226,02, revoir le 15/01
+• Texas Instruments – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +4,5 %
+  entrée 273,36-279,55, stop 251,29, objectif 322,93, revoir le 15/01
+  ⚠ résultats pendant la position
+• Murata – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +11,2 %
+  entrée 8980,00-9108,65, stop 7693,48, objectif 12642,87, revoir le 25/01
+  ⚠ résultats pendant la position
 
 *À lire*
-• La remontée du pétrole et la débâcle d'Elice incitent Wall Street à la prudence (Zonebourse Suisse)
-• Wall Street dans le rouge, après une vague de publications trimestrielles (Boursier.com)
-• La Fed ne bougera pas en octobre, mais relèvera de nouveau ses taux en décembre, selon la quasi-totalité des économistes (Zonebourse Suisse)
+• Des gains timides attendus à la Bourse de Paris (Zonebourse)
+• Le Cac 40 attendu légèrement positif, Elon Musk défend une fusion Tesla-SpaceX, Carrefour abaisse ses objectifs à la suite des violences du 17 octobre (Investir Les Echos)
+• CAC40 : Des velléités de rebond ? (Bourse Direct)
 
-*🎓 Question du jour* : La capitalisation boursière se calcule…
-A. cours × nombre d'actions
-B. bénéfice × 10
-C. chiffre d'affaires - dettes
-D. cours ÷ bénéfice
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q41
+*🎓 Question du jour* : Un resserrement des bandes de Bollinger signale…
+A. une hausse certaine
+B. une baisse certaine
+C. une volatilité faible qui précède souvent un mouvement fort
+D. la fin de la tendance
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q42
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
