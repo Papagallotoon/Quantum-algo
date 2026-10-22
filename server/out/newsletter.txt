@@ -1,15 +1,12 @@
-*Quantum Algo – mercredi 21 octobre 2026*
+*Quantum Algo – jeudi 22 octobre 2026*
 
-• CAC 40 à 7 918 points : +1,0 % à la dernière séance, −2,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• 1 annonce(s) à fort impact aujourd'hui, la première à 08:00 (Inflation (indice des prix à la consommation) (sur un an), Royaume-Uni) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Meta Facebook, Abbott, IBM, AT&T, Thermo Fisher, Tesla, Texas Instruments, SAP.
-• Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
+• CAC 40 à 7 842 points : −1,0 % à la dernière séance, −3,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Sartorius Stedim Biotech, Lockheed Martin, Procter & Gamble, Honeywell.
+• Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an) (prévu 3.4%)
-
-*Résultats aujourd'hui* : Meta Facebook, Abbott, IBM, AT&T, Thermo Fisher, Tesla, Texas Instruments, SAP
+*Résultats aujourd'hui* : Sartorius Stedim Biotech, Lockheed Martin, Procter & Gamble, Honeywell
 
 *À venir (fort impact)*
 dim. 25/10 02:00 🇨🇭 Daylight Saving Time Shift
@@ -17,31 +14,31 @@ dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
 dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
 
 *Opportunités*
-• Bank of America – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,3 %
-  entrée 54,93-55,33, stop 50,98, objectif 61,52, revoir le 22/01
+• Siemens – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,2 %
+  entrée 278,90-280,97, stop 258,16, objectif 319,30, revoir le 26/01
   ⚠ résultats pendant la position
-• Micron – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +10,7 %
-  entrée 871,94-905,72, stop 751,28, objectif 1205,23, revoir le 15/01
-• Texas Instruments – Entrer (3 mois) : 57 % de chances de hausse, variation attendue +4,3 %
-  entrée 273,36-279,55, stop 251,29, objectif 324,35, revoir le 15/01
+• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
+  entrée 25,79-26,02, stop 23,52, objectif 29,19, revoir le 26/01
   ⚠ résultats pendant la position
-• Siemens – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,8 %
-  entrée 278,90-280,93, stop 258,63, objectif 320,76, revoir le 25/01
+• Micron – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +9,9 %
+  entrée 889,87-923,19, stop 770,86, objectif 1235,53, revoir le 18/01
+• Bank of America – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
+  entrée 54,93-55,31, stop 51,11, objectif 61,32, revoir le 25/01
   ⚠ résultats pendant la position
-• BPER Banca – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,2 %
-  entrée 13,98-14,07, stop 13,02, objectif 15,68, revoir le 25/01
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,2 %
+  entrée 26,14-26,33, stop 24,25, objectif 29,51, revoir le 26/01
 
 *À lire*
-• Wall Street devrait ouvrir en hausse, les résultats de SpaceX et Super Micro ravivant l'engouement pour l'IA (Boursorama)
-• Wall Street : SpaceX flambe, Netflix corrige (Boursier.com)
-• EssilorLuxottica et Carrefour, l'un s'envole et l'autre plonge en Bourse, le Cac 40 rebondit malgré des rendements obligataires remontent (Investir Les Echos)
+• Wall Street devrait ouvrir en baisse alors que les craintes liées à l'IA refont surface et que le pétrole prog (Boursorama)
+• Wall Street retombe, Meta et Tesla peinent à convaincre (Boursier.com)
+• Les obligations françaises sous pression, Hermès et la tech en difficulté après les publications trimestrielles (Investir Les Echos)
 
-*🎓 Question du jour* : Un resserrement des bandes de Bollinger signale…
-A. une hausse certaine
-B. une baisse certaine
-C. une volatilité faible qui précède souvent un mouvement fort
-D. la fin de la tendance
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q42
+*🎓 Question du jour* : Quel retracement de Fibonacci est surnommé le « nombre d'or » ?
+A. 23,6 %
+B. 38,2 %
+C. 50 %
+D. 61,8 %
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q43
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
