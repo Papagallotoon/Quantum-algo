@@ -1,12 +1,12 @@
-*Quantum Algo – jeudi 22 octobre 2026*
+*Quantum Algo – vendredi 23 octobre 2026*
 
-• CAC 40 à 7 842 points : −1,0 % à la dernière séance, −3,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 745 points : −0,8 % à la dernière séance, −4,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Sartorius Stedim Biotech, Lockheed Martin, Procter & Gamble, Honeywell.
+• Résultats aujourd'hui : Sodexo, American Express, Eni, Fanuc.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : Sartorius Stedim Biotech, Lockheed Martin, Procter & Gamble, Honeywell
+*Résultats aujourd'hui* : Sodexo, American Express, Eni, Fanuc
 
 *À venir (fort impact)*
 dim. 25/10 02:00 🇨🇭 Daylight Saving Time Shift
@@ -14,31 +14,31 @@ dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
 dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
 
 *Opportunités*
-• Siemens – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +4,2 %
-  entrée 278,90-280,97, stop 258,16, objectif 319,30, revoir le 26/01
+• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,0 %
+  entrée 25,79-26,02, stop 23,53, objectif 29,36, revoir le 27/01
   ⚠ résultats pendant la position
-• Unipol – Attendre la confirmation (3 mois) : 57 % de chances de hausse, variation attendue +3,7 %
-  entrée 25,79-26,02, stop 23,52, objectif 29,19, revoir le 26/01
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
+  entrée 26,00-26,18, stop 24,16, objectif 29,52, revoir le 27/01
+• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
+  entrée 89,80-90,30, stop 84,82, objectif 99,21, revoir le 27/01
   ⚠ résultats pendant la position
-• Micron – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +9,9 %
-  entrée 889,87-923,19, stop 770,86, objectif 1235,53, revoir le 18/01
-• Bank of America – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
-  entrée 54,93-55,31, stop 51,11, objectif 61,32, revoir le 25/01
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
+  entrée 3352,00-3381,35, stop 3058,50, objectif 3920,83, revoir le 27/01
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,2 %
-  entrée 26,14-26,33, stop 24,25, objectif 29,51, revoir le 26/01
+• Morgan Stanley – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
+  entrée 193,30-194,82, stop 178,07, objectif 218,06, revoir le 26/01
 
 *À lire*
-• Wall Street devrait ouvrir en baisse alors que les craintes liées à l'IA refont surface et que le pétrole prog (Boursorama)
-• Wall Street retombe, Meta et Tesla peinent à convaincre (Boursier.com)
-• Les obligations françaises sous pression, Hermès et la tech en difficulté après les publications trimestrielles (Investir Les Echos)
+• Le pétrole atteint son plus haut niveau depuis mai lorsque le détroit d'Ormuz était paralysé, les marchés craignent une nouvelle escalade du conflit (BFM)
+• Or : Le métal jaune se dirige vers sa plus forte baisse hebdomadaire en quatre mois (Boursenews.ma)
+• Wall Street programmée en ordre dispersé (Zonebourse Suisse)
 
-*🎓 Question du jour* : Quel retracement de Fibonacci est surnommé le « nombre d'or » ?
-A. 23,6 %
-B. 38,2 %
-C. 50 %
-D. 61,8 %
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q43
+*🎓 Question du jour* : Le prix fait un plus haut plus haut mais le RSI un plus haut plus bas. C'est…
+A. une divergence haussière
+B. une divergence baissière
+C. une confirmation
+D. un squeeze
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q44
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
