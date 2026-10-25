@@ -1,4 +1,4 @@
-*Quantum Algo – samedi 24 octobre 2026*
+*Quantum Algo – dimanche 25 octobre 2026*
 
 • CAC 40 à 7 783 points : −0,4 % à la dernière séance, −3,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
@@ -6,36 +6,39 @@
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *À venir (fort impact)*
-dim. 25/10 02:00 🇨🇭 Daylight Saving Time Shift
-dim. 25/10 02:00 🇪🇺 Daylight Saving Time Shift
-dim. 25/10 02:00 🇬🇧 Daylight Saving Time Shift
+mer. 28/10 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
+mer. 28/10 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an)
+mer. 28/10 01:30 🇦🇺 Trimmed Mean CPI m/m
+mer. 28/10 13:30 🇬🇧 Annual Budget Release
+mer. 28/10 14:45 🇨🇦 BOC Monetary Policy Report
+mer. 28/10 14:45 🇨🇦 BOC Rate Statement
 
 *Opportunités*
 • Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 89,80-90,30, stop 84,77, objectif 99,44, revoir le 27/01
+  entrée 89,80-90,30, stop 84,77, objectif 99,57, revoir le 27/01
   ⚠ résultats pendant la position
 • Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
-  entrée 30,48-30,76, stop 27,71, objectif 36,01, revoir le 27/01
+  entrée 30,48-30,76, stop 27,71, objectif 36,13, revoir le 27/01
 • Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
-  entrée 25,79-26,02, stop 23,49, objectif 29,24, revoir le 27/01
+  entrée 25,79-26,02, stop 23,49, objectif 29,31, revoir le 27/01
   ⚠ résultats pendant la position
 • Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
-  entrée 3352,00-3381,35, stop 3058,50, objectif 3911,56, revoir le 27/01
+  entrée 3352,00-3381,35, stop 3058,50, objectif 3896,51, revoir le 27/01
   ⚠ résultats pendant la position
 • Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
-  entrée 26,02-26,20, stop 24,18, objectif 29,45, revoir le 27/01
+  entrée 26,02-26,20, stop 24,18, objectif 29,34, revoir le 27/01
 
 *À lire*
-• Or : Le métal jaune passe sous les 4.000 dollars, pénalisé par les perspectives de taux élevés (Boursenews.ma)
-• SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris (Boursorama)
-• SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris (Boursorama)
+• Le prix de l'or quitte son sommet, évaluation des opportunités d'investissement à la fin de 2026 (Laodong.vn)
+• Nasdaq composite : Panneaux publicitaires et somptueuses soirées de gala... Comment le Nasdaq et le New York Stock Exhange se livrent bataille pour attirer le plus d'entreprises (mais un troisième acteur vient s'inviter dans ce combat) (BFM Bourse)
+• Les consommateurs de la zone euro s’attendent à une inflation de 3,1 % l’an prochain et à une économie plus faible (Informat.ro)
 
-*🎓 Question du jour* : Dans l'analyse multi-unités de temps, l'unité supérieure sert à…
-A. choisir le point d'entrée précis
-B. donner la direction à suivre
-C. calculer les frais
-D. fixer la taille de position
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q45
+*🎓 Question du jour* : Quel état financier est le plus difficile à maquiller ?
+A. Le compte de résultat
+B. Le bilan
+C. Le tableau des flux de trésorerie
+D. Le rapport du président
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q46
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 

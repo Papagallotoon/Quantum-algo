@@ -1,6 +1,6 @@
 {
- "date": "2026-10-24",
- "dateLabel": "samedi 24 octobre 2026",
+ "date": "2026-10-25",
+ "dateLabel": "dimanche 25 octobre 2026",
  "picks": [
   {
    "sym": "AMUN.PA",
@@ -14,19 +14,19 @@
    "zoneLo": 89.80000305175781,
    "zoneHi": 90.302557501869,
    "stop": 84.7744585506459,
-   "target": 99.44039576427005,
-   "rr": 1.9182782503227833,
-   "pTarget": 0.302,
+   "target": 99.56912610849746,
+   "rr": 1.9438934536502883,
+   "pTarget": 0.29825,
    "holdDays": 63,
    "reviewDate": "2027-01-27T07:00:00.000Z",
    "validUntil": "2026-11-13T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.694124047025719,
+   "expectancy": 1.592496151804988,
    "price": 87.19999694824219,
    "chg": -0.5134108041103147,
    "sizePct": 17.8687111479939,
    "riskPct": 5.596374532654914,
-   "gainPct": 10.735403546652252,
+   "gainPct": 10.878755818203079,
    "perf": {
     "w1": -2.02247533905372,
     "m1": -3.6464122118870845,
@@ -63,22 +63,7 @@
     "lo52": 60.9
    },
    "earningsWarning": "Résultats prévus le 29/10/2026 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Amundi boucle sa dixième augmentation de capital réservée aux salariés pour 40,8 millions d’euros",
-     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPV0VwS05PMzE5YzhJTVRTcGpJdGFUalliRDFGRjdpUUF4bjFpYUNqeE0xWjFyOVRJM09YaUJnZ1MwNU94OGRjbklERjl2eUp5LXZxVkQyMzZncVAtNmNsTnl3MDB5R0NBdy1ocklLOVZRaHVBTi05TVpHSWFfWmhjS0F1MjF0LW5MdXpRRWFKRE1MUVYya2JZbzBRaXRXTGQ0VEY0ZEJBWHNHRFZ4eTcwT0h5WXAwVjdaUTdZdlJn?oc=5",
-     "source": "ABC Bourse",
-     "time": 1792754410000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Près d'un salarié sur deux a souscrit à \"We Share Amundi\"...",
-     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOeWs4dVFoNEJfS2tJT2lVRVFuTGRROENJTDJEb0xEYWZGRHlwblB3TllNajZOU0pXbTFjTTcyVDBSTG9JS0c4cVZwUVFPNWpSalM2VlV6Q2tvd3JkZGxBMGFQcThlMV8xNFRzRzV6U0I3c2FGT2Y3VDRUYVRrQ2x4YVd2VVp5dF9GNGJRSkw5dEI0VFBDMXBORDF6NkFxWGt0MTFV0gGoAUFVX3lxTE8wRmVndGE4aTVyNER6TWNoQUhDeVJIUlRhbzBPQjZtNWNscE5ZQU9OUWRVVGt0V0NiR3NzUUVCcmVsUFlwaW5JWTZvQkZuMXdtam1jYkwyNDZ6bHA3aEhUdjZhWlFRZk1IcHBoLURPeEMxSlFzazRmQUl2T2VlZ3ljdUdyTmpsRGl0WUJncHVBNVB4ZHRva2lmWm9kMjdaVWZpa25qUDlHMg?oc=5",
-     "source": "Fortuneo",
-     "time": 1792741020000,
-     "tone": "neutre"
-    }
-   ]
+   "news": []
   },
   {
    "sym": "EDEN.PA",
@@ -92,19 +77,19 @@
    "zoneLo": 30.479999542236328,
    "zoneHi": 30.757134745482357,
    "stop": 27.708647509776036,
-   "target": 36.01381081676817,
-   "rr": 1.996791172581259,
-   "pTarget": 0.3255,
+   "target": 36.13289119470723,
+   "rr": 2.0397595059233575,
+   "pTarget": 0.30425,
    "holdDays": 63,
    "reviewDate": "2027-01-27T07:00:00.000Z",
    "validUntil": "2026-11-13T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 3.0356129367909284,
+   "expectancy": 2.8519392593001043,
    "price": 25.90999984741211,
    "chg": -2.4840039706160666,
    "sizePct": 10.998241719287261,
    "riskPct": 9.092362447775015,
-   "gainPct": 18.155549073626478,
+   "gainPct": 18.546232734149655,
    "perf": {
     "w1": -13.777036588215918,
     "m1": -5.541379660418244,
@@ -140,22 +125,7 @@
     "hi52": 30.85,
     "lo52": 15.23
    },
-   "news": [
-    {
-     "title": "EDENRED Cours Action EDEN, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1VckxBZWtfRDJhQmU5NG81d1FVZk1mXzVlWHVsTHZiMkE1NElIRG9rU283WTdjSk9nNTNaSEdQWFF0M3diUDJ1c3NhbHY2ZDQyVUhj?oc=5",
-     "source": "Boursorama",
-     "time": 1792836238000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Edenred à la baisse",
-     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQQnE4cE5qWS1CTjdQWGRaU18tSWZsbnBnR2JDOEl2WFFVdUhQbjE1UTM0NFBpVzVpek9yaTJ2ZG8talhEM25XckU5RG9OXzlZbTBIbkctdnNpUFQ0blFtNDZkdE85QUk2Zy0xSEV2U2RMcHc5b1hFZ3hQUDMyZ2pwbmtWQk5xVlk?oc=5",
-     "source": "Boursier.com",
-     "time": 1792770282000,
-     "tone": "négatif"
-    }
-   ]
+   "news": []
   },
   {
    "sym": "UNI.MI",
@@ -169,19 +139,19 @@
    "zoneLo": 25.790000915527344,
    "zoneHi": 26.020321139788443,
    "stop": 23.48679867291637,
-   "target": 29.244804279443805,
-   "rr": 1.4999999999999993,
-   "pTarget": 0.326,
+   "target": 29.308791858429345,
+   "rr": 1.5277820062006364,
+   "pTarget": 0.32925,
    "holdDays": 63,
    "reviewDate": "2027-01-27T07:00:00.000Z",
    "validUntil": "2026-11-13T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.5878946355034786,
+   "expectancy": 2.6726392296261805,
    "price": 24.59000015258789,
    "chg": -1.0462785709883349,
    "sizePct": 11.197453891973925,
    "riskPct": 8.930601631829685,
-   "gainPct": 13.39590244774452,
+   "gainPct": 13.644012477655432,
    "perf": {
     "w1": -4.244548830352635,
     "m1": -8.519341814270366,
@@ -232,19 +202,19 @@
    "zoneLo": 3352,
    "zoneHi": 3381.3504777337484,
    "stop": 3058.4952226625173,
-   "target": 3911.5642258169028,
-   "rr": 1.9064910319108541,
-   "pTarget": 0.3325,
+   "target": 3896.5097532644604,
+   "rr": 1.855198944984677,
+   "pTarget": 0.33975,
    "holdDays": 63,
    "reviewDate": "2027-01-27T00:00:00.000Z",
    "validUntil": "2026-11-13T00:00:00.000Z",
    "cur": "JPY",
-   "expectancy": 2.5155745239771097,
+   "expectancy": 2.447290168862218,
    "price": 3114,
    "chg": -1.797540208136239,
    "sizePct": 11.420597751108312,
    "riskPct": 8.756109109113444,
-   "gainPct": 16.69344349095772,
+   "gainPct": 16.244324381397984,
    "perf": {
     "w1": -4.94505494505495,
     "m1": -8.814055636896045,
@@ -295,19 +265,19 @@
    "zoneLo": 26.01969045267896,
    "zoneHi": 26.203644137216898,
    "stop": 24.18015360729961,
-   "target": 29.44640432877236,
-   "rr": 1.8628133949590633,
-   "pTarget": 0.328,
+   "target": 29.34320809038641,
+   "rr": 1.8067143618545265,
+   "pTarget": 0.344,
    "holdDays": 63,
    "reviewDate": "2027-01-27T07:00:00.000Z",
    "validUntil": "2026-11-13T07:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 2.1914133060816092,
+   "expectancy": 2.1890635098747504,
    "price": 25.079999923706055,
    "chg": 0.64205396036221,
    "sizePct": 14.144696540347429,
    "riskPct": 7.06978758538596,
-   "gainPct": 13.169695013572259,
+   "gainPct": 12.773086765777647,
    "perf": {
     "w1": -2.2222210655022168,
     "m1": -12.399578557883173,
@@ -345,18 +315,11 @@
    },
    "news": [
     {
-     "title": "Mediobanca abaisse l’objectif de cours de SEB à 250 couronnes (266), réitère sa recommandation de surperformance – Bloomberg News (BN)",
-     "link": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxOU2xtYk1Da0VOaEpORVpfdUhNQ2FmY0tyV21BZHJMT2g0QVFGbUQ4UzRxaElvUk9NNERSXzhNa1ViNldxeWtsNFpiQnR4NEEzLU5TWXpLWU5ueXRHb0s2NldCSTdQWFRYSWw1WVZrYjlZMXVtenUxaG1LX0ZERGZhN0l2TGROUVZtTXZoaFBoR3pPM0RBeXFoUkxWa1JQd3hOQ2wwWjRVVFlPRm5TQ0NoTU5CTk12UFZyMy1FcHNVQXFYS0NoX1JuU3Y1VGpWeHEwYlh0cVBvRzFsYU5XRUtBMFR3Rl9COTRzWUhB?oc=5",
+     "title": "Norges, investisseur de Monte dei Paschi di Siena (MPS), s’opposera aux offres de rachat de Banco BPM et Banca Generali",
+     "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPa0tMWkVfZUVkajNfQTBQb3RFVFNjS0NqbTRSdWxrbG1fOVZGVTRFb0JoWklySVlPRVAtWGNSa3c3dTRxTzZ6Uzh1UUkyMlVUNGtYS1B5QXpLUXdPc0wtREFPUWJCT2ZleDNnelVmVzROR21iT3ktQzF0RnRzMjdqdlJ4UThfSHY4Q2h5Z2swaFE0TW54YnVRQTFjV0dydktkR2h4Y3YzNnVPOGkyb29TbXp4cnZrX3d1UGVReEVjM3dhSVZoRjdRaGlvQVBGTnFXakotd2VhQnd4TEFnMHRVY3dXS1hrSTN4ZUE?oc=5",
      "source": "Zonebourse Suisse",
-     "time": 1792751055000,
-     "tone": "négatif"
-    },
-    {
-     "title": "Les Bourses européennes reculent après les PMI ; les résultats profitent à Eni",
-     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPWUl3SmF0Q3RoZlRPMlAxSTNQQUtZVjlmSUkzbTk5OWo0dlp4cXl4cDlwd0hpNjJaLWdlbXZZUEpYb0NkMlpFTDVmcTd1Mkt0WUJYYnFSOE9EWFltWHdnMFB6dHdlODE5cnFGSlQxTXd0RUo0a1pzbTg0Tld1eTZxWC04ZXFROEx5MDJocHJ4R3VaQTNnY0dDYk5qbHRpZEpQODBKcHkxVV8tQlZnbFFpeEdGVE9XUDVhVEl0Q1JZUDJWblVEejNzQ3NpYU1FbF84eGc?oc=5",
-     "source": "Zonebourse Suisse",
-     "time": 1792749273000,
-     "tone": "négatif"
+     "time": 1792838242000,
+     "tone": "neutre"
     }
    ]
   }
@@ -452,44 +415,282 @@
   "tomorrow": [],
   "week": [
    {
-    "day": "2026-10-25",
-    "dayLabel": "dim. 25/10",
-    "time": "02:00",
-    "ts": 1792890000000,
-    "cur": "CHF",
-    "country": "Suisse",
-    "flag": "🇨🇭",
-    "title": "Daylight Saving Time Shift",
-    "original": "Daylight Saving Time Shift",
-    "impact": "férié",
-    "forecast": "",
-    "previous": ""
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "01:30",
+    "ts": 1793147400000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.7%",
+    "previous": "0.4%"
    },
    {
-    "day": "2026-10-25",
-    "dayLabel": "dim. 25/10",
-    "time": "02:00",
-    "ts": 1792890000000,
-    "cur": "EUR",
-    "country": "Zone euro",
-    "flag": "🇪🇺",
-    "title": "Daylight Saving Time Shift",
-    "original": "Daylight Saving Time Shift",
-    "impact": "férié",
-    "forecast": "",
-    "previous": ""
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "01:30",
+    "ts": 1793147400000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Inflation (indice des prix à la consommation) (sur un an)",
+    "original": "CPI y/y",
+    "impact": "fort",
+    "forecast": "4.2%",
+    "previous": "4.0%"
    },
    {
-    "day": "2026-10-25",
-    "dayLabel": "dim. 25/10",
-    "time": "02:00",
-    "ts": 1792890000000,
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "01:30",
+    "ts": 1793147400000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Trimmed Mean CPI m/m",
+    "original": "Trimmed Mean CPI m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.2%"
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "13:30",
+    "ts": 1793190600000,
     "cur": "GBP",
     "country": "Royaume-Uni",
     "flag": "🇬🇧",
-    "title": "Daylight Saving Time Shift",
-    "original": "Daylight Saving Time Shift",
-    "impact": "férié",
+    "title": "Annual Budget Release",
+    "original": "Annual Budget Release",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "14:45",
+    "ts": 1793195100000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "BOC Monetary Policy Report",
+    "original": "BOC Monetary Policy Report",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "14:45",
+    "ts": 1793195100000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "BOC Rate Statement",
+    "original": "BOC Rate Statement",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "14:45",
+    "ts": 1793195100000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Overnight Rate",
+    "original": "Overnight Rate",
+    "impact": "fort",
+    "forecast": "2.50%",
+    "previous": "2.25%"
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "15:30",
+    "ts": 1793197800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "BOC Press Conference",
+    "original": "BOC Press Conference",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "19:00",
+    "ts": 1793210400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Décision de taux de la Fed",
+    "original": "Federal Funds Rate",
+    "impact": "fort",
+    "forecast": "4.00%",
+    "previous": "4.00%"
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "19:00",
+    "ts": 1793210400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Communiqué de la Fed",
+    "original": "FOMC Statement",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-28",
+    "dayLabel": "mer. 28/10",
+    "time": "19:30",
+    "ts": 1793212200000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Conférence de presse de la Fed",
+    "original": "FOMC Press Conference",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-29",
+    "dayLabel": "jeu. 29/10",
+    "time": "13:30",
+    "ts": 1793277000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Croissance du PIB (sur un trimestre)",
+    "original": "Advance GDP q/q",
+    "impact": "fort",
+    "forecast": "3.2%",
+    "previous": "1.5%"
+   },
+   {
+    "day": "2026-10-29",
+    "dayLabel": "jeu. 29/10",
+    "time": "13:30",
+    "ts": 1793277000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois)",
+    "original": "Core PCE Price Index m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.2%"
+   },
+   {
+    "day": "2026-10-29",
+    "dayLabel": "jeu. 29/10",
+    "time": "14:15",
+    "ts": 1793279700000,
+    "cur": "EUR",
+    "country": "Zone euro",
+    "flag": "🇪🇺",
+    "title": "Décision de taux de la BCE",
+    "original": "Main Refinancing Rate",
+    "impact": "fort",
+    "forecast": "2.65%",
+    "previous": "2.65%"
+   },
+   {
+    "day": "2026-10-29",
+    "dayLabel": "jeu. 29/10",
+    "time": "14:15",
+    "ts": 1793279700000,
+    "cur": "EUR",
+    "country": "Zone euro",
+    "flag": "🇪🇺",
+    "title": "Communiqué de politique monétaire",
+    "original": "Monetary Policy Statement",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-29",
+    "dayLabel": "jeu. 29/10",
+    "time": "14:45",
+    "ts": 1793281500000,
+    "cur": "EUR",
+    "country": "Zone euro",
+    "flag": "🇪🇺",
+    "title": "Conférence de presse de la BCE",
+    "original": "ECB Press Conference",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-30",
+    "dayLabel": "ven. 30/10",
+    "time": "03:30",
+    "ts": 1793327400000,
+    "cur": "JPY",
+    "country": "Japon",
+    "flag": "🇯🇵",
+    "title": "Décision de taux de la Banque du Japon",
+    "original": "BOJ Policy Rate",
+    "impact": "fort",
+    "forecast": "<1.25%",
+    "previous": "<1.25%"
+   },
+   {
+    "day": "2026-10-30",
+    "dayLabel": "ven. 30/10",
+    "time": "03:30",
+    "ts": 1793327400000,
+    "cur": "JPY",
+    "country": "Japon",
+    "flag": "🇯🇵",
+    "title": "Communiqué de politique monétaire",
+    "original": "Monetary Policy Statement",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-30",
+    "dayLabel": "ven. 30/10",
+    "time": "03:31",
+    "ts": 1793327460000,
+    "cur": "JPY",
+    "country": "Japon",
+    "flag": "🇯🇵",
+    "title": "BOJ Outlook Report",
+    "original": "BOJ Outlook Report",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-10-30",
+    "dayLabel": "ven. 30/10",
+    "time": "06:30",
+    "ts": 1793338200000,
+    "cur": "JPY",
+    "country": "Japon",
+    "flag": "🇯🇵",
+    "title": "BOJ Press Conference",
+    "original": "BOJ Press Conference",
+    "impact": "fort",
     "forecast": "",
     "previous": ""
    }
@@ -538,19 +739,19 @@
    {
     "sym": "ORA.PA",
     "name": "Orange",
-    "date": 1793115000000,
+    "date": 1793118600000,
     "estimate": false
    },
    {
     "sym": "BEI.DE",
     "name": "Beiersdorf",
-    "date": 1793115000000,
+    "date": 1793118600000,
     "estimate": false
    },
    {
     "sym": "P911.DE",
     "name": "Porsche",
-    "date": 1793115000000,
+    "date": 1793118600000,
     "estimate": false
    },
    {
@@ -560,69 +761,69 @@
     "estimate": false
    },
    {
-    "sym": "STLAP.PA",
-    "name": "Stellantis",
-    "date": 1793167200000,
-    "estimate": false
-   },
-   {
-    "sym": "DBK.DE",
-    "name": "Deutsche Bank",
-    "date": 1793167200000,
-    "estimate": false
-   },
-   {
-    "sym": "STLAM.MI",
-    "name": "Stellantis",
-    "date": 1793167200000,
-    "estimate": false
-   },
-   {
     "sym": "6501.T",
     "name": "Hitachi",
     "date": 1793169000000,
     "estimate": false
    },
    {
+    "sym": "STLAP.PA",
+    "name": "Stellantis",
+    "date": 1793170800000,
+    "estimate": false
+   },
+   {
+    "sym": "DBK.DE",
+    "name": "Deutsche Bank",
+    "date": 1793170800000,
+    "estimate": false
+   },
+   {
+    "sym": "STLAM.MI",
+    "name": "Stellantis",
+    "date": 1793170800000,
+    "estimate": false
+   },
+   {
     "sym": "BNP.PA",
     "name": "BNP Paribas",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "AIR.PA",
     "name": "Airbus",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "DSY.PA",
     "name": "Dassault Systemes",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "BAS.DE",
     "name": "BASF",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "AIR.DE",
     "name": "Airbus",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "MBG.DE",
     "name": "Mercedes-Benz",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
     "sym": "CPR.MI",
     "name": "Campari",
-    "date": 1793201400000,
+    "date": 1793205000000,
     "estimate": false
    },
    {
@@ -688,85 +889,85 @@
    {
     "sym": "TTE.PA",
     "name": "TotalEnergies",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "GLE.PA",
     "name": "Societe Generale",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "STMPA.PA",
     "name": "STMicroelectronics",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "AMUN.PA",
     "name": "Amundi",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "AYV.PA",
     "name": "Ayvens",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "NK.PA",
     "name": "Imerys",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "PLX.PA",
     "name": "Pluxee",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "TFI.PA",
     "name": "TF1",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "ADS.DE",
     "name": "Adidas",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "MTX.DE",
     "name": "MTU Aero Engines",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "VOW3.DE",
     "name": "Volkswagen",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "AMP.MI",
     "name": "Amplifon",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "PRY.MI",
     "name": "Prysmian",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
     "sym": "STMMI.MI",
     "name": "STMicroelectronics",
-    "date": 1793287800000,
+    "date": 1793291400000,
     "estimate": false
    },
    {
@@ -838,25 +1039,25 @@
    {
     "sym": "SAN.PA",
     "name": "Sanofi",
-    "date": 1793374200000,
+    "date": 1793377800000,
     "estimate": false
    },
    {
     "sym": "ACA.PA",
     "name": "Credit Agricole",
-    "date": 1793374200000,
+    "date": 1793377800000,
     "estimate": false
    },
    {
     "sym": "SCR.PA",
     "name": "SCOR",
-    "date": 1793374200000,
+    "date": 1793377800000,
     "estimate": false
    },
    {
     "sym": "ISP.MI",
     "name": "Intesa Sanpaolo",
-    "date": 1793374200000,
+    "date": 1793377800000,
     "estimate": false
    }
   ]
@@ -914,9 +1115,9 @@
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 116.72000122070312,
-   "chg": 3.136876477154482,
-   "m1": 9.493436108293029
+   "last": 111.69999694824219,
+   "chg": -1.2989319117144849,
+   "m1": 4.784238787169581
   },
   {
    "sym": "GC=F",
@@ -935,9 +1136,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 80676.09375,
-   "chg": -0.49102403893964697,
-   "m1": -4.822217826826791
+   "last": 80348.3984375,
+   "chg": -0.5476332740785961,
+   "m1": -7.090523411264438
   }
  ],
  "movers": {
@@ -978,59 +1179,59 @@
  },
  "news": [
   {
-   "title": "Or : Le métal jaune passe sous les 4.000 dollars, pénalisé par les perspectives de taux élevés",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxNa0c5ZVlDbW1iVi1WVTBxOWhTS0pRUUg3SEVCNzRTTUdMZUFIQndMZWpKYTlPX2d1UXh1YllDTU1JZHlYcVZlcEVlZV8wNkRaLUpDdkRtc2o2YXZCb0lGWFdXaTNhTE5KbkFWeVk0Wm52Ym1zZnhNVVVfNXdDbFctYjJmanJacF9HR1JpQXRkSEo?oc=5",
-   "source": "Boursenews.ma",
-   "time": 1792843441000,
+   "title": "Le prix de l'or quitte son sommet, évaluation des opportunités d'investissement à la fin de 2026",
+   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNNmY3YXhGUlFZUXl2MVZWWUticzFxQzB0YVZzLURNVUJOY1BPVkdKQUI1UERFRzdDRmpMa1E1S1d4c2Fjb2xCM1o1dE4tX1Vpb2hSQTZRUDZnSnpHamtydVFhdUlPTDc5ckRXeWEwWDZXQ1NTM3NwRlBGOXZqZktDLWhFUHRJMTFfWnFfUmZMbTR5OE1OOWx5dEFsSHpGMkE?oc=5",
+   "source": "Laodong.vn",
+   "time": 1792932447000,
    "tone": "neutre"
   },
   {
-   "title": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
+   "title": "Nasdaq composite : Panneaux publicitaires et somptueuses soirées de gala... Comment le Nasdaq et le New York Stock Exhange se livrent bataille pour attirer le plus d'entreprises (mais un troisième acteur vient s'inviter dans ce combat)",
+   "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxQVGRjSEU3YUdrNTBlOUVOemZoNE9rczB1N3BVVVFPdVRPdWRXVWYxZ2N3MmttOUp0M2xwUlNaSERGVkloOG03R3EwaTg5bkZpVTVaYWJTWVZGRTlKYUFvSEFmcHN4MkVRSHdxWnRpX0NkcUZOQWg3M1UtdHd1ZWlDZ0R0SEF4azdVeVN0QmZMM1FvTmZ3cWtiSzhoNjU3czVSS0tubkE4S3IzZE1yc3NucDZZU3EzdGtiMHdKQklUVTQ2bWthQnRZUWZrblZaTGtNc1IyS3JwWmJSTEVQNXFFdS1GWXktMTJIR2RhQWpKZUZOQkNnN3E3V3ZIOHEtZHZCb2ptYUZnZnV4UGhMck5YcVFUcEp2VXhyajBaMTdQRnFJVDh2ZmEyYVI0V0xzMHdNOURJdW0zNnNuWVVORnlmT2JpZFNlTEZUbDQ5SGNJVmNQaVNFR004MlhlS3k1YjVqZVpydWljQ3lBTkhHV2NvSFJvLVQyakdoWlUxVHByQmdWWmV5Z3RNclFOQ0lkdHlMT3U3VE9tZldYckNjVkMxT3RKdWYwaUpXZmVEMm9RbHdCXzNWVWlWdg?oc=5",
+   "source": "BFM Bourse",
+   "time": 1792926000000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Les consommateurs de la zone euro s’attendent à une inflation de 3,1 % l’an prochain et à une économie plus faible",
+   "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOY1B1d2NyMG9iVVFWejdBMUEtcXhydVBQUGpMbkZlTkRnd1dCam04MGtjR01NUG9LbndsTUdUOXA0NTdQUndmX1RpWDFSY2duSHlWbl9xQ2xFb0VJREpFN1dJS2FvZm9nanN6SFpYRVpiSWVORkJaeDU1UkJ1VDhTamhXekQzWWlFZVN1MlB3Xy1QY0NWU1paS0ZZMFNEbW01amI3QTEtUnFuMmVMdkhFdg?oc=5",
+   "source": "Informat.ro",
+   "time": 1792923263000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Brisée par la crise française, la Bourse de Paris vaut-elle encore le détour?",
+   "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxQTXJYTm04SlhqcHpHS2tHYW5FVXpIZFI5cHBrWUQ3Uk13YXFHYlptMFZVRzBCb3U3elMwcjFXV1VJV2g3TE5RS3ZVeWRqZk9kQ192TFhMYVdlRkt6NmxvOGR1SldrVFdjM3J5Zm5hZF9VQXBVbEFyZ1JNTG9MVHpmeGlUVkZJOG9IVmdFWlc5X2dTMFl1SnBuT0Qza1E3NXY3R3lPN0J4b1hONE5mOC05alBRd2JONGVqdHJsQzJWblNfb3ZjaWhIYzNB?oc=5",
+   "source": "L'Echo",
+   "time": 1792921888000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Les cours mondiaux du pétrole ont enregistré une forte hausse hebdomadaire, atteignant leur plus haut niveau en près de six mois.",
+   "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxQOFZxZlIyeXRTR242dUk2d0daYzFGY3luRUo1bFVQN3FlMDVWZUNROWRCT1lLdVV3M19vMXFDU0pJZ01BY2d2NlpZRDFjdVJpdjdSRC03SEdMM3RyenJqLTRDbFMxcHpaTGZnTFQ1bHpjdEo0aFZCRk5EUlFHVTlwSE9icmdiNkZMc2xxYXlSY0lFRWtwMWQ5T2F5Vnk?oc=5",
+   "source": "Vietnam.vn",
+   "time": 1792916931000,
+   "tone": "positif"
+  },
+  {
+   "title": "THALES Cours Action HO, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
    "source": "Boursorama",
-   "time": 1792839490000,
+   "time": 1792907298000,
    "tone": "neutre"
   },
   {
-   "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
+   "title": "IPO d’Anthropic et OpenAI : la pression rapportée",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOeW5NMmRWVUVudUtwVWZFc1Y2T0wyWkdid2VNR2MydVRlUDRFakw4TVdxbmxidGhyNzJzWTVQY1A0T0tMcFZjeWp1Qi11YzZJZzU4T2tmX090alB4ODNUZkNLZ1FBNXBhTUlvMDUwVFd6WGFvYVdHMkNnTUFuTk4xblNBS1lqd3R0a1d5alNGalFKMmZvS3ZETkY3bjBLdzc4ZzBSN214R20xWC1INmc?oc=5",
+   "source": "NeoTeo",
+   "time": 1792905139000,
+   "tone": "neutre"
+  },
+  {
+   "title": "SOLUTIONS 30 Cours Action S30, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9NRXZVMTVwOTVTU2FzcmRtWFVHLXdNc050V29CQTNPVTJKbkp2c2Y0NUN2OHJZLWhQeXJzNWFBSzVTaFNTalJHQlQyRjJmWEtIRVE?oc=5",
    "source": "Boursorama",
-   "time": 1792839369000,
-   "tone": "neutre"
-  },
-  {
-   "title": "ALSTOM Cours Action ALO, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5ieFVPRVM5TGxmaUg5SUJrRVdIdlFhaFNXaVZZaHJraHI4ZWNqaDlJV3JPODFXUk4yUzR6bjBJZ3JIQzRPNVJqMnJPTjUtVkRXSGc?oc=5",
-   "source": "Boursorama",
-   "time": 1792838527000,
-   "tone": "neutre"
-  },
-  {
-   "title": "VIVENDI Cours Action VIV, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBsbzMwdXd0bjNDWTI5cW5QSDJxZENTWWFQaW5MRGN2dVl4Nlhwb3JtUWJNVlFCTldSOEkxNjhWZUQyNVZwNmt5eDRIYlNGX1BTWFE?oc=5",
-   "source": "Boursorama",
-   "time": 1792838288000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Les prix du pétrole s'envolent face aux tensions au Moyen-Orient",
-   "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxNZGl1d01oTGFRUGY2eFVFS25UX296SHQ1T2RWLS1yaktoUWlaYkJMYUlld3kxeWpwNENHTjMxZ3ptaXQ4Mm4wUVh4M3BiMFpKV01HQlJuOE1tX0Jja2tZTzZSSzREWHpfdEFibGRidlp5LWszdE1LdTN2bTdvWGl2RDdURGtKVnVnYnBwZFBsUW9nSEtreTlSLXhNQmJUckZ1OElN?oc=5",
-   "source": "Blick",
-   "time": 1792834562000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Les mots écos - Présidentielle 2027 : qui détient la dette française ?",
-   "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQcnlMY1hMU0UwMU5EclRJY0pxbEkzYWV5d0QwcEoyZUtWZUh6bkRjSUZiRHVKU0hzRFZUV0lFTW52dFBMeDJrYUhoQXAyTHlYNXBWcHVnTjVFczdkT3BWSjIzSzZaNHJuOTljS0lWTkxPWW9KVVh3RlktVnlaOW95YUpoNnBlMzVLVzZNU1dUU2RjMmx4dzFlcjluT1FDSTZmcWl6WEE4RnNlR1FqbmZHamFsTnlESk40VF85dzZEdTFJYUxKeEtrWA?oc=5",
-   "source": "Les Echos",
-   "time": 1792828857000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Cinq points d'attention pour la BCE avant la décision sur les taux d'intérêt",
-   "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxNMEFMQXNNVzhBS01lR3BMU1lYRnZqUjVRNDVBbi1PWHlwSk5ldG5qSENGWWVhNXlrS3FpOVBSazEtR1VyTVEtbHgtdm5nTkVMNG05LTcydEI1aXRJQVJ3eDB6bkoyYXVKcUNIWmJxenpjRXd6THNYaXdJUGljQ1BpU2JGWk5QbTlzY0htV0xlUXBuWHhaRXpocHc1dEI3eEJtMHlZMHRob0piYWxBeFFuZy13aF9uRW5wLWpvQlNXOUd3U3NLcjBqM1NEMFR4dw?oc=5",
-   "source": "IDNFinancials",
-   "time": 1792825200000,
+   "time": 1792901991000,
    "tone": "neutre"
   }
  ]
