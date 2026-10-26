@@ -1,9 +1,12 @@
-*Quantum Algo – dimanche 25 octobre 2026*
+*Quantum Algo – lundi 26 octobre 2026*
 
-• CAC 40 à 7 783 points : −0,4 % à la dernière séance, −3,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 864 points : +1,0 % à la dernière séance, −2,6 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Verizon.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
+
+*Résultats aujourd'hui* : Verizon
 
 *À venir (fort impact)*
 mer. 28/10 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
@@ -14,31 +17,30 @@ mer. 28/10 14:45 🇨🇦 BOC Monetary Policy Report
 mer. 28/10 14:45 🇨🇦 BOC Rate Statement
 
 *Opportunités*
-• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 89,80-90,30, stop 84,77, objectif 99,57, revoir le 27/01
+• Cisco – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,3 %
+  entrée 118,27-119,13, stop 109,62, objectif 140,50, revoir le 28/01
   ⚠ résultats pendant la position
-• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
-  entrée 30,48-30,76, stop 27,71, objectif 36,13, revoir le 27/01
-• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
-  entrée 25,79-26,02, stop 23,49, objectif 29,31, revoir le 27/01
-  ⚠ résultats pendant la position
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
-  entrée 3352,00-3381,35, stop 3058,50, objectif 3896,51, revoir le 27/01
-  ⚠ résultats pendant la position
+• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,9 %
+  entrée 30,48-30,76, stop 27,66, objectif 35,91, revoir le 28/01
 • Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
-  entrée 26,02-26,20, stop 24,18, objectif 29,34, revoir le 27/01
+  entrée 25,95-26,13, stop 24,18, objectif 29,41, revoir le 28/01
+• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,6 %
+  entrée 89,80-90,31, stop 84,72, objectif 98,70, revoir le 28/01
+  ⚠ résultats pendant la position
+• Verizon – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,4 %
+  entrée 45,58-45,97, stop 41,65, objectif 52,86, revoir le 28/01
 
 *À lire*
-• Le prix de l'or quitte son sommet, évaluation des opportunités d'investissement à la fin de 2026 (Laodong.vn)
-• Nasdaq composite : Panneaux publicitaires et somptueuses soirées de gala... Comment le Nasdaq et le New York Stock Exhange se livrent bataille pour attirer le plus d'entreprises (mais un troisième acteur vient s'inviter dans ce combat) (BFM Bourse)
-• Les consommateurs de la zone euro s’attendent à une inflation de 3,1 % l’an prochain et à une économie plus faible (Informat.ro)
+• Wall Street ouvre en hausse avant les résultats des géants technologiques (France 24)
+• Wall Street progresse, le dépôt de dossier d’introduction en bourse d’Anthropic recentrant l’attention sur le pari de l’intelligence artificielle (Zonebourse Suisse)
+• Wall Street en hausse alors que le dépôt du dossier d'introduction en bourse d'Anthropic attire davantage l'at (Boursorama)
 
-*🎓 Question du jour* : Quel état financier est le plus difficile à maquiller ?
-A. Le compte de résultat
-B. Le bilan
-C. Le tableau des flux de trésorerie
-D. Le rapport du président
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q46
+*🎓 Question du jour* : Un ROE très élevé peut être trompeur car…
+A. il ignore la dette
+B. il inclut les dividendes
+C. il est calculé en dollars
+D. il dépend du cours de bourse
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q47
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
