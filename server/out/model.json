@@ -1,5 +1,5 @@
 {
- "version": "2026-10-26",
+ "version": "2026-10-27",
  "source": "learned",
  "features": [
   "sma20",
@@ -96,12 +96,12 @@
    },
    "k": 0,
    "oos": {
-    "ic": -0.0152,
-    "acc": 0.493,
+    "ic": -0.012,
+    "acc": 0.4939,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30868
+    "n": 30472
    }
   },
   "1S": {
@@ -114,12 +114,12 @@
    },
    "k": 0,
    "oos": {
-    "ic": -0.012,
-    "acc": 0.4961,
+    "ic": -0.0145,
+    "acc": 0.4956,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30816
+    "n": 30446
    }
   },
   "1M": {
@@ -127,170 +127,129 @@
    "intercept": 0,
    "alpha": "vote",
    "calib": {
-    "a": -0.0078,
+    "a": -0.0073,
     "b": 0
    },
-   "k": 0.0531,
+   "k": 0.0496,
    "oos": {
-    "ic": 0.0204,
-    "acc": 0.4996,
+    "ic": 0.019,
+    "acc": 0.499,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30603
+    "n": 30468
    }
   },
   "3M": {
    "weights": {
-    "sma20": -0.00509,
-    "sma50": -0.00535,
-    "sma100": -0.01174,
-    "sma200": 0.05844,
-    "ema12": 0.01332,
-    "ema26": -0.00196,
-    "ema50": 0.00665,
-    "hma21": 0.00152,
-    "kama": -0.01385,
-    "tema20": -0.0074,
-    "dema20": -0.00482,
-    "golden": 0.06381,
-    "emacross": 0.00655,
-    "macdh": 0.01135,
-    "macd0": 0.00128,
-    "ppo": -0.00615,
-    "adx": -0.05587,
-    "cloud": -0.00094,
-    "tk": 0.00379,
-    "sar": 0.00506,
-    "supertrend": 0.0037,
-    "aroon": 0.00087,
-    "vortex": -0.03928,
-    "trix": 0.00152,
-    "linreg": -0.01528,
-    "heikin": -0.00395,
-    "donbreak": 0.00828,
-    "hi52": 0.06318,
-    "kst": 0.00989,
-    "coppock": 0.00083,
-    "rsi14": -0.01615,
-    "rsi2": -0.00308,
-    "crsi": 0.00046,
-    "stochk": -0.01562,
-    "stochx": -0.00574,
-    "stochrsi": 0.0093,
-    "cci": -0.01034,
-    "willr": -0.01562,
-    "roc12": -0.00453,
-    "roc63": -0.02678,
-    "roc126": -0.02812,
-    "mom10": -0.00823,
-    "mfi": -0.00178,
-    "tsi": -0.0175,
-    "uo": -0.0321,
-    "ao": -0.01814,
-    "dmi": -0.00886,
-    "cmo": 0.00542,
-    "fisher": 0.00596,
-    "stc": -0.00412,
-    "rvi": 0.00097,
-    "elder": -0.00562,
-    "bop": 0.00223,
-    "qstick": 0.01932,
-    "zscore": 0.01641,
-    "rsidiv": 0.00803,
-    "bbpct": 0.01641,
-    "keltner": -0.00399,
-    "squeeze": 0.01705,
-    "obv": -0.00715,
-    "obvma": -0.01856,
-    "cmf": 0.03396,
-    "ad": 0.00288,
-    "chaikin": 0.00085,
-    "vwap": 0.01057,
-    "vwma": -0.00128,
-    "force": 0.00791,
-    "eom": 0.01433,
-    "volconf": -0.00481,
-    "klinger": -0.00438,
-    "pvt": 0.00066,
-    "nvi": 0.05574,
-    "pivot": -0.00015,
-    "r1s1": -0.00817,
-    "fib": -0.00433,
-    "dist200": -0.0271,
-    "rs21": 0.01752,
-    "rs63": -0.02692,
-    "engulf": 0.00698,
-    "hammer": 0.01406,
-    "star": -0.00029,
-    "soldiers": -0.01482
+    "sma20": -0.00454,
+    "sma50": -0.0055,
+    "sma100": -0.0118,
+    "sma200": 0.05852,
+    "ema12": 0.01354,
+    "ema26": -0.00129,
+    "ema50": 0.0064,
+    "hma21": 0.00168,
+    "kama": -0.0135,
+    "tema20": -0.00759,
+    "dema20": -0.00494,
+    "golden": 0.06354,
+    "emacross": 0.00665,
+    "macdh": 0.01192,
+    "macd0": 0.00158,
+    "ppo": -0.00714,
+    "adx": -0.05552,
+    "cloud": -0.00086,
+    "tk": 0.00358,
+    "sar": 0.00455,
+    "supertrend": 0.00288,
+    "aroon": 0.00202,
+    "vortex": -0.0394,
+    "trix": 0.00048,
+    "linreg": -0.0153,
+    "heikin": -0.00331,
+    "donbreak": 0.00932,
+    "hi52": 0.06352,
+    "kst": 0.01002,
+    "coppock": 0.00062,
+    "rsi14": -0.01807,
+    "rsi2": -0.00287,
+    "crsi": 0.00084,
+    "stochk": -0.01559,
+    "stochx": -0.00627,
+    "stochrsi": 0.00907,
+    "cci": -0.01053,
+    "willr": -0.01559,
+    "roc12": -0.00408,
+    "roc63": -0.02853,
+    "roc126": -0.02787,
+    "mom10": -0.00897,
+    "mfi": -0.00125,
+    "tsi": -0.01794,
+    "uo": -0.03044,
+    "ao": -0.01895,
+    "dmi": -0.00831,
+    "cmo": 0.00492,
+    "fisher": 0.00587,
+    "stc": -0.00473,
+    "rvi": 0.00067,
+    "elder": -0.00577,
+    "bop": 0.00303,
+    "qstick": 0.01881,
+    "zscore": 0.01663,
+    "rsidiv": 0.00669,
+    "bbpct": 0.01663,
+    "keltner": -0.00325,
+    "squeeze": 0.01733,
+    "obv": -0.00663,
+    "obvma": -0.01944,
+    "cmf": 0.03383,
+    "ad": 0.00281,
+    "chaikin": 0.00117,
+    "vwap": 0.01075,
+    "vwma": -0.00141,
+    "force": 0.00762,
+    "eom": 0.01464,
+    "volconf": -0.00455,
+    "klinger": -0.00434,
+    "pvt": -0.00007,
+    "nvi": 0.05549,
+    "pivot": -0.00029,
+    "r1s1": -0.00826,
+    "fib": -0.00452,
+    "dist200": -0.02633,
+    "rs21": 0.01741,
+    "rs63": -0.02597,
+    "engulf": 0.00869,
+    "hammer": 0.01292,
+    "star": 0.00033,
+    "soldiers": -0.01465
    },
-   "intercept": 0.12516,
+   "intercept": 0.12515,
    "alpha": 0.05,
    "calib": {
-    "a": 0.2422,
-    "b": 0.0121
+    "a": 0.2415,
+    "b": 0.0249
    },
-   "k": 0.6249,
+   "k": 0.6321,
    "oos": {
-    "ic": 0.0486,
-    "acc": 0.5285,
-    "accConf": 0.5607,
-    "nConf": 30081,
+    "ic": 0.0496,
+    "acc": 0.5282,
+    "accConf": 0.5609,
+    "nConf": 30181,
     "brier": 0.2463,
-    "n": 30081
+    "n": 30181
    }
   }
  },
- "createdAt": "2026-10-26T14:49:16.886Z",
+ "createdAt": "2026-10-27T07:30:16.678Z",
  "universe": 261,
- "summary": "Modèle ré-entraîné le 26/10 sur 261 valeurs et ~3 ans d'historique ; 1 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 27/10 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
-   "samples": 142289,
-   "train": 111160,
-   "val": 30868,
-   "configChanged": false,
-   "from": "vote",
-   "to": "vote",
-   "bestIc": -0.0152,
-   "championIc": -0.0152,
-   "configs": [
-    {
-     "alpha": "vote",
-     "ic": -0.0152
-    },
-    {
-     "alpha": 0.0005,
-     "ic": -0.0162
-    },
-    {
-     "alpha": 0.005,
-     "ic": -0.0166
-    },
-    {
-     "alpha": 0.05,
-     "ic": -0.0179
-    },
-    {
-     "alpha": 0.5,
-     "ic": -0.0169
-    }
-   ],
-   "oos": {
-    "ic": -0.0152,
-    "acc": 0.493,
-    "accConf": null,
-    "nConf": 0,
-    "brier": 0.25,
-    "n": 30868
-   },
-   "top": []
-  },
-  "1S": {
-   "samples": 141245,
-   "train": 109337,
-   "val": 30816,
+   "samples": 142054,
+   "train": 111321,
+   "val": 30472,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
@@ -303,142 +262,183 @@
     },
     {
      "alpha": 0.0005,
-     "ic": -0.04
+     "ic": -0.0173
     },
     {
      "alpha": 0.005,
-     "ic": -0.0405
+     "ic": -0.0177
     },
     {
      "alpha": 0.05,
-     "ic": -0.0426
+     "ic": -0.019
     },
     {
      "alpha": 0.5,
-     "ic": -0.0424
+     "ic": -0.0182
     }
    ],
    "oos": {
     "ic": -0.012,
-    "acc": 0.4961,
+    "acc": 0.4939,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30816
+    "n": 30472
+   },
+   "top": []
+  },
+  "1S": {
+   "samples": 141010,
+   "train": 109498,
+   "val": 30446,
+   "configChanged": false,
+   "from": "vote",
+   "to": "vote",
+   "bestIc": -0.0145,
+   "championIc": -0.0145,
+   "configs": [
+    {
+     "alpha": "vote",
+     "ic": -0.0145
+    },
+    {
+     "alpha": 0.0005,
+     "ic": -0.0384
+    },
+    {
+     "alpha": 0.005,
+     "ic": -0.0388
+    },
+    {
+     "alpha": 0.05,
+     "ic": -0.0406
+    },
+    {
+     "alpha": 0.5,
+     "ic": -0.0395
+    }
+   ],
+   "oos": {
+    "ic": -0.0145,
+    "acc": 0.4956,
+    "accConf": null,
+    "nConf": 0,
+    "brier": 0.25,
+    "n": 30446
    },
    "top": []
   },
   "1M": {
-   "samples": 137069,
-   "train": 101407,
-   "val": 30603,
-   "configChanged": true,
-   "from": 0.5,
+   "samples": 136834,
+   "train": 101307,
+   "val": 30468,
+   "configChanged": false,
+   "from": "vote",
    "to": "vote",
-   "bestIc": 0.0204,
-   "championIc": 0.0154,
+   "bestIc": 0.019,
+   "championIc": 0.019,
    "configs": [
     {
      "alpha": "vote",
-     "ic": 0.0204
+     "ic": 0.019
     },
     {
      "alpha": 0.0005,
-     "ic": 0.0139
+     "ic": 0.015
     },
     {
      "alpha": 0.005,
-     "ic": 0.0142
+     "ic": 0.0154
     },
     {
      "alpha": 0.05,
-     "ic": 0.0156
+     "ic": 0.0171
     },
     {
      "alpha": 0.5,
-     "ic": 0.0154
+     "ic": 0.0173
     }
    ],
    "oos": {
-    "ic": 0.0204,
-    "acc": 0.4996,
+    "ic": 0.019,
+    "acc": 0.499,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30603
+    "n": 30468
    },
    "top": []
   },
   "3M": {
-   "samples": 126107,
-   "train": 80405,
-   "val": 30081,
+   "samples": 125872,
+   "train": 80044,
+   "val": 30181,
    "configChanged": false,
    "from": 0.05,
    "to": 0.05,
-   "bestIc": 0.0486,
-   "championIc": 0.0486,
+   "bestIc": 0.0496,
+   "championIc": 0.0496,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0876
+     "ic": -0.0872
     },
     {
      "alpha": 0.0005,
-     "ic": 0.047
+     "ic": 0.0481
     },
     {
      "alpha": 0.005,
-     "ic": 0.0473
+     "ic": 0.0484
     },
     {
      "alpha": 0.05,
-     "ic": 0.0486
+     "ic": 0.0496
     },
     {
      "alpha": 0.5,
-     "ic": 0.0434
+     "ic": 0.0444
     }
    ],
    "oos": {
-    "ic": 0.0486,
-    "acc": 0.5285,
-    "accConf": 0.5607,
-    "nConf": 30081,
+    "ic": 0.0496,
+    "acc": 0.5282,
+    "accConf": 0.5609,
+    "nConf": 30181,
     "brier": 0.2463,
-    "n": 30081
+    "n": 30181
    },
    "top": [
     {
      "id": "golden",
      "name": "Croisement SMA 50 / 200",
-     "w": 0.06381
+     "w": 0.06354
     },
     {
      "id": "hi52",
      "name": "Position dans le range 52 sem. (%)",
-     "w": 0.06318
+     "w": 0.06352
     },
     {
      "id": "sma200",
      "name": "SMA 200",
-     "w": 0.05844
+     "w": 0.05852
     },
     {
      "id": "adx",
      "name": "ADX (14) directionnel",
-     "w": -0.05587
+     "w": -0.05552
     },
     {
      "id": "nvi",
      "name": "Negative Volume Index",
-     "w": 0.05574
+     "w": 0.05549
     }
    ]
   }
  },
  "newsletter": {
-  "lastSent": "26/10/2026",
+  "lastSent": "27/10/2026",
   "channels": [
    "e-mail (SMTP)"
   ],
@@ -451,12 +451,12 @@
    "BREVO_API_KEY": "absent",
    "CALLMEBOT_PHONE": "absent",
    "CALLMEBOT_APIKEY": "absent",
-   "event": "schedule"
+   "event": "workflow_dispatch"
   },
   "subscribers": 3,
   "subs": {
    "configured": true,
-   "at": "2026-10-26T14:50:05.748Z",
+   "at": "2026-10-27T07:30:57.474Z",
    "count": 3,
    "sameAsOwner": 0,
    "sent": 3,
