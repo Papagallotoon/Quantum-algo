@@ -96,12 +96,12 @@
    },
    "k": 0,
    "oos": {
-    "ic": -0.012,
-    "acc": 0.4939,
+    "ic": -0.0165,
+    "acc": 0.4923,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    }
   },
   "1S": {
@@ -114,12 +114,12 @@
    },
    "k": 0,
    "oos": {
-    "ic": -0.0145,
-    "acc": 0.4956,
+    "ic": -0.0115,
+    "acc": 0.4965,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30446
+    "n": 30842
    }
   },
   "1M": {
@@ -127,312 +127,312 @@
    "intercept": 0,
    "alpha": "vote",
    "calib": {
-    "a": -0.0073,
+    "a": -0.0093,
     "b": 0
    },
-   "k": 0.0496,
+   "k": 0.0494,
    "oos": {
-    "ic": 0.019,
-    "acc": 0.499,
+    "ic": 0.0192,
+    "acc": 0.4993,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30468
+    "n": 30603
    }
   },
   "3M": {
    "weights": {
-    "sma20": -0.00454,
-    "sma50": -0.0055,
-    "sma100": -0.0118,
-    "sma200": 0.05852,
-    "ema12": 0.01354,
-    "ema26": -0.00129,
-    "ema50": 0.0064,
-    "hma21": 0.00168,
-    "kama": -0.0135,
-    "tema20": -0.00759,
-    "dema20": -0.00494,
-    "golden": 0.06354,
-    "emacross": 0.00665,
-    "macdh": 0.01192,
-    "macd0": 0.00158,
-    "ppo": -0.00714,
-    "adx": -0.05552,
-    "cloud": -0.00086,
-    "tk": 0.00358,
-    "sar": 0.00455,
-    "supertrend": 0.00288,
-    "aroon": 0.00202,
-    "vortex": -0.0394,
-    "trix": 0.00048,
-    "linreg": -0.0153,
-    "heikin": -0.00331,
-    "donbreak": 0.00932,
-    "hi52": 0.06352,
-    "kst": 0.01002,
-    "coppock": 0.00062,
-    "rsi14": -0.01807,
-    "rsi2": -0.00287,
-    "crsi": 0.00084,
-    "stochk": -0.01559,
-    "stochx": -0.00627,
-    "stochrsi": 0.00907,
-    "cci": -0.01053,
-    "willr": -0.01559,
-    "roc12": -0.00408,
-    "roc63": -0.02853,
-    "roc126": -0.02787,
-    "mom10": -0.00897,
-    "mfi": -0.00125,
-    "tsi": -0.01794,
-    "uo": -0.03044,
-    "ao": -0.01895,
-    "dmi": -0.00831,
-    "cmo": 0.00492,
-    "fisher": 0.00587,
-    "stc": -0.00473,
-    "rvi": 0.00067,
-    "elder": -0.00577,
-    "bop": 0.00303,
-    "qstick": 0.01881,
-    "zscore": 0.01663,
-    "rsidiv": 0.00669,
-    "bbpct": 0.01663,
-    "keltner": -0.00325,
-    "squeeze": 0.01733,
-    "obv": -0.00663,
-    "obvma": -0.01944,
-    "cmf": 0.03383,
-    "ad": 0.00281,
-    "chaikin": 0.00117,
-    "vwap": 0.01075,
-    "vwma": -0.00141,
-    "force": 0.00762,
-    "eom": 0.01464,
-    "volconf": -0.00455,
-    "klinger": -0.00434,
-    "pvt": -0.00007,
-    "nvi": 0.05549,
-    "pivot": -0.00029,
-    "r1s1": -0.00826,
-    "fib": -0.00452,
-    "dist200": -0.02633,
-    "rs21": 0.01741,
-    "rs63": -0.02597,
-    "engulf": 0.00869,
-    "hammer": 0.01292,
-    "star": 0.00033,
-    "soldiers": -0.01465
+    "sma20": -0.00452,
+    "sma50": -0.00473,
+    "sma100": -0.01143,
+    "sma200": 0.05917,
+    "ema12": 0.01282,
+    "ema26": -0.00277,
+    "ema50": 0.00562,
+    "hma21": 0.00182,
+    "kama": -0.0131,
+    "tema20": -0.00825,
+    "dema20": -0.00505,
+    "golden": 0.06363,
+    "emacross": 0.00607,
+    "macdh": 0.01031,
+    "macd0": 0.00163,
+    "ppo": -0.00527,
+    "adx": -0.05588,
+    "cloud": -0.00026,
+    "tk": 0.00331,
+    "sar": 0.00509,
+    "supertrend": 0.00405,
+    "aroon": 0.00047,
+    "vortex": -0.03884,
+    "trix": 0.00274,
+    "linreg": -0.01519,
+    "heikin": -0.00332,
+    "donbreak": 0.00769,
+    "hi52": 0.0633,
+    "kst": 0.00941,
+    "coppock": 0.00206,
+    "rsi14": -0.01644,
+    "rsi2": -0.00349,
+    "crsi": 0.00059,
+    "stochk": -0.01543,
+    "stochx": -0.00527,
+    "stochrsi": 0.00959,
+    "cci": -0.01089,
+    "willr": -0.01543,
+    "roc12": -0.00459,
+    "roc63": -0.02747,
+    "roc126": -0.02897,
+    "mom10": -0.00773,
+    "mfi": -0.00285,
+    "tsi": -0.01762,
+    "uo": -0.03367,
+    "ao": -0.01696,
+    "dmi": -0.00817,
+    "cmo": 0.00564,
+    "fisher": 0.00617,
+    "stc": -0.00496,
+    "rvi": 0.00189,
+    "elder": -0.00488,
+    "bop": 0.00115,
+    "qstick": 0.01958,
+    "zscore": 0.01664,
+    "rsidiv": 0.00721,
+    "bbpct": 0.01664,
+    "keltner": -0.0049,
+    "squeeze": 0.01696,
+    "obv": -0.00662,
+    "obvma": -0.01845,
+    "cmf": 0.03417,
+    "ad": 0.00247,
+    "chaikin": 0.00062,
+    "vwap": 0.0105,
+    "vwma": -0.0015,
+    "force": 0.00655,
+    "eom": 0.01459,
+    "volconf": -0.00559,
+    "klinger": -0.00408,
+    "pvt": 0.00086,
+    "nvi": 0.0553,
+    "pivot": -0.00005,
+    "r1s1": -0.00719,
+    "fib": -0.00448,
+    "dist200": -0.02807,
+    "rs21": 0.01699,
+    "rs63": -0.02671,
+    "engulf": 0.00634,
+    "hammer": 0.01423,
+    "star": -0.00031,
+    "soldiers": -0.01433
    },
-   "intercept": 0.12515,
+   "intercept": 0.12588,
    "alpha": 0.05,
    "calib": {
-    "a": 0.2415,
-    "b": 0.0249
+    "a": 0.2419,
+    "b": 0.0052
    },
-   "k": 0.6321,
+   "k": 0.6207,
    "oos": {
-    "ic": 0.0496,
-    "acc": 0.5282,
-    "accConf": 0.5609,
-    "nConf": 30181,
-    "brier": 0.2463,
-    "n": 30181
+    "ic": 0.0477,
+    "acc": 0.5277,
+    "accConf": 0.5604,
+    "nConf": 30081,
+    "brier": 0.2464,
+    "n": 30081
    }
   }
  },
- "createdAt": "2026-10-27T07:30:16.678Z",
+ "createdAt": "2026-10-27T13:54:58.046Z",
  "universe": 261,
  "summary": "Modèle ré-entraîné le 27/10 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
-   "samples": 142054,
-   "train": 111321,
-   "val": 30472,
+   "samples": 142290,
+   "train": 111161,
+   "val": 30868,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
-   "bestIc": -0.012,
-   "championIc": -0.012,
+   "bestIc": -0.0158,
+   "championIc": -0.0165,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.012
+     "ic": -0.0165
     },
     {
      "alpha": 0.0005,
-     "ic": -0.0173
+     "ic": -0.0158
     },
     {
      "alpha": 0.005,
-     "ic": -0.0177
+     "ic": -0.0162
     },
     {
      "alpha": 0.05,
-     "ic": -0.019
+     "ic": -0.0173
     },
     {
      "alpha": 0.5,
-     "ic": -0.0182
+     "ic": -0.0159
     }
    ],
    "oos": {
-    "ic": -0.012,
-    "acc": 0.4939,
+    "ic": -0.0165,
+    "acc": 0.4923,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    },
    "top": []
   },
   "1S": {
-   "samples": 141010,
-   "train": 109498,
-   "val": 30446,
+   "samples": 141246,
+   "train": 109338,
+   "val": 30842,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
-   "bestIc": -0.0145,
-   "championIc": -0.0145,
+   "bestIc": -0.0115,
+   "championIc": -0.0115,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0145
+     "ic": -0.0115
     },
     {
      "alpha": 0.0005,
-     "ic": -0.0384
+     "ic": -0.0385
     },
     {
      "alpha": 0.005,
-     "ic": -0.0388
+     "ic": -0.039
     },
     {
      "alpha": 0.05,
-     "ic": -0.0406
+     "ic": -0.0409
     },
     {
      "alpha": 0.5,
-     "ic": -0.0395
+     "ic": -0.0404
     }
    ],
    "oos": {
-    "ic": -0.0145,
-    "acc": 0.4956,
+    "ic": -0.0115,
+    "acc": 0.4965,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30446
+    "n": 30842
    },
    "top": []
   },
   "1M": {
-   "samples": 136834,
-   "train": 101307,
-   "val": 30468,
+   "samples": 137070,
+   "train": 101408,
+   "val": 30603,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
-   "bestIc": 0.019,
-   "championIc": 0.019,
+   "bestIc": 0.0192,
+   "championIc": 0.0192,
    "configs": [
     {
      "alpha": "vote",
-     "ic": 0.019
+     "ic": 0.0192
     },
     {
      "alpha": 0.0005,
-     "ic": 0.015
+     "ic": 0.0123
     },
     {
      "alpha": 0.005,
-     "ic": 0.0154
+     "ic": 0.0125
     },
     {
      "alpha": 0.05,
-     "ic": 0.0171
+     "ic": 0.0136
     },
     {
      "alpha": 0.5,
-     "ic": 0.0173
+     "ic": 0.013
     }
    ],
    "oos": {
-    "ic": 0.019,
-    "acc": 0.499,
+    "ic": 0.0192,
+    "acc": 0.4993,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30468
+    "n": 30603
    },
    "top": []
   },
   "3M": {
-   "samples": 125872,
-   "train": 80044,
-   "val": 30181,
+   "samples": 126108,
+   "train": 80406,
+   "val": 30081,
    "configChanged": false,
    "from": 0.05,
    "to": 0.05,
-   "bestIc": 0.0496,
-   "championIc": 0.0496,
+   "bestIc": 0.0477,
+   "championIc": 0.0477,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0872
+     "ic": -0.0873
     },
     {
      "alpha": 0.0005,
-     "ic": 0.0481
+     "ic": 0.0464
     },
     {
      "alpha": 0.005,
-     "ic": 0.0484
+     "ic": 0.0466
     },
     {
      "alpha": 0.05,
-     "ic": 0.0496
+     "ic": 0.0477
     },
     {
      "alpha": 0.5,
-     "ic": 0.0444
+     "ic": 0.0422
     }
    ],
    "oos": {
-    "ic": 0.0496,
-    "acc": 0.5282,
-    "accConf": 0.5609,
-    "nConf": 30181,
-    "brier": 0.2463,
-    "n": 30181
+    "ic": 0.0477,
+    "acc": 0.5277,
+    "accConf": 0.5604,
+    "nConf": 30081,
+    "brier": 0.2464,
+    "n": 30081
    },
    "top": [
     {
      "id": "golden",
      "name": "Croisement SMA 50 / 200",
-     "w": 0.06354
+     "w": 0.06363
     },
     {
      "id": "hi52",
      "name": "Position dans le range 52 sem. (%)",
-     "w": 0.06352
+     "w": 0.0633
     },
     {
      "id": "sma200",
      "name": "SMA 200",
-     "w": 0.05852
+     "w": 0.05917
     },
     {
      "id": "adx",
      "name": "ADX (14) directionnel",
-     "w": -0.05552
+     "w": -0.05588
     },
     {
      "id": "nvi",
      "name": "Negative Volume Index",
-     "w": 0.05549
+     "w": 0.0553
     }
    ]
   }
@@ -451,16 +451,7 @@
    "BREVO_API_KEY": "absent",
    "CALLMEBOT_PHONE": "absent",
    "CALLMEBOT_APIKEY": "absent",
-   "event": "workflow_dispatch"
-  },
-  "subscribers": 3,
-  "subs": {
-   "configured": true,
-   "at": "2026-10-27T07:30:57.474Z",
-   "count": 3,
-   "sameAsOwner": 0,
-   "sent": 3,
-   "errors": []
+   "event": "schedule"
   }
  }
 }

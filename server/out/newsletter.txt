@@ -1,6 +1,6 @@
 *Quantum Algo – mardi 27 octobre 2026*
 
-• CAC 40 à 7 847 points : +0,8 % à la dernière séance, −2,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 874 points : +0,3 % à la dernière séance, −2,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Résultats aujourd'hui : Orange, Visa, Boeing, PayPal, Coca-Cola, Sherwin-Williams, Beiersdorf, Porsche, Shin-Etsu.
 • Pas de tendance nette des indices à 1 mois.
@@ -17,23 +17,24 @@ mer. 28/10 14:45 🇨🇦 BOC Monetary Policy Report
 mer. 28/10 14:45 🇨🇦 BOC Rate Statement
 
 *Opportunités*
-• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
-  entrée 30,48-30,76, stop 27,71, objectif 36,16, revoir le 27/01
-• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 89,80-90,30, stop 84,77, objectif 99,31, revoir le 27/01
-  ⚠ résultats pendant la position
 • Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
-  entrée 25,79-26,02, stop 23,49, objectif 29,24, revoir le 27/01
+  entrée 25,79-26,01, stop 23,61, objectif 29,22, revoir le 29/01
   ⚠ résultats pendant la position
-• Verizon – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,7 %
-  entrée 45,58-45,97, stop 41,65, objectif 53,26, revoir le 28/01
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
-  entrée 26,02-26,20, stop 24,18, objectif 29,63, revoir le 27/01
+• Verizon – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
+  entrée 45,58-45,96, stop 41,81, objectif 53,46, revoir le 29/01
+• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
+  entrée 30,48-30,76, stop 27,72, objectif 36,06, revoir le 29/01
+• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,7 %
+  entrée 89,80-90,30, stop 84,82, objectif 98,62, revoir le 29/01
+  ⚠ résultats pendant la position
+• Siemens – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
+  entrée 278,90-280,93, stop 258,57, objectif 319,70, revoir le 29/01
+  ⚠ résultats pendant la position
 
 *À lire*
-• Les valeurs à suivre à Paris et en Europe (actualisé) (Boursorama)
-• Paris relève la tête (Bourse Direct)
-• L'Europe vue en baisse avant une pluie de résultats (Boursorama)
+• La Bourse de Paris et Wall Street à nouveau portés par l'IA, STMicro, Schneider Electric et Legrand dans les plus fortes hausses du jour (Les Echos)
+• Wall Street ouvre en hausse (La Presse)
+• Wall Street ouvre en hausse, attend la Fed (Le Figaro)
 
 *🎓 Question du jour* : Dette nette / EBITDA de 4,5 pour un industriel signifie…
 A. une dette très confortable
