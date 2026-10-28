@@ -87,21 +87,104 @@
  ],
  "horizons": {
   "1J": {
-   "weights": null,
-   "intercept": 0,
-   "alpha": "vote",
+   "weights": {
+    "sma20": 0.00148,
+    "sma50": -0.00126,
+    "sma100": -0.00291,
+    "sma200": 0.00343,
+    "ema12": 0.00142,
+    "ema26": 0.00082,
+    "ema50": -0.00147,
+    "hma21": 0.00377,
+    "kama": -0.00394,
+    "tema20": 0.00062,
+    "dema20": 0.0034,
+    "golden": 0.00233,
+    "emacross": -0.00204,
+    "macdh": -0.00238,
+    "macd0": 0.00194,
+    "ppo": -0.00039,
+    "adx": -0.00337,
+    "cloud": -0.00083,
+    "tk": 0.00135,
+    "sar": -0.00078,
+    "supertrend": -0.00015,
+    "aroon": -0.001,
+    "vortex": -0.00222,
+    "trix": -0.0025,
+    "linreg": -0.00241,
+    "heikin": 0.00231,
+    "donbreak": -0.00001,
+    "hi52": 0.00211,
+    "kst": -0.00015,
+    "coppock": -0.00268,
+    "rsi14": 0.00181,
+    "rsi2": 0.00016,
+    "crsi": 0.00239,
+    "stochk": 0.00144,
+    "stochx": 0.00131,
+    "stochrsi": -0.00059,
+    "cci": 0,
+    "willr": 0.00144,
+    "roc12": 0.0002,
+    "roc63": -0.00254,
+    "roc126": 0.00042,
+    "mom10": -0.00145,
+    "mfi": 0.00117,
+    "tsi": -0.00111,
+    "uo": -0.00002,
+    "ao": -0.00095,
+    "dmi": -0.00342,
+    "cmo": -0.00004,
+    "fisher": 0.00302,
+    "stc": 0.00007,
+    "rvi": -0.00733,
+    "elder": 0.00056,
+    "bop": -0.00167,
+    "qstick": -0.00429,
+    "zscore": 0.00203,
+    "rsidiv": -0.00171,
+    "bbpct": 0.00203,
+    "keltner": 0.00052,
+    "squeeze": -0.00085,
+    "obv": 0.00381,
+    "obvma": 0.00146,
+    "cmf": -0.00031,
+    "ad": 0.00039,
+    "chaikin": 0.00041,
+    "vwap": 0.00051,
+    "vwma": -0.00001,
+    "force": 0.0002,
+    "eom": -0.00143,
+    "volconf": -0.00266,
+    "klinger": 0.0027,
+    "pvt": 0.00151,
+    "nvi": 0.00466,
+    "pivot": -0.0039,
+    "r1s1": -0.00186,
+    "fib": 0.00081,
+    "dist200": 0.00086,
+    "rs21": 0.00469,
+    "rs63": 0.00319,
+    "engulf": -0.00159,
+    "hammer": 0.00201,
+    "star": -0.00124,
+    "soldiers": -0.00356
+   },
+   "intercept": 0.01024,
+   "alpha": 0.5,
    "calib": {
     "a": 0,
     "b": 0
    },
    "k": 0,
    "oos": {
-    "ic": -0.0183,
-    "acc": 0.4917,
+    "ic": -0.0137,
+    "acc": 0.5004,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    }
   },
   "1S": {
@@ -114,12 +197,12 @@
    },
    "k": 0,
    "oos": {
-    "ic": -0.0131,
-    "acc": 0.496,
+    "ic": -0.0118,
+    "acc": 0.4964,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    }
   },
   "1M": {
@@ -127,312 +210,338 @@
    "intercept": 0,
    "alpha": "vote",
    "calib": {
-    "a": -0.0077,
+    "a": -0.0078,
     "b": 0
    },
-   "k": 0.0463,
+   "k": 0.0438,
    "oos": {
-    "ic": 0.0178,
-    "acc": 0.4989,
+    "ic": 0.017,
+    "acc": 0.4986,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30468
+    "n": 30603
    }
   },
   "3M": {
    "weights": {
-    "sma20": -0.00399,
-    "sma50": -0.00514,
-    "sma100": -0.01209,
-    "sma200": 0.05822,
-    "ema12": 0.01385,
-    "ema26": -0.00186,
-    "ema50": 0.00625,
-    "hma21": 0.00234,
-    "kama": -0.01346,
-    "tema20": -0.00825,
-    "dema20": -0.00517,
-    "golden": 0.06379,
-    "emacross": 0.00661,
-    "macdh": 0.01116,
-    "macd0": 0.00149,
-    "ppo": -0.00649,
-    "adx": -0.05539,
-    "cloud": -0.00062,
-    "tk": 0.00319,
-    "sar": 0.00466,
-    "supertrend": 0.00333,
-    "aroon": 0.0012,
-    "vortex": -0.03893,
-    "trix": 0.00153,
-    "linreg": -0.01577,
-    "heikin": -0.00423,
-    "donbreak": 0.0079,
-    "hi52": 0.06232,
-    "kst": 0.00969,
-    "coppock": 0.00091,
-    "rsi14": -0.01706,
-    "rsi2": -0.00346,
-    "crsi": 0.00129,
-    "stochk": -0.01593,
-    "stochx": -0.00555,
-    "stochrsi": 0.00961,
-    "cci": -0.01029,
-    "willr": -0.01593,
-    "roc12": -0.00438,
-    "roc63": -0.02779,
-    "roc126": -0.02831,
-    "mom10": -0.00788,
-    "mfi": -0.00183,
-    "tsi": -0.01793,
-    "uo": -0.03282,
-    "ao": -0.01745,
-    "dmi": -0.00902,
-    "cmo": 0.00598,
-    "fisher": 0.00629,
-    "stc": -0.00428,
-    "rvi": 0.00103,
-    "elder": -0.00587,
-    "bop": 0.0023,
-    "qstick": 0.01944,
-    "zscore": 0.01615,
-    "rsidiv": 0.00789,
-    "bbpct": 0.01615,
-    "keltner": -0.00423,
-    "squeeze": 0.01694,
-    "obv": -0.00685,
-    "obvma": -0.01873,
-    "cmf": 0.03358,
-    "ad": 0.00256,
-    "chaikin": 0.00083,
-    "vwap": 0.01016,
-    "vwma": -0.00155,
-    "force": 0.00685,
-    "eom": 0.01466,
-    "volconf": -0.00478,
-    "klinger": -0.004,
-    "pvt": 0.00103,
-    "nvi": 0.05515,
-    "pivot": -0.00042,
-    "r1s1": -0.00751,
-    "fib": -0.00424,
-    "dist200": -0.02673,
-    "rs21": 0.01737,
-    "rs63": -0.02642,
-    "engulf": 0.00691,
-    "hammer": 0.01408,
-    "star": -0.00077,
-    "soldiers": -0.01402
+    "sma20": -0.0042,
+    "sma50": -0.00534,
+    "sma100": -0.01174,
+    "sma200": 0.05949,
+    "ema12": 0.01418,
+    "ema26": -0.00355,
+    "ema50": 0.00499,
+    "hma21": 0.00177,
+    "kama": -0.01174,
+    "tema20": -0.00736,
+    "dema20": -0.00649,
+    "golden": 0.06354,
+    "emacross": 0.00572,
+    "macdh": 0.01007,
+    "macd0": 0.00206,
+    "ppo": -0.00489,
+    "adx": -0.05528,
+    "cloud": 0.00052,
+    "tk": 0.00326,
+    "sar": 0.00542,
+    "supertrend": 0.00421,
+    "aroon": 0.00065,
+    "vortex": -0.03931,
+    "trix": 0.00347,
+    "linreg": -0.0158,
+    "heikin": -0.00305,
+    "donbreak": 0.00735,
+    "hi52": 0.06209,
+    "kst": 0.00914,
+    "coppock": 0.00327,
+    "rsi14": -0.01699,
+    "rsi2": -0.00413,
+    "crsi": 0.00211,
+    "stochk": -0.01556,
+    "stochx": -0.00598,
+    "stochrsi": 0.00977,
+    "cci": -0.01232,
+    "willr": -0.01556,
+    "roc12": -0.00387,
+    "roc63": -0.0281,
+    "roc126": -0.02952,
+    "mom10": -0.00845,
+    "mfi": -0.0025,
+    "tsi": -0.01688,
+    "uo": -0.03476,
+    "ao": -0.01629,
+    "dmi": -0.00807,
+    "cmo": 0.00512,
+    "fisher": 0.00622,
+    "stc": -0.00575,
+    "rvi": 0.00298,
+    "elder": -0.00462,
+    "bop": 0.00026,
+    "qstick": 0.02032,
+    "zscore": 0.01626,
+    "rsidiv": 0.00642,
+    "bbpct": 0.01626,
+    "keltner": -0.007,
+    "squeeze": 0.01658,
+    "obv": -0.00601,
+    "obvma": -0.01818,
+    "cmf": 0.03504,
+    "ad": 0.00217,
+    "chaikin": 0.00017,
+    "vwap": 0.00979,
+    "vwma": -0.0017,
+    "force": 0.00564,
+    "eom": 0.01527,
+    "volconf": -0.00527,
+    "klinger": -0.0039,
+    "pvt": 0.00082,
+    "nvi": 0.05504,
+    "pivot": -0.0001,
+    "r1s1": -0.00679,
+    "fib": -0.00421,
+    "dist200": -0.02862,
+    "rs21": 0.01663,
+    "rs63": -0.02665,
+    "engulf": 0.00755,
+    "hammer": 0.01537,
+    "star": 0.00097,
+    "soldiers": -0.0138
    },
-   "intercept": 0.12559,
+   "intercept": 0.12687,
    "alpha": 0.05,
    "calib": {
-    "a": 0.241,
-    "b": 0.0117
+    "a": 0.2422,
+    "b": 0
    },
-   "k": 0.6261,
+   "k": 0.6172,
    "oos": {
-    "ic": 0.0482,
-    "acc": 0.5281,
-    "accConf": 0.5604,
-    "nConf": 30207,
+    "ic": 0.0467,
+    "acc": 0.5285,
+    "accConf": 0.5602,
+    "nConf": 30081,
     "brier": 0.2464,
-    "n": 30207
+    "n": 30081
    }
   }
  },
- "createdAt": "2026-10-28T07:39:35.142Z",
+ "createdAt": "2026-10-28T14:50:18.552Z",
  "universe": 261,
- "summary": "Modèle ré-entraîné le 28/10 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 28/10 sur 261 valeurs et ~3 ans d'historique ; 1 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
-   "samples": 142055,
-   "train": 111322,
-   "val": 30472,
-   "configChanged": false,
+   "samples": 142291,
+   "train": 111162,
+   "val": 30868,
+   "configChanged": true,
    "from": "vote",
-   "to": "vote",
-   "bestIc": -0.0156,
-   "championIc": -0.0183,
+   "to": 0.5,
+   "bestIc": -0.0137,
+   "championIc": -0.0203,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0183
+     "ic": -0.0203
     },
     {
      "alpha": 0.0005,
-     "ic": -0.0163
+     "ic": -0.015
     },
     {
      "alpha": 0.005,
-     "ic": -0.0167
+     "ic": -0.0153
     },
     {
      "alpha": 0.05,
-     "ic": -0.0177
+     "ic": -0.0162
     },
     {
      "alpha": 0.5,
-     "ic": -0.0156
+     "ic": -0.0137
     }
    ],
    "oos": {
-    "ic": -0.0183,
-    "acc": 0.4917,
+    "ic": -0.0137,
+    "acc": 0.5004,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    },
-   "top": []
+   "top": [
+    {
+     "id": "rvi",
+     "name": "Relative Vigor Index",
+     "w": -0.00733
+    },
+    {
+     "id": "rs21",
+     "name": "Force relative 1 mois vs indice (%)",
+     "w": 0.00469
+    },
+    {
+     "id": "nvi",
+     "name": "Negative Volume Index",
+     "w": 0.00466
+    },
+    {
+     "id": "qstick",
+     "name": "Qstick (14)",
+     "w": -0.00429
+    },
+    {
+     "id": "kama",
+     "name": "KAMA 10 (adaptative)",
+     "w": -0.00394
+    }
+   ]
   },
   "1S": {
-   "samples": 141011,
-   "train": 109473,
-   "val": 30472,
+   "samples": 141247,
+   "train": 109313,
+   "val": 30868,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
-   "bestIc": -0.0131,
-   "championIc": -0.0131,
+   "bestIc": -0.0118,
+   "championIc": -0.0118,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0131
+     "ic": -0.0118
     },
     {
      "alpha": 0.0005,
-     "ic": -0.0368
+     "ic": -0.0367
     },
     {
      "alpha": 0.005,
-     "ic": -0.0373
+     "ic": -0.0372
     },
     {
      "alpha": 0.05,
-     "ic": -0.039
+     "ic": -0.0389
     },
     {
      "alpha": 0.5,
-     "ic": -0.0378
+     "ic": -0.0381
     }
    ],
    "oos": {
-    "ic": -0.0131,
-    "acc": 0.496,
+    "ic": -0.0118,
+    "acc": 0.4964,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30472
+    "n": 30868
    },
    "top": []
   },
   "1M": {
-   "samples": 136835,
-   "train": 101308,
-   "val": 30468,
+   "samples": 137071,
+   "train": 101409,
+   "val": 30603,
    "configChanged": false,
    "from": "vote",
    "to": "vote",
-   "bestIc": 0.0178,
-   "championIc": 0.0178,
+   "bestIc": 0.017,
+   "championIc": 0.017,
    "configs": [
     {
      "alpha": "vote",
-     "ic": 0.0178
+     "ic": 0.017
     },
     {
      "alpha": 0.0005,
-     "ic": 0.0132
+     "ic": 0.0101
     },
     {
      "alpha": 0.005,
-     "ic": 0.0134
+     "ic": 0.0103
     },
     {
      "alpha": 0.05,
-     "ic": 0.0147
+     "ic": 0.0111
     },
     {
      "alpha": 0.5,
-     "ic": 0.0146
+     "ic": 0.0106
     }
    ],
    "oos": {
-    "ic": 0.0178,
-    "acc": 0.4989,
+    "ic": 0.017,
+    "acc": 0.4986,
     "accConf": null,
     "nConf": 0,
     "brier": 0.25,
-    "n": 30468
+    "n": 30603
    },
    "top": []
   },
   "3M": {
-   "samples": 125873,
-   "train": 80045,
-   "val": 30207,
+   "samples": 126109,
+   "train": 80407,
+   "val": 30081,
    "configChanged": false,
    "from": 0.05,
    "to": 0.05,
-   "bestIc": 0.0482,
-   "championIc": 0.0482,
+   "bestIc": 0.0467,
+   "championIc": 0.0467,
    "configs": [
     {
      "alpha": "vote",
-     "ic": -0.0873
+     "ic": -0.0866
     },
     {
      "alpha": 0.0005,
-     "ic": 0.0467
+     "ic": 0.0454
     },
     {
      "alpha": 0.005,
-     "ic": 0.047
+     "ic": 0.0456
     },
     {
      "alpha": 0.05,
-     "ic": 0.0482
+     "ic": 0.0467
     },
     {
      "alpha": 0.5,
-     "ic": 0.043
+     "ic": 0.041
     }
    ],
    "oos": {
-    "ic": 0.0482,
-    "acc": 0.5281,
-    "accConf": 0.5604,
-    "nConf": 30207,
+    "ic": 0.0467,
+    "acc": 0.5285,
+    "accConf": 0.5602,
+    "nConf": 30081,
     "brier": 0.2464,
-    "n": 30207
+    "n": 30081
    },
    "top": [
     {
      "id": "golden",
      "name": "Croisement SMA 50 / 200",
-     "w": 0.06379
+     "w": 0.06354
     },
     {
      "id": "hi52",
      "name": "Position dans le range 52 sem. (%)",
-     "w": 0.06232
+     "w": 0.06209
     },
     {
      "id": "sma200",
      "name": "SMA 200",
-     "w": 0.05822
+     "w": 0.05949
     },
     {
      "id": "adx",
      "name": "ADX (14) directionnel",
-     "w": -0.05539
+     "w": -0.05528
     },
     {
      "id": "nvi",
      "name": "Negative Volume Index",
-     "w": 0.05515
+     "w": 0.05504
     }
    ]
   }
@@ -451,16 +560,7 @@
    "BREVO_API_KEY": "absent",
    "CALLMEBOT_PHONE": "absent",
    "CALLMEBOT_APIKEY": "absent",
-   "event": "workflow_dispatch"
-  },
-  "subscribers": 3,
-  "subs": {
-   "configured": true,
-   "at": "2026-10-28T07:40:18.866Z",
-   "count": 3,
-   "sameAsOwner": 0,
-   "sent": 3,
-   "errors": []
+   "event": "schedule"
   }
  }
 }

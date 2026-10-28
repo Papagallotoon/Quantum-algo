@@ -1,6 +1,6 @@
 *Quantum Algo – mercredi 28 octobre 2026*
 
-• CAC 40 à 7 887 points : +0,5 % à la dernière séance, −2,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 894 points : +0,1 % à la dernière séance, −1,8 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • 11 annonce(s) à fort impact aujourd'hui, la première à 01:30 (Inflation (indice des prix à la consommation) (sur un mois), Australie) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : BNP Paribas, Airbus, Dassault Systemes, Stellantis, Microsoft, Google Alphabet, Ford, BASF, Airbus, Deutsche Bank, Mercedes-Benz, Stellantis, Campari, Hitachi.
 • Pas de tendance nette des indices à 1 mois.
@@ -30,24 +30,23 @@ jeu. 29/10 14:45 🇪🇺 Conférence de presse de la BCE
 ven. 30/10 03:30 🇯🇵 Décision de taux de la Banque du Japon
 
 *Opportunités*
-• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,4 %
-  entrée 30,48-30,76, stop 27,66, objectif 36,04, revoir le 28/01
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
-  entrée 25,97-26,15, stop 24,16, objectif 29,31, revoir le 28/01
-• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,6 %
-  entrée 89,80-90,31, stop 84,72, objectif 98,53, revoir le 28/01
+• LVMH – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 399,55-401,99, stop 375,18, objectif 438,60, revoir le 01/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
+  entrée 267,55-270,26, stop 240,41, objectif 318,60, revoir le 01/02
+• Air Liquide – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 173,30-175,04, stop 167,11, objectif 186,80, revoir le 25/01
+• TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
+  entrée 80,04-81,32, stop 75,57, objectif 89,15, revoir le 01/02
   ⚠ résultats pendant la position
-• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
-  entrée 25,79-26,02, stop 23,53, objectif 29,19, revoir le 28/01
-  ⚠ résultats pendant la position
-• Bank of America – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 54,85-55,20, stop 51,36, objectif 61,18, revoir le 29/01
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,8 %
+  entrée 90,51-91,22, stop 83,38, objectif 102,20, revoir le 01/02
   ⚠ résultats pendant la position
 
 *À lire*
-• Dassault Systèmes relève ses objectifs, BNP Paribas lance des rachats d'actions et Danone souffre en Chine, place à la Fed et aux « magnifiques » à Wall Street (Les Echos)
-• CAC 40: La Bourse de Paris devrait ouvrir en repli au milieu d'un déluge de résultats et avant la Fed (ABC Bourse)
-• CAC 40: Paris face à des vents contraires (Zonebourse)
+• Prises de risques limitées à Wall Street avant la Fed (Zonebourse)
+• Wall Street vue en ordre dispersé, en attendant la décision de la Fed (Zonebourse Suisse)
+• Wall Street en dents de scie : les pertes des grandes capitalisations contrebalancent les gains du secteur des (Boursorama)
 
 *🎓 Question du jour* : Pour une valeur cyclique, un PER très bas au sommet du cycle est souvent…
 A. une affaire à saisir
