@@ -1,47 +1,60 @@
-*Quantum Algo – mardi 27 octobre 2026*
+*Quantum Algo – mercredi 28 octobre 2026*
 
-• CAC 40 à 7 874 points : +0,3 % à la dernière séance, −2,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Orange, Visa, Boeing, PayPal, Coca-Cola, Sherwin-Williams, Beiersdorf, Porsche, Shin-Etsu.
+• CAC 40 à 7 887 points : +0,5 % à la dernière séance, −2,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• 11 annonce(s) à fort impact aujourd'hui, la première à 01:30 (Inflation (indice des prix à la consommation) (sur un mois), Australie) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : BNP Paribas, Airbus, Dassault Systemes, Stellantis, Microsoft, Google Alphabet, Ford, BASF, Airbus, Deutsche Bank, Mercedes-Benz, Stellantis, Campari, Hitachi.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : Orange, Visa, Boeing, PayPal, Coca-Cola, Sherwin-Williams, Beiersdorf, Porsche, Shin-Etsu
+*Agenda (fort impact)*
+01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.7%)
+01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an) (prévu 4.2%)
+01:30 🇦🇺 Trimmed Mean CPI m/m (prévu 0.3%)
+13:30 🇬🇧 Annual Budget Release
+14:45 🇨🇦 BOC Monetary Policy Report
+14:45 🇨🇦 BOC Rate Statement
+14:45 🇨🇦 Overnight Rate (prévu 2.50%)
+15:30 🇨🇦 BOC Press Conference
+19:00 🇺🇸 Décision de taux de la Fed (prévu 4.00%)
+19:00 🇺🇸 Communiqué de la Fed
+19:30 🇺🇸 Conférence de presse de la Fed
+
+*Résultats aujourd'hui* : BNP Paribas, Airbus, Dassault Systemes, Stellantis, Microsoft, Google Alphabet, Ford, BASF, Airbus, Deutsche Bank, Mercedes-Benz, Stellantis, Campari, Hitachi
 
 *À venir (fort impact)*
-mer. 28/10 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
-mer. 28/10 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an)
-mer. 28/10 01:30 🇦🇺 Trimmed Mean CPI m/m
-mer. 28/10 13:30 🇬🇧 Annual Budget Release
-mer. 28/10 14:45 🇨🇦 BOC Monetary Policy Report
-mer. 28/10 14:45 🇨🇦 BOC Rate Statement
+jeu. 29/10 13:30 🇺🇸 Croissance du PIB (sur un trimestre)
+jeu. 29/10 13:30 🇺🇸 Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois)
+jeu. 29/10 14:15 🇪🇺 Décision de taux de la BCE
+jeu. 29/10 14:15 🇪🇺 Communiqué de politique monétaire
+jeu. 29/10 14:45 🇪🇺 Conférence de presse de la BCE
+ven. 30/10 03:30 🇯🇵 Décision de taux de la Banque du Japon
 
 *Opportunités*
-• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
-  entrée 25,79-26,01, stop 23,61, objectif 29,22, revoir le 29/01
+• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,4 %
+  entrée 30,48-30,76, stop 27,66, objectif 36,04, revoir le 28/01
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
+  entrée 25,97-26,15, stop 24,16, objectif 29,31, revoir le 28/01
+• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,6 %
+  entrée 89,80-90,31, stop 84,72, objectif 98,53, revoir le 28/01
   ⚠ résultats pendant la position
-• Verizon – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
-  entrée 45,58-45,96, stop 41,81, objectif 53,46, revoir le 29/01
-• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
-  entrée 30,48-30,76, stop 27,72, objectif 36,06, revoir le 29/01
-• Amundi – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,7 %
-  entrée 89,80-90,30, stop 84,82, objectif 98,62, revoir le 29/01
+• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
+  entrée 25,79-26,02, stop 23,53, objectif 29,19, revoir le 28/01
   ⚠ résultats pendant la position
-• Siemens – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
-  entrée 278,90-280,93, stop 258,57, objectif 319,70, revoir le 29/01
+• Bank of America – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
+  entrée 54,85-55,20, stop 51,36, objectif 61,18, revoir le 29/01
   ⚠ résultats pendant la position
 
 *À lire*
-• La Bourse de Paris et Wall Street à nouveau portés par l'IA, STMicro, Schneider Electric et Legrand dans les plus fortes hausses du jour (Les Echos)
-• Wall Street ouvre en hausse (La Presse)
-• Wall Street ouvre en hausse, attend la Fed (Le Figaro)
+• Dassault Systèmes relève ses objectifs, BNP Paribas lance des rachats d'actions et Danone souffre en Chine, place à la Fed et aux « magnifiques » à Wall Street (Les Echos)
+• CAC 40: La Bourse de Paris devrait ouvrir en repli au milieu d'un déluge de résultats et avant la Fed (ABC Bourse)
+• CAC 40: Paris face à des vents contraires (Zonebourse)
 
-*🎓 Question du jour* : Dette nette / EBITDA de 4,5 pour un industriel signifie…
-A. une dette très confortable
-B. un endettement élevé à surveiller
-C. aucune dette
-D. une entreprise en croissance
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q48
+*🎓 Question du jour* : Pour une valeur cyclique, un PER très bas au sommet du cycle est souvent…
+A. une affaire à saisir
+B. un piège : les bénéfices sont au plus haut et vont baisser
+C. sans importance
+D. un signe de croissance
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q49
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
