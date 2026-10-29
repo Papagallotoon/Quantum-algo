@@ -53,14 +53,20 @@ export async function fetchSubscribers() {
   const j = await res.json();
   return { list: j.subscribers || [], configured: true };
 }
+// pied de page visible : lien de desinscription personnel (signe) de chaque abonne
+function unsubFooter(href) {
+  return `<div style="margin-top:22px;padding-top:16px;border-top:1px solid #2a3446;text-align:center;font-size:13px;line-height:1.6">` +
+    `<a href="${href}" style="color:#c9d1de;text-decoration:underline;font-weight:600">Se désinscrire de la newsletter</a>` +
+    `<div style="color:#6b778c;font-size:11.5px;margin-top:4px">Un clic suffit, sans connexion. Tu peux aussi répondre « stop » à cet e-mail.</div></div>`;
+}
 export async function sendToSubscribers(list, subject, html, text, exclude) {
   const done = [], errors = [];
   const skip = new Set((exclude || []).map((e) => e.toLowerCase()));
   for (const s of list) {
     if (skip.has(s.email.toLowerCase())) continue;
-    const foot = `<br><br><a href="${s.unsub}" style="color:#9ca3af">Se désinscrire de la lettre du matin</a>`;
+    const foot = unsubFooter(s.unsub);
     try {
-      if (env("SMTP_HOST")) await sendSmtp(subject, html.replace("{{UNSUB}}", foot), text + "\n\nSe désinscrire : " + s.unsub, s.email, { "List-Unsubscribe": `<${s.unsub}>` });
+      if (env("SMTP_HOST")) await sendSmtp(subject, html.replace("{{UNSUB}}", foot), text + "\n\nSe désinscrire de la newsletter : " + s.unsub, s.email, { "List-Unsubscribe": `<${s.unsub}>` });
       else throw new Error("SMTP non configure");
       done.push(s.email);
     } catch (e) { errors.push(`${s.email}: ${e.message}`); }
@@ -103,7 +109,8 @@ async function sendTwilio(text) {
 export async function sendAll({ subject, html, text, whatsapp }) {
   const done = [], errors = [];
   const tryIt = async (name, fn) => { try { await fn(); done.push(name); } catch (e) { errors.push(`${name}: ${e.message}`); } };
-  const own = html.replace("{{UNSUB}}", "");
+  // copie du proprietaire : meme pied de page que les abonnes (lien vers le site, car il n'est pas dans la liste)
+  const own = html.replace("{{UNSUB}}", unsubFooter((env("SITE_URL") || "https://papagallotoon.github.io/Quantum-algo/")));
   if (env("BREVO_API_KEY") && env("MAIL_TO")) await tryIt("e-mail", () => sendBrevo(subject, own, text));
   else if (env("SMTP_HOST") && env("MAIL_TO")) await tryIt("e-mail", () => sendSmtp(subject, own, text));
   if (env("CALLMEBOT_PHONE") && env("CALLMEBOT_APIKEY")) await tryIt("WhatsApp", () => sendCallMeBot(whatsapp));
