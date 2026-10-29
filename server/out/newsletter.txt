@@ -1,6 +1,6 @@
 *Quantum Algo – jeudi 29 octobre 2026*
 
-• CAC 40 à 7 887 points : −0,0 % à la dernière séance, −1,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 985 points : +1,2 % à la dernière séance, +0,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • 5 annonce(s) à fort impact aujourd'hui, la première à 13:30 (Croissance du PIB (sur un trimestre), Etats-Unis) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : TotalEnergies, Societe Generale, STMicroelectronics, Amundi, Ayvens, Imerys, Pluxee, TF1, Amazon, Intel, Eli Lilly, Mastercard, Merck, Starbucks, Coinbase, Caterpillar, Adidas, MTU Aero Engines, Volkswagen, Amplifon, Prysmian, STMicroelectronics, Keyence, Takeda, Denso.
 • Pas de tendance nette des indices à 1 mois.
@@ -22,22 +22,22 @@ ven. 30/10 03:31 🇯🇵 BOJ Outlook Report
 ven. 30/10 06:30 🇯🇵 BOJ Press Conference
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
-  entrée 268,30-271,10, stop 240,33, objectif 322,55, revoir le 29/01
-• Air Liquide – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
-  entrée 173,18-174,94, stop 166,87, objectif 186,49, revoir le 22/01
-• TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
-  entrée 79,74-81,05, stop 75,14, objectif 88,48, revoir le 29/01
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,7 %
+  entrée 264,20-266,85, stop 237,67, objectif 317,47, revoir le 02/02
+• TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
+  entrée 80,46-81,80, stop 75,74, objectif 89,40, revoir le 02/02
   ⚠ résultats pendant la position
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
-  entrée 91,30-92,01, stop 84,21, objectif 102,56, revoir le 29/01
-• Airbus – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
-  entrée 200,40-201,82, stop 186,17, objectif 221,74, revoir le 29/01
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,3 %
+  entrée 90,41-91,11, stop 83,44, objectif 102,61, revoir le 02/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 195,67-199,13, stop 183,31, objectif 220,39, revoir le 26/01
+• Vinci – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
+  entrée 109,30-109,86, stop 103,72, objectif 119,02, revoir le 02/02
 
 *À lire*
-• Alphabet plonge à Wall Street, alors que les résultats déçoivent (Boursier.com)
-• Principaux événements à suivre sur les sociétés aujourd'hui (ABC Bourse)
-• L'Europe attendue dans le vert dans le sillage de Wall Street et en attendant la BCE (ABC Bourse)
+• Renault, Air Liquide et Airbus portent le Cac 40 avant l'inflation américaine et la BCE, Christine Lagarde en quittera la présidence en février (Les Echos)
+• Marchés: les Bourses européennes progressent, Wall Street plombée par Alphabet (Zonebourse Suisse)
+• Wall Street grimace sous une pluie de résultats (Zonebourse Suisse)
 
 *🎓 Question du jour* : Un PMI à 47 indique…
 A. une expansion
