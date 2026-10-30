@@ -1,50 +1,42 @@
-*Quantum Algo – jeudi 29 octobre 2026*
+*Quantum Algo – vendredi 30 octobre 2026*
 
-• CAC 40 à 7 985 points : +1,2 % à la dernière séance, +0,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• 5 annonce(s) à fort impact aujourd'hui, la première à 13:30 (Croissance du PIB (sur un trimestre), Etats-Unis) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : TotalEnergies, Societe Generale, STMicroelectronics, Amundi, Ayvens, Imerys, Pluxee, TF1, Amazon, Intel, Eli Lilly, Mastercard, Merck, Starbucks, Coinbase, Caterpillar, Adidas, MTU Aero Engines, Volkswagen, Amplifon, Prysmian, STMicroelectronics, Keyence, Takeda, Denso.
+• CAC 40 à 7 971 points : +0,0 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• 4 annonce(s) à fort impact aujourd'hui, la première à 04:02 (BOJ Outlook Report, Japon) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Sanofi, Credit Agricole, SCOR, ExxonMobil, AbbVie, Chevron, Intesa Sanpaolo, Tokyo Electron, Hoya, Daiichi Sankyo, Murata.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
-13:30 🇺🇸 Croissance du PIB (sur un trimestre) (prévu 3.2%)
-13:30 🇺🇸 Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois) (prévu 0.3%)
-14:15 🇪🇺 Décision de taux de la BCE (prévu 2.65%)
-14:15 🇪🇺 Communiqué de politique monétaire
-14:45 🇪🇺 Conférence de presse de la BCE
+04:02 🇯🇵 BOJ Outlook Report
+04:02 🇯🇵 Décision de taux de la Banque du Japon (prévu <1.25%)
+04:02 🇯🇵 Communiqué de politique monétaire
+07:30 🇯🇵 BOJ Press Conference
 
-*Résultats aujourd'hui* : TotalEnergies, Societe Generale, STMicroelectronics, Amundi, Ayvens, Imerys, Pluxee, TF1, Amazon, Intel, Eli Lilly, Mastercard, Merck, Starbucks, Coinbase, Caterpillar, Adidas, MTU Aero Engines, Volkswagen, Amplifon, Prysmian, STMicroelectronics, Keyence, Takeda, Denso
-
-*À venir (fort impact)*
-ven. 30/10 03:30 🇯🇵 Décision de taux de la Banque du Japon
-ven. 30/10 03:30 🇯🇵 Communiqué de politique monétaire
-ven. 30/10 03:31 🇯🇵 BOJ Outlook Report
-ven. 30/10 06:30 🇯🇵 BOJ Press Conference
+*Résultats aujourd'hui* : Sanofi, Credit Agricole, SCOR, ExxonMobil, AbbVie, Chevron, Intesa Sanpaolo, Tokyo Electron, Hoya, Daiichi Sankyo, Murata
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,7 %
-  entrée 264,20-266,85, stop 237,67, objectif 317,47, revoir le 02/02
+• LVMH – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
+  entrée 399,55-401,96, stop 375,49, objectif 436,30, revoir le 03/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,9 %
+  entrée 264,20-266,86, stop 237,61, objectif 318,57, revoir le 03/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 172,67-174,76, stop 165,36, objectif 186,37, revoir le 03/02
 • TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 80,46-81,80, stop 75,74, objectif 89,40, revoir le 02/02
-  ⚠ résultats pendant la position
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,3 %
-  entrée 90,41-91,11, stop 83,44, objectif 102,61, revoir le 02/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 195,67-199,13, stop 183,31, objectif 220,39, revoir le 26/01
-• Vinci – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 109,30-109,86, stop 103,72, objectif 119,02, revoir le 02/02
+  entrée 80,91-82,23, stop 76,28, objectif 89,59, revoir le 03/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,0 %
+  entrée 90,11-90,81, stop 83,10, objectif 102,12, revoir le 03/02
 
 *À lire*
-• Renault, Air Liquide et Airbus portent le Cac 40 avant l'inflation américaine et la BCE, Christine Lagarde en quittera la présidence en février (Les Echos)
-• Marchés: les Bourses européennes progressent, Wall Street plombée par Alphabet (Zonebourse Suisse)
-• Wall Street grimace sous une pluie de résultats (Zonebourse Suisse)
+• Bourse: Intel dégringole de 26% à l’ouverture de Wall Street, Amazon chute de près de 6% (Les Affaires)
+• Wall Street : -26% pour Intel, -6% pour Amazon… La Tech chute lourdement à l'ouverture des Bourses américaines (La Provence)
+• Wall Street ouvre en fort repli après les résultats d'Amazon et Intel (Zonebourse Suisse)
 
-*🎓 Question du jour* : Un PMI à 47 indique…
-A. une expansion
-B. une contraction de l'activité
-C. une inflation forte
-D. une hausse de taux
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q50
+*🎓 Question du jour* : Pourquoi les valeurs de croissance souffrent-elles des hausses de taux ?
+A. Elles paient plus d'impôts
+B. Leur valeur dépend surtout de bénéfices lointains, actualisés plus fortement
+C. Elles n'ont pas de dette
+D. Elles versent trop de dividendes
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q51
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
