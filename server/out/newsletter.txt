@@ -1,42 +1,33 @@
-*Quantum Algo – vendredi 30 octobre 2026*
+*Quantum Algo – samedi 31 octobre 2026*
 
-• CAC 40 à 7 971 points : +0,0 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• 4 annonce(s) à fort impact aujourd'hui, la première à 04:02 (BOJ Outlook Report, Japon) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Sanofi, Credit Agricole, SCOR, ExxonMobil, AbbVie, Chevron, Intesa Sanpaolo, Tokyo Electron, Hoya, Daiichi Sankyo, Murata.
+• CAC 40 à 7 969 points : −0,0 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-04:02 🇯🇵 BOJ Outlook Report
-04:02 🇯🇵 Décision de taux de la Banque du Japon (prévu <1.25%)
-04:02 🇯🇵 Communiqué de politique monétaire
-07:30 🇯🇵 BOJ Press Conference
-
-*Résultats aujourd'hui* : Sanofi, Credit Agricole, SCOR, ExxonMobil, AbbVie, Chevron, Intesa Sanpaolo, Tokyo Electron, Hoya, Daiichi Sankyo, Murata
-
 *Opportunités*
-• LVMH – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
-  entrée 399,55-401,96, stop 375,49, objectif 436,30, revoir le 03/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,9 %
-  entrée 264,20-266,86, stop 237,61, objectif 318,57, revoir le 03/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
+  entrée 264,20-266,89, stop 237,27, objectif 316,63, revoir le 03/02
 • Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 172,67-174,76, stop 165,36, objectif 186,37, revoir le 03/02
+  entrée 172,66-174,77, stop 165,27, objectif 186,39, revoir le 03/02
 • TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 80,91-82,23, stop 76,28, objectif 89,59, revoir le 03/02
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,0 %
-  entrée 90,11-90,81, stop 83,10, objectif 102,12, revoir le 03/02
+  entrée 80,88-82,21, stop 76,25, objectif 89,49, revoir le 03/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
+  entrée 90,11-90,81, stop 83,09, objectif 102,19, revoir le 03/02
+• Airbus – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
+  entrée 200,40-201,89, stop 185,53, objectif 222,70, revoir le 03/02
 
 *À lire*
-• Bourse: Intel dégringole de 26% à l’ouverture de Wall Street, Amazon chute de près de 6% (Les Affaires)
-• Wall Street : -26% pour Intel, -6% pour Amazon… La Tech chute lourdement à l'ouverture des Bourses américaines (La Provence)
-• Wall Street ouvre en fort repli après les résultats d'Amazon et Intel (Zonebourse Suisse)
+• RUBIS Cours Action RUI, Cotation Bourse Euronext Paris (Boursorama)
+• TECHNIP ENERGIES Cours Action TE, Cotation Bourse Euronext Paris (Boursorama)
+• TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Pourquoi les valeurs de croissance souffrent-elles des hausses de taux ?
-A. Elles paient plus d'impôts
-B. Leur valeur dépend surtout de bénéfices lointains, actualisés plus fortement
-C. Elles n'ont pas de dette
-D. Elles versent trop de dividendes
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q51
+*🎓 Question du jour* : Dans Ichimoku, un prix au-dessus d'un nuage épais signifie…
+A. tendance baissière
+B. tendance haussière avec un support solide
+C. marché sans tendance
+D. signal de vente
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q52
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
