@@ -1,33 +1,41 @@
-*Quantum Algo – samedi 31 octobre 2026*
+*Quantum Algo – dimanche 1 novembre 2026*
 
 • CAC 40 à 7 969 points : −0,0 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
+*À venir (fort impact)*
+mar. 03/11 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
+mar. 03/11 04:30 🇦🇺 Cash Rate
+mar. 03/11 04:30 🇦🇺 RBA Monetary Policy Statement
+mar. 03/11 04:30 🇦🇺 RBA Rate Statement
+mar. 03/11 05:30 🇦🇺 RBA Press Conference
+mar. 03/11 16:16 🇺🇸 Congressional Elections
+
 *Opportunités*
+• LVMH – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
+  entrée 399,55-401,96, stop 375,49, objectif 439,10, revoir le 03/02
 • Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
-  entrée 264,20-266,89, stop 237,27, objectif 316,63, revoir le 03/02
+  entrée 264,20-266,89, stop 237,27, objectif 316,47, revoir le 03/02
 • Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 172,66-174,77, stop 165,27, objectif 186,39, revoir le 03/02
+  entrée 172,66-174,77, stop 165,27, objectif 186,37, revoir le 03/02
 • TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 80,88-82,21, stop 76,25, objectif 89,49, revoir le 03/02
+  entrée 80,88-82,21, stop 76,25, objectif 89,75, revoir le 03/02
 • BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
-  entrée 90,11-90,81, stop 83,09, objectif 102,19, revoir le 03/02
-• Airbus – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 200,40-201,89, stop 185,53, objectif 222,70, revoir le 03/02
+  entrée 90,11-90,81, stop 83,09, objectif 102,59, revoir le 03/02
 
 *À lire*
-• RUBIS Cours Action RUI, Cotation Bourse Euronext Paris (Boursorama)
-• TECHNIP ENERGIES Cours Action TE, Cotation Bourse Euronext Paris (Boursorama)
-• TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris (Boursorama)
+• Wall Street est profondément divisée après la décision de la Fed de maintenir les taux d'intérêt inchangés, et les capitaux se retirent des valeurs technologiques. (Vietnam.vn)
+• La Banque centrale d’Egypte relève ses taux d’intérêt de 1% pour la première fois depuis mars 2024 (Ahraminfo)
+• ACTUALITÉS MONDIALES DE LA SEMAINE : Les coulisses des décisions de politique de taux d’intérêt (Vietnam.vn)
 
-*🎓 Question du jour* : Dans Ichimoku, un prix au-dessus d'un nuage épais signifie…
-A. tendance baissière
-B. tendance haussière avec un support solide
-C. marché sans tendance
-D. signal de vente
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q52
+*🎓 Question du jour* : Le biais du survivant dans un backtest consiste à…
+A. oublier les frais
+B. utiliser des données futures
+C. ne tester que les entreprises encore existantes
+D. tester sur trop peu de données
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q53
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
