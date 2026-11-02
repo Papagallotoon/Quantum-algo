@@ -1,6 +1,6 @@
 *Quantum Algo – lundi 2 novembre 2026*
 
-• CAC 40 à 7 953 points : −0,2 % à la dernière séance, +0,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 8 048 points : +1,0 % à la dernière séance, +1,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Résultats aujourd'hui : Coface, Apple, Palantir.
 • Pas de tendance nette des indices à 1 mois.
@@ -17,24 +17,24 @@ mar. 03/11 05:30 🇦🇺 RBA Press Conference
 mar. 03/11 16:16 🇺🇸 Congressional Elections
 
 *Opportunités*
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,2 %
-  entrée 3274,00-3302,42, stop 2989,84, objectif 3855,94, revoir le 04/02
-  ⚠ résultats pendant la position
-• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
-  entrée 30,15-30,43, stop 27,38, objectif 35,67, revoir le 04/02
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,5 %
+  entrée 26,04-26,22, stop 24,24, objectif 29,49, revoir le 04/02
 • Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
-  entrée 25,79-25,98, stop 23,86, objectif 29,18, revoir le 04/02
+  entrée 25,79-26,00, stop 23,73, objectif 29,10, revoir le 04/02
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
-  entrée 26,04-26,22, stop 24,27, objectif 29,51, revoir le 04/02
-• Siemens – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
-  entrée 274,65-276,65, stop 254,64, objectif 314,65, revoir le 04/02
+• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,7 %
+  entrée 30,15-30,43, stop 27,36, objectif 35,37, revoir le 04/02
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,3 %
+  entrée 3290,00-3317,97, stop 3010,29, objectif 3851,02, revoir le 03/02
+  ⚠ résultats pendant la position
+• BPER Banca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,2 %
+  entrée 13,31-13,40, stop 12,39, objectif 14,94, revoir le 04/02
   ⚠ résultats pendant la position
 
 *À lire*
-• Alstom lance une grosse alerte et plonge en Bourse, la Bourse de Paris sur la réserve après la décision de Fitch et avant de gros rendez-vous cette semaine (Les Echos)
-• CAC 40 : La Bourse de Paris ouvre dans le rouge à la veille des élections américaines (Zonebourse Suisse)
-• Bourses d'Asie : pourquoi Séoul s'envole face à Tokyo ? (XTB.com)
+• Le président de la Fed, Kevin Warsh, réduit le nombre de votes sur la fixation des taux. (Quartz en Français)
+• Marchés mondiaux: la chute des prix du pétrole profite aux Bourses (Zonebourse)
+• Anthropic prépare son entrée en bourse avec 132 milliards en réserve (Blick)
 
 *🎓 Question du jour* : Pourquoi réduire la taille de position quand l'ATR augmente ?
 A. Pour payer moins de frais
