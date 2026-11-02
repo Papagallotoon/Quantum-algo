@@ -1,9 +1,12 @@
-*Quantum Algo – dimanche 1 novembre 2026*
+*Quantum Algo – lundi 2 novembre 2026*
 
-• CAC 40 à 7 969 points : −0,0 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• CAC 40 à 7 953 points : −0,2 % à la dernière séance, +0,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Coface, Apple, Palantir.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
+
+*Résultats aujourd'hui* : Coface, Apple, Palantir
 
 *À venir (fort impact)*
 mar. 03/11 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
@@ -14,28 +17,31 @@ mar. 03/11 05:30 🇦🇺 RBA Press Conference
 mar. 03/11 16:16 🇺🇸 Congressional Elections
 
 *Opportunités*
-• LVMH – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
-  entrée 399,55-401,96, stop 375,49, objectif 439,10, revoir le 03/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
-  entrée 264,20-266,89, stop 237,27, objectif 316,47, revoir le 03/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 172,66-174,77, stop 165,27, objectif 186,37, revoir le 03/02
-• TotalEnergies – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 80,88-82,21, stop 76,25, objectif 89,75, revoir le 03/02
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
-  entrée 90,11-90,81, stop 83,09, objectif 102,59, revoir le 03/02
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,2 %
+  entrée 3274,00-3302,42, stop 2989,84, objectif 3855,94, revoir le 04/02
+  ⚠ résultats pendant la position
+• Edenred – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,8 %
+  entrée 30,15-30,43, stop 27,38, objectif 35,67, revoir le 04/02
+• Unipol – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
+  entrée 25,79-25,98, stop 23,86, objectif 29,18, revoir le 04/02
+  ⚠ résultats pendant la position
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,4 %
+  entrée 26,04-26,22, stop 24,27, objectif 29,51, revoir le 04/02
+• Siemens – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,7 %
+  entrée 274,65-276,65, stop 254,64, objectif 314,65, revoir le 04/02
+  ⚠ résultats pendant la position
 
 *À lire*
-• Wall Street est profondément divisée après la décision de la Fed de maintenir les taux d'intérêt inchangés, et les capitaux se retirent des valeurs technologiques. (Vietnam.vn)
-• La Banque centrale d’Egypte relève ses taux d’intérêt de 1% pour la première fois depuis mars 2024 (Ahraminfo)
-• ACTUALITÉS MONDIALES DE LA SEMAINE : Les coulisses des décisions de politique de taux d’intérêt (Vietnam.vn)
+• Alstom lance une grosse alerte et plonge en Bourse, la Bourse de Paris sur la réserve après la décision de Fitch et avant de gros rendez-vous cette semaine (Les Echos)
+• CAC 40 : La Bourse de Paris ouvre dans le rouge à la veille des élections américaines (Zonebourse Suisse)
+• Bourses d'Asie : pourquoi Séoul s'envole face à Tokyo ? (XTB.com)
 
-*🎓 Question du jour* : Le biais du survivant dans un backtest consiste à…
-A. oublier les frais
-B. utiliser des données futures
-C. ne tester que les entreprises encore existantes
-D. tester sur trop peu de données
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q53
+*🎓 Question du jour* : Pourquoi réduire la taille de position quand l'ATR augmente ?
+A. Pour payer moins de frais
+B. Pour garder le même risque en euros
+C. Parce que l'ATR annonce une baisse
+D. Ce n'est pas utile
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q54
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
