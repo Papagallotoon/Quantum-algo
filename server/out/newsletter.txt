@@ -1,6 +1,6 @@
 *Quantum Algo – mardi 3 novembre 2026*
 
-• CAC 40 à 8 048 points : +1,0 % à la dernière séance, +1,9 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 041 points : −0,1 % à la dernière séance, +2,6 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • 5 annonce(s) à fort impact aujourd'hui, la première à 04:30 (Cash Rate, Australie) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : AMD, Amgen, Pfizer, Booking, Shopify, Bayer, Zalando, Intesa Sanpaolo, Ferrari.
 • Pas de tendance nette des indices à 1 mois.
@@ -24,25 +24,23 @@ jeu. 05/11 13:30 🇬🇧 BOE Gov Bailey Speaks
 ven. 06/11 14:30 🇨🇦 Employment Change
 
 *Opportunités*
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,2 %
-  entrée 3274,00-3302,42, stop 2989,84, objectif 3830,32, revoir le 04/02
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
+  entrée 3274,00-3302,42, stop 2989,84, objectif 3830,01, revoir le 04/02
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,0 %
-  entrée 26,04-26,22, stop 24,20, objectif 29,50, revoir le 03/02
+• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
+  entrée 26,04-26,22, stop 24,27, objectif 29,61, revoir le 05/02
 • BPER Banca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,6 %
-  entrée 13,46-13,55, stop 12,53, objectif 15,22, revoir le 03/02
+  entrée 13,28-13,37, stop 12,36, objectif 14,92, revoir le 05/02
   ⚠ résultats pendant la position
-• Commerzbank – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,8 %
-  entrée 38,69-38,96, stop 35,99, objectif 44,13, revoir le 03/02
-  ⚠ résultats pendant la position
-• Banca Mediolanum – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 23,12-23,26, stop 21,68, objectif 25,68, revoir le 03/02
-  ⚠ résultats pendant la position
+• Shopify – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +7,0 %
+  entrée 141,62-147,47, stop 120,74, objectif 184,09, revoir le 29/01
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,5 %
+  entrée 250,97-253,62, stop 224,51, objectif 305,07, revoir le 05/02
 
 *À lire*
-• CAC 40 : La Bourse de Paris attendue dans le rouge, les élections américaines en ligne de mire (Zonebourse Suisse)
-• Repli en vue à la Bourse de Paris dans le sillage de la tech américaine, jour J pour les élections de mi-mandat (Investir Les Echos)
-• LE POINT sur les changements de recommandations à Paris (Boursorama)
+• Wall Street ouvre sans direction claire, le secteur technologique retrouve de l’élan (La Presse)
+• Wall Street ouvre dans le désordre en attendant les résultats des élections de mi-mandat (Zonebourse Suisse)
+• Wall Street ouvre sans direction et se tourne vers les élections américaines (Zonebourse Suisse)
 
 *🎓 Question du jour* : Dans un DCF, quelle part de la valeur représente souvent la valeur terminale ?
 A. 5 à 10 %
