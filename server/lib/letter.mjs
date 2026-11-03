@@ -20,7 +20,7 @@ const BG = "#05070B", CARD = "#0F141D", CARD2 = "#161D29", LINE = "#1E2633", TXT
 const UP = "#34D399", DOWN = "#FF6B5B", BRAND = "#8B93FF", ALERT = "#F5B740";
 const GREEN = UP, RED = DOWN, GREY = DIM, AMBER = ALERT;
 const SANS = "'Sora',-apple-system,'Segoe UI',Roboto,Helvetica,Arial,sans-serif";
-const MONO = "'JetBrains Mono','SFMono-Regular',Menlo,Consolas,'Courier New',monospace";
+const MONO = "'JetBrains Mono',Menlo,monospace"; // court : repete ~180 fois, Gmail coupe les lettres > 102 Ko
 const col = (p) => (p >= 0.53 ? UP : p <= 0.47 ? DOWN : SOFT);
 const cchg = (v) => (!ok(v) ? DIM : v >= 0 ? UP : DOWN);
 
@@ -50,7 +50,7 @@ const card = (title, body, sub = "", hash) => {
   </td></tr></table></td></tr>`;
 };
 const th = (t, right) => `<td style="text-align:${right ? "right" : "left"};padding:0 6px 8px;font-size:11px;color:${DIM};font-weight:500">${t}</td>`;
-const td = (t, s = "") => `<td style="padding:9px 6px;font-size:13px;color:${SOFT};border-top:1px solid ${LINE};vertical-align:middle;${s}">${t}</td>`;
+const td = (t, s = "") => `<td style="padding:9px 6px;font-size:13px;color:${SOFT};border-top:1px solid ${LINE};${s}">${t}</td>`;
 const T0 = `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="border-collapse:collapse">`;
 
 const TONE = { positif: { c: UP, t: "▲" }, négatif: { c: DOWN, t: "▼" }, neutre: { c: DIM, t: "●" } };
@@ -120,7 +120,7 @@ function pickCard(p, n) {
       Objectif avant stop ${mono(pc(p.pTarget), TXT, 12)} · gain/risque ${mono(f1(p.rr) + "×", TXT, 12)} · mise max ${mono(Math.round(p.sizePct || 0) + " %", TXT, 12)} du capital · revoir le ${dShort(p.reviewDate)}
     </div>
     ${p.earningsWarning ? `<div style="margin-top:10px;padding:9px 12px;border-radius:10px;background:rgba(245,183,64,0.10);color:${ALERT};font-size:12px">${esc(p.earningsWarning)}</div>` : ""}
-    ${dayBlock(p.day)}
+    ${n <= 3 ? dayBlock(p.day) : ""}
     ${details.length ? `<div style="font-size:11px;line-height:17px;color:${DIM};margin-top:10px;padding-top:10px;border-top:1px solid ${LINE}">${details.map(esc).join("<br>")}</div>` : ""}
     ${p.news?.length ? newsList(p.news.slice(0, 1), true) : ""}
     ${SITE ? `<div style="margin-top:12px">${btn("v/" + encodeURIComponent(p.sym), "Graphique et indicateurs")}</div>` : ""}

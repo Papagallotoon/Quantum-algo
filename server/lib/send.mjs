@@ -53,6 +53,13 @@ export async function fetchSubscribers() {
   const j = await res.json();
   return { list: j.subscribers || [], configured: true };
 }
+// Gmail coupe les lettres de plus de ~102 Ko : on retire l'indentation, et le lien de
+// desinscription est aussi place en haut pour rester visible meme si la fin est coupee
+function compact(html) { return html.replace(/\n\s*/g, " ").replace(/ {2,}/g, " "); }
+function withUnsub(html, href) {
+  const top = `<div style="text-align:center;font-size:11px;padding:6px 0 0;font-family:Arial,sans-serif"><a href="${href}" style="color:#6b778c;text-decoration:underline">Se désinscrire de la newsletter</a></div>`;
+  return compact(html.replace("{{UNSUB}}", unsubFooter(href)).replace(/(<body[^>]*>)/i, "$1" + top));
+}
 // pied de page visible : lien de desinscription personnel (signe) de chaque abonne
 function unsubFooter(href) {
   return `<div style="margin-top:22px;padding-top:16px;border-top:1px solid #2a3446;text-align:center;font-size:13px;line-height:1.6">` +
@@ -64,9 +71,9 @@ export async function sendToSubscribers(list, subject, html, text, exclude) {
   const skip = new Set((exclude || []).map((e) => e.toLowerCase()));
   for (const s of list) {
     if (skip.has(s.email.toLowerCase())) continue;
-    const foot = unsubFooter(s.unsub);
+    const mail = withUnsub(html, s.unsub);
     try {
-      if (env("SMTP_HOST")) await sendSmtp(subject, html.replace("{{UNSUB}}", foot), text + "\n\nSe désinscrire de la newsletter : " + s.unsub, s.email, { "List-Unsubscribe": `<${s.unsub}>` });
+      if (env("SMTP_HOST")) await sendSmtp(subject, mail, text + "\n\nSe désinscrire de la newsletter : " + s.unsub, s.email, { "List-Unsubscribe": `<${s.unsub}>` });
       else throw new Error("SMTP non configure");
       done.push(s.email);
     } catch (e) { errors.push(`${s.email}: ${e.message}`); }
@@ -110,7 +117,7 @@ export async function sendAll({ subject, html, text, whatsapp }) {
   const done = [], errors = [];
   const tryIt = async (name, fn) => { try { await fn(); done.push(name); } catch (e) { errors.push(`${name}: ${e.message}`); } };
   // copie du proprietaire : meme pied de page que les abonnes (lien vers le site, car il n'est pas dans la liste)
-  const own = html.replace("{{UNSUB}}", unsubFooter((env("SITE_URL") || "https://papagallotoon.github.io/Quantum-algo/")));
+  const own = withUnsub(html, env("SITE_URL") || "https://papagallotoon.github.io/Quantum-algo/");
   if (env("BREVO_API_KEY") && env("MAIL_TO")) await tryIt("e-mail", () => sendBrevo(subject, own, text));
   else if (env("SMTP_HOST") && env("MAIL_TO")) await tryIt("e-mail", () => sendSmtp(subject, own, text));
   if (env("CALLMEBOT_PHONE") && env("CALLMEBOT_APIKEY")) await tryIt("WhatsApp", () => sendCallMeBot(whatsapp));
