@@ -14,6 +14,7 @@ import * as ta from "../src/quantum/core/ta.js";
 import { computeAll, directionalIds } from "../src/quantum/core/signals.js";
 import { HORIZONS, HORIZON_KEYS, DEFAULT_MODEL, sigmaAt } from "../src/quantum/core/model.js";
 import { evaluateAll, buildPlan, bestHorizon } from "../src/quantum/core/plan.js";
+import { dayPlan } from "../src/quantum/core/daily.js";
 import { trainAll } from "../src/quantum/core/learn.js";
 import { INDEX_DEFS, INDEX_QUERY } from "../src/quantum/core/universe.js";
 import { FULL_COMPONENTS as COMPONENTS, FULL_NAMES as NEWS_NAMES } from "../src/quantum/core/universe-full.js";
@@ -184,6 +185,7 @@ const toPick = (r) => ({
   reviewDate: r.plan.reviewDate, validUntil: r.plan.validUntil, cur: r.cur, expectancy: r.plan.expectancy,
   price: r.it.close[r.i], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]), sizePct: r.plan.sizePct, riskPct: r.plan.riskPct, gainPct: r.plan.gainPct,
   ...details(r),
+  day: dayPlan(r.it.c, {}),
 });
 const picks = rows.filter((r) => active.has(r.plan.action) && (r.plan.expectancy ?? 0) > 0)
   .sort((a, b) => b.rank - a.rank).slice(0, config.maxPicks || 5).map(toPick);
@@ -294,6 +296,11 @@ if (!FAKE) {
   const qs = ["Bourse de Paris CAC 40", "Wall Street Bourse", "BCE OR Fed taux d'intérêt", "pétrole OR dollar marchés"];
   marketNews = dedupeNews((await Promise.all(qs.map((q) => fetchNews(q, 4)))).flat()).sort((a, b) => (b.time || 0) - (a.time || 0)).slice(0, 8);
   for (const p of [...picks, ...watch]) p.news = await fetchNews((NEWS_NAMES[p.sym] || p.name) + " action", 2);
+  // plan du jour avec alertes (resultats proches, actualite chargee)
+  for (const p of [...picks, ...avoid, ...watch]) {
+    const f = fundamentals[p.sym];
+    p.day = dayPlan(bySym[p.sym].c, { earnings: f?.earnings || null, news: p.news || null });
+  }
 }
 const vix = vixCtx;
 const mood = !vix ? null : vix.last < 15 ? "calme" : vix.last < 20 ? "normal" : vix.last < 30 ? "nerveux" : "en stress";

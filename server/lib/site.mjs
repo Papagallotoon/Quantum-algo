@@ -6,6 +6,7 @@ import path from "node:path";
 import { rowsAt } from "../../src/quantum/core/signals.js";
 import { votes, familyContrib, verdictOf, sigmaAt, HORIZON_KEYS, HORIZONS } from "../../src/quantum/core/model.js";
 import { evaluateAll, buildPlan } from "../../src/quantum/core/plan.js";
+import { dayPlan } from "../../src/quantum/core/daily.js";
 import { simulate } from "../../src/quantum/core/montecarlo.js";
 import { PROFILES } from "../../src/quantum/core/universe.js";
 
@@ -47,6 +48,7 @@ function assetData(it, model, extra) {
     tech: rowsAt(it.all, i, cur).map((x) => [x.name, x.cat, x.val, x.sig]),
     hist: C.slice(-130).map(r2), dates: it.time.slice(-130),
     fund: extra.fund || null, earnings: extra.earnings || null, news: extra.news || null,
+    day: dayPlan(c, { earnings: extra.earnings || null, news: extra.news || null }),
   };
 }
 

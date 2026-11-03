@@ -7,6 +7,8 @@ import { HORIZON_LABEL } from "../core/model.js";
 import { planFor } from "../model/build";
 import PlanCard from "../components/PlanCard";
 import BriefCard from "../components/BriefCard";
+import DayPlanCard from "../components/DayPlanCard";
+import { dayPlan } from "../core/daily.js";
 import { useFund, baseOf } from "../fund";
 import { briefForAsset, qaSig } from "../brief";
 import { useNews } from "../useNews";
@@ -190,6 +192,12 @@ export default function DetailScreen(props) {
           <Text style={[T.mono(14, "600"), { color: s.changeRaw >= 0 ? C.up : C.down }]}>{s.change}</Text>
           <Text style={[T.sans(11, "400"), { color: C.dim }]}>dernière séance</Text>
         </View>
+
+        {s._candles ? <DayPlanCard day={dayPlan(s._candles, {
+          live: s.priceRaw, sessionOpen: s._candles.marketState === "REGULAR",
+          earnings: F && F.f && F.f[s.symbol] ? F.f[s.symbol].earn : null,
+          news: news && news.items ? news.items : null,
+        })} /> : null}
 
         {plan ? <BriefCard title={"En bref · horizon " + plan.horizonLabel} brief={briefForAsset(s, plan, F, { fam: plan.horizon === st.horizon ? s.factors : null })} /> : null}
 

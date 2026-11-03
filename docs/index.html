@@ -279,7 +279,7 @@
     var A = {
       ENTRER: ["Entrer", "tendance haussière, indicateurs favorables et cours pas trop étiré" + (bfOk(pl.stop) ? ". Achat autour de " + bfPx(x.price) + cur + ", sortie si le cours passe sous " + bfPx(pl.stop) + ", objectif " + bfPx(pl.target) : "") + "."],
       ATTENDRE_REPLI: ["Attendre un repli", "le contexte est favorable mais le cours est monté trop vite" + (bfOk(pl.zoneLo) ? " ; ordre d'achat entre " + bfPx(pl.zoneLo) + " et " + bfPx(pl.zoneHi) : "") + "."],
-      ATTENDRE_CONFIRMATION: ["Attendre", "la tendance de court terme n'a pas encore tourné à la hausse" + (bfOk(pl.zoneLo) ? " ; acheter seulement après une clôture au-dessus de " + bfPx(pl.zoneLo) : "") + "."],
+      ATTENDRE_CONFIRMATION: ["Attendre", "la tendance de court terme n'a pas encore tourné à la hausse" + (bfOk(pl.zoneLo) ? " ; acheter dès que le cours dépasse " + bfPx(pl.zoneLo) + " en séance (plus haut d'hier)" : "") + "."],
       NEUTRE: ["Rester à l'écart", "l'avantage est trop faible pour couvrir les frais. Si tu la détiens, rien ne presse."],
       EVITER: ["Éviter / alléger", "le modèle penche à la baisse" + (bfOk(pl.stop) ? " ; si tu la détiens, protection possible sous " + bfPx(pl.stop) : "") + "."],
     };
@@ -410,12 +410,26 @@
       return '<a href="' + esc(n.link) + '" target="_blank" rel="noopener"><span class="tone ' + c + '">' + (n.tone === "positif" ? "▲" : n.tone === "négatif" ? "▼" : "•") + '</span>' + esc(n.title) + ' <span class="dimmer small">— ' + esc(n.source || "") + (n.time ? ", " + ago(n.time) : "") + '</span></a>';
     }).join("") + '</div>';
   }
+  // Plan du jour : scenarios conditionnels (seuils issus de la seance d'hier), et alertes evenement
+  function dayCard(a) {
+    var d = a.day; if (!d) return "";
+    var row = function (c, dot, t) { return '<div style="display:flex;gap:10px;padding:7px 0;border-top:1px solid var(--soft)"><b class="' + c + '" style="flex:none">' + dot + '</b><span style="font-size:14px;line-height:1.5">' + esc(t) + '</span></div>'; };
+    var h = '<div class="card"><h2>Plan du jour</h2><div class="small muted" style="margin-bottom:6px">Fourchette probable de la séance : <b class="mono">' + f2(d.range.lo) + ' – ' + f2(d.range.hi) + '</b> · pivot ' + f2(d.pivot) + '</div>' +
+      row("up", "▲", d.up.text) + row("down", "▼", d.down.text) + row("flat", "●", d.flat);
+    (d.alerts || []).forEach(function (al) { h += '<div class="warn" style="margin-top:12px"><b>⚡ ' + esc(al.title) + '</b>' + al.rules.map(function (r) { return '<div style="margin-top:4px">• ' + esc(r) + '</div>'; }).join("") + '</div>'; });
+    return h + '<p class="small dimmer" style="margin:10px 0 0">Ce ne sont pas des prévisions : le modèle n\'a pas d\'avantage mesuré à 1 jour. Ce sont des règles d\'action selon ce que fait le cours en séance, calculées sur la séance d\'hier.</p></div>';
+  }
+  function alertsToday() {
+    var list = Object.keys(D.stocks).map(function (k) { return D.stocks[k]; }).filter(function (a) { return a.day && a.day.alerts && a.day.alerts.length; });
+    if (!list.length) return "";
+    return '<div class="card"><h2>⚡ Alertes du jour</h2>' + list.slice(0, 12).map(function (a) { return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '"><div class="grow"><div class="name">' + flagSym(a.sym) + esc(a.name) + '</div><div class="small amber" style="margin-top:3px">' + a.day.alerts.map(function (x) { return esc(x.title); }).join(" · ") + '</div></div><span class="small muted">Plan du jour →</span></a>'; }).join("") + '</div>';
+  }
   function planCard(a, compact) {
     var p = a.plan, act = p.action;
     var active = act === "ENTRER" || act === "ATTENDRE_REPLI" || act === "ATTENDRE_CONFIRMATION";
     var sentence = act === "ENTRER" ? "Acheter autour de <b>" + f2(a.price) + "</b>, viser <b>" + f2(p.target) + "</b>, sortir si le cours passe sous <b>" + f2(p.stop) + "</b>."
       : act === "ATTENDRE_REPLI" ? "Ne pas acheter au cours actuel (" + f2(a.price) + "). Ordre d'achat entre <b>" + f2(p.zoneLo) + "</b> et <b>" + f2(p.zoneHi) + "</b>, valable jusqu'au " + dfr(p.valid) + "."
-      : act === "ATTENDRE_CONFIRMATION" ? "Acheter seulement si le cours clôture au-dessus de <b>" + f2(p.zoneLo) + "</b> d'ici le " + dfr(p.valid) + "."
+      : act === "ATTENDRE_CONFIRMATION" ? "Acheter dès que le cours dépasse <b>" + f2(p.zoneLo) + "</b> en séance (plus haut d'hier), d'ici le " + dfr(p.valid) + "."
       : act === "EVITER" ? "Le modèle penche à la baisse : pas d'achat. Si tu détiens la valeur, protection possible sous <b>" + f2(p.stop) + "</b>."
       : "Pas d'avantage statistique suffisant pour couvrir les frais : rester à l'écart.";
     var g = act === "ENTRER" ? 0 : act === "EVITER" ? 2 : 1;
@@ -443,6 +457,7 @@
     var t = D.today, h = "";
     h += '<h1>Aujourd\'hui</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
     if (t.brief && t.brief.length) h += '<div class="card"><h2>L\'essentiel</h2>' + t.brief.map(function (b) { return '<div style="padding:4px 0;font-size:15px;line-height:1.45">• ' + esc(b) + '</div>'; }).join("") + '</div>';
+    h += alertsToday();
     h += '<div class="card" id="opportunites"><h2>Opportunités du jour</h2>';
     if (!t.picks.length) h += '<div class="empty">Aucune valeur ne présente un avantage suffisant aujourd\'hui.</div>';
     t.picks.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); });
@@ -538,6 +553,7 @@
     }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">En gros : chances sur 100 que l\'action termine plus haut à cet horizon. En petit : variation moyenne attendue. Exemple : 55 % et +1,2 % = un peu plus d\'une chance sur deux de monter, pour un gain moyen attendu d\'environ 1,2 %. Touche un horizon pour mettre à jour le graphique.</p></div>';
     h += '<div class="card">' + chart(a, st.h) + '</div>';
     h += planCard(a);
+    h += dayCard(a);
     h += '<div class="grid2"><div class="card"><h2>Poids de chaque famille dans le score</h2>' + (a.fam || []).map(function (f) {
       var pos = f[1] >= 0, w = Math.min(50, Math.abs(f[1]) / 2);
       return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>' + esc(f[0]) + '</span><span class="mono ' + (f[1] === 0 ? "flat" : pos ? "up" : "down") + '">' + (pos ? "+" : "") + f[1] + '</span></div><div class="bar2"><div style="position:absolute;top:0;bottom:0;left:' + (pos ? 50 : 50 - w) + '%;width:' + w + '%;background:' + (pos ? "#34D399" : "#FF6B5B") + ';border-radius:3px"></div></div></div>';

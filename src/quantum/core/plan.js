@@ -112,10 +112,12 @@ export function buildPlan(c, evals, sigma, forceH) {
   var stretch = (price - ema20) / atr;
   if (price < sma50 && sma50slope < 0) {
     action = "ATTENDRE_CONFIRMATION";
-    entry = Math.max(hi10, ema20);
+    // seuil serre : plus haut de la derniere seance (au moins 0,1 ATR au-dessus du cours),
+    // sans depasser l'ancien seuil (plus haut 10 jours / EMA 20) ; validation en seance, pas a la cloture
+    entry = Math.min(Math.max(hi10, ema20), Math.max(H[i], price + 0.1 * atr));
     zoneLo = entry; zoneHi = entry + 0.3 * atr;
-    validity = Math.max(5, Math.min(15, days));
-    start = "Acheter seulement apres une cloture au-dessus de " + f2(entry);
+    validity = Math.max(3, Math.min(5, days));
+    start = "Acheter si le cours depasse " + f2(entry) + " en seance (plus haut d'hier)";
     why.push("Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.");
   } else if (stretch > 1.5 || rsi > 70) {
     action = "ATTENDRE_REPLI";

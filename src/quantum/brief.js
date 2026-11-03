@@ -87,7 +87,7 @@ function qaBrief(x) {
   var A = {
     ENTRER: ["Entrer", "tendance haussière, indicateurs favorables et cours pas trop étiré" + (bfOk(pl.stop) ? ". Achat autour de " + bfPx(x.price) + cur + ", sortie si le cours passe sous " + bfPx(pl.stop) + ", objectif " + bfPx(pl.target) : "") + "."],
     ATTENDRE_REPLI: ["Attendre un repli", "le contexte est favorable mais le cours est monté trop vite" + (bfOk(pl.zoneLo) ? " ; ordre d'achat entre " + bfPx(pl.zoneLo) + " et " + bfPx(pl.zoneHi) : "") + "."],
-    ATTENDRE_CONFIRMATION: ["Attendre", "la tendance de court terme n'a pas encore tourné à la hausse" + (bfOk(pl.zoneLo) ? " ; acheter seulement après une clôture au-dessus de " + bfPx(pl.zoneLo) : "") + "."],
+    ATTENDRE_CONFIRMATION: ["Attendre", "la tendance de court terme n'a pas encore tourné à la hausse" + (bfOk(pl.zoneLo) ? " ; acheter dès que le cours dépasse " + bfPx(pl.zoneLo) + " en séance (plus haut d'hier)" : "") + "."],
     NEUTRE: ["Rester à l'écart", "l'avantage est trop faible pour couvrir les frais. Si tu la détiens, rien ne presse."],
     EVITER: ["Éviter / alléger", "le modèle penche à la baisse" + (bfOk(pl.stop) ? " ; si tu la détiens, protection possible sous " + bfPx(pl.stop) : "") + "."],
   };

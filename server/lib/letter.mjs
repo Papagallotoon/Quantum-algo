@@ -75,6 +75,16 @@ const cell = (label, value, sub, c) => `<td width="33%" style="padding:3px"><div
   <div style="font-family:${MONO};font-size:15px;font-weight:700;color:${c};margin-top:3px;white-space:nowrap">${value}</div>
   <div style="font-family:${MONO};font-size:11px;color:${c};margin-top:1px">${sub}</div></div></td>`;
 
+// Plan du jour : scenarios conditionnels pour la seance (seuils issus de la seance d'hier)
+function dayBlock(d) {
+  if (!d) return "";
+  const row = (dot, c, t) => `<div style="padding:4px 0;font-size:12.5px;line-height:18px;color:${SOFT}"><span style="color:${c};font-weight:700">${dot}</span>&nbsp; ${esc(t)}</div>`;
+  const al = (d.alerts || []).map((a) => `<div style="margin-top:8px;padding:9px 12px;border-radius:10px;background:rgba(245,183,64,0.10)"><div style="color:${ALERT};font-size:12px;font-weight:700">⚡ ${esc(a.title)}</div>${a.rules.map((r) => `<div style="font-size:11.5px;line-height:17px;color:${SOFT};margin-top:3px">• ${esc(r)}</div>`).join("")}</div>`).join("");
+  return `<div style="margin-top:10px;padding-top:10px;border-top:1px solid ${LINE}">
+    <div style="font-size:11px;letter-spacing:1px;color:${BRAND};font-weight:700">PLAN DU JOUR <span style="color:${DIM};font-weight:400;letter-spacing:0">· fourchette probable ${f2(d.range.lo)}–${f2(d.range.hi)}</span></div>
+    ${row("▲", UP, d.up.text)}${row("▼", DOWN, d.down.text)}${row("●", DIM, d.flat)}${al}
+  </div>`;
+}
 function pickCard(p, n) {
   const a = ACTION[p.action] || { t: p.actionLabel, c: TXT, bg: LINE };
   const f = p.fund || {}, perf = p.perf || {};
@@ -83,7 +93,7 @@ function pickCard(p, n) {
     ? `Acheter autour de ${mono(f2(p.price))}, viser ${mono(f2(p.target), UP)}, sortir sous ${mono(f2(p.stop), DOWN)}.`
     : p.action === "ATTENDRE_REPLI"
       ? `Pas au cours actuel (${mono(f2(p.price))}). Ordre d'achat entre ${mono(f2(p.zoneLo), BRAND)} et ${mono(f2(p.zoneHi), BRAND)}, valable jusqu'au ${dShort(p.validUntil)}.`
-      : `Acheter seulement après une clôture au-dessus de ${mono(f2(p.zoneLo), BRAND)} d'ici le ${dShort(p.validUntil)}. Sinon, on oublie.`;
+      : `Acheter dès que le cours dépasse ${mono(f2(p.zoneLo), BRAND)} en séance (plus haut d'hier), d'ici le ${dShort(p.validUntil)}. Sinon, on oublie.`;
   const details = [
     `1 mois ${sp1(perf.m1)} · 3 mois ${sp1(perf.m3)} · depuis janv. ${sp1(perf.ytd)}`,
     [ok(p.rsi) ? `RSI ${f1(p.rsi)}` : null, ok(p.support) ? `support ${f2(p.support)}` : null, ok(p.resistance) ? `résistance ${f2(p.resistance)}` : null].filter(Boolean).join(" · "),
@@ -110,6 +120,7 @@ function pickCard(p, n) {
       Objectif avant stop ${mono(pc(p.pTarget), TXT, 12)} · gain/risque ${mono(f1(p.rr) + "×", TXT, 12)} · mise max ${mono(Math.round(p.sizePct || 0) + " %", TXT, 12)} du capital · revoir le ${dShort(p.reviewDate)}
     </div>
     ${p.earningsWarning ? `<div style="margin-top:10px;padding:9px 12px;border-radius:10px;background:rgba(245,183,64,0.10);color:${ALERT};font-size:12px">${esc(p.earningsWarning)}</div>` : ""}
+    ${dayBlock(p.day)}
     ${details.length ? `<div style="font-size:11px;line-height:17px;color:${DIM};margin-top:10px;padding-top:10px;border-top:1px solid ${LINE}">${details.map(esc).join("<br>")}</div>` : ""}
     ${p.news?.length ? newsList(p.news.slice(0, 1), true) : ""}
     ${SITE ? `<div style="margin-top:12px">${btn("v/" + encodeURIComponent(p.sym), "Graphique et indicateurs")}</div>` : ""}
