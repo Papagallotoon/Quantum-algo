@@ -54,17 +54,16 @@ export async function fetchSubscribers() {
   return { list: j.subscribers || [], configured: true };
 }
 // Gmail coupe les lettres de plus de ~102 Ko : on retire l'indentation, et le lien de
-// desinscription est aussi place en haut pour rester visible meme si la fin est coupee
+// desinscription, en bas, reste ainsi visible
 function compact(html) { return html.replace(/\n\s*/g, " ").replace(/ {2,}/g, " "); }
 function withUnsub(html, href) {
-  const top = `<div style="text-align:center;font-size:11px;padding:6px 0 0;font-family:Arial,sans-serif"><a href="${href}" style="color:#6b778c;text-decoration:underline">Se désinscrire de la newsletter</a></div>`;
-  return compact(html.replace("{{UNSUB}}", unsubFooter(href)).replace(/(<body[^>]*>)/i, "$1" + top));
+  return compact(html.replace("{{UNSUB}}", unsubFooter(href)));
 }
 // pied de page visible : lien de desinscription personnel (signe) de chaque abonne
 function unsubFooter(href) {
-  return `<div style="margin-top:22px;padding-top:16px;border-top:1px solid #2a3446;text-align:center;font-size:13px;line-height:1.6">` +
-    `<a href="${href}" style="color:#c9d1de;text-decoration:underline;font-weight:600">Se désinscrire de la newsletter</a>` +
-    `<div style="color:#6b778c;font-size:11.5px;margin-top:4px">Un clic suffit, sans connexion. Tu peux aussi répondre « stop » à cet e-mail.</div></div>`;
+  return `<div style="margin-top:26px;padding:18px 12px;border-top:1px solid #2a3446;text-align:center">` +
+    `<a href="${href}" style="display:inline-block;padding:12px 22px;border-radius:12px;border:1px solid #6b778c;color:#eef2f7;font-size:15px;font-weight:700;text-decoration:underline;font-family:Arial,sans-serif">Se désinscrire de la newsletter</a>` +
+    `<div style="color:#94a0b4;font-size:12px;margin-top:8px;font-family:Arial,sans-serif">Un clic suffit, sans connexion. Tu peux aussi répondre « stop » à cet e-mail.</div></div>`;
 }
 export async function sendToSubscribers(list, subject, html, text, exclude) {
   const done = [], errors = [];
