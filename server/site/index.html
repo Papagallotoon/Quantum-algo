@@ -158,6 +158,32 @@
   .progress div { height: 6px; background: var(--brand); }
   .loading { padding: 80px 0; text-align: center; color: var(--dim); }
   table.etf td.r { white-space: nowrap; font-size: 12.5px; padding-left: 6px; }
+  .sec { font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--dimmer); margin: 30px 0 -2px 6px; }
+  .pick { border: 1px solid var(--line); border-radius: 18px; margin-top: 8px; background: var(--bg); overflow: hidden; }
+  .pick:hover { border-color: var(--line2); }
+  .pick .row { border: 0; margin: 0; border-radius: 0; background: transparent; }
+  .pk { padding: 0 16px 13px 78px; font-size: 13px; line-height: 1.55; color: var(--soft-t); }
+  .pk-n { margin-top: 5px; font-size: 12.5px; color: var(--dim); }
+  .pk-n a { color: var(--text); } .pk-n a:hover { text-decoration: underline; }
+  .tag { display: inline-block; font-size: 9.5px; font-weight: 700; letter-spacing: .5px; padding: 2px 7px; border-radius: 6px; margin-left: 6px; vertical-align: 1px; }
+  .tag.t-up { background: rgba(52,211,153,.14); color: var(--up); } .tag.t-down { background: rgba(255,107,91,.14); color: var(--down); }
+  .grid2.tight { gap: 16px; }
+  .grid2.tight .kv span:first-child { color: var(--soft-t); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .grid2 > div > .card:first-child { margin-top: 14px; }
+  @media (max-width: 760px) { .grid2.tight { grid-template-columns: 1fr 1fr; } }
+  .lab { font-size: 10.5px; font-weight: 700; letter-spacing: .1em; margin-bottom: 2px; }
+  .eday { display: grid; grid-template-columns: 130px 1fr; gap: 10px; padding: 11px 0; border-top: 1px solid var(--soft); align-items: start; }
+  .eday:first-of-type { border-top: 0; padding-top: 2px; }
+  .ech { display: inline-block; font-size: 12.5px; padding: 5px 11px; border-radius: 999px; background: var(--card2); margin: 0 6px 6px 0; color: var(--soft-t); }
+  .ech:hover { color: var(--text); background: var(--line2); }
+  .grid2 > * { min-width: 0; }
+  @media (max-width: 560px) {
+    .pk { padding-left: 14px; } .eday { grid-template-columns: 1fr; gap: 6px; }
+    .grid2.tight { grid-template-columns: 1fr; gap: 10px; }
+    table.etfw th:nth-child(3), table.etfw td:nth-child(3) { display: none; }
+    table.etf td, table.etf th { padding-left: 4px; padding-right: 4px; }
+    table.etf td.r { font-size: 12px; }
+  }
 </style>
 </head>
 <body>
@@ -459,59 +485,80 @@
     h += '<h1>Aujourd\'hui</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
     if (t.brief && t.brief.length) h += '<div class="card"><h2>L\'essentiel</h2>' + t.brief.map(function (b) { return '<div style="padding:4px 0;font-size:15px;line-height:1.45">• ' + esc(b) + '</div>'; }).join("") + '</div>';
     h += alertsToday();
-    h += '<div class="card" id="opportunites"><h2>Opportunités du jour</h2>';
+
+    // ---- 1. Opportunites : une carte par valeur, avec le pourquoi et l'actu qui va avec ----
+    h += '<div class="sec">Opportunités</div><div class="card" id="opportunites"><h2>Les pépites du jour</h2>';
     if (!t.picks.length) h += '<div class="empty">Aucune valeur ne présente un avantage suffisant aujourd\'hui.</div>';
-    if (t.summary && t.summary.length) {
-      h += '<div style="margin:2px 0 14px;padding:12px 14px;border-radius:14px;background:var(--card2)"><div class="small dimmer" style="letter-spacing:.08em;margin-bottom:6px">LES PÉPITES DU JOUR EN BREF</div>' +
-        t.summary.map(function (x) {
-          var c = x.ctx, col = c ? (c.tone === "positif" ? "up" : c.tone === "négatif" ? "down" : "muted") : "";
-          return '<div style="padding:7px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.5"><a href="#/v/' + encodeURIComponent(x.sym) + '" style="font-weight:700;color:var(--text)">' + flagSym(x.sym) + esc(x.name) + '</a> <span class="muted">' + esc(x.text) + '</span>' +
-            (c ? '<div class="small" style="margin-top:3px"><span class="' + col + '" style="font-weight:600">' + (c.tone === "positif" ? "▲ " : c.tone === "négatif" ? "▼ " : "● ") + esc(c.verdict) + ' :</span> <a href="' + esc(c.link) + '" target="_blank" rel="noopener" style="color:var(--text)">« ' + esc(c.title) + ' »</a>' + (c.source ? ' <span class="dimmer">' + esc(c.source) + '</span>' : '') + '</div>'
-              : '<div class="small dimmer" style="margin-top:3px">Pas d\'actu marquante : signal uniquement technique.</div>') + '</div>';
-        }).join("") + '</div>';
-    }
-    t.picks.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); });
-    h += '<p class="small dimmer" style="margin:10px 0 0">Le nombre dans le cercle = chances sur 100 de hausse à l\'horizon indiqué (ce n\'est pas une hausse en %). Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
-    var ag = t.agenda;
-    h += '<div class="grid2"><div class="card" id="agenda"><h2>Agenda économique (heure de Paris)</h2>';
-    if (ag && ag.today && ag.today.length) {
-      h += '<table>' + ag.today.map(function (e) {
-        return '<tr><td style="width:70px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
-      }).join("") + '</table>';
-    } else h += '<div class="empty"><span class="pill d-now">AUJOURD\'HUI</span> ' + (ag && ag.ok ? "Aucune annonce importante." : "Agenda indisponible ce matin.") + '</div>';
-    if (ag && ag.week && ag.week.length) {
-      h += '<h2 style="margin-top:18px">À venir cette semaine · fort impact</h2><table>' + ag.week.map(function (e) {
-        return '<tr><td style="width:120px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel) + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
-      }).join("") + '</table>';
-    } else if (ag && ag.tomorrow && ag.tomorrow.length) h += '<p class="small muted">Demain : ' + ag.tomorrow.map(function (e) { return esc(e.time) + " " + flag(e) + " " + esc(e.title); }).join(" · ") + '</p>';
-    var er = t.earnings;
-    if (er && ((er.today || []).length || (er.week || []).length)) {
-      h += '<h2 style="margin-top:18px">Résultats d\'entreprises</h2>';
-      h += er.today.concat(er.week).map(function (e) {
-        var now = er.today.indexOf(e) >= 0;
-        return '<a class="kv" href="#/v/' + encodeURIComponent(e.sym) + '"><span style="color:var(--text)">' + flagSym(e.sym) + esc(e.name) + '</span><span class="pill ' + (now ? "d-now" : "d-soon") + '">' + (now ? "AUJOURD'HUI" : esc(dfr(e.date)).toUpperCase() + (e.estimate ? "*" : "")) + '</span></a>';
-      }).join("") + '<p class="small dimmer" style="margin:8px 0 0">Vert = aujourd\'hui · orange = dans les prochains jours' + (er.week.some(function (e) { return e.estimate; }) ? " · * date estimée" : "") + '</p>';
-    }
-    h += '</div><div class="card"><h2>Contexte de marché</h2>';
-    if (t.context && t.context.length) h += '<table><tr><th></th><th class="r">NIVEAU</th><th class="r">VEILLE</th><th class="r">1 MOIS</th></tr>' + t.context.map(function (c) {
+    var sm = {}; (t.summary || []).forEach(function (x) { sm[x.sym] = x; });
+    t.picks.forEach(function (s) {
+      var a = D.stocks[s]; if (!a) return;
+      var x = sm[s], pk = "";
+      if (x) {
+        var c = x.ctx, col = c ? (c.tone === "positif" ? "up" : c.tone === "négatif" ? "down" : "muted") : "";
+        pk = '<div class="pk">' + esc(String(x.text || "").replace(/^[^.]*hausse\.\s*/, "")) +
+          (c ? '<div class="pk-n"><span class="' + col + '" style="font-weight:600">' + (c.tone === "positif" ? "▲ " : c.tone === "négatif" ? "▼ " : "● ") + esc(c.verdict) + '</span> · <a href="' + esc(c.link) + '" target="_blank" rel="noopener">' + esc(c.title) + '</a>' + (c.source ? ' <span class="dimmer">' + esc(c.source) + '</span>' : '') + '</div>'
+            : '<div class="pk-n dimmer">Pas d\'actu marquante : signal uniquement technique.</div>') + '</div>';
+      }
+      h += '<div class="pick">' + stockRow(a, a.plan.h) + pk + '</div>';
+    });
+    h += '<p class="small dimmer" style="margin:12px 0 0">Le nombre dans la case = chances sur 100 de hausse à l\'horizon indiqué (ce n\'est pas une hausse en %). Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
+
+    // ---- 2. Marches de la veille ----
+    var mv = t.movers, hasMv = mv && ((mv.up || []).length || (mv.down || []).length);
+    h += '<div class="sec">Marchés · séance d\'hier</div><div class="grid2"><div><div class="card"><h2>Contexte de marché</h2>';
+    if (t.context && t.context.length) h += '<table class="etf"><tr><th></th><th class="r">NIVEAU</th><th class="r">VEILLE</th><th class="r">1 MOIS</th></tr>' + t.context.map(function (c) {
       var vc = c.sym === "^VIX" ? (c.chg <= 0 ? "up" : "down") : cls(c.chg);
-      return '<tr><td>' + esc(c.label) + '</td><td class="r mono">' + f2(c.last) + '</td><td class="r ' + vc + '">' + sp(c.chg) + '</td><td class="r muted">' + sp(c.m1, 1) + '</td></tr>';
+      return '<tr><td>' + esc(c.label) + '</td><td class="r">' + f2(c.last) + '</td><td class="r ' + vc + '">' + sp(c.chg) + '</td><td class="r muted">' + sp(c.m1, 1) + '</td></tr>';
     }).join("") + '</table>'; else h += '<div class="empty">Indisponible.</div>';
-    if (t.movers) {
-      h += '<h2 style="margin-top:18px">Palmarès d\'hier · actions suivies</h2><div class="grid2" style="gap:6px">' +
-        '<div>' + (t.movers.up || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="up" style="white-space:nowrap;margin-left:6px">' + sp(m.chg) + '</span></a>'; }).join("") + '</div>' +
-        '<div>' + (t.movers.down || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="down" style="white-space:nowrap;margin-left:6px">' + sp(m.chg) + '</span></a>'; }).join("") + '</div></div>';
+    h += '</div>';
+    if (hasMv) {
+      var li = function (m, c) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="' + c + '" style="white-space:nowrap">' + sp(m.chg) + '</span></a>'; };
+      h += '<div class="card"><h2>Palmarès d\'hier · actions suivies</h2><div class="grid2 tight">' +
+        '<div><div class="lab up">HAUSSES</div>' + (mv.up || []).map(function (m) { return li(m, "up"); }).join("") + '</div>' +
+        '<div><div class="lab down">BAISSES</div>' + (mv.down || []).map(function (m) { return li(m, "down"); }).join("") + '</div></div></div>';
     }
+    h += '</div><div class="card"><h2>ETF principaux · classés sur la veille</h2>';
     if (t.etfs && t.etfs.length) {
-      var et = t.etfs.slice().sort(function (a, b) { return (b.chg || 0) - (a.chg || 0); });
-      h += '<h2 style="margin-top:18px">ETF principaux · classés sur la veille</h2><table class="etf"><tr><th></th><th class="r">VEILLE</th><th class="r">1 SEM.</th><th class="r">1 MOIS</th><th class="r">' + new Date().getFullYear() + '</th></tr>' + et.map(function (e, i) {
-        var tag = i === 0 && e.chg > 0 ? ' <span class="pill d-now" style="font-size:9.5px">TOP</span>' : i === et.length - 1 && e.chg < 0 ? ' <span class="pill" style="font-size:9.5px;color:var(--down);border-color:var(--down)">FLOP</span>' : '';
-        return '<tr><td>' + esc(e.label) + tag + '<div class="small dimmer">' + esc(e.issuer) + ' · ' + esc(e.sym.replace(/\.(PA|DE|AS)$/, "")) + '</div></td><td class="r ' + cls(e.chg) + '">' + sp(e.chg) + '</td><td class="r ' + cls(e.w1) + '">' + sp(e.w1, 1) + '</td><td class="r muted">' + sp(e.m1, 1) + '</td><td class="r muted">' + sp(e.ytd, 1) + '</td></tr>';
-      }).join("") + '</table><p class="small dimmer" style="margin:8px 0 0">Performances passées, cours de clôture ; colonne ' + new Date().getFullYear() + ' = depuis le 1er janvier. Un ETF réplique un indice entier : moins risqué qu\'une action seule.</p>';
-    }
+      var et = t.etfs.slice().sort(function (a, b) { return (b.chg || 0) - (a.chg || 0); }), yr = new Date().getFullYear();
+      h += '<table class="etf etfw"><tr><th></th><th class="r">VEILLE</th><th class="r">1 SEM.</th><th class="r">1 MOIS</th><th class="r">' + yr + '</th></tr>' + et.map(function (e, i) {
+        var tag = i === 0 && e.chg > 0 ? ' <span class="tag t-up">TOP</span>' : i === et.length - 1 && e.chg < 0 ? ' <span class="tag t-down">FLOP</span>' : '';
+        return '<tr><td><span style="white-space:nowrap">' + esc(e.label) + '</span>' + tag + '<div class="small dimmer">' + esc(e.issuer) + ' · ' + esc(e.sym.replace(/\.(PA|DE|AS)$/, "")) + '</div></td><td class="r ' + cls(e.chg) + '">' + sp(e.chg) + '</td><td class="r ' + cls(e.w1) + '">' + sp(e.w1, 1) + '</td><td class="r muted">' + sp(e.m1, 1) + '</td><td class="r muted">' + sp(e.ytd, 1) + '</td></tr>';
+      }).join("") + '</table><p class="small dimmer" style="margin:10px 0 0">Cours de clôture ; colonne ' + yr + ' = depuis le 1er janvier. Un ETF réplique un indice entier : moins risqué qu\'une action seule.</p>';
+    } else h += '<div class="empty">Disponible dès la prochaine mise à jour du matin.</div>';
     h += '</div></div>';
     if (t.avoid.length) { h += '<div class="card"><h2>À éviter / alléger</h2>'; t.avoid.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); }); h += '</div>'; }
-    h += '<div class="card" id="actus"><h2>Actualités à surveiller</h2>' + newsList(t.news) + '<p class="small dimmer">Dernières 36 heures. Tonalité estimée automatiquement à partir du titre.</p></div>';
+
+    // ---- 3. Agenda ----
+    var ag = t.agenda, hasWeek = ag && ((ag.week || []).length || (ag.tomorrow || []).length);
+    h += '<div class="sec">Agenda</div><div class="' + (hasWeek ? "grid2" : "") + '"><div class="card" id="agenda"><h2>Aujourd\'hui · heure de Paris</h2>';
+    if (ag && ag.today && ag.today.length) {
+      h += '<table>' + ag.today.map(function (e) {
+        return '<tr><td style="width:64px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
+      }).join("") + '</table>';
+    } else h += '<div class="empty">' + (ag && ag.ok ? "Aucune annonce importante aujourd'hui." : "Agenda indisponible ce matin.") + '</div>';
+    h += '</div>';
+    if (hasWeek) {
+      h += '<div class="card"><h2>' + ((ag.week || []).length ? 'Cette semaine · fort impact' : 'Demain') + '</h2><table>' + ((ag.week || []).length ? ag.week : ag.tomorrow).map(function (e) {
+        return '<tr><td style="width:112px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel || "demain") + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
+      }).join("") + '</table></div>';
+    }
+    h += '</div>';
+    var er = t.earnings;
+    if (er && ((er.today || []).length || (er.week || []).length)) {
+      var groups = [], gi = {};
+      er.today.map(function (e) { return [e, "Aujourd'hui", true]; }).concat(er.week.map(function (e) { return [e, dfr(e.date), false]; })).forEach(function (x) {
+        if (!(x[1] in gi)) { gi[x[1]] = groups.length; groups.push({ l: x[1], now: x[2], list: [] }); }
+        groups[gi[x[1]]].list.push(x[0]);
+      });
+      h += '<div class="card"><h2>Résultats d\'entreprises</h2>' + groups.map(function (g) {
+        return '<div class="eday"><div><span class="pill ' + (g.now ? "d-now" : "d-soon") + '">' + esc(g.l).toUpperCase() + '</span></div><div>' + g.list.map(function (e) {
+          return '<a class="ech" href="#/v/' + encodeURIComponent(e.sym) + '">' + flagSym(e.sym) + esc(e.name) + (e.estimate ? '*' : '') + '</a>';
+        }).join("") + '</div></div>';
+      }).join("") + (er.week.some(function (e) { return e.estimate; }) ? '<p class="small dimmer" style="margin:8px 0 0">* date estimée</p>' : '') + '</div>';
+    }
+
+    // ---- 4. Actualites ----
+    h += '<div class="sec">Actualités</div><div class="card" id="actus"><h2>À surveiller</h2>' + newsList(t.news) + '<p class="small dimmer">Dernières 36 heures. Tonalité estimée automatiquement à partir du titre.</p></div>';
     return h;
   }
 
