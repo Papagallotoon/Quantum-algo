@@ -1,19 +1,12 @@
-*Quantum Algo – mardi 3 novembre 2026*
+*Quantum Algo – mercredi 4 novembre 2026*
 
-• CAC 40 à 8 041 points : −0,1 % à la dernière séance, +2,6 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 5 annonce(s) à fort impact aujourd'hui, la première à 04:30 (Cash Rate, Australie) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : AMD, Amgen, Pfizer, Booking, Shopify, Bayer, Zalando, Intesa Sanpaolo, Ferrari.
+• CAC 40 à 8 203 points : +2,3 % à la dernière séance, +4,3 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Uber, Arm Holdings, Qualcomm, McDonald's, BMW, Continental, Fresenius, Heidelberg Materials, Qiagen, Vonovia, Tenaris, NTT, Mitsubishi Corp, Itochu.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-04:30 🇦🇺 Cash Rate (prévu 4.85%)
-04:30 🇦🇺 RBA Monetary Policy Statement
-04:30 🇦🇺 RBA Rate Statement
-05:30 🇦🇺 RBA Press Conference
-16:16 🇺🇸 Congressional Elections
-
-*Résultats aujourd'hui* : AMD, Amgen, Pfizer, Booking, Shopify, Bayer, Zalando, Intesa Sanpaolo, Ferrari
+*Résultats aujourd'hui* : Uber, Arm Holdings, Qualcomm, McDonald's, BMW, Continental, Fresenius, Heidelberg Materials, Qiagen, Vonovia, Tenaris, NTT, Mitsubishi Corp, Itochu
 
 *À venir (fort impact)*
 jeu. 05/11 13:00 🇬🇧 BOE Monetary Policy Report
@@ -24,30 +17,31 @@ jeu. 05/11 13:30 🇬🇧 BOE Gov Bailey Speaks
 ven. 06/11 14:30 🇨🇦 Employment Change
 
 *Opportunités*
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,1 %
-  entrée 3274,00-3302,42, stop 2989,84, objectif 3830,01, revoir le 04/02
+• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,0 %
+  entrée 3179,00-3207,42, stop 2894,84, objectif 3692,59, revoir le 04/02
   ⚠ résultats pendant la position
-• Mediobanca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
-  entrée 26,04-26,22, stop 24,27, objectif 29,61, revoir le 05/02
 • BPER Banca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,6 %
-  entrée 13,28-13,37, stop 12,36, objectif 14,92, revoir le 05/02
+  entrée 13,32-13,42, stop 12,31, objectif 15,17, revoir le 08/02
   ⚠ résultats pendant la position
-• Shopify – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +7,0 %
-  entrée 141,62-147,47, stop 120,74, objectif 184,09, revoir le 29/01
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,5 %
-  entrée 250,97-253,62, stop 224,51, objectif 305,07, revoir le 05/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,3 %
+  entrée 241,80-244,42, stop 215,59, objectif 292,83, revoir le 08/02
+• Mizuho – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
+  entrée 7659,00-7739,42, stop 6854,85, objectif 9015,82, revoir le 04/02
+  ⚠ résultats pendant la position
+• MTU Aero Engines – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,1 %
+  entrée 350,20-353,89, stop 313,31, objectif 408,06, revoir le 08/02
 
 *À lire*
-• Wall Street ouvre sans direction claire, le secteur technologique retrouve de l’élan (La Presse)
-• Wall Street ouvre dans le désordre en attendant les résultats des élections de mi-mandat (Zonebourse Suisse)
-• Wall Street ouvre sans direction et se tourne vers les élections américaines (Zonebourse Suisse)
+• Wall Street en hausse après les "Midterms" (BFM)
+• ANALYSTE : Wall Street salue le résultat des élections mais s'interroge sur la régulation de l'IA (Zonebourse Suisse)
+• Wall Street ouvre en forte hausse après la victoire démocrate aux élections (Zonebourse Suisse)
 
-*🎓 Question du jour* : Dans un DCF, quelle part de la valeur représente souvent la valeur terminale ?
-A. 5 à 10 %
-B. 20 à 30 %
-C. 60 à 80 %
-D. 100 %
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q55
+*🎓 Question du jour* : Une entreprise crée de la valeur quand…
+A. son bénéfice augmente
+B. son ROCE dépasse durablement son WACC
+C. elle rachète ses actions
+D. son cours monte
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q56
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 

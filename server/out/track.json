@@ -1,26 +1,27 @@
 {
- "updatedAt": "2026-11-03T15:47:54.630Z",
+ "updatedAt": "2026-11-04T15:56:56.729Z",
  "since": "10/10/2026",
  "byHorizon": {
   "1J": {
-   "n": 5351,
+   "n": 5586,
    "hit": 0,
    "nConf": 0,
    "hitConf": 0,
    "brier": 0.25
   },
   "1S": {
-   "n": 3315,
+   "n": 3550,
    "hit": 0,
    "nConf": 0,
    "hitConf": 0,
    "brier": 0.25
   }
  },
- "pending": 10806,
+ "pending": 11276,
  "picks": [],
  "picksSummary": null,
  "changes": [
+  "04/11 - 1M : nouvelle configuration adoptee (ridge alpha=0.5), 56.5 % de bonnes directions sur 120 seances test",
   "30/10 - 1J : nouvelle configuration adoptee (vote a poids egaux), 49.2 % de bonnes directions sur 120 seances test",
   "28/10 - 1J : nouvelle configuration adoptee (ridge alpha=0.5), 50.0 % de bonnes directions sur 120 seances test",
   "26/10 - 1M : nouvelle configuration adoptee (vote a poids egaux), 50.0 % de bonnes directions sur 120 seances test",
