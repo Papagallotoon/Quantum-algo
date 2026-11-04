@@ -160,6 +160,7 @@ for (const it of items) {
 const active = new Set(["ENTRER", "ATTENDRE_REPLI", "ATTENDRE_CONFIRMATION"]);
 // ---- details par valeur (perf, niveaux, moteurs du signal) ----
 const pct = (a, b) => (b ? (a / b - 1) * 100 : null);
+const HL_FR = { "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" };
 function details(r) {
   const C = r.it.close, H = r.it.c.high, L = r.it.c.low, i = r.i, T = r.it.time;
   const yearStart = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
@@ -193,7 +194,7 @@ const avoid = rows.filter((r) => r.plan.action === "EVITER").sort((a, b) => a.ra
 const watch = (config.watchlist || []).map((s) => rows.find((r) => r.it.sym === s)).filter(Boolean).map(toPick);
 // plus forts mouvements de la derniere seance dans l'univers suivi
 const moves = rows.map((r) => ({ sym: r.it.sym, name: names[r.it.sym], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]) })).filter((m) => Number.isFinite(m.chg)).sort((a, b) => b.chg - a.chg);
-const movers = { up: moves.slice(0, 3), down: moves.slice(-3).reverse() };
+const movers = { up: moves.slice(0, 5).filter((m) => m.chg > 0), down: moves.slice(-5).reverse().filter((m) => m.chg < 0) };
 const pickSet = new Set(picks.map((p) => p.sym + "|" + p.h));
 
 // une ligne de journal par valeur et par horizon (dedoublonnee si relance le meme jour)
@@ -250,6 +251,14 @@ const CONTEXT = [
   ["^STOXX50E", "Euro Stoxx 50"], ["EURUSD=X", "Euro / dollar"],
   ["BZ=F", "Pétrole Brent"], ["GC=F", "Or"], ["^TNX", "Taux US 10 ans"], ["BTC-USD", "Bitcoin"],
 ];
+// ETF les plus suivis (cotes a Paris / Francfort / Amsterdam et aux Etats-Unis)
+const ETFS = [
+  ["CW8.PA", "MSCI World", "Amundi"], ["VWCE.DE", "FTSE All-World", "Vanguard"], ["ESE.PA", "S&P 500", "BNP Paribas"],
+  ["PUST.PA", "Nasdaq-100", "Amundi"], ["CAC.PA", "CAC 40", "Amundi"], ["EXS1.DE", "DAX", "iShares"],
+  ["PAEEM.PA", "Pays émergents", "Amundi"], ["SPY", "S&P 500 (US)", "SPDR"], ["QQQ", "Nasdaq-100 (US)", "Invesco"],
+  ["SMH", "Semi-conducteurs", "VanEck"], ["GLD", "Or", "SPDR"], ["TLT", "Obligations US 20 ans", "iShares"],
+];
+let etfs = [];
 let vixCtx = null;
 let agenda = { today: [], tomorrow: [] }, fundamentals = {}, context = [], marketNews = [], earnings = { today: [], week: [] };
 if (!FAKE) {
@@ -261,6 +270,16 @@ if (!FAKE) {
       const c = await fetchCandles(sym, "3mo");
       const n = c.close.length - 1;
       context.push({ sym, label, last: c.close[n], chg: pct(c.close[n], c.close[n - 1]), m1: pct(c.close[n], c.close[Math.max(0, n - 21)]) });
+    } catch (e) { /* source facultative */ }
+  }
+  const y0s = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
+  for (const [sym, label, issuer] of ETFS) {
+    try {
+      const c = await fetchCandles(sym, "1y");
+      const C = c.close, n = C.length - 1;
+      if (n < 25) continue;
+      let y = c.time.findIndex((t) => t >= y0s); if (y < 1) y = 1;
+      etfs.push({ sym, label, issuer, last: C[n], chg: pct(C[n], C[n - 1]), w1: pct(C[n], C[n - 5]), m1: pct(C[n], C[n - 21]), ytd: pct(C[n], C[y - 1]) });
     } catch (e) { /* source facultative */ }
   }
   // le VIX ne figure plus dans le tableau, mais sert encore a "L'essentiel"
@@ -302,6 +321,27 @@ if (!FAKE) {
     p.day = dayPlan(bySym[p.sym].c, { earnings: f?.earnings || null, news: p.news || null });
   }
 }
+// ---- les pepites du jour en bref : pourquoi acheter, et l'actu qui va avec ----
+const norm = (x) => String(x || "").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+const GENERIC = new Set(["group", "groupe", "holding", "holdings", "bank", "banca", "banco", "the", "and", "inc", "corp", "company", "financial", "industries", "international", "motor", "energy"]);
+function matchNews(p) {
+  const words = norm((NEWS_NAMES[p.sym] || p.name) + " " + p.name).split(/[^a-z0-9]+/).filter((w) => w.length >= 3 && !GENERIC.has(w));
+  const root = norm(p.sym.split(".")[0]);
+  const ok = (p.news || []).filter((n) => {
+    const t = norm(n.title);
+    return words.some((w) => t.includes(w)) || (root.length >= 3 && /[a-z]/.test(root) && new RegExp("\\b" + root + "\\b").test(t));
+  }).filter((n) => !n.time || Date.now() - n.time < 7 * 864e5);
+  return ok[0] || null;
+}
+const fpc = (v) => Math.round(v * 100) + " %";
+for (const p of picks) {
+  const n = matchNews(p);
+  p.ctx = n ? { title: n.title, link: n.link, source: n.source, tone: n.tone,
+    verdict: n.tone === "positif" ? "L'actu va dans le même sens" : n.tone === "négatif" ? "Attention, l'actu va contre le signal" : "Actu à lire avant d'acheter" } : null;
+  const why = (p.why || [])[0] || "";
+  p.summary = `${HL_FR[p.h]} · ${fpc(p.pUp)} de chances de hausse. ${p.start}. ${why}`.replace(/\.\s*\./g, ".").trim();
+}
+const summary = picks.map((p) => ({ sym: p.sym, name: p.name, h: p.h, action: p.action, text: p.summary, ctx: p.ctx }));
 const vix = vixCtx;
 const mood = !vix ? null : vix.last < 15 ? "calme" : vix.last < 20 ? "normal" : vix.last < 30 ? "nerveux" : "en stress";
 const brief = [];
@@ -321,7 +361,7 @@ const upIdx = indices.filter((x) => x.p1M >= 0.53).length, dnIdx = indices.filte
 brief.push(upIdx > dnIdx ? `Les indices penchent légèrement à la hausse à 1 mois (${upIdx} sur ${indices.length}).` : dnIdx > upIdx ? `Les indices penchent à la baisse à 1 mois (${dnIdx} sur ${indices.length}).` : "Pas de tendance nette des indices à 1 mois.");
 brief.push(picks.length ? `${picks.length} opportunité(s) retenue(s), surtout sur ${[...new Set(picks.map((p) => p.h))].map((h) => ({ "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" })[h]).join(" / ")}.` : "Aucune opportunité suffisamment solide aujourd'hui.");
 
-const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, news: marketNews };
+const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, etfs, summary, news: marketNews };
 
 // site public (GitHub Pages, dossier docs/) : memes informations que l'app
 const SITE_URL = (process.env.SITE_URL || config.siteUrl || "").replace(/\/?$/, "/");
@@ -345,7 +385,13 @@ try {
   const doy = Math.floor((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000);
   quizOfDay = L.quiz[doy % L.quiz.length];
 } catch (e) { /* facultatif */ }
-const letter = buildLetter({ quizOfDay, siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, failed: Object.keys(failed) });
+const letterArgs = { quizOfDay, siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, etfs, summary, failed: Object.keys(failed) };
+let letter = buildLetter(letterArgs);
+// Gmail coupe les messages au-dela d'environ 102 Ko : on retire d'abord les blocs secondaires
+const kb = (l) => Buffer.byteLength(l.html.replace(/\s+/g, " ")) / 1024;
+if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, etfs: [] });
+if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, etfs: [], summary: [] });
+log(`lettre : ${kb(letter).toFixed(0)} Ko`);
 fs.writeFileSync(path.join(OUT, "newsletter.html"), letter.html);
 fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);
 

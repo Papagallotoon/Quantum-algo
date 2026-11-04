@@ -157,6 +157,7 @@
   .progress { height: 6px; background: var(--card2); border-radius: 3px; overflow: hidden; margin: 10px 0 4px; }
   .progress div { height: 6px; background: var(--brand); }
   .loading { padding: 80px 0; text-align: center; color: var(--dim); }
+  table.etf td.r { white-space: nowrap; font-size: 12.5px; padding-left: 6px; }
 </style>
 </head>
 <body>
@@ -460,6 +461,15 @@
     h += alertsToday();
     h += '<div class="card" id="opportunites"><h2>Opportunités du jour</h2>';
     if (!t.picks.length) h += '<div class="empty">Aucune valeur ne présente un avantage suffisant aujourd\'hui.</div>';
+    if (t.summary && t.summary.length) {
+      h += '<div style="margin:2px 0 14px;padding:12px 14px;border-radius:14px;background:var(--card2)"><div class="small dimmer" style="letter-spacing:.08em;margin-bottom:6px">LES PÉPITES DU JOUR EN BREF</div>' +
+        t.summary.map(function (x) {
+          var c = x.ctx, col = c ? (c.tone === "positif" ? "up" : c.tone === "négatif" ? "down" : "muted") : "";
+          return '<div style="padding:7px 0;border-top:1px solid var(--line);font-size:14px;line-height:1.5"><a href="#/v/' + encodeURIComponent(x.sym) + '" style="font-weight:700;color:var(--text)">' + flagSym(x.sym) + esc(x.name) + '</a> <span class="muted">' + esc(x.text) + '</span>' +
+            (c ? '<div class="small" style="margin-top:3px"><span class="' + col + '" style="font-weight:600">' + (c.tone === "positif" ? "▲ " : c.tone === "négatif" ? "▼ " : "● ") + esc(c.verdict) + ' :</span> <a href="' + esc(c.link) + '" target="_blank" rel="noopener" style="color:var(--text)">« ' + esc(c.title) + ' »</a>' + (c.source ? ' <span class="dimmer">' + esc(c.source) + '</span>' : '') + '</div>'
+              : '<div class="small dimmer" style="margin-top:3px">Pas d\'actu marquante : signal uniquement technique.</div>') + '</div>';
+        }).join("") + '</div>';
+    }
     t.picks.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); });
     h += '<p class="small dimmer" style="margin:10px 0 0">Le nombre dans le cercle = chances sur 100 de hausse à l\'horizon indiqué (ce n\'est pas une hausse en %). Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
     var ag = t.agenda;
@@ -488,9 +498,16 @@
       return '<tr><td>' + esc(c.label) + '</td><td class="r mono">' + f2(c.last) + '</td><td class="r ' + vc + '">' + sp(c.chg) + '</td><td class="r muted">' + sp(c.m1, 1) + '</td></tr>';
     }).join("") + '</table>'; else h += '<div class="empty">Indisponible.</div>';
     if (t.movers) {
-      h += '<h2 style="margin-top:18px">Plus forts mouvements d\'hier</h2><div class="grid2" style="gap:6px">' +
-        '<div>' + (t.movers.up || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="up">' + sp(m.chg) + '</span></a>'; }).join("") + '</div>' +
-        '<div>' + (t.movers.down || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="down">' + sp(m.chg) + '</span></a>'; }).join("") + '</div></div>';
+      h += '<h2 style="margin-top:18px">Palmarès d\'hier · actions suivies</h2><div class="grid2" style="gap:6px">' +
+        '<div>' + (t.movers.up || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="up" style="white-space:nowrap;margin-left:6px">' + sp(m.chg) + '</span></a>'; }).join("") + '</div>' +
+        '<div>' + (t.movers.down || []).map(function (m) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="down" style="white-space:nowrap;margin-left:6px">' + sp(m.chg) + '</span></a>'; }).join("") + '</div></div>';
+    }
+    if (t.etfs && t.etfs.length) {
+      var et = t.etfs.slice().sort(function (a, b) { return (b.chg || 0) - (a.chg || 0); });
+      h += '<h2 style="margin-top:18px">ETF principaux · classés sur la veille</h2><table class="etf"><tr><th></th><th class="r">VEILLE</th><th class="r">1 SEM.</th><th class="r">1 MOIS</th><th class="r">' + new Date().getFullYear() + '</th></tr>' + et.map(function (e, i) {
+        var tag = i === 0 && e.chg > 0 ? ' <span class="pill d-now" style="font-size:9.5px">TOP</span>' : i === et.length - 1 && e.chg < 0 ? ' <span class="pill" style="font-size:9.5px;color:var(--down);border-color:var(--down)">FLOP</span>' : '';
+        return '<tr><td>' + esc(e.label) + tag + '<div class="small dimmer">' + esc(e.issuer) + ' · ' + esc(e.sym.replace(/\.(PA|DE|AS)$/, "")) + '</div></td><td class="r ' + cls(e.chg) + '">' + sp(e.chg) + '</td><td class="r ' + cls(e.w1) + '">' + sp(e.w1, 1) + '</td><td class="r muted">' + sp(e.m1, 1) + '</td><td class="r muted">' + sp(e.ytd, 1) + '</td></tr>';
+      }).join("") + '</table><p class="small dimmer" style="margin:8px 0 0">Performances passées, cours de clôture ; colonne ' + new Date().getFullYear() + ' = depuis le 1er janvier. Un ETF réplique un indice entier : moins risqué qu\'une action seule.</p>';
     }
     h += '</div></div>';
     if (t.avoid.length) { h += '<div class="card"><h2>À éviter / alléger</h2>'; t.avoid.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); }); h += '</div>'; }

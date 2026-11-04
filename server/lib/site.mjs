@@ -83,7 +83,7 @@ export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, ind
   const data = {
     date: iso, dateLabel, generatedAt: new Date().toISOString(), subscribeApi: subscribeApi || null,
     model: { version: model.version, source: model.source, summary: model.summary, oos: horizonsInfo, changes: track.changes || [] },
-    today: { brief: signals.brief || [], agenda: signals.agenda || null, earnings: signals.earnings || null, context: signals.context || [], movers: signals.movers || null, news: signals.news || [], picks: (signals.picks || []).map((p) => p.sym), avoid: (signals.avoid || []).map((p) => p.sym) },
+    today: { brief: signals.brief || [], agenda: signals.agenda || null, earnings: signals.earnings || null, context: signals.context || [], movers: signals.movers || null, etfs: signals.etfs || [], summary: signals.summary || [], news: signals.news || [], picks: (signals.picks || []).map((p) => p.sym), avoid: (signals.avoid || []).map((p) => p.sym) },
     track, indices, stocks,
   };
   fs.writeFileSync(path.join(outDir, "data.json"), JSON.stringify(data));
