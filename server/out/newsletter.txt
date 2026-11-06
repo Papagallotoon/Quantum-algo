@@ -1,47 +1,44 @@
-*Quantum Algo – mercredi 4 novembre 2026*
+*Quantum Algo – vendredi 6 novembre 2026*
 
-• CAC 40 à 8 203 points : +2,3 % à la dernière séance, +4,3 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Uber, Arm Holdings, Qualcomm, McDonald's, BMW, Continental, Fresenius, Heidelberg Materials, Qiagen, Vonovia, Tenaris, NTT, Mitsubishi Corp, Itochu.
+• CAC 40 à 8 205 points : +0,3 % à la dernière séance, +5,6 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• 6 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Employment Change, Canada) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Daimler Truck, KDDI, Mitsubishi Heavy.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : Uber, Arm Holdings, Qualcomm, McDonald's, BMW, Continental, Fresenius, Heidelberg Materials, Qiagen, Vonovia, Tenaris, NTT, Mitsubishi Corp, Itochu
+*Agenda (fort impact)*
+14:30 🇨🇦 Employment Change (prévu 14.6K)
+14:30 🇨🇦 Taux de chômage (prévu 6.5%)
+14:30 🇺🇸 Salaire horaire moyen (sur un mois) (prévu 0.3%)
+14:30 🇺🇸 Créations d'emplois non agricoles (NFP) (prévu 65K)
+14:30 🇺🇸 Taux de chômage (prévu 4.2%)
+17:00 🇯🇵 BOJ Gov Ueda Speaks
 
-*À venir (fort impact)*
-jeu. 05/11 13:00 🇬🇧 BOE Monetary Policy Report
-jeu. 05/11 13:00 🇬🇧 Monetary Policy Summary
-jeu. 05/11 13:00 🇬🇧 MPC Official Bank Rate Votes
-jeu. 05/11 13:00 🇬🇧 Décision de taux de la Banque d'Angleterre
-jeu. 05/11 13:30 🇬🇧 BOE Gov Bailey Speaks
-ven. 06/11 14:30 🇨🇦 Employment Change
+*Résultats aujourd'hui* : Daimler Truck, KDDI, Mitsubishi Heavy
 
 *Opportunités*
-• Sumitomo Mitsui – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,0 %
-  entrée 3179,00-3207,42, stop 2894,84, objectif 3692,59, revoir le 04/02
-  ⚠ résultats pendant la position
-• BPER Banca – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,6 %
-  entrée 13,32-13,42, stop 12,31, objectif 15,17, revoir le 08/02
-  ⚠ résultats pendant la position
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,3 %
-  entrée 241,80-244,42, stop 215,59, objectif 292,83, revoir le 08/02
-• Mizuho – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,6 %
-  entrée 7659,00-7739,42, stop 6854,85, objectif 9015,82, revoir le 04/02
-  ⚠ résultats pendant la position
-• MTU Aero Engines – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +4,1 %
-  entrée 350,20-353,89, stop 313,31, objectif 408,06, revoir le 08/02
+• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 415,19-421,78, stop 392,12, objectif 460,82, revoir le 08/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,2 %
+  entrée 241,80-244,49, stop 214,94, objectif 293,41, revoir le 08/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
+  entrée 175,43-177,63, stop 167,75, objectif 190,46, revoir le 08/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
+  entrée 80,63-81,95, stop 75,93, objectif 90,03, revoir le 01/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
+  entrée 197,48-201,15, stop 184,40, objectif 223,65, revoir le 01/02
 
 *À lire*
-• Wall Street en hausse après les "Midterms" (BFM)
-• ANALYSTE : Wall Street salue le résultat des élections mais s'interroge sur la régulation de l'IA (Zonebourse Suisse)
-• Wall Street ouvre en forte hausse après la victoire démocrate aux élections (Zonebourse Suisse)
+• PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris (Boursorama)
+• VINCI Cours Action DG, Cotation Bourse Euronext Paris (Boursorama)
+• CREDIT AGRICOLE SA Cours Action ACA, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Une entreprise crée de la valeur quand…
-A. son bénéfice augmente
-B. son ROCE dépasse durablement son WACC
-C. elle rachète ses actions
-D. son cours monte
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q56
+*🎓 Question du jour* : Signal d'alerte comptable typique :
+A. des créances clients qui grossissent plus vite que les ventes
+B. un dividende stable
+C. un ROCE élevé
+D. une dette en baisse
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q58
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
