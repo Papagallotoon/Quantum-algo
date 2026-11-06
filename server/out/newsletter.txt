@@ -1,6 +1,6 @@
 *Quantum Algo – vendredi 6 novembre 2026*
 
-• CAC 40 à 8 205 points : +0,3 % à la dernière séance, +5,6 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 135 points : −0,9 % à la dernière séance, +5,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • 6 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Employment Change, Canada) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : Daimler Truck, KDDI, Mitsubishi Heavy.
 • Pas de tendance nette des indices à 1 mois.
@@ -17,21 +17,21 @@
 *Résultats aujourd'hui* : Daimler Truck, KDDI, Mitsubishi Heavy
 
 *Opportunités*
-• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 415,19-421,78, stop 392,12, objectif 460,82, revoir le 08/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +5,2 %
-  entrée 241,80-244,49, stop 214,94, objectif 293,41, revoir le 08/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
-  entrée 175,43-177,63, stop 167,75, objectif 190,46, revoir le 08/02
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
-  entrée 80,63-81,95, stop 75,93, objectif 90,03, revoir le 01/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
-  entrée 197,48-201,15, stop 184,40, objectif 223,65, revoir le 01/02
+• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 421,49-428,48, stop 397,04, objectif 468,44, revoir le 10/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
+  entrée 230,35-233,05, stop 203,38, objectif 276,42, revoir le 10/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
+  entrée 177,77-180,03, stop 169,86, objectif 192,59, revoir le 10/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
+  entrée 77,80-79,28, stop 72,49, objectif 88,42, revoir le 03/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 93,17-93,94, stop 85,52, objectif 104,65, revoir le 10/02
 
 *À lire*
-• PERNOD RICARD Cours Action RI, Cotation Bourse Euronext Paris (Boursorama)
-• VINCI Cours Action DG, Cotation Bourse Euronext Paris (Boursorama)
-• CREDIT AGRICOLE SA Cours Action ACA, Cotation Bourse Euronext Paris (Boursorama)
+• Wall Street tente un rebond, mais reste loin de compenser la déroute de jeudi (Zonebourse Suisse)
+• Chances d'une hausse des taux par la Fed bondissent après le rapport d'octobre sur l'emploi (Invezz)
+• Après la déroute, les entreprises d'Elon Musk rebondissent à Wall Street (La Libre.be)
 
 *🎓 Question du jour* : Signal d'alerte comptable typique :
 A. des créances clients qui grossissent plus vite que les ventes
