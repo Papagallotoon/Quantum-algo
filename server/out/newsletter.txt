@@ -1,44 +1,36 @@
-*Quantum Algo – vendredi 6 novembre 2026*
+*Quantum Algo – samedi 7 novembre 2026*
 
-• CAC 40 à 8 135 points : −0,9 % à la dernière séance, +5,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 6 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Employment Change, Canada) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Daimler Truck, KDDI, Mitsubishi Heavy.
+• CAC 40 à 8 139 points : −0,8 % à la dernière séance, +5,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Berkshire Hathaway.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-14:30 🇨🇦 Employment Change (prévu 14.6K)
-14:30 🇨🇦 Taux de chômage (prévu 6.5%)
-14:30 🇺🇸 Salaire horaire moyen (sur un mois) (prévu 0.3%)
-14:30 🇺🇸 Créations d'emplois non agricoles (NFP) (prévu 65K)
-14:30 🇺🇸 Taux de chômage (prévu 4.2%)
-17:00 🇯🇵 BOJ Gov Ueda Speaks
-
-*Résultats aujourd'hui* : Daimler Truck, KDDI, Mitsubishi Heavy
+*Résultats aujourd'hui* : Berkshire Hathaway
 
 *Opportunités*
 • L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 421,49-428,48, stop 397,04, objectif 468,44, revoir le 10/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,9 %
-  entrée 230,35-233,05, stop 203,38, objectif 276,42, revoir le 10/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
-  entrée 177,77-180,03, stop 169,86, objectif 192,59, revoir le 10/02
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
-  entrée 77,80-79,28, stop 72,49, objectif 88,42, revoir le 03/02
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 93,17-93,94, stop 85,52, objectif 104,65, revoir le 10/02
+  entrée 421,44-428,42, stop 396,99, objectif 468,08, revoir le 10/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,8 %
+  entrée 230,35-233,05, stop 203,38, objectif 274,90, revoir le 10/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 177,68-179,95, stop 169,77, objectif 193,19, revoir le 10/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
+  entrée 78,67-80,15, stop 73,36, objectif 89,29, revoir le 03/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 193,78-197,45, stop 180,66, objectif 220,02, revoir le 03/02
 
 *À lire*
-• Wall Street tente un rebond, mais reste loin de compenser la déroute de jeudi (Zonebourse Suisse)
-• Chances d'une hausse des taux par la Fed bondissent après le rapport d'octobre sur l'emploi (Invezz)
-• Après la déroute, les entreprises d'Elon Musk rebondissent à Wall Street (La Libre.be)
+• ALSTOM Cours Action ALO, Cotation Bourse Euronext Paris (Boursorama)
+• ORANGE Cours Action ORA, Cotation Bourse Euronext Paris (Boursorama)
+• EUTELSAT Cours Action ETL, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Signal d'alerte comptable typique :
-A. des créances clients qui grossissent plus vite que les ventes
-B. un dividende stable
-C. un ROCE élevé
-D. une dette en baisse
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q58
+*🎓 Question du jour* : Un ratio de Sharpe de 1,2 sur 10 ans indique…
+A. une stratégie très risquée
+B. un très bon rendement par unité de risque
+C. une perte
+D. un drawdown de 12 %
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q59
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
