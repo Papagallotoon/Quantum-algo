@@ -1,5 +1,5 @@
 {
- "version": "2026-11-07",
+ "version": "2026-11-08",
  "source": "learned",
  "features": [
   "sma20",
@@ -325,9 +325,9 @@
    }
   }
  },
- "createdAt": "2026-11-07T14:38:55.926Z",
+ "createdAt": "2026-11-08T14:44:27.445Z",
  "universe": 261,
- "summary": "Modèle ré-entraîné le 07/11 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
+ "summary": "Modèle ré-entraîné le 08/11 sur 261 valeurs et ~3 ans d'historique ; 0 amélioration(s) adoptée(s) aujourd'hui.",
  "report": {
   "1J": {
    "samples": 142744,
@@ -547,7 +547,7 @@
   }
  },
  "newsletter": {
-  "lastSent": "07/11/2026",
+  "lastSent": "08/11/2026",
   "channels": [
    "e-mail (SMTP)"
   ],
@@ -565,7 +565,7 @@
   "subscribers": 3,
   "subs": {
    "configured": true,
-   "at": "2026-11-07T14:39:31.965Z",
+   "at": "2026-11-08T14:45:00.566Z",
    "count": 3,
    "sameAsOwner": 0,
    "sent": 3,

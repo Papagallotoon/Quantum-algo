@@ -1,36 +1,41 @@
-*Quantum Algo – samedi 7 novembre 2026*
+*Quantum Algo – dimanche 8 novembre 2026*
 
 • CAC 40 à 8 139 points : −0,8 % à la dernière séance, +5,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Berkshire Hathaway.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : Berkshire Hathaway
+*À venir (fort impact)*
+mar. 10/11 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)
+mar. 10/11 14:30 🇺🇸 Inflation (indice des prix à la consommation) (sur un mois)
+mer. 11/11 08:01 🇪🇺 French Bank Holiday
+mer. 11/11 14:00 🇨🇦 Jour férié (marché fermé ou réduit)
+mer. 11/11 14:00 🇺🇸 Jour férié (marché fermé ou réduit)
+jeu. 12/11 08:00 🇬🇧 Croissance du PIB (sur un mois)
 
 *Opportunités*
 • L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 421,44-428,42, stop 396,99, objectif 468,08, revoir le 10/02
+  entrée 421,44-428,42, stop 396,99, objectif 466,84, revoir le 10/02
 • Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,8 %
-  entrée 230,35-233,05, stop 203,38, objectif 274,90, revoir le 10/02
+  entrée 230,35-233,05, stop 203,38, objectif 274,73, revoir le 10/02
 • Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 177,68-179,95, stop 169,77, objectif 193,19, revoir le 10/02
+  entrée 177,68-179,95, stop 169,77, objectif 192,38, revoir le 10/02
 • TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
   entrée 78,67-80,15, stop 73,36, objectif 89,29, revoir le 03/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 193,78-197,45, stop 180,66, objectif 220,02, revoir le 03/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
+  entrée 93,17-93,94, stop 85,52, objectif 104,65, revoir le 10/02
 
 *À lire*
-• ALSTOM Cours Action ALO, Cotation Bourse Euronext Paris (Boursorama)
-• ORANGE Cours Action ORA, Cotation Bourse Euronext Paris (Boursorama)
-• EUTELSAT Cours Action ETL, Cotation Bourse Euronext Paris (Boursorama)
+• Actualités économiques de la semaine : Les cours de l’or et du pétrole fluctuent fortement ; les marchés financiers subissent une pression importante. (Vietnam.vn)
+• Marché noir : l’euro stable, le dollar en hausse face au dinar algérien ce 8 novembre (Algérie Zoom)
+• Après la baisse de la fin de semaine, le prix de l'or la semaine prochaine est confronté à un test majeur (Laodong.vn)
 
-*🎓 Question du jour* : Un ratio de Sharpe de 1,2 sur 10 ans indique…
-A. une stratégie très risquée
-B. un très bon rendement par unité de risque
-C. une perte
-D. un drawdown de 12 %
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q59
+*🎓 Question du jour* : Pourquoi les pros utilisent-ils un demi ou un quart de Kelly ?
+A. Pour payer moins d'impôts
+B. Kelly complet donne des positions et des drawdowns trop violents
+C. Kelly ne fonctionne pas
+D. C'est une obligation légale
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q60
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
