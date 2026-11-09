@@ -1,6 +1,6 @@
 {
- "date": "2026-11-08",
- "dateLabel": "dimanche 8 novembre 2026",
+ "date": "2026-11-09",
+ "dateLabel": "lundi 9 novembre 2026",
  "picks": [
   {
    "sym": "OR.PA",
@@ -8,25 +8,25 @@
    "h": "3M",
    "action": "ATTENDRE_REPLI",
    "actionLabel": "Attendre un repli",
-   "pUp": 0.558924909528669,
-   "expPct": 0.9656699731017682,
+   "pUp": 0.5590235183451627,
+   "expPct": 0.9646796670544244,
    "start": "Ordre limite entre 421,44 et 428,42",
    "zoneLo": 421.4392130424984,
    "zoneHi": 428.42436856204347,
    "stop": 396.9911687240908,
-   "target": 466.84272391954113,
-   "rr": 1.5,
-   "pTarget": 0.37375,
+   "target": 468.61055961112675,
+   "rr": 1.5632711643512829,
+   "pTarget": 0.34625,
    "holdDays": 63,
    "reviewDate": "2027-02-10T08:00:00.000Z",
    "validUntil": "2026-11-20T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.508987406961271,
+   "expectancy": 0.21778602957443455,
    "price": 449.79998779296875,
    "chg": -1.2730505339872744,
    "sizePct": 15.208386900380292,
    "riskPct": 6.57531930605339,
-   "gainPct": 9.862978959080086,
+   "gainPct": 10.279007067555552,
    "perf": {
     "w1": 2.940834243494428,
     "m1": 20.251303962594047,
@@ -51,7 +51,7 @@
    ],
    "why": [
     "Le cours est etire (2,8 ATR au-dessus de l'EMA 20, RSI 72) : mieux vaut attendre un repli.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,97 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,96 %."
    ],
    "day": {
     "ref": {
@@ -98,14 +98,20 @@
    },
    "news": [
     {
-     "title": "L’action Alstom a perdu plus de 50% depuis le début de l’année, est-ce maintenant une bonne affaire ?",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUtvdzQ3c0Y4SEdhVmZWazRLc0h5ZHlHbUFzWlFzUzBCR3JSNFd6VDItZ2xqUUt1MGNKa2hsbnFXeHAyTU1UZS1TSFZ4YTlldjZMZk1nZkhVUlRsZVZDSFFobVg2TGFmZDBZVXVjS3JmUUxJVkpTQzMxMzZZU2FHX1l1MmVnX2w3VkRqZGVrMDlaWkhHNmphRmJIWFFkREc4dTNxOGRESnJVdjV5dGNHWHdRa0RrbE5mSV9QSmRhQ1E3OTlhbUQ1R0puSnpEcC1DNkVkNGpsWnR1M1UxenZKcA?oc=5",
-     "source": "Le Figaro Bourse",
-     "time": 1794128400000,
+     "title": "L'Oréal : Rothschild & Co Redburn reste à l'achat avec un objectif de cours relevé de 415 à 465 EUR.",
+     "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMExhSXVzWE5EQ1F6b1ZWbFBwMmExVjFuQ0VkT2phSEFnUl9sS2dVZGl2clA0dW1aamtpQUxRVkllR1ZoUW4yYVJjM09JTzRFY2ptb0R0VEdVS0huYkFFRFNkTk5zdFVsZEZadnBnV1cwYTVpUXBnZ1ZqdUxtZmZfcTllOHJwb3RBNEg2Rmd3Y1hXcWFMLWMzX1lMSS1nd2JQcGF4VW50dFEtSURrVkh0SFowRXU5aDdETTRZWGpTUHJPbXYycmpjWHBDLTlDWnZqT0RUOTk5UHVSVG5PLTB1dUN1UHdNX29Sc2ZuMQ?oc=5",
+     "source": "Zonebourse",
+     "time": 1794201390000,
      "tone": "neutre"
     }
    ],
-   "ctx": null,
+   "ctx": {
+    "title": "L'Oréal : Rothschild & Co Redburn reste à l'achat avec un objectif de cours relevé de 415 à 465 EUR.",
+    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMExhSXVzWE5EQ1F6b1ZWbFBwMmExVjFuQ0VkT2phSEFnUl9sS2dVZGl2clA0dW1aamtpQUxRVkllR1ZoUW4yYVJjM09JTzRFY2ptb0R0VEdVS0huYkFFRFNkTk5zdFVsZEZadnBnV1cwYTVpUXBnZ1ZqdUxtZmZfcTllOHJwb3RBNEg2Rmd3Y1hXcWFMLWMzX1lMSS1nd2JQcGF4VW50dFEtSURrVkh0SFowRXU5aDdETTRZWGpTUHJPbXYycmpjWHBDLTlDWnZqT0RUOTk5UHVSVG5PLTB1dUN1UHdNX29Sc2ZuMQ?oc=5",
+    "source": "Zonebourse",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   },
    "summary": "3 mois · 56 % de chances de hausse. Ordre limite entre 421,44 et 428,42. Le cours est etire (2,8 ATR au-dessus de l'EMA 20, RSI 72) : mieux vaut attendre un repli."
   },
   {
@@ -114,25 +120,25 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.558924909528669,
-   "expPct": 3.838710963065428,
+   "pUp": 0.5590235183451627,
+   "expPct": 3.8306930483498203,
    "start": "Acheter si le cours depasse 230,35 en seance (plus haut d'hier)",
    "zoneLo": 230.35000610351562,
    "zoneHi": 233.04671776638645,
    "stop": 203.38288947480737,
-   "target": 274.7280177353605,
-   "rr": 1.6456342827768828,
-   "pTarget": 0.3405,
+   "target": 276.02691908685637,
+   "rr": 1.6938004018833326,
+   "pTarget": 0.3285,
    "holdDays": 63,
    "reviewDate": "2027-02-10T08:00:00.000Z",
    "validUntil": "2026-11-13T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.7493072504437668,
+   "expectancy": 1.88362431044417,
    "price": 228.64999389648438,
    "chg": 0.3511028183186937,
    "sizePct": 8.54188489170151,
    "riskPct": 11.707017978801208,
-   "gainPct": 19.265470135000598,
+   "gainPct": 19.82935175734889,
    "perf": {
     "w1": -3.7263183593750027,
     "m1": -12.42819281825912,
@@ -157,7 +163,7 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +3,84 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +3,83 %."
    ],
    "day": {
     "ref": {
@@ -204,27 +210,14 @@
    },
    "news": [
     {
-     "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-     "source": "Boursorama",
-     "time": 1794139878000,
-     "tone": "neutre"
-    },
-    {
-     "title": "L’action Alstom a perdu plus de 50% depuis le début de l’année, est-ce maintenant une bonne affaire ?",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUtvdzQ3c0Y4SEdhVmZWazRLc0h5ZHlHbUFzWlFzUzBCR3JSNFd6VDItZ2xqUUt1MGNKa2hsbnFXeHAyTU1UZS1TSFZ4YTlldjZMZk1nZkhVUlRsZVZDSFFobVg2TGFmZDBZVXVjS3JmUUxJVkpTQzMxMzZZU2FHX1l1MmVnX2w3VkRqZGVrMDlaWkhHNmphRmJIWFFkREc4dTNxOGRESnJVdjV5dGNHWHdRa0RrbE5mSV9QSmRhQ1E3OTlhbUQ1R0puSnpEcC1DNkVkNGpsWnR1M1UxenZKcA?oc=5",
-     "source": "Le Figaro Bourse",
-     "time": 1794128400000,
+     "title": "Un administrateur de Richardson Electronics vend des actions pour 21.190$",
+     "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxPcUh6YzMzY0dxaTBJaXA2T05oSnlCZUhSVDZpaDVfdGIwWWVoZjR1a0xqWENqT0xRRW1LUU9jZ1BUNER1WDRYWHdLZnNHMFRybzc0ZlBWUXVVTEl4c21VT19sTVBGRXYyeGV1WU9NOURMV1R4OW5WeWp6MWFBbzZPbjdJem1ESS1TNDdiTVQ5TmlnQ3V2MGNxYktkVnpPS0lJb01TQVV2ekZ3cjVsTTlESGpWTXFrdmVsazZLS0N3eThZc3lvTTM1bFVRSEZTQzdO?oc=5",
+     "source": "Investing.com France",
+     "time": 1794186960000,
      "tone": "neutre"
     }
    ],
-   "ctx": {
-    "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   },
+   "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 230,35 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
@@ -233,25 +226,25 @@
    "h": "3M",
    "action": "ATTENDRE_REPLI",
    "actionLabel": "Attendre un repli",
-   "pUp": 0.558924909528669,
-   "expPct": 1.2243701977433075,
+   "pUp": 0.5590235183451627,
+   "expPct": 1.2254045914783962,
    "start": "Ordre limite entre 177,68 et 179,95",
    "zoneLo": 177.68480703343542,
    "zoneHi": 179.94540323387534,
    "stop": 169.77272033189567,
-   "target": 192.37868233629496,
-   "rr": 1.5000000000000016,
-   "pTarget": 0.34025,
+   "target": 192.46011423202825,
+   "rr": 1.5090055773469688,
+   "pTarget": 0.34125,
    "holdDays": 63,
    "reviewDate": "2027-02-10T08:00:00.000Z",
    "validUntil": "2026-11-20T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.38303126127094084,
+   "expectancy": 0.39888617472784654,
    "price": 187.77999877929688,
    "chg": -1.0225608417266607,
    "sizePct": 19.775215173198198,
    "riskPct": 5.056834988856773,
-   "gainPct": 7.585252483285168,
+   "gainPct": 7.630792201908168,
    "perf": {
     "w1": 3.803209018762832,
     "m1": 11.813740651107075,
@@ -276,7 +269,7 @@
    ],
    "why": [
     "Le cours est etire (3,1 ATR au-dessus de l'EMA 20, RSI 76) : mieux vaut attendre un repli.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +1,22 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +1,23 %."
    ],
    "day": {
     "ref": {
@@ -323,26 +316,26 @@
    },
    "news": [
     {
-     "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-     "source": "Boursorama",
-     "time": 1794139878000,
+     "title": "Arkema nomme Anneli Carlot directrice générale finance à compter du 18 janvier",
+     "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNMDJyRk56cEk3UDZSc0x2N21pNy1tWFJyWHZfdWNXRWh6OVFEN1NCdkEwdGUzZTdIMVVVQmo1RjRMWUZZVkI0bXRwcnBhZ2tRaWdQMHN1dEdRS0hQZC0wTHhPOXpmRzI1WFhOYXNSUVVsaGwxRkV2d2I5bHVXS1VNNXFUd1FIQXJyNTNGYVNIZlotd3BVRTNrN0c3NGFrZjRseTgxNTY3RjJzR0U5UHNKM2JkODJRbUs2WDVLTHRDNFlVMjlkbVFzQXhPbzhGYXRVaktxTm0xdEdnZlU0UHNsNThmemFxUQ?oc=5",
+     "source": "Investir Les Echos",
+     "time": 1794209965000,
      "tone": "neutre"
     },
     {
-     "title": "L’action Alstom a perdu plus de 50% depuis le début de l’année, est-ce maintenant une bonne affaire ?",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUtvdzQ3c0Y4SEdhVmZWazRLc0h5ZHlHbUFzWlFzUzBCR3JSNFd6VDItZ2xqUUt1MGNKa2hsbnFXeHAyTU1UZS1TSFZ4YTlldjZMZk1nZkhVUlRsZVZDSFFobVg2TGFmZDBZVXVjS3JmUUxJVkpTQzMxMzZZU2FHX1l1MmVnX2w3VkRqZGVrMDlaWkhHNmphRmJIWFFkREc4dTNxOGRESnJVdjV5dGNHWHdRa0RrbE5mSV9QSmRhQ1E3OTlhbUQ1R0puSnpEcC1DNkVkNGpsWnR1M1UxenZKcA?oc=5",
+     "title": "«Air Liquide nous paraît bien armé pour créer de la valeur dans la durée» : les analystes de Berenberg toujours plus optimistes sur l’action du champion français au sommet",
+     "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQWnZmM0k4WGF2bm5MeGRlbmRSWUhEWkVnbmJQRXZBanVrRjRqZDRxeFdhbFBiVF96bVhBdmVhMVNFQWxxUzNxZkNpWXF2aWo4SGNjMTJQOFFxWGRCTzZ2TWY5bjJqMGlxV1NNNnhCa3VuVnlTenRVTFlHU1U2RUxaREdhVkRDd1BlTjJ5eU50cjhaNUNGQkhvc3BmdVY3TW5qMXB6THpzVy1rWG5tWE82c3RYNzQtZlRvaDgyblhSS3IzREl1N01RcEx4MEFab0R4Tjhnd0kwNXR1Rm5UdDBhZHpZVWZnWnZzQ2t1ZkNObW8zWWpaMlVZMlZ0a3JDdXVRLWNLb1QzQWxYZTR6YjN6eHFSdE83M1VqWjRPaHRDQnNxUGprVW1mX0pqdUxWdk10dDR5aURoOFY0bkRHSmc?oc=5",
      "source": "Le Figaro Bourse",
-     "time": 1794128400000,
-     "tone": "neutre"
+     "time": 1794204900000,
+     "tone": "positif"
     }
    ],
    "ctx": {
-    "title": "L’action Alstom a perdu plus de 50% depuis le début de l’année, est-ce maintenant une bonne affaire ?",
-    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUtvdzQ3c0Y4SEdhVmZWazRLc0h5ZHlHbUFzWlFzUzBCR3JSNFd6VDItZ2xqUUt1MGNKa2hsbnFXeHAyTU1UZS1TSFZ4YTlldjZMZk1nZkhVUlRsZVZDSFFobVg2TGFmZDBZVXVjS3JmUUxJVkpTQzMxMzZZU2FHX1l1MmVnX2w3VkRqZGVrMDlaWkhHNmphRmJIWFFkREc4dTNxOGRESnJVdjV5dGNHWHdRa0RrbE5mSV9QSmRhQ1E3OTlhbUQ1R0puSnpEcC1DNkVkNGpsWnR1M1UxenZKcA?oc=5",
+    "title": "«Air Liquide nous paraît bien armé pour créer de la valeur dans la durée» : les analystes de Berenberg toujours plus optimistes sur l’action du champion français au sommet",
+    "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQWnZmM0k4WGF2bm5MeGRlbmRSWUhEWkVnbmJQRXZBanVrRjRqZDRxeFdhbFBiVF96bVhBdmVhMVNFQWxxUzNxZkNpWXF2aWo4SGNjMTJQOFFxWGRCTzZ2TWY5bjJqMGlxV1NNNnhCa3VuVnlTenRVTFlHU1U2RUxaREdhVkRDd1BlTjJ5eU50cjhaNUNGQkhvc3BmdVY3TW5qMXB6THpzVy1rWG5tWE82c3RYNzQtZlRvaDgyblhSS3IzREl1N01RcEx4MEFab0R4Tjhnd0kwNXR1Rm5UdDBhZHpZVWZnWnZzQ2t1ZkNObW8zWWpaMlVZMlZ0a3JDdXVRLWNLb1QzQWxYZTR6YjN6eHFSdE83M1VqWjRPaHRDQnNxUGprVW1mX0pqdUxWdk10dDR5aURoOFY0bkRHSmc?oc=5",
     "source": "Le Figaro Bourse",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
+    "tone": "positif",
+    "verdict": "L'actu va dans le même sens"
    },
    "summary": "3 mois · 56 % de chances de hausse. Ordre limite entre 177,68 et 179,95. Le cours est etire (3,1 ATR au-dessus de l'EMA 20, RSI 76) : mieux vaut attendre un repli."
   },
@@ -352,20 +345,20 @@
    "h": "3M",
    "action": "ENTRER",
    "actionLabel": "Entrer",
-   "pUp": 0.558924909528669,
-   "expPct": 1.6734334404820972,
+   "pUp": 0.5590235183451627,
+   "expPct": 1.6734652432158548,
    "start": "Des la prochaine seance",
    "zoneLo": 78.66759669697939,
    "zoneHi": 80.15496602091528,
    "stop": 73.35556339720833,
    "target": 89.29166329652149,
    "rr": 1.5,
-   "pTarget": 0.278,
+   "pTarget": 0.27175,
    "holdDays": 63,
    "reviewDate": "2027-02-03T08:00:00.000Z",
    "validUntil": "2026-11-10T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.7832538270605058,
+   "expectancy": 0.6776800191109065,
    "price": 79.7300033569336,
    "chg": -1.2019747558735472,
    "sizePct": 12.507765993668551,
@@ -433,15 +426,36 @@
    },
    "fund": {
     "pe": 9.24942,
-    "fpe": 7.820075,
+    "fpe": 7.873431,
     "yield": 4.52,
     "rating": "1.9 - Buy",
     "target": null,
     "hi52": 85.94,
     "lo52": 53.29
    },
-   "news": [],
-   "ctx": null,
+   "news": [
+    {
+     "title": "Pénurie de carburant : plus de 1 200 stations-service à sec en France, la carte à consulter",
+     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxNT3EwYTBPdlZnZlVuVmN3U09HSlNDR2lNMFBqdHBNT3U2RXItcFlIT0xSM2I1WDExSEVCX2hReDhVbktPT05yd1dodS0wNlJTU09sNzFUS2IzckRyZkROeWFpN0Q1VVV3aEFoV08wRExBYjgteGh0dERmY3ZvVlg0OS1ud0NzZExLZ0E?oc=5",
+     "source": "MCE TV",
+     "time": 1794202258000,
+     "tone": "neutre"
+    },
+    {
+     "title": "La compagnie pétrolière TotalEnergies recrute – 08 novembre 2026",
+     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcThDSjRuWEV4bGhNaGhzRlFGWjZZR0lFUEFqdjhpU3RNZ1hOMkstbENGX1dIUU04VEZ1cHAzUW1OSGt4WkRKOVF3SEFISDZwdFJISWdfdTBfTzdnb044Qmt5aDNJaEFpLTN6d1FndjVMX3B1N0hfdEZFUGtscS1lS0syY1VQT2dTdnBYcGMwOA?oc=5",
+     "source": "YOP L-FRII",
+     "time": 1794181857000,
+     "tone": "neutre"
+    }
+   ],
+   "ctx": {
+    "title": "La compagnie pétrolière TotalEnergies recrute – 08 novembre 2026",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcThDSjRuWEV4bGhNaGhzRlFGWjZZR0lFUEFqdjhpU3RNZ1hOMkstbENGX1dIUU04VEZ1cHAzUW1OSGt4WkRKOVF3SEFISDZwdFJISWdfdTBfTzdnb044Qmt5aDNJaEFpLTN6d1FndjVMX3B1N0hfdEZFUGtscS1lS0syY1VQT2dTdnBYcGMwOA?oc=5",
+    "source": "YOP L-FRII",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   },
    "summary": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies."
   },
   {
@@ -450,20 +464,20 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.558924909528669,
-   "expPct": 0.7759305099998448,
+   "pUp": 0.5590235183451627,
+   "expPct": 0.7736235265392244,
    "start": "Acheter si le cours depasse 93,17 en seance (plus haut d'hier)",
    "zoneLo": 93.16999816894531,
    "zoneHi": 93.93500755715155,
    "stop": 85.51990428688289,
    "target": 104.64513899203894,
    "rr": 1.4999999999999991,
-   "pTarget": 0.33175,
+   "pTarget": 0.328,
    "holdDays": 63,
    "reviewDate": "2027-02-10T08:00:00.000Z",
    "validUntil": "2026-11-13T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.0896411206063496,
+   "expectancy": 0.03017332555929192,
    "price": 91.93000030517578,
    "chg": -0.010878981906536911,
    "sizePct": 12.178935266063325,
@@ -493,7 +507,7 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,78 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,77 %."
    ],
    "day": {
     "ref": {
@@ -540,27 +554,21 @@
    },
    "news": [
     {
-     "title": "Jacob Fearnley vs Aleksandr Shevchenko - Match ATP - BNP Paribas Nordic Open 2026 - qualifying-final",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPN0NWcFppQjBKamw0Z1NTVXE4YUU4aXZfS0tGN3BENnpRRlFpTHdpYnFCbDZZM3F5RkhqTTB4M0xjOVlMby1sNlpBRE52OVJ1cjRjdHdDMTJyMjEwLTQ4SUk2Z1RMQ3hwQ1BjNTZ5dnFQNjZoeF9CcEJtV3AxSExGbGVYRE02Z21YS3VPNmpTRU1qOFNjMjVueTRrT1ZiZw?oc=5",
-     "source": "tennismajors.com",
-     "time": 1794109234000,
+     "title": "SBF 120 - Les actions à suivre lundi: Crédit Agricole, Eramet, Atos, Valneva",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNYl9HakQyX0hnLWlKN0YyRmxvcFZhR2ozR3VfQ1JHbGxDNFI0LXc0dW5MQkpmdWRSOVJ3cGtwZmdGZ2MxVklJNkpqQTE1VlZVNHRlUDdtT04xeXh4T0JtOTJTNy13cWZXRVFQYlk5N1pCUGNMek1ZcmFCYXh2NGs2THFYOWJIa000V0ZlYVlxbFkwUUZxNTI3S1MyQ1piaFU5X3ExcTNvX0hldU5pWWs4TE5FMU5vMm5BZTBlU2wxRGpsUmM3b2lpLWlKYXgwZldPc3FlQ1pfb3BDajQ?oc=5",
+     "source": "Investir Les Echos",
+     "time": 1794209640000,
      "tone": "neutre"
     },
     {
-     "title": "Une bulle de l’IA en Bourse ? «Tout le monde le sait», répond Thierry Breton après la chute des marchés",
-     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOU0JpeXNHOG5LUkxwV1FrZDRnMGduN1VzaFBjOVdLMnY4OGtwNEd5Y1QxUl9wT1RhTzlod3dhOU5DTWtiN1hKdXY0OXExY0J2WGdKamhSMXhuak5fZWVlRi1yZ1RDa25FOEUySjR2OG12ZlJWa1ZkRk5jemhabFhrOU9RQ3pabVBtV0ZRdDN4WkpJLUFqVi1xRUQ0dnBlLThZazdXeUdsaHpWX01ic1c3c3BjRjRYSXppSENxYzZvdGlTbVd0RlBKMVJaUjdSRXlKNHJIT0VSWUZFT3I2d1p3RA?oc=5",
-     "source": "Capital.fr",
-     "time": 1794041340000,
-     "tone": "négatif"
+     "title": "Crédit Agricole propose de fusionner ses activités en Italie avec celles de Banco BPM",
+     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPakgyYWszMm9WTGVqdVZUTkpmajY0RkxHRWIxcEVRWUhsbC1KREdsb3JEbGVJU1ZnVGs3eU94dFMyMndIaGJqOVZ2VHY0OS11UEdUb1Jwc1FvRUxEMFAyRGNyTjJaOW01VFRScHAydWNFZzZtTWpoY1Z4aVFVU0xkTW5oZlBXbFVsQ2k5ZU1IWTZ5aE5ZNUdKNVlVdklscmExSDR6a0xmLTlvQ29DRUluVkdLeWVtYUhvUUZqNi1NQzJEekh2UWlvLTVPckdMRE1hbjI2WmRFYzlBRWpKM0hpWDQxY0ZhSktOWHNDUWVrcw?oc=5",
+     "source": "Investir Les Echos",
+     "time": 1794207000000,
+     "tone": "neutre"
     }
    ],
-   "ctx": {
-    "title": "Jacob Fearnley vs Aleksandr Shevchenko - Match ATP - BNP Paribas Nordic Open 2026 - qualifying-final",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPN0NWcFppQjBKamw0Z1NTVXE4YUU4aXZfS0tGN3BENnpRRlFpTHdpYnFCbDZZM3F5RkhqTTB4M0xjOVlMby1sNlpBRE52OVJ1cjRjdHdDMTJyMjEwLTQ4SUk2Z1RMQ3hwQ1BjNTZ5dnFQNjZoeF9CcEJtV3AxSExGbGVYRE02Z21YS3VPNmpTRU1qOFNjMjVueTRrT1ZiZw?oc=5",
-    "source": "tennismajors.com",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   },
+   "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 93,17 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   }
  ],
@@ -572,7 +580,7 @@
    "price": 8139,
    "chg": -0.8088619555195575,
    "p1S": 0.5,
-   "p1M": 0.5055339375182266,
+   "p1M": 0.5054551962784136,
    "trend": "sous SMA 200",
    "w1": 2.1278848371325543,
    "m1": 5.295297246027508
@@ -583,7 +591,7 @@
    "price": 7376.85986328125,
    "chg": 0.3145326640212831,
    "p1S": 0.5,
-   "p1M": 0.5226075372689302,
+   "p1M": 0.5227057409627555,
    "trend": "au-dessus SMA 200",
    "w1": -2.6808455020853827,
    "m1": -5.002987715186702
@@ -594,7 +602,7 @@
    "price": 26989.990234375,
    "chg": 1.3525431841356683,
    "p1S": 0.5,
-   "p1M": 0.5230419416066013,
+   "p1M": 0.52313983637433,
    "trend": "sous SMA 200",
    "w1": -4.914098169254711,
    "m1": -12.158573674730789
@@ -605,7 +613,7 @@
    "price": 51285.73046875,
    "chg": -0.46062507055586455,
    "p1S": 0.5,
-   "p1M": 0.5265208704264125,
+   "p1M": 0.5266024338458658,
    "trend": "au-dessus SMA 200",
    "w1": -0.9360155234973799,
    "m1": 0.10557898027494517
@@ -616,7 +624,7 @@
    "price": 25820.359375,
    "chg": -1.9169998230502805,
    "p1S": 0.5,
-   "p1M": 0.516874704727644,
+   "p1M": 0.5168746657720658,
    "trend": "au-dessus SMA 200",
    "w1": 0.00832140346673782,
    "m1": 4.085096419077638
@@ -627,7 +635,7 @@
    "price": 50053,
    "chg": -0.8969231378450071,
    "p1S": 0.5,
-   "p1M": 0.5193628649001172,
+   "p1M": 0.5194255499456949,
    "trend": "au-dessus SMA 200",
    "w1": 1.115128987293179,
    "m1": 1.5315022921822408
@@ -635,24 +643,69 @@
   {
    "id": "nkx",
    "label": "NIKKEI 225",
-   "price": 57434.76953125,
-   "chg": -5.964725374397018,
+   "price": 58775.5,
+   "chg": 2.3343533537128813,
    "p1S": 0.5,
-   "p1M": 0.5222757644902253,
+   "p1M": 0.5210006732246819,
    "trend": "sous SMA 200",
-   "w1": -11.173458981983986,
-   "m1": -18.744286436028148
+   "w1": -7.133198883020575,
+   "m1": -16.07781342799337
   }
  ],
  "brief": [
   "CAC 40 à 8 139 points : −0,8 % à la dernière séance, +5,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.",
   "Pas d'annonce macroéconomique majeure aujourd'hui.",
+  "Résultats aujourd'hui : Hannover Re, UniCredit.",
   "Pas de tendance nette des indices à 1 mois.",
   "5 opportunité(s) retenue(s), surtout sur 3 mois."
  ],
  "agenda": {
-  "today": [],
-  "tomorrow": [],
+  "today": [
+   {
+    "day": "2026-11-09",
+    "dayLabel": "lun. 09/11",
+    "time": "18:25",
+    "ts": 1794245100000,
+    "cur": "GBP",
+    "country": "Royaume-Uni",
+    "flag": "🇬🇧",
+    "title": "BOE Gov Bailey Speaks",
+    "original": "BOE Gov Bailey Speaks",
+    "impact": "moyen",
+    "forecast": "",
+    "previous": ""
+   }
+  ],
+  "tomorrow": [
+   {
+    "day": "2026-11-10",
+    "dayLabel": "mar. 10/11",
+    "time": "14:30",
+    "ts": 1794317400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)",
+    "original": "Core CPI m/m",
+    "impact": "fort",
+    "forecast": "0.2%",
+    "previous": "0.3%"
+   },
+   {
+    "day": "2026-11-10",
+    "dayLabel": "mar. 10/11",
+    "time": "14:30",
+    "ts": 1794317400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.6%"
+   }
+  ],
   "week": [
    {
     "day": "2026-11-10",
@@ -770,8 +823,7 @@
   "ok": true
  },
  "earnings": {
-  "today": [],
-  "week": [
+  "today": [
    {
     "sym": "HNR1.DE",
     "name": "Hannover Re",
@@ -783,7 +835,9 @@
     "name": "UniCredit",
     "date": 1794241800000,
     "estimate": false
-   },
+   }
+  ],
+  "week": [
    {
     "sym": "9984.T",
     "name": "SoftBank",
@@ -1016,9 +1070,9 @@
   {
    "sym": "^N225",
    "label": "Nikkei 225",
-   "last": 57434.76953125,
-   "chg": -5.964725374397018,
-   "m1": -18.744286436028148
+   "last": 58775.5,
+   "chg": 2.3343533537128813,
+   "m1": -16.07781342799337
   },
   {
    "sym": "^STOXX50E",
@@ -1030,23 +1084,23 @@
   {
    "sym": "EURUSD=X",
    "label": "Euro / dollar",
-   "last": 1.1228259801864624,
-   "chg": -0.05950413573903024,
-   "m1": 0.24029497354722817
+   "last": 1.1173185110092163,
+   "chg": -0.4905006897267805,
+   "m1": -0.35529881619155157
   },
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 98.31999969482422,
-   "chg": 0.03052068269147057,
-   "m1": -5.715380853702046
+   "last": 96.30000305175781,
+   "chg": -2.0545124586414554,
+   "m1": -8.04048708059094
   },
   {
    "sym": "GC=F",
    "label": "Or",
-   "last": 4074.89990234375,
-   "chg": -0.9383760217880122,
-   "m1": -1.9749843073430307
+   "last": 4104.60009765625,
+   "chg": 0.7288570523025006,
+   "m1": -2.6492354008381236
   },
   {
    "sym": "^TNX",
@@ -1058,9 +1112,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 75900.9296875,
-   "chg": 0.20245077967633307,
-   "m1": -7.457755114112796
+   "last": 73943.9296875,
+   "chg": -0.8590490984708543,
+   "m1": -9.663124485015295
   }
  ],
  "movers": {
@@ -1098,24 +1152,24 @@
     "chg": -15.297029880598089
    },
    {
+    "sym": "BKNG",
+    "name": "Booking",
+    "chg": -4.771220361258521
+   },
+   {
+    "sym": "HNR1.DE",
+    "name": "Hannover Re",
+    "chg": -4.373366241322929
+   },
+   {
+    "sym": "MUV2.DE",
+    "name": "Munich Re",
+    "chg": -4.271773363911812
+   },
+   {
     "sym": "9984.T",
     "name": "SoftBank",
-    "chg": -10.82914572864322
-   },
-   {
-    "sym": "4568.T",
-    "name": "Daiichi Sankyo",
-    "chg": -10.103963612735544
-   },
-   {
-    "sym": "7974.T",
-    "name": "Nintendo",
-    "chg": -7.905405405405408
-   },
-   {
-    "sym": "8411.T",
-    "name": "Mizuho",
-    "chg": -7.001679369590496
+    "chg": -4.19836573682727
    }
   ]
  },
@@ -1248,7 +1302,13 @@
    "h": "3M",
    "action": "ATTENDRE_REPLI",
    "text": "3 mois · 56 % de chances de hausse. Ordre limite entre 421,44 et 428,42. Le cours est etire (2,8 ATR au-dessus de l'EMA 20, RSI 72) : mieux vaut attendre un repli.",
-   "ctx": null
+   "ctx": {
+    "title": "L'Oréal : Rothschild & Co Redburn reste à l'achat avec un objectif de cours relevé de 415 à 465 EUR.",
+    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxOMExhSXVzWE5EQ1F6b1ZWbFBwMmExVjFuQ0VkT2phSEFnUl9sS2dVZGl2clA0dW1aamtpQUxRVkllR1ZoUW4yYVJjM09JTzRFY2ptb0R0VEdVS0huYkFFRFNkTk5zdFVsZEZadnBnV1cwYTVpUXBnZ1ZqdUxtZmZfcTllOHJwb3RBNEg2Rmd3Y1hXcWFMLWMzX1lMSS1nd2JQcGF4VW50dFEtSURrVkh0SFowRXU5aDdETTRZWGpTUHJPbXYycmpjWHBDLTlDWnZqT0RUOTk5UHVSVG5PLTB1dUN1UHdNX29Sc2ZuMQ?oc=5",
+    "source": "Zonebourse",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   }
   },
   {
    "sym": "SU.PA",
@@ -1256,13 +1316,7 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 230,35 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": {
-    "title": "SCHNEIDER ELECTRIC Cours Action SU, Cotation Bourse Euronext Paris",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1uMnA4aWJ6Vlh4ZXFKMm1lYnZPRU9xcTlyclEydUNDZXgwSUlKN190UFBoTk5XYnlNWXh5WmU0OUZFTVZyaFM0eW5PRHB2MGlv?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   }
+   "ctx": null
   },
   {
    "sym": "AI.PA",
@@ -1271,11 +1325,11 @@
    "action": "ATTENDRE_REPLI",
    "text": "3 mois · 56 % de chances de hausse. Ordre limite entre 177,68 et 179,95. Le cours est etire (3,1 ATR au-dessus de l'EMA 20, RSI 76) : mieux vaut attendre un repli.",
    "ctx": {
-    "title": "L’action Alstom a perdu plus de 50% depuis le début de l’année, est-ce maintenant une bonne affaire ?",
-    "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxQeUtvdzQ3c0Y4SEdhVmZWazRLc0h5ZHlHbUFzWlFzUzBCR3JSNFd6VDItZ2xqUUt1MGNKa2hsbnFXeHAyTU1UZS1TSFZ4YTlldjZMZk1nZkhVUlRsZVZDSFFobVg2TGFmZDBZVXVjS3JmUUxJVkpTQzMxMzZZU2FHX1l1MmVnX2w3VkRqZGVrMDlaWkhHNmphRmJIWFFkREc4dTNxOGRESnJVdjV5dGNHWHdRa0RrbE5mSV9QSmRhQ1E3OTlhbUQ1R0puSnpEcC1DNkVkNGpsWnR1M1UxenZKcA?oc=5",
+    "title": "«Air Liquide nous paraît bien armé pour créer de la valeur dans la durée» : les analystes de Berenberg toujours plus optimistes sur l’action du champion français au sommet",
+    "link": "https://news.google.com/rss/articles/CBMivgJBVV95cUxQWnZmM0k4WGF2bm5MeGRlbmRSWUhEWkVnbmJQRXZBanVrRjRqZDRxeFdhbFBiVF96bVhBdmVhMVNFQWxxUzNxZkNpWXF2aWo4SGNjMTJQOFFxWGRCTzZ2TWY5bjJqMGlxV1NNNnhCa3VuVnlTenRVTFlHU1U2RUxaREdhVkRDd1BlTjJ5eU50cjhaNUNGQkhvc3BmdVY3TW5qMXB6THpzVy1rWG5tWE82c3RYNzQtZlRvaDgyblhSS3IzREl1N01RcEx4MEFab0R4Tjhnd0kwNXR1Rm5UdDBhZHpZVWZnWnZzQ2t1ZkNObW8zWWpaMlVZMlZ0a3JDdXVRLWNLb1QzQWxYZTR6YjN6eHFSdE83M1VqWjRPaHRDQnNxUGprVW1mX0pqdUxWdk10dDR5aURoOFY0bkRHSmc?oc=5",
     "source": "Le Figaro Bourse",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
+    "tone": "positif",
+    "verdict": "L'actu va dans le même sens"
    }
   },
   {
@@ -1284,7 +1338,13 @@
    "h": "3M",
    "action": "ENTRER",
    "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-   "ctx": null
+   "ctx": {
+    "title": "La compagnie pétrolière TotalEnergies recrute – 08 novembre 2026",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPcThDSjRuWEV4bGhNaGhzRlFGWjZZR0lFUEFqdjhpU3RNZ1hOMkstbENGX1dIUU04VEZ1cHAzUW1OSGt4WkRKOVF3SEFISDZwdFJISWdfdTBfTzdnb044Qmt5aDNJaEFpLTN6d1FndjVMX3B1N0hfdEZFUGtscS1lS0syY1VQT2dTdnBYcGMwOA?oc=5",
+    "source": "YOP L-FRII",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   }
   },
   {
    "sym": "BNP.PA",
@@ -1292,71 +1352,65 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 93,17 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": {
-    "title": "Jacob Fearnley vs Aleksandr Shevchenko - Match ATP - BNP Paribas Nordic Open 2026 - qualifying-final",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPN0NWcFppQjBKamw0Z1NTVXE4YUU4aXZfS0tGN3BENnpRRlFpTHdpYnFCbDZZM3F5RkhqTTB4M0xjOVlMby1sNlpBRE52OVJ1cjRjdHdDMTJyMjEwLTQ4SUk2Z1RMQ3hwQ1BjNTZ5dnFQNjZoeF9CcEJtV3AxSExGbGVYRE02Z21YS3VPNmpTRU1qOFNjMjVueTRrT1ZiZw?oc=5",
-    "source": "tennismajors.com",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   }
+   "ctx": null
   }
  ],
  "news": [
   {
-   "title": "Actualités économiques de la semaine : Les cours de l’or et du pétrole fluctuent fortement ; les marchés financiers subissent une pression importante.",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPdWN3MjRLOGVDRlpKczBScXhNRGdJWXNlS1M3NmhiSDk4aGFfR092VDNRZ2RLZFR4MV9OTVpFc3ZfZlN0UWhMN0RYN3JGbHJGblllZ0hVeENkVGtLOUtkTHh0TnhsdmxOVEJfd0VNV2FlUWdYaUtlMVVRRFZyQ19OMWZEeHd0X1NFUElzdlZ4cHZESjBseVRPY3dELTV2NlNOTjdueWw3QlllemNlaGc?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794140555000,
+   "title": "Les valeurs de l'IA toujours sous surveillance avant le rendez-vous de l'inflation américaine cette semaine",
+   "link": "https://news.google.com/rss/articles/CBMihwJBVV95cUxPSHVXLVdaZUdsVWxobHhXY3QxU2xyQWprTGUxcVJUOE1YWENYYTVOQURwMHU3RjEzU3Z5NnlGX200WGlESm9SVFRWWHVhMld6MXZkMU9sU2JMdXZ5WGg4UExKcDRETDlaekIzT1h1eXlJUnExamNDVFQ0SlA0aEdSVmdYMW1oaUZlTHFSTGVWNm1kTFpERlhlVHNBN083bGxWSHpGM1NYV0Z0UkhzNW5wOU05WGdERl9LTUZqNkVqU2pQV1daV19rTTNBNTJXZEpwM2tDekYwT2RpaERQRDR2Qjh6RFBFNTEzWEdCS04zdjhnWUZGWHhRZV9hZ1Q0SVQtUzQ3b1hsTQ?oc=5",
+   "source": "Investir Les Echos",
+   "time": 1794209689000,
    "tone": "neutre"
   },
   {
-   "title": "Marché noir : l’euro stable, le dollar en hausse face au dinar algérien ce 8 novembre",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMlBWRzdXejlVUVpkdG4zQzMwUDFRYXRnZ25RbnI0OFVPaE1TS05pNzBhQWFITDJrYjV6cGFSQVM0OVVPbnI0YnR2UEdnbk53SzVkQ3RkWGtHY1Q1VzlQOU80LUs2RS1mMTFZc3BuazdOdXAyUERIZDhFV2NBS1ZCdU9iNGdORjZORi1YS3plbmlsUTEtVHBVdA?oc=5",
-   "source": "Algérie Zoom",
-   "time": 1794134868000,
-   "tone": "positif"
-  },
-  {
-   "title": "Après la baisse de la fin de semaine, le prix de l'or la semaine prochaine est confronté à un test majeur",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQRG5TODdFV0dweGM0eXZ2VVhzaFdIQldxVm1ydUQxc0UtQS1fRWxZbW1KSVllaUdBNnhRNFlhV21haWhyN2tkQmtQT05tc2lOSFNScjFnLUwtR0ZDRlFwRlBDeVZSSl83NmxLbGlFbEN5TlNqZnNydGVMbTc4SEd3MkZ6dGdqc1UwU2ZFSHB1X3g1d3c2d3BYZTM2NDQwS3FNaVM2TmhaSWdiNWcyZno0aEt6UDh4U3JW?oc=5",
+   "title": "Le prix de l'or monte en flèche, la baisse du pétrole profite au marché des métaux précieux",
+   "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOWnFtMWt4WHFwaGZyYXctbXRUaWlObTRZQlNSaXpLVDhmU3ZpSGZXMlJnSERXWC0zR05SYUZydVJ4VlJXOFVZVUtlVHBqWmRJbVBuU1hPYkFXd1AzSGhYNFY2cmNvb3ZBVUJONUtWMTlwN1ZJemxWa2J2UldGRkV4TjZxdWFxbXNWREZGUnJfSjNxR2NadktTeWh5QXd0VW5vMFlhb0NieFdDb0QzM211SS01Yzc?oc=5",
    "source": "Laodong.vn",
-   "time": 1794131099000,
+   "time": 1794209429000,
    "tone": "négatif"
   },
   {
-   "title": "De nombreux responsables de la Fed sont favorables à une hausse des taux d'intérêt pour freiner l'inflation.",
-   "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPdEI1Y0RJRzg5LXlXMzNkVmVHV2RvU1Rhb05WcEIxVTg0T3huZm13X0wxNk5Pa2FneEV1MDUyb3hlVzFOZm5FSHNFRzdydjBXakNQeV93Uks4Q0VKWXJoUFBzdXg0MjRjcVJVSnlaY2F5c0hiVVNOSkhvVkNqZHp1Mjg4SC1RVnU0UXFma1MzcWY?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794119860000,
-   "tone": "positif"
-  },
-  {
-   "title": "De 275 milliards de dollars de capitalisation boursière à moins de 60 milliards en cinq années… Comment Nike a connu une véritable descente aux enfers à Wall Street (-80%)",
-   "link": "https://news.google.com/rss/articles/CBMi2wJBVV95cUxPYTdlRDhWX2RUZ2FaNmJBNjdIbkppWTlGR2kzSkUzUm1fR2o4WkpfTGFQdWNqbUdRME1UVXNhYUNOWUN0cE1MaTNLdnQ0YjYwN0F2NU5tbEEzdk9ERjBhMmhMYVVnOG53M2tKTU9BNFdpVDVERzlDZk5OdXhMMkJjYWhXcV9ZSzlrNUo3UzB1TmdHR0ZwcHFDMXo1Wk5nQ2R1RXhSQUZ5QWlncHZkX2E5V0dCN3g3NDZpaXdoY2taXy1QQzFlZ09YVFkxMDFEcTNYR1l5SWpvaUZVZWNPVlFJTk9sMjYwYkhVYTNNdEFOSnJtSUc1YmZubUJZdU1JZVQ5b3lUQWdpYWt0VnR2Ml9neUtiS2FOeFVTZzFzVGc0STBVbnFUQWZIcEV0a0xKR096SVZjbXAxVGdZektfLS1YaTdXRFNBSmRsTER2bFhmSHFHbi13RzN5YUVNUQ?oc=5",
-   "source": "BFM Bourse",
-   "time": 1794117600000,
+   "title": "CAC40 : Une semaine marquée par le retour de la volatilité",
+   "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxNSU4wQ19jOHpkYk0yaHZQSHc5RmwtNG01eC1FMUwwVHV5OE9ZSGJNblZWUTN3QjZLb0FxRGVhZTNpZDdCX2loRFdRU0hJOE10dVZRaDVMaU5YeWZteXEwbENtWERNRnZyWXlRNWNOSnFaSHdXY0J2VkJPMEdPMDdIZkxUelJGTENIbnJoNm5vR0VUalpSMVk0ZHBWZWZERW1JSHp2N1V0ZjVoWm9vMno3bjlCa2g5QVJpbUlIMm9nTC1pclowN3VCZ0F6VjBtbE9SRlRuSnNUS0pLeV9GZ2x3cHFaZjNlOHpGa19DYjg4MlFqc09EYlFWaHBOcldUdw?oc=5",
+   "source": "Bourse Direct",
+   "time": 1794209400000,
    "tone": "neutre"
   },
   {
-   "title": "Une semaine marquée par des fluctuations mitigées du dollar américain.",
-   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBPUWhIT2JlRXpPdjhhWHBjb0xkaEtiN0trZ2F5V3c5S1kyTlVVRTJWX1RlenNPMENSTWQwM21pMTFzck9jeThvbjV4R1JXemduMjFRQ0VtZmtnczFOUmdrRlJ0ak9lbWRMVE1XMWtyR2xHQzhlWVNB?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794110195000,
+   "title": "Un retracement technique maîtrisé",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxQaExJWjRZZlpDUnU1UjJzRUlCNDdWSWxVY0JFTjZGbGdyWjlsMU54dWtQMXhLU0pBM3YtdkVZa2NtcWNwYXJScTlYVlRsT0xjQ2xPeFd2amR1VzM0QVRxQ1JzSDUyZFFaUGNoZjhwU0pBM2ZwWkNSdjdYNG96d2dNNDdHRWhxZXdKYllMSDZCTGpYLTdzQ2NWU1FYdEFBcTZSV1VhX2JydFJMY1NXWU1qTkRKdUNUMm5zeVhLd19sczZHRkRlWUhySlV3NzRPMHRRSXc3ejAtcjg4NDBXazZSUk5rdDVtYXN1LU1FWQ?oc=5",
+   "source": "Bourse Direct",
+   "time": 1794209400000,
    "tone": "neutre"
   },
   {
-   "title": "Taux de change du dollar américain aujourd'hui, 8 novembre : le dollar mondial se redresse fortement après la publication du rapport sur l'emploi aux États-Unis.",
-   "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNN0gwUHFSM1ZHUzRueWU4ck5RSWFfNjdOMEhlb21XdHB1bGJLTEFmWWtnaldBMkt3Uk9zZ2lOTjRWV3hsQVBWSllmbkJLaW42d29jOTN5NEhfUmIzZE52THdsYk5fQ2doSzVvc2FFQjRCbkhDb1NpV2NPalZyMnZCMEZXbGVpdnh5WVd2cjRldHFsQ3dpOUp5R2d6V1FYSHFITGc?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794098683000,
+   "title": "Hier à Wall Street",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNUmZ6RldVdHh0NVc1Ui1qSmFzWl9TRVRld2VMQzI3M0RIcWdMMVUydDI4QnhlVVNGbEJrZWVCcnZ0TkJqS3FQd0YyUkdHUmVMUVdnbV9EWG9RbEFXY2l2LUJvUHJoSGVWVlc0Z2UtOFQ5aDRLc3I5TnpaZHlRMVctN0JUejZjQ2lUWTBRNUN5VGVZd0hmbHZtdmJQQ09hMFhLbXNFNm5zVTkyNTZ2dzZmZHlJZFNBcXRxakw0cDJGRGltZV9TQ05zQnMySWxIZUkyMDU0?oc=5",
+   "source": "Bourse Direct",
+   "time": 1794209400000,
    "tone": "neutre"
   },
   {
-   "title": "Le prix de l'or dépasse les 4 070 dollars ; quels facteurs pourraient expliquer cette tendance à la hausse ?",
-   "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxOWHY5cWw5dFhpWVBhZDJyclMzb0pkWDllWGZwbTl4czU5OVhVS0pFVVpwQi1WSkFtckRicThqeldEem5meTV2aDVKaXp4bDRRRi04LWV1OHVfQ0VubWRIRDB1T1o3N3VUelZNQjJNcEZId3otbHpNRHo3ZWl4TWFvNGxIcGphOC14eHc?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794098682000,
-   "tone": "positif"
+   "title": "L'Europe attendue sur une note hésitante à la veille de l'inflation américaine",
+   "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQMXY5TmlPQmpGWk5fRG1UcUpYXzlhenM4dEhYU0RhcXRnejJtQnc1c3FSeHJXZmdzRDVuZUdKRXI0eTVzZTR2LTJ4NUJHSUF2Z0NoM2FQVmxET1FXVEJ5RjJaSlVOdldHak41RzlaLXcxcUpIbG0wcGdBUEFWN3pFNFNlNEpUTVM4dUFhYWtrb3FYLVZaMWtpbV9GWldWakU2RTJYc2F3Y0J3LUZFc3k2UzVRRjUyb1R4dUUw?oc=5",
+   "source": "ABC Bourse",
+   "time": 1794209127000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Jensen Huang,avoue une liaison extraconjugale avec une femme soupçonnée d'être une espionne chinoise",
+   "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQb2FyNnVVN1pKZEtnT1hKd21KV2VYR2txV3JGd2twdl9xZ1ZGdGFGNWFhMVpGSGRZWEk5SWVhZFNPWEpkTDVZXzBYWHRLc2VqY0tRLTNzUFR2cUNJaTFiR3RFYm9laDBDRWthS3JfWVdpZl85eHdjTl9odnI1c3FXVVZVa2g1Y2NxNlFWTTg2M1NrLXplVzNVVW5Iajdmek1Nd3ZWdi1Lc3hlQ25yZ1BHM2kySEp6NlR5YVB1dTNB?oc=5",
+   "source": "ABC Bourse",
+   "time": 1794209065000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Agenda des sociétés pour la journée -Cac 40",
+   "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxNdmhUU2gwZDFHRzVTaC1RTjE0bzJfdHdJdy1uOFhmcW5pM3VNT2IxallLSEtaNmg1cTBqbjdYb1pxUzdhV1g0OUhHYUxVaGlRNjNHOHlnRUFXclBqbXFXUVM4b0Fsd29ORENlWVY4LXMwY0NLV0JFdllBUkF3QndxbjJR?oc=5",
+   "source": "ABC Bourse",
+   "time": 1794207608000,
+   "tone": "neutre"
   }
  ]
 }

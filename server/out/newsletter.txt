@@ -1,9 +1,12 @@
-*Quantum Algo – dimanche 8 novembre 2026*
+*Quantum Algo – lundi 9 novembre 2026*
 
 • CAC 40 à 8 139 points : −0,8 % à la dernière séance, +5,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Hannover Re, UniCredit.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
+
+*Résultats aujourd'hui* : Hannover Re, UniCredit
 
 *À venir (fort impact)*
 mar. 10/11 14:30 🇺🇸 Inflation sous-jacente (CPI hors énergie et alimentation) (sur un mois)
@@ -15,27 +18,27 @@ jeu. 12/11 08:00 🇬🇧 Croissance du PIB (sur un mois)
 
 *Opportunités*
 • L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 421,44-428,42, stop 396,99, objectif 466,84, revoir le 10/02
+  entrée 421,44-428,42, stop 396,99, objectif 468,61, revoir le 10/02
 • Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,8 %
-  entrée 230,35-233,05, stop 203,38, objectif 274,73, revoir le 10/02
+  entrée 230,35-233,05, stop 203,38, objectif 276,03, revoir le 10/02
 • Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 177,68-179,95, stop 169,77, objectif 192,38, revoir le 10/02
+  entrée 177,68-179,95, stop 169,77, objectif 192,46, revoir le 10/02
 • TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
   entrée 78,67-80,15, stop 73,36, objectif 89,29, revoir le 03/02
 • BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
   entrée 93,17-93,94, stop 85,52, objectif 104,65, revoir le 10/02
 
 *À lire*
-• Actualités économiques de la semaine : Les cours de l’or et du pétrole fluctuent fortement ; les marchés financiers subissent une pression importante. (Vietnam.vn)
-• Marché noir : l’euro stable, le dollar en hausse face au dinar algérien ce 8 novembre (Algérie Zoom)
-• Après la baisse de la fin de semaine, le prix de l'or la semaine prochaine est confronté à un test majeur (Laodong.vn)
+• Les valeurs de l'IA toujours sous surveillance avant le rendez-vous de l'inflation américaine cette semaine (Investir Les Echos)
+• Le prix de l'or monte en flèche, la baisse du pétrole profite au marché des métaux précieux (Laodong.vn)
+• CAC40 : Une semaine marquée par le retour de la volatilité (Bourse Direct)
 
-*🎓 Question du jour* : Pourquoi les pros utilisent-ils un demi ou un quart de Kelly ?
-A. Pour payer moins d'impôts
-B. Kelly complet donne des positions et des drawdowns trop violents
-C. Kelly ne fonctionne pas
-D. C'est une obligation légale
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q60
+*🎓 Question du jour* : En crise, la diversification entre actions protège moins car…
+A. les corrélations montent vers 1
+B. les marchés ferment
+C. les dividendes sont supprimés
+D. les ETF disparaissent
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q61
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
