@@ -1,25 +1,46 @@
 {
- "updatedAt": "2026-11-09T07:50:19.654Z",
+ "updatedAt": "2026-11-10T16:03:03.945Z",
  "since": "10/10/2026",
  "byHorizon": {
   "1J": {
-   "n": 5973,
+   "n": 6208,
    "hit": 0,
    "nConf": 0,
    "hitConf": 0,
    "brier": 0.25
   },
   "1S": {
-   "n": 4124,
+   "n": 4594,
    "hit": 0,
    "nConf": 0,
    "hitConf": 0,
    "brier": 0.25
+  },
+  "1M": {
+   "n": 470,
+   "hit": 260,
+   "nConf": 131,
+   "hitConf": 82,
+   "brier": 0.24595680582978718
   }
  },
- "pending": 11863,
- "picks": [],
- "picksSummary": null,
+ "pending": 11628,
+ "picks": [
+  {
+   "d": "11/10",
+   "sym": "SCR.PA",
+   "name": "SCOR",
+   "h": "1M",
+   "p": 0.5771,
+   "ret": 8.46
+  }
+ ],
+ "picksSummary": {
+  "n": 1,
+  "avg": 8.46,
+  "winRate": 1,
+  "benchAvg": 3.52801995621635
+ },
  "changes": [
   "04/11 - 1M : nouvelle configuration adoptee (ridge alpha=0.5), 56.5 % de bonnes directions sur 120 seances test",
   "30/10 - 1J : nouvelle configuration adoptee (vote a poids egaux), 49.2 % de bonnes directions sur 120 seances test",
