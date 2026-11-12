@@ -1,42 +1,44 @@
-*Quantum Algo – mercredi 11 novembre 2026*
+*Quantum Algo – jeudi 12 novembre 2026*
 
-• CAC 40 à 8 313 points : +0,4 % à la dernière séance, +6,2 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Brenntag, Siemens Energy, E.ON, RWE, Hera, Inwit, Snam, Recruit.
+• CAC 40 à 8 370 points : +0,5 % à la dernière séance, +6,3 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• 1 annonce(s) à fort impact aujourd'hui, la première à 08:00 (Croissance du PIB (sur un mois), Royaume-Uni) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Eiffage, Cisco, Siemens, Allianz, Merck KGaA, Munich Re, Enel, DiaSorin, Poste Italiane, Terna.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : Brenntag, Siemens Energy, E.ON, RWE, Hera, Inwit, Snam, Recruit
+*Agenda (fort impact)*
+08:00 🇬🇧 Croissance du PIB (sur un mois) (prévu 0.0%)
+
+*Résultats aujourd'hui* : Eiffage, Cisco, Siemens, Allianz, Merck KGaA, Munich Re, Enel, DiaSorin, Poste Italiane, Terna
 
 *À venir (fort impact)*
-jeu. 12/11 08:00 🇬🇧 Croissance du PIB (sur un mois)
 ven. 13/11 14:30 🇺🇸 Prix à la production (sur un mois)
 ven. 13/11 14:30 🇺🇸 Prix à la production (sur un mois)
 
 *Opportunités*
-• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
-  entrée 427,22-433,60, stop 404,92, objectif 474,04, revoir le 15/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,9 %
-  entrée 243,17-245,76, stop 217,19, objectif 286,30, revoir le 15/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 180,92-183,17, stop 173,05, objectif 195,54, revoir le 15/02
+• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 428,99-435,31, stop 406,86, objectif 473,90, revoir le 16/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,0 %
+  entrée 246,20-248,78, stop 220,43, objectif 290,38, revoir le 16/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
+  entrée 182,04-184,25, stop 174,33, objectif 197,37, revoir le 16/02
 • TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,9 %
-  entrée 78,32-79,73, stop 73,30, objectif 88,38, revoir le 08/02
-• Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,5 %
-  entrée 79,37-80,66, stop 74,85, objectif 87,78, revoir le 15/02
+  entrée 79,45-80,83, stop 74,52, objectif 89,32, revoir le 09/02
+• Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 80,22-81,54, stop 75,62, objectif 88,98, revoir le 16/02
   ⚠ résultats pendant la position
 
 *À lire*
-• Wall Street ouvre globalement dans le vert grâce au rebond de la tech (Zonebourse Suisse)
-• USA: Wall Street ouvre globalement dans le vert grâce au rebond de la tech (ABC Bourse)
-• Quelques statistiques de part et d'autre de l'Atlantique au programme de ce jeudi, Eiffage présente ses chiffres du troisième trimestre (Investir Les Echos)
+• Victoria's Secret décroche à Wall Street, BofA ne fait pas dans la dentelle (Zonebourse Suisse)
+• Le vert fait place au rouge à Wall Street (Zonebourse)
+• Wall Street ouvre en baisse après le départ du directeur général de Nvidia (Zonebourse Suisse)
 
-*🎓 Question du jour* : L'aversion à la perte pousse souvent à…
-A. vendre les perdants trop tôt
-B. garder les perdants trop longtemps et vendre les gagnants trop tôt
-C. ne jamais trader
-D. diversifier davantage
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q63
+*🎓 Question du jour* : Que représente une action ?
+A. Un prêt fait à une entreprise
+B. Une part de propriété d'une entreprise
+C. Une garantie de dividende
+D. Un contrat à durée limitée
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q01
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
