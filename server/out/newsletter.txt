@@ -1,44 +1,41 @@
-*Quantum Algo – jeudi 12 novembre 2026*
+*Quantum Algo – vendredi 13 novembre 2026*
 
-• CAC 40 à 8 370 points : +0,5 % à la dernière séance, +6,3 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
-• 1 annonce(s) à fort impact aujourd'hui, la première à 08:00 (Croissance du PIB (sur un mois), Royaume-Uni) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Eiffage, Cisco, Siemens, Allianz, Merck KGaA, Munich Re, Enel, DiaSorin, Poste Italiane, Terna.
+• CAC 40 à 8 369 points : +0,1 % à la dernière séance, +5,5 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• 2 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Prix à la production (sur un mois), Etats-Unis) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Generali, ERG, Interpump, Unipol, Mitsubishi UFJ, Sumitomo Mitsui, Mizuho.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
-08:00 🇬🇧 Croissance du PIB (sur un mois) (prévu 0.0%)
+14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.3%)
+14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.4%)
 
-*Résultats aujourd'hui* : Eiffage, Cisco, Siemens, Allianz, Merck KGaA, Munich Re, Enel, DiaSorin, Poste Italiane, Terna
-
-*À venir (fort impact)*
-ven. 13/11 14:30 🇺🇸 Prix à la production (sur un mois)
-ven. 13/11 14:30 🇺🇸 Prix à la production (sur un mois)
+*Résultats aujourd'hui* : Generali, ERG, Interpump, Unipol, Mitsubishi UFJ, Sumitomo Mitsui, Mizuho
 
 *Opportunités*
-• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 428,99-435,31, stop 406,86, objectif 473,90, revoir le 16/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,0 %
-  entrée 246,20-248,78, stop 220,43, objectif 290,38, revoir le 16/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,3 %
-  entrée 182,04-184,25, stop 174,33, objectif 197,37, revoir le 16/02
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,9 %
-  entrée 79,45-80,83, stop 74,52, objectif 89,32, revoir le 09/02
+• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 430,96-437,18, stop 409,23, objectif 476,40, revoir le 17/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,6 %
+  entrée 244,80-247,25, stop 220,30, objectif 289,77, revoir le 17/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
+  entrée 183,07-185,21, stop 175,58, objectif 197,86, revoir le 17/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
+  entrée 80,98-82,34, stop 76,14, objectif 90,86, revoir le 10/02
 • Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 80,22-81,54, stop 75,62, objectif 88,98, revoir le 16/02
+  entrée 80,93-82,19, stop 76,49, objectif 89,65, revoir le 17/02
   ⚠ résultats pendant la position
 
 *À lire*
-• Victoria's Secret décroche à Wall Street, BofA ne fait pas dans la dentelle (Zonebourse Suisse)
-• Le vert fait place au rouge à Wall Street (Zonebourse)
-• Wall Street ouvre en baisse après le départ du directeur général de Nvidia (Zonebourse Suisse)
+• Wall Street efface ses gains initiaux, les retombées de Nvidia faisant vaciller les valeurs technologiques (Zonebourse Suisse)
+• Wall Street efface ses gains initiaux alors que les répercussions de la chute de Nvidia ébranlent les valeurs (Boursorama)
+• Wall Street recule sous la pression du secteur technologique (Boursorama)
 
-*🎓 Question du jour* : Que représente une action ?
-A. Un prêt fait à une entreprise
-B. Une part de propriété d'une entreprise
-C. Une garantie de dividende
-D. Un contrat à durée limitée
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q01
+*🎓 Question du jour* : Qu'est-ce que le « spread » ?
+A. L'écart entre le prix acheteur (bid) et le prix vendeur (ask)
+B. Les frais de garde annuels
+C. La variation du jour
+D. Le dividende annuel
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q02
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
