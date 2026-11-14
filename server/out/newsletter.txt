@@ -1,41 +1,34 @@
-*Quantum Algo – vendredi 13 novembre 2026*
+*Quantum Algo – samedi 14 novembre 2026*
 
-• CAC 40 à 8 369 points : +0,1 % à la dernière séance, +5,5 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 2 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Prix à la production (sur un mois), Etats-Unis) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Generali, ERG, Interpump, Unipol, Mitsubishi UFJ, Sumitomo Mitsui, Mizuho.
+• CAC 40 à 8 369 points : +0,1 % à la dernière séance, +5,5 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché normal.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.3%)
-14:30 🇺🇸 Prix à la production (sur un mois) (prévu 0.4%)
-
-*Résultats aujourd'hui* : Generali, ERG, Interpump, Unipol, Mitsubishi UFJ, Sumitomo Mitsui, Mizuho
-
 *Opportunités*
 • L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 430,96-437,18, stop 409,23, objectif 476,40, revoir le 17/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,6 %
-  entrée 244,80-247,25, stop 220,30, objectif 289,77, revoir le 17/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
-  entrée 183,07-185,21, stop 175,58, objectif 197,86, revoir le 17/02
+  entrée 430,95-437,22, stop 408,99, objectif 476,34, revoir le 17/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,7 %
+  entrée 244,80-247,25, stop 220,30, objectif 288,63, revoir le 17/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 183,00-185,14, stop 175,50, objectif 198,07, revoir le 17/02
 • TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
-  entrée 80,98-82,34, stop 76,14, objectif 90,86, revoir le 10/02
-• Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 80,93-82,19, stop 76,49, objectif 89,65, revoir le 17/02
+  entrée 81,20-82,56, stop 76,33, objectif 90,93, revoir le 10/02
+• Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
+  entrée 80,87-82,14, stop 76,44, objectif 89,64, revoir le 17/02
   ⚠ résultats pendant la position
 
 *À lire*
-• Wall Street efface ses gains initiaux, les retombées de Nvidia faisant vaciller les valeurs technologiques (Zonebourse Suisse)
-• Wall Street efface ses gains initiaux alors que les répercussions de la chute de Nvidia ébranlent les valeurs (Boursorama)
-• Wall Street recule sous la pression du secteur technologique (Boursorama)
+• Marché noir des devises : le dollar repart à la hausse face au dinar algérien (Maghreb Émergent)
+• HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris (Boursorama)
+• CLARIANE Cours Action CLARI, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Qu'est-ce que le « spread » ?
-A. L'écart entre le prix acheteur (bid) et le prix vendeur (ask)
-B. Les frais de garde annuels
-C. La variation du jour
-D. Le dividende annuel
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q02
+*🎓 Question du jour* : Un ordre « à cours limité » à 50 € pour acheter…
+A. s'exécute au prix du marché, quel qu'il soit
+B. ne s'exécute qu'à 50 € ou moins
+C. s'exécute seulement à 50 € ou plus
+D. se transforme en stop automatique
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q03
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
