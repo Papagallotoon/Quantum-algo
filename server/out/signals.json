@@ -1,6 +1,6 @@
 {
- "date": "2026-11-14",
- "dateLabel": "samedi 14 novembre 2026",
+ "date": "2026-11-15",
+ "dateLabel": "dimanche 15 novembre 2026",
  "picks": [
   {
    "sym": "OR.PA",
@@ -14,19 +14,19 @@
    "zoneLo": 430.94790720572786,
    "zoneHi": 437.222837358058,
    "stop": 408.98565167257254,
-   "target": 476.34428936985717,
-   "rr": 1.6836409355199025,
-   "pTarget": 0.3315,
+   "target": 477.1594625615409,
+   "rr": 1.7161183166179634,
+   "pTarget": 0.32525,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-27T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.07616949316242144,
+   "expectancy": 0.060219748732005585,
    "price": 451.20001220703125,
    "chg": 0.9734823865053199,
    "sizePct": 17.294430445600373,
    "riskPct": 5.782208342422723,
-   "gainPct": 9.735162663007577,
+   "gainPct": 9.922953646932827,
    "perf": {
     "w1": 0.311254880404066,
     "m1": 10.900824735942516,
@@ -90,28 +90,13 @@
    "fund": {
     "pe": 38.302208,
     "fpe": 29.576878,
-    "yield": 1.61,
+    "yield": 1.6,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 455.75,
     "lo52": 338.85
    },
-   "news": [
-    {
-     "title": "STMICROELECTRONICS Cours Action STMPA, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE50aEdVR1RKdDMyaW5mbzVJUlVoSWhzU0d2VUZCZHZkRjdjVlVzQkptT0FVdkp4MVFwUzNwSXFMRS1SNThZSXFkTkxtVDRISkV0Tkh3Ng?oc=5",
-     "source": "Boursorama",
-     "time": 1794649784000,
-     "tone": "neutre"
-    },
-    {
-     "title": "DASSAULT AVIATION Cours Action AM, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5CNHFIRnpybGtzVmJtc2tvSWs0cDBnT0ZzZWs1aF9hNmJqRU1KVzk5RGlXTmhmXzlaWFBiTE94OUtxVEU0ajEyRXBGRDdTbEtM?oc=5",
-     "source": "Boursorama",
-     "time": 1794649667000,
-     "tone": "neutre"
-    }
-   ],
+   "news": [],
    "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Ordre limite entre 430,95 et 437,22. Le cours est etire (2,2 ATR au-dessus de l'EMA 20) : mieux vaut attendre un repli."
   },
@@ -127,19 +112,19 @@
    "zoneLo": 244.8000030517578,
    "zoneHi": 247.2503550863568,
    "stop": 220.29648270576794,
-   "target": 288.6319236406497,
-   "rr": 1.7888009547193573,
-   "pTarget": 0.336,
+   "target": 290.0175525415314,
+   "rr": 1.8453491111196068,
+   "pTarget": 0.32625,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-20T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.973384004396012,
+   "expectancy": 0.9778884704413,
    "price": 243.4499969482422,
    "chg": -0.5514730746266294,
    "sizePct": 9.990401362546285,
    "riskPct": 10.009607859689902,
-   "gainPct": 17.90519609577968,
+   "gainPct": 18.471220966534588,
    "perf": {
     "w1": 6.472776491067012,
     "m1": -5.639536066572792,
@@ -203,28 +188,13 @@
    "fund": {
     "pe": 29.260818,
     "fpe": 19.331861,
-    "yield": 1.72,
+    "yield": 1.73,
     "rating": "1.5 - Buy",
     "target": null,
     "hi52": 312.3,
     "lo52": 220.4
    },
-   "news": [
-    {
-     "title": "GTT (GAZTRANSPORT ET TEC.) Cours Action GTT, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KMlhiQU9RYjJ2X0RHeE5JS3VXM252aWhLRFdJZzhPR05HSkhLUXhtV2lPRkFXSjNoRkJfOWNBSkMyTWJNZklZLVZRNkJTdWxZLVE?oc=5",
-     "source": "Boursorama",
-     "time": 1794656222000,
-     "tone": "neutre"
-    },
-    {
-     "title": "THALES Cours Action HO, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBpRFpKYkphLVVKSlV6Z1NNTUNMdXlwV0lwQ2NOUm93YXNaOTVRcWtmSDN5ZmE3cmVGcDdPeE54aG9KQUs1NFplU19ZZ2Qyc0VZ?oc=5",
-     "source": "Boursorama",
-     "time": 1794653584000,
-     "tone": "neutre"
-    }
-   ],
+   "news": [],
    "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 244,80 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
@@ -240,19 +210,19 @@
    "zoneLo": 182.995549123517,
    "zoneHi": 185.1366472828879,
    "stop": 175.5017055657188,
-   "target": 198.06803560984676,
-   "rr": 1.6349013875615936,
-   "pTarget": 0.33225,
+   "target": 197.9517397928698,
+   "rr": 1.6213223958105654,
+   "pTarget": 0.3385,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-27T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.2599880809371183,
+   "expectancy": 0.2882293275534233,
    "price": 193.32000732421875,
    "chg": 0.24891671616040778,
    "sizePct": 21.49202004093123,
    "riskPct": 4.65288976138825,
-   "gainPct": 7.607015927064784,
+   "gainPct": 7.5438343753764485,
    "perf": {
     "w1": 2.9502655133325506,
     "m1": 11.719842131842672,
@@ -322,22 +292,7 @@
     "hi52": 194.6,
     "lo52": 140.78181
    },
-   "news": [
-    {
-     "title": "HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IUk5rZ0h4RXBVdzUxNU9kME9md3hMa1MtV3lJbXVpOXlBazZnRWxRY2wxck10cjhEWUMxMnl1VloxYlpjbklCcUZhWlA3RVA1eEE?oc=5",
-     "source": "Boursorama",
-     "time": 1794657165000,
-     "tone": "neutre"
-    },
-    {
-     "title": "GTT (GAZTRANSPORT ET TEC.) Cours Action GTT, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5KMlhiQU9RYjJ2X0RHeE5JS3VXM252aWhLRFdJZzhPR05HSkhLUXhtV2lPRkFXSjNoRkJfOWNBSkMyTWJNZklZLVZRNkJTdWxZLVE?oc=5",
-     "source": "Boursorama",
-     "time": 1794656222000,
-     "tone": "neutre"
-    }
-   ],
+   "news": [],
    "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Ordre limite entre 183,00 et 185,14. Le cours est etire (3,4 ATR au-dessus de l'EMA 20, RSI 82) : mieux vaut attendre un repli."
   },
@@ -355,12 +310,12 @@
    "stop": 76.33060812362888,
    "target": 90.92908323691996,
    "rr": 1.5,
-   "pTarget": 0.337,
+   "pTarget": 0.32475,
    "holdDays": 63,
    "reviewDate": "2027-02-10T08:00:00.000Z",
    "validUntil": "2026-11-17T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.894875585029361,
+   "expectancy": 0.7061388296758326,
    "price": 82.16999816894531,
    "chg": 1.9099602728338994,
    "sizePct": 14.07167487207862,
@@ -429,7 +384,7 @@
    "fund": {
     "pe": 9.532482,
     "fpe": 7.9620194,
-    "yield": 4.46,
+    "yield": 4.38,
     "rating": "1.9 - Buy",
     "target": null,
     "hi52": 85.94,
@@ -437,24 +392,24 @@
    },
    "news": [
     {
-     "title": "VALLOUREC Cours Action VK, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE81dFRQMXV6RUpQQmtqcGVSTFhJa2dsVVlfdElHcXlkOXZraS12QlFTYmY5NkVqYVBuTFRtLW0wbU1jbUdOOF9TY1FFSm0xTjJp?oc=5",
-     "source": "Boursorama",
-     "time": 1794653982000,
+     "title": "Prévision action TotalEnergies SE (TTE) 2026–2030",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5cHNIOWdoUkJrdFdLWklRUjRjTHd2RGRMZU5TMnhySXNDNXZ6VnVyVkQzdXRoX2pHdjVld29IS2tCb0NQLURtbmprOG5ueGdQS0sxRXBnUXV2YkRVaE5tU01R?oc=5",
+     "source": "CoinCodex",
+     "time": 1794689940000,
      "tone": "neutre"
     },
     {
-     "title": "[Action] Des milliards de profits pour TotalEnergies, des miettes pour les services publics et la transition écologique",
-     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSVFSNVU2Ni1XVE5RS0syc2k0ZnJzbkVHQ3VndFNuNk5fc281clozc3ljRUI5elFBX1VIZUZuTjhfQVkyTXZZbzNzM3ptNFg4emx4VFh0Q1I4T090dlVMS2FyRlcxWHBUY0FrWjUtYkZjejNibWJxaEp5c0M0X08xSG1rVWxhQXNRaEdORTlSejRzUTZxR0N3Q3A3UDhvaG84ZzRrMUpJNklXX0FiNXpzYVhxd1RrZDJxV3Rld3EzRnVxS0MtSkQ4cjI4ZkNYVUFRRWc?oc=5",
-     "source": "Attac France",
-     "time": 1794643986000,
+     "title": "CAC 40, Total, Airbus, Axa, Thales, Dassault, SpaceX… les actions en Bourse au programme de Momentum",
+     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNdS1ETk0xLW5oWlJsLXA1bVJtRkNyREp0dlpvQWlXZlhEcmJkdDJXYUZEaGctZDNaTFFvemRqMjRHMTExVmRCNVhFUUFKbnRNbDR6Q25naHFZU0Yzb1ZoblhiemVzbGdfU090bXBVUGQ4TjNqUGxyQ0M3UUg3WDA1emF5dm94VXNMdTh5QkVyR0EwcFdCTFBxdlRqWFBsOGRiMGl6cFFjNFRHcEh2OHh2SERRM0lVa05pRk9rZ3pwVGpxZnRVZVBPb1EtUXRDa1V4UUhaQXlaOFltMFpP?oc=5",
+     "source": "Capital.fr",
+     "time": 1794641400000,
      "tone": "neutre"
     }
    ],
    "ctx": {
-    "title": "[Action] Des milliards de profits pour TotalEnergies, des miettes pour les services publics et la transition écologique",
-    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSVFSNVU2Ni1XVE5RS0syc2k0ZnJzbkVHQ3VndFNuNk5fc281clozc3ljRUI5elFBX1VIZUZuTjhfQVkyTXZZbzNzM3ptNFg4emx4VFh0Q1I4T090dlVMS2FyRlcxWHBUY0FrWjUtYkZjejNibWJxaEp5c0M0X08xSG1rVWxhQXNRaEdORTlSejRzUTZxR0N3Q3A3UDhvaG84ZzRrMUpJNklXX0FiNXpzYVhxd1RrZDJxV3Rld3EzRnVxS0MtSkQ4cjI4ZkNYVUFRRWc?oc=5",
-    "source": "Attac France",
+    "title": "Prévision action TotalEnergies SE (TTE) 2026–2030",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5cHNIOWdoUkJrdFdLWklRUjRjTHd2RGRMZU5TMnhySXNDNXZ6VnVyVkQzdXRoX2pHdjVld29IS2tCb0NQLURtbmprOG5ueGdQS0sxRXBnUXV2YkRVaE5tU01R?oc=5",
+    "source": "CoinCodex",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    },
@@ -472,19 +427,19 @@
    "zoneLo": 80.87458913309497,
    "zoneHi": 82.14195168726052,
    "stop": 76.43882019351558,
-   "target": 89.64478831839763,
-   "rr": 1.6050099242471998,
-   "pTarget": 0.3255,
+   "target": 89.11244573517098,
+   "rr": 1.4999999999999987,
+   "pTarget": 0.352,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-27T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.01074231450747326,
+   "expectancy": 0.196178811907805,
    "price": 87.5999984741211,
    "chg": -0.43192187805543014,
    "sizePct": 16.078325444893036,
    "riskPct": 6.219553170679416,
-   "gainPct": 9.982444563323599,
+   "gainPct": 9.329329756019114,
    "perf": {
     "w1": 4.60950645906526,
     "m1": 21.396887511688334,
@@ -548,7 +503,7 @@
    "fund": {
     "pe": 25.317919,
     "fpe": 9.2603655,
-    "yield": 4.68,
+    "yield": 4.7,
     "rating": "2.1 - Buy",
     "target": null,
     "hi52": 90.07,
@@ -557,18 +512,11 @@
    "earningsWarning": "Résultats prévus le 28/01/2027 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "JOHNSON&JOHNSON Cours Action JNJ, Cotation Bourse NYSE",
-     "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTFBjQ2V5RXJTdlNPbG80bXJNMm91T0tvZVMzanFmUzNkbS1NN1dYenlGYVZxZmpLYUZmaTIyeHlmNjhRbGhiMlFiWkIyY3VaUQ?oc=5",
-     "source": "Boursorama",
-     "time": 1794655407000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Windward Bio réussit ses débuts à Wall Street...",
-     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOOVJ6MllTdWFOd3VHSDNuTjRDNmtxWXlOZl9Tb1JLbkhpakJuXzJMenM4WDIyNi1wRTRZNWFQc01BQUtmdzBROTZnWDUzZk43RFZWeWpqdUtLSDFEWGstaW9ORnNibXcyVkk3WFloQTJSQ09FaWhnWlpXaWFETUtwb1NQcTdReDNLRE1NSVFlLWZ1U3NZVFHSAZsBQVVfeXFMTjlzQXU3UzRheFlUdFI1ajJUUDduZEtWVFhXUFNqQTg5SlcxODI1M0xnZVA5WFQtZHBUNzg1V0ZwbzV6TzRWSXdIX1FLMU5FRUNUYXMxMVBNTktWS21EV21lRFFmVzFyOUl4Qmo0dUM2YUhZdy04cm02eTNXanFDbkR4UDhNSFJzbjV3a2k5LUkzXzFoU3JCLWlKUXM?oc=5",
-     "source": "Fortuneo",
-     "time": 1794600480000,
-     "tone": "neutre"
+     "title": "CAC 40 : cinq séances de hausse, mais des valeurs à contre-courant",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPY3VsNTRIRXFaMEpnbzVxN1dyN0VzdnV3V3oyaHRGdGJNU3AzVEQxT0ZhOW5vVGRBRXBuRVBPcG1Cb205dFl4VEEwaG14RFhVUkNMZWVRMjBIZXRuRVYzc2QwYjU4T0Ftd1BpQmF2UDdJd2lkLTNHdjhyOURJSVdtRHBhV3RLYjZsVGF6MEhHSjB4SmJxci15UWpfdVl2S0I5UlFfVHpmaUdJZw?oc=5",
+     "source": "Actu Crypto .info",
+     "time": 1794736080000,
+     "tone": "positif"
     }
    ],
    "ctx": null,
@@ -663,8 +611,262 @@
  ],
  "agenda": {
   "today": [],
-  "tomorrow": [],
-  "week": [],
+  "tomorrow": [
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.1%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Median CPI y/y",
+    "original": "Median CPI y/y",
+    "impact": "fort",
+    "forecast": "2.0%",
+    "previous": "1.9%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Trimmed CPI y/y",
+    "original": "Trimmed CPI y/y",
+    "impact": "fort",
+    "forecast": "1.9%",
+    "previous": "1.8%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "18:00",
+    "ts": 1794848400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Fed Chairman Warsh Speaks",
+    "original": "Fed Chairman Warsh Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "23:50",
+    "ts": 1794869400000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "RBA Gov Bullock Speaks",
+    "original": "RBA Gov Bullock Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   }
+  ],
+  "week": [
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.1%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Median CPI y/y",
+    "original": "Median CPI y/y",
+    "impact": "fort",
+    "forecast": "2.0%",
+    "previous": "1.9%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "14:30",
+    "ts": 1794835800000,
+    "cur": "CAD",
+    "country": "Canada",
+    "flag": "🇨🇦",
+    "title": "Trimmed CPI y/y",
+    "original": "Trimmed CPI y/y",
+    "impact": "fort",
+    "forecast": "1.9%",
+    "previous": "1.8%"
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "18:00",
+    "ts": 1794848400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Fed Chairman Warsh Speaks",
+    "original": "Fed Chairman Warsh Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-16",
+    "dayLabel": "lun. 16/11",
+    "time": "23:50",
+    "ts": 1794869400000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "RBA Gov Bullock Speaks",
+    "original": "RBA Gov Bullock Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-17",
+    "dayLabel": "mar. 17/11",
+    "time": "14:30",
+    "ts": 1794922200000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Ventes au détail hors automobile (sur un mois)",
+    "original": "Core Retail Sales m/m",
+    "impact": "fort",
+    "forecast": "0.4%",
+    "previous": "0.9%"
+   },
+   {
+    "day": "2026-11-17",
+    "dayLabel": "mar. 17/11",
+    "time": "14:30",
+    "ts": 1794922200000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Ventes au détail (sur un mois)",
+    "original": "Retail Sales m/m",
+    "impact": "fort",
+    "forecast": "0.2%",
+    "previous": "0.8%"
+   },
+   {
+    "day": "2026-11-18",
+    "dayLabel": "mer. 18/11",
+    "time": "08:00",
+    "ts": 1794985200000,
+    "cur": "GBP",
+    "country": "Royaume-Uni",
+    "flag": "🇬🇧",
+    "title": "Inflation (indice des prix à la consommation) (sur un an)",
+    "original": "CPI y/y",
+    "impact": "fort",
+    "forecast": "3.6%",
+    "previous": "3.5%"
+   },
+   {
+    "day": "2026-11-18",
+    "dayLabel": "mer. 18/11",
+    "time": "08:30",
+    "ts": 1794987000000,
+    "cur": "GBP",
+    "country": "Royaume-Uni",
+    "flag": "🇬🇧",
+    "title": "BOE Gov Bailey Speaks",
+    "original": "BOE Gov Bailey Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-18",
+    "dayLabel": "mer. 18/11",
+    "time": "16:00",
+    "ts": 1795014000000,
+    "cur": "GBP",
+    "country": "Royaume-Uni",
+    "flag": "🇬🇧",
+    "title": "BOE Gov Bailey Speaks",
+    "original": "BOE Gov Bailey Speaks",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-18",
+    "dayLabel": "mer. 18/11",
+    "time": "20:00",
+    "ts": 1795028400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Compte rendu de la dernière réunion de la Fed",
+    "original": "FOMC Meeting Minutes",
+    "impact": "fort",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-19",
+    "dayLabel": "jeu. 19/11",
+    "time": "01:30",
+    "ts": 1795048200000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Employment Change",
+    "original": "Employment Change",
+    "impact": "fort",
+    "forecast": "25.2K",
+    "previous": "-39.3K"
+   },
+   {
+    "day": "2026-11-19",
+    "dayLabel": "jeu. 19/11",
+    "time": "01:30",
+    "ts": 1795048200000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Taux de chômage",
+    "original": "Unemployment Rate",
+    "impact": "fort",
+    "forecast": "4.7%",
+    "previous": "4.7%"
+   }
+  ],
   "ok": true
  },
  "earnings": {
@@ -812,9 +1014,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 65977.359375,
-   "chg": -3.3288472507777334,
-   "m1": -18.335590157725
+   "last": 64600.98828125,
+   "chg": 0.7374892800239063,
+   "m1": -19.27299063474408
   }
  ],
  "movers": {
@@ -1027,9 +1229,9 @@
    "action": "ENTRER",
    "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
    "ctx": {
-    "title": "[Action] Des milliards de profits pour TotalEnergies, des miettes pour les services publics et la transition écologique",
-    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxNSVFSNVU2Ni1XVE5RS0syc2k0ZnJzbkVHQ3VndFNuNk5fc281clozc3ljRUI5elFBX1VIZUZuTjhfQVkyTXZZbzNzM3ptNFg4emx4VFh0Q1I4T090dlVMS2FyRlcxWHBUY0FrWjUtYkZjejNibWJxaEp5c0M0X08xSG1rVWxhQXNRaEdORTlSejRzUTZxR0N3Q3A3UDhvaG84ZzRrMUpJNklXX0FiNXpzYVhxd1RrZDJxV3Rld3EzRnVxS0MtSkQ4cjI4ZkNYVUFRRWc?oc=5",
-    "source": "Attac France",
+    "title": "Prévision action TotalEnergies SE (TTE) 2026–2030",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFA5cHNIOWdoUkJrdFdLWklRUjRjTHd2RGRMZU5TMnhySXNDNXZ6VnVyVkQzdXRoX2pHdjVld29IS2tCb0NQLURtbmprOG5ueGdQS0sxRXBnUXV2YkRVaE5tU01R?oc=5",
+    "source": "CoinCodex",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    }
@@ -1045,60 +1247,60 @@
  ],
  "news": [
   {
-   "title": "Marché noir des devises : le dollar repart à la hausse face au dinar algérien",
-   "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPbXAtemJjdHZWbk9uMVFlY1pLanhIY2VVb1JrOXJ3VWZ2ZTJYa0d3c1dzcXdHbXp6WjN0ckd5QW1ocUFxbUJNUHVOVXRpbDBsb3gtX2FGMWhkY29DdHpIMkRlUDdpSGt6b2Q1RkRqXzJZdDRLbDF0YWJlRTZhUjRRT3ZxYVdvbHF5ZThrcUMtS3dsTnBsYTlWV2ZJNkFZQWtVam1YM1RiNWFydW1X?oc=5",
-   "source": "Maghreb Émergent",
-   "time": 1794659565000,
+   "title": "La semaine à venir à Wall Street-Les résultats de Nvidia et l'introduction en bourse d'Anthropic constituent d",
+   "link": "https://news.google.com/rss/articles/CBMi4AJBVV95cUxOU201am5FX20yMDB1TjZmZGU1U3NMd2pJaDFGcHFUMkRUaG5penBUREtDdEhLaGxkYzZMd1BEYjhSM3U2VHVXLUlQWDRHQmJSMGZ1cDFuMWx6MFJFRkJnLVl0czdIaGF1NUotUThMSWdEbTdOSnVLLS1zUWg4amlZUjN2ZzQ3YVZRZ2RLQlZXcXVYUWlWc2pPczIzSlZlWTVjNU1ub0NJV1IxWjBYaGRpVTZOSDI1YmJWRk5BOTRhVTBxM1BMNk1kWWVOQTNaWUVfS0Q4dzRhMGNJQ01mOVJ1UVJ3MnNka0l3OUt2NGNvLVBLNm14aFU4ZTlaMlltM1M4RlhkQzdObi14bTRNX1FBUjNQTGdCbXBYdWtMWFN2X1FIejVMTTBnTXR6RDZsanVTVkdoMnlnV0tyeU5SSWtBel9xaVVwWjBnaE1yTzZNNkVTdkRFOFJFRkdnQ3RBc3Ny0gHmAkFVX3lxTFB3Rl9ZNl8tYi1ObklCTkg2cUNZM3NDMFdWTW1oS1ZwSFFEMThGem5remlzZFVhRDFhaW1rbTlFM1ZVSDVCSEFSOXNJNkNLX2M5UkxuTHU1WWJRNWhIdDc4ODB3MW5yR0Y1UDBjTUJLQTFZZXpaMDV6MmtUQjZldWJvNll2YXNveGFZQ2ZoX3VQS096dVJBZFVyanQ1QkR3VVFmUWpXMkw4Zk1hdi1mcGM0QTFCdmlObWUybnk2bWpoa0xCNHIzZDZrRV9zVjZfZHNSTVdtUExpUTlSN0tjMjF3QmUyTkVRMXFaazdYZzRGRkJaWUxLZ0hNeDdkMmF6a3VNbUNoWEFsZVJOdnZTQURPbGI0clJoRkE4YW5TRm1XeDUybnZBbm1DZzdLOHY0WmZKUWtFNFphMEJtSlRCNDQ0aFd2SnVELTdTSGdKd3RrS1NNVTBiWV9RVE9jYlNNZkRoUFlXY1E?oc=5",
+   "source": "Boursorama",
+   "time": 1794751255000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Et si la déroute de l'IA en Bourse était finalement une aubaine pour l'introduction d'Anthropic à Wall Street?",
+   "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxObUxmZlFZRGNPTHhGbUZRWHVONWQyYldISEF2ZXgtM0lUM25selNXbDdnZ0gtbzJEUl80TTdrYTN1R25WSk5pakdfZnpLeW5sLV9nTDQxdlJjVkN6eEswVWhXcmt0TXQ0YktyTVFvZU5zSktsSm9fUUNMQzFzX1RHVGVUNXdvT3VsNkd6TEx4Nk9SdXZuZFQ5a1FFazZmNGMyVWdKQlNJNjIxR0tGY25kczJLRkRxR1padUh2QXZvZS11VHNVdDlhUXNoUFZSQkJNZFpqRDFnQlpaR204UW5rdVQ1N2xOaW9oc0JmVC1CczVMZWtWck1udnc1UndpSV94eGt6dy1fRFVkX2ZETlJB?oc=5",
+   "source": "BFM Bourse",
+   "time": 1794740400000,
+   "tone": "neutre"
+  },
+  {
+   "title": "«Le marché a rejoint notre prévision vers 1,10 pour l’euro-dollar»",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQeXNhZDMwNDhCLUw5VFE2NkF1eVlTcmJvQjRTS0RUdXFfeGpMcWhSd2JlUHpzcHpudnMxZ29CS2N6YnZtWjlNN3dpbFJsbTFuR3VUbEV2X3lTamdUUjVlWFFOamFRNWZhdjhJaFlTMVNMQ2F1ZlNMTVVMeHpuQ2Jjc3Q4aWhRNFJ5LXFLQXVuWF9TMGNHeHduYlZJMm1ZYlNlNlNpNnhSdi1iUQ?oc=5",
+   "source": "L'Agefi",
+   "time": 1794736800000,
+   "tone": "neutre"
+  },
+  {
+   "title": "CAC 40 : cinq séances de hausse, mais des valeurs à contre-courant",
+   "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPY3VsNTRIRXFaMEpnbzVxN1dyN0VzdnV3V3oyaHRGdGJNU3AzVEQxT0ZhOW5vVGRBRXBuRVBPcG1Cb205dFl4VEEwaG14RFhVUkNMZWVRMjBIZXRuRVYzc2QwYjU4T0Ftd1BpQmF2UDdJd2lkLTNHdjhyOURJSVdtRHBhV3RLYjZsVGF6MEhHSjB4SmJxci15UWpfdVl2S0I5UlFfVHpmaUdJZw?oc=5",
+   "source": "Actu Crypto .info",
+   "time": 1794736080000,
    "tone": "positif"
   },
   {
-   "title": "HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IUk5rZ0h4RXBVdzUxNU9kME9md3hMa1MtV3lJbXVpOXlBazZnRWxRY2wxck10cjhEWUMxMnl1VloxYlpjbklCcUZhWlA3RVA1eEE?oc=5",
-   "source": "Boursorama",
-   "time": 1794657165000,
-   "tone": "neutre"
-  },
-  {
-   "title": "CLARIANE Cours Action CLARI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5hemZlLUdBX19oU3ZtTzZiM0tta2dkdXNsRmpNZmRmMFF6QlQ5SExTM2UzUENzbVBNbzEzbGhqaTRDanRkWVBia0VqM09SbmtuV1EtbA?oc=5",
-   "source": "Boursorama",
-   "time": 1794656935000,
-   "tone": "neutre"
-  },
-  {
-   "title": "BUREAU VERITAS Cours Action BVI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaUXFaMUFxNnd6VnpWMFc1dnAyWGJ2aFVMaVYyNS1TajFvZU1EeXUyM3p1anJ1Qm9ORDE5V3RTWDlUekpmZkU5TjhQNjdqejEwNlE?oc=5",
-   "source": "Boursorama",
-   "time": 1794656692000,
-   "tone": "neutre"
-  },
-  {
-   "title": "DANONE Cours Action BN, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1oMFc5d0lZMmZIRGlUcE12WENWbi1WQkpSZlZIWVlYR3VKc0hxQmpDWS1fanlJamFPcEhmcFpvRFJUZXdlUHYtYVBQV0JRckdx?oc=5",
-   "source": "Boursorama",
-   "time": 1794656467000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Wall Street prédit trois hausses de taux d'intérêt consécutives par la Fed",
-   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxNZ0E4aGZOVU5nUHlwbnI2cXhKRndQeU8zTjFqRWVGNnFoMmJuNHVVSGZPdE9VcU9sNmJFZ3Y3WFZZSHI3elZkY2FXSUx3cDZhS3FSbnVwcWZaeXhaVTM5YVN5WHlpSzFGMnE1OEhyalpWTFdEMFJadGkwZFVhbGxON01kS0lVU2dxdHRpNjRIUGM1ZWhTRlkxQ1l0TEF0ejByVGVFc01ZeTdSTERHTlZ0akQ1UnpGZGd2RFFMaTNmbXZTTWIyWlJ0R0NRTnFlWUtKUUpv?oc=5",
-   "source": "IDNFinancials",
-   "time": 1794650400000,
-   "tone": "positif"
-  },
-  {
-   "title": "Le marché mondial du pétrole connaît un excédent pour la première fois depuis le début du conflit en Iran.",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQLUc1cnNpV29ZdUx2ZFNWTnJHTnU1VjRCMzRoUFpPbzV2NVZReklIcFozYnNfcEZXVzB5NVVPcW5ZSjQ0a3BuR3RQWF9UaWVqYXFXTVlxdmZIWDRvV24yRDM3STBPNl9QQ1Q4eDZpb1ljQjdYQWNZbl83eFdRRDRSVXVkYzVaYmw5Q0RCNXZjLVBBZnd0X3BpMGJRU2xQZm1ZOXk4bw?oc=5",
-   "source": "Vietnam.vn",
-   "time": 1794647451000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Dollar américain : la hausse portée par la Fed se poursuit – ING",
-   "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOUlhBX2xHVC0xUFk2TDlxZDM4WG1FM0J3M1k4Vzd1Z2pMd0V6TWc3TEl3aGFsNl8xM2ZjZjZNUU5PN2xFLTNiWDdqb1RuTkwyaGdzSDM4UnZURHhrVlB6dVpmLU92ZWtYR0NZUGNBTXQycTRQVkxZbnljelZEaWFuVjd1OGx0TkZfSWMtMkY0MkJwNWNkNXE4MGRib01hVjZYOG5Tbkpn?oc=5",
+   "title": "Fed : dirigeants pro-hausses, Nagel signale hausse BCE | 14 nov. 2026",
+   "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE0xU0MzNUVwQklYTkJxTFp3d09jcGJnRmUwemxTOWxETUNtUUc1b0EwdXpkZHlNcE9OSWJ1M250WGhZWmI0REVGQV9JQzFQNHI2TXIyUlBTQlRfb1lubDczSGQzQjhVRWtrRURxbHE4cTNYUjJmRjRZQUdqcl8?oc=5",
    "source": "www.tmgm.com",
-   "time": 1794641195000,
+   "time": 1794728524000,
    "tone": "positif"
+  },
+  {
+   "title": "FNAC DARTY Cours Action FNAC, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5vSmliMnZrbGVMd3BSdldjV0NaV1JCcC1mVXptbFBfNGZtZ0lGa1dEZnJsMlk3YmNHNk53UUZrSllpZUp3UUJWUEVxLV9qUkNMVS0w?oc=5",
+   "source": "Boursorama",
+   "time": 1794724810000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Le vice-président de la Fed a déclaré que la maîtrise de l'inflation était une priorité.",
+   "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxQYmgzdHlsSjAzMXNVQzRvTV90cWJXMjlVZUhYa1I4STVyMllJLWE3d2EtM0l4N0JDbFJoa1FQRVhmZm5vLW92eS1WekRVWHpKbzlfSDdQeWdKS0RkcnlDNUxtTHRDWERiQXNpZnpSaWZiZVA2UlBVS29rQ09KMHpsQ1JMeFU?oc=5",
+   "source": "Vietnam.vn",
+   "time": 1794717648000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Les prix mondiaux du pétrole sont revenus à une situation de surproduction.",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTFBzR3paQzQ3WFJZblgtSlhzZmpjSmZCSmIxZnRZQTc2a2hwYUg3TlN4aWYwb2NzTXNxcWVMM0h6YkVfRFJNNFZsQUMtRDlxcHMtMFJQVHpIb3Y2RnJEZmlIQm5JYzJDNWdzSC1TWU5rZFRoNUlaSThZ?oc=5",
+   "source": "Vietnam.vn",
+   "time": 1794717648000,
+   "tone": "neutre"
   }
  ]
 }
