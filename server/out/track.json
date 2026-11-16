@@ -1,9 +1,9 @@
 {
- "updatedAt": "2026-11-15T15:16:54.050Z",
+ "updatedAt": "2026-11-16T17:52:52.668Z",
  "since": "10/10/2026",
  "byHorizon": {
   "1J": {
-   "n": 7017,
+   "n": 7252,
    "hit": 0,
    "nConf": 0,
    "hitConf": 0,
@@ -17,14 +17,14 @@
    "brier": 0.25
   },
   "1M": {
-   "n": 1253,
-   "hit": 634,
-   "nConf": 284,
-   "hitConf": 160,
-   "brier": 0.24887638532322387
+   "n": 1488,
+   "hit": 743,
+   "nConf": 320,
+   "hitConf": 176,
+   "brier": 0.24934789142473102
   }
  },
- "pending": 12650,
+ "pending": 13120,
  "picks": [
   {
    "d": "11/10",
@@ -39,7 +39,7 @@
   "n": 1,
   "avg": 8.46,
   "winRate": 1,
-  "benchAvg": 3.094611637079791
+  "benchAvg": 2.859703051060236
  },
  "changes": [
   "04/11 - 1M : nouvelle configuration adoptee (ridge alpha=0.5), 56.5 % de bonnes directions sur 120 seances test",
