@@ -1,48 +1,48 @@
-*Quantum Algo – lundi 16 novembre 2026*
+*Quantum Algo – mardi 17 novembre 2026*
 
-• CAC 40 à 8 352 points : −0,2 % à la dernière séance, +5,0 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 5 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Inflation (indice des prix à la consommation) (sur un mois), Canada) : volatilité possible autour de ces horaires.
-• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
+• CAC 40 à 8 217 points : −1,6 % à la dernière séance, +4,4 % sur un mois, au-dessus de sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• 2 annonce(s) à fort impact aujourd'hui, la première à 14:30 (Ventes au détail hors automobile (sur un mois), Etats-Unis) : volatilité possible autour de ces horaires.
+• Résultats aujourd'hui : Alstom, Nvidia, Disney, Home Depot.
+• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
-14:30 🇨🇦 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.3%)
-14:30 🇨🇦 Median CPI y/y (prévu 2.0%)
-14:30 🇨🇦 Trimmed CPI y/y (prévu 1.9%)
-18:00 🇺🇸 Fed Chairman Warsh Speaks
-23:50 🇦🇺 RBA Gov Bullock Speaks
+14:30 🇺🇸 Ventes au détail hors automobile (sur un mois) (prévu 0.4%)
+14:30 🇺🇸 Ventes au détail (sur un mois) (prévu 0.1%)
+
+*Résultats aujourd'hui* : Alstom, Nvidia, Disney, Home Depot
 
 *À venir (fort impact)*
-mar. 17/11 14:30 🇺🇸 Ventes au détail hors automobile (sur un mois)
-mar. 17/11 14:30 🇺🇸 Ventes au détail (sur un mois)
 mer. 18/11 08:00 🇬🇧 Inflation (indice des prix à la consommation) (sur un an)
 mer. 18/11 16:00 🇬🇧 BOE Gov Bailey Speaks
 mer. 18/11 20:00 🇺🇸 Compte rendu de la dernière réunion de la Fed
 jeu. 19/11 01:30 🇦🇺 Employment Change
+jeu. 19/11 01:30 🇦🇺 Taux de chômage
 
 *Opportunités*
-• L'Oreal – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 432,65-438,71, stop 411,43, objectif 478,93, revoir le 18/02
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,7 %
-  entrée 243,35-245,72, stop 219,62, objectif 287,32, revoir le 18/02
-• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 183,93-186,00, stop 176,66, objectif 199,17, revoir le 18/02
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
-  entrée 81,03-82,33, stop 76,37, objectif 90,34, revoir le 11/02
-• BNP Paribas – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 94,31-95,89, stop 88,68, objectif 105,81, revoir le 11/02
+• L'Oreal – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 442,38-447,94, stop 422,50, objectif 489,95, revoir le 12/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,3 %
+  entrée 242,05-244,37, stop 218,81, objectif 289,43, revoir le 19/02
+• Air Liquide – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 184,52-186,62, stop 177,14, objectif 200,25, revoir le 19/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,5 %
+  entrée 81,08-82,34, stop 76,56, objectif 90,58, revoir le 12/02
+• Sanofi – Attendre un repli (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 81,98-83,26, stop 77,49, objectif 90,31, revoir le 19/02
+  ⚠ résultats pendant la position
 
 *À lire*
-• Paris emportée par l'aversion pour le risque (Zonebourse)
-• Le trafic d'ADP recule en octobre, à Paris comme à l'international (Boursorama)
-• L'Europe finit en légère baisse, la "tech" à nouveau dans le rouge à Wall Street (Zonebourse)
+• La Bourse de Toronto et Wall Street en baisse (La Presse)
+• CAC 40 : La Bourse de Paris chute, l'écosystème IA inquiète (Zonebourse Suisse)
+• La rémunération des patrons du SBF 120 atteint de nouveaux records (Zonebourse Suisse)
 
-*🎓 Question du jour* : Un RSI à 78 indique en général…
-A. une zone de survente
-B. une zone de surachat
-C. une absence de tendance
-D. un volume anormal
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q05
+*🎓 Question du jour* : Que mesure l'ADX ?
+A. La direction de la tendance
+B. La force de la tendance, quelle que soit sa direction
+C. Le volume échangé
+D. La volatilité en euros
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q06
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
