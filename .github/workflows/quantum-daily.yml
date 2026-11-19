@@ -5,7 +5,12 @@ on:
     # Le lancement principal vient du service Cloudflare a 7 h 45 (heure de Paris).
     # Ce cron GitHub n'est qu'un filet de securite (souvent en retard) : il n'envoie rien si la lettre est deja partie.
     - cron: "0 8 * * *"
-  workflow_dispatch: {}   # bouton "Run workflow" pour lancer a la main
+  workflow_dispatch:      # bouton "Run workflow" pour lancer a la main
+    inputs:
+      site_seulement:
+        description: "Mettre a jour le site sans renvoyer la lettre aux abonnes"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -48,6 +53,7 @@ jobs:
           WHATSAPP_TO: ${{ secrets.WHATSAPP_TO }}
           SUBSCRIBE_API: ${{ secrets.SUBSCRIBE_API }}
           SUBSCRIBE_TOKEN: ${{ secrets.SUBSCRIBE_TOKEN }}
+          DRY_RUN: ${{ inputs.site_seulement && '1' || '' }}
         run: node daily.mjs
 
       - name: Publier le modele et le bilan (lus par l'app)
