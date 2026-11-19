@@ -303,6 +303,28 @@
   .wxTile, .ctxT, .pg, .bub, .pcard, .rcard { min-width: 0; }
   @media (max-width: 760px) { .wxTiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ctx { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bubs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 400px) { .wxTiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 16px; } }
+  /* ---------- Quanti ---------- */
+  .mascot { display: flex; align-items: center; gap: 14px; margin: 12px 0 4px; }
+  .mBot { flex: none; width: 92px; background: none; border: 0; padding: 0; cursor: pointer; text-align: center; animation: bob 3s ease-in-out infinite; }
+  .mBot svg { display: block; width: 92px; height: 100px; }
+  .mName { display: block; font-size: 12px; font-weight: 600; color: var(--brand); margin-top: 2px; }
+  @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(2deg); } }
+  .mBubble { position: relative; flex: 1; background: #FFF7E0; color: #2A2140; border-radius: 24px; padding: 14px 18px; font-size: 15.5px; line-height: 1.45; box-shadow: 0 6px 0 rgba(255,209,102,.3); }
+  .mBubble:before { content: ""; position: absolute; left: -12px; top: 40px; border: 12px solid transparent; border-right-color: #FFF7E0; border-left: 0; }
+  .mBubble p { margin: 3px 0; } .mBubble b, .qsay b { color: #6E3BD8; }
+  .stars { letter-spacing: 1px; color: #F2A900; } .stars i { font-style: normal; color: #D9CFAE; }
+  #qfly { position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; will-change: transform; }
+  #qfly .qbody { width: 100%; aspect-ratio: 120 / 130; filter: drop-shadow(0 10px 18px rgba(0,0,0,.45)); }
+  #qfly .qflame, .mBot .qflame { animation: flame .25s ease-in-out infinite alternate; transform-origin: 60px 100px; }
+  @keyframes flame { from { transform: scaleY(.75); opacity: .7; } to { transform: scaleY(1.15); opacity: 1; } }
+  #qfly .qsay { position: absolute; left: 105%; top: 4%; width: max-content; max-width: min(320px, 70vw); background: #FFF7E0; color: #2A2140; border-radius: 20px; padding: 12px 15px; font-size: 15px; line-height: 1.4; box-shadow: 0 8px 24px rgba(0,0,0,.35); transition: opacity .3s; }
+  #qfly.right .qsay { left: auto; right: 105%; }
+  #qfly .qsay.pop { animation: pop .35s ease-out; }
+  @keyframes pop { from { transform: scale(.6); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  #qskip { position: fixed; z-index: 61; right: 16px; bottom: 16px; pointer-events: auto; background: var(--card2); color: var(--soft-t); border: 1px solid var(--line2); border-radius: 999px; padding: 10px 16px; font-size: 13px; font-weight: 600; cursor: pointer; }
+  #qfly.landing { transition: transform .85s cubic-bezier(.5,0,.2,1), width .85s; }
+  @media (prefers-reduced-motion: reduce) { .mBot, #qfly .qflame, .mBot .qflame { animation: none; } }
+  @media (max-width: 560px) { .mBot, .mBot svg { width: 70px; } .mBot svg { height: 76px; } .mBubble { font-size: 14.5px; padding: 12px 14px; } }
   .catc { margin: 6px 0 12px; } .catc .chip { height: 36px; font-size: 12.5px; padding: 0 13px; }
   .cnt { font-size: 11px; opacity: .65; margin-left: 4px; }
   .erow { display: flex; align-items: center; gap: 10px; padding: 10px 6px; border-bottom: 1px solid var(--soft); border-radius: 12px; }
@@ -626,6 +648,95 @@
   function secT(emoji, title, sub, id) {
     return '<div class="secT"' + (id ? ' id="' + id + '"' : '') + '><span class="secE">' + emoji + '</span><div><div class="secH">' + esc(title) + '</div>' + (sub ? '<div class="secS">' + sub + '</div>' : '') + '</div></div>';
   }
+  // ---------- Quanti : petite mascotte volante (dessin original) ----------
+  // corps rond violet, visiere-ecran avec yeux sourire, antenne etoile, petits reacteurs
+  var QBOT = '<svg viewBox="0 0 120 130" width="100%" height="100%" aria-hidden="true">' +
+    '<defs><linearGradient id="qb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A9AEFF"/><stop offset="1" stop-color="#6E76E6"/></linearGradient>' +
+    '<linearGradient id="qf" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFD166"/><stop offset="1" stop-color="#FF8FAB" stop-opacity="0"/></linearGradient></defs>' +
+    '<path class="qflame" d="M44 100 Q50 128 56 100 Z M64 100 Q70 128 76 100 Z" fill="url(#qf)"/>' +
+    '<line x1="60" y1="20" x2="60" y2="8" stroke="#A9AEFF" stroke-width="4" stroke-linecap="round"/>' +
+    '<path d="M60 0 L63 6 L70 7 L65 11 L66 18 L60 14.5 L54 18 L55 11 L50 7 L57 6 Z" fill="#FFD166"/>' +
+    '<rect x="16" y="20" width="88" height="84" rx="30" fill="url(#qb)"/>' +
+    '<rect x="26" y="34" width="68" height="40" rx="18" fill="#131925"/>' +
+    '<path d="M38 56 Q45 47 52 56" stroke="#7CF5C6" stroke-width="5" fill="none" stroke-linecap="round"/>' +
+    '<path d="M68 56 Q75 47 82 56" stroke="#7CF5C6" stroke-width="5" fill="none" stroke-linecap="round"/>' +
+    '<path d="M50 86 Q60 93 70 86" stroke="#2A2F6B" stroke-width="4" fill="none" stroke-linecap="round"/>' +
+    '<circle cx="30" cy="86" r="5" fill="#FF8FAB" opacity=".75"/><circle cx="90" cy="86" r="5" fill="#FF8FAB" opacity=".75"/>' +
+    '<rect x="2" y="50" width="16" height="12" rx="6" fill="#FFD166"/><rect x="102" y="50" width="16" height="12" rx="6" fill="#FFD166"/></svg>';
+  function stars(p) {
+    var v = Math.round((p || 0) * 100), n = v >= 62 ? 5 : v >= 58 ? 4 : v >= 55 ? 3 : v >= 53 ? 2 : 1;
+    return '<span class="stars" title="' + v + ' chances sur 100">' + "★★★★★".slice(0, n) + '<i>' + "★★★★★".slice(0, 5 - n) + '</i></span>';
+  }
+  function quantiLines(t) {
+    var cac = (t.context || []).filter(function (c) { return c.sym === "^FCHI"; })[0];
+    var picks = t.picks.map(function (s) { return D.stocks[s]; }).filter(Boolean);
+    var green = picks.filter(function (a) { return a.plan.action === "ENTRER"; });
+    var best = picks.slice().sort(function (a, b) { return ((b.ev[b.plan.h] || {}).p || 0) - ((a.ev[a.plan.h] || {}).p || 0) || (a.plan.action === "ENTRER" ? -1 : 1); })[0];
+    var nAl = Object.keys(D.stocks).filter(function (k) { var a = D.stocks[k]; return a.day && a.day.alerts && a.day.alerts.length; }).length;
+    var L = [];
+    L.push(cac ? (cac.chg >= 0.2 ? "Hier, la Bourse de Paris a souri 😄 (" + sp(cac.chg, 1) + ")." : cac.chg <= -0.2 ? "Hier, la Bourse de Paris a un peu boudé 😕 (" + sp(cac.chg, 1) + ")." : "Hier, la Bourse de Paris a fait la sieste 😴 (" + sp(cac.chg, 1) + ").") : "Coucou, c'est Quanti !");
+    L.push(picks.length ? "J'ai trouvé <b>" + picks.length + " pépite" + (picks.length > 1 ? "s" : "") + "</b> 💎" + (green.length ? ", dont <b>" + green.length + " au feu vert</b> 🟢" : "") + "." : "Aujourd'hui, rien d'assez solide : on garde ses sous 🐷.");
+    if (best) L.push("Ma préférée : <b>" + esc(best.name) + "</b> " + stars((best.ev[best.plan.h] || {}).p) + ".");
+    if (nAl) L.push("Attention à <b>" + nAl + " alerte" + (nAl > 1 ? "s" : "") + "</b> ⚡ (résultats ou grosses nouvelles).");
+    return L;
+  }
+  function quantiHome(t) {
+    return '<div class="mascot"><button class="mBot" id="qhome" title="Fais voler Quanti" aria-label="Relancer Quanti">' + QBOT + '<span class="mName">Quanti</span></button><div class="mBubble">' + quantiLines(t).map(function (l) { return '<p>' + l + '</p>'; }).join("") + '</div></div>';
+  }
+  // vol d'accueil : Quanti traverse l'ecran et annonce le resume, puis se pose a sa place
+  function flyQuanti(force) {
+    if (!D || !D.today) return;
+    var home = document.getElementById("qhome");
+    if (!home) return;
+    var reduce = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+    var seen = false; try { seen = sessionStorage.getItem("qa.flew") === "1"; } catch (e) {}
+    if (!force && (seen || reduce)) return;
+    try { sessionStorage.setItem("qa.flew", "1"); } catch (e) {}
+    var old = document.getElementById("qfly"); if (old) old.remove();
+    var lines = quantiLines(D.today);
+    var el = document.createElement("div");
+    el.id = "qfly";
+    el.innerHTML = '<div class="qbody">' + QBOT + '</div><div class="qsay"></div>';
+    document.body.appendChild(el);
+    var oldSk = document.getElementById("qskip"); if (oldSk) oldSk.remove();
+    var skip = document.createElement("button"); skip.id = "qskip"; skip.textContent = "Passer ✕"; skip.setAttribute("aria-label", "Passer l'animation");
+    document.body.appendChild(skip);
+    home.style.visibility = "hidden";
+    var say = el.querySelector(".qsay"), body = el.querySelector(".qbody");
+    var W = window.innerWidth, H = window.innerHeight, S = Math.min(110, W * 0.24);
+    el.style.width = S + "px";
+    // trajet : entre par la gauche, boucles a travers l'ecran, puis va se poser
+    var pts = [[-S, H * 0.55], [W * 0.22, H * 0.25], [W * 0.62, H * 0.18], [W * 0.78, H * 0.5], [W * 0.45, H * 0.62], [W * 0.18, H * 0.42], [W * 0.5, H * 0.3]];
+    var seg = 2600, total = seg * (pts.length - 1), t0 = null, done = false, lastLine = -1;
+    function ease(x) { return x < .5 ? 2 * x * x : 1 - Math.pow(-2 * x + 2, 2) / 2; }
+    function land() {
+      if (done) return; done = true;
+      skip.remove();
+      var r = home.getBoundingClientRect();
+      el.classList.add("landing");
+      el.style.transform = "translate(" + r.left + "px," + r.top + "px)";
+      el.style.width = r.width + "px";
+      say.style.opacity = 0;
+      setTimeout(function () { home.style.visibility = ""; el.remove(); }, 900);
+    }
+    function frame(ts) {
+      if (done) return;
+      if (t0 == null) t0 = ts;
+      var e = ts - t0;
+      if (e >= total) { land(); return; }
+      var k = Math.floor(e / seg), f = ease((e % seg) / seg), a = pts[k], b = pts[k + 1];
+      var x = a[0] + (b[0] - a[0]) * f, y = a[1] + (b[1] - a[1]) * f + Math.sin(e / 300) * 8;
+      el.style.transform = "translate(" + x + "px," + y + "px)";
+      body.style.transform = "rotate(" + ((b[0] - a[0]) > 0 ? 8 : -8) * Math.sin(Math.PI * f) + "deg)";
+      el.classList.toggle("right", x > W * 0.55);
+      var li = Math.min(lines.length - 1, Math.floor(e / (total / lines.length)));
+      if (li !== lastLine) { lastLine = li; say.innerHTML = lines[li]; say.classList.remove("pop"); void say.offsetWidth; say.classList.add("pop"); }
+      requestAnimationFrame(frame);
+    }
+    skip.onclick = land;
+    requestAnimationFrame(frame);
+  }
+
   function lightOf(act) {
     return act === "ENTRER" ? { e: "🟢", t: "Feu vert", s: "On peut acheter", c: "lg" }
       : act === "ATTENDRE_CONFIRMATION" ? { e: "🟡", t: "Presque !", s: "On attend le feu vert", c: "ly" }
@@ -704,7 +815,7 @@
   function pageToday() {
     var t = D.today, h = "";
     h += '<h1 class="fun">Bonjour 👋</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
-    h += weather(t);
+    h += quantiHome(t) + weather(t);
     if (t.brief && t.brief.length) {
       var EM = ["🇫🇷", "📅", "📣", "🧭", "🎯", "💡", "💡"];
       h += '<div class="card ess"><h2>📝 L\'essentiel en 30 secondes</h2>' + t.brief.map(function (b, i) { return '<div class="essL"><span>' + (EM[i] || "•") + '</span><span>' + esc(b) + '</span></div>'; }).join("") + '</div>';
@@ -923,7 +1034,7 @@
       '<p class="small dimmer">En cliquant sur « J\'accepte », tu reconnais avoir lu et compris ces conditions. <a href="#/conditions" style="text-decoration:underline">Conditions complètes</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>' +
       '<div style="display:flex;gap:10px;margin-top:14px;flex-wrap:wrap;position:sticky;bottom:-22px;background:#131925;padding:12px 0 16px"><button class="btn btn-main" id="t-ok">J\'accepte</button><button class="btn btn-sec" id="t-no">Je refuse</button></div><div id="t-msg"></div></div>';
     document.body.appendChild(m);
-    document.getElementById("t-ok").onclick = function () { put("terms", TERMS_V); m.remove(); render(); setTimeout(maybeNewsletter, 4000); };
+    document.getElementById("t-ok").onclick = function () { put("terms", TERMS_V); m.remove(); render(); setTimeout(maybeNewsletter, 19000); };
     document.getElementById("t-no").onclick = function () {
       document.getElementById("t-msg").innerHTML = '<p class="warn" style="margin-top:14px">Sans acceptation des conditions, le contenu du site n\'est pas accessible. Tu peux changer d\'avis à tout moment en cliquant sur « J\'accepte ».</p>';
     };
@@ -1168,6 +1279,7 @@
     else if (r === "mes-valeurs") html = pageWatch();
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
     document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.<br><a href="#/conditions" style="text-decoration:underline">Conditions</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>';
+    if (r === "today") { var qh = document.getElementById("qhome"); if (qh) qh.onclick = function () { flyQuanti(true); }; setTimeout(flyQuanti, 400); }
     var ro = document.getElementById("reopen"); if (ro) ro.onclick = function () { if (!document.getElementById("terms")) showTerms(); };
     var rv = document.getElementById("revoke"); if (rv) rv.onclick = function () { if (accepted()) { put("terms", ""); render(); showTerms(); } else showTerms(); };
     [].forEach.call(document.querySelectorAll("#nav a"), function (a) { a.classList.toggle("on", a.getAttribute("data-r") === (r === "v" ? "" : r)); });
@@ -1206,7 +1318,7 @@
   fetch("data.json?t=" + Math.floor(Date.now() / 300000)).then(function (r) { return r.json(); }).then(function (d) {
     D = d; computeBase(); render();
     var hr = location.hash.replace(/^#\/?/, "");
-    if (!accepted() && !/^(conditions|confidentialite)/.test(hr)) showTerms(); else setTimeout(maybeNewsletter, 6000);
+    if (!accepted() && !/^(conditions|confidentialite)/.test(hr)) showTerms(); else setTimeout(maybeNewsletter, 19000);
   })
     .catch(function () { document.getElementById("app").innerHTML = '<div class="loading">Données indisponibles pour le moment. Réessaie dans quelques minutes.</div>'; });
 })();
