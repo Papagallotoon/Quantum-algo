@@ -303,46 +303,6 @@
   .wxTile, .ctxT, .pg, .bub, .pcard, .rcard { min-width: 0; }
   @media (max-width: 760px) { .wxTiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ctx { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bubs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
   @media (max-width: 400px) { .wxTiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 16px; } }
-  /* ---------- accueil "enfant" ---------- */
-  .kid { font-family: var(--fun); }
-  .kid h1.fun { font-size: 40px; }
-  .kid .sub, .kid .note, .kid .secS { font-family: var(--sans); }
-  .mascot { display: flex; align-items: center; gap: 14px; margin: 10px 0 4px; }
-  .mBot { flex: none; text-align: center; animation: bob 3s ease-in-out infinite; }
-  .mName { font-size: 12px; font-weight: 600; color: var(--brand); margin-top: -2px; }
-  @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(2deg); } }
-  @media (prefers-reduced-motion: reduce) { .mBot { animation: none; } }
-  .mBubble { position: relative; flex: 1; background: #FFF7E0; color: #2A2140; border-radius: 26px; padding: 14px 18px; font-size: 16.5px; line-height: 1.45; box-shadow: 0 6px 0 rgba(255,209,102,.35); }
-  .mBubble:before { content: ""; position: absolute; left: -12px; top: 38px; border: 12px solid transparent; border-right-color: #FFF7E0; border-left: 0; }
-  .mBubble p { margin: 3px 0; } .mBubble b { color: #6E3BD8; }
-  .mBubble .stars { color: #F2A900; } .mBubble .stars i { color: #E2D6B0; }
-  .stars { letter-spacing: 1px; color: #FFD166; font-size: 15px; } .stars i { font-style: normal; color: rgba(255,255,255,.18); }
-  .pcStars { margin: 2px 0 6px; font-size: 18px; }
-  .kid .card { border-radius: 28px; border-width: 2px; }
-  .kid .hero { border-width: 2px; border-color: rgba(255,209,102,.35); }
-  .kid .secT { margin-top: 40px; }
-  .kid .secE { width: 58px; height: 58px; font-size: 30px; border-radius: 20px; box-shadow: 0 5px 0 rgba(0,0,0,.25); transform: rotate(-6deg); }
-  .kid .secH { font-size: 27px; }
-  .c-pink .secE { background: #FF8FAB; } .c-pink .secH { color: #FFB3C6; }
-  .c-sky .secE { background: #6EC6FF; } .c-sky .secH { color: #A8DCFF; }
-  .c-yellow .secE { background: #FFD166; } .c-yellow .secH { color: #FFE29A; }
-  .c-mint .secE { background: #34D399; } .c-mint .secH { color: #8EEBC8; }
-  .c-lav .secE { background: #8B93FF; } .c-lav .secH { color: #C2C7FF; }
-  .c-orange .secE { background: #FFA45B; } .c-orange .secH { color: #FFC796; }
-  .kid .pcard { border-width: 3px; border-radius: 30px; box-shadow: 0 6px 0 rgba(0,0,0,.28); transition: transform .15s; }
-  .kid .pcard:hover { transform: translateY(-3px) rotate(-.4deg); }
-  .kid .pcName { font-size: 25px; }
-  .kid .light { font-size: 15px; padding: 7px 14px; }
-  .kid .bub { border-radius: 22px; } .kid .bubE { font-size: 24px; }
-  .kid .gauge .gbar { height: 18px; } .kid .gauge .gbar i { background-image: repeating-linear-gradient(45deg, rgba(255,255,255,.18) 0 8px, transparent 8px 16px) !important; }
-  .kid .rcard, .kid .acard, .kid .wxTile, .kid .ctxT { border-radius: 22px; }
-  .kid .ess .essL { font-size: 16px; }
-  .kid .ess .essL span:last-child { font-family: var(--sans); font-size: 15px; }
-  .kid .bigbtn { border-radius: 999px; box-shadow: 0 5px 0 #5A61C9; font-size: 17px; }
-  .kid .bigbtn:active { transform: translateY(3px); box-shadow: 0 2px 0 #5A61C9; }
-  .kid .ptabs a { font-family: var(--fun); font-size: 14px; }
-  .kid .tl, .kid .fnews a, .kid .hb, .kid .tlB { font-family: var(--sans); }
-  @media (max-width: 560px) { .kid h1.fun { font-size: 32px; } .mascot svg { width: 70px; height: 70px; } .mBubble { font-size: 15px; padding: 12px 14px; } .kid .secH { font-size: 22px; } .kid .secE { width: 48px; height: 48px; font-size: 24px; } }
   .catc { margin: 6px 0 12px; } .catc .chip { height: 36px; font-size: 12.5px; padding: 0 13px; }
   .cnt { font-size: 11px; opacity: .65; margin-left: 4px; }
   .erow { display: flex; align-items: center; gap: 10px; padding: 10px 6px; border-bottom: 1px solid var(--soft); border-radius: 12px; }
@@ -663,32 +623,8 @@
   }
 
   // ---------- blocs ludiques ----------
-  var SECC = { "🎯": "pink", "🚀": "sky", "🏆": "yellow", "📊": "mint", "🗓️": "lav", "📰": "orange" };
   function secT(emoji, title, sub, id) {
-    return '<div class="secT c-' + (SECC[emoji] || "lav") + '"' + (id ? ' id="' + id + '"' : '') + '><span class="secE">' + emoji + '</span><div><div class="secH">' + esc(title) + '</div>' + (sub ? '<div class="secS">' + sub + '</div>' : '') + '</div></div>';
-  }
-  // Quanti, la petite mascotte (dessin original)
-  var MASCOT = '<svg viewBox="0 0 120 120" width="96" height="96" aria-hidden="true"><line x1="60" y1="14" x2="60" y2="28" stroke="#8B93FF" stroke-width="4" stroke-linecap="round"/><circle cx="60" cy="11" r="7" fill="#FFD166"/>' +
-    '<rect x="18" y="28" width="84" height="74" rx="34" fill="#8B93FF"/><rect x="26" y="38" width="68" height="44" rx="22" fill="#EEF2F7"/>' +
-    '<circle cx="45" cy="60" r="10" fill="#131925"/><circle cx="75" cy="60" r="10" fill="#131925"/><circle cx="48" cy="56" r="3.5" fill="#fff"/><circle cx="78" cy="56" r="3.5" fill="#fff"/>' +
-    '<path d="M50 88 Q60 96 70 88" stroke="#131925" stroke-width="4" fill="none" stroke-linecap="round"/><circle cx="32" cy="88" r="6" fill="#FF8FAB" opacity=".8"/><circle cx="88" cy="88" r="6" fill="#FF8FAB" opacity=".8"/>' +
-    '<rect x="6" y="56" width="14" height="24" rx="7" fill="#6E76E6"/><rect x="100" y="56" width="14" height="24" rx="7" fill="#6E76E6"/></svg>';
-  function stars(p) {
-    var v = Math.round((p || 0) * 100), n = v >= 62 ? 5 : v >= 58 ? 4 : v >= 55 ? 3 : v >= 53 ? 2 : 1;
-    return '<span class="stars" title="' + v + ' chances sur 100">' + "★★★★★".slice(0, n) + '<i>' + "★★★★★".slice(0, 5 - n) + '</i></span>';
-  }
-  function mascot(t) {
-    var cac = (t.context || []).filter(function (c) { return c.sym === "^FCHI"; })[0];
-    var picks = t.picks.map(function (s) { return D.stocks[s]; }).filter(Boolean);
-    var green = picks.filter(function (a) { return a.plan.action === "ENTRER"; });
-    var best = green[0] || picks[0];
-    var nAl = Object.keys(D.stocks).filter(function (k) { var a = D.stocks[k]; return a.day && a.day.alerts && a.day.alerts.length; }).length;
-    var lines = [];
-    lines.push(cac ? (cac.chg >= 0.2 ? "Hier, la Bourse de Paris a souri 😄 (" + sp(cac.chg, 1) + ")." : cac.chg <= -0.2 ? "Hier, la Bourse de Paris a un peu boudé 😕 (" + sp(cac.chg, 1) + ")." : "Hier, la Bourse de Paris a fait la sieste 😴 (" + sp(cac.chg, 1) + ").") : "Coucou !");
-    lines.push(picks.length ? "J'ai trouvé <b>" + picks.length + " pépite" + (picks.length > 1 ? "s" : "") + "</b> 💎" + (green.length ? ", dont <b>" + green.length + " au feu vert</b> 🟢" : "") + "." : "Aujourd'hui, je n'ai rien trouvé de assez solide : on garde ses sous 🐷.");
-    if (best) lines.push("Ma préférée : <b>" + esc(best.name) + "</b> " + stars((best.ev[best.plan.h] || {}).p) + ".");
-    if (nAl) lines.push("Attention à <b>" + nAl + " alerte" + (nAl > 1 ? "s" : "") + "</b> ⚡ (résultats ou grosses nouvelles).");
-    return '<div class="mascot"><div class="mBot">' + MASCOT + '<div class="mName">Quanti</div></div><div class="mBubble">' + lines.map(function (l) { return '<p>' + l + '</p>'; }).join("") + '</div></div>';
+    return '<div class="secT"' + (id ? ' id="' + id + '"' : '') + '><span class="secE">' + emoji + '</span><div><div class="secH">' + esc(title) + '</div>' + (sub ? '<div class="secS">' + sub + '</div>' : '') + '</div></div>';
   }
   function lightOf(act) {
     return act === "ENTRER" ? { e: "🟢", t: "Feu vert", s: "On peut acheter", c: "lg" }
@@ -721,7 +657,7 @@
       '<div class="pcTop"><span class="light">' + L.e + ' ' + L.t + '</span><span class="hzc">⏳ ' + esc(HL[p.h]) + '</span>' + heart(a.sym) + '</div>' +
       '<a class="pcName" href="#/v/' + encodeURIComponent(a.sym) + '">' + flagSym(a.sym) + esc(a.name) + ' <span class="pcArrow">›</span></a>' +
       '<div class="pcSub">' + esc(L.s) + ' · cours ' + f2(a.price) + ' ' + esc(a.cur) + ' <span class="' + cls(a.chg) + '">' + sp(a.chg, 1) + '</span></div>' +
-      '<div class="pcStars">' + stars(e.p) + '</div>' + gauge(e.p) + (p.timing ? '<div style="margin-top:8px">' + timingChip(p.timing) + '</div>' : '') +
+      gauge(e.p) + (p.timing ? '<div style="margin-top:8px">' + timingChip(p.timing) + '</div>' : '') +
       '<div class="bubs">' + bubble("🚪", "Entrée", entry, esc(a.cur), "bi") + bubble("🎯", "Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", "bt") + bubble("🛑", "Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", "bs") + '</div>' +
       (why ? '<div class="pcWhy">💡 ' + esc(why) + '</div>' : '') +
       (c ? '<div class="pcNews">' + (c.tone === "positif" ? "👍" : c.tone === "négatif" ? "⚠️" : "📰") + ' <b>' + esc(c.verdict) + '</b> · <a href="' + esc(c.link) + '" target="_blank" rel="noopener">' + esc(c.title) + '</a></div>' : '') +
@@ -767,8 +703,8 @@
   // ---------- pages ----------
   function pageToday() {
     var t = D.today, h = "";
-    h += '<div class="kid"><h1 class="fun">Bonjour 👋</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
-    h += mascot(t) + weather(t);
+    h += '<h1 class="fun">Bonjour 👋</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
+    h += weather(t);
     if (t.brief && t.brief.length) {
       var EM = ["🇫🇷", "📅", "📣", "🧭", "🎯", "💡", "💡"];
       h += '<div class="card ess"><h2>📝 L\'essentiel en 30 secondes</h2>' + t.brief.map(function (b, i) { return '<div class="essL"><span>' + (EM[i] || "•") + '</span><span>' + esc(b) + '</span></div>'; }).join("") + '</div>';
@@ -837,7 +773,7 @@
 
     // ---- actualites ----
     h += secT("📰", "Les actus à surveiller", "Les dernières 36 heures. 👍 bonne nouvelle · ⚠️ mauvaise nouvelle · 📰 neutre (deviné à partir du titre).", "actus");
-    h += '<div class="card">' + funNews(t.news) + '</div></div>';
+    h += '<div class="card">' + funNews(t.news) + '</div>';
     return h;
   }
   function funNews(list) {
