@@ -15,6 +15,9 @@ import { computeAll, directionalIds } from "../src/quantum/core/signals.js";
 import { HORIZONS, HORIZON_KEYS, DEFAULT_MODEL, sigmaAt } from "../src/quantum/core/model.js";
 import { evaluateAll, buildPlan, bestHorizon } from "../src/quantum/core/plan.js";
 import { dayPlan } from "../src/quantum/core/daily.js";
+import { signalAge, radar } from "../src/quantum/core/timing.js";
+import { evaluate } from "../src/quantum/core/model.js";
+import { ETF_LIST, ETF_CATS } from "./lib/etfs.mjs";
 import { trainAll } from "../src/quantum/core/learn.js";
 import { INDEX_DEFS, INDEX_QUERY } from "../src/quantum/core/universe.js";
 import { FULL_COMPONENTS as COMPONENTS, FULL_NAMES as NEWS_NAMES } from "../src/quantum/core/universe-full.js";
@@ -155,7 +158,9 @@ for (const it of items) {
   const { i, sg, evals } = evalOf(it);
   const plan = buildPlan(it.c, evals, sg);
   const rel = Math.max(0.005, plan.reliability?.ic ?? 0.02);
-  rows.push({ it, i, evals, plan, rank: (plan.pUp - 0.5) * rel, cur: it.c.currency });
+  // age du signal : un signal deja ancien (cours deja monte) passe derriere un signal frais
+  const timing = plan.pUp >= 0.53 ? signalAge(it.all, it.c, i, plan.horizon, model, plan.expPct) : null;
+  rows.push({ it, i, evals, plan, timing, rank: (plan.pUp - 0.5) * rel * (timing ? timing.factor : 1), cur: it.c.currency });
 }
 const active = new Set(["ENTRER", "ATTENDRE_REPLI", "ATTENDRE_CONFIRMATION"]);
 // ---- details par valeur (perf, niveaux, moteurs du signal) ----
@@ -187,6 +192,7 @@ const toPick = (r) => ({
   price: r.it.close[r.i], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]), sizePct: r.plan.sizePct, riskPct: r.plan.riskPct, gainPct: r.plan.gainPct,
   ...details(r),
   day: dayPlan(r.it.c, {}),
+  timing: r.timing || null,
 });
 const picks = rows.filter((r) => active.has(r.plan.action) && (r.plan.expectancy ?? 0) > 0)
   .sort((a, b) => b.rank - a.rank).slice(0, config.maxPicks || 5).map(toPick);
@@ -195,6 +201,15 @@ const watch = (config.watchlist || []).map((s) => rows.find((r) => r.it.sym === 
 // plus forts mouvements de la derniere seance dans l'univers suivi
 const moves = rows.map((r) => ({ sym: r.it.sym, name: names[r.it.sym], chg: pct(r.it.close[r.i], r.it.close[r.i - 1]) })).filter((m) => Number.isFinite(m.chg)).sort((a, b) => b.chg - a.chg);
 const movers = { up: moves.slice(0, 5).filter((m) => m.chg > 0), down: moves.slice(-5).reverse().filter((m) => m.chg < 0) };
+// radar "ca demarre" : departs de hausse detectes avant le modele principal, avec leur bilan historique
+const rowBy = Object.fromEntries(rows.map((r) => [r.it.sym, r]));
+const rd = radar(items);
+const radarOut = { stats: rd.stats, hits: rd.hits.slice(0, 10).map((h) => {
+  const r = rowBy[h.sym];
+  return { sym: h.sym, name: names[h.sym], day: h.day, chg: h.chg, gain20: h.gain20, vol: h.vol, trigger: h.trigger,
+    model: r ? { h: r.plan.horizon, p: r.plan.pUp, action: r.plan.action } : null };
+}) };
+log(`radar : ${rd.hits.length} depart(s) detecte(s)` + (rd.stats ? ` | historique : ${rd.stats.n} cas, hausse a 1 mois ${rd.stats.up21} % (base ${rd.stats.baseUp21} %)` : ""));
 const pickSet = new Set(picks.map((p) => p.sym + "|" + p.h));
 
 // une ligne de journal par valeur et par horizon (dedoublonnee si relance le meme jour)
@@ -251,14 +266,37 @@ const CONTEXT = [
   ["^STOXX50E", "Euro Stoxx 50"], ["EURUSD=X", "Euro / dollar"],
   ["BZ=F", "Pétrole Brent"], ["GC=F", "Or"], ["^TNX", "Taux US 10 ans"], ["BTC-USD", "Bitcoin"],
 ];
-// ETF les plus suivis (cotes a Paris / Francfort / Amsterdam et aux Etats-Unis)
-const ETFS = [
-  ["CW8.PA", "MSCI World", "Amundi"], ["VWCE.DE", "FTSE All-World", "Vanguard"], ["ESE.PA", "S&P 500", "BNP Paribas"],
-  ["PUST.PA", "Nasdaq-100", "Amundi"], ["CAC.PA", "CAC 40", "Amundi"], ["EXS1.DE", "DAX", "iShares"],
-  ["PAEEM.PA", "Pays émergents", "Amundi"], ["SPY", "S&P 500 (US)", "SPDR"], ["QQQ", "Nasdaq-100 (US)", "Invesco"],
-  ["SMH", "Semi-conducteurs", "VanEck"], ["GLD", "Or", "SPDR"], ["TLT", "Obligations US 20 ans", "iShares"],
-];
-let etfs = [];
+// ETF principaux (resume du tableau "Marches") : pris dans le grand univers ETF ci-dessous
+const MAIN_ETFS = ["CW8.PA", "VWCE.DE", "ESE.PA", "PUST.PA", "CAC.PA", "EXS1.DE", "PAEEM.PA", "SPY", "QQQ", "SMH", "GLD", "TLT"];
+let etfs = [], etfUniverse = [];
+function buildEtfs(er) {
+  // univers ETF (~250) : performances, chances de hausse du modele, age du signal
+  const y0s = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
+  const r2 = (v) => (v == null || !Number.isFinite(v) ? null : Math.round(v * 100) / 100);
+  for (const [sym, label, cat, emoji] of ETF_LIST) {
+    const c = er.ok[sym];
+    if (!c || c.close.length < 30) continue;
+    const C = c.close, n = C.length - 1;
+    let y = c.time.findIndex((t) => t >= y0s); if (y < 1) y = 1;
+    const o = { s: sym, n: label, k: cat, e: emoji, cur: c.currency || "", p: r2(C[n]), d: r2(pct(C[n], C[n - 1])), w: r2(pct(C[n], C[n - 5])),
+      m: r2(pct(C[n], C[Math.max(0, n - 21)])), q: r2(pct(C[n], C[Math.max(0, n - 63)])), y: r2(pct(C[n], C[y - 1])), a: r2(pct(C[n], C[Math.max(0, n - 252)])),
+      h: C.slice(-60).filter((_, k) => k % 2 === 1 || k === 59).map((v) => +v.toPrecision(4)) };
+    if (C.length >= 260) {
+      try {
+        const all = computeAll(c, null), sg = sigmaAt(C, n, 60);
+        const e1 = evaluate(all, n, "1M", model, sg), e3 = evaluate(all, n, "3M", model, sg);
+        o.p1 = +e1.pUp.toFixed(3); o.p3 = +e3.pUp.toFixed(3); o.x3 = r2(e3.expPct);
+        const t = e3.pUp >= 0.53 ? signalAge(all, c, n, "3M", model, e3.expPct) : null;
+        if (t) o.t = { st: t.stage, g: t.gainPct, a: t.age };
+      } catch (e) { /* calcul facultatif */ }
+    }
+    etfUniverse.push(o);
+  }
+  log(`ETF : ${etfUniverse.length} sur ${ETF_LIST.length} (echecs : ${Object.keys(er.failed).slice(0, 10).join(" ")})`);
+  const byS = Object.fromEntries(etfUniverse.map((o) => [o.s, o]));
+  etfs = MAIN_ETFS.map((s) => byS[s]).filter(Boolean).map((o) => ({ sym: o.s, label: o.n.replace(/ \((Amundi|BNP|Vanguard|iShares|SPDR|Invesco|VanEck)[^)]*\)/, ""), issuer: (o.n.match(/\(([^)]+)\)/) || [])[1] || "", last: o.p, chg: o.d, w1: o.w, m1: o.m, ytd: o.y }));
+}
+if (FAKE) { const { fakeUniverse } = await import("./lib/fake.mjs"); buildEtfs({ ok: fakeUniverse(ETF_LIST.map((x) => x[0])), failed: {} }); }
 let vixCtx = null;
 let agenda = { today: [], tomorrow: [] }, fundamentals = {}, context = [], marketNews = [], earnings = { today: [], week: [] };
 if (!FAKE) {
@@ -272,16 +310,7 @@ if (!FAKE) {
       context.push({ sym, label, last: c.close[n], chg: pct(c.close[n], c.close[n - 1]), m1: pct(c.close[n], c.close[Math.max(0, n - 21)]) });
     } catch (e) { /* source facultative */ }
   }
-  const y0s = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
-  for (const [sym, label, issuer] of ETFS) {
-    try {
-      const c = await fetchCandles(sym, "1y");
-      const C = c.close, n = C.length - 1;
-      if (n < 25) continue;
-      let y = c.time.findIndex((t) => t >= y0s); if (y < 1) y = 1;
-      etfs.push({ sym, label, issuer, last: C[n], chg: pct(C[n], C[n - 1]), w1: pct(C[n], C[n - 5]), m1: pct(C[n], C[n - 21]), ytd: pct(C[n], C[y - 1]) });
-    } catch (e) { /* source facultative */ }
-  }
+  buildEtfs(await fetchMany(ETF_LIST.map((x) => x[0]), 6));
   // le VIX ne figure plus dans le tableau, mais sert encore a "L'essentiel"
   try {
     const c = await fetchCandles("^VIX", "3mo"); const n = c.close.length - 1;
@@ -361,7 +390,7 @@ const upIdx = indices.filter((x) => x.p1M >= 0.53).length, dnIdx = indices.filte
 brief.push(upIdx > dnIdx ? `Les indices penchent légèrement à la hausse à 1 mois (${upIdx} sur ${indices.length}).` : dnIdx > upIdx ? `Les indices penchent à la baisse à 1 mois (${dnIdx} sur ${indices.length}).` : "Pas de tendance nette des indices à 1 mois.");
 brief.push(picks.length ? `${picks.length} opportunité(s) retenue(s), surtout sur ${[...new Set(picks.map((p) => p.h))].map((h) => ({ "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" })[h]).join(" / ")}.` : "Aucune opportunité suffisamment solide aujourd'hui.");
 
-const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, etfs, summary, news: marketNews };
+const signals = { date: iso, dateLabel, picks, avoid, indices, brief, agenda, earnings, context, movers, etfs, etfUniverse, etfCats: ETF_CATS, radar: radarOut, summary, news: marketNews };
 
 // site public (GitHub Pages, dossier docs/) : memes informations que l'app
 const SITE_URL = (process.env.SITE_URL || config.siteUrl || "").replace(/\/?$/, "/");
@@ -385,12 +414,12 @@ try {
   const doy = Math.floor((Date.now() - Date.UTC(new Date().getUTCFullYear(), 0, 1)) / 86400000);
   quizOfDay = L.quiz[doy % L.quiz.length];
 } catch (e) { /* facultatif */ }
-const letterArgs = { quizOfDay, siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, etfs, summary, failed: Object.keys(failed) };
+const letterArgs = { quizOfDay, siteUrl: SITE_URL, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo: model, news: marketNews, agenda, earnings, context, movers, etfs, summary, radar: radarOut, etfUniverse, failed: Object.keys(failed) };
 let letter = buildLetter(letterArgs);
 // Gmail coupe les messages au-dela d'environ 102 Ko : on retire d'abord les blocs secondaires
 const kb = (l) => Buffer.byteLength(l.html.replace(/\s+/g, " ")) / 1024;
-if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, etfs: [] });
-if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, etfs: [], summary: [] });
+if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, radar: null });
+if (kb(letter) > 98) letter = buildLetter({ ...letterArgs, radar: null, etfUniverse: [], etfs: [] });
 log(`lettre : ${kb(letter).toFixed(0)} Ko`);
 fs.writeFileSync(path.join(OUT, "newsletter.html"), letter.html);
 fs.writeFileSync(path.join(OUT, "newsletter.txt"), letter.whatsapp);

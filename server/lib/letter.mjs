@@ -40,8 +40,7 @@ const card = (title, body, sub = "", hash) => {
   return `<tr><td style="padding:0 0 14px">
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${CARD};border:1px solid ${LINE};border-radius:20px"><tr><td style="padding:20px 20px 18px">
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-      <td style="font-family:${MONO};font-size:11px;letter-spacing:2px;color:${BRAND};white-space:nowrap;padding-right:10px">${n}</td>
-      <td style="font-family:${SANS};font-size:16px;font-weight:700;color:${TXT};letter-spacing:-0.2px;width:100%">${title}</td>
+      <td style="font-family:${SANS};font-size:18px;font-weight:700;color:${TXT};width:100%">${title}</td>
       ${hash && SITE ? `<td style="white-space:nowrap;text-align:right">${link(hash, "Voir &rarr;", `font-size:12px;color:${DIM};text-decoration:none`)}</td>` : ""}
     </tr></table>
     ${sub ? `<div style="font-size:12px;line-height:18px;color:${DIM};margin:6px 0 0">${sub}</div>` : ""}
@@ -81,53 +80,56 @@ function dayBlock(d) {
   const row = (dot, c, t) => `<div style="padding:4px 0;font-size:12.5px;line-height:18px;color:${SOFT}"><span style="color:${c};font-weight:700">${dot}</span>&nbsp; ${esc(t)}</div>`;
   const al = (d.alerts || []).map((a) => `<div style="margin-top:8px;padding:9px 12px;border-radius:10px;background:rgba(245,183,64,0.10)"><div style="color:${ALERT};font-size:12px;font-weight:700">⚡ ${esc(a.title)}</div>${a.rules.map((r) => `<div style="font-size:11.5px;line-height:17px;color:${SOFT};margin-top:3px">• ${esc(r)}</div>`).join("")}</div>`).join("");
   return `<div style="margin-top:10px;padding-top:10px;border-top:1px solid ${LINE}">
-    <div style="font-size:11px;letter-spacing:1px;color:${BRAND};font-weight:700">PLAN DU JOUR <span style="color:${DIM};font-weight:400;letter-spacing:0">· fourchette probable ${f2(d.range.lo)}–${f2(d.range.hi)}</span></div>
-    ${row("▲", UP, d.up.text)}${row("▼", DOWN, d.down.text)}${row("●", DIM, d.flat)}${al}
+    <div style="font-size:12px;color:${BRAND};font-weight:700">🧭 Le plan pour aujourd'hui <span style="color:${DIM};font-weight:400;letter-spacing:0">· fourchette probable ${f2(d.range.lo)}–${f2(d.range.hi)}</span></div>
+    ${row("⬆️", UP, d.up.text)}${row("⬇️", DOWN, d.down.text)}${row("↔️", DIM, d.flat)}${al}
   </div>`;
 }
+const LIGHT = {
+  ENTRER: ["🟢", "Feu vert", "On peut acheter", UP],
+  ATTENDRE_CONFIRMATION: ["🟡", "Presque !", "On attend le feu vert", "#FFD166"],
+  ATTENDRE_REPLI: ["🟠", "Patience", "Attendre une petite baisse", ALERT],
+  EVITER: ["🔴", "Feu rouge", "On évite", DOWN],
+};
+function timingTxt(t) {
+  if (!t) return "";
+  const g = (t.gainPct >= 0 ? "+" : "−") + f1(Math.abs(t.gainPct)) + " %";
+  return t.stage === "frais" ? chip("⚡ Signal frais" + (t.age > 0 ? " · " + t.age + " j" : ""), "#6EC6FF", "rgba(110,198,255,0.14)")
+    : t.stage === "en cours" ? chip("🏃 En route · " + t.age + " j · " + g + " déjà", BRAND, "rgba(139,147,255,0.14)")
+    : chip("🐢 En retard · " + g + " déjà fait", ALERT, "rgba(245,183,64,0.14)");
+}
+function bar(p) {
+  const v = Math.max(2, Math.min(98, Math.round(p.pUp * 100))), c = v >= 55 ? UP : v <= 45 ? DOWN : ALERT;
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr><td width="${v}%" style="height:10px;background:${c};border-radius:6px 0 0 6px;font-size:1px">&nbsp;</td><td style="background:${CARD2};border-radius:0 6px 6px 0;font-size:1px">&nbsp;</td></tr></table>
+    <div style="font-size:12.5px;color:${SOFT};margin-top:5px"><b style="font-family:${MONO};font-size:15px;color:${c}">${v}</b> chances sur 100 de hausse · ${HL[p.h || "3M"] || ""}</div>`;
+}
+const bub = (e, l, v, sub, c) => `<td width="33%" style="padding:3px"><div style="background:${CARD2};border-radius:14px;padding:8px 4px;text-align:center"><div style="font-size:17px">${e}</div><div style="font-size:10.5px;color:${DIM}">${l}</div><div style="font-family:${MONO};font-size:14px;font-weight:700;color:${c};white-space:nowrap">${v}</div><div style="font-family:${MONO};font-size:10.5px;color:${c}">${sub}</div></div></td>`;
 function pickCard(p, n) {
-  const a = ACTION[p.action] || { t: p.actionLabel, c: TXT, bg: LINE };
-  const f = p.fund || {}, perf = p.perf || {};
-  const entry = p.action === "ATTENDRE_CONFIRMATION" ? `&gt; ${f2(p.zoneLo)}` : `${f2(p.zoneLo)}–${f2(p.zoneHi)}`;
+  const L = LIGHT[p.action] || ["⚪", p.actionLabel, "", SOFT];
+  const entry = p.action === "ATTENDRE_CONFIRMATION" ? `&gt; ${f2(p.zoneLo)}` : p.action === "ENTRER" ? f2(p.price) : `${f2(p.zoneLo)}–${f2(p.zoneHi)}`;
   const sentence = p.action === "ENTRER"
-    ? `Acheter autour de ${mono(f2(p.price))}, viser ${mono(f2(p.target), UP)}, sortir sous ${mono(f2(p.stop), DOWN)}.`
+    ? `Acheter autour de ${f2(p.price)}.`
     : p.action === "ATTENDRE_REPLI"
-      ? `Pas au cours actuel (${mono(f2(p.price))}). Ordre d'achat entre ${mono(f2(p.zoneLo), BRAND)} et ${mono(f2(p.zoneHi), BRAND)}, valable jusqu'au ${dShort(p.validUntil)}.`
-      : `Acheter dès que le cours dépasse ${mono(f2(p.zoneLo), BRAND)} en séance (plus haut d'hier), d'ici le ${dShort(p.validUntil)}. Sinon, on oublie.`;
-  const details = [
-    `1 mois ${sp1(perf.m1)} · 3 mois ${sp1(perf.m3)} · depuis janv. ${sp1(perf.ytd)}`,
-    [ok(p.rsi) ? `RSI ${f1(p.rsi)}` : null, ok(p.support) ? `support ${f2(p.support)}` : null, ok(p.resistance) ? `résistance ${f2(p.resistance)}` : null].filter(Boolean).join(" · "),
-    [ok(f.pe) ? `PER ${f1(f.pe)}` : null, ok(f.yield) ? `rendement ${f1(f.yield)} %` : null, rating(f.rating) ? `analystes : ${rating(f.rating)}` : null].filter(Boolean).join(" · "),
-  ].filter(Boolean);
-  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BG};border:1px solid ${LINE};border-radius:16px;margin:0 0 10px"><tr><td style="padding:16px">
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-      <td style="vertical-align:top">
-        <div style="font-family:${MONO};font-size:11px;color:${DIM};letter-spacing:1px">${String(n).padStart(2, "0")} · ${esc(p.sym)}</div>
-        <div style="font-size:17px;font-weight:700;color:${TXT};margin-top:3px">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</div>
-      </td>
-      <td style="vertical-align:top;text-align:right;white-space:nowrap">
-        <div style="font-family:${MONO};font-size:26px;font-weight:700;color:${col(p.pUp)};letter-spacing:-1px;line-height:28px">${Math.round(p.pUp * 100)}<span style="font-size:14px">%</span></div>
-        <div style="font-size:10.5px;color:${DIM}">chances de hausse</div>
-      </td></tr></table>
-    <div style="margin:12px 0 10px">${chip(a.t, a.c, a.bg, 11.5)} <span style="font-size:12px;color:${DIM}">&nbsp;horizon ${HL[p.h]} · attendu ${mono(sp1(p.expPct), col(p.pUp), 12)}</span></div>
-    <div style="font-size:13.5px;line-height:21px;color:${SOFT};margin-bottom:10px">${sentence}</div>
-    <table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>
-      ${cell("Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", DOWN)}
-      ${cell("Entrée", entry, esc(p.cur), BRAND)}
-      ${cell("Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", UP)}
+      ? `Pas au cours actuel (${f2(p.price)}) : ordre d'achat entre ${f2(p.zoneLo)} et ${f2(p.zoneHi)}, jusqu'au ${dShort(p.validUntil)}.`
+      : `Acheter dès que le cours dépasse ${f2(p.zoneLo)} en séance, d'ici le ${dShort(p.validUntil)}. Sinon, on oublie.`;
+  const why = (p.why || [])[0] || "";
+  const tone = p.ctx ? (p.ctx.tone === "positif" ? "👍" : p.ctx.tone === "négatif" ? "⚠️" : "📰") : "";
+  return `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:${BG};border:2px solid ${L[3]}55;border-radius:20px;margin:0 0 12px"><tr><td style="padding:16px">
+    <div>${chip(L[0] + " " + L[1], L[3], CARD2, 12.5)} <span style="font-size:12px;color:${DIM}">&nbsp;⏳ ${HL[p.h]}</span></div>
+    <div style="font-size:19px;font-weight:700;color:${TXT};margin-top:10px">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</div>
+    <div style="font-size:12.5px;color:${DIM};margin-top:2px">${esc(L[2])} · ${sentence}</div>
+    ${bar(p)}
+    ${p.timing ? `<div style="margin-top:8px">${timingTxt(p.timing)}</div>` : ""}
+    <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:10px"><tr>
+      ${bub("🚪", "Entrée", entry, esc(p.cur), BRAND)}${bub("🎯", "Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", UP)}${bub("🛑", "Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", DOWN)}
     </tr></table>
-    <div style="font-size:12px;line-height:19px;color:${DIM};margin-top:10px">
-      Objectif avant stop ${mono(pc(p.pTarget), TXT, 12)} · gain/risque ${mono(f1(p.rr) + "×", TXT, 12)} · mise max ${mono(Math.round(p.sizePct || 0) + " %", TXT, 12)} du capital · revoir le ${dShort(p.reviewDate)}
-    </div>
-    ${p.earningsWarning ? `<div style="margin-top:10px;padding:9px 12px;border-radius:10px;background:rgba(245,183,64,0.10);color:${ALERT};font-size:12px">${esc(p.earningsWarning)}</div>` : ""}
-    ${n <= 3 ? dayBlock(p.day) : ""}
-    ${details.length ? `<div style="font-size:11px;line-height:17px;color:${DIM};margin-top:10px;padding-top:10px;border-top:1px solid ${LINE}">${details.map(esc).join("<br>")}</div>` : ""}
-    ${p.ctx ? `<div style="margin-top:10px;font-size:12px;line-height:1.45"><b style="color:${(TONE[p.ctx.tone] || TONE.neutre).c}">Pourquoi maintenant · ${esc(p.ctx.verdict)} :</b> <a href="${esc(p.ctx.link)}" style="color:${SOFT};text-decoration:none">${esc(p.ctx.title)}</a> <span style="color:${DIM};font-size:11px">· ${esc(p.ctx.source || "")}</span></div>` : p.news?.length ? newsList(p.news.slice(0, 1), true) : ""}
-    ${SITE ? `<div style="margin-top:12px">${btn("v/" + encodeURIComponent(p.sym), "Graphique et indicateurs")}</div>` : ""}
+    ${why ? `<div style="font-size:13px;line-height:19px;color:${SOFT};margin-top:10px">💡 ${esc(why)}</div>` : ""}
+    ${p.earningsWarning ? `<div style="margin-top:8px;padding:8px 12px;border-radius:10px;background:rgba(245,183,64,0.10);color:${ALERT};font-size:12px">📣 ${esc(p.earningsWarning)}</div>` : ""}
+    ${n <= 2 ? dayBlock(p.day) : ""}
+    ${p.ctx ? `<div style="margin-top:8px;font-size:12px;line-height:1.45;color:${DIM}">${tone} <b style="color:${SOFT}">${esc(p.ctx.verdict)}</b> · <a href="${esc(p.ctx.link)}" style="color:${SOFT};text-decoration:none">${esc(p.ctx.title)}</a></div>` : ""}
   </td></tr></table>`;
 }
 
-export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, etfs, summary, failed }) {
+export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, picks, avoid, watch, track, modelInfo, news, agenda, earnings, context, movers, etfs, summary, radar, etfUniverse, failed }) {
   SITE = siteUrl || "";
   SEC = 0;
   const parts = [];
@@ -135,6 +137,8 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
   // ---- en-tete ----
   const cac = (indices || []).find((x) => x.id === "cac") || (indices || [])[0];
   const strong = (agenda?.today || []).filter((e) => e.impact === "fort").length;
+  const cx = (context || []).find((c) => c.sym === "^FCHI");
+  const wx = cx && ok(cx.chg) ? [...(cx.chg >= 1 ? ["☀️", "Grand soleil sur la Bourse"] : cx.chg >= 0.2 ? ["🌤️", "Belle éclaircie"] : cx.chg > -0.2 ? (cx.m1 >= 0 ? ["⛅", "Temps calme, plutôt doux"] : ["☁️", "Temps gris et calme"]) : cx.chg > -1.2 ? ["🌧️", "Petite averse"] : ["⛈️", "Orage sur les marchés"]), cx.chg, cx.m1] : null;
   const kpi = (v, l, c) => `<td width="33%" style="padding:4px"><div style="border:1px solid ${LINE};border-radius:14px;padding:12px 10px">
       <div style="font-family:${MONO};font-size:22px;font-weight:700;color:${c};letter-spacing:-0.8px">${v}</div>
       <div style="font-size:11px;color:${DIM};margin-top:2px;line-height:15px">${l}</div></div></td>`;
@@ -145,17 +149,17 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
         <td style="padding-left:10px;font-family:${MONO};font-size:11px;letter-spacing:3px;color:${SOFT}">QUANTUM ALGO</td></tr></table></td>
       <td style="text-align:right;font-family:${MONO};font-size:11px;color:${DIM};letter-spacing:1px">${esc(dateLabel)}</td>
     </tr></table>
-    <div style="font-size:30px;line-height:36px;font-weight:700;color:${TXT};letter-spacing:-1px;margin:26px 0 6px">La lettre du matin</div>
-    <div style="font-size:13.5px;line-height:20px;color:${DIM}">Les marchés, l'agenda et les opportunités du jour, en cinq minutes.</div>
+    <div style="font-size:30px;line-height:36px;font-weight:700;color:${TXT};letter-spacing:-0.5px;margin:24px 0 6px">Bonjour 👋</div>
+    ${wx ? `<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px;background:${CARD};border:1px solid ${LINE};border-radius:20px"><tr><td style="padding:14px 16px;width:1%;font-size:44px;line-height:1">${wx[0]}</td><td style="padding:14px 16px 14px 0"><div style="font-size:19px;font-weight:700;color:${TXT}">${wx[1]}</div><div style="font-size:13px;line-height:19px;color:${SOFT};margin-top:3px">La météo de la Bourse : le CAC 40 a fait <b style="color:${cchg(wx[2])}">${sp1(wx[2])}</b> hier et <b style="color:${cchg(wx[3])}">${sp1(wx[3])}</b> sur un mois.</div></td></tr></table>` : `<div style="font-size:13.5px;line-height:20px;color:${DIM}">Les marchés, l'agenda et les pépites du jour, en cinq minutes.</div>`}
     <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:18px"><tr>
       ${cac ? kpi(pc(cac.p1M), `chances de hausse<br>${esc(cac.label)} · 1 mois`, col(cac.p1M)) : ""}
-      ${kpi(String(picks.length), `opportunité${picks.length > 1 ? "s" : ""}<br>retenue${picks.length > 1 ? "s" : ""}`, picks.length ? UP : SOFT)}
+      ${kpi(String(picks.length), `pépite${picks.length > 1 ? "s" : ""}<br>du jour`, picks.length ? UP : SOFT)}
       ${kpi(String(strong), `annonce${strong > 1 ? "s" : ""} fort<br>impact aujourd'hui`, strong ? ALERT : SOFT)}
     </tr></table>
     ${SITE ? `<div style="margin-top:16px"><a href="${SITE}" style="display:inline-block;background:${BRAND};color:#0B0E1A;font-weight:700;font-size:13px;padding:11px 18px;border-radius:12px;text-decoration:none">Ouvrir le tableau de bord &rarr;</a></div>` : ""}
   </td></tr>`);
 
-  if (brief?.length) parts.push(card("L'essentiel", brief.map((b) => `<div style="padding:5px 0;font-size:14px;line-height:21px;color:${SOFT}"><span style="color:${BRAND};font-family:${MONO}">&rsaquo;</span>&nbsp; ${esc(b)}</div>`).join("")));
+  if (brief?.length) parts.push(card("📝 L'essentiel", brief.map((b) => `<div style="padding:5px 0;font-size:14px;line-height:21px;color:${SOFT}"><span style="color:${BRAND};font-family:${MONO}">&rsaquo;</span>&nbsp; ${esc(b)}</div>`).join("")));
 
   if (agenda && (agenda.today?.length || agenda.ok)) {
     const MAXA = 8;
@@ -169,56 +173,62 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
     const wk = allWeek.slice(0, Math.max(0, MAXA - ev.length));
     const tmr = wk.length ? `<div style="margin:16px 0 4px;font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${DIM}">CETTE SEMAINE · FORT IMPACT</div>${T0}${wk.map((e) => `<tr>${td(badge(esc(e.dayLabel), false) + ` ${mono(esc(e.time), SOFT, 11)}`, "white-space:nowrap;width:1%")}${td(`${e.flag} <span style="color:${TXT}">${esc(e.title)}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(e.country)}${e.forecast ? " · prévu " + esc(e.forecast) : ""}</div>`)}</tr>`).join("")}</table>` : "";
     const rest = SITE ? `<div style="margin-top:14px">${btn("today/agenda", more > 0 ? `${more} autre${more > 1 ? "s" : ""} annonce${more > 1 ? "s" : ""} sur le site` : "Agenda complet")}</div>` : "";
-    parts.push(card("Agenda économique", body + tmr + rest, "Heure de Paris. ●●● fort impact : les marchés bougent souvent dans les minutes qui suivent.", "today/agenda"));
+    parts.push(card("🗓️ L'agenda", body + tmr + rest, "Heure de Paris. ●●● fort impact : les marchés bougent souvent dans les minutes qui suivent.", "today/agenda"));
   }
 
   if (earnings && (earnings.today?.length || earnings.week?.length)) {
     const t = earnings.today?.length ? earnings.today.map((e) => `<div style="padding:6px 0;font-size:13.5px">${badge("Aujourd'hui" + (e.when ? " · " + esc(e.when) : e.date ? " · " + hFr(e.date) : ""), true)}&nbsp; <b style="color:${TXT}">${link("v/" + encodeURIComponent(e.sym), fl(e.sym) + esc(e.name))}</b></div>`).join("") : "";
     const w = earnings.week?.length ? earnings.week.slice(0, 10).map((e) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${badge(dFr(e.date) + (e.estimate ? "*" : ""), false)}&nbsp; ${link("v/" + encodeURIComponent(e.sym), fl(e.sym) + esc(e.name))}</div>`).join("") + (earnings.week.length > 10 ? `<div style="margin-top:10px">${btn("today/agenda", `${earnings.week.length - 10} autres résultats`)}</div>` : "") + (earnings.week.some((e) => e.estimate) ? `<div style="font-size:11px;color:${DIM};margin-top:6px">* date estimée</div>` : "") : "";
-    parts.push(card("Résultats d'entreprises", t + w, "Valeurs suivies. Vert : aujourd'hui · ambre : dans les prochains jours."));
+    parts.push(card("📣 Résultats d'entreprises", t + w, "Valeurs suivies. Vert : aujourd'hui · ambre : dans les prochains jours."));
   }
 
   if (context?.length) {
-    parts.push(card("Contexte de marché", `${T0}<tr>${th("")}${th("Niveau", true)}${th("Veille", true)}${th("1 mois", true)}</tr>${context.map((c) => `<tr>${td(fl(c.sym) + esc(c.label))}${td(mono(f2(c.last), TXT, 12.5), "text-align:right")}${td(mono(sp(c.chg), c.sym === "^VIX" ? cchg(-c.chg) : cchg(c.chg), 12.5), "text-align:right")}${td(mono(sp1(c.m1), DIM, 12), "text-align:right")}</tr>`).join("")}</table>`));
+    parts.push(card("📊 Hier en Bourse", `${T0}<tr>${th("")}${th("Niveau", true)}${th("Veille", true)}${th("1 mois", true)}</tr>${context.map((c) => `<tr>${td(fl(c.sym) + esc(c.label))}${td(mono(f2(c.last), TXT, 12.5), "text-align:right")}${td(mono(sp(c.chg), c.sym === "^VIX" ? cchg(-c.chg) : cchg(c.chg), 12.5), "text-align:right")}${td(mono(sp1(c.m1), DIM, 12), "text-align:right")}</tr>`).join("")}</table>`));
   }
 
-  if (etfs?.length) {
-    // palmares ETF de la veille : 3 meilleurs, 3 moins bons (tableau allege pour rester sous la limite Gmail)
+  const EU = (etfUniverse || []).filter((o) => ok(o.m));
+  if (EU.length >= 6) {
+    const bm = EU.slice().sort((a, b) => b.m - a.m), bd = EU.filter((o) => ok(o.d)).sort((a, b) => b.d - a.d);
+    const pod = (o, m) => `<td width="33%" style="padding:3px;text-align:center;vertical-align:bottom"><div style="font-size:24px">${m}</div><div style="font-size:20px">${o.e}</div><div style="font-size:12px;font-weight:600;color:${TXT};line-height:15px;margin-top:3px">${esc(o.n)}</div><div style="font-family:${MONO};font-size:14px;font-weight:700;color:${UP};margin-top:3px">${sp1(o.m)}</div></td>`;
+    const li = (o) => `<div style="padding:3px 0;font-size:12.5px;color:${SOFT}">${o.e} ${esc(o.n)} ${mono(sp1(o.d), cchg(o.d), 12)}</div>`;
+    parts.push(card("🏆 Le podium des ETF", `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr>${pod(bm[1], "🥈")}${pod(bm[0], "🥇")}${pod(bm[2], "🥉")}</tr></table>
+      <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="margin-top:12px"><tr><td width="50%" style="vertical-align:top;padding-right:6px"><div style="font-size:11px;font-weight:700;color:${UP};margin-bottom:2px">🚀 HIER, EN TÊTE</div>${bd.slice(0, 3).map(li).join("")}</td><td style="vertical-align:top"><div style="font-size:11px;font-weight:700;color:${DOWN};margin-bottom:2px">🥶 HIER, EN QUEUE</div>${bd.slice(-3).reverse().map(li).join("")}</td></tr></table>`,
+      `Les plus fortes hausses sur 1 mois parmi ${EU.length} ETF (monde, pays, secteurs, matières premières…).`, "etf"));
+  } else if (etfs?.length) {
     const et = etfs.filter((e) => ok(e.chg)).sort((a, b) => b.chg - a.chg);
-    const sel = et.length > 6 ? [...et.slice(0, 3), ...et.slice(-3)] : et;
-    const c0 = `padding:6px 4px;border-top:1px solid ${LINE}`, cN = `${c0};text-align:right;font-family:${MONO};font-size:12px;white-space:nowrap`;
-    parts.push(card("Palmarès ETF d'hier", `${T0}<tr>${th("")}${th("Veille", true)}${th("Depuis janv.", true)}</tr>${sel.map((e) => `<tr><td style="${c0};font-size:13px;color:${TXT}">${esc(e.label)} <span style="font-size:10.5px;color:${DIM}">${esc(e.issuer)}</span></td><td style="${cN};color:${cchg(e.chg)};font-weight:600">${sp(e.chg)}</td><td style="${cN};color:${DIM}">${sp1(e.ytd)}</td></tr>`).join("")}</table>`,
-      `Les 3 meilleurs et les 3 moins bons sur ${et.length} ETF suivis. Tableau complet sur le site.`, "today"));
+    parts.push(card("🏆 Les ETF d'hier", et.slice(0, 6).map((e) => `<div style="padding:3px 0;font-size:12.5px;color:${SOFT}">${esc(e.label)} ${mono(sp(e.chg), cchg(e.chg), 12)}</div>`).join(""), "", "etf"));
   }
 
-  parts.push(card("Les indices", `${T0}<tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("1 mois", true)}</tr>${indices.map((x) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("indices/" + x.id, fl(x.id) + esc(x.label))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(x.trend)}</div>`)}${td(mono(sp(x.chg), cchg(x.chg), 12.5), "text-align:right")}${td(mono(pc(x.p1S), col(x.p1S), 13, 700), "text-align:right")}${td(mono(pc(x.p1M), col(x.p1M), 13, 700), "text-align:right")}</tr>`).join("")}</table>`,
+  parts.push(card("🧭 Les indices", `${T0}<tr>${th("Indice")}${th("Veille", true)}${th("1 sem.", true)}${th("1 mois", true)}</tr>${indices.map((x) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("indices/" + x.id, fl(x.id) + esc(x.label))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(x.trend)}</div>`)}${td(mono(sp(x.chg), cchg(x.chg), 12.5), "text-align:right")}${td(mono(pc(x.p1S), col(x.p1S), 13, 700), "text-align:right")}${td(mono(pc(x.p1M), col(x.p1M), 13, 700), "text-align:right")}</tr>`).join("")}</table>`,
     "Les pourcentages sont des chances de hausse sur 100 à l'horizon indiqué, pas des variations. Autour de 50 % : pas d'avis.", "indices"));
 
-  if (summary?.length) parts.push(card("Les pépites du jour en bref", summary.map((x, i) => {
-    const t = x.ctx ? TONE[x.ctx.tone] || TONE.neutre : null;
-    return `<div style="padding:7px 0;${i ? `border-top:1px solid ${LINE};` : ""}font-size:13px;line-height:1.5;color:${SOFT}"><b style="color:${TXT}">${esc(x.name)}</b> · ${esc(x.text)}${x.ctx ? `<br><span style="color:${t.c};font-size:12px">${t.t} ${esc(x.ctx.verdict)}</span>` : `<br><span style="color:${DIM};font-size:12px">Pas d'actu marquante : signal technique seul.</span>`}</div>`;
-  }).join("")));
+  parts.push(card("🎯 Les pépites du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<div style="font-size:13.5px;color:${DIM}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</div>`,
+    "Le feu dit quoi faire, la barre dit à quel point le modèle y croit. ⚡ frais = signal qui vient d'apparaître · 🐢 en retard = une bonne partie de la hausse est déjà faite.", "today/opportunites"));
 
-  parts.push(card("Opportunités du jour", picks.length ? picks.map((p, i) => pickCard(p, i + 1)).join("") : `<div style="font-size:13.5px;color:${DIM}">Aucune valeur ne présente un avantage suffisant aujourd'hui. Rester à l'écart est aussi une décision.</div>`,
-    "De la plus solide à la moins solide. « 58 % » = 58 chances sur 100 de finir plus haut à l'horizon indiqué.", "today/opportunites"));
+  if (radar?.hits?.length) {
+    const st = radar.stats;
+    parts.push(card("🚀 Ça démarre !", radar.hits.slice(0, 4).map((h) => `<div style="padding:6px 0;font-size:13px;line-height:19px;color:${SOFT}">🔔 <b style="color:${TXT}">${link("v/" + encodeURIComponent(h.sym), fl(h.sym) + esc(h.name))}</b> ${mono(sp1(h.chg), cchg(h.chg), 12)} · a dépassé son plus haut d'un mois${ok(h.vol) ? ` avec ${f1(h.vol)}× le volume habituel` : ""}${h.day ? " (hier)" : ""}.</div>`).join("") +
+      (st ? `<div style="font-size:11.5px;line-height:17px;color:${DIM};margin-top:8px">🧪 Historique : hausse à 1 mois dans ${f1(st.up21)} % des cas (${st.n}), contre ${f1(st.baseUp21)} % au hasard. ${st.up21 - st.baseUp21 >= 2 ? "Petit avantage, mais un départ sur deux échoue." : "Pas d'avantage net : liste à surveiller, pas un ordre d'achat."}</div>` : ""),
+      "Repérées avant le modèle principal, qui attend que la hausse soit installée.", "today/opportunites"));
+  }
 
-  if (avoid.length) parts.push(card("À éviter", `${T0}<tr>${th("Valeur")}${th("Hausse", true)}${th("Si détenue", true)}</tr>${avoid.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${HL[p.h]} · 1 mois ${sp1(p.perf?.m1)}</div>`)}${td(mono(pc(p.pUp), DOWN, 13, 700), "text-align:right")}${td(`<span style="font-size:12px;color:${DIM}">stop</span> ${mono(f2(p.stop), SOFT, 12)}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`));
+  if (avoid.length) parts.push(card("🚫 À éviter", `${T0}<tr>${th("Valeur")}${th("Hausse", true)}${th("Si détenue", true)}</tr>${avoid.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${HL[p.h]} · 1 mois ${sp1(p.perf?.m1)}</div>`)}${td(mono(pc(p.pUp), DOWN, 13, 700), "text-align:right")}${td(`<span style="font-size:12px;color:${DIM}">stop</span> ${mono(f2(p.stop), SOFT, 12)}`, "text-align:right;white-space:nowrap")}</tr>`).join("")}</table>`));
 
-  if (watch.length) parts.push(card("Ta liste", `${T0}<tr>${th("Valeur")}${th("Cours", true)}${th("Hausse", true)}</tr>${watch.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(p.actionLabel)} · ${HL[p.h]}${p.earningsWarning ? ` · <span style="color:${ALERT}">résultats à venir</span>` : ""}</div>`)}${td(mono(f2(p.price), TXT, 12.5) + `<div>${mono(sp(p.chg), cchg(p.chg), 11)}</div>`, "text-align:right")}${td(mono(pc(p.pUp), col(p.pUp), 13, 700), "text-align:right")}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => newsList(p.news.slice(0, 1), true)).join("")}`));
+  if (watch.length) parts.push(card("❤️ Ta liste", `${T0}<tr>${th("Valeur")}${th("Cours", true)}${th("Hausse", true)}</tr>${watch.map((p) => `<tr>${td(`<span style="color:${TXT};font-weight:600">${link("v/" + encodeURIComponent(p.sym), fl(p.sym) + esc(p.name))}</span><div style="font-size:11px;color:${DIM};margin-top:2px">${esc(p.actionLabel)} · ${HL[p.h]}${p.earningsWarning ? ` · <span style="color:${ALERT}">résultats à venir</span>` : ""}</div>`)}${td(mono(f2(p.price), TXT, 12.5) + `<div>${mono(sp(p.chg), cchg(p.chg), 11)}</div>`, "text-align:right")}${td(mono(pc(p.pUp), col(p.pUp), 13, 700), "text-align:right")}</tr>`).join("")}</table>${watch.filter((p) => p.news?.length).map((p) => newsList(p.news.slice(0, 1), true)).join("")}`));
 
   if (movers && (movers.up?.length || movers.down?.length)) {
     const li = (m) => `<div style="padding:5px 0;font-size:13px;color:${SOFT}">${link("v/" + encodeURIComponent(m.sym), fl(m.sym) + esc(m.name))} ${mono(sp(m.chg), cchg(m.chg), 12)}</div>`;
-    parts.push(card("Plus forts mouvements d'hier", `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="50%" style="vertical-align:top;padding-right:8px"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${UP};margin-bottom:4px">HAUSSE</div>${movers.up.slice(0, 3).map(li).join("")}</td><td style="vertical-align:top"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${DOWN};margin-bottom:4px">BAISSE</div>${movers.down.slice(0, 3).map(li).join("")}</td></tr></table>`));
+    parts.push(card("🎢 Les montagnes russes d'hier", `<table role="presentation" width="100%" cellpadding="0" cellspacing="0"><tr><td width="50%" style="vertical-align:top;padding-right:8px"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${UP};margin-bottom:4px">HAUSSE</div>${movers.up.slice(0, 3).map(li).join("")}</td><td style="vertical-align:top"><div style="font-family:${MONO};font-size:10.5px;letter-spacing:2px;color:${DOWN};margin-bottom:4px">BAISSE</div>${movers.down.slice(0, 3).map(li).join("")}</td></tr></table>`));
   }
 
-  if (news?.length) parts.push(card("Actualités à surveiller", newsList(news), "Dernières 36 heures. ▲ positif · ▼ négatif · ● neutre (estimé à partir du titre).", "today/actus"));
+  if (news?.length) parts.push(card("📰 Les actus à surveiller", newsList(news), "Dernières 36 heures. ▲ positif · ▼ négatif · ● neutre (estimé à partir du titre).", "today/actus"));
 
   if (quizOfDay) {
     const q = quizOfDay;
     const opts = q.a.map((a, k) => SITE
       ? `<a href="${SITE}#/apprendre/q/${q.id}/${k}" style="display:block;margin:8px 0 0;padding:11px 14px;border:1px solid ${LINE};background:${BG};border-radius:12px;color:${TXT};text-decoration:none;font-size:14px"><span style="font-family:${MONO};color:${BRAND}">${String.fromCharCode(65 + k)}</span>&nbsp;&nbsp;${esc(a)}</a>`
       : `<div style="margin:6px 0;font-size:14px;color:${SOFT}">${String.fromCharCode(65 + k)}. ${esc(a)}</div>`).join("");
-    parts.push(card("La question du jour", `<div style="font-size:15px;line-height:22px;font-weight:600;color:${TXT}">${esc(q.q)}</div>${opts}${SITE ? `<div style="font-size:12px;color:${DIM};margin-top:12px">Touche ta réponse pour voir la correction. ${link("apprendre", "Cours et quiz &rarr;", `color:${BRAND};text-decoration:none`)}</div>` : `<div style="font-size:12px;color:${DIM};margin-top:10px">Réponse : ${String.fromCharCode(65 + q.ok)} — ${esc(q.why)}</div>`}`));
+    parts.push(card("🧠 La question du jour", `<div style="font-size:15px;line-height:22px;font-weight:600;color:${TXT}">${esc(q.q)}</div>${opts}${SITE ? `<div style="font-size:12px;color:${DIM};margin-top:12px">Touche ta réponse pour voir la correction. ${link("apprendre", "Cours et quiz &rarr;", `color:${BRAND};text-decoration:none`)}</div>` : `<div style="font-size:12px;color:${DIM};margin-top:10px">Réponse : ${String.fromCharCode(65 + q.ok)} — ${esc(q.why)}</div>`}`));
   }
 
   const trackRows = ["1J", "1S", "1M", "3M"].map((h) => {
@@ -228,11 +238,17 @@ export function buildLetter({ quizOfDay, siteUrl, dateLabel, brief, indices, pic
     const v = o ? (o.accConf ?? o.acc) : null;
     return `<tr>${td(HL[h])}${td(live, "text-align:right")}${td(v != null ? mono(pc(v), col(v), 13, 700) : "-", "text-align:right")}</tr>`;
   }).join("");
-  parts.push(card("Le modèle se vérifie", `${T0}<tr>${th("Horizon")}${th("En réel", true)}${th("Test 120 séances", true)}</tr>${trackRows}</table>
+  parts.push(card("✅ Le modèle se vérifie", `${T0}<tr>${th("Horizon")}${th("En réel", true)}${th("Test 120 séances", true)}</tr>${trackRows}</table>
       ${modelInfo?.summary ? `<div style="font-size:12px;line-height:18px;color:${DIM};margin-top:10px">${esc(modelInfo.summary)}</div>` : ""}
       ${track?.picksSummary ? `<div style="font-size:12px;line-height:18px;color:${DIM};margin-top:6px">Sélections passées : ${mono(sp(track.picksSummary.avg), cchg(track.picksSummary.avg), 12)} en moyenne sur ${track.picksSummary.n} positions, contre ${mono(sp(track.picksSummary.benchAvg), SOFT, 12)} pour l'ensemble.</div>` : ""}`,
     "Bonnes directions quand le modèle avait un avis. 50 % = hasard ; 53 à 56 % de façon régulière est déjà très bon.", "bilan"));
 
+  // ordre de lecture : le plus utile d'abord
+  const ORDER = ["📝", "🎯", "🚀", "🏆", "📊", "🎢", "🧭", "🗓️", "📣", "🚫", "❤️", "📰", "🧠", "✅"];
+  const key = (x) => { const m = x.indexOf('width:100%">'); const t = m >= 0 ? x.slice(m + 12, m + 20) : ""; const k = ORDER.findIndex((e) => t.startsWith(e)); return k < 0 ? 99 : k; };
+  const head = parts.shift();
+  parts.sort((x, y) => key(x) - key(y));
+  parts.unshift(head);
   const html = `<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="color-scheme" content="dark"><meta name="supported-color-schemes" content="dark">
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">

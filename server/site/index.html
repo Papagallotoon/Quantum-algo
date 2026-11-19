@@ -7,7 +7,7 @@
 <title>Quantum Algo</title>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='10' fill='%238B93FF'/%3E%3Ccircle cx='15' cy='15' r='7' fill='none' stroke='%230B0E1A' stroke-width='3'/%3E%3Cpath d='M20 20l5 5' stroke='%230B0E1A' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&family=Sora:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --bg: #0A0D13; --top: #0A0D13; --card: #131925; --card2: #1A2231; --line: #232C3D; --line2: #2A3446;
@@ -184,6 +184,147 @@
     table.etf td, table.etf th { padding-left: 4px; padding-right: 4px; }
     table.etf td.r { font-size: 12px; }
   }
+  /* ---------- style ludique ---------- */
+  :root { --fun: "Fredoka", "Sora", system-ui, sans-serif; --yellow: #FFD166; --pink: #FF8FAB; --sky: #6EC6FF; }
+  h1.fun { font-family: var(--fun); font-size: 34px; font-weight: 700; letter-spacing: -.3px; }
+  .card h2 { font-family: var(--fun); font-weight: 600; font-size: 17px; letter-spacing: 0; }
+  .secT { display: flex; align-items: center; gap: 14px; margin: 36px 0 2px; }
+  .secE { width: 52px; height: 52px; flex: none; border-radius: 18px; background: linear-gradient(135deg, rgba(139,147,255,.28), rgba(255,143,171,.18)); display: flex; align-items: center; justify-content: center; font-size: 27px; }
+  .secH { font-family: var(--fun); font-size: 24px; font-weight: 700; line-height: 1.1; }
+  .secS { color: var(--dim); font-size: 13.5px; line-height: 1.45; margin-top: 4px; }
+  .note { color: var(--dim); font-size: 12.5px; line-height: 1.55; margin: 12px 4px 0; }
+  .hero { margin-top: 14px; border-radius: 26px; padding: 20px; background: radial-gradient(120% 140% at 0% 0%, rgba(255,209,102,.20), transparent 55%), radial-gradient(120% 140% at 100% 100%, rgba(110,198,255,.16), transparent 60%), var(--card); border: 1px solid var(--line); }
+  .wx { display: flex; align-items: center; gap: 16px; }
+  .wxE { font-size: 64px; line-height: 1; filter: drop-shadow(0 6px 16px rgba(0,0,0,.35)); }
+  .wxT { font-family: var(--fun); font-size: 26px; font-weight: 700; }
+  .wxS { color: var(--soft-t); font-size: 14px; line-height: 1.5; margin-top: 4px; }
+  .wxTiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin-top: 16px; }
+  .wxTile, .ctxT, .pg { border-radius: 16px; padding: 10px 12px; background: var(--card2); border: 1px solid transparent; }
+  .upb { background: rgba(52,211,153,.09); border-color: rgba(52,211,153,.22); }
+  .downb { background: rgba(255,107,91,.09); border-color: rgba(255,107,91,.22); }
+  .flatb { background: var(--card2); }
+  .wxL, .ctxL, .pgL { font-size: 12px; color: var(--soft-t); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .wxV, .ctxV, .pgV { font-family: var(--mono); font-weight: 700; font-size: 15px; margin-top: 3px; white-space: nowrap; }
+  .ctx { display: grid; grid-template-columns: repeat(4, 1fr); gap: 10px; margin-top: 14px; }
+  .ctxN { font-size: 12px; color: var(--dim); margin-top: 2px; }
+  .ctxM { font-size: 11px; color: var(--dimmer); margin-top: 2px; }
+  .ess .essL { display: flex; gap: 12px; padding: 7px 0; font-size: 15px; line-height: 1.45; }
+  .ess .essL span:first-child { font-size: 18px; width: 24px; flex: none; text-align: center; }
+  .pgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 14px; }
+  .pcard { border-radius: 24px; padding: 16px; background: var(--card); border: 2px solid var(--line); position: relative; }
+  .pcard.lg, .qf.lg { border-color: rgba(52,211,153,.5); box-shadow: 0 0 0 4px rgba(52,211,153,.06); }
+  .pcard.ly, .qf.ly { border-color: rgba(255,209,102,.5); box-shadow: 0 0 0 4px rgba(255,209,102,.06); }
+  .pcard.lo, .qf.lo { border-color: rgba(245,183,64,.5); }
+  .pcard.lr, .qf.lr { border-color: rgba(255,107,91,.5); }
+  .pcTop { display: flex; align-items: center; gap: 8px; }
+  .pcTop .heart { margin-left: auto; }
+  .light { font-family: var(--fun); font-weight: 600; font-size: 14px; padding: 6px 12px; border-radius: 999px; background: var(--card2); }
+  .lg .light { background: rgba(52,211,153,.15); color: var(--up); } .ly .light { background: rgba(255,209,102,.15); color: var(--yellow); }
+  .lo .light { background: rgba(245,183,64,.15); color: var(--amber); } .lr .light { background: rgba(255,107,91,.15); color: var(--down); }
+  .hzc { font-size: 12px; color: var(--soft-t); padding: 5px 10px; border-radius: 999px; background: var(--card2); white-space: nowrap; }
+  .pcName { display: block; font-family: var(--fun); font-size: 22px; font-weight: 700; margin-top: 12px; line-height: 1.2; }
+  .pcName:hover { color: var(--brand); } .pcArrow { color: var(--dimmer); }
+  .pcSub { font-size: 13px; color: var(--dim); margin: 4px 0 12px; }
+  .gauge .gbar { position: relative; height: 14px; border-radius: 999px; background: var(--card2); overflow: hidden; }
+  .gauge .gbar i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 999px; }
+  .gauge .gbar b { position: absolute; top: 2px; bottom: 2px; width: 2px; background: rgba(255,255,255,.35); }
+  .gauge .glab { font-size: 13px; color: var(--soft-t); margin-top: 6px; }
+  .gauge .glab b { font-family: var(--mono); font-size: 16px; }
+  .gauge.sm .gbar { height: 8px; }
+  .tchip { display: inline-block; font-size: 12.5px; font-weight: 600; padding: 6px 11px; border-radius: 999px; }
+  .tf { background: rgba(110,198,255,.15); color: var(--sky); } .tc { background: rgba(139,147,255,.15); color: var(--brand); } .tlate { background: rgba(245,183,64,.14); color: var(--amber); }
+  .bubs { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 14px 0 4px; }
+  .bub { border-radius: 18px; padding: 10px 6px; text-align: center; background: var(--card2); }
+  .bubE { font-size: 20px; } .bubL { font-size: 11px; color: var(--dim); margin-top: 2px; }
+  .bubV { font-family: var(--mono); font-weight: 700; font-size: 14.5px; margin-top: 2px; white-space: nowrap; }
+  .bubS { font-family: var(--mono); font-size: 11px; margin-top: 1px; }
+  .bi .bubV, .bi .bubS { color: var(--brand); } .bt .bubV, .bt .bubS { color: var(--up); } .bs .bubV, .bs .bubS { color: var(--down); }
+  .bt { background: rgba(52,211,153,.08); } .bs { background: rgba(255,107,91,.08); } .bi { background: rgba(139,147,255,.1); }
+  .pcWhy { font-size: 13.5px; line-height: 1.55; color: var(--soft-t); margin-top: 10px; }
+  .pcNews { font-size: 12.5px; line-height: 1.5; color: var(--dim); margin-top: 8px; padding-top: 8px; border-top: 1px dashed var(--line2); }
+  .pcNews a { color: var(--text); } .pcNews a:hover { text-decoration: underline; }
+  .rgrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 14px; }
+  .rcard { display: block; border-radius: 20px; padding: 14px; background: linear-gradient(160deg, rgba(110,198,255,.12), transparent 60%), var(--card); border: 1px solid var(--line); }
+  .rcard:hover { border-color: var(--sky); }
+  .rTop { display: flex; justify-content: space-between; font-size: 12px; color: var(--sky); font-weight: 600; }
+  .rTop span:last-child { font-family: var(--mono); }
+  .rName { font-family: var(--fun); font-size: 17px; font-weight: 600; margin: 6px 0; }
+  .rTxt { font-size: 12.5px; line-height: 1.5; color: var(--soft-t); margin-top: 4px; }
+  .ptabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+  .ptabs a { font-size: 13px; font-weight: 600; padding: 8px 14px; border-radius: 999px; background: var(--card2); color: var(--dim); cursor: pointer; }
+  .ptabs a.on { background: var(--yellow); color: #2A1C00; }
+  .podium { display: grid; grid-template-columns: 1fr 1.15fr 1fr; gap: 10px; align-items: end; margin: 6px 0 16px; }
+  .pod { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 10px 6px 0; }
+  .podM { font-size: 30px; } .podE { font-size: 26px; margin-top: 2px; }
+  .podN { font-size: 12.5px; font-weight: 600; margin-top: 4px; line-height: 1.25; min-height: 32px; }
+  .podV { font-family: var(--mono); font-weight: 700; font-size: 16px; margin: 4px 0 8px; }
+  .podB { width: 100%; border-radius: 14px 14px 6px 6px; background: linear-gradient(180deg, rgba(255,209,102,.35), rgba(255,209,102,.08)); }
+  .p1 .podB { height: 74px; } .p2 .podB { height: 52px; background: linear-gradient(180deg, rgba(201,209,222,.3), rgba(201,209,222,.06)); } .p3 .podB { height: 36px; background: linear-gradient(180deg, rgba(229,152,102,.32), rgba(229,152,102,.06)); }
+  .hb { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr) 62px; gap: 10px; align-items: center; padding: 7px 0; font-size: 13.5px; }
+  .hb:hover .hbL { color: var(--text); }
+  .hbL { color: var(--soft-t); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .hbS { color: var(--dimmer); font-size: 11.5px; margin-left: 6px; }
+  .hbT { height: 10px; border-radius: 999px; background: var(--card2); overflow: hidden; }
+  .hbT i { display: block; height: 100%; border-radius: 999px; }
+  .upg { background: linear-gradient(90deg, rgba(52,211,153,.5), #34D399); } .downg { background: linear-gradient(90deg, rgba(255,107,91,.5), #FF6B5B); } .flatg { background: var(--dim); }
+  .hbV { font-family: var(--mono); font-size: 13px; font-weight: 700; text-align: right; white-space: nowrap; }
+  .bigbtn { display: block; text-align: center; margin-top: 16px; padding: 13px; border-radius: 16px; background: var(--brand); color: var(--brandInk); font-weight: 700; font-family: var(--fun); font-size: 15px; }
+  .bigbtn:hover { filter: brightness(1.08); }
+  .chipsA { display: flex; flex-wrap: wrap; gap: 8px; }
+  .avc { font-size: 13.5px; padding: 8px 13px; border-radius: 999px; background: rgba(255,107,91,.08); border: 1px solid rgba(255,107,91,.2); }
+  .tl { display: grid; grid-template-columns: 74px 30px 1fr; gap: 8px; align-items: start; padding: 9px 0; border-top: 1px solid var(--soft); }
+  .tl:first-of-type { border-top: 0; }
+  .tlT { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--soft-t); padding-top: 2px; }
+  .tlD { display: block; font-family: var(--sans); font-size: 11px; color: var(--amber); font-weight: 600; }
+  .tlDot { font-size: 17px; text-align: center; }
+  .tlB { font-size: 14px; line-height: 1.4; }
+  .fnews a { display: flex; gap: 12px; padding: 11px 0; border-bottom: 1px solid var(--soft); font-size: 14.5px; line-height: 1.45; }
+  .fnews a:last-child { border-bottom: 0; }
+  .fnE { font-size: 18px; flex: none; }
+  .tlight { display: flex; align-items: center; gap: 16px; padding: 12px 14px; border-radius: 20px; background: var(--bg); margin-bottom: 10px; }
+  .tlamps { display: flex; flex-direction: column; gap: 5px; padding: 7px; border-radius: 14px; background: #05070B; }
+  .tlamps i { width: 18px; height: 18px; border-radius: 50%; opacity: .18; }
+  .tlamps .r { background: #FF6B5B; } .tlamps .o { background: #F5B740; } .tlamps .g { background: #34D399; }
+  .tlamps i.on { opacity: 1; box-shadow: 0 0 14px currentColor; }
+  .tlamps .r.on { color: #FF6B5B; } .tlamps .o.on { color: #F5B740; } .tlamps .g.on { color: #34D399; }
+  .tlBig { font-family: var(--fun); font-size: 24px; font-weight: 700; }
+  .tlSmall { color: var(--soft-t); font-size: 14px; margin-top: 2px; }
+  .ifb { display: flex; gap: 12px; padding: 12px; border-radius: 16px; margin-top: 8px; }
+  .ifE { font-size: 22px; flex: none; }
+  .ifT { font-family: var(--fun); font-weight: 600; font-size: 15px; }
+  .ifX { font-size: 13.5px; line-height: 1.5; color: var(--soft-t); margin-top: 2px; }
+  .agrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; }
+  .acard { display: flex; gap: 10px; align-items: flex-start; padding: 10px 12px; border-radius: 16px; background: rgba(245,183,64,.07); border: 1px solid rgba(245,183,64,.18); font-size: 13.5px; min-width: 0; }
+  .acard:hover { border-color: var(--amber); }
+  .acard b { display: block; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; font-weight: 600; }
+  .aE { font-size: 18px; flex: none; } .aT { display: block; font-size: 12px; color: var(--amber); margin-top: 2px; line-height: 1.35; }
+  @media (max-width: 760px) { .agrid { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 480px) { .agrid { grid-template-columns: 1fr; } }
+  .wxTile, .ctxT, .pg, .bub, .pcard, .rcard { min-width: 0; }
+  @media (max-width: 760px) { .wxTiles { grid-template-columns: repeat(3, minmax(0, 1fr)); } .ctx { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bubs { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+  @media (max-width: 400px) { .wxTiles { grid-template-columns: repeat(2, minmax(0, 1fr)); } .hero { padding: 16px; } }
+  .catc { margin: 6px 0 12px; } .catc .chip { height: 36px; font-size: 12.5px; padding: 0 13px; }
+  .cnt { font-size: 11px; opacity: .65; margin-left: 4px; }
+  .erow { display: flex; align-items: center; gap: 10px; padding: 10px 6px; border-bottom: 1px solid var(--soft); border-radius: 12px; }
+  .erow:hover { background: var(--card2); }
+  .erk { width: 30px; text-align: center; font-family: var(--mono); font-weight: 700; color: var(--dim); flex: none; font-size: 13px; }
+  .erE { font-size: 22px; flex: none; }
+  .erBar { width: 170px; flex: none; display: grid; grid-template-columns: 1fr 62px; gap: 8px; align-items: center; }
+  .etfOne .eoTop { display: flex; gap: 14px; align-items: center; } .eoE { font-size: 46px; }
+  .eoN { font-family: var(--fun); font-size: 24px; font-weight: 700; }
+  .eoP { margin-top: 12px; font-size: 22px; font-weight: 700; } .eoP .up, .eoP .down { font-family: var(--mono); font-size: 15px; margin-left: 6px; }
+  .perfG { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; }
+  @media (max-width: 760px) {
+    .pgrid, .rgrid { grid-template-columns: 1fr; }
+    .wxTiles { grid-template-columns: repeat(3, 1fr); } .ctx { grid-template-columns: repeat(2, 1fr); }
+    .perfG { grid-template-columns: repeat(3, 1fr); }
+  }
+  @media (max-width: 560px) {
+    h1.fun { font-size: 28px; } .wxE { font-size: 48px; } .wxT { font-size: 21px; } .secH { font-size: 20px; } .secE { width: 44px; height: 44px; font-size: 22px; border-radius: 15px; }
+    .erBar { width: 110px; grid-template-columns: 1fr 54px; } .erow > svg { display: none; }
+    .hb { grid-template-columns: minmax(0, 1.4fr) minmax(0, .8fr) 58px; }
+    .bubV { font-size: 13px; }
+  }
 </style>
 </head>
 <body>
@@ -193,6 +334,7 @@
     <nav id="nav">
       <a href="#/" data-r="today">Aujourd'hui</a>
       <a href="#/indices" data-r="indices">Marchés</a>
+      <a href="#/etf" data-r="etf">ETF</a>
       <a href="#/mes-valeurs" data-r="mes-valeurs">Mes valeurs</a>
       <a href="#/bilan" data-r="bilan">Bilan</a>
       <a href="#/apprendre" data-r="apprendre">Apprendre</a>
@@ -209,7 +351,7 @@
   var D = null;
   var HL = { "1J": "1 jour", "1S": "1 semaine", "1M": "1 mois", "3M": "3 mois" };
   var HK = ["1J", "1S", "1M", "3M"];
-  var st = { h: get("h") || "1M", tab: "est", cat: "Tous" };
+  var st = { h: get("h") || "1M", tab: "est", cat: "Tous", ep: get("ep") || "m", ec: get("ec") || "all" };
   function get(k) { try { return localStorage.getItem("qa." + k); } catch (e) { return null; } }
   function put(k, v) { try { localStorage.setItem("qa." + k, v); } catch (e) {} }
   // valeurs suivies (coeur), gardees dans ce navigateur
@@ -440,16 +582,16 @@
   // Plan du jour : scenarios conditionnels (seuils issus de la seance d'hier), et alertes evenement
   function dayCard(a) {
     var d = a.day; if (!d) return "";
-    var row = function (c, dot, t) { return '<div style="display:flex;gap:10px;padding:7px 0;border-top:1px solid var(--soft)"><b class="' + c + '" style="flex:none">' + dot + '</b><span style="font-size:14px;line-height:1.5">' + esc(t) + '</span></div>'; };
-    var h = '<div class="card"><h2>Plan du jour</h2><div class="small muted" style="margin-bottom:6px">Fourchette probable de la séance : <b class="mono">' + f2(d.range.lo) + ' – ' + f2(d.range.hi) + '</b> · pivot ' + f2(d.pivot) + '</div>' +
-      row("up", "▲", d.up.text) + row("down", "▼", d.down.text) + row("flat", "●", d.flat);
+    var row = function (c, emo, title, t) { return '<div class="ifb ' + c + 'b"><div class="ifE">' + emo + '</div><div><div class="ifT ' + c + '">' + title + '</div><div class="ifX">' + esc(t) + '</div></div></div>'; };
+    var h = '<div class="card"><h2>🧭 Le plan pour aujourd\'hui</h2><div class="small muted" style="margin-bottom:10px">Le cours devrait rester entre <b class="mono">' + f2(d.range.lo) + '</b> et <b class="mono">' + f2(d.range.hi) + '</b> (fourchette probable de la séance).</div>' +
+      row("up", "⬆️", "Si ça monte", d.up.text) + row("down", "⬇️", "Si ça baisse", d.down.text) + row("flat", "↔️", "Si ça ne bouge pas", d.flat);
     (d.alerts || []).forEach(function (al) { h += '<div class="warn" style="margin-top:12px"><b>⚡ ' + esc(al.title) + '</b>' + al.rules.map(function (r) { return '<div style="margin-top:4px">• ' + esc(r) + '</div>'; }).join("") + '</div>'; });
     return h + '<p class="small dimmer" style="margin:10px 0 0">Ce ne sont pas des prévisions : le modèle n\'a pas d\'avantage mesuré à 1 jour. Ce sont des règles d\'action selon ce que fait le cours en séance, calculées sur la séance d\'hier.</p></div>';
   }
   function alertsToday() {
     var list = Object.keys(D.stocks).map(function (k) { return D.stocks[k]; }).filter(function (a) { return a.day && a.day.alerts && a.day.alerts.length; });
     if (!list.length) return "";
-    return '<div class="card"><h2>⚡ Alertes du jour</h2>' + list.slice(0, 12).map(function (a) { return '<a class="row" href="#/v/' + encodeURIComponent(a.sym) + '"><div class="grow"><div class="name">' + flagSym(a.sym) + esc(a.name) + '</div><div class="small amber" style="margin-top:3px">' + a.day.alerts.map(function (x) { return esc(x.title); }).join(" · ") + '</div></div><span class="small muted">Plan du jour →</span></a>'; }).join("") + '</div>';
+    return '<div class="card"><h2>⚡ Alertes du jour <span class="small dimmer" style="font-family:var(--sans);font-weight:400">· touche une valeur pour voir quoi faire selon la réaction du marché</span></h2><div class="agrid">' + list.slice(0, 12).map(function (a) { var k = a.day.alerts[0].kind; return '<a class="acard" href="#/v/' + encodeURIComponent(a.sym) + '"><span class="aE">' + (k === "earnings" ? "📣" : "📰") + '</span><span class="grow"><b>' + flagSym(a.sym) + esc(a.name) + '</b><span class="aT">' + a.day.alerts.map(function (x) { return esc(x.title); }).join(" · ") + '</span></span></a>'; }).join("") + '</div></div>';
   }
   function planCard(a, compact) {
     var p = a.plan, act = p.action;
@@ -461,13 +603,14 @@
       : "Pas d'avantage statistique suffisant pour couvrir les frais : rester à l'écart.";
     var g = act === "ENTRER" ? 0 : act === "EVITER" ? 2 : 1;
     var bd = g === 0 ? "rgba(52,211,153,.35)" : g === 1 ? "rgba(245,183,64,.35)" : "rgba(255,107,91,.35)";
-    var html = '<div class="card" style="border-color:' + bd + ';border-radius:24px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h2 style="margin:0;font-size:17px">Que faire ?</h2><span class="small" style="padding:6px 10px;border-radius:9px;background:#1A2231;color:#C9D1DE">Horizon ' + esc(HL[p.h]) + '</span></div>' +
-      '<div class="act3">' + ["Entrer", "Attendre", "Éviter"].map(function (t, i) { return '<div class="' + (i === g ? "on" + i : "") + '">' + (i === g && i === 0 ? "✓ " : "") + t + '</div>'; }).join("") + '</div>' +
+    var LT = lightOf(act);
+    var html = '<div class="card qf ' + LT.c + '" style="border-radius:24px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h2 style="margin:0;font-size:19px">🤔 Que faire ?</h2><span class="hzc">⏳ ' + esc(HL[p.h]) + '</span></div>' +
+      '<div class="tlight"><div class="tlamps"><i class="r' + (act === "EVITER" ? " on" : "") + '"></i><i class="o' + (act === "ATTENDRE_REPLI" || act === "ATTENDRE_CONFIRMATION" ? " on" : "") + '"></i><i class="g' + (act === "ENTRER" ? " on" : "") + '"></i></div><div><div class="tlBig">' + LT.e + ' ' + LT.t + '</div><div class="tlSmall">' + LT.s + '</div></div></div>' +
+      (p.timing ? '<div style="margin:2px 0 8px">' + timingChip(p.timing) + (p.timing.since ? ' <span class="small dimmer">signal apparu le ' + dfr(p.timing.since) + '</span>' : '') + '</div>' : '') +
       '<div class="small muted">' + esc(actLabel(act, p.label)) + (p.review ? ' · revoir le ' + dfr(p.review) : '') + '</div>' +
       '<p style="font-size:15px;line-height:1.5;margin:10px 0 4px">' + sentence + '</p>';
     if (active) {
-      html += '<div class="boxes"><div class="box b-st"><div class="l">Stop</div><div class="v">' + f2(p.stop) + '</div><div class="s">−' + f1(p.riskPct) + ' %</div></div><div class="box b-in"><div class="l">Entrée</div><div class="v">' + (act === "ATTENDRE_CONFIRMATION" ? "&gt; " + f2(p.zoneLo) : f2(p.zoneLo) + "–" + f2(p.zoneHi)) + '</div><div class="s">' + esc(a.cur) + '</div></div>' +
-        '<div class="box b-tg"><div class="l">Objectif</div><div class="v">' + f2(p.target) + '</div><div class="s">+' + f1(p.gainPct) + ' %</div></div></div>' +
+      html += '<div class="bubs">' + bubble("🚪", "Entrée", act === "ATTENDRE_CONFIRMATION" ? "&gt; " + f2(p.zoneLo) : f2(p.zoneLo) + "–" + f2(p.zoneHi), esc(a.cur), "bi") + bubble("🎯", "Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", "bt") + bubble("🛑", "Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", "bs") + '</div>' +
         '<div class="boxes" style="grid-template-columns:repeat(2,1fr);margin-top:0">' +
         '<div class="box" style="text-align:left"><div class="l">Gain / risque</div><div class="v">' + f1(p.rr) + '×</div></div>' +
         '<div class="box" style="text-align:left"><div class="l">Objectif avant stop</div><div class="v">' + pc(p.pTarget) + '</div></div>' +
@@ -479,69 +622,140 @@
     return html + '</div>';
   }
 
+  // ---------- blocs ludiques ----------
+  function secT(emoji, title, sub, id) {
+    return '<div class="secT"' + (id ? ' id="' + id + '"' : '') + '><span class="secE">' + emoji + '</span><div><div class="secH">' + esc(title) + '</div>' + (sub ? '<div class="secS">' + sub + '</div>' : '') + '</div></div>';
+  }
+  function lightOf(act) {
+    return act === "ENTRER" ? { e: "🟢", t: "Feu vert", s: "On peut acheter", c: "lg" }
+      : act === "ATTENDRE_CONFIRMATION" ? { e: "🟡", t: "Presque !", s: "On attend le feu vert", c: "ly" }
+      : act === "ATTENDRE_REPLI" ? { e: "🟠", t: "Patience", s: "Attendre une petite baisse", c: "lo" }
+      : act === "EVITER" ? { e: "🔴", t: "Feu rouge", s: "On évite", c: "lr" }
+      : { e: "⚪", t: "Pas de signal", s: "Rien à faire", c: "ln" };
+  }
+  function gauge(p, small) {
+    var v = Math.round((p || 0) * 100), col = v >= 55 ? "var(--up)" : v <= 45 ? "var(--down)" : "var(--amber)";
+    return '<div class="gauge' + (small ? ' sm' : '') + '"><div class="gbar"><i style="width:' + v + '%;background:' + col + '"></i><b style="left:50%"></b></div><div class="glab"><span><b style="color:' + col + '">' + v + '</b> chances sur 100 de hausse</span></div></div>';
+  }
+  function timingChip(t, short) {
+    if (!t) return "";
+    var g = t.gain != null ? t.gain : t.g, age = t.age != null ? t.age : t.a, s = t.stage || t.st;
+    var gs = (g >= 0 ? "+" : "") + f1(g) + " %";
+    if (s === "frais") return '<span class="tchip tf" title="Le signal vient d\'apparaître : le cours n\'a pas encore beaucoup bougé">⚡ ' + (age <= 0 ? "Signal tout frais" : "Signal frais · " + age + " j") + '</span>';
+    if (s === "en cours") return '<span class="tchip tc" title="Le signal existe depuis ' + age + ' séances">🏃 En route · ' + age + ' j' + (short ? '' : ' · ' + gs + ' déjà') + '</span>';
+    return '<span class="tchip tlate" title="Le cours a déjà beaucoup monté depuis le début du signal : une partie du gain est faite">🐢 En retard · ' + gs + ' déjà fait</span>';
+  }
+  function bubble(emoji, label, val, sub, c) {
+    return '<div class="bub ' + (c || '') + '"><div class="bubE">' + emoji + '</div><div class="bubL">' + label + '</div><div class="bubV">' + val + '</div>' + (sub ? '<div class="bubS">' + sub + '</div>' : '') + '</div>';
+  }
+  function pickCard(a, x) {
+    var p = a.plan, L = lightOf(p.action), e = a.ev[p.h] || {};
+    var why = x && x.text ? String(x.text).replace(/^[^.]*hausse\.\s*/, "") : (p.why || [])[0] || "";
+    var entry = p.action === "ATTENDRE_CONFIRMATION" ? "> " + f2(p.zoneLo) : p.action === "ENTRER" ? f2(a.price) : f2(p.zoneLo) + "–" + f2(p.zoneHi);
+    var c = x && x.ctx;
+    return '<div class="pcard ' + L.c + '">' +
+      '<div class="pcTop"><span class="light">' + L.e + ' ' + L.t + '</span><span class="hzc">⏳ ' + esc(HL[p.h]) + '</span>' + heart(a.sym) + '</div>' +
+      '<a class="pcName" href="#/v/' + encodeURIComponent(a.sym) + '">' + flagSym(a.sym) + esc(a.name) + ' <span class="pcArrow">›</span></a>' +
+      '<div class="pcSub">' + esc(L.s) + ' · cours ' + f2(a.price) + ' ' + esc(a.cur) + ' <span class="' + cls(a.chg) + '">' + sp(a.chg, 1) + '</span></div>' +
+      gauge(e.p) + (p.timing ? '<div style="margin-top:8px">' + timingChip(p.timing) + '</div>' : '') +
+      '<div class="bubs">' + bubble("🚪", "Entrée", entry, esc(a.cur), "bi") + bubble("🎯", "Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", "bt") + bubble("🛑", "Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", "bs") + '</div>' +
+      (why ? '<div class="pcWhy">💡 ' + esc(why) + '</div>' : '') +
+      (c ? '<div class="pcNews">' + (c.tone === "positif" ? "👍" : c.tone === "négatif" ? "⚠️" : "📰") + ' <b>' + esc(c.verdict) + '</b> · <a href="' + esc(c.link) + '" target="_blank" rel="noopener">' + esc(c.title) + '</a></div>' : '') +
+      '</div>';
+  }
+  function weather(t) {
+    var cac = (t.context || []).filter(function (c) { return c.sym === "^FCHI"; })[0];
+    var ch = cac ? cac.chg : 0, m1 = cac ? cac.m1 : 0;
+    var w = ch >= 1 ? ["☀️", "Grand soleil sur la Bourse"] : ch >= 0.2 ? ["🌤️", "Belle éclaircie"] : ch > -0.2 ? (m1 >= 0 ? ["⛅", "Temps calme, plutôt doux"] : ["☁️", "Temps gris et calme"]) : ch > -1.2 ? ["🌧️", "Petite averse"] : ["⛈️", "Orage sur les marchés"];
+    var pick = function (sym, lab) { var c = (t.context || []).filter(function (x) { return x.sym === sym; })[0]; return c ? { l: lab, v: c.chg, n: c.last } : null; };
+    var tiles = [pick("^FCHI", "🇫🇷 CAC 40"), pick("^IXIC", "🇺🇸 Nasdaq"), pick("^DJI", "🇺🇸 Dow Jones"), pick("^STOXX50E", "🇪🇺 Euro Stoxx 50"), pick("GC=F", "🥇 Or"), pick("BTC-USD", "₿ Bitcoin")].filter(Boolean);
+    return '<div class="hero"><div class="wx"><div class="wxE">' + w[0] + '</div><div><div class="wxT">' + w[1] + '</div><div class="wxS">La météo de la Bourse ce matin' + (cac ? ' : le CAC 40 a fait <b class="' + cls(ch) + '">' + sp(ch, 1) + '</b> hier et <b class="' + cls(m1) + '">' + sp(m1, 1) + '</b> sur un mois.' : '.') + '</div></div></div>' +
+      (tiles.length ? '<div class="wxTiles">' + tiles.map(function (x) { return '<div class="wxTile ' + cls(x.v) + 'b"><div class="wxL">' + x.l + '</div><div class="wxV ' + cls(x.v) + '">' + (x.v >= 0 ? "▲ " : "▼ ") + sp(x.v, 1) + '</div></div>'; }).join("") + '</div>' : '') + '</div>';
+  }
+  var EP = { d: ["d", "Hier"], w: ["w", "1 sem."], m: ["m", "1 mois"], q: ["q", "3 mois"], y: ["y", "Depuis janv."], a: ["a", "1 an"] };
+  function etfVal(o, k) { return o[EP[k] ? EP[k][0] : "m"]; }
+  function hbar(v, max, href, label, sub) {
+    var w = max ? Math.min(100, Math.abs(v) / max * 100) : 0;
+    return '<a class="hb" href="' + href + '"><div class="hbL">' + label + (sub ? '<span class="hbS">' + sub + '</span>' : '') + '</div><div class="hbT"><i class="' + cls(v) + 'g" style="width:' + Math.max(2, w) + '%"></i></div><div class="hbV ' + cls(v) + '">' + sp(v, 1) + '</div></a>';
+  }
+  function etfPodium(list, k) {
+    var top = list.filter(function (o) { return ok(etfVal(o, k)); }).sort(function (a, b) { return etfVal(b, k) - etfVal(a, k); }).slice(0, 3);
+    if (top.length < 3) return "";
+    var col = function (o, medal, cl) { return '<a class="pod ' + cl + '" href="#/etf/' + encodeURIComponent(o.s) + '"><div class="podM">' + medal + '</div><div class="podE">' + o.e + '</div><div class="podN">' + esc(o.n) + '</div><div class="podV up">' + sp(etfVal(o, k), 1) + '</div><div class="podB"></div></a>'; };
+    return '<div class="podium">' + col(top[1], "🥈", "p2") + col(top[0], "🥇", "p1") + col(top[2], "🥉", "p3") + '</div>';
+  }
+  function periodTabs(cur, keys) {
+    return '<div class="ptabs">' + keys.map(function (k) { return '<a data-ep="' + k + '" class="' + (k === cur ? "on" : "") + '">' + (k === "p" ? "🔮 Les plus prometteurs" : EP[k][1]) + '</a>'; }).join("") + '</div>';
+  }
+  function radarBlock(r) {
+    if (!r || !r.hits || !r.hits.length) return "";
+    var s = r.stats;
+    return secT("🚀", "Ça démarre !", "Des valeurs qui viennent de casser leur plus haut d'un mois avec beaucoup d'acheteurs. Repérées <b>avant</b> le modèle principal, qui attend que la hausse soit installée.") +
+      '<div class="rgrid">' + r.hits.slice(0, 6).map(function (h) {
+        var a = D.stocks[h.sym];
+        return '<a class="rcard" href="#/v/' + encodeURIComponent(h.sym) + '"><div class="rTop"><span>' + (h.day ? "🔔 hier" : "🔔 aujourd'hui") + '</span><span class="' + cls(h.chg) + '">' + sp(h.chg, 1) + '</span></div><div class="rName">' + flagSym(h.sym) + esc(h.name) + '</div>' +
+          '<div class="rTxt">📈 A dépassé son plus haut des 20 dernières séances' + (ok(h.vol) ? ' avec <b>' + f1(h.vol) + '×</b> le volume habituel' : '') + '.</div>' +
+          (a ? '<div class="rTxt dimmer">Modèle : ' + Math.round((a.ev[a.plan.h] || {}).p * 100) + ' chances sur 100 à ' + esc(HL[a.plan.h]) + ' · ' + esc(lightOf(a.plan.action).t.toLowerCase()) + '</div>' : '') + '</a>';
+      }).join("") + '</div>' +
+      (s ? '<p class="note">🧪 <b>Honnêtement :</b> sur l\'historique des valeurs suivies, ce signal a été suivi d\'une hausse à 1 mois dans <b>' + f1(s.up21) + ' %</b> des cas (' + s.n + ' cas), contre <b>' + f1(s.baseUp21) + ' %</b> pour un jour pris au hasard ; gain moyen ' + sp(s.avg21, 1) + ' contre ' + sp(s.baseAvg21, 1) + '. ' + (s.up21 - s.baseUp21 >= 2 ? "Un petit avantage : arriver tôt paie un peu, mais un départ sur deux échoue." : "Pas d'avantage net : à utiliser comme liste de surveillance, pas comme ordre d'achat.") + ' Hors frais.</p>' : '');
+  }
+
   // ---------- pages ----------
   function pageToday() {
     var t = D.today, h = "";
-    h += '<h1>Aujourd\'hui</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
-    if (t.brief && t.brief.length) h += '<div class="card"><h2>L\'essentiel</h2>' + t.brief.map(function (b) { return '<div style="padding:4px 0;font-size:15px;line-height:1.45">• ' + esc(b) + '</div>'; }).join("") + '</div>';
+    h += '<h1 class="fun">Bonjour 👋</h1><p class="sub">' + esc(D.dateLabel) + ' · mis à jour à ' + new Date(D.generatedAt).toLocaleTimeString("fr-FR", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }) + '</p>';
+    h += weather(t);
+    if (t.brief && t.brief.length) {
+      var EM = ["🇫🇷", "📅", "📣", "🧭", "🎯", "💡", "💡"];
+      h += '<div class="card ess"><h2>📝 L\'essentiel en 30 secondes</h2>' + t.brief.map(function (b, i) { return '<div class="essL"><span>' + (EM[i] || "•") + '</span><span>' + esc(b) + '</span></div>'; }).join("") + '</div>';
+    }
     h += alertsToday();
 
-    // ---- 1. Opportunites : une carte par valeur, avec le pourquoi et l'actu qui va avec ----
-    h += '<div class="sec">Opportunités</div><div class="card" id="opportunites"><h2>Les pépites du jour</h2>';
-    if (!t.picks.length) h += '<div class="empty">Aucune valeur ne présente un avantage suffisant aujourd\'hui.</div>';
+    // ---- pepites ----
+    h += secT("🎯", "Les pépites du jour", "Les valeurs où le modèle voit le plus de chances de hausse. Le feu dit quoi faire, la barre dit à quel point le modèle y croit.", "opportunites");
+    if (!t.picks.length) h += '<div class="card empty">😴 Aucune valeur ne présente un avantage suffisant aujourd\'hui. Ne rien faire, c\'est aussi une décision.</div>';
     var sm = {}; (t.summary || []).forEach(function (x) { sm[x.sym] = x; });
-    t.picks.forEach(function (s) {
-      var a = D.stocks[s]; if (!a) return;
-      var x = sm[s], pk = "";
-      if (x) {
-        var c = x.ctx, col = c ? (c.tone === "positif" ? "up" : c.tone === "négatif" ? "down" : "muted") : "";
-        pk = '<div class="pk">' + esc(String(x.text || "").replace(/^[^.]*hausse\.\s*/, "")) +
-          (c ? '<div class="pk-n"><span class="' + col + '" style="font-weight:600">' + (c.tone === "positif" ? "▲ " : c.tone === "négatif" ? "▼ " : "● ") + esc(c.verdict) + '</span> · <a href="' + esc(c.link) + '" target="_blank" rel="noopener">' + esc(c.title) + '</a>' + (c.source ? ' <span class="dimmer">' + esc(c.source) + '</span>' : '') + '</div>'
-            : '<div class="pk-n dimmer">Pas d\'actu marquante : signal uniquement technique.</div>') + '</div>';
-      }
-      h += '<div class="pick">' + stockRow(a, a.plan.h) + pk + '</div>';
-    });
-    h += '<p class="small dimmer" style="margin:12px 0 0">Le nombre dans la case = chances sur 100 de hausse à l\'horizon indiqué (ce n\'est pas une hausse en %). Touche une valeur pour voir son plan complet : entrée, objectif, stop, durée, indicateurs.</p></div>';
+    h += '<div class="pgrid">' + t.picks.map(function (s) { var a = D.stocks[s]; return a ? pickCard(a, sm[s]) : ""; }).join("") + '</div>';
+    h += '<p class="note">⚡ frais = le signal vient d\'apparaître · 🏃 en route = il dure depuis quelques jours · 🐢 en retard = le cours a déjà fait une bonne partie de la hausse attendue (on peut encore y aller, mais avec moins à gagner). Les signaux frais passent en premier.</p>';
 
-    // ---- 2. Marches de la veille ----
-    var mv = t.movers, hasMv = mv && ((mv.up || []).length || (mv.down || []).length);
-    h += '<div class="sec">Marchés · séance d\'hier</div><div class="grid2"><div><div class="card"><h2>Contexte de marché</h2>';
-    if (t.context && t.context.length) h += '<table class="etf"><tr><th></th><th class="r">NIVEAU</th><th class="r">VEILLE</th><th class="r">1 MOIS</th></tr>' + t.context.map(function (c) {
+    h += radarBlock(t.radar);
+
+    // ---- ETF ----
+    var L = (D.etf && D.etf.list) || [], ek = st.ep && st.ep !== "p" ? st.ep : "m";
+    if (L.length) {
+      h += secT("🏆", "Le podium des ETF", "Les ETF qui ont le plus monté parmi les " + L.length + " suivis (monde, pays, secteurs, matières premières…).", "etf");
+      h += '<div class="card">' + periodTabs(ek, ["d", "w", "m", "q", "y"]) + etfPodium(L, ek);
+      var best = L.filter(function (o) { return ok(etfVal(o, ek)); }).sort(function (a, b) { return etfVal(b, ek) - etfVal(a, ek); });
+      var top = best.slice(3, 10), flop = best.slice(-5).reverse(), mx = Math.max.apply(null, best.slice(0, 10).concat(flop).map(function (o) { return Math.abs(etfVal(o, ek)); }).concat([0.1]));
+      h += '<div class="grid2 tight"><div><div class="lab up">🚀 LA SUITE DU CLASSEMENT</div>' + top.map(function (o) { return hbar(etfVal(o, ek), mx, "#/etf/" + encodeURIComponent(o.s), o.e + " " + esc(o.n)); }).join("") + '</div>' +
+        '<div><div class="lab down">🥶 LES PLUS EN BAISSE</div>' + flop.map(function (o) { return hbar(etfVal(o, ek), mx, "#/etf/" + encodeURIComponent(o.s), o.e + " " + esc(o.n)); }).join("") + '</div></div>' +
+        '<a class="bigbtn" href="#/etf">Voir les ' + L.length + ' ETF par catégorie →</a></div>';
+    } else if (t.etfs && t.etfs.length) {
+      h += secT("🏆", "Les ETF principaux", "Classés sur la séance d'hier.", "etf");
+      var mx0 = Math.max.apply(null, t.etfs.map(function (e) { return Math.abs(e.chg || 0); }).concat([0.1]));
+      h += '<div class="card">' + t.etfs.slice().sort(function (a, b) { return (b.chg || 0) - (a.chg || 0); }).map(function (e) { return hbar(e.chg, mx0, "#/etf", esc(e.label), esc(e.issuer)); }).join("") + '</div>';
+    }
+
+    // ---- hier en bourse ----
+    h += secT("📊", "Hier en Bourse", "Ce qui a bougé à la dernière séance.");
+    if (t.context && t.context.length) h += '<div class="ctx">' + t.context.map(function (c) {
       var vc = c.sym === "^VIX" ? (c.chg <= 0 ? "up" : "down") : cls(c.chg);
-      return '<tr><td>' + esc(c.label) + '</td><td class="r">' + f2(c.last) + '</td><td class="r ' + vc + '">' + sp(c.chg) + '</td><td class="r muted">' + sp(c.m1, 1) + '</td></tr>';
-    }).join("") + '</table>'; else h += '<div class="empty">Indisponible.</div>';
-    h += '</div>';
-    if (hasMv) {
-      var li = function (m, c) { return '<a href="#/v/' + encodeURIComponent(m.sym) + '" class="kv"><span>' + flagSym(m.sym) + esc(m.name) + '</span><span class="' + c + '" style="white-space:nowrap">' + sp(m.chg) + '</span></a>'; };
-      h += '<div class="card"><h2>Palmarès d\'hier · actions suivies</h2><div class="grid2 tight">' +
-        '<div><div class="lab up">HAUSSES</div>' + (mv.up || []).map(function (m) { return li(m, "up"); }).join("") + '</div>' +
-        '<div><div class="lab down">BAISSES</div>' + (mv.down || []).map(function (m) { return li(m, "down"); }).join("") + '</div></div></div>';
+      return '<div class="ctxT ' + vc + 'b"><div class="ctxL">' + esc(c.label) + '</div><div class="ctxN mono">' + f2(c.last) + '</div><div class="ctxV ' + vc + '">' + (!ok(c.chg) ? "" : c.chg >= 0 ? "▲ " : "▼ ") + sp(c.chg, 2) + '</div><div class="ctxM">1 mois ' + sp(c.m1, 1) + '</div></div>';
+    }).join("") + '</div>';
+    var mv = t.movers;
+    if (mv && ((mv.up || []).length || (mv.down || []).length)) {
+      var mm = Math.max.apply(null, (mv.up || []).concat(mv.down || []).map(function (m) { return Math.abs(m.chg); }).concat([0.1]));
+      h += '<div class="card"><h2>🎢 Les montagnes russes d\'hier (actions suivies)</h2><div class="grid2 tight"><div><div class="lab up">🚀 PLUS FORTES HAUSSES</div>' + (mv.up || []).map(function (m) { return hbar(m.chg, mm, "#/v/" + encodeURIComponent(m.sym), flagSym(m.sym) + esc(m.name)); }).join("") + '</div>' +
+        '<div><div class="lab down">🪂 PLUS FORTES BAISSES</div>' + (mv.down || []).map(function (m) { return hbar(m.chg, mm, "#/v/" + encodeURIComponent(m.sym), flagSym(m.sym) + esc(m.name)); }).join("") + '</div></div></div>';
     }
-    h += '</div><div class="card"><h2>ETF principaux · classés sur la veille</h2>';
-    if (t.etfs && t.etfs.length) {
-      var et = t.etfs.slice().sort(function (a, b) { return (b.chg || 0) - (a.chg || 0); }), yr = new Date().getFullYear();
-      h += '<table class="etf etfw"><tr><th></th><th class="r">VEILLE</th><th class="r">1 SEM.</th><th class="r">1 MOIS</th><th class="r">' + yr + '</th></tr>' + et.map(function (e, i) {
-        var tag = i === 0 && e.chg > 0 ? ' <span class="tag t-up">TOP</span>' : i === et.length - 1 && e.chg < 0 ? ' <span class="tag t-down">FLOP</span>' : '';
-        return '<tr><td><span style="white-space:nowrap">' + esc(e.label) + '</span>' + tag + '<div class="small dimmer">' + esc(e.issuer) + ' · ' + esc(e.sym.replace(/\.(PA|DE|AS)$/, "")) + '</div></td><td class="r ' + cls(e.chg) + '">' + sp(e.chg) + '</td><td class="r ' + cls(e.w1) + '">' + sp(e.w1, 1) + '</td><td class="r muted">' + sp(e.m1, 1) + '</td><td class="r muted">' + sp(e.ytd, 1) + '</td></tr>';
-      }).join("") + '</table><p class="small dimmer" style="margin:10px 0 0">Cours de clôture ; colonne ' + yr + ' = depuis le 1er janvier. Un ETF réplique un indice entier : moins risqué qu\'une action seule.</p>';
-    } else h += '<div class="empty">Disponible dès la prochaine mise à jour du matin.</div>';
-    h += '</div></div>';
-    if (t.avoid.length) { h += '<div class="card"><h2>À éviter / alléger</h2>'; t.avoid.forEach(function (s) { var a = D.stocks[s]; if (a) h += stockRow(a, a.plan.h); }); h += '</div>'; }
+    if (t.avoid.length) h += '<div class="card"><h2>🚫 À éviter ou alléger</h2><div class="chipsA">' + t.avoid.map(function (s) { var a = D.stocks[s]; if (!a) return ""; return '<a class="avc" href="#/v/' + encodeURIComponent(s) + '">🔴 ' + flagSym(s) + esc(a.name) + ' <span class="dimmer">' + Math.round((1 - (a.ev[a.plan.h] || {}).p) * 100) + ' % de risque de baisse</span></a>'; }).join("") + '</div></div>';
 
-    // ---- 3. Agenda ----
-    var ag = t.agenda, hasWeek = ag && ((ag.week || []).length || (ag.tomorrow || []).length);
-    h += '<div class="sec">Agenda</div><div class="' + (hasWeek ? "grid2" : "") + '"><div class="card" id="agenda"><h2>Aujourd\'hui · heure de Paris</h2>';
-    if (ag && ag.today && ag.today.length) {
-      h += '<table>' + ag.today.map(function (e) {
-        return '<tr><td style="width:64px"><span class="pill d-now">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · préc. ' + esc(e.previous) : '') + '</div></td><td class="r"><span class="pill ' + (e.impact === "fort" ? "p-avoid" : "p-wait") + '">' + esc(e.impact.toUpperCase()) + '</span></td></tr>';
-      }).join("") + '</table>';
-    } else h += '<div class="empty">' + (ag && ag.ok ? "Aucune annonce importante aujourd'hui." : "Agenda indisponible ce matin.") + '</div>';
-    h += '</div>';
-    if (hasWeek) {
-      h += '<div class="card"><h2>' + ((ag.week || []).length ? 'Cette semaine · fort impact' : 'Demain') + '</h2><table>' + ((ag.week || []).length ? ag.week : ag.tomorrow).map(function (e) {
-        return '<tr><td style="width:112px;white-space:nowrap"><span class="pill d-soon">' + esc(e.dayLabel || "demain") + '</span> <span class="mono small">' + esc(e.time) + '</span></td><td>' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + '</div></td></tr>';
-      }).join("") + '</table></div>';
-    }
+    // ---- agenda ----
+    var ag = t.agenda, wk = ag && ((ag.week || []).length ? ag.week : (ag.tomorrow || []));
+    h += secT("🗓️", "L'agenda", "Les rendez-vous qui peuvent faire bouger les marchés (heure de Paris).", "agenda");
+    var ev = function (e, day) { var hot = e.impact === "fort"; return '<div class="tl"><div class="tlT">' + (day ? '<span class="tlD">' + esc(day) + '</span>' : '') + esc(e.time) + '</div><div class="tlDot ' + (hot ? "hot" : "") + '">' + (hot ? "🔥" : e.impact === "férié" ? "🏖️" : "🟡") + '</div><div class="tlB">' + flag(e) + ' ' + esc(e.title) + '<div class="small dimmer">' + esc(e.country) + (e.forecast ? ' · prévu ' + esc(e.forecast) : '') + (e.previous ? ' · avant ' + esc(e.previous) : '') + '</div></div></div>'; };
+    h += '<div class="' + (wk && wk.length ? "grid2" : "") + '"><div class="card"><h2>☀️ Aujourd\'hui</h2>' + (ag && ag.today && ag.today.length ? ag.today.map(function (e) { return ev(e); }).join("") : '<div class="empty">' + (ag && ag.ok ? "😌 Aucune annonce importante aujourd'hui." : "Agenda indisponible ce matin.") + '</div>') + '</div>';
+    if (wk && wk.length) h += '<div class="card"><h2>📆 ' + ((ag.week || []).length ? "Cette semaine · les plus importants" : "Demain") + '</h2>' + wk.map(function (e) { return ev(e, e.dayLabel || "demain"); }).join("") + '</div>';
     h += '</div>';
     var er = t.earnings;
     if (er && ((er.today || []).length || (er.week || []).length)) {
@@ -550,15 +764,58 @@
         if (!(x[1] in gi)) { gi[x[1]] = groups.length; groups.push({ l: x[1], now: x[2], list: [] }); }
         groups[gi[x[1]]].list.push(x[0]);
       });
-      h += '<div class="card"><h2>Résultats d\'entreprises</h2>' + groups.map(function (g) {
+      h += '<div class="card"><h2>📣 Les entreprises publient leurs résultats</h2>' + groups.map(function (g) {
         return '<div class="eday"><div><span class="pill ' + (g.now ? "d-now" : "d-soon") + '">' + esc(g.l).toUpperCase() + '</span></div><div>' + g.list.map(function (e) {
           return '<a class="ech" href="#/v/' + encodeURIComponent(e.sym) + '">' + flagSym(e.sym) + esc(e.name) + (e.estimate ? '*' : '') + '</a>';
         }).join("") + '</div></div>';
       }).join("") + (er.week.some(function (e) { return e.estimate; }) ? '<p class="small dimmer" style="margin:8px 0 0">* date estimée</p>' : '') + '</div>';
     }
 
-    // ---- 4. Actualites ----
-    h += '<div class="sec">Actualités</div><div class="card" id="actus"><h2>À surveiller</h2>' + newsList(t.news) + '<p class="small dimmer">Dernières 36 heures. Tonalité estimée automatiquement à partir du titre.</p></div>';
+    // ---- actualites ----
+    h += secT("📰", "Les actus à surveiller", "Les dernières 36 heures. 👍 bonne nouvelle · ⚠️ mauvaise nouvelle · 📰 neutre (deviné à partir du titre).", "actus");
+    h += '<div class="card">' + funNews(t.news) + '</div>';
+    return h;
+  }
+  function funNews(list) {
+    if (!list || !list.length) return '<div class="empty">Pas d\'actualité récente.</div>';
+    return '<div class="fnews">' + list.map(function (n) {
+      return '<a href="' + esc(n.link) + '" target="_blank" rel="noopener"><span class="fnE">' + (n.tone === "positif" ? "👍" : n.tone === "négatif" ? "⚠️" : "📰") + '</span><span>' + esc(n.title) + ' <span class="dimmer small">· ' + esc(n.source || "") + (n.time ? ", " + ago(n.time) : "") + '</span></span></a>';
+    }).join("") + '</div>';
+  }
+
+  function pageEtf(sel) {
+    var L = (D.etf && D.etf.list) || [], C = (D.etf && D.etf.cats) || {};
+    var h = '<h1 class="fun">🧺 Les ETF</h1><p class="sub">' + L.length + ' paniers d\'actions ou de matières premières, suivis chaque matin. Un ETF, c\'est un seul achat pour posséder tout un marché : le monde entier, un pays, un secteur, de l\'or…</p>';
+    if (!L.length) return h + '<div class="card empty">La liste complète arrive avec la prochaine mise à jour du matin.</div>';
+    var one = sel ? L.filter(function (o) { return o.s === sel; })[0] : null;
+    if (one) {
+      var cat = C[one.k] || {};
+      h += '<div class="card etfOne"><div class="eoTop"><span class="eoE">' + one.e + '</span><div><div class="eoN">' + esc(one.n) + '</div><div class="small dimmer">' + esc(one.s) + ' · ' + (cat.emoji || "") + ' ' + esc(cat.label || "") + '</div></div></div>' +
+        '<div class="eoP"><span class="mono">' + f2(one.p) + ' ' + esc(one.cur) + '</span> <span class="' + cls(one.d) + '">' + sp(one.d, 2) + '</span> <span class="small dimmer">hier</span></div>' +
+        (one.h ? '<div style="margin:10px 0">' + spark(one.h, 600, 90, ok(one.m) && one.m >= 0 ? "#34D399" : "#FF6B5B").replace('width="600"', 'width="100%" viewBox="0 0 600 90" preserveAspectRatio="none"') + '</div>' : '') +
+        '<div class="perfG">' + ["d", "w", "m", "q", "y", "a"].map(function (k) { var v = etfVal(one, k); return '<div class="pg ' + cls(v) + 'b"><div class="pgL">' + EP[k][1] + '</div><div class="pgV ' + cls(v) + '">' + sp(v, 1) + '</div></div>'; }).join("") + '</div>' +
+        (ok(one.p3) ? '<h2 style="margin-top:16px">🔮 Ce qu\'en pense le modèle</h2>' + gauge(one.p3) + '<div class="small muted" style="margin-top:6px">à 3 mois · ' + Math.round(one.p1 * 100) + ' chances sur 100 à 1 mois · variation moyenne attendue à 3 mois ' + sp(one.x3, 1) + '</div>' + (one.t ? '<div style="margin-top:8px">' + timingChip(one.t) + '</div>' : '') : '') +
+        '</div><a class="chip" href="#/etf">← Tous les ETF</a>';
+      return h;
+    }
+    var ec = st.ec || "all", ep = st.ep || "m";
+    h += '<div class="chips catc">' + [["all", "✨", "Tous"]].concat(Object.keys(C).map(function (k) { return [k, C[k].emoji, C[k].label]; })).map(function (c) {
+      var n = c[0] === "all" ? L.length : L.filter(function (o) { return o.k === c[0]; }).length;
+      return '<a class="chip' + (ec === c[0] ? " on" : "") + '" data-ec="' + c[0] + '">' + c[1] + ' ' + esc(c[2]) + ' <span class="cnt">' + n + '</span></a>';
+    }).join("") + '</div>';
+    h += periodTabs(ep, ["d", "w", "m", "q", "y", "a", "p"]);
+    var list = L.filter(function (o) { return ec === "all" || o.k === ec; });
+    var key = function (o) { return ep === "p" ? (ok(o.p3) ? o.p3 - (o.t && o.t.st === "tardif" ? 0.02 : 0) : -1) : etfVal(o, ep); };
+    list = list.filter(function (o) { return ok(key(o)) && key(o) > -1; }).sort(function (a, b) { return key(b) - key(a); });
+    if (ep !== "p") h += etfPodium(list, ep);
+    var mx = Math.max.apply(null, list.map(function (o) { return Math.abs(etfVal(o, ep === "p" ? "q" : ep)); }).concat([0.1]));
+    h += '<div class="card">' + list.map(function (o, i) {
+      var v = etfVal(o, ep === "p" ? "q" : ep), medal = i === 0 ? "🥇" : i === 1 ? "🥈" : i === 2 ? "🥉" : (i + 1);
+      return '<a class="erow" href="#/etf/' + encodeURIComponent(o.s) + '"><span class="erk">' + medal + '</span><span class="erE">' + o.e + '</span><div class="grow"><div class="name">' + esc(o.n) + '</div><div class="small dimmer">' + esc(o.s) + (ok(o.p3) ? ' · 🔮 ' + Math.round(o.p3 * 100) + '/100' : '') + (o.t ? ' · ' + (o.t.st === "frais" ? "⚡ frais" : o.t.st === "en cours" ? "🏃 en route" : "🐢 en retard") : '') + '</div></div>' +
+        (o.h ? spark(o.h, 60, 24, ok(o.m) && o.m >= 0 ? "#34D399" : "#FF6B5B") : '') +
+        '<div class="erBar"><div class="hbT"><i class="' + cls(v) + 'g" style="width:' + Math.max(2, Math.min(100, Math.abs(v) / mx * 100)) + '%"></i></div><div class="hbV ' + cls(v) + '">' + sp(v, 1) + '</div></div></a>';
+    }).join("") + '</div>';
+    h += '<p class="note">' + (ep === "p" ? "🔮 « Les plus prometteurs » : classés selon les chances de hausse à 3 mois données par le modèle (les signaux 🐢 en retard sont un peu pénalisés). La barre montre la variation sur 3 mois. " : "") + 'Performances passées, cours de clôture. Elles ne garantissent pas l\'avenir.</p>';
     return h;
   }
 
@@ -906,6 +1163,7 @@
     else if (r === "apprendre") html = pageLearn(parts);
     else if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
     else if (r === "indices") html = pageIndices(parts[1]);
+    else if (r === "etf") html = pageEtf(parts[1] ? decodeURIComponent(parts[1]) : null);
     else if (r === "bilan") html = pageBilan();
     else if (r === "mes-valeurs") html = pageWatch();
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
@@ -916,8 +1174,10 @@
     if (anchor && document.getElementById(anchor)) document.getElementById(anchor).scrollIntoView(); else window.scrollTo(0, 0);
   }
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-h],[data-tab],[data-cat]");
+    var t = e.target.closest("[data-h],[data-tab],[data-cat],[data-ep],[data-ec]");
     if (!t) return;
+    if (t.dataset.ep) { st.ep = t.dataset.ep; put("ep", st.ep); }
+    if (t.dataset.ec) { st.ec = t.dataset.ec; put("ec", st.ec); }
     if (t.dataset.h) { st.h = t.dataset.h; put("h", st.h); }
     if (t.dataset.tab) st.tab = t.dataset.tab;
     if (t.dataset.cat) st.cat = t.dataset.cat;

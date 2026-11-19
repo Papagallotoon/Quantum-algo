@@ -7,6 +7,7 @@ import { rowsAt } from "../../src/quantum/core/signals.js";
 import { votes, familyContrib, verdictOf, sigmaAt, HORIZON_KEYS, HORIZONS } from "../../src/quantum/core/model.js";
 import { evaluateAll, buildPlan } from "../../src/quantum/core/plan.js";
 import { dayPlan } from "../../src/quantum/core/daily.js";
+import { signalAge } from "../../src/quantum/core/timing.js";
 import { simulate } from "../../src/quantum/core/montecarlo.js";
 import { PROFILES } from "../../src/quantum/core/universe.js";
 
@@ -31,6 +32,7 @@ function assetData(it, model, extra) {
   let y0 = it.time.findIndex((t) => t >= yearStart); if (y0 < 1) y0 = 1;
   const prof = PROFILES[it.sym] || {};
   const p = plan;
+  const tm = p.pUp >= 0.53 ? signalAge(it.all, c, i, p.horizon, model, p.expPct) : null;
   return {
     sym: it.sym, name: extra.name, cur, price: r2(C[i]), chg: r2(pct(C[i], C[i - 1])),
     sector: prof.sector || null, profile: prof.text || null, index: extra.index || null,
@@ -42,6 +44,7 @@ function assetData(it, model, extra) {
       pTarget: r4(p.pTarget), riskPct: r2(p.riskPct), gainPct: r2(p.gainPct), sizePct: r2(p.sizePct),
       hold: p.holdDays || HORIZONS[p.horizon], review: p.reviewDate ? new Date(p.reviewDate).toISOString().slice(0, 10) : null,
       valid: p.validUntil ? new Date(p.validUntil).toISOString().slice(0, 10) : null, why: p.why || [],
+      timing: tm ? { stage: tm.stage, gain: tm.gainPct, age: tm.age, since: tm.since ? new Date(tm.since * 1000).toISOString().slice(0, 10) : null } : null,
     },
     votes: votes(it.all, i),
     fam: familyContrib(it.all, i, hm),
@@ -83,8 +86,9 @@ export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, ind
   const data = {
     date: iso, dateLabel, generatedAt: new Date().toISOString(), subscribeApi: subscribeApi || null,
     model: { version: model.version, source: model.source, summary: model.summary, oos: horizonsInfo, changes: track.changes || [] },
-    today: { brief: signals.brief || [], agenda: signals.agenda || null, earnings: signals.earnings || null, context: signals.context || [], movers: signals.movers || null, etfs: signals.etfs || [], summary: signals.summary || [], news: signals.news || [], picks: (signals.picks || []).map((p) => p.sym), avoid: (signals.avoid || []).map((p) => p.sym) },
+    today: { brief: signals.brief || [], agenda: signals.agenda || null, earnings: signals.earnings || null, context: signals.context || [], movers: signals.movers || null, etfs: signals.etfs || [], radar: signals.radar || null, summary: signals.summary || [], news: signals.news || [], picks: (signals.picks || []).map((p) => p.sym), avoid: (signals.avoid || []).map((p) => p.sym) },
     track, indices, stocks,
+    etf: { cats: signals.etfCats || {}, list: signals.etfUniverse || [] },
   };
   fs.writeFileSync(path.join(outDir, "data.json"), JSON.stringify(data));
   // fichier leger pour l'appli : fondamentaux + niveau habituel des probabilites par horizon
