@@ -1,40 +1,36 @@
-*Quantum Algo – jeudi 19 novembre 2026*
+*Quantum Algo – vendredi 20 novembre 2026*
 
-• CAC 40 à 8 081 points : −0,8 % à la dernière séance, +2,0 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 2 annonce(s) à fort impact aujourd'hui, la première à 01:30 (Employment Change, Australie) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Ubisoft, Walmart, Intuit.
+• CAC 40 à 7 946 points : −1,7 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché en stress.
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Résultats aujourd'hui : Vallourec.
 • Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-01:30 🇦🇺 Employment Change (prévu 25.5K)
-01:30 🇦🇺 Taux de chômage (prévu 4.7%)
-
-*Résultats aujourd'hui* : Ubisoft, Walmart, Intuit
+*Résultats aujourd'hui* : Vallourec
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
-  entrée 243,60-245,91, stop 220,49, objectif 281,93, revoir le 23/02
-• Air Liquide – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 187,78-189,68, stop 180,97, objectif 203,41, revoir le 16/02
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
-  entrée 78,27-79,51, stop 73,84, objectif 87,61, revoir le 16/02
-• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 111,13-112,49, stop 106,30, objectif 120,96, revoir le 16/02
-• Accor – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,6 %
-  entrée 48,05-49,00, stop 44,66, objectif 54,83, revoir le 16/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
+  entrée 230,20-232,55, stop 206,68, objectif 270,90, revoir le 24/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 91,32-91,98, stop 84,70, objectif 101,26, revoir le 24/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 188,57-192,42, stop 174,82, objectif 216,06, revoir le 17/02
+• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,6 %
+  entrée 110,55-111,88, stop 105,80, objectif 120,04, revoir le 17/02
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
+  entrée 53,70-54,34, stop 47,27, objectif 63,35, revoir le 24/02
 
 *À lire*
-• Encore plus fort que SpaceX... Débuts canon pour Anthropic à Wall Street qui bondit de 33% pour ses premiers échanges et signe la plus grande introduction en Bourse de l'histoire (BFM Bourse)
-• Anthropic suscite des prévisions optimistes à Wall Street avant son introduction au Nasdaq (Boursorama)
-• CAC 40 : Paris s'essouffle et finit dans le rouge avant les débuts d'Anthropic à Wall Street (Zonebourse Suisse)
+• Nagel (Bundesbank) défend que la BCE relève les taux jusqu’à un niveau restrictif pour l’économie (Demócrata)
+• Wall Street en ordre dispersé avec un Nasdaq à la peine (Zonebourse)
+• Le géant de l’IA Anthropic chute de 9 % pour sa deuxième séance à Wall Street (Le Figaro)
 
-*🎓 Question du jour* : À quoi sert surtout l'ATR ?
-A. Prédire la direction
-B. Mesurer la volatilité, par exemple pour placer un stop
-C. Compter les acheteurs
-D. Calculer le dividende
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q08
+*🎓 Question du jour* : Le cours casse la bande de Bollinger haute. Cela signifie…
+A. que la baisse est certaine
+B. que le cours est éloigné de sa moyenne récente
+C. que le volume est nul
+D. que la tendance est terminée
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q09
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
