@@ -1,36 +1,33 @@
-*Quantum Algo – vendredi 20 novembre 2026*
+*Quantum Algo – samedi 21 novembre 2026*
 
-• CAC 40 à 7 946 points : −1,7 % à la dernière séance, +1,7 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché en stress.
+• CAC 40 à 7 928 points : −1,9 % à la dernière séance, +1,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché en stress.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : Vallourec.
-• Les indices penchent légèrement à la hausse à 1 mois (2 sur 7).
+• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
-
-*Résultats aujourd'hui* : Vallourec
 
 *Opportunités*
 • Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 230,20-232,55, stop 206,68, objectif 270,90, revoir le 24/02
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 91,32-91,98, stop 84,70, objectif 101,26, revoir le 24/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 188,57-192,42, stop 174,82, objectif 216,06, revoir le 17/02
-• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,6 %
-  entrée 110,55-111,88, stop 105,80, objectif 120,04, revoir le 17/02
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
+  entrée 230,20-232,55, stop 206,68, objectif 271,27, revoir le 24/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
+  entrée 187,21-191,06, stop 173,43, objectif 214,75, revoir le 17/02
+• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 110,05-111,38, stop 105,30, objectif 120,29, revoir le 17/02
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,8 %
   entrée 53,70-54,34, stop 47,27, objectif 63,35, revoir le 24/02
+• Bouygues – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 42,12-42,65, stop 40,21, objectif 46,07, revoir le 17/02
 
 *À lire*
-• Nagel (Bundesbank) défend que la BCE relève les taux jusqu’à un niveau restrictif pour l’économie (Demócrata)
-• Wall Street en ordre dispersé avec un Nasdaq à la peine (Zonebourse)
-• Le géant de l’IA Anthropic chute de 9 % pour sa deuxième séance à Wall Street (Le Figaro)
+• Panique à Wall Street : faut-il craindre un krach après une chute historique de la tech ? (Le Figaro)
+• SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris (Boursorama)
+• BUREAU VERITAS Cours Action BVI, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Le cours casse la bande de Bollinger haute. Cela signifie…
-A. que la baisse est certaine
-B. que le cours est éloigné de sa moyenne récente
-C. que le volume est nul
-D. que la tendance est terminée
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q09
+*🎓 Question du jour* : Le MACD passe au-dessus de sa ligne de signal…
+A. signal plutôt haussier
+B. signal plutôt baissier
+C. aucune signification
+D. le marché est fermé
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q10
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
