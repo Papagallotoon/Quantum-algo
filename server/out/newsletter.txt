@@ -1,33 +1,41 @@
-*Quantum Algo – samedi 21 novembre 2026*
+*Quantum Algo – dimanche 22 novembre 2026*
 
 • CAC 40 à 7 928 points : −1,9 % à la dernière séance, +1,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché en stress.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
+*À venir (fort impact)*
+lun. 23/11 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
+mer. 25/11 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
+mer. 25/11 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an)
+mer. 25/11 01:30 🇦🇺 Trimmed Mean CPI m/m
+mer. 25/11 14:30 🇺🇸 Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois)
+mer. 25/11 14:30 🇺🇸 Croissance du PIB (sur un trimestre)
+
 *Opportunités*
 • Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 230,20-232,55, stop 206,68, objectif 271,27, revoir le 24/02
+  entrée 230,20-232,55, stop 206,68, objectif 269,37, revoir le 24/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 91,32-91,98, stop 84,70, objectif 101,26, revoir le 24/02
 • Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
   entrée 187,21-191,06, stop 173,43, objectif 214,75, revoir le 17/02
-• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 110,05-111,38, stop 105,30, objectif 120,29, revoir le 17/02
 • ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,8 %
   entrée 53,70-54,34, stop 47,27, objectif 63,35, revoir le 24/02
 • Bouygues – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 42,12-42,65, stop 40,21, objectif 46,07, revoir le 17/02
+  entrée 42,12-42,65, stop 40,21, objectif 45,94, revoir le 17/02
 
 *À lire*
-• Panique à Wall Street : faut-il craindre un krach après une chute historique de la tech ? (Le Figaro)
-• SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris (Boursorama)
-• BUREAU VERITAS Cours Action BVI, Cotation Bourse Euronext Paris (Boursorama)
+• Marché noir en Algérie : le dollar monte, l’euro tient bon ce dimanche (Algérie Zoom)
+• Marché noir des devises : l’euro reprend 50 dinars face à la monnaie algérienne (Maghreb Émergent)
+• Comme SpaceX, Anthropic a suivi un processus d’introduction en Bourse inhabituel, au grand dam de certains banquiers (Zonebourse Suisse)
 
-*🎓 Question du jour* : Le MACD passe au-dessus de sa ligne de signal…
-A. signal plutôt haussier
-B. signal plutôt baissier
-C. aucune signification
-D. le marché est fermé
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q10
+*🎓 Question du jour* : L'OBV qui monte alors que le prix stagne suggère…
+A. une accumulation discrète par les acheteurs
+B. une fraude
+C. un dividende imminent
+D. une tendance baissière forte
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q11
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 

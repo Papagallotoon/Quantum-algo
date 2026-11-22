@@ -1,6 +1,6 @@
 {
- "date": "2026-11-21",
- "dateLabel": "samedi 21 novembre 2026",
+ "date": "2026-11-22",
+ "dateLabel": "dimanche 22 novembre 2026",
  "picks": [
   {
    "sym": "SU.PA",
@@ -14,19 +14,19 @@
    "zoneLo": 230.1999969482422,
    "zoneHi": 232.55202120892648,
    "stop": 206.6797543413992,
-   "target": 271.2689022685291,
-   "rr": 1.7461089159147647,
-   "pTarget": 0.32975,
+   "target": 269.3711497838936,
+   "rr": 1.66542299288422,
+   "pTarget": 0.34425,
    "holdDays": 63,
    "reviewDate": "2027-02-24T08:00:00.000Z",
    "validUntil": "2026-11-27T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.5452526923625194,
+   "expectancy": 0.410077009797364,
    "price": 226.5500030517578,
    "chg": -3.6981921140243124,
    "sizePct": 9.787313880906465,
    "riskPct": 10.2173079577109,
-   "gainPct": 17.84053252160588,
+   "gainPct": 17.01613959815064,
    "perf": {
     "w1": -6.941874762100464,
     "m1": -3.9024377299012425,
@@ -95,9 +95,9 @@
     "factor": 1
    },
    "fund": {
-    "pe": 28.283396,
+    "pe": 27.229568,
     "fpe": 17.989868,
-    "yield": 1.79,
+    "yield": 1.85,
     "rating": "1.5 - Buy",
     "target": null,
     "hi52": 312.3,
@@ -105,22 +105,142 @@
    },
    "news": [
     {
-     "title": "NEXANS Cours Action NEX, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE82djB1RmVXWUNtdjFXVlVMVzFrdWlPUldOUnY5bnc1UWNHZ3VYTmNaM3lLdkIxTFFzNG4tWjZ6Q0p3dzZxZUFiUDdidHh1Rmpkc0E?oc=5",
-     "source": "Boursorama",
-     "time": 1795262109000,
+     "title": "Fortune d’Elon Musk : pourquoi elle varie de 50 milliards en une semaine",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPNkZNRndha1hJc3JVWmhmeGIwcFFDS2J1dFZxOFY3dzhNeGVacXlRdzZXaWdiUnVfblJvQ1NwN1hqelU2T242ZlA4THNLQlN4UndKbzlZdlRUYWVUS0o2amhnM0MxaUdlYmR4dkRXUkFGQk1NZ1h5ZUFmeDdia0NXeUZCSFh1Z3FDY0NDWnpFczdlQnRxaWNJRlFzRFIxR2tUNnFXX0ZR?oc=5",
+     "source": "L'Essentiel de l'Éco",
+     "time": 1795253400000,
      "tone": "neutre"
     },
     {
-     "title": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
-     "source": "Boursorama",
-     "time": 1795262039000,
+     "title": "CAC 40 : les grands perdants de la semaine",
+     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUDFjTDFPbkM5MUViV0JrUGxMMk0yd0xXVkRtOFdTUEoybHJ2ZlRBV01HX294amdIUTdqT2NNTnRHdFR2UUNtTm5zN2V6Ny1ITGcwSVl5cUlqSldHZkVfTXpxcTJYWG43cHZJRG5WY0RyTW54elVMci1MTnFkLTZ5dXZwR01XSmE3?oc=5",
+     "source": "Le Revenu",
+     "time": 1795239120000,
      "tone": "neutre"
     }
    ],
    "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 230,20 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+  },
+  {
+   "sym": "BNP.PA",
+   "name": "BNP Paribas",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.5579878949957818,
+   "expPct": 0.9101617314364985,
+   "start": "Acheter si le cours depasse 91,32 en seance (plus haut d'hier)",
+   "zoneLo": 91.31999969482422,
+   "zoneHi": 91.98238849291914,
+   "stop": 84.69611171387503,
+   "target": 101.25583166624801,
+   "rr": 1.500000000000001,
+   "pTarget": 0.3575,
+   "holdDays": 63,
+   "reviewDate": "2027-02-24T08:00:00.000Z",
+   "validUntil": "2026-11-27T08:00:00.000Z",
+   "cur": "EUR",
+   "expectancy": 0.11304622823694888,
+   "price": 89.55000305175781,
+   "chg": -2.715915173402328,
+   "sizePct": 13.786464982117378,
+   "riskPct": 7.253491023965276,
+   "gainPct": 10.88023653594792,
+   "perf": {
+    "w1": -6.2990443259281825,
+    "m1": 8.453437547210175,
+    "m3": -14.256988741456745,
+    "ytd": 10.842928626018677
+   },
+   "support": 84.22000122070312,
+   "resistance": 97.0999984741211,
+   "sma50": 92.8452001953125,
+   "sma200": 95.5130001449585,
+   "rsi": 41.637250025987385,
+   "vol": 28.71226444778779,
+   "rs63": -8.196577997834599,
+   "pros": [
+    "Negative Volume Index",
+    "ADX (14) directionnel",
+    "Force relative 3 mois vs indice (%)"
+   ],
+   "cons": [
+    "Croisement SMA 50 / 200",
+    "SMA 200"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,91 %."
+   ],
+   "day": {
+    "ref": {
+     "high": 91.32,
+     "low": 89.39,
+     "close": 89.55
+    },
+    "pivot": 90.09,
+    "r1": 90.78,
+    "r2": 92.02,
+    "s1": 88.85,
+    "s2": 88.16,
+    "atr": 2.21,
+    "range": {
+     "lo": 87.89,
+     "hi": 91.21
+    },
+    "up": {
+     "trigger": 90.78,
+     "stop": 90.09,
+     "target": 92.02,
+     "text": "Si le cours dépasse 90,78 en séance : achat possible, stop 90,09, objectif 92,02. Contre la tendance de fond : taille réduite."
+    },
+    "down": {
+     "trigger": 89.39,
+     "stop": 90.09,
+     "target": 88.16,
+     "text": "S'il passe sous 89,39 : pas d'achat, et sortie si tu détiens (objectif bas 88,16, invalidé au-dessus de 90,09)."
+    },
+    "trendUp": false,
+    "state": null,
+    "now": null,
+    "alerts": [],
+    "flat": "Entre 89,39 et 90,78 : rien à faire, c'est du bruit."
+   },
+   "timing": {
+    "age": 60,
+    "since": 1787900400,
+    "gainPct": -12.69,
+    "stage": "frais",
+    "factor": 1
+   },
+   "fund": {
+    "pe": 7.8346457,
+    "fpe": 6.9122396,
+    "yield": 7.21,
+    "rating": "1.7 - Buy",
+    "target": null,
+    "hi52": 113.82,
+    "lo52": 70.05
+   },
+   "news": [
+    {
+     "title": "Offre d'emploi VIE - ICT Project Specialist - Milan H/F",
+     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxOZXlRTHFXZVp0RXpYaTJybWFYc3BfYll1dXIwUzVTRGtWUWJqcUY0WDU3SFJxOXZVeGcwc21paEJSb3VHS29QdExBdDFTV25zQlBiU2tacGxGc2lUQnlWdjNobDk2NEJyVndncFZweFp5VWFPbGJCWm1GTGozaXkzQWZTeDVGT3gtUVlyT3JKWFhRbDRY?oc=5",
+     "source": "Groupe BNP Paribas",
+     "time": 1795259634000,
+     "tone": "neutre"
+    },
+    {
+     "title": "Quatre banques américaines se taillent la part du lion dans l’IPO d’Anthropic",
+     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPVEVRb1pzLW8xaVpYbFVreXR0QTlwcDVud0trR093WmxnaHNzbVJOTExfN2hFdzdZSVNheE14QUlsSThTcF9ZeExuc2hzZlo5MTBITHVvb3ZwSlBNQnQ5UU8yZWFBMF9vMjBrVWhUNWZZS2ZsTGRRVk5sd1JPcEs3eXdua3lGMnRYMUFjWmQzbXNtUHZnY0VwOHAyZXhTUnk3WFFNR2k0dmRlSDA2SFdJTnBycUc1dWl2aUE?oc=5",
+     "source": "L'Agefi",
+     "time": 1795251600000,
+     "tone": "neutre"
+    }
+   ],
+   "ctx": null,
+   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 91,32 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
    "sym": "AIR.PA",
@@ -136,12 +256,12 @@
    "stop": 173.4333960962585,
    "target": 214.74992264028023,
    "rr": 1.5,
-   "pTarget": 0.282,
+   "pTarget": 0.29075,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-24T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.09798651066335395,
+   "expectancy": 0.26386063696106093,
    "price": 189.9600067138672,
    "chg": -4.128390381033076,
    "sizePct": 11.494190255288611,
@@ -215,9 +335,9 @@
     "factor": 1
    },
    "fund": {
-    "pe": 25.395723,
+    "pe": 24.353846,
     "fpe": 21.912588,
-    "yield": 1.62,
+    "yield": 1.68,
     "rating": "1.8 - Buy",
     "target": null,
     "hi52": 221.3,
@@ -225,147 +345,27 @@
    },
    "news": [
     {
-     "title": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
-     "source": "Boursorama",
-     "time": 1795262039000,
-     "tone": "neutre"
+     "title": "L'action Société Générale chute de 3 % malgré un objectif relevé à 89,64 €",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPclV0MEJnVUFoelE3LXNGRjhTblM2ekdSLUVHM3owMDQ5YXpQTlVPNV9Hd0N6dnRvRmZLRjhOdkZwNjhEc3g4QTUxeTN5Vk1hckFLczJDaF8tWE5OTlBWYlF0eUI2NGl5RTM1RmMxenBQLUZ1aE1DWW1KTE56WWJaalRSdDJsT0FFN2Rqems2R1FzcWp4V3ZLVy1MMDVueHprU1lpcFNjOHcta25zR1ZkdGhKSXFVUQ?oc=5",
+     "source": "Idéal Investisseur",
+     "time": 1795260674000,
+     "tone": "négatif"
     },
     {
-     "title": "Airbus Group clôture en forte baisse",
-     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVUw4Z2xxQWVvMUVUUTFKUVNMS3BHbllDX1JoMktVT0NBY2VLOXY2eUlub1B1cVVXaFR0YVc4Q2EwTkY0b3NLTWdqSDREMGRnS1NseWgyOERvM00yUEVzMUdXdUtIVWR0VWZlQzBLVDF4dlVLZk9IUk5vLVBEbjZLbHdFelVGVF9IenFfOWEzYVhJUWE3WkdJb0RHLXJKZw?oc=5",
-     "source": "Boursier.com",
-     "time": 1795192809000,
-     "tone": "négatif"
+     "title": "CAC 40, Air liquide, Anthropic, Société générale… les actions en Bourse au programme de Momentum",
+     "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZGdwNS0tOURsYUcwYXFXMmRVVUFDMXozQTFUYnNHTm9Ud0NUeFFJRXF4ZEVsWWVORXNJX0hKZnpHYlllb1d0OWJPZVFzeXRzdlBlZVVlY0RsYmJhbXU3NUdzcTVTektCNGNNQUlNc0dWN3pBZ0tRUWVkQXFkeHFHM01FMWRGaG1KNkxpS2hZMEVFRlFwYnVTYll0Sm5WYzk5OGRoRmtXa1RMdGluSzk5QlFBa2h0MVVla0V3NGZad3luNDYxQTVJZWppNUVBVjJ5X3JGMDVIN1BzTk0?oc=5",
+     "source": "Capital.fr",
+     "time": 1795246200000,
+     "tone": "neutre"
     }
    ],
    "ctx": {
-    "title": "Airbus Group clôture en forte baisse",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVUw4Z2xxQWVvMUVUUTFKUVNMS3BHbllDX1JoMktVT0NBY2VLOXY2eUlub1B1cVVXaFR0YVc4Q2EwTkY0b3NLTWdqSDREMGRnS1NseWgyOERvM00yUEVzMUdXdUtIVWR0VWZlQzBLVDF4dlVLZk9IUk5vLVBEbjZLbHdFelVGVF9IenFfOWEzYVhJUWE3WkdJb0RHLXJKZw?oc=5",
-    "source": "Boursier.com",
-    "tone": "négatif",
-    "verdict": "Attention, l'actu va contre le signal"
+    "title": "CAC 40, Air liquide, Anthropic, Société générale… les actions en Bourse au programme de Momentum",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZGdwNS0tOURsYUcwYXFXMmRVVUFDMXozQTFUYnNHTm9Ud0NUeFFJRXF4ZEVsWWVORXNJX0hKZnpHYlllb1d0OWJPZVFzeXRzdlBlZVVlY0RsYmJhbXU3NUdzcTVTektCNGNNQUlNc0dWN3pBZ0tRUWVkQXFkeHFHM01FMWRGaG1KNkxpS2hZMEVFRlFwYnVTYll0Sm5WYzk5OGRoRmtXa1RMdGluSzk5QlFBa2h0MVVla0V3NGZad3luNDYxQTVJZWppNUVBVjJ5X3JGMDVIN1BzTk0?oc=5",
+    "source": "Capital.fr",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
    },
-   "summary": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies."
-  },
-  {
-   "sym": "DG.PA",
-   "name": "Vinci",
-   "h": "3M",
-   "action": "ENTRER",
-   "actionLabel": "Entrer",
-   "pUp": 0.5579878949957818,
-   "expPct": 0.864124408263911,
-   "start": "Des la prochaine seance",
-   "zoneLo": 110.0506812984129,
-   "zoneHi": 111.37972748063484,
-   "stop": 105.30408779047735,
-   "target": 120.29386152893115,
-   "rr": 1.6316721864837223,
-   "pTarget": 0.32525,
-   "holdDays": 63,
-   "reviewDate": "2027-02-17T08:00:00.000Z",
-   "validUntil": "2026-11-24T08:00:00.000Z",
-   "cur": "EUR",
-   "expectancy": 0.1434488838884273,
-   "price": 111,
-   "chg": -0.9812653783175862,
-   "sizePct": 19.487659907121795,
-   "riskPct": 5.131452441011393,
-   "gainPct": 8.372848224262293,
-   "perf": {
-    "w1": -3.8961038961038974,
-    "m1": 4.766402262592595,
-    "m3": -7.1906342674259776,
-    "ytd": -7.538527964764841
-   },
-   "support": 106.80000305175781,
-   "resistance": 116.3499984741211,
-   "sma50": 109.92899993896485,
-   "sma200": 122.18625007629394,
-   "rsi": 47.49223961852658,
-   "vol": 16.256700092249137,
-   "rs63": -1.1302235238038305,
-   "pros": [
-    "Negative Volume Index",
-    "Force relative 3 mois vs indice (%)",
-    "Momentum 6 mois (%)"
-   ],
-   "cons": [
-    "Croisement SMA 50 / 200",
-    "SMA 200"
-   ],
-   "why": [
-    "Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,86 %."
-   ],
-   "day": {
-    "ref": {
-     "high": 112.45,
-     "low": 111,
-     "close": 111
-    },
-    "pivot": 111.48,
-    "r1": 111.97,
-    "r2": 112.93,
-    "s1": 110.52,
-    "s2": 110.03,
-    "atr": 1.9,
-    "range": {
-     "lo": 109.58,
-     "hi": 112.42
-    },
-    "up": {
-     "trigger": 111.97,
-     "stop": 111.48,
-     "target": 112.93,
-     "text": "Si le cours dépasse 111,97 en séance : achat possible, stop 111,48, objectif 112,93."
-    },
-    "down": {
-     "trigger": 111,
-     "stop": 111.48,
-     "target": 110.03,
-     "text": "S'il passe sous 111,00 : pas d'achat, et sortie si tu détiens (objectif bas 110,03, invalidé au-dessus de 111,48). Contre la tendance de fond : souvent un simple repli."
-    },
-    "trendUp": true,
-    "state": null,
-    "now": null,
-    "alerts": [],
-    "flat": "Entre 111,00 et 111,97 : rien à faire, c'est du bruit."
-   },
-   "timing": {
-    "age": 60,
-    "since": 1787900400,
-    "gainPct": -2.93,
-    "stage": "frais",
-    "factor": 1
-   },
-   "fund": {
-    "pe": 12.443946,
-    "fpe": 11.219307,
-    "yield": 4.5,
-    "rating": "1.9 - Buy",
-    "target": null,
-    "hi52": 143.15,
-    "lo52": 104.25
-   },
-   "news": [
-    {
-     "title": "GETLINK Cours Action GET, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9SbDFSTFRKRkFzeXFKRmNOTWc1RFFraGQwZEpDakRZdG0zcjhjRU5IWHlaOUJRMC1wODBvVDJ6MkV6ZFFibk5BUTRPdFhvX0hLS1E?oc=5",
-     "source": "Boursorama",
-     "time": 1795254849000,
-     "tone": "neutre"
-    },
-    {
-     "title": "BOUYGUES Cours Action EN, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FRnRQY2lqUkxRT3htOEdjOEJvZDUzVk11MnVaWG4xQVU1aHczaFBQcXIyMFZyNF81T0YxYWtLSzZDVVZ2UC00bmVLOV9tUXlp?oc=5",
-     "source": "Boursorama",
-     "time": 1795245082000,
-     "tone": "neutre"
-    }
-   ],
-   "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies."
   },
   {
@@ -382,12 +382,12 @@
    "stop": 47.269321128310985,
    "target": 63.34602021488216,
    "rr": 1.5000000000000004,
-   "pTarget": 0.30825,
+   "pTarget": 0.312,
    "holdDays": 63,
    "reviewDate": "2027-02-24T08:00:00.000Z",
    "validUntil": "2026-11-27T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.6883211534012108,
+   "expectancy": 1.767346651189089,
    "price": 51.619998931884766,
    "chg": -5.871628759561876,
    "sizePct": 8.350594931486112,
@@ -471,13 +471,6 @@
    },
    "news": [
     {
-     "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-     "source": "Boursorama",
-     "time": 1795250801000,
-     "tone": "neutre"
-    },
-    {
      "title": "CAC 40 : les grands perdants de la semaine",
      "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxNUDFjTDFPbkM5MUViV0JrUGxMMk0yd0xXVkRtOFdTUEoybHJ2ZlRBV01HX294amdIUTdqT2NNTnRHdFR2UUNtTm5zN2V6Ny1ITGcwSVl5cUlqSldHZkVfTXpxcTJYWG43cHZJRG5WY0RyTW54elVMci1MTnFkLTZ5dXZwR01XSmE3?oc=5",
      "source": "Le Revenu",
@@ -485,13 +478,7 @@
      "tone": "neutre"
     }
    ],
-   "ctx": {
-    "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   },
+   "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 53,70 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
@@ -506,19 +493,19 @@
    "zoneLo": 42.11819485631379,
    "zoneHi": 42.652722057474485,
    "stop": 40.20916913788275,
-   "target": 46.07477728955782,
-   "rr": 1.5604719443380985,
-   "pTarget": 0.32625,
+   "target": 45.93624629317587,
+   "rr": 1.5,
+   "pTarget": 0.336,
    "holdDays": 63,
    "reviewDate": "2027-02-17T08:00:00.000Z",
    "validUntil": "2026-11-24T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.07294154955750565,
+   "expectancy": 0.09492154847446577,
    "price": 42.5,
    "chg": -0.9324044560642064,
    "sizePct": 18.552220813334237,
    "riskPct": 5.3901902638052865,
-   "gainPct": 8.411240681312524,
+   "gainPct": 8.08528539570793,
    "perf": {
     "w1": -4.063203765373213,
     "m1": 5.8794236328767235,
@@ -589,35 +576,14 @@
    "fund": {
     "pe": 21.039604,
     "fpe": 10.974199,
-    "yield": 4.9,
+    "yield": 4.94,
     "rating": "1.8 - Buy",
     "target": null,
     "hi52": 53.48,
     "lo52": 39.73
    },
-   "news": [
-    {
-     "title": "BOUYGUES Cours Action EN, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FRnRQY2lqUkxRT3htOEdjOEJvZDUzVk11MnVaWG4xQVU1aHczaFBQcXIyMFZyNF81T0YxYWtLSzZDVVZ2UC00bmVLOV9tUXlp?oc=5",
-     "source": "Boursorama",
-     "time": 1795245082000,
-     "tone": "neutre"
-    },
-    {
-     "title": "Bouygues lâche 0,93%",
-     "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPM0diekQ2aFZGWG1hQjB0b1dXRnBibFh5T1UyblFkT2VucTVzamVYSnNMa3E0QzlLU25qYUFucGNoLWhNYlVxSVlrYXdIcFdBZlVpNFNHRTVJcjVOTXhuV1FPb0l4Qm5aUEdKN1dtNFRfMXZZbzBtMldWd0MxV0JMTkNtX094R28?oc=5",
-     "source": "Boursier.com",
-     "time": 1795192869000,
-     "tone": "neutre"
-    }
-   ],
-   "ctx": {
-    "title": "BOUYGUES Cours Action EN, Cotation Bourse Euronext Paris",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FRnRQY2lqUkxRT3htOEdjOEJvZDUzVk11MnVaWG4xQVU1aHczaFBQcXIyMFZyNF81T0YxYWtLSzZDVVZ2UC00bmVLOV9tUXlp?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   },
+   "news": [],
+   "ctx": null,
    "summary": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies."
   }
  ],
@@ -710,7 +676,106 @@
  "agenda": {
   "today": [],
   "tomorrow": [],
-  "week": [],
+  "week": [
+   {
+    "day": "2026-11-23",
+    "dayLabel": "lun. 23/11",
+    "time": "01:00",
+    "ts": 1795392000000,
+    "cur": "JPY",
+    "country": "Japon",
+    "flag": "🇯🇵",
+    "title": "Jour férié (marché fermé ou réduit)",
+    "original": "Bank Holiday",
+    "impact": "férié",
+    "forecast": "",
+    "previous": ""
+   },
+   {
+    "day": "2026-11-25",
+    "dayLabel": "mer. 25/11",
+    "time": "01:30",
+    "ts": 1795566600000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Inflation (indice des prix à la consommation) (sur un mois)",
+    "original": "CPI m/m",
+    "impact": "fort",
+    "forecast": "0.4%",
+    "previous": "0.8%"
+   },
+   {
+    "day": "2026-11-25",
+    "dayLabel": "mer. 25/11",
+    "time": "01:30",
+    "ts": 1795566600000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Inflation (indice des prix à la consommation) (sur un an)",
+    "original": "CPI y/y",
+    "impact": "fort",
+    "forecast": "4.8%",
+    "previous": "4.3%"
+   },
+   {
+    "day": "2026-11-25",
+    "dayLabel": "mer. 25/11",
+    "time": "01:30",
+    "ts": 1795566600000,
+    "cur": "AUD",
+    "country": "Australie",
+    "flag": "🇦🇺",
+    "title": "Trimmed Mean CPI m/m",
+    "original": "Trimmed Mean CPI m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.3%"
+   },
+   {
+    "day": "2026-11-25",
+    "dayLabel": "mer. 25/11",
+    "time": "14:30",
+    "ts": 1795613400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois)",
+    "original": "Core PCE Price Index m/m",
+    "impact": "fort",
+    "forecast": "0.3%",
+    "previous": "0.3%"
+   },
+   {
+    "day": "2026-11-25",
+    "dayLabel": "mer. 25/11",
+    "time": "14:30",
+    "ts": 1795613400000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Croissance du PIB (sur un trimestre)",
+    "original": "Prelim GDP q/q",
+    "impact": "fort",
+    "forecast": "3.5%",
+    "previous": "3.4%"
+   },
+   {
+    "day": "2026-11-26",
+    "dayLabel": "jeu. 26/11",
+    "time": "14:00",
+    "ts": 1795698000000,
+    "cur": "USD",
+    "country": "Etats-Unis",
+    "flag": "🇺🇸",
+    "title": "Jour férié (marché fermé ou réduit)",
+    "original": "Bank Holiday",
+    "impact": "férié",
+    "forecast": "",
+    "previous": ""
+   }
+  ],
   "ok": true
  },
  "earnings": {
@@ -783,9 +848,9 @@
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 92.56999969482422,
-   "chg": 0.6414397872993138,
-   "m1": -18.202702842999507
+   "last": 89.94999694824219,
+   "chg": -2.207008409005873,
+   "m1": -20.51780648263266
   },
   {
    "sym": "GC=F",
@@ -804,9 +869,9 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 59823.94921875,
-   "chg": 1.7431743574954472,
-   "m1": -22.74276184949263
+   "last": 60853.26171875,
+   "chg": 1.2633053882235679,
+   "m1": -22.230716022541188
   }
  ],
  "movers": {
@@ -14125,26 +14190,26 @@
    "ctx": null
   },
   {
+   "sym": "BNP.PA",
+   "name": "BNP Paribas",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 91,32 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "ctx": null
+  },
+  {
    "sym": "AIR.PA",
    "name": "Airbus",
    "h": "3M",
    "action": "ENTRER",
    "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
    "ctx": {
-    "title": "Airbus Group clôture en forte baisse",
-    "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxNVUw4Z2xxQWVvMUVUUTFKUVNMS3BHbllDX1JoMktVT0NBY2VLOXY2eUlub1B1cVVXaFR0YVc4Q2EwTkY0b3NLTWdqSDREMGRnS1NseWgyOERvM00yUEVzMUdXdUtIVWR0VWZlQzBLVDF4dlVLZk9IUk5vLVBEbjZLbHdFelVGVF9IenFfOWEzYVhJUWE3WkdJb0RHLXJKZw?oc=5",
-    "source": "Boursier.com",
-    "tone": "négatif",
-    "verdict": "Attention, l'actu va contre le signal"
+    "title": "CAC 40, Air liquide, Anthropic, Société générale… les actions en Bourse au programme de Momentum",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxNZGdwNS0tOURsYUcwYXFXMmRVVUFDMXozQTFUYnNHTm9Ud0NUeFFJRXF4ZEVsWWVORXNJX0hKZnpHYlllb1d0OWJPZVFzeXRzdlBlZVVlY0RsYmJhbXU3NUdzcTVTektCNGNNQUlNc0dWN3pBZ0tRUWVkQXFkeHFHM01FMWRGaG1KNkxpS2hZMEVFRlFwYnVTYll0Sm5WYzk5OGRoRmtXa1RMdGluSzk5QlFBa2h0MVVla0V3NGZad3luNDYxQTVJZWppNUVBVjJ5X3JGMDVIN1BzTk0?oc=5",
+    "source": "Capital.fr",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
    }
-  },
-  {
-   "sym": "DG.PA",
-   "name": "Vinci",
-   "h": "3M",
-   "action": "ENTRER",
-   "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-   "ctx": null
   },
   {
    "sym": "MT.AS",
@@ -14152,13 +14217,7 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 53,70 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": {
-    "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   }
+   "ctx": null
   },
   {
    "sym": "EN.PA",
@@ -14166,70 +14225,64 @@
    "h": "3M",
    "action": "ENTRER",
    "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-   "ctx": {
-    "title": "BOUYGUES Cours Action EN, Cotation Bourse Euronext Paris",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1FRnRQY2lqUkxRT3htOEdjOEJvZDUzVk11MnVaWG4xQVU1aHczaFBQcXIyMFZyNF81T0YxYWtLSzZDVVZ2UC00bmVLOV9tUXlp?oc=5",
-    "source": "Boursorama",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   }
+   "ctx": null
   }
  ],
  "news": [
   {
-   "title": "Panique à Wall Street : faut-il craindre un krach après une chute historique de la tech ?",
-   "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPc3VkVTF4TDgtQXkxU0ZyRDU2aXVFTU01NjdPRndfb2tRNU5nYVowdDJlV1ZPS1pBOGl3NDhkcFRPX2I2c2sxTHF5RkxJanBXQkxEV2xpQnNkVjZXWW9FUGg5RHU1N1VsLUdRX1hVRFFENmNYSXpEYTM2Q1FFa2pmd05TUEZZUUZPMzlCRy1rRUo2ZDJpRDhHVU04Z2lOdllLc0gyNmFGYnA0LVFtcW1hdklaaEE4T0tWMExlVWZtSTBoX0xnQTFSM1I1aUFuaFNWN3c?oc=5",
-   "source": "Le Figaro",
-   "time": 1795266573000,
-   "tone": "négatif"
-  },
-  {
-   "title": "SAFRAN Cours Action SAF, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE4tNVF0MmJpSmROaGUzdDJ5Ym1yeVdNSHo4Nm91TzdZNDdWQjhIb1FqcG9yY0dxSDNDejh4VUlydFNEa1FWSm5OclY2MlIwQmplTUE?oc=5",
-   "source": "Boursorama",
-   "time": 1795262039000,
+   "title": "Marché noir en Algérie : le dollar monte, l’euro tient bon ce dimanche",
+   "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxQSWRXVjNNakI3N0pUY0U5RllKZVBNd2VzcVJSNmoxUDBsZk05Z2FQSnpOTHE5MHU2aUFxT1VwcERpaXNqTXJKeENKWUtET09ZaTVubURjaUVtN3U3TVNpRTVQaGZ4bFB6el9YaUhEVGxhb1dsOFkxeDUxMWhRN0NOOGxITWZLWl9w?oc=5",
+   "source": "Algérie Zoom",
+   "time": 1795355880000,
    "tone": "neutre"
   },
   {
-   "title": "BUREAU VERITAS Cours Action BVI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFBaUXFaMUFxNnd6VnpWMFc1dnAyWGJ2aFVMaVYyNS1TajFvZU1EeXUyM3p1anJ1Qm9ORDE5V3RTWDlUekpmZkU5TjhQNjdqejEwNlE?oc=5",
-   "source": "Boursorama",
-   "time": 1795261789000,
+   "title": "Marché noir des devises : l’euro reprend 50 dinars face à la monnaie algérienne",
+   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOYkpIZUNTMUVNSnZadXhIVVJ6SGNJSW5WYVZYajdjdjZFZFJNRFFmeEw3R2YyN2FZTTh3VF9Nc2IwaHc0T0tLQmlfSVZHdWZpZldxNjBpbll0S3NDc3JOY1pYQmRpcTdmc0xmMnI1Nkx0OVEzM0s2bXNTZnZYVlZNLXVyUjQ4YTlOMHBYeFFmcGhFT2JFbDFDcEFNWExYVFJIeHFndjFUbng4OXBfOVE?oc=5",
+   "source": "Maghreb Émergent",
+   "time": 1795353674000,
    "tone": "neutre"
   },
   {
-   "title": "L'influence de la Fed s'est affaiblie et le dollar américain a stagné après une forte hausse de quatre semaines.",
-   "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQbG5RQlc0OEkwLWhTc3NWM2l3N1dlX182Si1EaGYyT3E1a2cxMDR1U0ZKRTd2MGNLMElQaEY0cWxMS2VINFFtYnpJS3Qtb1EybDdfdmtBT2xhV0V6eU5sXzNtZUEyN3Nkc2x3dVFrMEVLd193aDQ1aXVoNERpZ203LVJ2VEZNZVF3VGRGVkhtNDdXSHlVY25VYQ?oc=5",
+   "title": "Comme SpaceX, Anthropic a suivi un processus d’introduction en Bourse inhabituel, au grand dam de certains banquiers",
+   "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNNEQ1aGEzVnhQUkR3MWRVTnFRX2N6MXdJaW9mM0xjWVpBLTlad0NQbnJFOEE4WTBWVjR0TTB0OVRxOU1ZSWJuWWQ1WU1RRm5SX2FPbDcyYjJMYkxQWGlXZDFEQWxFd3VxUEVSUFhUb08zdXQ5cG9HazM0cWFtNVZza0lqOVU5RUhZTVhvNEV5d1REdEpxbi12OThKMWFNb19jbzkzN3Q4eFZYWXpiZ3NDSGxlZ0NENnlCRll2eS1rUndhSkxqbmlnaDNJR3YxUUI0NnQ3X0VTWHpJMTdiRHFwZ1p0czdMSmQ2T0hXSQ?oc=5",
+   "source": "Zonebourse Suisse",
+   "time": 1795345309000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Les cours de l'or ont chuté à leur plus bas niveau depuis plus d'un an, et les experts restent pessimistes, mettant en garde contre une possible nouvelle baisse de 300 dollars.",
+   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNU0pnWTdOYlhFNk5sazVLSlhtcVlyM0ZaeFI2UWdJMEU5cFJuSW92dk1vNENZUzhYS1l6ZG8tWTQ3aWZ1VGJ2b1lSRXdyQVRvQ3dRVE9NeHBZalBtbG1wNmhvM0hNLXpRMWVObWhHMEVhOFN0UEFPMWVCODQ4VmFDQUhUaF9SZm5NYjlwUUlJZXE0cEZFVHRUeml1X3dubUNMVF9iMHRqMnZaYTYzeWRCYjVLNEFlNnBndVpEQ0hPc1R3RzEtQUR0d0pRT0xOcHllbG1rLXd0T0hpaGdV?oc=5",
    "source": "Vietnam.vn",
-   "time": 1795261102000,
-   "tone": "positif"
-  },
-  {
-   "title": "La Bourse de Wall Street enregistre des centaines de milliards de dollars de pertes, pénalisée par le secteur de l'IA",
-   "link": "https://news.google.com/rss/articles/CBMimgJBVV95cUxQLTVGZ0NrQ2Y5cXBTcFV6Qm02MTJnaklZTzY1S2FDUlZuSE93ZTZRTXdONVpOZTUxYi1ydjVxbzNTNTNCelEzbFJGcVhTeFZKNU03RnFvRmNpWlBHMlhpNURsSU1NYXh5VzdRb2JGZ3ZUUjJ4VGxmRW5GaXN0ZXgxSWZfaU5sbEliWlU1NmZJc3YwdVlHOUZic0FsNldfQVFRcHpYalR6VzhmclIxX2tjQkFvUFZzRHJDZ2ZiUzVDdU0xM2VGVXBpblpYZ2U2cHpsN2xuUUExOE9maWtNOEMwdUZFM3RSSXoyNjBNOFllNURfNVozb3pSODFhM2d4NjNXLTFiWld5QmdWSndNUjBjbUFGeTJ0Q21pdVE?oc=5",
-   "source": "franceinfo",
-   "time": 1795260832000,
+   "time": 1795341859000,
    "tone": "négatif"
   },
   {
-   "title": "SEB Cours Action SK, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBCeUwzX0lSYXdhcHhCMXVxNDNqaDBnQ3FhMWliV29PVUt1VUItc29HMEtlYTZRLXphUkpja2pvYUlsMzNaS0FFQ3ZmOVJTRE5n?oc=5",
-   "source": "Boursorama",
-   "time": 1795260560000,
+   "title": "L'Iran prépare un convoi de pétroliers pour tester le blocus pétrolier américain",
+   "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQV21WWk1kUjlJSVVWYVcycnQwc3NZVWxDM0ZmS3N2WjVqTVVqcTZLSDAtNnpGVi1LeHV0eEd5Z2ZIT2pXMkN1MWo4SWJQNkg3Y2o2WXlkd0FqSTZmTWJhQXFUc1JEcFlzVUlVUWxZT1FsWC04QUZ4blJKVGFfVHNud2lST1BuRk1EYUx6LTFHa2RyVjdMemxYTjJCTW1sVWZNM3NpMGZPVW05RTZsSmRYcmx5WXRZVFo0alF2V0s3b3QwMTN5TFZNY1FiZ21lZHIyZm1XTjhSbWZrNW8?oc=5",
+   "source": "IDNFinancials",
+   "time": 1795341600000,
    "tone": "neutre"
   },
   {
-   "title": "CLARIANE Cours Action CLARI, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE5hemZlLUdBX19oU3ZtTzZiM0tta2dkdXNsRmpNZmRmMFF6QlQ5SExTM2UzUENzbVBNbzEzbGhqaTRDanRkWVBia0VqM09SbmtuV1EtbA?oc=5",
-   "source": "Boursorama",
-   "time": 1795260389000,
+   "title": "Quel avenir pour la BCE ?",
+   "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1BRlFHa2YzdWVXMFJHaWl4Zmp5MzAzaTYtVTEyazFNdHRQSlZRMXlOd00xSkRsQ0ZCbnZVLU55MW9tdHZscXFWMF9CWkE5aC00b0EyTS1zdWx0ekZLaC1iMDVUaG03YlhDdVVpYVY5WFlrT05sRjZZ?oc=5",
+   "source": "Economie Matin",
+   "time": 1795340640000,
    "tone": "neutre"
   },
   {
-   "title": "Les importations chinoises de pétrole en provenance du golfe Persique ont bondi de 42 pour cent en octobre",
-   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxPdmV5QV9telFRSTFQNWNqU2JPckc3c1VjekgwXzFWSjRGWC1zRTlkTHh0NkZxNS1DaDBsbzlDTmI5Q0s3NTVkYXZ3bFlyTnBSandYdWVzeE9xcXI1SXJFcW5RdzdvNDBIUFloVG5PN1ZVT2w5R3NfUWhOX3dOdEtUQ1FWakZ2S3dleWJ3eW90a3FDSzBWcktTVk0zQ1FGNFN0b0JJU2ZuVkx0R1FwSzVyWC0zajdEQVFBdUZsUHNWT3BTX21JRkRIRkFRZGc?oc=5",
-   "source": "Business AM",
-   "time": 1795256280000,
+   "title": "Wall Street perd des centaines de milliards de dollars en une séance, plombée par les valeurs de l'IA",
+   "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPbVYyUVFWM1hYNlp6clZPLWlSMXEwNFVSa1drUXFzbVpxY1lxY0laQ3BZSE5GS1FqQnBIWDVndktRT3ZDRWs1dDNTTnhtRHliSUFHUzNjTHpoVVdmTUl3OVhad0VkQjZnbm9zaUZXLUMteVdmQnVzRUZJZk11ZTgxMVlYOTc3dXZWTnRhdQ?oc=5",
+   "source": "Le Tribunal du Net",
+   "time": 1795336200000,
+   "tone": "neutre"
+  },
+  {
+   "title": "La Banque centrale européenne maintient ses taux d'intérêt inchangés",
+   "link": "https://news.google.com/rss/articles/CBMiywFBVV95cUxNLWZtOGFucDVPNWRJaVFQSlE5RzJXWFp5c3hYa0JtSHJzcWdrZUFubTZOTXN2Si16VlNoR2VKcXZfVHVHME1vbHhTdGE0WW1iSy1SVG5VNW51dmtfakdHbDVrODJVRnNBYWk3OGYtSEl4LURRdkU0TFNCWUd3RTBpMDYxdlVaNlhaUVpXTE1PZmJ4YXJzeG5FdEFZdUJvQTg4OGpSY1pDY0JzYjZmeE1aOF9CdHhob3Q0czNrazAtQjVkLTZuekpxX2Rlaw?oc=5",
+   "source": "The Portugal News",
+   "time": 1795334384000,
    "tone": "neutre"
   }
  ]
