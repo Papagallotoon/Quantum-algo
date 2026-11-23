@@ -1,41 +1,44 @@
-*Quantum Algo – dimanche 22 novembre 2026*
+*Quantum Algo – lundi 23 novembre 2026*
 
-• CAC 40 à 7 928 points : −1,9 % à la dernière séance, +1,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché en stress.
+• CAC 40 à 8 045 points : +1,5 % à la dernière séance, +3,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
+• Résultats aujourd'hui : CrowdStrike.
+• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
+*Résultats aujourd'hui* : CrowdStrike
+
 *À venir (fort impact)*
-lun. 23/11 01:00 🇯🇵 Jour férié (marché fermé ou réduit)
 mer. 25/11 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
 mer. 25/11 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an)
 mer. 25/11 01:30 🇦🇺 Trimmed Mean CPI m/m
 mer. 25/11 14:30 🇺🇸 Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois)
 mer. 25/11 14:30 🇺🇸 Croissance du PIB (sur un trimestre)
+jeu. 26/11 14:00 🇺🇸 Jour férié (marché fermé ou réduit)
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,7 %
-  entrée 230,20-232,55, stop 206,68, objectif 269,37, revoir le 24/02
-• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 91,32-91,98, stop 84,70, objectif 101,26, revoir le 24/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,1 %
-  entrée 187,21-191,06, stop 173,43, objectif 214,75, revoir le 17/02
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,8 %
-  entrée 53,70-54,34, stop 47,27, objectif 63,35, revoir le 24/02
-• Bouygues – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 42,12-42,65, stop 40,21, objectif 45,94, revoir le 17/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
+  entrée 237,70-240,12, stop 213,47, objectif 278,11, revoir le 25/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 192,94-196,83, stop 179,05, objectif 220,73, revoir le 18/02
+• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 111,46-112,78, stop 106,75, objectif 121,36, revoir le 18/02
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,3 %
+  entrée 54,72-55,38, stop 48,08, objectif 64,67, revoir le 25/02
+• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,9 %
+  entrée 13,50-13,58, stop 12,64, objectif 15,77, revoir le 25/02
 
 *À lire*
-• Marché noir en Algérie : le dollar monte, l’euro tient bon ce dimanche (Algérie Zoom)
-• Marché noir des devises : l’euro reprend 50 dinars face à la monnaie algérienne (Maghreb Émergent)
-• Comme SpaceX, Anthropic a suivi un processus d’introduction en Bourse inhabituel, au grand dam de certains banquiers (Zonebourse Suisse)
+• Le dollar profite du rebond de l'IA sur les marchés d'actions (Zonebourse)
+• Wall Street s'envole alors que Nvidia réintègre Huang, le dollar bondit (Boursorama)
+• Retour de Jensen Huang chez Nvidia | La Bourse de Toronto et Wall Street en hausse (La Presse)
 
-*🎓 Question du jour* : L'OBV qui monte alors que le prix stagne suggère…
-A. une accumulation discrète par les acheteurs
-B. une fraude
-C. un dividende imminent
-D. une tendance baissière forte
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q11
+*🎓 Question du jour* : Un doji indique surtout…
+A. une indécision entre acheteurs et vendeurs
+B. une forte hausse certaine
+C. une forte baisse certaine
+D. un jour férié
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q12
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
