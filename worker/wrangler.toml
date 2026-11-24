@@ -12,9 +12,9 @@ id = "18d22ac8153a49268f514782aeaa3373"
 # Seul ton site a le droit d'appeler /subscribe depuis un navigateur
 ALLOWED_ORIGIN = "https://papagallotoon.github.io"
 GH_REPO = "Papagallotoon/Quantum-algo"
-SEND_HOUR_PARIS = "7"
+SEND_HOUR_PARIS = "8"
 
-# Lancement de la routine du matin : 7 h 45 a Paris (lettre recue vers 8 h), tous les jours, week-end compris.
-# 05:45 UTC = 7 h 45 l'ete, 06:45 UTC = 7 h 45 l'hiver ; le code ne garde que le bon.
+# Lancement de la routine du matin : 8 h 45 a Paris (lettre recue vers 9 h), tous les jours, week-end compris.
+# 06:45 UTC = 8 h 45 l'ete, 07:45 UTC = 8 h 45 l'hiver ; le code ne garde que le bon.
 [triggers]
-crons = ["45 5 * * *", "45 6 * * *"]
+crons = ["45 6 * * *", "45 7 * * *"]
