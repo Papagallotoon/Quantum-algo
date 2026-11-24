@@ -1,12 +1,12 @@
-*Quantum Algo – lundi 23 novembre 2026*
+*Quantum Algo – mardi 24 novembre 2026*
 
-• CAC 40 à 8 045 points : +1,5 % à la dernière séance, +3,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 040 points : −0,1 % à la dernière séance, +2,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
-• Résultats aujourd'hui : CrowdStrike.
-• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• Résultats aujourd'hui : Trigano.
+• Les indices penchent légèrement à la hausse à 1 mois (4 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Résultats aujourd'hui* : CrowdStrike
+*Résultats aujourd'hui* : Trigano
 
 *À venir (fort impact)*
 mer. 25/11 01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois)
@@ -17,28 +17,32 @@ mer. 25/11 14:30 🇺🇸 Croissance du PIB (sur un trimestre)
 jeu. 26/11 14:00 🇺🇸 Jour férié (marché fermé ou réduit)
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 237,70-240,12, stop 213,47, objectif 278,11, revoir le 25/02
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 192,94-196,83, stop 179,05, objectif 220,73, revoir le 18/02
-• Vinci – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
-  entrée 111,46-112,78, stop 106,75, objectif 121,36, revoir le 18/02
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,3 %
-  entrée 54,72-55,38, stop 48,08, objectif 64,67, revoir le 25/02
-• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,9 %
-  entrée 13,50-13,58, stop 12,64, objectif 15,77, revoir le 25/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,6 %
+  entrée 76,84-78,02, stop 72,61, objectif 85,91, revoir le 19/02
+  ⚠ résultats pendant la position
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 190,93-194,72, stop 177,39, objectif 218,02, revoir le 19/02
+  ⚠ résultats pendant la position
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,2 %
+  entrée 54,04-54,75, stop 46,93, objectif 64,71, revoir le 26/02
+• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,6 %
+  entrée 13,80-13,89, stop 12,93, objectif 15,94, revoir le 26/02
+  ⚠ résultats pendant la position
+• Dassault Systemes – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +2,7 %
+  entrée 21,99-22,51, stop 20,11, objectif 25,98, revoir le 19/02
+  ⚠ résultats pendant la position
 
 *À lire*
-• Le dollar profite du rebond de l'IA sur les marchés d'actions (Zonebourse)
-• Wall Street s'envole alors que Nvidia réintègre Huang, le dollar bondit (Boursorama)
-• Retour de Jensen Huang chez Nvidia | La Bourse de Toronto et Wall Street en hausse (La Presse)
+• Saison des résultats : l’Europe pourrait enfin battre Wall Street (Trends-Tendances)
+• Jensen Huang de retour à la tête de Nvidia, les risques aussi (Bourse Direct)
+• Nvidia rechute en Bourse, inquiétudes malgré le retour de Jensen Huang (Le Devoir)
 
-*🎓 Question du jour* : Un doji indique surtout…
-A. une indécision entre acheteurs et vendeurs
-B. une forte hausse certaine
-C. une forte baisse certaine
-D. un jour férié
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q12
+*🎓 Question du jour* : Le marteau (hammer) apparaît idéalement…
+A. après une baisse, avec une longue mèche basse
+B. au sommet d'une hausse
+C. quand le volume est nul
+D. uniquement le lundi
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q13
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
