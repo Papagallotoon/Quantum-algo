@@ -325,6 +325,16 @@
   #qfly.landing { transition: transform .85s cubic-bezier(.5,0,.2,1), width .85s; }
   @media (prefers-reduced-motion: reduce) { .mBot, #qfly .qflame, .mBot .qflame { animation: none; } }
   @media (max-width: 560px) { .mBot, .mBot svg { width: 70px; } .mBot svg { height: 76px; } .mBubble { font-size: 14.5px; padding: 12px 14px; } }
+  .pgmlock { max-width: 460px; margin: 40px auto 0; text-align: center; padding: 28px 22px; }
+  .plE { font-size: 46px; }
+  #pgmf { display: flex; gap: 8px; } #pgmf input { flex: 1; height: 46px; border-radius: 14px; border: 1px solid var(--line2); background: var(--bg); color: var(--text); padding: 0 14px; font-size: 16px; outline: none; }
+  #pgmf input:focus { border-color: var(--brand); }
+  .prow { display: flex; align-items: center; gap: 12px; padding: 12px 6px; border-bottom: 1px solid var(--soft); border-radius: 12px; }
+  .prow:hover { background: var(--card2); } .prow:last-child { border-bottom: 0; }
+  .prL { width: 128px; flex: none; } .prL .light { font-size: 12px; padding: 5px 9px; display: inline-block; }
+  .prL .lg { background: rgba(52,211,153,.15); color: var(--up); } .prL .ly { background: rgba(255,209,102,.15); color: #FFD166; } .prL .lo { background: rgba(245,183,64,.15); color: var(--amber); } .prL .lr { background: rgba(255,107,91,.15); color: var(--down); }
+  .prP { width: 120px; flex: none; text-align: right; font-size: 12px; line-height: 1.6; } .prP b { font-family: var(--mono); }
+  @media (max-width: 640px) { .prow { flex-wrap: wrap; } .prL { width: auto; } .prow > svg { display: none; } .prP { width: 100%; text-align: left; display: flex; gap: 14px; } }
   .catc { margin: 6px 0 12px; } .catc .chip { height: 36px; font-size: 12.5px; padding: 0 13px; }
   .cnt { font-size: 11px; opacity: .65; margin-left: 4px; }
   .erow { display: flex; align-items: center; gap: 10px; padding: 10px 6px; border-bottom: 1px solid var(--soft); border-radius: 12px; }
@@ -357,6 +367,7 @@
       <a href="#/" data-r="today">Aujourd'hui</a>
       <a href="#/indices" data-r="indices">Marchés</a>
       <a href="#/etf" data-r="etf">ETF</a>
+      <a href="#/pgm" data-r="pgm">🔒 PGM</a>
       <a href="#/mes-valeurs" data-r="mes-valeurs">Mes valeurs</a>
       <a href="#/bilan" data-r="bilan">Bilan</a>
       <a href="#/apprendre" data-r="apprendre">Apprendre</a>
@@ -809,6 +820,80 @@
           (a ? '<div class="rTxt dimmer">Modèle : ' + Math.round((a.ev[a.plan.h] || {}).p * 100) + ' chances sur 100 à ' + esc(HL[a.plan.h]) + ' · ' + esc(lightOf(a.plan.action).t.toLowerCase()) + '</div>' : '') + '</a>';
       }).join("") + '</div>' +
       (s ? '<p class="note">🧪 <b>Honnêtement :</b> sur l\'historique des valeurs suivies, ce signal a été suivi d\'une hausse à 1 mois dans <b>' + f1(s.up21) + ' %</b> des cas (' + s.n + ' cas), contre <b>' + f1(s.baseUp21) + ' %</b> pour un jour pris au hasard ; gain moyen ' + sp(s.avg21, 1) + ' contre ' + sp(s.baseAvg21, 1) + '. ' + (s.up21 - s.baseUp21 >= 2 ? "Un petit avantage : arriver tôt paie un peu, mais un départ sur deux échoue." : "Pas d'avantage net : à utiliser comme liste de surveillance, pas comme ordre d'achat.") + ' Hors frais.</p>' : '');
+  }
+
+  // ---------- onglet PGM (fonds Credit Mutuel AM, donnees chiffrees) ----------
+  var PGM = null;
+  function b64(s) { var b = atob(s), u = new Uint8Array(b.length); for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; }
+  function pgmUnlock(code) {
+    return fetch("pgm.enc.json?t=" + Math.floor(Date.now() / 300000), { cache: "no-store" }).then(function (r) { if (!r.ok) throw new Error("absent"); return r.json(); }).then(function (e) {
+      var enc = new TextEncoder();
+      return crypto.subtle.importKey("raw", enc.encode(code), "PBKDF2", false, ["deriveKey"]).then(function (base) {
+        return crypto.subtle.deriveKey({ name: "PBKDF2", salt: b64(e.salt), iterations: e.it, hash: "SHA-256" }, base, { name: "AES-GCM", length: 256 }, false, ["decrypt"]);
+      }).then(function (key) {
+        return crypto.subtle.decrypt({ name: "AES-GCM", iv: b64(e.iv) }, key, b64(e.data));
+      }).then(function (buf) { return JSON.parse(new TextDecoder().decode(buf)); });
+    });
+  }
+  function pgmLock(msg) {
+    return '<div class="card pgmlock"><div class="plE">🔒</div><h1 class="fun" style="margin:6px 0">Espace PGM</h1><p class="sub" style="margin-bottom:14px">Analyse Quantum Algo des fonds Crédit Mutuel Asset Management (ex-CM-CIC) : obligations, actions, diversifiés, monétaires.</p>' +
+      '<form id="pgmf" autocomplete="off"><input id="pgmc" type="password" placeholder="Code d\'accès" aria-label="Code d\'accès" autofocus><button class="btn btn-main" type="submit">Entrer</button></form>' +
+      '<div id="pgmm" class="small" style="margin-top:10px;min-height:18px;color:var(--down)">' + (msg || "") + '</div>' +
+      '<p class="small dimmer" style="margin:12px 0 0">Les données de cet onglet sont chiffrées : sans le bon code, elles sont illisibles.</p></div>';
+  }
+  function bindPgm() {
+    var f = document.getElementById("pgmf"); if (!f) return;
+    f.onsubmit = function (ev) {
+      ev.preventDefault();
+      var c = document.getElementById("pgmc").value, m = document.getElementById("pgmm");
+      m.style.color = "var(--dim)"; m.textContent = "Ouverture…";
+      pgmUnlock(c).then(function (d) { PGM = d; render(); })
+        .catch(function (e) { m.style.color = "var(--down)"; m.textContent = e && e.message === "absent" ? "Données PGM pas encore publiées : elles arrivent avec la prochaine routine du matin." : "Code incorrect."; });
+    };
+  }
+  function pgmP(f) { return f.ev && f.plan ? (f.ev[f.plan.h] || {}).p : null; }
+  function pgmRow(f) {
+    var L = f.plan ? lightOf(f.plan.action) : { e: "⚪", t: "Analyse", s: "Historique trop court pour le modèle", c: "ln" }, p = pgmP(f), C = (PGM.cats || {})[f.k] || f.k;
+    return '<a class="prow" href="#/pgm/' + encodeURIComponent(f.isin) + '"><div class="prL"><span class="light ' + L.c + '">' + L.e + ' ' + esc(L.t) + '</span></div>' +
+      '<div class="grow"><div class="name">' + esc(f.n) + '</div><div class="small dimmer">' + esc(C) + ' · part ' + esc(f.part || "-") + ' · ' + esc(f.isin) + ' · risque ' + esc(f.sri) + '/7</div>' +
+      (p != null ? '<div style="margin-top:6px;max-width:320px">' + gauge(p, true) + '</div>' : '') + (f.t ? '<div style="margin-top:4px">' + timingChip(f.t, true) + '</div>' : '') + '</div>' +
+      (f.hist ? spark(f.hist, 70, 28, ok(f.perf.q) && f.perf.q >= 0 ? "#34D399" : "#FF6B5B") : '') +
+      '<div class="prP"><div><span class="dimmer">1 mois</span> <b class="' + cls(f.perf.m) + '">' + sp(f.perf.m, 1) + '</b></div><div><span class="dimmer">' + new Date().getFullYear() + '</span> <b class="' + cls(f.perf.y) + '">' + sp(f.perf.y, 1) + '</b></div><div><span class="dimmer">1 an</span> <b class="' + cls(f.perf.a) + '">' + sp(f.perf.a, 1) + '</b></div></div></a>';
+  }
+  function pagePgm(isin) {
+    if (!PGM) return pgmLock();
+    var F = PGM.funds || [], h = '';
+    var one = isin ? F.filter(function (f) { return f.isin === isin; })[0] : null;
+    if (one) {
+      var f = one, p = f.plan, L = p ? lightOf(p.action) : null;
+      h += '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" href="#/pgm" aria-label="Retour">←</a><div class="grow"><div style="font-size:23px;font-weight:700">' + esc(f.n) + '</div><div class="mono dimmer small">' + esc(f.isin) + ' · part ' + esc(f.part || "-") + ' · ' + esc((PGM.cats || {})[f.k] || f.k) + '</div></div></div>';
+      h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:32px;font-weight:700">' + f2(f.p) + ' <span class="muted" style="font-size:15px">' + esc(f.cur) + '</span></span><span class="mono ' + cls(f.perf.d) + '">' + sp(f.perf.d) + '</span><span class="small dimmer">valeur liquidative du ' + dfr(f.date) + '</span></div>';
+      h += '<div class="card"><div class="perfG">' + [["d", "Veille"], ["w", "1 sem."], ["m", "1 mois"], ["q", "3 mois"], ["y", "Depuis janv."], ["a", "1 an"]].map(function (k) { var v = f.perf[k[0]]; return '<div class="pg ' + cls(v) + 'b"><div class="pgL">' + k[1] + '</div><div class="pgV ' + cls(v) + '">' + sp(v, 1) + '</div></div>'; }).join("") + '</div>' +
+        (f.hist ? '<div style="margin-top:14px">' + spark(f.hist, 900, 120, ok(f.perf.q) && f.perf.q >= 0 ? "#34D399" : "#FF6B5B").replace('width="900"', 'width="100%" viewBox="0 0 900 120" preserveAspectRatio="none"') + '<div class="small dimmer">' + f.hist.length + ' dernières valeurs liquidatives</div></div>' : '') +
+        '<div class="kv" style="margin-top:10px"><span>Niveau de risque (SRI)</span><span>' + esc(f.sri) + ' / 7</span></div><div class="kv"><span>Volatilité sur 1 an</span><span>' + f1(f.vol) + ' %</span></div></div>';
+      if (p) {
+        h += '<div class="card qf ' + L.c + '" style="border-radius:24px"><div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px"><h2 style="margin:0;font-size:19px">🤔 Que faire ?</h2><span class="hzc">⏳ ' + esc(HL[p.h]) + '</span></div>' +
+          '<div class="tlight"><div class="tlamps"><i class="r' + (p.action === "EVITER" ? " on" : "") + '"></i><i class="o' + (/ATTENDRE/.test(p.action) ? " on" : "") + '"></i><i class="g' + (p.action === "ENTRER" ? " on" : "") + '"></i></div><div><div class="tlBig">' + L.e + ' ' + L.t + '</div><div class="tlSmall">' + esc(L.s) + '</div></div></div>' +
+          gauge(pgmP(f)) + (f.t ? '<div style="margin-top:8px">' + timingChip(f.t) + '</div>' : '') +
+          (ok(p.target) && ok(p.stop) && p.action !== "EVITER" && p.action !== "NEUTRE" ? '<div class="bubs">' + bubble("🚪", "Entrée", p.action === "ATTENDRE_CONFIRMATION" ? "&gt; " + f2(p.zoneLo) : f2(p.zoneLo) + "–" + f2(p.zoneHi), esc(f.cur), "bi") + bubble("🎯", "Objectif", f2(p.target), "+" + f1(p.gainPct) + " %", "bt") + bubble("🛑", "Stop", f2(p.stop), "−" + f1(p.riskPct) + " %", "bs") + '</div>' : '') +
+          (p.why && p.why.length ? '<div class="small muted" style="margin-top:10px;line-height:1.6">' + p.why.map(function (w) { return "• " + esc(w); }).join("<br>") + '</div>' : '') + '</div>';
+        h += '<div class="card"><div class="hz">' + HK.map(function (k) { var e = f.ev[k]; return '<div><div class="mono dimmer" style="font-size:10px">' + k + '</div><div style="font-size:17px;font-weight:800" class="' + (e.p >= 0.53 ? "up" : e.p <= 0.47 ? "down" : "flat") + '">' + Math.round(e.p * 100) + '%</div><div class="mono dimmer" style="font-size:10px">' + sp(e.e, 1) + '</div></div>'; }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">Chances sur 100 que la valeur liquidative soit plus haute à chaque horizon, et variation moyenne attendue.</p></div>';
+      } else h += '<div class="card empty">Historique trop court (' + f.len + ' valeurs) pour appliquer le modèle : seules les performances sont affichées.</div>';
+      if (f.k === "monetaire" || f.k === "obligations") h += '<p class="note">⚠️ Le modèle a été entraîné sur des actions. Sur un fonds ' + (f.k === "monetaire" ? "monétaire, qui monte presque tous les jours très doucement, ses signaux n'ont pas de sens : regarde surtout le rendement." : "obligataire, ses signaux sont indicatifs : ces fonds dépendent surtout des taux d'intérêt.") + '</p>';
+      return h + '<a class="chip" href="#/pgm" style="margin-top:14px">← Tous les fonds</a>';
+    }
+    var C = PGM.cats || {}, pk = st.pk || "all", ps = st.ps || "p";
+    h += '<h1 class="fun">🏦 PGM · Fonds Crédit Mutuel AM</h1><p class="sub">' + F.length + ' fonds analysés · valeurs liquidatives au ' + esc(PGM.dateLabel || "") + (PGM.missing && PGM.missing.length ? ' · ' + PGM.missing.length + ' fonds sans historique disponible' : '') + '</p>';
+    h += '<div class="chips catc">' + [["all", "Tous"]].concat(Object.keys(C).map(function (k) { return [k, C[k]]; })).map(function (c) {
+      var n = c[0] === "all" ? F.length : F.filter(function (f) { return f.k === c[0]; }).length;
+      return '<a class="chip' + (pk === c[0] ? " on" : "") + '" data-pk="' + c[0] + '">' + esc(c[1]) + ' <span class="cnt">' + n + '</span></a>';
+    }).join("") + '</div>';
+    h += '<div class="ptabs">' + [["p", "🔮 Chances du modèle"], ["m", "1 mois"], ["q", "3 mois"], ["y", "Depuis janv."], ["a", "1 an"]].map(function (k) { return '<a data-ps="' + k[0] + '" class="' + (ps === k[0] ? "on" : "") + '">' + k[1] + '</a>'; }).join("") + '</div>';
+    var key = function (f) { return ps === "p" ? (pgmP(f) != null ? pgmP(f) - (f.t && f.t.st === "tardif" ? 0.02 : 0) : -1) : (ok(f.perf[ps]) ? f.perf[ps] : -999); };
+    var list = F.filter(function (f) { return pk === "all" || f.k === pk; }).sort(function (a, b) { return key(b) - key(a); });
+    h += '<div class="card">' + (list.length ? list.map(pgmRow).join("") : '<div class="empty">Aucun fonds dans cette catégorie.</div>') + '</div>';
+    h += '<p class="note">Analyse statistique automatique (même modèle que pour les actions), pas un conseil personnalisé. Valeurs liquidatives Yahoo Finance, publiées avec un ou plusieurs jours de décalage. Les fonds monétaires et obligataires bougent peu : leurs signaux sont à lire avec prudence.</p>';
+    return h;
   }
 
   // ---------- pages ----------
@@ -1274,11 +1359,13 @@
     else if (r === "apprendre") html = pageLearn(parts);
     else if (r === "v") html = pageStock(decodeURIComponent(parts[1] || ""));
     else if (r === "indices") html = pageIndices(parts[1]);
+    else if (r === "pgm") html = pagePgm(parts[1] ? decodeURIComponent(parts[1]) : null);
     else if (r === "etf") html = pageEtf(parts[1] ? decodeURIComponent(parts[1]) : null);
     else if (r === "bilan") html = pageBilan();
     else if (r === "mes-valeurs") html = pageWatch();
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
     document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.<br><a href="#/conditions" style="text-decoration:underline">Conditions</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>';
+    if (r === "pgm") bindPgm();
     if (r === "today") { var qh = document.getElementById("qhome"); if (qh) qh.onclick = function () { flyQuanti(true); }; setTimeout(flyQuanti, 400); }
     var ro = document.getElementById("reopen"); if (ro) ro.onclick = function () { if (!document.getElementById("terms")) showTerms(); };
     var rv = document.getElementById("revoke"); if (rv) rv.onclick = function () { if (accepted()) { put("terms", ""); render(); showTerms(); } else showTerms(); };
@@ -1286,8 +1373,10 @@
     if (anchor && document.getElementById(anchor)) document.getElementById(anchor).scrollIntoView(); else window.scrollTo(0, 0);
   }
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-h],[data-tab],[data-cat],[data-ep],[data-ec]");
+    var t = e.target.closest("[data-h],[data-tab],[data-cat],[data-ep],[data-ec],[data-pk],[data-ps]");
     if (!t) return;
+    if (t.dataset.pk) st.pk = t.dataset.pk;
+    if (t.dataset.ps) st.ps = t.dataset.ps;
     if (t.dataset.ep) { st.ep = t.dataset.ep; put("ep", st.ep); }
     if (t.dataset.ec) { st.ec = t.dataset.ec; put("ec", st.ec); }
     if (t.dataset.h) { st.h = t.dataset.h; put("h", st.h); }

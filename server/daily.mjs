@@ -18,6 +18,7 @@ import { dayPlan } from "../src/quantum/core/daily.js";
 import { signalAge, radar } from "../src/quantum/core/timing.js";
 import { evaluate } from "../src/quantum/core/model.js";
 import { ETF_LIST, ETF_CATS } from "./lib/etfs.mjs";
+import { buildPgm, encryptJson } from "./lib/pgm.mjs";
 import { trainAll } from "../src/quantum/core/learn.js";
 import { INDEX_DEFS, INDEX_QUERY } from "../src/quantum/core/universe.js";
 import { FULL_COMPONENTS as COMPONENTS, FULL_NAMES as NEWS_NAMES } from "../src/quantum/core/universe-full.js";
@@ -403,6 +404,42 @@ try {
   });
   log("site genere dans docs/ (" + (SITE_URL || "adresse non configuree") + ")");
 } catch (e) { log("site : echec", e.message); }
+
+// ---------------------------------------------------------------------------
+// 6 bis. Onglet PGM (fonds Credit Mutuel AM) : publie chiffre avec le code du secret PGM_CODE
+// ---------------------------------------------------------------------------
+if (process.env.PGM_CODE) {
+  try {
+    const r2 = (v) => (v == null || !Number.isFinite(v) ? null : Math.round(v * 100) / 100);
+    const yS = new Date(new Date().getUTCFullYear(), 0, 1).getTime() / 1000;
+    const analyse = (c) => {
+      const C = c.close, i = C.length - 1;
+      let y = c.time.findIndex((t) => t >= yS); if (y < 1) y = 1;
+      const rets = []; for (let k = Math.max(1, i - 252); k <= i; k++) rets.push(Math.log(C[k] / C[k - 1]));
+      const mu = rets.reduce((a, b) => a + b, 0) / rets.length, sd = Math.sqrt(rets.reduce((a, b) => a + (b - mu) ** 2, 0) / rets.length);
+      const o = { p: r2(C[i]), date: new Date(c.time[i] * 1000).toISOString().slice(0, 10), len: C.length,
+        perf: { d: r2(pct(C[i], C[i - 1])), w: r2(pct(C[i], C[Math.max(0, i - 5)])), m: r2(pct(C[i], C[Math.max(0, i - 21)])), q: r2(pct(C[i], C[Math.max(0, i - 63)])), y: r2(pct(C[i], C[y - 1])), a: r2(pct(C[i], C[Math.max(0, i - 252)])) },
+        vol: r2(sd * Math.sqrt(252) * 100), hist: C.slice(-130).map((v) => +v.toPrecision(5)) };
+      if (C.length >= 260) {
+        const all = computeAll(c, null), sg = sigmaAt(C, i, 60);
+        const evals = evaluateAll(all, i, model, sg), plan = buildPlan(c, evals, sg);
+        o.ev = Object.fromEntries(HORIZON_KEYS.map((h) => [h, { p: +evals[h].pUp.toFixed(4), e: r2(evals[h].expPct) }]));
+        o.plan = { h: plan.horizon, action: plan.action, label: plan.actionLabel, start: plan.start || null, zoneLo: r2(plan.zoneLo), zoneHi: r2(plan.zoneHi),
+          stop: r2(plan.stop), target: r2(plan.target), gainPct: r2(plan.gainPct), riskPct: r2(plan.riskPct), why: plan.why || [],
+          valid: plan.validUntil ? new Date(plan.validUntil).toISOString().slice(0, 10) : null };
+        const t = plan.pUp >= 0.53 ? signalAge(all, c, i, plan.horizon, model, plan.expPct) : null;
+        if (t) o.t = { st: t.stage, g: t.gainPct, a: t.age };
+      }
+      return o;
+    };
+    let fetchFn = fetchCandles, resolveFn;
+    if (FAKE) { const { fakeUniverse } = await import("./lib/fake.mjs"); fetchFn = async (s) => fakeUniverse([s])[s]; resolveFn = async (isin) => isin; }
+    const pgm = await buildPgm({ fetchCandles: fetchFn, resolve: resolveFn, analyse, cache: {}, log });
+    pgm.date = iso; pgm.dateLabel = dateLabel; pgm.generatedAt = new Date().toISOString();
+    fs.writeFileSync(path.join(HERE, "..", "docs", "pgm.enc.json"), JSON.stringify(encryptJson(pgm, process.env.PGM_CODE)));
+    log("PGM : fichier chiffre ecrit (docs/pgm.enc.json)");
+  } catch (e) { log("PGM : echec", e.message); }
+} else log("PGM : secret PGM_CODE absent, onglet non mis a jour");
 
 // ---------------------------------------------------------------------------
 // 7. Newsletter

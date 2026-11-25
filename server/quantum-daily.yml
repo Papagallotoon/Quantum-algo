@@ -54,6 +54,7 @@ jobs:
           SUBSCRIBE_API: ${{ secrets.SUBSCRIBE_API }}
           SUBSCRIBE_TOKEN: ${{ secrets.SUBSCRIBE_TOKEN }}
           DRY_RUN: ${{ inputs.site_seulement && '1' || '' }}
+          PGM_CODE: ${{ secrets.PGM_CODE }}
         run: node daily.mjs
 
       - name: Publier le modele et le bilan (lus par l'app)
