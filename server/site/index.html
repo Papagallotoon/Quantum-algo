@@ -860,6 +860,67 @@
       (f.hist ? spark(f.hist, 70, 28, ok(f.perf.q) && f.perf.q >= 0 ? "#34D399" : "#FF6B5B") : '') +
       '<div class="prP"><div><span class="dimmer">1 mois</span> <b class="' + cls(f.perf.m) + '">' + sp(f.perf.m, 1) + '</b></div><div><span class="dimmer">' + new Date().getFullYear() + '</span> <b class="' + cls(f.perf.y) + '">' + sp(f.perf.y, 1) + '</b></div><div><span class="dimmer">1 an</span> <b class="' + cls(f.perf.a) + '">' + sp(f.perf.a, 1) + '</b></div></div></a>';
   }
+  var SECT = { realestate: "Immobilier", consumer_cyclical: "Consommation cyclique", basic_materials: "Matériaux", consumer_defensive: "Consommation de base", technology: "Technologie", communication_services: "Communication", financial_services: "Finance", utilities: "Services publics", industrials: "Industrie", energy: "Énergie", healthcare: "Santé" };
+  var RATE = { bb: "BB", aa: "AA", aaa: "AAA", a: "A", other: "Autres", b: "B", bbb: "BBB", below_b: "Sous B", us_government: "État US" };
+  function pbar(label, v, max, col) {
+    var w = max ? Math.max(1.5, Math.min(100, Math.abs(v) / max * 100)) : 0;
+    return '<div class="hb" style="cursor:default"><div class="hbL">' + label + '</div><div class="hbT"><i style="width:' + w + '%;background:' + (col || "var(--brand)") + '"></i></div><div class="hbV">' + (ok(v) ? f1(v) + " %" : "-") + '</div></div>';
+  }
+  function pgmTech(f) {
+    if (!f.tech) return '<div class="card empty">Historique trop court pour calculer les indicateurs techniques.</div>';
+    var v = f.votes || { buy: 0, neu: 0, sell: 0, directional: 1, info: 0 }, net = v.directional ? (v.buy - v.sell) / v.directional : 0;
+    var verdict = net > 0.25 ? ["🟢", "Plutôt acheteur", "up"] : net < -0.25 ? ["🔴", "Plutôt vendeur", "down"] : ["🟡", "Partagé", "flat"];
+    var find = function (re) { var r = f.tech.filter(function (x) { return re.test(x[0]); })[0]; return r; };
+    var sum = [];
+    var s200 = find(/200/), rsi = find(/^RSI( 14)?$/i), macd = find(/^MACD/i);
+    if (s200 && s200[3] != null) sum.push(s200[3] > 0 ? "📈 Le prix est au-dessus de sa moyenne 200 jours : tendance de fond haussière." : "📉 Le prix est sous sa moyenne 200 jours : tendance de fond baissière.");
+    if (rsi) sum.push("🌡️ " + esc(rsi[0]) + " à " + esc(rsi[2]) + (parseFloat(String(rsi[2]).replace(",", ".")) > 70 ? " : le fonds a beaucoup monté récemment (surachat)." : parseFloat(String(rsi[2]).replace(",", ".")) < 30 ? " : le fonds a beaucoup baissé récemment (survente)." : " : ni excès d'achat ni de vente."));
+    if (macd && macd[3] != null) sum.push(macd[3] > 0 ? "⚡ La dynamique de court terme (MACD) est positive." : "⚡ La dynamique de court terme (MACD) est négative.");
+    if (f.risk) sum.push("🏔️ À " + sp(f.risk.fromHi, 1) + " de son plus haut sur 1 an (" + f2(f.risk.hi52) + "), plus bas sur 1 an à " + f2(f.risk.lo52) + ".");
+    var h = '<div class="card"><div style="font-size:24px;font-weight:800" class="' + verdict[2] + '">' + verdict[0] + ' ' + verdict[1] + '</div><div class="small muted" style="margin:4px 0 10px">' + v.directional + ' indicateurs directionnels · ' + v.info + ' informatifs</div>' +
+      '<div style="display:flex;height:26px;border-radius:7px;overflow:hidden;gap:2px">' +
+      (v.buy ? '<div style="width:' + v.buy / v.directional * 100 + '%;background:#34D399;color:#07120c" class="mono small"><b style="padding:5px 8px;display:block">' + v.buy + '</b></div>' : '') +
+      (v.neu ? '<div style="width:' + v.neu / v.directional * 100 + '%;background:rgba(255,255,255,.13)" class="mono small"><b style="padding:5px 8px;display:block">' + v.neu + '</b></div>' : '') +
+      (v.sell ? '<div style="width:' + v.sell / v.directional * 100 + '%;background:rgba(255,107,91,.55);text-align:right" class="mono small"><b style="padding:5px 8px;display:block">' + v.sell + '</b></div>' : '') +
+      '</div><div class="mono dimmer" style="display:flex;justify-content:space-between;font-size:10px;margin-top:6px"><span>ACHAT</span><span>NEUTRE</span><span>VENTE</span></div>' +
+      (sum.length ? '<div style="margin-top:14px">' + sum.map(function (x) { return '<div style="padding:5px 0;font-size:14px;line-height:1.5">' + x + '</div>'; }).join("") + '</div>' : '') + '</div>';
+    if (f.fam && f.fam.length) h += '<div class="card"><h2>Poids de chaque famille dans le score</h2>' + f.fam.map(function (x) {
+      var pos = x[1] >= 0, w = Math.min(50, Math.abs(x[1]) / 2);
+      return '<div style="margin:9px 0"><div style="display:flex;justify-content:space-between;font-size:13px;margin-bottom:5px"><span>' + esc(x[0]) + '</span><span class="mono ' + (x[1] === 0 ? "flat" : pos ? "up" : "down") + '">' + (pos ? "+" : "") + x[1] + '</span></div><div class="bar2"><div style="position:absolute;top:0;bottom:0;left:' + (pos ? 50 : 50 - w) + '%;width:' + w + '%;background:' + (pos ? "#34D399" : "#FF6B5B") + ';border-radius:3px"></div></div></div>';
+    }).join("") + '<p class="small dimmer" style="margin:6px 0 0">Les indicateurs de volume ne s\'appliquent pas aux fonds (pas d\'échanges en Bourse).</p></div>';
+    var cats = ["Tous", "Tendance", "Momentum", "Volatilite", "Structure", "Chandeliers"];
+    h += '<div class="chips" style="margin:12px 0">' + cats.map(function (c) { return '<a class="chip' + (c === st.cat ? " on" : "") + '" data-cat="' + c + '">' + c + '</a>'; }).join("") + '</div>';
+    var rows = f.tech.filter(function (r) { return r[1] !== "Volume" && (st.cat === "Tous" || r[1] === st.cat); });
+    h += '<div class="card" style="padding:6px 10px"><table>' + rows.map(function (r) {
+      var s = r[3], lab = s == null ? "INFO" : s > 0 ? "ACHAT" : s < 0 ? "VENTE" : "NEUTRE", pc_ = s == null ? "p-flat" : s > 0 ? "p-buy" : s < 0 ? "p-avoid" : "p-flat";
+      return '<tr><td>' + esc(r[0]) + '<div class="mono dimmer" style="font-size:10px">' + esc(r[1]) + '</div></td><td class="r mono">' + esc(r[2]) + '</td><td class="r" style="width:86px"><span class="pill ' + pc_ + '">' + lab + '</span></td></tr>';
+    }).join("") + '</table></div>';
+    return h;
+  }
+  function pgmFond(f) {
+    var d = f.fund || {}, h = '', rk = f.risk || {};
+    var kvs = [["Catégorie", esc(d.category || ((PGM.cats || {})[f.k] || f.k))], ["Société de gestion", esc(d.family || "Crédit Mutuel Asset Management")], ["Part suivie", esc((f.part || "-") + " · " + f.isin)],
+      ["Niveau de risque (SRI)", esc(f.sri) + " / 7"], ["Frais courants (TER)", ok(d.ter) ? f2(d.ter) + " % / an" : "-"], ["Note Morningstar", d.msRating ? "★★★★★".slice(0, d.msRating) + '<span class="dimmer">' + "★★★★★".slice(0, 5 - d.msRating) + '</span>' : "-"],
+      ["Actif du fonds", ok(d.assets) ? (d.assets >= 1e9 ? f1(d.assets / 1e9) + " Md" : f1(d.assets / 1e6) + " M") + " " + esc(f.cur) : "-"], ["Rendement distribué", ok(d.yield) ? f2(d.yield) + " %" : "-"],
+      ["Création", d.inception ? new Date(d.inception * 1000).toLocaleDateString("fr-FR") : "-"]];
+    h += '<div class="grid2"><div class="card"><h2>🪪 Carte d\'identité</h2>' + kvs.map(function (x) { return '<div class="kv"><span>' + x[0] + '</span><span>' + x[1] + '</span></div>'; }).join("") + '</div>';
+    var rs = [["Volatilité 1 an", f1(f.vol) + " %"], ["Pire baisse sur 1 an", sp(rk.dd1, 1)], ["Pire baisse sur l'historique (3 ans max)", sp(rk.dd3, 1)], ["Ratio de Sharpe 1 an", ok(rk.sharpe) ? f2(rk.sharpe) : "-"],
+      ["Meilleur mois · pire mois", sp(rk.bestM, 1) + " · " + sp(rk.worstM, 1)], ["Mois en hausse", ok(rk.upM) ? rk.upM + " %" : "-"]];
+    if (d.risk3) rs.push(["Bêta · alpha (3 ans, Morningstar)", (ok(d.risk3.beta) ? f2(d.risk3.beta) : "-") + " · " + (ok(d.risk3.alpha) ? f2(d.risk3.alpha) : "-")]);
+    h += '<div class="card"><h2>🎢 Risque et régularité</h2>' + rs.map(function (x) { return '<div class="kv"><span>' + x[0] + '</span><span>' + x[1] + '</span></div>'; }).join("") + '</div></div>';
+    var al = d.alloc || {};
+    if ([al.actions, al.obligations, al.cash, al.autres].some(ok)) h += '<div class="card"><h2>🥧 Ce que contient le fonds</h2>' + pbar("📈 Actions", al.actions, 100, "#8B93FF") + pbar("🏦 Obligations", al.obligations, 100, "#6EC6FF") + pbar("💶 Liquidités", al.cash, 100, "#34D399") + pbar("📦 Autres", al.autres, 100, "#F5B740") + '</div>';
+    var g2 = '';
+    if (d.sectors && d.sectors.length) { var ms = Math.max.apply(null, d.sectors.map(function (x) { return x[1]; })); g2 += '<div class="card"><h2>🏭 Secteurs (partie actions)</h2>' + d.sectors.map(function (x) { return pbar(esc(SECT[x[0]] || x[0]), x[1], ms); }).join("") + '</div>'; }
+    if (d.holdings && d.holdings.length) g2 += '<div class="card"><h2>🔟 Principales lignes</h2>' + d.holdings.map(function (x, i) { return '<div class="kv"><span>' + (i + 1) + '. ' + esc(x[0]) + '</span><span>' + (ok(x[1]) ? f1(x[1]) + " %" : "-") + '</span></div>'; }).join("") + '</div>';
+    if (d.ratings && d.ratings.length) { var mr = Math.max.apply(null, d.ratings.map(function (x) { return x[1]; })); g2 += '<div class="card"><h2>🏅 Qualité des obligations (notation)</h2>' + d.ratings.map(function (x) { return pbar(esc(RATE[x[0]] || x[0].toUpperCase()), x[1], mr, "#6EC6FF"); }).join("") + (d.bonds && (ok(d.bonds.duration) || ok(d.bonds.maturity)) ? '<div class="kv" style="margin-top:8px"><span>Sensibilité aux taux (duration)</span><span>' + (ok(d.bonds.duration) ? f1(d.bonds.duration) + " ans" : "-") + '</span></div><div class="kv"><span>Échéance moyenne</span><span>' + (ok(d.bonds.maturity) ? f1(d.bonds.maturity) + " ans" : "-") + '</span></div>' : '') + '</div>'; }
+    if (g2) h += '<div class="grid2">' + g2 + '</div>';
+    var cal = (f.cal && f.cal.length ? f.cal : (d.years || []).slice().reverse());
+    if (cal.length) { var mc = Math.max.apply(null, cal.map(function (x) { return Math.abs(x[1]); }).concat([0.1])); h += '<div class="card"><h2>📅 Performance par année</h2>' + cal.map(function (x) { return hbar(x[1], mc, "#/pgm/" + encodeURIComponent(f.isin), String(x[0]) + (String(x[0]) == String(new Date().getFullYear()) ? " (en cours)" : "")); }).join("") + '</div>'; }
+    if (!f.fund) h += '<p class="note">Les données de composition (allocation, secteurs, lignes, frais) arrivent avec la prochaine routine du matin, quand Yahoo Finance les fournit pour ce fonds.</p>';
+    return h;
+  }
+
   function pagePgm(isin) {
     if (!PGM) return pgmLock();
     var F = PGM.funds || [], h = '';
@@ -868,6 +929,10 @@
       var f = one, p = f.plan, L = p ? lightOf(p.action) : null;
       h += '<div style="display:flex;align-items:center;margin-top:20px"><a class="back" href="#/pgm" aria-label="Retour">←</a><div class="grow"><div style="font-size:23px;font-weight:700">' + esc(f.n) + '</div><div class="mono dimmer small">' + esc(f.isin) + ' · part ' + esc(f.part || "-") + ' · ' + esc((PGM.cats || {})[f.k] || f.k) + '</div></div></div>';
       h += '<div style="display:flex;align-items:baseline;gap:12px;margin-top:10px"><span class="mono" style="font-size:32px;font-weight:700">' + f2(f.p) + ' <span class="muted" style="font-size:15px">' + esc(f.cur) + '</span></span><span class="mono ' + cls(f.perf.d) + '">' + sp(f.perf.d) + '</span><span class="small dimmer">valeur liquidative du ' + dfr(f.date) + '</span></div>';
+      var pt = st.pt || "est";
+      h += '<div class="tabs">' + [["est", "Estimation"], ["tech", "Technique"], ["fond", "Fondamental"]].map(function (x) { return '<a data-pt="' + x[0] + '" class="' + (pt === x[0] ? "on" : "") + '">' + x[1] + '</a>'; }).join("") + '</div>';
+      if (pt === "tech") return h + pgmTech(f) + '<a class="chip" href="#/pgm" style="margin-top:14px">← Tous les fonds</a>';
+      if (pt === "fond") return h + pgmFond(f) + '<a class="chip" href="#/pgm" style="margin-top:14px">← Tous les fonds</a>';
       h += '<div class="card"><div class="perfG">' + [["d", "Veille"], ["w", "1 sem."], ["m", "1 mois"], ["q", "3 mois"], ["y", "Depuis janv."], ["a", "1 an"]].map(function (k) { var v = f.perf[k[0]]; return '<div class="pg ' + cls(v) + 'b"><div class="pgL">' + k[1] + '</div><div class="pgV ' + cls(v) + '">' + sp(v, 1) + '</div></div>'; }).join("") + '</div>' +
         (f.hist ? '<div style="margin-top:14px">' + spark(f.hist, 900, 120, ok(f.perf.q) && f.perf.q >= 0 ? "#34D399" : "#FF6B5B").replace('width="900"', 'width="100%" viewBox="0 0 900 120" preserveAspectRatio="none"') + '<div class="small dimmer">' + f.hist.length + ' dernières valeurs liquidatives</div></div>' : '') +
         '<div class="kv" style="margin-top:10px"><span>Niveau de risque (SRI)</span><span>' + esc(f.sri) + ' / 7</span></div><div class="kv"><span>Volatilité sur 1 an</span><span>' + f1(f.vol) + ' %</span></div></div>';
@@ -1373,9 +1438,10 @@
     if (anchor && document.getElementById(anchor)) document.getElementById(anchor).scrollIntoView(); else window.scrollTo(0, 0);
   }
   document.addEventListener("click", function (e) {
-    var t = e.target.closest("[data-h],[data-tab],[data-cat],[data-ep],[data-ec],[data-pk],[data-ps]");
+    var t = e.target.closest("[data-h],[data-tab],[data-cat],[data-ep],[data-ec],[data-pk],[data-ps],[data-pt]");
     if (!t) return;
     if (t.dataset.pk) st.pk = t.dataset.pk;
+    if (t.dataset.pt) st.pt = t.dataset.pt;
     if (t.dataset.ps) st.ps = t.dataset.ps;
     if (t.dataset.ep) { st.ep = t.dataset.ep; put("ep", st.ep); }
     if (t.dataset.ec) { st.ec = t.dataset.ec; put("ec", st.ec); }
@@ -1384,7 +1450,7 @@
     if (t.dataset.cat) st.cat = t.dataset.cat;
     var y = window.scrollY; render(); window.scrollTo(0, y);
   });
-  window.addEventListener("hashchange", function () { st.tab = "est"; render(); });
+  window.addEventListener("hashchange", function () { st.tab = "est"; st.pt = "est"; render(); });
 
   // recherche
   var q = document.getElementById("q"), res = document.getElementById("res");

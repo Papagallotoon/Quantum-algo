@@ -134,7 +134,7 @@ export async function fetchAgenda(day = parisDay()) {
 // ---------------------------------------------------------------------------
 // Donnees de fond Yahoo (necessite un "crumb", comme le site Yahoo lui-meme)
 // ---------------------------------------------------------------------------
-async function yahooCrumb() {
+export async function yahooCrumb() {
   const r1 = await fetch("https://fc.yahoo.com", { headers: { "User-Agent": UA }, redirect: "manual" }).catch(() => null);
   const cookies = r1 && r1.headers.getSetCookie ? r1.headers.getSetCookie() : [];
   const cookie = cookies.map((c) => c.split(";")[0]).join("; ");
@@ -238,4 +238,43 @@ export function dedupeNews(list) {
     seen.add(k);
     return true;
   });
+}
+
+// Fiche "fondamentale" d'un fonds (Yahoo quoteSummary) : frais, allocation, secteurs, principales lignes,
+// statistiques obligataires, notes Morningstar, performances annuelles. Tout est facultatif.
+export async function fetchFundDetails(symbols) {
+  const out = {};
+  let auth;
+  try { auth = await yahooCrumb(); } catch (e) { return { __error: e.message }; }
+  const raw = (x) => (x && typeof x === "object" && "raw" in x ? x.raw : x ?? null);
+  const pc = (x) => { const v = raw(x); return v == null || !isFinite(v) ? null : Math.round(v * 10000) / 100; };
+  const modules = "fundProfile,topHoldings,fundPerformance,defaultKeyStatistics,summaryDetail,price";
+  for (const sym of symbols) {
+    try {
+      const url = `https://query2.finance.yahoo.com/v10/finance/quoteSummary/${encodeURIComponent(sym)}?modules=${modules}&crumb=${encodeURIComponent(auth.crumb)}`;
+      const j = await getJson(url, { Cookie: auth.cookie });
+      const r = j?.quoteSummary?.result?.[0];
+      if (!r) continue;
+      const fp = r.fundProfile || {}, th = r.topHoldings || {}, perf = r.fundPerformance || {}, ks = r.defaultKeyStatistics || {}, sd = r.summaryDetail || {};
+      const fees = fp.feesExpensesInvestment || {};
+      const risk3 = (perf.riskOverviewStatistics?.riskStatistics || []).find((x) => x.year === "3y") || null;
+      const o = {
+        family: fp.family || null, category: fp.categoryName || null, legal: fp.legalType || null,
+        ter: pc(fees.annualReportExpenseRatio), mgmt: pc(fees.annualHoldingsTurnover) != null ? null : null,
+        turnover: pc(fees.annualHoldingsTurnover), msRating: raw(ks.morningStarOverallRating), msRisk: raw(ks.morningStarRiskRating),
+        assets: raw(ks.totalAssets) ?? raw(sd.totalAssets), yield: pc(ks.yield ?? sd.yield), inception: raw(ks.fundInceptionDate),
+        alloc: { actions: pc(th.stockPosition), obligations: pc(th.bondPosition), cash: pc(th.cashPosition), autres: pc(th.otherPosition) },
+        sectors: (th.sectorWeightings || []).map((x) => { const k = Object.keys(x)[0]; return [k, pc(x[k])]; }).filter((x) => x[1] > 0).sort((a, b) => b[1] - a[1]).slice(0, 8),
+        holdings: (th.holdings || []).slice(0, 10).map((h) => [h.holdingName || h.symbol, pc(h.holdingPercent)]),
+        bonds: th.bondHoldings ? { duration: raw(th.bondHoldings.duration), maturity: raw(th.bondHoldings.maturity), pb: null } : null,
+        ratings: (th.bondRatings || []).map((x) => { const k = Object.keys(x)[0]; return [k, pc(x[k])]; }).filter((x) => x[1] > 0),
+        years: (perf.annualTotalReturns?.returns || []).slice(0, 6).map((x) => [x.year, pc(x.annualValue)]).filter((x) => x[1] != null),
+        risk3: risk3 ? { alpha: raw(risk3.alpha), beta: raw(risk3.beta), sharpe: raw(risk3.sharpeRatio), sd: raw(risk3.stdDev), r2: raw(risk3.rSquared) } : null,
+      };
+      delete o.mgmt;
+      out[sym] = o;
+    } catch (e) { /* fonds suivant */ }
+    await sleep(250);
+  }
+  return out;
 }

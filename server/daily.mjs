@@ -19,6 +19,9 @@ import { signalAge, radar } from "../src/quantum/core/timing.js";
 import { evaluate } from "../src/quantum/core/model.js";
 import { ETF_LIST, ETF_CATS } from "./lib/etfs.mjs";
 import { buildPgm, encryptJson } from "./lib/pgm.mjs";
+import { rowsAt } from "../src/quantum/core/signals.js";
+import { votes as votesOf, familyContrib } from "../src/quantum/core/model.js";
+import { fetchFundDetails } from "./lib/extras.mjs";
 import { trainAll } from "../src/quantum/core/learn.js";
 import { INDEX_DEFS, INDEX_QUERY } from "../src/quantum/core/universe.js";
 import { FULL_COMPONENTS as COMPONENTS, FULL_NAMES as NEWS_NAMES } from "../src/quantum/core/universe-full.js";
@@ -420,9 +423,22 @@ if (process.env.PGM_CODE) {
       const o = { p: r2(C[i]), date: new Date(c.time[i] * 1000).toISOString().slice(0, 10), len: C.length,
         perf: { d: r2(pct(C[i], C[i - 1])), w: r2(pct(C[i], C[Math.max(0, i - 5)])), m: r2(pct(C[i], C[Math.max(0, i - 21)])), q: r2(pct(C[i], C[Math.max(0, i - 63)])), y: r2(pct(C[i], C[y - 1])), a: r2(pct(C[i], C[Math.max(0, i - 252)])) },
         vol: r2(sd * Math.sqrt(252) * 100), hist: C.slice(-130).map((v) => +v.toPrecision(5)) };
+      // risque et regularite calcules sur les cours
+      const dd = (from) => { let pk = C[from], m = 0; for (let k = from; k <= i; k++) { pk = Math.max(pk, C[k]); m = Math.min(m, C[k] / pk - 1); } return r2(m * 100); };
+      const hi52 = Math.max(...C.slice(Math.max(0, i - 251))), lo52 = Math.min(...C.slice(Math.max(0, i - 251)));
+      const months = []; for (let k = i; k - 21 >= 0 && months.length < 36; k -= 21) months.push((C[k] / C[k - 21] - 1) * 100);
+      const yrs = {}; c.time.forEach((t, k) => { yrs[new Date(t * 1000).getUTCFullYear()] = k; });
+      const yk = Object.keys(yrs).map(Number).sort();
+      o.risk = { dd1: dd(Math.max(0, i - 251)), dd3: dd(0), sharpe: sd ? r2((mu * 252) / (sd * Math.sqrt(252))) : null,
+        hi52: r2(hi52), lo52: r2(lo52), fromHi: r2(pct(C[i], hi52)), bestM: months.length ? r2(Math.max(...months)) : null, worstM: months.length ? r2(Math.min(...months)) : null,
+        upM: months.length ? Math.round(months.filter((x) => x > 0).length / months.length * 100) : null };
+      o.cal = yk.slice(1).map((y) => [y, r2(pct(C[yrs[y]], C[yrs[y - 1]]))]).filter((x) => x[1] != null);
       if (C.length >= 260) {
         const all = computeAll(c, null), sg = sigmaAt(C, i, 60);
         const evals = evaluateAll(all, i, model, sg), plan = buildPlan(c, evals, sg);
+        o.tech = rowsAt(all, i, c.currency || "EUR").map((x) => [x.name, x.cat, x.val, x.sig]);
+        o.votes = votesOf(all, i);
+        o.fam = familyContrib(all, i, model.horizons[plan.horizon] || {});
         o.ev = Object.fromEntries(HORIZON_KEYS.map((h) => [h, { p: +evals[h].pUp.toFixed(4), e: r2(evals[h].expPct) }]));
         o.plan = { h: plan.horizon, action: plan.action, label: plan.actionLabel, start: plan.start || null, zoneLo: r2(plan.zoneLo), zoneHi: r2(plan.zoneHi),
           stop: r2(plan.stop), target: r2(plan.target), gainPct: r2(plan.gainPct), riskPct: r2(plan.riskPct), why: plan.why || [],
@@ -435,6 +451,11 @@ if (process.env.PGM_CODE) {
     let fetchFn = fetchCandles, resolveFn;
     if (FAKE) { const { fakeUniverse } = await import("./lib/fake.mjs"); fetchFn = async (s) => fakeUniverse([s])[s]; resolveFn = async (isin) => isin; }
     const pgm = await buildPgm({ fetchCandles: fetchFn, resolve: resolveFn, analyse, cache: {}, log });
+    if (!FAKE) {
+      const fd = await fetchFundDetails(pgm.funds.map((f) => f.sym));
+      let nfd = 0; for (const f of pgm.funds) if (fd[f.sym]) { f.fund = fd[f.sym]; nfd++; }
+      log(`PGM : fiches fondamentales ${nfd} sur ${pgm.funds.length}` + (fd.__error ? ` (${fd.__error})` : ""));
+    }
     pgm.date = iso; pgm.dateLabel = dateLabel; pgm.generatedAt = new Date().toISOString();
     fs.writeFileSync(path.join(HERE, "..", "docs", "pgm.enc.json"), JSON.stringify(encryptJson(pgm, process.env.PGM_CODE)));
     log("PGM : fichier chiffre ecrit (docs/pgm.enc.json)");
