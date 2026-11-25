@@ -1,9 +1,9 @@
 *Quantum Algo – mercredi 25 novembre 2026*
 
-• CAC 40 à 8 040 points : −0,1 % à la dernière séance, +2,5 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 7 981 points : −0,7 % à la dernière séance, +1,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • 5 annonce(s) à fort impact aujourd'hui, la première à 01:30 (Inflation (indice des prix à la consommation) (sur un mois), Australie) : volatilité possible autour de ces horaires.
 • Résultats aujourd'hui : Remy Cointreau.
-• Les indices penchent légèrement à la hausse à 1 mois (3 sur 7).
+• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Agenda (fort impact)*
@@ -19,25 +19,25 @@
 jeu. 26/11 14:00 🇺🇸 Jour férié (marché fermé ou réduit)
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,2 %
-  entrée 237,70-240,12, stop 213,47, objectif 277,79, revoir le 25/02
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
+  entrée 228,40-230,99, stop 202,53, objectif 268,09, revoir le 01/03
   ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,2 %
-  entrée 54,72-55,38, stop 48,08, objectif 64,67, revoir le 25/02
-• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,9 %
-  entrée 13,50-13,58, stop 12,64, objectif 15,60, revoir le 25/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
+  entrée 76,46-77,61, stop 72,34, objectif 84,69, revoir le 22/02
   ⚠ résultats pendant la position
-• Credit Agricole – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 15,48-15,57, stop 14,61, objectif 16,83, revoir le 25/02
+• BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,6 %
+  entrée 90,83-91,52, stop 83,98, objectif 101,11, revoir le 01/03
   ⚠ résultats pendant la position
-• Dassault Systemes – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
-  entrée 21,76-22,29, stop 19,85, objectif 25,58, revoir le 18/02
+• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 187,26-191,10, stop 173,53, objectif 214,70, revoir le 22/02
   ⚠ résultats pendant la position
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
+  entrée 51,94-52,64, stop 44,96, objectif 62,40, revoir le 01/03
 
 *À lire*
-• Pourquoi la tokenisation crypto explose-t-elle à Wall Street alors que la demande d’ETF Bitcoin recule ? (BeInCrypto)
-• SANOFI Cours Action SAN, Cotation Bourse Euronext Paris (Boursorama)
-• VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris (Boursorama)
+• Les bourses en direct | L'Europe termine dans le rouge, le Bel 20 lâche près de 1%, Wall Street à nouveau plombée par la tech (L'Echo)
+• CAC40 : le recul de Wall Street fait basculer Paris dans le rouge (Le Revenu)
+• Wall Street : le Nasdaq chute de 4,2 %, les tarifs inquiètent (Le Revenu)
 
 *🎓 Question du jour* : Trois longues bougies vertes consécutives qui clôturent de plus en plus haut s'appellent…
 A. Trois corbeaux noirs
