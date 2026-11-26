@@ -3,221 +3,100 @@
  "dateLabel": "jeudi 26 novembre 2026",
  "picks": [
   {
-   "sym": "SU.PA",
-   "name": "Schneider Electric",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5571738365229547,
-   "expPct": 0.7685227360259228,
-   "start": "Acheter si le cours depasse 237,25 en seance (plus haut d'hier)",
-   "zoneLo": 237.25,
-   "zoneHi": 239.73881148274066,
-   "stop": 212.36188517259336,
-   "target": 277.18561850402244,
-   "rr": 1.6046060049532391,
-   "pTarget": 0.3495,
-   "holdDays": 63,
-   "reviewDate": "2027-02-26T08:00:00.000Z",
-   "validUntil": "2026-12-01T08:00:00.000Z",
-   "cur": "EUR",
-   "expectancy": 0.08484781680560116,
-   "price": 226.10000610351562,
-   "chg": -4.133983357083604,
-   "sizePct": 9.53266254375931,
-   "riskPct": 10.490248610076561,
-   "gainPct": 16.83271591318122,
-   "perf": {
-    "w1": -4.4378697080025065,
-    "m1": -4.07297028808814,
-    "m3": -24.012765794219103,
-    "ytd": -3.7462699112911557
-   },
-   "support": 223.4499969482422,
-   "resistance": 249.5500030517578,
-   "sma50": 256.8640005493164,
-   "sma200": 268.00750038146975,
-   "rsi": 38.039177195158224,
-   "vol": 38.382224491664935,
-   "rs63": -20.65478208921695,
-   "pros": [
-    "Negative Volume Index",
-    "ADX (14) directionnel",
-    "Force relative 3 mois vs indice (%)"
-   ],
-   "cons": [
-    "Croisement SMA 50 / 200",
-    "Position dans le range 52 sem. (%)"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,77 %."
-   ],
-   "day": {
-    "ref": {
-     "high": 237.25,
-     "low": 226.1,
-     "close": 226.1
-    },
-    "pivot": 229.82,
-    "r1": 233.53,
-    "r2": 240.97,
-    "s1": 222.38,
-    "s2": 218.67,
-    "atr": 8.3,
-    "range": {
-     "lo": 219.88,
-     "hi": 232.32
-    },
-    "up": {
-     "trigger": 233.53,
-     "stop": 229.82,
-     "target": 240.97,
-     "text": "Si le cours dépasse 233,53 en séance : achat possible, stop 229,82, objectif 240,97. Contre la tendance de fond : taille réduite."
-    },
-    "down": {
-     "trigger": 226.1,
-     "stop": 229.82,
-     "target": 218.67,
-     "text": "S'il passe sous 226,10 : pas d'achat, et sortie si tu détiens (objectif bas 218,67, invalidé au-dessus de 229,82)."
-    },
-    "trendUp": false,
-    "state": null,
-    "now": null,
-    "alerts": [],
-    "flat": "Entre 226,10 et 233,53 : rien à faire, c'est du bruit."
-   },
-   "timing": {
-    "age": 60,
-    "since": 1788246000,
-    "gainPct": -21.55,
-    "stage": "frais",
-    "factor": 1
-   },
-   "fund": {
-    "pe": 24.959677,
-    "fpe": 17.20373,
-    "yield": 1.86,
-    "rating": "1.5 - Buy",
-    "target": null,
-    "hi52": 312.3,
-    "lo52": 215.5
-   },
-   "earningsWarning": "Résultats prévus le 18/02/2027 (date estimée) : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Europlasma achève le regroupement de ses actions",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPSTUzbDBkZl9EY3Ytb3Q1bThsamJBaWV3V1MxNDRVV0pZdkVQSFI3MkI1R01wSThZS3VQVk0xNml4YmxCV2UyMi1kVl9BTWl5bXloMHFfNXhSR0JxZC1DdGFyb002NnlJRWFmek5wLTdUT3E4bDd3emNPVTdUUURvNV92bGpZemNFOHRYUUh5TGRVLXBXUkFlalpNMWNLT0pud3g1dDlsZllObzBNRlE?oc=5",
-     "source": "Zonebourse",
-     "time": 1795673533000,
-     "tone": "neutre"
-    },
-    {
-     "title": "LEGRAND Cours Action LR, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ad1dZVGJtUmR1Q0NOSEl4dHY3akowT25ncm1LcVJEVEVZSGJZRXlVS09Wc1FGMC1rSG9zZlNHTEN5M1c0NnE0cVpWeWhSQUJH?oc=5",
-     "source": "Boursorama",
-     "time": 1795671036000,
-     "tone": "neutre"
-    }
-   ],
-   "ctx": null,
-   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 237,25 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
-  },
-  {
    "sym": "TTE.PA",
    "name": "TotalEnergies",
    "h": "3M",
    "action": "ENTRER",
    "actionLabel": "Entrer",
-   "pUp": 0.5571738365229547,
-   "expPct": 1.5290189471866666,
+   "pUp": 0.55505091786793,
+   "expPct": 0.9127527321473705,
    "start": "Des la prochaine seance",
-   "zoneLo": 76.83538557510786,
-   "zoneHi": 78.01784619720294,
-   "stop": 72.61231192476826,
-   "target": 85.47169214496185,
-   "rr": 1.5375238678664571,
-   "pTarget": 0.339,
+   "zoneLo": 77.54665936135237,
+   "zoneHi": 78.68533710995123,
+   "stop": 73.4799531163564,
+   "target": 85.72277164015874,
+   "rr": 1.508749871567228,
+   "pTarget": 0.3475,
    "holdDays": 63,
-   "reviewDate": "2027-02-19T08:00:00.000Z",
-   "validUntil": "2026-11-26T08:00:00.000Z",
+   "reviewDate": "2027-02-23T08:00:00.000Z",
+   "validUntil": "2026-11-30T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.567780134664948,
-   "price": 77.68000030517578,
-   "chg": 0.24519608548743133,
-   "sizePct": 15.328487956264029,
-   "riskPct": 6.523800670054657,
-   "gainPct": 10.030499239412222,
+   "expectancy": 0.17612240504753124,
+   "price": 78.36000061035156,
+   "chg": 1.39751791940248,
+   "sizePct": 16.057220899340127,
+   "riskPct": 6.227727738621913,
+   "gainPct": 9.396083425801475,
    "perf": {
-    "w1": -5.245185259429652,
-    "m1": -7.3473238332322,
-    "m3": 4.732374575816145,
-    "ytd": 39.737363000455986
+    "w1": -1.0106152283324676,
+    "m1": -6.267940142835771,
+    "m3": 3.7468580389152573,
+    "ytd": 40.96060513628845
    },
    "support": 76.8499984741211,
    "resistance": 85.94000244140625,
-   "sma50": 79.82219985961915,
-   "sma200": 75.71024978637695,
-   "rsi": 39.66587721595623,
-   "vol": 22.193244160271323,
-   "rs63": 8.0903582808183,
+   "sma50": 79.7417999267578,
+   "sma200": 75.84574977874756,
+   "rsi": 43.828869400005395,
+   "vol": 22.609961191786933,
+   "rs63": 6.455596003100272,
    "pros": [
     "Croisement SMA 50 / 200",
     "Negative Volume Index",
     "SMA 200"
    ],
    "cons": [
-    "Force relative 3 mois vs indice (%)",
-    "Ease of Movement"
+    "Chaikin Money Flow",
+    "Force relative 3 mois vs indice (%)"
    ],
    "why": [
     "Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +1,53 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,91 %."
    ],
    "day": {
     "ref": {
-     "high": 78.24,
-     "low": 76.85,
-     "close": 77.68
+     "high": 78.65,
+     "low": 77.92,
+     "close": 78.36
     },
-    "pivot": 77.59,
-    "r1": 78.33,
-    "r2": 78.98,
-    "s1": 76.94,
-    "s2": 76.2,
-    "atr": 1.69,
+    "pivot": 78.31,
+    "r1": 78.7,
+    "r2": 79.04,
+    "s1": 77.97,
+    "s2": 77.58,
+    "atr": 1.63,
     "range": {
-     "lo": 76.41,
-     "hi": 78.95
+     "lo": 77.14,
+     "hi": 79.58
     },
     "up": {
-     "trigger": 78.24,
-     "stop": 77.59,
-     "target": 79.21,
-     "text": "Si le cours dépasse 78,24 en séance : achat possible, stop 77,59, objectif 79,21. Contre la tendance de fond : taille réduite."
+     "trigger": 78.65,
+     "stop": 78.31,
+     "target": 79.16,
+     "text": "Si le cours dépasse 78,65 en séance : achat possible, stop 78,31, objectif 79,16. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 76.94,
-     "stop": 77.59,
-     "target": 75.97,
-     "text": "S'il passe sous 76,94 : pas d'achat, et sortie si tu détiens (objectif bas 75,97, invalidé au-dessus de 77,59)."
+     "trigger": 77.97,
+     "stop": 78.31,
+     "target": 77.46,
+     "text": "S'il passe sous 77,97 : pas d'achat, et sortie si tu détiens (objectif bas 77,46, invalidé au-dessus de 78,31)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 76,94 et 78,24 : rien à faire, c'est du bruit."
+    "flat": "Entre 77,97 et 78,65 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
-    "since": 1788246000,
-    "gainPct": 0.09,
+    "since": 1788418800,
+    "gainPct": 0.44,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 8.722348,
-    "fpe": 7.369865,
+    "pe": 9.0904875,
+    "fpe": 7.4728603,
     "yield": 4.63,
     "rating": "1.8 - Buy",
     "target": null,
@@ -227,26 +106,26 @@
    "earningsWarning": "Résultats prévus le 10/02/2027 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "Top 25 actions en France : NVIDIA n°1, mais Toulouse mise sur Airbus",
-     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQX3BGOG1TR0RCZkxZNXhkam9kTUxLdTlzNlFNeWU3NHZ3SENFN2FqSWNZN1pqejcySHNndUdJUy1TMDZkRGNLdnA1RnJQRFBfYjhBOEVqZDBnRHdwdkEzci16NGNWUW85NG9Rck1obzVQV2lZVVI4SlN2dGFQczNyWUx2Vk5kU185SlYtaUJR?oc=5",
-     "source": "Finyear",
-     "time": 1795644794000,
+     "title": "Bourse. Pourquoi Laprophan a raté ses débuts - Médias24 - Numéro un de l'information économique marocaine",
+     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxObTdXaDFMU0UzSWFEc0RoZjUzS0M3d2o3ejRqb0NhN1o5NEszWFVSV0dDOHE3SlZpTWlsZUo0SXdTNVdja3NCeEFDd1hrNFJTazBTS0psUUZPX2lUQ0ZZRzlYNXItTllTMmpjT0dTOHJKV2VnTmxjMEs3enZCRXlaNlJHSUFOMllKZHprQw?oc=5",
+     "source": "Medias24",
+     "time": 1795705860000,
      "tone": "neutre"
     },
     {
-     "title": "TotalEnergies perd 0,51%",
-     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPckpUcVg3cHdobDBpNmREa2gtaGdNRGhJd3BzRHQ5T0txT094aE5iTWN4dExQSF9nQkRvU2JPNkNNNUMzZGlQbDNzMkRNZVE0SS1yblg5czltcExKSHJHRFF2ZF95RDlCNlBERi01RThjRzNWdm9VYUJGRzUtZWV3ZUEybXFJcGpZc2ZOcQ?oc=5",
-     "source": "Boursier.com",
-     "time": 1795625052000,
-     "tone": "neutre"
+     "title": "L'action TotalEnergies rebondit mais accuse -6 % sur un mois",
+     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYURXaF9ram4yZTF0RTJyY3N6Q25aR1hJbmdOblBwZlRMbl9wSU1DQVF3LTJZemF1aFZOZ1k0YmhqZTcyUG5nRDQ0SWlOWlJ6Zm5XcWE1SE42UEtLN1Zjb09RdXRTdGMyU1ZuWEprOEF2RmExWnRQenQ1YVVQR3VVZjVWdGlzbE54OEY1WmNjSW9UdUd5aW5nRV9xcE1KTHRHZHdwR01KYU1FZjlaelJFbQ?oc=5",
+     "source": "Idéal Investisseur",
+     "time": 1795698660000,
+     "tone": "positif"
     }
    ],
    "ctx": {
-    "title": "TotalEnergies perd 0,51%",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPckpUcVg3cHdobDBpNmREa2gtaGdNRGhJd3BzRHQ5T0txT094aE5iTWN4dExQSF9nQkRvU2JPNkNNNUMzZGlQbDNzMkRNZVE0SS1yblg5czltcExKSHJHRFF2ZF95RDlCNlBERi01RThjRzNWdm9VYUJGRzUtZWV3ZUEybXFJcGpZc2ZOcQ?oc=5",
-    "source": "Boursier.com",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
+    "title": "L'action TotalEnergies rebondit mais accuse -6 % sur un mois",
+    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYURXaF9ram4yZTF0RTJyY3N6Q25aR1hJbmdOblBwZlRMbl9wSU1DQVF3LTJZemF1aFZOZ1k0YmhqZTcyUG5nRDQ0SWlOWlJ6Zm5XcWE1SE42UEtLN1Zjb09RdXRTdGMyU1ZuWEprOEF2RmExWnRQenQ1YVVQR3VVZjVWdGlzbE54OEY1WmNjSW9UdUd5aW5nRV9xcE1KTHRHZHdwR01KYU1FZjlaelJFbQ?oc=5",
+    "source": "Idéal Investisseur",
+    "tone": "positif",
+    "verdict": "L'actu va dans le même sens"
    },
    "summary": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies."
   },
@@ -256,38 +135,38 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5571738365229547,
-   "expPct": 0.6493438175900312,
-   "start": "Acheter si le cours depasse 92,39 en seance (plus haut d'hier)",
-   "zoneLo": 92.38999938964844,
-   "zoneHi": 93.06669167685679,
-   "stop": 85.62307651756495,
-   "target": 102.63048775948101,
-   "rr": 1.5133153670302744,
-   "pTarget": 0.34675,
+   "pUp": 0.55505091786793,
+   "expPct": 0.6441664528629154,
+   "start": "Acheter si le cours depasse 91,07 en seance (plus haut d'hier)",
+   "zoneLo": 91.06999969482422,
+   "zoneHi": 91.76767307741812,
+   "stop": 84.09326586888513,
+   "target": 101.53510043373285,
+   "rr": 1.499999999999999,
+   "pTarget": 0.3525,
    "holdDays": 63,
-   "reviewDate": "2027-02-26T08:00:00.000Z",
-   "validUntil": "2026-12-01T08:00:00.000Z",
+   "reviewDate": "2027-03-02T08:00:00.000Z",
+   "validUntil": "2026-12-03T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.07442092849097609,
-   "price": 90.27999877929688,
-   "chg": -1.3117670896387934,
-   "sizePct": 13.653177542601764,
-   "riskPct": 7.324302323614544,
-   "gainPct": 11.083979259101435,
+   "expectancy": 0.10039031176958957,
+   "price": 90.63999938964844,
+   "chg": 2.743140031126412,
+   "sizePct": 13.053386006533776,
+   "riskPct": 7.660847534114576,
+   "gainPct": 11.491271301171855,
    "perf": {
-    "w1": -3.773183678365155,
-    "m1": 5.52892525869042,
-    "m3": -10.311945663796717,
-    "ytd": 11.746500502818558
+    "w1": -1.531780136190286,
+    "m1": 3.9449570662807076,
+    "m3": -11.811636051598995,
+    "ytd": 12.192100956181552
    },
    "support": 85.27999877929688,
    "resistance": 97.0999984741211,
-   "sma50": 92.3984001159668,
-   "sma200": 95.50035018920899,
-   "rsi": 44.88037125480204,
-   "vol": 29.642745291628092,
-   "rs63": -6.953961958794563,
+   "sma50": 91.8536001586914,
+   "sma200": 95.4934502029419,
+   "rsi": 47.40141995156585,
+   "vol": 31.282267168600285,
+   "rs63": -9.10289808741398,
    "pros": [
     "Negative Volume Index",
     "ADX (14) directionnel",
@@ -299,83 +178,204 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,65 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,64 %."
    ],
    "day": {
     "ref": {
-     "high": 92.39,
-     "low": 89.99,
-     "close": 90.28
+     "high": 91.07,
+     "low": 90.1,
+     "close": 90.64
     },
-    "pivot": 90.89,
-    "r1": 91.78,
-    "r2": 93.29,
-    "s1": 89.38,
-    "s2": 88.49,
-    "atr": 2.26,
+    "pivot": 90.6,
+    "r1": 91.11,
+    "r2": 91.58,
+    "s1": 90.13,
+    "s2": 89.63,
+    "atr": 2.33,
     "range": {
-     "lo": 88.59,
-     "hi": 91.97
+     "lo": 88.9,
+     "hi": 92.38
     },
     "up": {
-     "trigger": 91.78,
-     "stop": 90.89,
-     "target": 93.29,
-     "text": "Si le cours dépasse 91,78 en séance : achat possible, stop 90,89, objectif 93,29. Contre la tendance de fond : taille réduite."
+     "trigger": 91.07,
+     "stop": 90.6,
+     "target": 91.77,
+     "text": "Si le cours dépasse 91,07 en séance : achat possible, stop 90,60, objectif 91,77. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 89.99,
-     "stop": 90.89,
-     "target": 88.49,
-     "text": "S'il passe sous 89,99 : pas d'achat, et sortie si tu détiens (objectif bas 88,49, invalidé au-dessus de 90,89)."
+     "trigger": 90.13,
+     "stop": 90.6,
+     "target": 89.43,
+     "text": "S'il passe sous 90,13 : pas d'achat, et sortie si tu détiens (objectif bas 89,43, invalidé au-dessus de 90,60)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 89,99 et 91,78 : rien à faire, c'est du bruit."
+    "flat": "Entre 90,13 et 91,07 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
-    "since": 1788246000,
-    "gainPct": -12.01,
+    "since": 1788418800,
+    "gainPct": -12.96,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 7.540171,
-    "fpe": 6.809579,
+    "pe": 7.9300084,
+    "fpe": 6.996375,
     "yield": 7.16,
     "rating": "1.7 - Buy",
     "target": null,
     "hi52": 113.82,
-    "lo52": 71.58
+    "lo52": 72.34
    },
    "earningsWarning": "Résultats prévus le 02/02/2027 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "BNP Paribas maintenu sur la liste G-SIB de l'ACPR",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPX2dZV3R1b2ZfbHRqU3ZWVE5DV2lPaV9SWE9UU01yemxpd0wwMmV3Z0ZRMURBNEdWcnlQZmdicGVEOTd0VGxqdEdyb1NJa3d5M3VRWGhDR0dFZzlrQ201aVRRQUFqakRwb2lSS3JRUnpOcHppR0lUcjRNa3NFOHJQdmxSeGwzZ1ZiRVV0Nkd5NEVQdmNkdFdvRzZMRGRSZl83dzVWNV80YjlqVWk0NWR3?oc=5",
-     "source": "Zonebourse",
-     "time": 1795671746000,
+     "title": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelI5cHlsYjRlbDVjdWJabkRQNXFQNVNNTUNIczVfLXVSM3RlbHpQQTlGanZxM3doM0liT3p4S25UaDNpWThIaFpPTU1lQzk3d2dUV2tqMkRMMmZRWFRJYWVydzVpaFRRZjViUDFsWjNHYXV5cnNmWEJlc3Z2Sk9qWHNleEtrYWU4M21ybkxZZHlKZmQzaHR3VUJDNEdTVWNrV1FyTVl5MnJXd0NlbXJrMW5tMlJpa2dac21HdnRZRnkyck4zQ2VnbEZTQnlnNWItSkkxUktmMDI?oc=5",
+     "source": "L'Echo",
+     "time": 1795707713000,
      "tone": "neutre"
     },
     {
-     "title": "BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1uYlMtclJJQjJfa19vbGVCdEZVYzk4akZZbjM0Snpocy1LUnRxWWJPUWdhRG45a0o2YnBuZWxTcHdJazQ2c0owMjFteVI5T0xENWc?oc=5",
-     "source": "Boursorama",
-     "time": 1795660338000,
-     "tone": "neutre"
+     "title": "L'action BNP Paribas reprend près de 3 %, parmi les plus fortes hausses du CAC 40",
+     "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNOUpyQzhocW5FQkU5cVc3VDJNN05uek9HbjhSVGN2VjM3X3FHZC0yZzJZd2k0VXpsTGJfU3JPeHpabFJ0RkVRSTdpc2VVRlJvZmdkWmNGdnA0Y2k1OWtaaUsyS19KWnRLY0haRkJEOVhFbDZWYnYxRWtOaEw1UXYyRXBReXRnaXdIc1NWRE5WQmZaY3dkT0xreG5OWUpVVUp5V0dKWklINkxzNGJWdlBlVjhrMlVCM3pPcUhjTDQ3blZHWnNoQ0lnT3U2MDQ?oc=5",
+     "source": "Idéal Investisseur",
+     "time": 1795691280000,
+     "tone": "positif"
     }
    ],
    "ctx": {
-    "title": "BNP Paribas maintenu sur la liste G-SIB de l'ACPR",
-    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPX2dZV3R1b2ZfbHRqU3ZWVE5DV2lPaV9SWE9UU01yemxpd0wwMmV3Z0ZRMURBNEdWcnlQZmdicGVEOTd0VGxqdEdyb1NJa3d5M3VRWGhDR0dFZzlrQ201aVRRQUFqakRwb2lSS3JRUnpOcHppR0lUcjRNa3NFOHJQdmxSeGwzZ1ZiRVV0Nkd5NEVQdmNkdFdvRzZMRGRSZl83dzVWNV80YjlqVWk0NWR3?oc=5",
-    "source": "Zonebourse",
+    "title": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelI5cHlsYjRlbDVjdWJabkRQNXFQNVNNTUNIczVfLXVSM3RlbHpQQTlGanZxM3doM0liT3p4S25UaDNpWThIaFpPTU1lQzk3d2dUV2tqMkRMMmZRWFRJYWVydzVpaFRRZjViUDFsWjNHYXV5cnNmWEJlc3Z2Sk9qWHNleEtrYWU4M21ybkxZZHlKZmQzaHR3VUJDNEdTVWNrV1FyTVl5MnJXd0NlbXJrMW5tMlJpa2dac21HdnRZRnkyck4zQ2VnbEZTQnlnNWItSkkxUktmMDI?oc=5",
+    "source": "L'Echo",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    },
-   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 92,39 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 91,07 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+  },
+  {
+   "sym": "AIR.PA",
+   "name": "Airbus",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.55505091786793,
+   "expPct": 0.6527001083064032,
+   "start": "Acheter si le cours depasse 196,30 en seance (plus haut d'hier)",
+   "zoneLo": 196.3000030517578,
+   "zoneHi": 197.96412351803994,
+   "stop": 179.65879838893662,
+   "target": 221.2618100459896,
+   "rr": 1.4999999999999991,
+   "pTarget": 0.30525,
+   "holdDays": 63,
+   "reviewDate": "2027-03-02T08:00:00.000Z",
+   "validUntil": "2026-12-03T08:00:00.000Z",
+   "cur": "EUR",
+   "expectancy": 0.006396830088548244,
+   "price": 193.83999633789062,
+   "chg": 2.0210507041529713,
+   "sizePct": 11.796021203339912,
+   "riskPct": 8.47743474483465,
+   "gainPct": 12.71615211725197,
+   "perf": {
+    "w1": -2.1701842459894816,
+    "m1": 1.0004158958229814,
+    "m3": -1.7237928719238793,
+    "ytd": -2.2983859369335113
+   },
+   "support": 189.9199981689453,
+   "resistance": 212.8000030517578,
+   "sma50": 194.82800048828125,
+   "sma200": 188.47095001220703,
+   "rsi": 46.23249425263102,
+   "vol": 32.38447181385043,
+   "rs63": 0.9849450922611358,
+   "pros": [
+    "Croisement SMA 50 / 200",
+    "SMA 200",
+    "ADX (14) directionnel"
+   ],
+   "cons": [
+    "Negative Volume Index",
+    "Chaikin Money Flow"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +0,65 %."
+   ],
+   "day": {
+    "ref": {
+     "high": 196.3,
+     "low": 193.84,
+     "close": 193.84
+    },
+    "pivot": 194.66,
+    "r1": 195.48,
+    "r2": 197.12,
+    "s1": 193.02,
+    "s2": 192.2,
+    "atr": 5.55,
+    "range": {
+     "lo": 189.68,
+     "hi": 198
+    },
+    "up": {
+     "trigger": 195.48,
+     "stop": 194.66,
+     "target": 197.12,
+     "text": "Si le cours dépasse 195,48 en séance : achat possible, stop 194,66, objectif 197,12. Contre la tendance de fond : taille réduite."
+    },
+    "down": {
+     "trigger": 193.84,
+     "stop": 194.66,
+     "target": 192.2,
+     "text": "S'il passe sous 193,84 : pas d'achat, et sortie si tu détiens (objectif bas 192,20, invalidé au-dessus de 194,66)."
+    },
+    "trendUp": false,
+    "state": null,
+    "now": null,
+    "alerts": [],
+    "flat": "Entre 193,84 et 195,48 : rien à faire, c'est du bruit."
+   },
+   "timing": {
+    "age": 60,
+    "since": 1788418800,
+    "gainPct": -1.6,
+    "stage": "frais",
+    "factor": 1
+   },
+   "fund": {
+    "pe": 24.85128,
+    "fpe": 22.360159,
+    "yield": 1.65,
+    "rating": "1.8 - Buy",
+    "target": null,
+    "hi52": 221.3,
+    "lo52": 157.42
+   },
+   "earningsWarning": "Résultats prévus le 18/02/2027 : risque de forte variation pendant la position.",
+   "news": [
+    {
+     "title": "ALSTOM Cours Action ALO, Cotation Bourse Euronext Paris",
+     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5ieFVPRVM5TGxmaUg5SUJrRVdIdlFhaFNXaVZZaHJraHI4ZWNqaDlJV3JPODFXUk4yUzR6bjBJZ3JIQzRPNVJqMnJPTjUtVkRXSGc?oc=5",
+     "source": "Boursorama",
+     "time": 1795712217000,
+     "tone": "neutre"
+    },
+    {
+     "title": "Embraer critique les nouveaux droits de douane américains et met en garde contre une inflation du transport aérien",
+     "link": "https://news.google.com/rss/articles/CBMi8gFBVV95cUxPbWJiT2p3Y1ZqRWFjbTVDOWFkUWF2UF9hRDUzN0xjcUJCb2xtdjJUYWgtZFpXckdUOWdDVHlaUTBJMGJwSmkwby1EVW1jZkxYZmRDeFREcmR5ejNVeEViRFk3aHVpV2x4NW40X252OXZrdTQ2SmVsZmV6UVF6M2dZczc3Q0h0MWRrNWVHVmVTd3RQc0gzMkVNc29ablFUU1Q3amFjYmJXcFhqZFJDTmNLOWZHdldWVVZVV1RVV1d1N2p6ZkJZWmRkc0hxZHB6bFd4bHpvWk1RMVNNV09tRmFlM19YaGo1WEprbjJZeTFSNEx1Zw?oc=5",
+     "source": "Zonebourse Suisse",
+     "time": 1795711344000,
+     "tone": "neutre"
+    }
+   ],
+   "ctx": null,
+   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 196,30 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
    "sym": "MT.AS",
@@ -383,38 +383,38 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5571738365229547,
-   "expPct": 3.102130891077959,
-   "start": "Acheter si le cours depasse 54,04 en seance (plus haut d'hier)",
-   "zoneLo": 54.040000915527344,
-   "zoneHi": 54.75109528304444,
-   "stop": 46.92905724035637,
-   "target": 64.7064164282838,
+   "pUp": 0.55505091786793,
+   "expPct": 2.291510548872222,
+   "start": "Acheter si le cours depasse 52,76 en seance (plus haut d'hier)",
+   "zoneLo": 52.7599983215332,
+   "zoneHi": 53.45618675382672,
+   "stop": 45.798113998598,
+   "target": 63.20282480593601,
    "rr": 1.5,
-   "pTarget": 0.321,
+   "pTarget": 0.30175,
    "holdDays": 63,
-   "reviewDate": "2027-02-26T08:00:00.000Z",
-   "validUntil": "2026-12-01T08:00:00.000Z",
+   "reviewDate": "2027-03-02T08:00:00.000Z",
+   "validUntil": "2026-12-03T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 1.719229853823969,
-   "price": 50.2599983215332,
-   "chg": -7.610299794525266,
-   "sizePct": 7.599554065407223,
-   "riskPct": 13.158666829570281,
-   "gainPct": 19.73800024435542,
+   "expectancy": 0.9113659835160639,
+   "price": 52,
+   "chg": 2.970297029702973,
+   "sizePct": 7.578407780738451,
+   "riskPct": 13.195383897678814,
+   "gainPct": 19.79307584651822,
    "perf": {
-    "w1": -8.684597591722888,
-    "m1": -4.846651624539611,
-    "m3": -21.345857400052846,
-    "ytd": 28.575078345723213
+    "w1": -5.178701941440222,
+    "m1": -2.8037383177570097,
+    "m3": -18.87675313909124,
+    "ytd": 33.026348930718605
    },
    "support": 49.970001220703125,
    "resistance": 60.02000045776367,
-   "sma50": 57.09959991455078,
-   "sma200": 56.023700046539304,
-   "rsi": 36.095578471503046,
-   "vol": 44.97309627031022,
-   "rs63": -17.987873695050695,
+   "sma50": 56.54519989013672,
+   "sma200": 56.009400043487545,
+   "rsi": 41.842174200219866,
+   "vol": 45.94290185191372,
+   "rs63": -16.168015174906223,
    "pros": [
     "Croisement SMA 50 / 200",
     "Negative Volume Index",
@@ -426,52 +426,52 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +3,10 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +2,29 %."
    ],
    "day": {
     "ref": {
-     "high": 54.04,
-     "low": 49.97,
-     "close": 50.26
+     "high": 52.76,
+     "low": 52,
+     "close": 52
     },
-    "pivot": 51.42,
-    "r1": 52.88,
-    "r2": 55.49,
-    "s1": 48.81,
-    "s2": 47.35,
-    "atr": 2.37,
+    "pivot": 52.25,
+    "r1": 52.51,
+    "r2": 53.01,
+    "s1": 51.75,
+    "s2": 51.49,
+    "atr": 2.32,
     "range": {
-     "lo": 48.48,
-     "hi": 52.04
+     "lo": 50.26,
+     "hi": 53.74
     },
     "up": {
-     "trigger": 52.88,
-     "stop": 51.45,
-     "target": 55.49,
-     "text": "Si le cours dépasse 52,88 en séance : achat possible, stop 51,45, objectif 55,49. Contre la tendance de fond : taille réduite."
+     "trigger": 52.6,
+     "stop": 52.25,
+     "target": 53.12,
+     "text": "Si le cours dépasse 52,60 en séance : achat possible, stop 52,25, objectif 53,12. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 49.97,
-     "stop": 51.39,
-     "target": 47.35,
-     "text": "S'il passe sous 49,97 : pas d'achat, et sortie si tu détiens (objectif bas 47,35, invalidé au-dessus de 51,39)."
+     "trigger": 51.91,
+     "stop": 52.25,
+     "target": 51.38,
+     "text": "S'il passe sous 51,91 : pas d'achat, et sortie si tu détiens (objectif bas 51,38, invalidé au-dessus de 52,25)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 49,97 et 52,88 : rien à faire, c'est du bruit."
+    "flat": "Entre 51,91 et 52,60 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
-    "since": 1788246000,
-    "gainPct": -21.15,
+    "since": 1788418800,
+    "gainPct": -20.8,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 43.162395,
-    "fpe": 7.8885384,
+    "pe": 44.0678,
+    "fpe": 8.122851,
     "yield": 1.09,
     "rating": "1.6 - Buy",
     "target": null,
@@ -480,28 +480,28 @@
    },
    "news": [
     {
-     "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-     "source": "Boursorama",
-     "time": 1795665316000,
+     "title": "Il est temps de nationaliser ArcelorMittal",
+     "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0VnaFdtWXFLUWFfUnFTRkVqUzV2RnVjN1ZfYlp0d2RtT3N2OFM2R0hrTXdEaldOU2VXUmZ4QkRtcHNQbWhnTko4RkVsRkRvVVBGb3NPSXFiREZUSE1iUU1aZkpKT1o4LW1GakNCWWVZVkNKODU4enNDdVl3Y2l4NDY3TEhWekRPT1Z1aEZfOXRvNFU?oc=5",
+     "source": "L'Humanité",
+     "time": 1795705327000,
      "tone": "neutre"
     },
     {
-     "title": "ArcelorMittal gagne 0,48%",
-     "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPLXVtaV9XWVNUV3F5YTQ4Qk8tSFg0T0N6YzJERklxMEI1MFhCdHd1S2JvQVc2UU5aa1d1TGtab0lrQzJScHlhWHgzRG8zMjJ4Q1hsbXNzWjlwSzdpME5HaW5XcWlDV2phd2pXakJ6UnhqbGxpQXdlNEVSNDZKWndod08yWnlUeHFZY25nUEln?oc=5",
-     "source": "Boursier.com",
-     "time": 1795624848000,
+     "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
+     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
+     "source": "Boursorama",
+     "time": 1795698202000,
      "tone": "neutre"
     }
    ],
    "ctx": {
-    "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-    "source": "Boursorama",
+    "title": "Il est temps de nationaliser ArcelorMittal",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0VnaFdtWXFLUWFfUnFTRkVqUzV2RnVjN1ZfYlp0d2RtT3N2OFM2R0hrTXdEaldOU2VXUmZ4QkRtcHNQbWhnTko4RkVsRkRvVVBGb3NPSXFiREZUSE1iUU1aZkpKT1o4LW1GakNCWWVZVkNKODU4enNDdVl3Y2l4NDY3TEhWekRPT1Z1aEZfOXRvNFU?oc=5",
+    "source": "L'Humanité",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    },
-   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 54,04 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 52,76 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
    "sym": "CA.PA",
@@ -509,38 +509,38 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5571738365229547,
-   "expPct": 1.5381444334314764,
-   "start": "Acheter si le cours depasse 13,80 en seance (plus haut d'hier)",
-   "zoneLo": 13.803976409950893,
-   "zoneHi": 13.890906784212753,
-   "stop": 12.934672667332293,
-   "target": 16.107398469634745,
-   "rr": 2.6497321324595515,
-   "pTarget": 0.2935,
+   "pUp": 0.55505091786793,
+   "expPct": 1.7940920343434419,
+   "start": "Acheter si le cours depasse 13,88 en seance (plus haut d'hier)",
+   "zoneLo": 13.880000114440918,
+   "zoneHi": 13.962133965670423,
+   "stop": 13.058661602145861,
+   "target": 16.10100426762978,
+   "rr": 2.7041276160090613,
+   "pTarget": 0.29125,
    "holdDays": 63,
-   "reviewDate": "2027-02-26T08:00:00.000Z",
-   "validUntil": "2026-12-01T08:00:00.000Z",
+   "reviewDate": "2027-03-02T08:00:00.000Z",
+   "validUntil": "2026-12-03T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.7752089321089619,
-   "price": 13.774999618530273,
-   "chg": 2.264286157796347,
-   "sizePct": 15.879347727606966,
-   "riskPct": 6.29748788901105,
-   "gainPct": 16.68665601328745,
+   "expectancy": 0.644567825983418,
+   "price": 13.8149995803833,
+   "chg": 0.39970458275155885,
+   "sizePct": 16.899244229588344,
+   "riskPct": 5.917424391376817,
+   "gainPct": 16.00147071236766,
    "perf": {
-    "w1": -1.92239555925241,
-    "m1": 0,
-    "m3": -11.670411140334569,
-    "ytd": -3.19746970023127
+    "w1": 2.181946099345211,
+    "m1": 4.937330956427766,
+    "m3": -11.866032457536857,
+    "ytd": -2.9163736837886645
    },
    "support": 12.885000228881836,
    "resistance": 14.359999656677246,
-   "sma50": 14.900199947357178,
-   "sma200": 15.839499983787537,
-   "rsi": 43.704565240002374,
-   "vol": 49.53586510831243,
-   "rs63": -8.312427435332415,
+   "sma50": 14.779299964904785,
+   "sma200": 15.82139997959137,
+   "rsi": 44.80595535681753,
+   "vol": 48.40424347144944,
+   "rs63": -9.157294493351841,
    "pros": [
     "Negative Volume Index",
     "ADX (14) directionnel",
@@ -552,52 +552,52 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +1,54 %."
+    "Probabilite de hausse 56 % sur 3 mois, rendement median attendu +1,79 %."
    ],
    "day": {
     "ref": {
-     "high": 13.79,
-     "low": 13.44,
-     "close": 13.77
+     "high": 13.88,
+     "low": 13.74,
+     "close": 13.81
     },
-    "pivot": 13.67,
-    "r1": 13.9,
-    "r2": 14.02,
-    "s1": 13.55,
-    "s2": 13.32,
-    "atr": 0.29,
+    "pivot": 13.81,
+    "r1": 13.88,
+    "r2": 13.95,
+    "s1": 13.74,
+    "s2": 13.67,
+    "atr": 0.27,
     "range": {
-     "lo": 13.56,
-     "hi": 13.99
+     "lo": 13.61,
+     "hi": 14.02
     },
     "up": {
-     "trigger": 13.79,
-     "stop": 13.67,
-     "target": 14.02,
-     "text": "Si le cours dépasse 13,79 en séance : achat possible, stop 13,67, objectif 14,02. Contre la tendance de fond : taille réduite."
+     "trigger": 13.88,
+     "stop": 13.81,
+     "target": 13.98,
+     "text": "Si le cours dépasse 13,88 en séance : achat possible, stop 13,81, objectif 13,98. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 13.55,
-     "stop": 13.67,
-     "target": 13.32,
-     "text": "S'il passe sous 13,55 : pas d'achat, et sortie si tu détiens (objectif bas 13,32, invalidé au-dessus de 13,67)."
+     "trigger": 13.74,
+     "stop": 13.81,
+     "target": 13.64,
+     "text": "S'il passe sous 13,74 : pas d'achat, et sortie si tu détiens (objectif bas 13,64, invalidé au-dessus de 13,81)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 13,55 et 13,79 : rien à faire, c'est du bruit."
+    "flat": "Entre 13,74 et 13,88 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
-    "since": 1788246000,
-    "gainPct": -13.91,
+    "since": 1788418800,
+    "gainPct": -15.4,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 6.3999996,
-    "fpe": 7.6389275,
+    "pe": 6.425581,
+    "fpe": 7.6694603,
     "yield": 7.04,
     "rating": "2.8 - Hold",
     "target": null,
@@ -607,22 +607,28 @@
    "earningsWarning": "Résultats prévus le 16/02/2027 (date estimée) : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "Rémy Cointreau: notre analyse des résultats",
-     "link": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQc0VuRklLalZyZ1hWWHpLWkhMVmdnc1lQX2l5akJqa0Rtdk56c2JPR044aDRaZ2VrMWttVVVIZU1mRVdUS3I0blJvOUROUTZ5VVpqOEF6N2xaR2lndTBuT1JZUlZLN1pkb2lOa3FMeWlENFl3eUNTQjNVU1RZaTNpLVJxWE1UZGVXS0E?oc=5",
-     "source": "Morningstar",
-     "time": 1795622675000,
+     "title": "« Il y en avait plein dans les paquets de sucre » : des excréments de rongeurs trouvés dans les rayons de ce supermarché de Loire-Atlantique",
+     "link": "https://news.google.com/rss/articles/CBMizwJBVV95cUxPS3prWU5Hc3dHMkNWLURFcWpwNV9OcTlzUndVZ1lGa1F5NjU5QU9UalBxUWxvcmVwR1lLUnM5V1NaeV9DQ3ZRWlBMQndEaFdNMExwNGVIa3lsbkFFamRxZEFIbVhuM2oxdzlpeGlhQU9VRkRqVWRwM0dseC11b1lKVjN3ZFJLU1VXZFpOZTVUY1F0a2FTTDdrT2JtYWJ5SjJCRGxTMk5DT2xBeGVmcVhHaGI1R1BlcFBoQXRuQ25fa00wdmJSMGwxaWRMdFRXc1dRc1lNV1pvT0RIcGEyN1k0anVHSDl1Tl9xdHpJZ1BOd1NkSXo4WFB3bDBqZElQVjY1aE1QemgtY2c4dmRrbVdiYW5kclJnSTVoNC1la3hQUWh5X1BFaUVKYTBKOWRoeVUzd1lpYjFzMm1md1VWZjVKQXdRaU41MWIzWGR2UEtQNA?oc=5",
+     "source": "Ouest-France",
+     "time": 1795716037000,
      "tone": "neutre"
     },
     {
-     "title": "Gard : action surprise des agriculteurs dans des supermarchés",
-     "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxQZy1KWV9mYnJwYXpxa2poeS13NXVUVXBCaFNRMmpGQVdNSmYyRkxOcG51Y3BMTkFERGNLSnpLcWc1WE1OeXVVYW04eFhzbi1VR0JrWGluMUVFMVNhejdoTVVyU2xab0VRU1ZaQUVSR3ZZOXRVT0RxcWZfeC03VVBJSkxBQTVmdHpHbzZINQ?oc=5",
-     "source": "InfOccitanie",
-     "time": 1795616880000,
+     "title": "CARREFOUR Cours Action CA, Cotation Bourse Euronext Paris",
+     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtZU5uaUhjMk1BUEU2R21SZlNmWVV0QV9MZ0hYZWNaR0VaOGNrWkxpMmNXYWtTYlB2OVlMSTMzZUk1UTV6QkpERFRrVnphQ3Bk?oc=5",
+     "source": "Boursorama",
+     "time": 1795705304000,
      "tone": "neutre"
     }
    ],
-   "ctx": null,
-   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 13,80 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "ctx": {
+    "title": "CARREFOUR Cours Action CA, Cotation Bourse Euronext Paris",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtZU5uaUhjMk1BUEU2R21SZlNmWVV0QV9MZ0hYZWNaR0VaOGNrWkxpMmNXYWtTYlB2OVlMSTMzZUk1UTV6QkpERFRrVnphQ3Bk?oc=5",
+    "source": "Boursorama",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   },
+   "summary": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 13,88 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   }
  ],
  "avoid": [],
@@ -630,13 +636,13 @@
   {
    "id": "cac",
    "label": "CAC 40",
-   "price": 7980.56982421875,
-   "chg": -0.7452332931153438,
+   "price": 8108.740234375,
+   "chg": 1.6060308095706244,
    "p1S": 0.5,
-   "p1M": 0.5137518703648263,
+   "p1M": 0.512982771117109,
    "trend": "sous SMA 200",
-   "w1": -2.0407968781952945,
-   "m1": 1.1845825721421566
+   "w1": 0.3465029092370786,
+   "m1": 2.8119868052574493
   },
   {
    "id": "spx",
@@ -644,7 +650,7 @@
    "price": 7182.77978515625,
    "chg": -0.2542678815435351,
    "p1S": 0.5,
-   "p1M": 0.5284340940192932,
+   "p1M": 0.5272013267876087,
    "trend": "sous SMA 200",
    "w1": -1.9232279608613845,
    "m1": -6.99013681498063
@@ -655,7 +661,7 @@
    "price": 26046.900390625,
    "chg": -0.6380882238442243,
    "p1S": 0.5,
-   "p1M": 0.5295446642395061,
+   "p1M": 0.5282366048154391,
    "trend": "sous SMA 200",
    "w1": -3.9436094219587603,
    "m1": -12.156371255426901
@@ -666,7 +672,7 @@
    "price": 50182.94921875,
    "chg": 0.32837719206106897,
    "p1S": 0.5,
-   "p1M": 0.5288513517042157,
+   "p1M": 0.52750776682329,
    "trend": "sous SMA 200",
    "w1": -0.03032512077910665,
    "m1": -4.190001713818036
@@ -674,39 +680,39 @@
   {
    "id": "dax",
    "label": "DAX 40",
-   "price": 24702.130859375,
-   "chg": -1.261819801970765,
+   "price": 25215.51953125,
+   "chg": 2.0783173516391473,
    "p1S": 0.5,
-   "p1M": 0.5257593202636761,
-   "trend": "sous SMA 200",
-   "w1": -4.0181058522245845,
-   "m1": -3.4724968734912154
+   "p1M": 0.527702660929861,
+   "trend": "au-dessus SMA 200",
+   "w1": -0.9750740768666,
+   "m1": -1.9004809711029802
   },
   {
    "id": "mib",
    "label": "FTSE MIB",
-   "price": 47249,
-   "chg": -1.812098667941231,
+   "price": 48362.3515625,
+   "chg": 2.356349473004715,
    "p1S": 0.5,
-   "p1M": 0.5285460154561705,
+   "p1M": 0.5260734076428895,
    "trend": "sous SMA 200",
-   "w1": -5.8297126001514705,
-   "m1": -4.7936648666075605
+   "w1": -3.161026886726337,
+   "m1": -2.9336232287652586
   },
   {
    "id": "nkx",
    "label": "NIKKEI 225",
-   "price": 57499.16015625,
-   "chg": 0.8551573401119228,
+   "price": 57011.62109375,
+   "chg": -2.784582054582607,
    "p1S": 0.5,
-   "p1M": 0.5274972492413491,
+   "p1M": 0.5263517505304568,
    "trend": "sous SMA 200",
-   "w1": -2.583887616166436,
-   "m1": -7.5422331514928835
+   "w1": -3.141004242690104,
+   "m1": -9.062454418217103
   }
  ],
  "brief": [
-  "CAC 40 à 7 981 points : −0,7 % à la dernière séance, +1,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.",
+  "CAC 40 à 8 109 points : +1,6 % à la dernière séance, +2,8 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.",
   "Pas d'annonce macroéconomique majeure aujourd'hui.",
   "Pas de tendance nette des indices à 1 mois.",
   "5 opportunité(s) retenue(s), surtout sur 3 mois."
@@ -747,14 +753,14 @@
   {
    "sym": "^FCHI",
    "label": "CAC 40",
-   "last": 7980.56982421875,
-   "chg": -0.7452332931153438,
-   "m1": 1.1845825721421566
+   "last": 8108.740234375,
+   "chg": 1.6060308095706244,
+   "m1": 2.8119868052574493
   },
   {
    "sym": "^SBF120",
    "label": "SBF 120",
-   "last": 6030.52978515625,
+   "last": 6131.3701171875,
    "chg": null,
    "m1": 0
   },
@@ -775,37 +781,37 @@
   {
    "sym": "^N225",
    "label": "Nikkei 225",
-   "last": 57499.16015625,
-   "chg": 0.8551573401119228,
-   "m1": -7.5422331514928835
+   "last": 57011.62109375,
+   "chg": -2.784582054582607,
+   "m1": -9.062454418217103
   },
   {
    "sym": "^STOXX50E",
    "label": "Euro Stoxx 50",
-   "last": 5894.4599609375,
-   "chg": -1.8205226217295478,
-   "m1": -4.383512926638888
+   "last": 6014.740234375,
+   "chg": 2.0405647715752595,
+   "m1": -2.4817532116682917
   },
   {
    "sym": "EURUSD=X",
    "label": "Euro / dollar",
-   "last": 1.096611499786377,
-   "chg": 0.035092042392759204,
-   "m1": -1.4694572844988096
+   "last": 1.0972130298614502,
+   "chg": 0.08996481769918407,
+   "m1": -1.41540980754985
   },
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 90.72000122070312,
-   "chg": -4.111615436585058,
-   "m1": -21.331944622980426
+   "last": 91.44999694824219,
+   "chg": -3.3400313304338236,
+   "m1": -20.698927167664017
   },
   {
    "sym": "GC=F",
    "label": "Or",
-   "last": 3596.300048828125,
-   "chg": 1.711069607005955,
-   "m1": -11.237536722627306
+   "last": 3594,
+   "chg": 1.646019298833501,
+   "m1": -11.29430562312802
   },
   {
    "sym": "^TNX",
@@ -817,64 +823,64 @@
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 60447.7109375,
-   "chg": 1.1715003986812356,
-   "m1": -24.82122551600646
+   "last": 60460.3515625,
+   "chg": 0.13606292471950443,
+   "m1": -20.386278942681678
   }
  ],
  "movers": {
   "up": [
    {
-    "sym": "SAN.PA",
-    "name": "Sanofi",
-    "chg": 9.758385510629374
+    "sym": "STLAP.PA",
+    "name": "Stellantis",
+    "chg": 8.912575582077942
    },
    {
-    "sym": "9984.T",
-    "name": "SoftBank",
-    "chg": 7.32430928982013
+    "sym": "STLAM.MI",
+    "name": "Stellantis",
+    "chg": 8.819896527662085
    },
    {
-    "sym": "NXI.PA",
-    "name": "Nexity",
-    "chg": 7.256239971281642
-   },
-   {
-    "sym": "TXN",
-    "name": "Texas Instruments",
-    "chg": 4.546509785250441
-   },
-   {
-    "sym": "6981.T",
-    "name": "Murata",
-    "chg": 4.101014461472041
-   }
-  ],
-  "down": [
-   {
-    "sym": "STMPA.PA",
-    "name": "STMicroelectronics",
-    "chg": -10.222445199120822
-   },
-   {
-    "sym": "STMMI.MI",
-    "name": "STMicroelectronics",
-    "chg": -10.208669615847633
+    "sym": "ALO.PA",
+    "name": "Alstom",
+    "chg": 6.977879531894993
    },
    {
     "sym": "SOI.PA",
     "name": "Soitec",
-    "chg": -9.97044605574584
-   },
-   {
-    "sym": "IFX.DE",
-    "name": "Infineon",
-    "chg": -9.675749144489899
+    "chg": 6.9362822657203616
    },
    {
     "sym": "PRY.MI",
     "name": "Prysmian",
-    "chg": -8.042970915366244
+    "chg": 6.57215951103709
+   }
+  ],
+  "down": [
+   {
+    "sym": "9984.T",
+    "name": "SoftBank",
+    "chg": -14.829437776373977
+   },
+   {
+    "sym": "6981.T",
+    "name": "Murata",
+    "chg": -14.203703703703708
+   },
+   {
+    "sym": "8035.T",
+    "name": "Tokyo Electron",
+    "chg": -12.530739995528728
+   },
+   {
+    "sym": "7011.T",
+    "name": "Mitsubishi Heavy",
+    "chg": -6.626399005151895
+   },
+   {
+    "sym": "ORCL",
+    "name": "Oracle",
+    "chg": -5.132422599618291
    }
   ]
  },
@@ -883,71 +889,71 @@
    "sym": "CW8.PA",
    "label": "MSCI World",
    "issuer": "Amundi",
-   "last": 677.33,
-   "chg": -1.65,
-   "w1": -2.01,
-   "m1": -4.53,
-   "ytd": 11.37
+   "last": 683.79,
+   "chg": 2.83,
+   "w1": -0.72,
+   "m1": -4.56,
+   "ytd": 12.43
   },
   {
    "sym": "VWCE.DE",
    "label": "FTSE All-World",
    "issuer": "Vanguard",
-   "last": 161.88,
-   "chg": -1.91,
-   "w1": -2.06,
-   "m1": -4.78,
-   "ytd": 11.32
+   "last": 163.46,
+   "chg": 2.99,
+   "w1": -0.85,
+   "m1": -4.93,
+   "ytd": 12.41
   },
   {
    "sym": "ESE.PA",
    "label": "S&P 500 PEA",
    "issuer": "BNP",
-   "last": 33.14,
-   "chg": -1.85,
-   "w1": -1.78,
-   "m1": -4.84,
-   "ytd": 12.06
+   "last": 33.45,
+   "chg": 3.17,
+   "w1": -0.93,
+   "m1": -5.03,
+   "ytd": 13.1
   },
   {
    "sym": "PUST.PA",
    "label": "Nasdaq-100 PEA",
    "issuer": "Amundi",
-   "last": 95.16,
-   "chg": -3.51,
-   "w1": -2.57,
-   "m1": -9.53,
-   "ytd": 9.66
+   "last": 95.85,
+   "chg": 4.38,
+   "w1": -3.57,
+   "m1": -10.34,
+   "ytd": 10.45
   },
   {
    "sym": "CAC.PA",
    "label": "CAC 40",
    "issuer": "Amundi",
-   "last": 81.58,
-   "chg": -0.15,
-   "w1": -1.96,
-   "m1": 2.68,
-   "ytd": 1.51
+   "last": 82.4,
+   "chg": 1.65,
+   "w1": 0.51,
+   "m1": 3.12,
+   "ytd": 2.53
   },
   {
    "sym": "EXS1.DE",
    "label": "DAX",
    "issuer": "iShares",
-   "last": 206.15,
-   "chg": -1.25,
-   "w1": -3.94,
-   "m1": -1.55,
-   "ytd": 1.53
+   "last": 208,
+   "chg": 2.24,
+   "w1": -0.91,
+   "m1": -1.77,
+   "ytd": 2.44
   },
   {
    "sym": "PAEEM.PA",
    "label": "Émergents PEA",
    "issuer": "Amundi",
-   "last": 31.91,
-   "chg": -3.97,
-   "w1": -2.48,
-   "m1": -6.95,
-   "ytd": 11.3
+   "last": 32.1,
+   "chg": 4,
+   "w1": -1.59,
+   "m1": -8.95,
+   "ytd": 11.98
   },
   {
    "sym": "SPY",
@@ -1007,15 +1013,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 677.33,
-   "d": -1.65,
-   "w": -2.01,
-   "m": -4.53,
-   "q": -2.02,
-   "y": 11.37,
-   "a": 11.88,
+   "p": 683.79,
+   "d": 2.83,
+   "w": -0.72,
+   "m": -4.56,
+   "q": -0.83,
+   "y": 12.43,
+   "a": 12.98,
    "h": [
-    695.2,
     692.5,
     685.6,
     688.9,
@@ -1044,14 +1049,15 @@
     706.4,
     691.1,
     667.2,
-    677.3
+    677.3,
+    683.8
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.2,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.83,
    "t": {
     "st": "frais",
-    "g": -1.61,
+    "g": -1.64,
     "a": 60
    }
   },
@@ -1061,15 +1067,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 40.08,
-   "d": -1.72,
-   "w": -2.12,
-   "m": -4.65,
-   "q": -2.16,
-   "y": 11.26,
-   "a": 10.51,
+   "p": 40.51,
+   "d": 2.87,
+   "w": -0.7,
+   "m": -4.48,
+   "q": -0.8,
+   "y": 12.47,
+   "a": 11.7,
    "h": [
-    41.17,
     41.02,
     40.62,
     40.82,
@@ -1098,14 +1103,15 @@
     41.85,
     40.94,
     39.53,
-    40.08
+    40.08,
+    40.51
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.77,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.83,
    "t": {
     "st": "frais",
-    "g": -1.72,
+    "g": -1.59,
     "a": 60
    }
   },
@@ -1115,15 +1121,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 124.58,
-   "d": -1.72,
-   "w": -2.05,
-   "m": -4.56,
-   "q": -2.01,
-   "y": 11.7,
-   "a": 12.16,
+   "p": 125.82,
+   "d": 2.84,
+   "w": -0.72,
+   "m": -4.49,
+   "q": -0.76,
+   "y": 12.81,
+   "a": 12.94,
    "h": [
-    127.9,
     127.3,
     126.1,
     126.6,
@@ -1152,14 +1157,15 @@
     130,
     127.1,
     122.7,
-    124.6
+    124.6,
+    125.8
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.22,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.85,
    "t": {
     "st": "frais",
-    "g": -1.58,
+    "g": -1.61,
     "a": 60
    }
   },
@@ -1169,15 +1175,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 161.88,
-   "d": -1.91,
-   "w": -2.06,
-   "m": -4.78,
-   "q": -3.15,
-   "y": 11.32,
-   "a": 13.63,
+   "p": 163.46,
+   "d": 2.99,
+   "w": -0.85,
+   "m": -4.93,
+   "q": -1.92,
+   "y": 12.41,
+   "a": 13.18,
    "h": [
-    168.1,
     167.8,
     166.2,
     166.9,
@@ -1206,14 +1211,15 @@
     169.1,
     165.3,
     159.3,
-    161.9
+    161.9,
+    163.5
    ],
    "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.29,
+   "p3": 0.555,
+   "x3": 1.19,
    "t": {
     "st": "frais",
-    "g": -2.84,
+    "g": -2.74,
     "a": 60
    }
   },
@@ -1223,15 +1229,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "GBp",
-   "p": 8681,
-   "d": -1.95,
-   "w": -1.72,
-   "m": -4.88,
-   "q": -5.08,
-   "y": 7,
-   "a": 8.3,
+   "p": 8764,
+   "d": 2.9,
+   "w": -0.88,
+   "m": -5.02,
+   "q": -5.13,
+   "y": 8.02,
+   "a": 8.16,
    "h": [
-    9240,
     9228,
     9140,
     9172,
@@ -1260,14 +1265,15 @@
     9044,
     8841,
     8553,
-    8681
+    8681,
+    8764
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.88,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.57,
    "t": {
     "st": "frais",
-    "g": -5.01,
+    "g": -5.15,
     "a": 60
    }
   },
@@ -1316,9 +1322,9 @@
     148.9,
     148
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.29,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.11,
    "t": {
     "st": "frais",
     "g": -7.16,
@@ -1370,9 +1376,9 @@
     148.2,
     147.5
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.25,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.08,
    "t": {
     "st": "frais",
     "g": -7.39,
@@ -1424,9 +1430,9 @@
     195.3,
     194.6
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.78,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.66,
    "t": {
     "st": "frais",
     "g": -6.03,
@@ -1478,9 +1484,9 @@
     98.76,
     99.18
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.65,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.56,
    "t": {
     "st": "frais",
     "g": -6.86,
@@ -1533,8 +1539,8 @@
     65.67
    ],
    "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.78,
+   "p3": 0.555,
+   "x3": 0.68,
    "t": {
     "st": "frais",
     "g": -8.93,
@@ -1547,15 +1553,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 136.61,
-   "d": -1.05,
-   "w": -2.47,
-   "m": -6.4,
-   "q": -7.45,
-   "y": 4.19,
-   "a": 7.59,
+   "p": 138.02,
+   "d": 3.01,
+   "w": -0.74,
+   "m": -5.99,
+   "q": -7.23,
+   "y": 5.27,
+   "a": 7.22,
    "h": [
-    148.6,
     148.1,
     146.6,
     147,
@@ -1584,14 +1589,15 @@
     143.1,
     139.3,
     134.8,
-    136.6
+    136.6,
+    138
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.08,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.76,
    "t": {
     "st": "frais",
-    "g": -6.9,
+    "g": -7.14,
     "a": 60
    }
   },
@@ -1601,15 +1607,14 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 9.72,
-   "d": -0.34,
-   "w": -2.16,
-   "m": -4.44,
-   "q": -9.15,
-   "y": 7.04,
-   "a": 10.63,
+   "p": 9.88,
+   "d": 2.74,
+   "w": 0.51,
+   "m": -3.35,
+   "q": -7.46,
+   "y": 8.81,
+   "a": 11,
    "h": [
-    10.64,
     10.62,
     10.48,
     10.44,
@@ -1638,14 +1643,15 @@
     10.11,
     9.896,
     9.591,
-    9.717
+    9.717,
+    9.878
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.79,
+   "p1": 0.526,
+   "p3": 0.555,
+   "x3": 0.93,
    "t": {
     "st": "frais",
-    "g": -7.69,
+    "g": -7.13,
     "a": 60
    }
   },
@@ -1694,9 +1700,9 @@
     722.3,
     716.7
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.29,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.13,
    "t": {
     "st": "frais",
     "g": -5.92,
@@ -1748,9 +1754,9 @@
     663.9,
     658.9
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.27,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.1,
    "t": {
     "st": "frais",
     "g": -5.91,
@@ -1763,15 +1769,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 33.14,
-   "d": -1.85,
-   "w": -1.78,
-   "m": -4.84,
-   "q": -1.29,
-   "y": 12.06,
-   "a": 11.86,
+   "p": 33.45,
+   "d": 3.17,
+   "w": -0.93,
+   "m": -5.03,
+   "q": -0.06,
+   "y": 13.1,
+   "a": 12.98,
    "h": [
-    33.78,
     33.55,
     33.29,
     33.51,
@@ -1800,14 +1805,15 @@
     34.51,
     33.84,
     32.62,
-    33.14
+    33.14,
+    33.45
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.25,
+   "p1": 0.532,
+   "p3": 0.555,
+   "x3": 1.32,
    "t": {
     "st": "frais",
-    "g": -0.91,
+    "g": -0.97,
     "a": 60
    }
   },
@@ -1817,15 +1823,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 52.69,
-   "d": -2.26,
-   "w": -1.4,
-   "m": -6.83,
-   "q": -4.91,
-   "y": 8.75,
-   "a": 9.07,
+   "p": 53.17,
+   "d": 3.12,
+   "w": -0.47,
+   "m": -6.92,
+   "q": -3.54,
+   "y": 9.74,
+   "a": 10.18,
    "h": [
-    55.46,
     55.31,
     54.6,
     54.62,
@@ -1854,14 +1859,15 @@
     54.88,
     53.45,
     51.6,
-    52.69
+    52.69,
+    53.17
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.02,
+   "p1": 0.531,
+   "p3": 0.555,
+   "x3": 1.08,
    "t": {
     "st": "frais",
-    "g": -4.03,
+    "g": -4.13,
     "a": 60
    }
   },
@@ -1871,15 +1877,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 773.39,
-   "d": -1.3,
-   "w": -2.22,
-   "m": -6.68,
-   "q": -6.47,
-   "y": 4.72,
-   "a": 7.98,
+   "p": 781.29,
+   "d": 3.31,
+   "w": -1,
+   "m": -6.46,
+   "q": -6.64,
+   "y": 5.79,
+   "a": 6.94,
    "h": [
-    835.4,
     830.3,
     823.5,
     827.5,
@@ -1908,14 +1913,15 @@
     808.4,
     789.9,
     762.4,
-    773.4
+    773.4,
+    781.3
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.22,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 0.96,
    "t": {
     "st": "frais",
-    "g": -6.25,
+    "g": -6.48,
     "a": 60
    }
   },
@@ -1925,15 +1931,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 705.18,
-   "d": -1.88,
-   "w": -1.72,
-   "m": -4.83,
-   "q": -1.27,
-   "y": 12.07,
-   "a": 13.47,
+   "p": 712.14,
+   "d": 3.2,
+   "w": -0.99,
+   "m": -4.97,
+   "q": 0.01,
+   "y": 13.18,
+   "a": 13.08,
    "h": [
-    718.6,
     714,
     708.1,
     712.9,
@@ -1962,14 +1967,15 @@
     734.5,
     719.9,
     694.1,
-    705.2
+    705.2,
+    712.1
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.25,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.07,
    "t": {
     "st": "frais",
-    "g": -0.92,
+    "g": -0.9,
     "a": 60
    }
   },
@@ -2018,9 +2024,9 @@
     651,
     633.9
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.07,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.76,
    "t": {
     "st": "frais",
     "g": -10.42,
@@ -2033,15 +2039,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 95.16,
-   "d": -3.51,
-   "w": -2.57,
-   "m": -9.53,
-   "q": -6.43,
-   "y": 9.66,
-   "a": 8.98,
+   "p": 95.85,
+   "d": 4.38,
+   "w": -3.57,
+   "m": -10.34,
+   "q": -5.45,
+   "y": 10.45,
+   "a": 9.61,
    "h": [
-    101.8,
     102,
     101.5,
     101.9,
@@ -2070,14 +2075,15 @@
     100.3,
     98.63,
     93.77,
-    95.16
+    95.16,
+    95.85
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.75,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 1.43,
    "t": {
     "st": "frais",
-    "g": -5.82,
+    "g": -5.83,
     "a": 60
    }
   },
@@ -2087,15 +2093,14 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "GBp",
-   "p": 48554,
-   "d": -3.52,
-   "w": -2.17,
-   "m": -9.51,
-   "q": -7.47,
-   "y": 5.13,
-   "a": 5.01,
+   "p": 48895,
+   "d": 4.27,
+   "w": -3.59,
+   "m": -10.33,
+   "q": -8.73,
+   "y": 5.87,
+   "a": 4.69,
    "h": [
-    53300,
     53360,
     53100,
     53270,
@@ -2124,14 +2129,15 @@
     51000,
     50170,
     47900,
-    48550
+    48550,
+    48900
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1.56,
+   "p1": 0.526,
+   "p3": 0.555,
+   "x3": 1.22,
    "t": {
     "st": "frais",
-    "g": -7.96,
+    "g": -8.26,
     "a": 60
    }
   },
@@ -2180,9 +2186,9 @@
     495.8,
     501.3
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 0.86,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 0.75,
    "t": {
     "st": "frais",
     "g": -5.02,
@@ -2234,9 +2240,9 @@
     265.7,
     268.9
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.69,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.6,
    "t": {
     "st": "frais",
     "g": -7.47,
@@ -2288,9 +2294,9 @@
     647.5,
     653.7
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.14,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.11,
    "t": {
     "st": "frais",
     "g": -3.86,
@@ -2342,9 +2348,9 @@
     355.3,
     353.2
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.28,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.11,
    "t": {
     "st": "frais",
     "g": -5.86,
@@ -2396,9 +2402,9 @@
     212.8,
     215.7
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 0.97,
+   "p1": 0.526,
+   "p3": 0.555,
+   "x3": 0.84,
    "t": {
     "st": "frais",
     "g": -0.85,
@@ -2450,9 +2456,9 @@
     268,
     261
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.02,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.72,
    "t": {
     "st": "frais",
     "g": -10.42,
@@ -2504,9 +2510,9 @@
     82.18,
     80.31
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.96,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.66,
    "t": {
     "st": "frais",
     "g": -9.8,
@@ -2558,9 +2564,9 @@
     58.4,
     57.3
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.65,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.41,
    "t": {
     "st": "frais",
     "g": -7.77,
@@ -2573,15 +2579,14 @@
    "k": "europe",
    "e": "🇫🇷",
    "cur": "EUR",
-   "p": 81.58,
-   "d": -0.15,
-   "w": -1.96,
-   "m": 2.68,
-   "q": -2.8,
-   "y": 1.51,
-   "a": -0.4,
+   "p": 82.4,
+   "d": 1.65,
+   "w": 0.51,
+   "m": 3.12,
+   "q": -2.06,
+   "y": 2.53,
+   "a": 0.55,
    "h": [
-    83.64,
     83.8,
     82.45,
     82.59,
@@ -2610,14 +2615,15 @@
     84.65,
     82.53,
     80.44,
-    81.58
+    81.58,
+    82.4
    ],
-   "p1": 0.511,
-   "p3": 0.557,
-   "x3": -0.16,
+   "p1": 0.51,
+   "p3": 0.555,
+   "x3": -0.08,
    "t": {
     "st": "frais",
-    "g": -2.6,
+    "g": -1.48,
     "a": 60
    }
   },
@@ -2627,15 +2633,14 @@
    "k": "europe",
    "e": "🇫🇷",
    "cur": "EUR",
-   "p": 141.9,
-   "d": 0.18,
-   "w": -1.66,
-   "m": 3.5,
-   "q": -3.26,
-   "y": -1.25,
-   "a": -0.5,
+   "p": 143.1,
+   "d": 1.68,
+   "w": 0.65,
+   "m": 3.74,
+   "q": -2.44,
+   "y": -0.42,
+   "a": 0.34,
    "h": [
-    145.3,
     145.7,
     142.7,
     143,
@@ -2664,14 +2669,15 @@
     147.4,
     143.5,
     139.4,
-    141.9
+    141.9,
+    143.1
    ],
-   "p1": 0.513,
-   "p3": 0.557,
-   "x3": 0.1,
+   "p1": 0.512,
+   "p3": 0.555,
+   "x3": 0.05,
    "t": {
     "st": "frais",
-    "g": -2.53,
+    "g": -1.49,
     "a": 60
    }
   },
@@ -2681,15 +2687,14 @@
    "k": "europe",
    "e": "🇩🇪",
    "cur": "EUR",
-   "p": 206.15,
-   "d": -1.25,
-   "w": -3.94,
-   "m": -1.55,
-   "q": -5.11,
-   "y": 1.53,
-   "a": 6.07,
+   "p": 208,
+   "d": 2.24,
+   "w": -0.91,
+   "m": -1.77,
+   "q": -3.9,
+   "y": 2.44,
+   "a": 5.66,
    "h": [
-    214.4,
     214.4,
     210.9,
     210.8,
@@ -2718,14 +2723,15 @@
     219.2,
     212,
     204.3,
-    206.1
+    206.1,
+    208
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.77,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 0.96,
    "t": {
     "st": "frais",
-    "g": -3.67,
+    "g": -2.99,
     "a": 60
    }
   },
@@ -2735,15 +2741,14 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 312.9,
-   "d": -0.78,
-   "w": -2.66,
-   "m": -1.17,
-   "q": -2.58,
-   "y": 9.77,
-   "a": 13.07,
+   "p": 315.35,
+   "d": 1.86,
+   "w": -0.05,
+   "m": -0.88,
+   "q": -1.58,
+   "y": 10.63,
+   "a": 13.93,
    "h": [
-    320.1,
     320.5,
     315.6,
     315.3,
@@ -2772,14 +2777,15 @@
     327.3,
     318.5,
     309.2,
-    312.9
+    312.9,
+    315.4
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.8,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.66,
    "t": {
     "st": "frais",
-    "g": -1.96,
+    "g": -1.48,
     "a": 60
    }
   },
@@ -2789,15 +2795,14 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 62.82,
-   "d": -0.63,
-   "w": -2.59,
-   "m": -0.93,
-   "q": -3.67,
-   "y": 7.2,
-   "a": 11.5,
+   "p": 63.28,
+   "d": 1.83,
+   "w": -0.08,
+   "m": -0.88,
+   "q": -2.6,
+   "y": 7.99,
+   "a": 10.92,
    "h": [
-    64.98,
     64.97,
     64.01,
     63.86,
@@ -2826,14 +2831,15 @@
     65.68,
     63.82,
     61.99,
-    62.82
+    62.82,
+    63.28
    ],
-   "p1": 0.527,
-   "p3": 0.557,
-   "x3": 0.86,
+   "p1": 0.531,
+   "p3": 0.555,
+   "x3": 0.94,
    "t": {
     "st": "frais",
-    "g": -3.03,
+    "g": -2.62,
     "a": 60
    }
   },
@@ -2882,9 +2888,9 @@
     63.09,
     62.79
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.77,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.64,
    "t": {
     "st": "frais",
     "g": -10.29,
@@ -2936,9 +2942,9 @@
     84.55,
     84.95
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.77,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.66,
    "t": {
     "st": "frais",
     "g": -6.36,
@@ -2991,8 +2997,8 @@
     63.27
    ],
    "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.74,
+   "p3": 0.555,
+   "x3": 0.63,
    "t": {
     "st": "frais",
     "g": -9.13,
@@ -3005,15 +3011,14 @@
    "k": "europe",
    "e": "🇬🇧",
    "cur": "GBp",
-   "p": 1022,
-   "d": -0.21,
-   "w": -2.05,
-   "m": -2.52,
-   "q": -4.16,
-   "y": 5.72,
-   "a": 8.82,
+   "p": 1037.6,
+   "d": 1.93,
+   "w": 1.65,
+   "m": -0.36,
+   "q": -2.21,
+   "y": 7.33,
+   "a": 9.47,
    "h": [
-    1062,
     1061,
     1046,
     1044,
@@ -3042,14 +3047,15 @@
     1062,
     1030,
     1011,
-    1022
+    1022,
+    1038
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.51,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.43,
    "t": {
     "st": "frais",
-    "g": -3.38,
+    "g": -2.32,
     "a": 60
    }
   },
@@ -3098,9 +3104,9 @@
     45.52,
     46.12
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 0.96,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.85,
    "t": {
     "st": "frais",
     "g": -4.3,
@@ -3152,9 +3158,9 @@
     40.09,
     40.08
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.29,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.22,
    "t": {
     "st": "frais",
     "g": -7.73,
@@ -3206,9 +3212,9 @@
     41.65,
     42.16
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.72,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.62,
    "t": {
     "st": "frais",
     "g": -7.22,
@@ -3261,8 +3267,8 @@
     54.54
    ],
    "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.49,
+   "p3": 0.555,
+   "x3": 0.42,
    "t": {
     "st": "frais",
     "g": -10.88,
@@ -3314,9 +3320,9 @@
     56.45,
     56.23
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.37,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.2,
    "t": {
     "st": "frais",
     "g": -8.66,
@@ -3369,8 +3375,8 @@
     64.06
    ],
    "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.81,
+   "p3": 0.555,
+   "x3": 0.7,
    "t": {
     "st": "en cours",
     "g": 2.45,
@@ -3422,9 +3428,9 @@
     60.82,
     59.85
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 1.24,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 1.02,
    "t": {
     "st": "frais",
     "g": -11.15,
@@ -3476,9 +3482,9 @@
     49.96,
     50.34
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.55,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.47,
    "t": {
     "st": "frais",
     "g": -3.91,
@@ -3530,9 +3536,9 @@
     34.35,
     34.51
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.66,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.58,
    "t": {
     "st": "frais",
     "g": -7.55,
@@ -3584,9 +3590,9 @@
     113,
     114.3
    ],
-   "p1": 0.532,
-   "p3": 0.557,
-   "x3": 1.52,
+   "p1": 0.53,
+   "p3": 0.555,
+   "x3": 1.33,
    "t": {
     "st": "frais",
     "g": -2.14,
@@ -3638,9 +3644,9 @@
     77.33,
     75.01
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 1.38,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 1.19,
    "t": {
     "st": "frais",
     "g": -10.7,
@@ -3692,9 +3698,9 @@
     41.6,
     40.55
    ],
-   "p1": 0.533,
-   "p3": 0.557,
-   "x3": 1.89,
+   "p1": 0.531,
+   "p3": 0.555,
+   "x3": 1.64,
    "t": {
     "st": "frais",
     "g": -7.38,
@@ -3746,9 +3752,9 @@
     38.39,
     37.6
    ],
-   "p1": 0.527,
-   "p3": 0.557,
-   "x3": 1.56,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 1.34,
    "t": {
     "st": "frais",
     "g": -13.82,
@@ -3801,7 +3807,7 @@
     26.23
    ],
    "p1": 0.512,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": -0.01,
    "t": {
     "st": "frais",
@@ -3854,9 +3860,9 @@
     79.84,
     78.75
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.46,
+   "p1": 0.53,
+   "p3": 0.555,
+   "x3": 1.26,
    "t": {
     "st": "frais",
     "g": -4.59,
@@ -3869,15 +3875,14 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 39.23,
-   "d": -0.71,
-   "w": -2.61,
-   "m": -1.02,
-   "q": -2.49,
-   "y": 9.64,
-   "a": 12.94,
+   "p": 39.49,
+   "d": 1.71,
+   "w": -0.04,
+   "m": -0.93,
+   "q": -1.51,
+   "y": 10.38,
+   "a": 13.69,
    "h": [
-    40.08,
     40.1,
     39.53,
     39.49,
@@ -3906,14 +3911,15 @@
     41.01,
     39.9,
     38.74,
-    39.23
+    39.23,
+    39.49
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.17,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.79,
    "t": {
     "st": "frais",
-    "g": -1.8,
+    "g": -1.47,
     "a": 60
    }
   },
@@ -3962,9 +3968,9 @@
     71.14,
     71.65
    ],
-   "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.24,
+   "p1": 0.515,
+   "p3": 0.555,
+   "x3": 0.19,
    "t": {
     "st": "frais",
     "g": -6.9,
@@ -3977,15 +3983,14 @@
    "k": "asie",
    "e": "🌏",
    "cur": "EUR",
-   "p": 31.91,
-   "d": -3.97,
-   "w": -2.48,
-   "m": -6.95,
-   "q": -11,
-   "y": 11.3,
-   "a": 13.08,
+   "p": 32.1,
+   "d": 4,
+   "w": -1.59,
+   "m": -8.95,
+   "q": -10.16,
+   "y": 11.98,
+   "a": 13.41,
    "h": [
-    35.88,
     36.63,
     36.54,
     36.38,
@@ -4014,14 +4019,15 @@
     33.58,
     32.76,
     30.99,
-    31.91
+    31.91,
+    32.1
    ],
-   "p1": 0.532,
-   "p3": 0.557,
-   "x3": 2.43,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.66,
    "t": {
     "st": "frais",
-    "g": -11.32,
+    "g": -10.52,
     "a": 60
    }
   },
@@ -4070,9 +4076,9 @@
     57.83,
     56.4
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.3,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.09,
    "t": {
     "st": "frais",
     "g": -15.53,
@@ -4124,9 +4130,9 @@
     53.55,
     52.78
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.95,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.78,
    "t": {
     "st": "frais",
     "g": -13.02,
@@ -4178,9 +4184,9 @@
     70.43,
     68.78
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.27,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.06,
    "t": {
     "st": "frais",
     "g": -15.53,
@@ -4193,15 +4199,14 @@
    "k": "asie",
    "e": "🌏",
    "cur": "EUR",
-   "p": 42.1,
-   "d": -3.75,
-   "w": -2.56,
-   "m": -7.12,
-   "q": -11.47,
-   "y": 9.78,
-   "a": 11.75,
+   "p": 42.4,
+   "d": 4.11,
+   "w": -1.59,
+   "m": -8.84,
+   "q": -10.48,
+   "y": 10.56,
+   "a": 11.64,
    "h": [
-    47.53,
     48.42,
     48.3,
     48,
@@ -4230,14 +4235,15 @@
     44.32,
     43.24,
     40.96,
-    42.1
+    42.1,
+    42.4
    ],
-   "p1": 0.532,
-   "p3": 0.557,
-   "x3": 2.44,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.89,
    "t": {
     "st": "frais",
-    "g": -11.65,
+    "g": -10.81,
     "a": 60
    }
   },
@@ -4286,9 +4292,9 @@
     99.85,
     97.19
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.38,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.15,
    "t": {
     "st": "frais",
     "g": -16.42,
@@ -4340,9 +4346,9 @@
     52.27,
     52.36
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.7,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.61,
    "t": {
     "st": "frais",
     "g": -8.3,
@@ -4394,9 +4400,9 @@
     100.8,
     99.74
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.7,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.46,
    "t": {
     "st": "frais",
     "g": -12.59,
@@ -4448,9 +4454,9 @@
     100.3,
     98.18
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.17,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.97,
    "t": {
     "st": "frais",
     "g": -15.8,
@@ -4502,9 +4508,9 @@
     84.4,
     82.29
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.4,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.04,
    "t": {
     "st": "frais",
     "g": -16.05,
@@ -4556,9 +4562,9 @@
     29.58,
     30.03
    ],
-   "p1": 0.522,
-   "p3": 0.557,
-   "x3": 1.25,
+   "p1": 0.521,
+   "p3": 0.555,
+   "x3": 1.11,
    "t": {
     "st": "frais",
     "g": -14.35,
@@ -4611,8 +4617,8 @@
     23.95
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.31,
+   "p3": 0.555,
+   "x3": 0.24,
    "t": {
     "st": "frais",
     "g": -16.7,
@@ -4664,9 +4670,9 @@
     86.9,
     87.25
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.5,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.31,
    "t": {
     "st": "frais",
     "g": -8.37,
@@ -4718,9 +4724,9 @@
     55.92,
     56.45
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.95,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.83,
    "t": {
     "st": "frais",
     "g": -5.95,
@@ -4772,9 +4778,9 @@
     135.7,
     129.2
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 2.36,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.97,
    "t": {
     "st": "frais",
     "g": -26.51,
@@ -4826,9 +4832,9 @@
     88.21,
     83.48
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 4.2,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 3.54,
    "t": {
     "st": "frais",
     "g": -23.93,
@@ -4880,9 +4886,9 @@
     47.06,
     46.43
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.13,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.12,
    "t": {
     "st": "frais",
     "g": -14.67,
@@ -4934,9 +4940,9 @@
     31.63,
     31.3
    ],
-   "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.12,
+   "p1": 0.514,
+   "p3": 0.555,
+   "x3": 0.11,
    "t": {
     "st": "frais",
     "g": -11.43,
@@ -4989,8 +4995,8 @@
     21.17
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.11,
+   "p3": 0.555,
+   "x3": 0.09,
    "t": {
     "st": "frais",
     "g": -17.59,
@@ -5043,8 +5049,8 @@
     29.5
    ],
    "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.15,
+   "p3": 0.555,
+   "x3": 0.1,
    "t": {
     "st": "frais",
     "g": -13.77,
@@ -5097,8 +5103,8 @@
     22.15
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.76,
+   "p3": 0.555,
+   "x3": 0.67,
    "t": {
     "st": "frais",
     "g": -1.77,
@@ -5150,8 +5156,8 @@
     52.14,
     53.2
    ],
-   "p1": 0.505,
-   "p3": 0.557,
+   "p1": 0.506,
+   "p3": 0.555,
    "x3": 0.2,
    "t": {
     "st": "tardif",
@@ -5205,8 +5211,8 @@
     71.41
    ],
    "p1": 0.515,
-   "p3": 0.557,
-   "x3": 1.08,
+   "p3": 0.555,
+   "x3": 0.95,
    "t": {
     "st": "frais",
     "g": -0.39,
@@ -5258,9 +5264,9 @@
     28.44,
     28.1
    ],
-   "p1": 0.527,
-   "p3": 0.557,
-   "x3": 0.98,
+   "p1": 0.526,
+   "p3": 0.555,
+   "x3": 0.84,
    "t": {
     "st": "frais",
     "g": -16.67,
@@ -5312,9 +5318,9 @@
     25.56,
     25.69
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": -0.04,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": -0.05,
    "t": {
     "st": "frais",
     "g": -7.32,
@@ -5367,8 +5373,8 @@
     64.5
    ],
    "p1": 0.52,
-   "p3": 0.557,
-   "x3": 0.62,
+   "p3": 0.555,
+   "x3": 0.51,
    "t": {
     "st": "frais",
     "g": -10.08,
@@ -5421,8 +5427,8 @@
     10.5
    ],
    "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.87,
+   "p3": 0.555,
+   "x3": 0.74,
    "t": {
     "st": "frais",
     "g": -18.79,
@@ -5474,9 +5480,9 @@
     21.24,
     21.53
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.6,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.51,
    "t": {
     "st": "frais",
     "g": -10.81,
@@ -5528,9 +5534,9 @@
     16.71,
     16.58
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.23,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.16,
    "t": {
     "st": "frais",
     "g": -8.45,
@@ -5582,9 +5588,9 @@
     27.22,
     27.37
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.72,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.62,
    "t": {
     "st": "frais",
     "g": -7.78,
@@ -5637,8 +5643,8 @@
     45.14
    ],
    "p1": 0.508,
-   "p3": 0.557,
-   "x3": -0.29,
+   "p3": 0.555,
+   "x3": -0.3,
    "t": {
     "st": "frais",
     "g": -4.83,
@@ -5690,9 +5696,9 @@
     56.21,
     56.89
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1.08,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.93,
    "t": {
     "st": "frais",
     "g": -6.12,
@@ -5745,8 +5751,8 @@
     30.16
    ],
    "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.25,
+   "p3": 0.555,
+   "x3": 0.18,
    "t": {
     "st": "frais",
     "g": -17.53,
@@ -5798,9 +5804,9 @@
     72.74,
     73.34
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.5,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.44,
    "t": {
     "st": "frais",
     "g": -3.07,
@@ -5852,9 +5858,9 @@
     34.25,
     33.3
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.31,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.27,
    "t": {
     "st": "frais",
     "g": -17.55,
@@ -5907,8 +5913,8 @@
     67.46
    ],
    "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.37,
+   "p3": 0.555,
+   "x3": 0.29,
    "t": {
     "st": "frais",
     "g": -29.33,
@@ -5960,9 +5966,9 @@
     74.2,
     73.11
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.33,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.15,
    "t": {
     "st": "frais",
     "g": -19.55,
@@ -6014,9 +6020,9 @@
     59.06,
     59.03
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.54,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.42,
    "t": {
     "st": "frais",
     "g": -15.11,
@@ -6068,9 +6074,9 @@
     30,
     29.08
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.33,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.17,
    "t": {
     "st": "frais",
     "g": -26.93,
@@ -6122,9 +6128,9 @@
     34.95,
     34.92
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.38,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.32,
    "t": {
     "st": "frais",
     "g": -9.58,
@@ -6176,9 +6182,9 @@
     21.33,
     22.06
    ],
-   "p1": 0.508,
-   "p3": 0.557,
-   "x3": 0.46,
+   "p1": 0.509,
+   "p3": 0.555,
+   "x3": 0.38,
    "t": {
     "st": "tardif",
     "g": 14.78,
@@ -6230,9 +6236,9 @@
     17.63,
     17.72
    ],
-   "p1": 0.5,
-   "p3": 0.557,
-   "x3": -0.19,
+   "p1": 0.501,
+   "p3": 0.555,
+   "x3": -0.17,
    "t": {
     "st": "en cours",
     "g": 2.4,
@@ -6284,9 +6290,9 @@
     105.3,
     104
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.77,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.64,
    "t": {
     "st": "frais",
     "g": -14.24,
@@ -6338,9 +6344,9 @@
     162.4,
     155.8
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.64,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.25,
    "t": {
     "st": "frais",
     "g": -15.17,
@@ -6392,9 +6398,9 @@
     55.65,
     56.51
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 1.13,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.99,
    "t": {
     "st": "frais",
     "g": -1.21,
@@ -6446,9 +6452,9 @@
     59.87,
     60.9
    ],
-   "p1": 0.536,
-   "p3": 0.557,
-   "x3": 1.94,
+   "p1": 0.534,
+   "p3": 0.555,
+   "x3": 1.7,
    "t": {
     "st": "frais",
     "g": -5.97,
@@ -6500,9 +6506,9 @@
     179.4,
     183.7
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.88,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.77,
    "t": {
     "st": "tardif",
     "g": 7,
@@ -6554,9 +6560,9 @@
     162.5,
     162.9
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.68,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.6,
    "t": {
     "st": "frais",
     "g": -5.66,
@@ -6608,9 +6614,9 @@
     116.9,
     117.5
    ],
-   "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.99,
+   "p1": 0.514,
+   "p3": 0.555,
+   "x3": 0.88,
    "t": {
     "st": "en cours",
     "g": 2.53,
@@ -6662,9 +6668,9 @@
     90.38,
     92.3
    ],
-   "p1": 0.506,
-   "p3": 0.557,
-   "x3": 0.1,
+   "p1": 0.507,
+   "p3": 0.555,
+   "x3": 0.07,
    "t": {
     "st": "tardif",
     "g": 8.27,
@@ -6717,8 +6723,8 @@
     43.61
    ],
    "p1": 0.513,
-   "p3": 0.557,
-   "x3": 0.14,
+   "p3": 0.555,
+   "x3": 0.11,
    "t": {
     "st": "en cours",
     "g": 2.47,
@@ -6770,9 +6776,9 @@
     49.9,
     51.21
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.86,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.74,
    "t": {
     "st": "frais",
     "g": -1.65,
@@ -6825,8 +6831,8 @@
     43.86
    ],
    "p1": 0.509,
-   "p3": 0.557,
-   "x3": 0.28,
+   "p3": 0.555,
+   "x3": 0.23,
    "t": {
     "st": "frais",
     "g": -0.41,
@@ -6879,8 +6885,8 @@
     105.4
    ],
    "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.41,
+   "p3": 0.555,
+   "x3": 0.33,
    "t": {
     "st": "frais",
     "g": -4.96,
@@ -6932,9 +6938,9 @@
     460.2,
     422.5
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 4.13,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 3.51,
    "t": {
     "st": "frais",
     "g": -22.52,
@@ -6986,9 +6992,9 @@
     140.2,
     128
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 4.61,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 3.95,
    "t": {
     "st": "frais",
     "g": -23.26,
@@ -7040,9 +7046,9 @@
     95.26,
     95.02
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 2.53,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 2.2,
    "t": {
     "st": "frais",
     "g": -10.51,
@@ -7094,9 +7100,9 @@
     208.7,
     218.3
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 2.21,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.92,
    "t": {
     "st": "en cours",
     "g": 3.53,
@@ -7148,9 +7154,9 @@
     147.2,
     156.6
    ],
-   "p1": 0.527,
-   "p3": 0.557,
-   "x3": 2.31,
+   "p1": 0.526,
+   "p3": 0.555,
+   "x3": 1.97,
    "t": {
     "st": "frais",
     "g": -4.16,
@@ -7202,9 +7208,9 @@
     56.51,
     57.82
    ],
-   "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.95,
+   "p1": 0.515,
+   "p3": 0.555,
+   "x3": 0.81,
    "t": {
     "st": "tardif",
     "g": 6.5,
@@ -7256,9 +7262,9 @@
     68.48,
     68.77
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 0.85,
    "t": {
     "st": "frais",
     "g": -8.49,
@@ -7310,9 +7316,9 @@
     69.54,
     69.83
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 0.4,
+   "p1": 0.519,
+   "p3": 0.555,
+   "x3": 0.36,
    "t": {
     "st": "frais",
     "g": -3.84,
@@ -7364,9 +7370,9 @@
     63.56,
     64.11
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.39,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.35,
    "t": {
     "st": "frais",
     "g": -4.24,
@@ -7418,9 +7424,9 @@
     171,
     170.3
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.41,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.32,
    "t": {
     "st": "frais",
     "g": -11.02,
@@ -7472,9 +7478,9 @@
     93.3,
     98.34
    ],
-   "p1": 0.506,
-   "p3": 0.557,
-   "x3": -0.18,
+   "p1": 0.507,
+   "p3": 0.555,
+   "x3": -0.16,
    "t": {
     "st": "en cours",
     "g": 6.47,
@@ -7527,8 +7533,8 @@
     89.66
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": 1.1,
+   "p3": 0.555,
+   "x3": 0.96,
    "t": {
     "st": "en cours",
     "g": 4.35,
@@ -7580,9 +7586,9 @@
     165.3,
     167.9
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1.62,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 1.41,
    "t": {
     "st": "frais",
     "g": -12.86,
@@ -7634,9 +7640,9 @@
     336.7,
     346.8
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.14,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.02,
    "t": {
     "st": "frais",
     "g": -18.75,
@@ -7688,9 +7694,9 @@
     85.06,
     84.89
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.06,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.94,
    "t": {
     "st": "frais",
     "g": -26.67,
@@ -7742,9 +7748,9 @@
     80.33,
     81.77
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.24,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.19,
    "t": {
     "st": "frais",
     "g": -1.4,
@@ -7796,9 +7802,9 @@
     46.62,
     46.93
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.43,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.38,
    "t": {
     "st": "frais",
     "g": -2.45,
@@ -7851,8 +7857,8 @@
     95.66
    ],
    "p1": 0.512,
-   "p3": 0.557,
-   "x3": 0.35,
+   "p3": 0.555,
+   "x3": 0.3,
    "t": {
     "st": "frais",
     "g": -0.66,
@@ -7865,15 +7871,14 @@
    "k": "secteur",
    "e": "🏦",
    "cur": "EUR",
-   "p": 37.56,
-   "d": -1.84,
-   "w": -4.6,
-   "m": -1.47,
-   "q": -10.33,
-   "y": 6.6,
-   "a": 17.91,
+   "p": 37.34,
+   "d": 2.53,
+   "w": -2.98,
+   "m": -2.21,
+   "q": -11.6,
+   "y": 5.97,
+   "a": 14.68,
    "h": [
-    43,
     43.18,
     42.6,
     43.03,
@@ -7902,14 +7907,15 @@
     40.15,
     38.57,
     37.26,
-    37.56
+    37.56,
+    37.34
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.35,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 1.22,
    "t": {
     "st": "frais",
-    "g": -10.97,
+    "g": -13.16,
     "a": 60
    }
   },
@@ -7919,15 +7925,14 @@
    "k": "secteur",
    "e": "🛢️",
    "cur": "EUR",
-   "p": 53,
-   "d": -1.36,
-   "w": -5.34,
-   "m": -10.11,
-   "q": -1.03,
-   "y": 29.7,
-   "a": 31.89,
+   "p": 53.5,
+   "d": 1.96,
+   "w": -1.73,
+   "m": -9.32,
+   "q": -0.78,
+   "y": 30.92,
+   "a": 31.68,
    "h": [
-    55.03,
     55.35,
     55.96,
     56.11,
@@ -7956,14 +7961,15 @@
     56.45,
     54.82,
     53.45,
-    53
+    53,
+    53.5
    ],
    "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.96,
+   "p3": 0.555,
+   "x3": 0.86,
    "t": {
     "st": "frais",
-    "g": -3.41,
+    "g": -2.78,
     "a": 60
    }
   },
@@ -7973,15 +7979,14 @@
    "k": "secteur",
    "e": "💊",
    "cur": "EUR",
-   "p": 126.24,
-   "d": 1.81,
-   "w": 0.24,
-   "m": 5.45,
-   "q": 10.1,
-   "y": 10.7,
-   "a": 12.23,
+   "p": 127.36,
+   "d": 0.87,
+   "w": 3.65,
+   "m": 5.92,
+   "q": 12.61,
+   "y": 11.68,
+   "a": 12.93,
    "h": [
-    114.6,
     112.3,
     108.5,
     107.1,
@@ -8010,14 +8015,15 @@
     128.1,
     125.1,
     122.6,
-    126.2
+    126.2,
+    127.4
    ],
    "p1": 0.508,
-   "p3": 0.557,
-   "x3": 0.47,
+   "p3": 0.555,
+   "x3": 0.62,
    "t": {
     "st": "tardif",
-    "g": 10.76,
+    "g": 11.11,
     "a": 60
    }
   },
@@ -8027,15 +8033,14 @@
    "k": "secteur",
    "e": "💻",
    "cur": "EUR",
-   "p": 87.8,
-   "d": -2.88,
-   "w": -4.35,
-   "m": -9.9,
-   "q": -11.03,
-   "y": 9.49,
-   "a": 13.47,
+   "p": 87.64,
+   "d": 2.98,
+   "w": -4.41,
+   "m": -11.96,
+   "q": -10.19,
+   "y": 9.29,
+   "a": 11.2,
    "h": [
-    95.69,
     98.22,
     96.11,
     95.53,
@@ -8064,14 +8069,15 @@
     95.61,
     91.47,
     86.62,
-    87.8
+    87.8,
+    87.64
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1.54,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 1.48,
    "t": {
     "st": "frais",
-    "g": -8.15,
+    "g": -8.41,
     "a": 60
    }
   },
@@ -8081,15 +8087,14 @@
    "k": "secteur",
    "e": "🏭",
    "cur": "EUR",
-   "p": 109,
-   "d": -1.89,
-   "w": -3.21,
-   "m": -2.21,
-   "q": -10.61,
-   "y": 1.98,
-   "a": 6.97,
+   "p": 109.4,
+   "d": 2.3,
+   "w": -1.71,
+   "m": -3.22,
+   "q": -8.95,
+   "y": 2.36,
+   "a": 5.86,
    "h": [
-    117.7,
     118.4,
     116.5,
     116.3,
@@ -8118,14 +8123,15 @@
     114.3,
     111.7,
     107.7,
-    109
+    109,
+    109.4
    ],
-   "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0,
+   "p1": 0.512,
+   "p3": 0.555,
+   "x3": -0.21,
    "t": {
     "st": "frais",
-    "g": -7.58,
+    "g": -7.04,
     "a": 60
    }
   },
@@ -8135,15 +8141,14 @@
    "k": "secteur",
    "e": "🚗",
    "cur": "EUR",
-   "p": 36.32,
-   "d": -1.25,
-   "w": -3.38,
-   "m": -3.81,
-   "q": -10.43,
-   "y": -23.32,
-   "a": -21.1,
+   "p": 38.06,
+   "d": 3.27,
+   "w": 2.22,
+   "m": 0.59,
+   "q": -8.74,
+   "y": -19.66,
+   "a": -17.81,
    "h": [
-    41.26,
     41.73,
     40.98,
     41.29,
@@ -8172,14 +8177,15 @@
     38.26,
     37.65,
     36.4,
-    36.32
+    36.32,
+    38.06
    ],
-   "p1": 0.513,
-   "p3": 0.557,
-   "x3": -0.04,
+   "p1": 0.515,
+   "p3": 0.555,
+   "x3": 0.35,
    "t": {
     "st": "frais",
-    "g": -11.64,
+    "g": -7.78,
     "a": 60
    }
   },
@@ -8189,15 +8195,14 @@
    "k": "secteur",
    "e": "💡",
    "cur": "EUR",
-   "p": 58.35,
-   "d": 0.33,
-   "w": -1.03,
-   "m": 2.58,
-   "q": 4.91,
-   "y": 15.82,
-   "a": 18.2,
+   "p": 58.86,
+   "d": 1.34,
+   "w": 1.85,
+   "m": 2.35,
+   "q": 4.99,
+   "y": 16.83,
+   "a": 17.76,
    "h": [
-    54.62,
     55.09,
     55.08,
     55.06,
@@ -8226,14 +8231,15 @@
     59.87,
     58.44,
     57.68,
-    58.35
+    58.35,
+    58.86
    ],
-   "p1": 0.512,
-   "p3": 0.557,
-   "x3": 0.37,
+   "p1": 0.509,
+   "p3": 0.555,
+   "x3": 0.22,
    "t": {
     "st": "tardif",
-    "g": 4.89,
+    "g": 7.76,
     "a": 60
    }
   },
@@ -8243,15 +8249,14 @@
    "k": "secteur",
    "e": "🧪",
    "cur": "EUR",
-   "p": 133.5,
-   "d": -0.15,
-   "w": -2.48,
-   "m": 1.17,
-   "q": 5.9,
-   "y": 21.58,
-   "a": 21.45,
+   "p": 135.14,
+   "d": 1.55,
+   "w": 0.43,
+   "m": 3.22,
+   "q": 5.46,
+   "y": 23.08,
+   "a": 22.68,
    "h": [
-    128.7,
     127.4,
     126.5,
     124.2,
@@ -8280,14 +8285,15 @@
     138.3,
     136.1,
     132.9,
-    133.5
+    133.5,
+    135.1
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 0.74,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.59,
    "t": {
     "st": "tardif",
-    "g": 4.04,
+    "g": 5,
     "a": 60
    }
   },
@@ -8297,15 +8303,14 @@
    "k": "secteur",
    "e": "🛡️",
    "cur": "EUR",
-   "p": 56.93,
-   "d": 0.07,
-   "w": -1.54,
-   "m": 3.85,
-   "q": 4.61,
-   "y": 11.91,
-   "a": 17.88,
+   "p": 57.46,
+   "d": 1.29,
+   "w": 1.5,
+   "m": 4.42,
+   "q": 4.97,
+   "y": 12.95,
+   "a": 17.12,
    "h": [
-    55.48,
     54.82,
     53.58,
     53.96,
@@ -8334,14 +8339,15 @@
     58.68,
     57.18,
     56.43,
-    56.93
+    56.93,
+    57.46
    ],
    "p1": 0.513,
-   "p3": 0.557,
-   "x3": 0.49,
+   "p3": 0.555,
+   "x3": 0.28,
    "t": {
     "st": "tardif",
-    "g": 3.74,
+    "g": 3.57,
     "a": 60
    }
   },
@@ -8351,15 +8357,14 @@
    "k": "secteur",
    "e": "🧱",
    "cur": "EUR",
-   "p": 85.56,
-   "d": -1.33,
-   "w": -2.22,
-   "m": 5.05,
-   "q": -2.51,
-   "y": -3.7,
-   "a": -0.79,
+   "p": 87,
+   "d": 1.89,
+   "w": 0.65,
+   "m": 5.16,
+   "q": 0.15,
+   "y": -2.08,
+   "a": -0.09,
    "h": [
-    86.06,
     86.71,
     84.91,
     83.84,
@@ -8388,14 +8393,15 @@
     88.64,
     87.15,
     84.63,
-    85.56
+    85.56,
+    87
    ],
-   "p1": 0.498,
-   "p3": 0.557,
-   "x3": -0.57,
+   "p1": 0.502,
+   "p3": 0.555,
+   "x3": -0.4,
    "t": {
-    "st": "frais",
-    "g": -0.89,
+    "st": "en cours",
+    "g": 1.09,
     "a": 60
    }
   },
@@ -8405,15 +8411,14 @@
    "k": "secteur",
    "e": "🛡️",
    "cur": "EUR",
-   "p": 47.6,
-   "d": 0.22,
-   "w": -1.96,
-   "m": -8.29,
-   "q": -13.12,
-   "y": -8.89,
-   "a": -3.77,
+   "p": 48.4,
+   "d": 3.3,
+   "w": 0.17,
+   "m": -7.31,
+   "q": -9.98,
+   "y": -7.36,
+   "a": -3.75,
    "h": [
-    52.11,
     51.53,
     51.06,
     50.98,
@@ -8442,14 +8447,15 @@
     49.46,
     47.94,
     46.51,
-    47.6
+    47.6,
+    48.4
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.64,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.58,
    "t": {
     "st": "frais",
-    "g": -10.16,
+    "g": -7.13,
     "a": 60
    }
   },
@@ -8498,9 +8504,9 @@
     38.1,
     38.01
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 1.03,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.87,
    "t": {
     "st": "frais",
     "g": -12.6,
@@ -8552,9 +8558,9 @@
     69.36,
     67.36
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 3.09,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.66,
    "t": {
     "st": "frais",
     "g": -18.92,
@@ -8606,9 +8612,9 @@
     29.41,
     29.23
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.13,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.95,
    "t": {
     "st": "frais",
     "g": -16.84,
@@ -8660,9 +8666,9 @@
     54.88,
     53.48
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.32,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.98,
    "t": {
     "st": "frais",
     "g": -15.19,
@@ -8714,9 +8720,9 @@
     66.71,
     65.34
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.59,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.33,
    "t": {
     "st": "frais",
     "g": -17.15,
@@ -8768,9 +8774,9 @@
     121.3,
     116
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 3,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.55,
    "t": {
     "st": "frais",
     "g": -19.74,
@@ -8822,9 +8828,9 @@
     94.88,
     94.83
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.92,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.75,
    "t": {
     "st": "frais",
     "g": -1.42,
@@ -8876,9 +8882,9 @@
     120.7,
     120.4
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 1.59,
+   "p1": 0.519,
+   "p3": 0.555,
+   "x3": 1.37,
    "t": {
     "st": "en cours",
     "g": 7.64,
@@ -8930,9 +8936,9 @@
     145.2,
     142.2
    ],
-   "p1": 0.532,
-   "p3": 0.557,
-   "x3": 2.69,
+   "p1": 0.531,
+   "p3": 0.555,
+   "x3": 2.31,
    "t": {
     "st": "frais",
     "g": -11.53,
@@ -8984,9 +8990,9 @@
     40.31,
     40.86
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 2.1,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.83,
    "t": {
     "st": "frais",
     "g": -2.04,
@@ -9039,8 +9045,8 @@
     22.22
    ],
    "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.96,
+   "p3": 0.555,
+   "x3": 0.81,
    "t": {
     "st": "frais",
     "g": -15.35,
@@ -9092,9 +9098,9 @@
     45.32,
     43.86
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.21,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.13,
    "t": {
     "st": "frais",
     "g": -27.62,
@@ -9146,9 +9152,9 @@
     100.1,
     102.5
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.76,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.64,
    "t": {
     "st": "tardif",
     "g": 6.06,
@@ -9201,8 +9207,8 @@
     14.2
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": 0.14,
+   "p3": 0.555,
+   "x3": 0.09,
    "t": {
     "st": "frais",
     "g": -17.63,
@@ -9255,8 +9261,8 @@
     35.16
    ],
    "p1": 0.514,
-   "p3": 0.557,
-   "x3": 0.25,
+   "p3": 0.555,
+   "x3": 0.22,
    "t": {
     "st": "frais",
     "g": -24.97,
@@ -9308,9 +9314,9 @@
     20.95,
     20.75
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.41,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.34,
    "t": {
     "st": "frais",
     "g": -11.29,
@@ -9363,8 +9369,8 @@
     52.86
    ],
    "p1": 0.517,
-   "p3": 0.557,
-   "x3": -0.04,
+   "p3": 0.555,
+   "x3": -0.06,
    "t": {
     "st": "frais",
     "g": -29.25,
@@ -9417,8 +9423,8 @@
     25.89
    ],
    "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.11,
+   "p3": 0.555,
+   "x3": 0.02,
    "t": {
     "st": "frais",
     "g": -23.92,
@@ -9470,9 +9476,9 @@
     80.02,
     77.68
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.09,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.04,
    "t": {
     "st": "frais",
     "g": -32.9,
@@ -9524,9 +9530,9 @@
     28.37,
     27.71
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 1.32,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.15,
    "t": {
     "st": "frais",
     "g": -36.94,
@@ -9578,9 +9584,9 @@
     35.78,
     35.28
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 1.27,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 1.13,
    "t": {
     "st": "frais",
     "g": -35.47,
@@ -9632,9 +9638,9 @@
     154.3,
     150
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.92,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.78,
    "t": {
     "st": "frais",
     "g": -14.5,
@@ -9686,9 +9692,9 @@
     51.39,
     51.38
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.87,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.77,
    "t": {
     "st": "frais",
     "g": -4.71,
@@ -9741,7 +9747,7 @@
     28.13
    ],
    "p1": 0.508,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": -0.41,
    "t": {
     "st": "en cours",
@@ -9794,9 +9800,9 @@
     37.47,
     37.13
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.61,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 1.36,
    "t": {
     "st": "frais",
     "g": -13.15,
@@ -9848,9 +9854,9 @@
     26.53,
     25.98
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.66,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.52,
    "t": {
     "st": "frais",
     "g": -18.38,
@@ -9903,8 +9909,8 @@
     77.29
    ],
    "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.74,
+   "p3": 0.555,
+   "x3": 0.63,
    "t": {
     "st": "tardif",
     "g": 10.23,
@@ -9956,9 +9962,9 @@
     79.08,
     79.83
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.52,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.45,
    "t": {
     "st": "frais",
     "g": -8.69,
@@ -10010,9 +10016,9 @@
     59.93,
     61.78
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 2.79,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.42,
    "t": {
     "st": "frais",
     "g": -4.59,
@@ -10064,9 +10070,9 @@
     38.7,
     40.06
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 1.02,
+   "p1": 0.519,
+   "p3": 0.555,
+   "x3": 0.89,
    "t": {
     "st": "en cours",
     "g": 0.98,
@@ -10119,8 +10125,8 @@
     38.08
    ],
    "p1": 0.516,
-   "p3": 0.557,
-   "x3": -0.06,
+   "p3": 0.555,
+   "x3": -0.07,
    "t": {
     "st": "frais",
     "g": -13.65,
@@ -10172,9 +10178,9 @@
     66.3,
     67.58
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.89,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.76,
    "t": {
     "st": "frais",
     "g": -5.26,
@@ -10226,9 +10232,9 @@
     27.84,
     28.56
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.96,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.84,
    "t": {
     "st": "en cours",
     "g": 5.5,
@@ -10281,8 +10287,8 @@
     18.54
    ],
    "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.21,
+   "p3": 0.555,
+   "x3": 0.16,
    "t": {
     "st": "frais",
     "g": -28.2,
@@ -10335,7 +10341,7 @@
     43.8
    ],
    "p1": 0.516,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": -0.23,
    "t": {
     "st": "frais",
@@ -10388,9 +10394,9 @@
     60.15,
     58.66
    ],
-   "p1": 0.522,
-   "p3": 0.557,
-   "x3": 1.21,
+   "p1": 0.521,
+   "p3": 0.555,
+   "x3": 1.07,
    "t": {
     "st": "frais",
     "g": -34.27,
@@ -10442,9 +10448,9 @@
     90.8,
     90.42
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 1.15,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.98,
    "t": {
     "st": "frais",
     "g": -16.54,
@@ -10496,9 +10502,9 @@
     61.76,
     63.82
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 0.5,
+   "p1": 0.519,
+   "p3": 0.555,
+   "x3": 0.43,
    "t": {
     "st": "frais",
     "g": -10.43,
@@ -10550,9 +10556,9 @@
     23.18,
     22.69
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.36,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.3,
    "t": {
     "st": "frais",
     "g": -25.24,
@@ -10604,9 +10610,9 @@
     47.39,
     47.62
    ],
-   "p1": 0.509,
-   "p3": 0.557,
-   "x3": 1.43,
+   "p1": 0.51,
+   "p3": 0.555,
+   "x3": 1.25,
    "t": {
     "st": "tardif",
     "g": 14.64,
@@ -10658,9 +10664,9 @@
     333,
     327.5
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.76,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.65,
    "t": {
     "st": "frais",
     "g": -17.47,
@@ -10712,9 +10718,9 @@
     68.31,
     67.16
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.76,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.65,
    "t": {
     "st": "frais",
     "g": -17.44,
@@ -10727,15 +10733,14 @@
    "k": "matiere",
    "e": "🥇",
    "cur": "USD",
-   "p": 343.07,
-   "d": -2.9,
-   "w": -7.78,
-   "m": -11.21,
-   "q": -22.42,
-   "y": -17.3,
-   "a": -13.87,
+   "p": 343.47,
+   "d": 3.29,
+   "w": -3.11,
+   "m": -11.6,
+   "q": -21.67,
+   "y": -17.2,
+   "a": -14.12,
    "h": [
-    433.2,
     424.5,
     423.5,
     420.7,
@@ -10764,14 +10769,15 @@
     370.9,
     359.3,
     340.9,
-    343.1
+    343.1,
+    343.5
    ],
-   "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.15,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.12,
    "t": {
     "st": "frais",
-    "g": -18.24,
+    "g": -20.71,
     "a": 60
    }
   },
@@ -10820,9 +10826,9 @@
     38.91,
     37.1
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.81,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.67,
    "t": {
     "st": "frais",
     "g": -35.95,
@@ -10874,9 +10880,9 @@
     12.02,
     11.56
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.85,
+   "p1": 0.52,
+   "p3": 0.555,
+   "x3": 0.73,
    "t": {
     "st": "frais",
     "g": -26.84,
@@ -10928,9 +10934,9 @@
     16.22,
     15.7
    ],
-   "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.08,
+   "p1": 0.514,
+   "p3": 0.555,
+   "x3": 0.05,
    "t": {
     "st": "frais",
     "g": -33.7,
@@ -10982,9 +10988,9 @@
     72.8,
     73.89
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 2,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.72,
    "t": {
     "st": "frais",
     "g": -21.95,
@@ -11036,9 +11042,9 @@
     86.91,
     87.66
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 2.34,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 2.04,
    "t": {
     "st": "frais",
     "g": -28.31,
@@ -11090,9 +11096,9 @@
     64.18,
     65.45
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 2.03,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 1.8,
    "t": {
     "st": "frais",
     "g": -30.59,
@@ -11144,9 +11150,9 @@
     133.4,
     139.9
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 2.37,
+   "p1": 0.53,
+   "p3": 0.555,
+   "x3": 2.07,
    "t": {
     "st": "frais",
     "g": -0.79,
@@ -11198,9 +11204,9 @@
     56.66,
     59.4
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 2.52,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 2.17,
    "t": {
     "st": "en cours",
     "g": 6.91,
@@ -11253,8 +11259,8 @@
     10.3
    ],
    "p1": 0.506,
-   "p3": 0.557,
-   "x3": -0.62,
+   "p3": 0.555,
+   "x3": -0.55,
    "t": {
     "st": "frais",
     "g": -2.65,
@@ -11306,9 +11312,9 @@
     33.81,
     32.51
    ],
-   "p1": 0.528,
-   "p3": 0.557,
-   "x3": 1.77,
+   "p1": 0.527,
+   "p3": 0.555,
+   "x3": 1.53,
    "t": {
     "st": "frais",
     "g": -16.79,
@@ -11360,9 +11366,9 @@
     22.75,
     22.08
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.8,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.69,
    "t": {
     "st": "frais",
     "g": -13.14,
@@ -11414,9 +11420,9 @@
     29.11,
     29.27
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.62,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.51,
    "t": {
     "st": "frais",
     "g": -8.33,
@@ -11468,9 +11474,9 @@
     31.97,
     32.42
    ],
-   "p1": 0.534,
-   "p3": 0.557,
-   "x3": 1.49,
+   "p1": 0.532,
+   "p3": 0.555,
+   "x3": 1.28,
    "t": {
     "st": "frais",
     "g": -6.97,
@@ -11522,9 +11528,9 @@
     26.24,
     26.34
    ],
-   "p1": 0.52,
-   "p3": 0.557,
-   "x3": 0.18,
+   "p1": 0.519,
+   "p3": 0.555,
+   "x3": 0.14,
    "t": {
     "st": "frais",
     "g": -10.68,
@@ -11576,9 +11582,9 @@
     16.99,
     17.22
    ],
-   "p1": 0.515,
-   "p3": 0.557,
-   "x3": -0.02,
+   "p1": 0.514,
+   "p3": 0.555,
+   "x3": -0.05,
    "t": {
     "st": "frais",
     "g": -15.13,
@@ -11630,9 +11636,9 @@
     21.52,
     21.3
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.23,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.17,
    "t": {
     "st": "frais",
     "g": -23.93,
@@ -11684,9 +11690,9 @@
     25.74,
     25.98
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.57,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.47,
    "t": {
     "st": "frais",
     "g": -6.48,
@@ -11738,9 +11744,9 @@
     10.54,
     11.07
    ],
-   "p1": 0.531,
-   "p3": 0.557,
-   "x3": 1.71,
+   "p1": 0.53,
+   "p3": 0.555,
+   "x3": 1.48,
    "t": {
     "st": "frais",
     "g": -4.32,
@@ -11792,9 +11798,9 @@
     112.3,
     113.4
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.89,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.61,
    "t": {
     "st": "frais",
     "g": -13.87,
@@ -11846,9 +11852,9 @@
     81.69,
     82.24
    ],
-   "p1": 0.501,
-   "p3": 0.557,
-   "x3": -0.13,
+   "p1": 0.502,
+   "p3": 0.555,
+   "x3": -0.12,
    "t": {
     "st": "frais",
     "g": 0.45,
@@ -11900,8 +11906,8 @@
     91.64,
     92.06
    ],
-   "p1": 0.503,
-   "p3": 0.557,
+   "p1": 0.504,
+   "p3": 0.555,
    "x3": -0.03,
    "t": {
     "st": "frais",
@@ -11954,8 +11960,8 @@
     81.57,
     81.64
    ],
-   "p1": 0.51,
-   "p3": 0.557,
+   "p1": 0.511,
+   "p3": 0.555,
    "x3": 0,
    "t": {
     "st": "frais",
@@ -12009,7 +12015,7 @@
     91.64
    ],
    "p1": 0.518,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": 0.04,
    "t": {
     "st": "frais",
@@ -12062,8 +12068,8 @@
     105.6,
     105.8
    ],
-   "p1": 0.503,
-   "p3": 0.557,
+   "p1": 0.504,
+   "p3": 0.555,
    "x3": -0.09,
    "t": {
     "st": "frais",
@@ -12117,7 +12123,7 @@
     96.55
    ],
    "p1": 0.509,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": 0.01,
    "t": {
     "st": "frais",
@@ -12170,8 +12176,8 @@
     71.36,
     71.6
    ],
-   "p1": 0.508,
-   "p3": 0.557,
+   "p1": 0.509,
+   "p3": 0.555,
    "x3": -0.04,
    "t": {
     "st": "frais",
@@ -12225,7 +12231,7 @@
     104.3
    ],
    "p1": 0.505,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": -0.15,
    "t": {
     "st": "frais",
@@ -12278,9 +12284,9 @@
     76.52,
     76.52
    ],
-   "p1": 0.519,
-   "p3": 0.557,
-   "x3": 0.08,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.07,
    "t": {
     "st": "frais",
     "g": -3.26,
@@ -12332,9 +12338,9 @@
     91.8,
     91.75
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.16,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.14,
    "t": {
     "st": "frais",
     "g": -3.63,
@@ -12386,9 +12392,9 @@
     90.7,
     90.73
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.28,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.24,
    "t": {
     "st": "frais",
     "g": -3.57,
@@ -12440,9 +12446,9 @@
     47.51,
     47.6
    ],
-   "p1": 0.507,
-   "p3": 0.557,
-   "x3": 0.06,
+   "p1": 0.508,
+   "p3": 0.555,
+   "x3": 0.05,
    "t": {
     "st": "en cours",
     "g": 0.7,
@@ -12455,15 +12461,14 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "GBP",
-   "p": 127.22,
-   "d": -0.03,
-   "w": -0.07,
-   "m": -0.86,
-   "q": -5.54,
-   "y": -11.24,
-   "a": -12.81,
+   "p": 127.63,
+   "d": -0.2,
+   "w": 2.19,
+   "m": -0.38,
+   "q": -4.69,
+   "y": -10.96,
+   "a": -13.03,
    "h": [
-    133,
     132.4,
     131.5,
     130.6,
@@ -12492,14 +12497,15 @@
     127.4,
     127.8,
     126.6,
-    127.2
+    127.2,
+    127.6
    ],
-   "p1": 0.513,
-   "p3": 0.557,
-   "x3": -0.16,
+   "p1": 0.515,
+   "p3": 0.555,
+   "x3": 0.04,
    "t": {
     "st": "frais",
-    "g": -4.24,
+    "g": -4.04,
     "a": 60
    }
   },
@@ -12509,15 +12515,14 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 116.95,
-   "d": -0.02,
-   "w": 0.3,
-   "m": 0.83,
-   "q": -0.61,
-   "y": -3.53,
-   "a": -3.6,
+   "p": 117.01,
+   "d": 0,
+   "w": 0.57,
+   "m": 0.68,
+   "q": -0.31,
+   "y": -3.48,
+   "a": -3.61,
    "h": [
-    117.1,
     116.9,
     116.6,
     116.1,
@@ -12546,14 +12551,15 @@
     116.7,
     116.5,
     116.8,
-    116.9
+    116.9,
+    117
    ],
-   "p1": 0.499,
-   "p3": 0.557,
-   "x3": -0.14,
+   "p1": 0.5,
+   "p3": 0.555,
+   "x3": -0.09,
    "t": {
     "st": "frais",
-    "g": -0.04,
+    "g": -0.05,
     "a": 60
    }
   },
@@ -12563,15 +12569,14 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 88.16,
-   "d": -0.36,
-   "w": -0.27,
-   "m": 0.82,
-   "q": -3.4,
-   "y": -5.7,
-   "a": -4.75,
+   "p": 88.17,
+   "d": 0.31,
+   "w": -0.25,
+   "m": 0.01,
+   "q": -3.39,
+   "y": -5.69,
+   "a": -4.98,
    "h": [
-    91.1,
     90.96,
     90.8,
     90.46,
@@ -12600,14 +12605,15 @@
     88.66,
     88.29,
     88.03,
-    88.16
+    88.16,
+    88.17
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 0.17,
+   "p1": 0.518,
+   "p3": 0.555,
+   "x3": 0.05,
    "t": {
     "st": "frais",
-    "g": -3.25,
+    "g": -3.22,
     "a": 60
    }
   },
@@ -12657,8 +12663,8 @@
     104.2
    ],
    "p1": 0.505,
-   "p3": 0.557,
-   "x3": -0.06,
+   "p3": 0.555,
+   "x3": -0.07,
    "t": {
     "st": "frais",
     "g": -0.13,
@@ -12710,9 +12716,9 @@
     34.39,
     35.29
    ],
-   "p1": 0.523,
-   "p3": 0.557,
-   "x3": 0.82,
+   "p1": 0.522,
+   "p3": 0.555,
+   "x3": 0.72,
    "t": {
     "st": "en cours",
     "g": 1.38,
@@ -12764,9 +12770,9 @@
     240.8,
     243
    ],
-   "p1": 0.525,
-   "p3": 0.557,
-   "x3": 0.75,
+   "p1": 0.524,
+   "p3": 0.555,
+   "x3": 0.66,
    "t": {
     "st": "en cours",
     "g": 0.8,
@@ -12818,9 +12824,9 @@
     156.9,
     158.4
    ],
-   "p1": 0.532,
-   "p3": 0.557,
-   "x3": 0.92,
+   "p1": 0.53,
+   "p3": 0.555,
+   "x3": 0.79,
    "t": {
     "st": "frais",
     "g": -3.03,
@@ -12872,9 +12878,9 @@
     78.53,
     79.6
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 0.97,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 0.86,
    "t": {
     "st": "en cours",
     "g": 0.9,
@@ -12927,8 +12933,8 @@
     60.78
    ],
    "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.59,
+   "p3": 0.555,
+   "x3": 0.52,
    "t": {
     "st": "tardif",
     "g": 5.45,
@@ -12980,9 +12986,9 @@
     20.48,
     20.74
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": -0.07,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": -0.08,
    "t": {
     "st": "frais",
     "g": -16.57,
@@ -13034,9 +13040,9 @@
     63.94,
     61.51
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.62,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 2.23,
    "t": {
     "st": "frais",
     "g": -17.02,
@@ -13088,9 +13094,9 @@
     53.86,
     54.03
    ],
-   "p1": 0.535,
-   "p3": 0.557,
-   "x3": 1.28,
+   "p1": 0.533,
+   "p3": 0.555,
+   "x3": 1.12,
    "t": {
     "st": "frais",
     "g": -2.2,
@@ -13142,9 +13148,9 @@
     100.3,
     101.5
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.78,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.68,
    "t": {
     "st": "frais",
     "g": 0.42,
@@ -13196,9 +13202,9 @@
     179.5,
     176.9
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.73,
+   "p1": 0.529,
+   "p3": 0.555,
+   "x3": 1.48,
    "t": {
     "st": "frais",
     "g": -11.4,
@@ -13250,9 +13256,9 @@
     109.8,
     107
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 2.1,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.79,
    "t": {
     "st": "frais",
     "g": -11.72,
@@ -13304,9 +13310,9 @@
     252.4,
     254.8
    ],
-   "p1": 0.526,
-   "p3": 0.557,
-   "x3": 0.89,
+   "p1": 0.525,
+   "p3": 0.555,
+   "x3": 0.8,
    "t": {
     "st": "frais",
     "g": -0.46,
@@ -13319,15 +13325,14 @@
    "k": "style",
    "e": "🏃",
    "cur": "USD",
-   "p": 95.12,
-   "d": -3.29,
-   "w": -4.87,
-   "m": -14.29,
-   "q": -17.89,
-   "y": -2.52,
-   "a": 2.37,
+   "p": 95.74,
+   "d": 4.01,
+   "w": -4.14,
+   "m": -15.66,
+   "q": -16.91,
+   "y": -1.89,
+   "a": 0.41,
    "h": [
-    115,
     117.2,
     117.5,
     116.9,
@@ -13356,14 +13361,15 @@
     102.6,
     99.63,
     94.58,
-    95.12
+    95.12,
+    95.74
    ],
-   "p1": 0.53,
-   "p3": 0.557,
-   "x3": 1.85,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.93,
    "t": {
     "st": "frais",
-    "g": -16.31,
+    "g": -16.78,
     "a": 60
    }
   },
@@ -13373,15 +13379,14 @@
    "k": "style",
    "e": "💎",
    "cur": "USD",
-   "p": 86,
-   "d": -0.37,
-   "w": -1.65,
-   "m": -4.35,
-   "q": -5.07,
-   "y": 7.26,
-   "a": 10.99,
+   "p": 87.08,
+   "d": 2.77,
+   "w": 0.48,
+   "m": -3.29,
+   "q": -4.22,
+   "y": 8.61,
+   "a": 10.93,
    "h": [
-    90.38,
     89.95,
     88.77,
     88.96,
@@ -13410,14 +13415,15 @@
     89.28,
     87.16,
     84.45,
-    86
+    86,
+    87.08
    ],
    "p1": 0.527,
-   "p3": 0.557,
-   "x3": 0.75,
+   "p3": 0.555,
+   "x3": 0.86,
    "t": {
     "st": "frais",
-    "g": -3.87,
+    "g": -3.65,
     "a": 60
    }
   },
@@ -13427,15 +13433,14 @@
    "k": "style",
    "e": "🛟",
    "cur": "USD",
-   "p": 78.99,
-   "d": 0.62,
-   "w": -1.1,
-   "m": -1.08,
-   "q": 0.47,
-   "y": 7.38,
-   "a": 7.92,
+   "p": 79.95,
+   "d": 1.32,
+   "w": 1.86,
+   "m": 0.74,
+   "q": 1.67,
+   "y": 8.69,
+   "a": 8.78,
    "h": [
-    78.89,
     77.94,
     77.15,
     77.3,
@@ -13464,14 +13469,15 @@
     81.01,
     79.12,
     78.23,
-    78.99
+    78.99,
+    79.95
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.31,
+   "p1": 0.506,
+   "p3": 0.555,
+   "x3": 0.02,
    "t": {
     "st": "en cours",
-    "g": 0.87,
+    "g": 1.34,
     "a": 60
    }
   },
@@ -13481,15 +13487,14 @@
    "k": "style",
    "e": "💰",
    "cur": "EUR",
-   "p": 55.54,
-   "d": 0.22,
-   "w": -2.05,
-   "m": -0.04,
-   "q": 0.8,
-   "y": 15.68,
-   "a": 18.89,
+   "p": 56.02,
+   "d": 1.32,
+   "w": 1.41,
+   "m": 1.3,
+   "q": 0.85,
+   "y": 16.68,
+   "a": 19.75,
    "h": [
-    55.77,
     55.66,
     54.9,
     55.2,
@@ -13518,14 +13523,15 @@
     57.54,
     55.96,
     54.99,
-    55.54
+    55.54,
+    56.02
    ],
-   "p1": 0.521,
-   "p3": 0.557,
-   "x3": 0.47,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.27,
    "t": {
     "st": "frais",
-    "g": -0.39,
+    "g": 0.45,
     "a": 60
    }
   },
@@ -13535,15 +13541,14 @@
    "k": "style",
    "e": "💰",
    "cur": "GBP",
-   "p": 67.78,
-   "d": -0.89,
-   "w": -2.03,
-   "m": -1.83,
-   "q": -3.19,
-   "y": 11.28,
-   "a": 13.47,
+   "p": 68.57,
+   "d": 1.74,
+   "w": 0.88,
+   "m": -1.3,
+   "q": -1.83,
+   "y": 12.59,
+   "a": 13.69,
    "h": [
-    70.67,
     70.31,
     69.56,
     69.76,
@@ -13572,14 +13577,15 @@
     70.46,
     68.61,
     67.15,
-    67.78
+    67.78,
+    68.57
    ],
-   "p1": 0.527,
-   "p3": 0.557,
-   "x3": 0.58,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.34,
    "t": {
     "st": "frais",
-    "g": -3.05,
+    "g": -2.96,
     "a": 60
    }
   },
@@ -13628,9 +13634,9 @@
     34.62,
     34.07
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.82,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.56,
    "t": {
     "st": "frais",
     "g": -22.14,
@@ -13682,9 +13688,9 @@
     53.15,
     52.35
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.82,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.56,
    "t": {
     "st": "frais",
     "g": -22.08,
@@ -13736,9 +13742,9 @@
     38.99,
     38.17
    ],
-   "p1": 0.524,
-   "p3": 0.557,
-   "x3": 1.21,
+   "p1": 0.523,
+   "p3": 0.555,
+   "x3": 0.99,
    "t": {
     "st": "frais",
     "g": -30.21,
@@ -13790,9 +13796,9 @@
     16.24,
     16
    ],
-   "p1": 0.529,
-   "p3": 0.557,
-   "x3": 1.82,
+   "p1": 0.528,
+   "p3": 0.555,
+   "x3": 1.56,
    "t": {
     "st": "frais",
     "g": -22.93,
@@ -13845,8 +13851,8 @@
     29.6
    ],
    "p1": 0.515,
-   "p3": 0.557,
-   "x3": 0.28,
+   "p3": 0.555,
+   "x3": 0.24,
    "t": {
     "st": "tardif",
     "g": 4.93,
@@ -13898,9 +13904,9 @@
     100.6,
     101.4
    ],
-   "p1": 0.517,
-   "p3": 0.557,
-   "x3": 0.02,
+   "p1": 0.516,
+   "p3": 0.555,
+   "x3": 0.01,
    "t": {
     "st": "frais",
     "g": -5.19,
@@ -13952,9 +13958,9 @@
     57.67,
     57.55
    ],
-   "p1": 0.518,
-   "p3": 0.557,
-   "x3": 0.2,
+   "p1": 0.517,
+   "p3": 0.555,
+   "x3": 0.16,
    "t": {
     "st": "en cours",
     "g": 0.61,
@@ -14007,7 +14013,7 @@
     105.9
    ],
    "p1": 0.51,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": -0.08,
    "t": {
     "st": "frais",
@@ -14061,7 +14067,7 @@
     126.2
    ],
    "p1": 0.516,
-   "p3": 0.557,
+   "p3": 0.555,
    "x3": 0.01,
    "t": {
     "st": "frais",
@@ -14130,25 +14136,17 @@
  },
  "summary": [
   {
-   "sym": "SU.PA",
-   "name": "Schneider Electric",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 237,25 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": null
-  },
-  {
    "sym": "TTE.PA",
    "name": "TotalEnergies",
    "h": "3M",
    "action": "ENTRER",
    "text": "3 mois · 56 % de chances de hausse. Des la prochaine seance. Signal positif, tendance compatible et cours non etire : conditions d'entree reunies.",
    "ctx": {
-    "title": "TotalEnergies perd 0,51%",
-    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPckpUcVg3cHdobDBpNmREa2gtaGdNRGhJd3BzRHQ5T0txT094aE5iTWN4dExQSF9nQkRvU2JPNkNNNUMzZGlQbDNzMkRNZVE0SS1yblg5czltcExKSHJHRFF2ZF95RDlCNlBERi01RThjRzNWdm9VYUJGRzUtZWV3ZUEybXFJcGpZc2ZOcQ?oc=5",
-    "source": "Boursier.com",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
+    "title": "L'action TotalEnergies rebondit mais accuse -6 % sur un mois",
+    "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNYURXaF9ram4yZTF0RTJyY3N6Q25aR1hJbmdOblBwZlRMbl9wSU1DQVF3LTJZemF1aFZOZ1k0YmhqZTcyUG5nRDQ0SWlOWlJ6Zm5XcWE1SE42UEtLN1Zjb09RdXRTdGMyU1ZuWEprOEF2RmExWnRQenQ1YVVQR3VVZjVWdGlzbE54OEY1WmNjSW9UdUd5aW5nRV9xcE1KTHRHZHdwR01KYU1FZjlaelJFbQ?oc=5",
+    "source": "Idéal Investisseur",
+    "tone": "positif",
+    "verdict": "L'actu va dans le même sens"
    }
   },
   {
@@ -14156,25 +14154,33 @@
    "name": "BNP Paribas",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 92,39 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 91,07 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
    "ctx": {
-    "title": "BNP Paribas maintenu sur la liste G-SIB de l'ACPR",
-    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPX2dZV3R1b2ZfbHRqU3ZWVE5DV2lPaV9SWE9UU01yemxpd0wwMmV3Z0ZRMURBNEdWcnlQZmdicGVEOTd0VGxqdEdyb1NJa3d5M3VRWGhDR0dFZzlrQ201aVRRQUFqakRwb2lSS3JRUnpOcHppR0lUcjRNa3NFOHJQdmxSeGwzZ1ZiRVV0Nkd5NEVQdmNkdFdvRzZMRGRSZl83dzVWNV80YjlqVWk0NWR3?oc=5",
-    "source": "Zonebourse",
+    "title": "BNP Paribas en pince pour D’Ieteren, l’action sur les chapeaux de roue à Bruxelles",
+    "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPelI5cHlsYjRlbDVjdWJabkRQNXFQNVNNTUNIczVfLXVSM3RlbHpQQTlGanZxM3doM0liT3p4S25UaDNpWThIaFpPTU1lQzk3d2dUV2tqMkRMMmZRWFRJYWVydzVpaFRRZjViUDFsWjNHYXV5cnNmWEJlc3Z2Sk9qWHNleEtrYWU4M21ybkxZZHlKZmQzaHR3VUJDNEdTVWNrV1FyTVl5MnJXd0NlbXJrMW5tMlJpa2dac21HdnRZRnkyck4zQ2VnbEZTQnlnNWItSkkxUktmMDI?oc=5",
+    "source": "L'Echo",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    }
+  },
+  {
+   "sym": "AIR.PA",
+   "name": "Airbus",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 196,30 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "ctx": null
   },
   {
    "sym": "MT.AS",
    "name": "ArcelorMittal",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 54,04 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 52,76 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
    "ctx": {
-    "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
-    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
-    "source": "Boursorama",
+    "title": "Il est temps de nationaliser ArcelorMittal",
+    "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxQN0VnaFdtWXFLUWFfUnFTRkVqUzV2RnVjN1ZfYlp0d2RtT3N2OFM2R0hrTXdEaldOU2VXUmZ4QkRtcHNQbWhnTko4RkVsRkRvVVBGb3NPSXFiREZUSE1iUU1aZkpKT1o4LW1GakNCWWVZVkNKODU4enNDdVl3Y2l4NDY3TEhWekRPT1Z1aEZfOXRvNFU?oc=5",
+    "source": "L'Humanité",
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    }
@@ -14184,66 +14190,72 @@
    "name": "Carrefour",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 13,80 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": null
+   "text": "3 mois · 56 % de chances de hausse. Acheter si le cours depasse 13,88 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "ctx": {
+    "title": "CARREFOUR Cours Action CA, Cotation Bourse Euronext Paris",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBtZU5uaUhjMk1BUEU2R21SZlNmWVV0QV9MZ0hYZWNaR0VaOGNrWkxpMmNXYWtTYlB2OVlMSTMzZUk1UTV6QkpERFRrVnphQ3Bk?oc=5",
+    "source": "Boursorama",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   }
   }
  ],
  "news": [
   {
-   "title": "Les \"rachats à bon compte\" sauvent Wall Street in extremis",
-   "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQY1lPNzJIYlZDWTQxMEpfMGFjY2xWQ1pFdXZ0elJlYm9EMU95cG1uRFFmN2h3UU1NVVNuSG5uX2FaaS1OUTNuZzlQMWFkd1hBdG44WDMzWno2TmI1VTZDbXBTQVNndGRJWXJ1TDVrektadnk5a3djcWFNUW5HWFNHQVVOMzJSRXNQNExWR0lMYUctOTktcGVFLXdudDUxbnlxQlZydjQ2UVg3Z2JHc0ZYRG5qeXV1Rkhj?oc=5",
+   "title": "L'Europe finit dans le vert, séance calme en l'absence de Wall Street",
+   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNenh5Sk41ZENlYkdvQXNDN1B4bVhIMmluZWVERHNXdUpRR1psZnlaeVFuWWFUUGtpYnBzNTYwTU1GUmp2a1B3b2xXQjR3SUtHQnpnVkRpeFBKOVhhQS1yRnN2aE1kWFJCb00yWU9zeGoyeXlIQm5aTkNHOWlDakwwa3lWUGl3Z055Z2gxek82VG5BS1N0UGpUaHpVN0c0ZE4zTmctSXVKcTk2bTF6TXV6UUxUNjJ6VExKNVFGVmZkRGFoOTA2RXNB?oc=5",
+   "source": "Zonebourse Suisse",
+   "time": 1795715434000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Paris en forte hausse jeudi",
+   "link": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNajhhVjA2N2VUU1JxU0taTEliaVNPTTNMZnFkTDNabHQzVzdkWmU1YTFxbHR1bDZ4RlpsaW01VDRXU2FJTVhqSURQVHVLY1JNS1VORGx5SzJCOUktMHdaZEd3Qjc2VDMwMERrZ0JGTGZjQlV2NUotMWNIay0xMWhmakR5RlVKTDRLTkRZbjdJbVNzUQ?oc=5",
    "source": "Zonebourse",
-   "time": 1795675197000,
-   "tone": "neutre"
+   "time": 1795715058000,
+   "tone": "positif"
   },
   {
-   "title": "Wall Street finit en ordre dispersé, la \"tech\" pèse",
-   "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxQTHdBVmpTZ2VyeXBLbTZEQURCb0hjVGpydlZaRmtxX254ZWlOeGI1NEpvbVJKSnVOaFo3ZC1HNm1yNW5jLUhXdUc4OHRkbWlEOUhlbG5KRmxmRzM0ZFNjZkxYRFU1b0RfN0NpeWpIRnlITDNtUWp6TVFjV21qN2FIQUt3c0NmazRsdnBsYU1sVjNsbFNJd3p0MHZSU0ZvUmc4X0FIQU5ldnIzSTI1bXc?oc=5",
-   "source": "Zonebourse",
-   "time": 1795674088000,
-   "tone": "neutre"
-  },
-  {
-   "title": "HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5IUk5rZ0h4RXBVdzUxNU9kME9md3hMa1MtV3lJbXVpOXlBazZnRWxRY2wxck10cjhEWUMxMnl1VloxYlpjbklCcUZhWlA3RVA1eEE?oc=5",
-   "source": "Boursorama",
-   "time": 1795673307000,
-   "tone": "neutre"
-  },
-  {
-   "title": "Le dollar canadien se replie après un plus haut de deux semaines face au dollar américain ; la hausse des cours du pétrole devrait limiter les pertes",
-   "link": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQVVRLUXZaNzlyRlpXLUxoTFdiUWEzMVRSa0NldkpZZ050UXdWYVdYLWNaM00yenB2d2V6WWx3MGZFb1M2aGI4Y2RhY0I3cy00bW0wajlNWnVBb0hEdEI1dnUzX0VBZTJwcktzaUdTdzl6WGItYzlYVWNPOFlLVDJ4WHdEN3lTTVEwWXQzM2Jhal9tZlpNSGlILUo3WVFGQVNWc09vNGVQc2JkUE5WVk9sTHlfMV9nRFNoS3EtVWFIQzBkRU55a0xRV3ZOMV9KUlN1ODhhOXphcTFtS05uRFZfaTdFUzVGT00?oc=5",
+   "title": "Dollar canadien : les anticipations de hausse des taux soutiennent sa progression face au dollar américain – Scotiabank",
+   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPSFd2R2k1SUtOeUdpME5pVDRFRE5fV3ZuTkNWQ3Y1Ui1yU3BLV1BERlJhQnBjLTlwMFNlbExuRTVuOGFlQXFQS2ZZcFUwbl9LYWNzNFlvUWlDeDFUSFRmYkNENmotaUNONGVHM3FpU1lkNEtDU0gtNVhPZFlWRThZUzJrQ3Zkd3dOaGtXT1NOeTJKWHRpaTJJUmdJWFd1U0d6NnJuNTVVNWg3R3M0QUpZemJrYTRyYlMxSTUtLW9VX1lZSGN4SENtRmdpbWE1a2c?oc=5",
    "source": "www.tmgm.com",
-   "time": 1795672528000,
-   "tone": "neutre"
+   "time": 1795714431000,
+   "tone": "positif"
   },
   {
-   "title": "Bourse en direct, Cours actions et dérivés",
-   "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE0ycFVlNFdfbEEtb21URFo2aE81S2VyS1FhXzYxdUFyTndyekFEMXpoR0J5NlFVWkhUNnZYbnY1dFl6QkVKOXExRFhzSXhzTUc1RVd4dmxsUFZFRkdBcExlMmNWYUpDLXE1?oc=5",
-   "source": "Boursorama",
-   "time": 1795671579000,
-   "tone": "neutre"
-  },
-  {
-   "title": "CAPGEMINI Cours Action CAP, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE0xWm5HTWQ2S2xzeU5QS00xVTdHdWxMTDBESEltN2t5eUdxVzlfZnJTbUlnSUQ2ZC1mV3RuTW1FMGY5d3Fnb1pyWFZNLUx4RklvLVE?oc=5",
-   "source": "Boursorama",
-   "time": 1795671389000,
-   "tone": "neutre"
-  },
-  {
-   "title": "LEGRAND Cours Action LR, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE1ad1dZVGJtUmR1Q0NOSEl4dHY3akowT25ncm1LcVJEVEVZSGJZRXlVS09Wc1FGMC1rSG9zZlNHTEN5M1c0NnE0cVpWeWhSQUJH?oc=5",
-   "source": "Boursorama",
-   "time": 1795671036000,
-   "tone": "neutre"
-  },
-  {
-   "title": "United States Dollar Index rebounds to near 103.85 as AI trade recovery extends",
-   "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOdkQ5YVN0Sndka3l3QVUxRllwbHJ6QlhiYTFjdHZnSy1WTkx5cFlrcGt0SXJTYVowNV9ib1BSbGRMdURHMU0xM0xpd1Y3bVA3dXJIWnNyLU40dEE3ZjN1OWdTRUp0c3BKN0Q3SWFvWVZUVk55aE5fakh5NXBzVWdyb3pyY09XZm5xWTRKdXFzVFBMTWVVS0NYMVRhbXUycjd0SU42dTFhZ1ZySUMxbGxRQ1k1Yi1kclF0Rzk0Tnozdm11bWJiRk4yRTE4YXlfT3BsZ19PMVJFWldZS0JN?oc=5",
+   "title": "Australian Dollar treads water as Thanksgiving keeps markets quiet",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOMVFwcVdrYWJhMkFIMW9TMGlKdDFFSkt4VFhYaUlmQnNHNVFrNmQtVjB3X3hKU3FWNFZYMmd5QUlTYVVlWXgtRnBWZDhpQ00tYzdVVVhtYnRzVUk4aUdWb0RDWDdMc3dFZTh3SkFwUEh2LUhoOU9LWnB6c1JqQVFpcXhscWs3MzdDYVdtWkVOVEJtWXN2VG05M1RobmtDZmhmemRIVjd2SzJ3a0ZBUFU5azBQT1BKZFp1bUR2VzJLTXIzV1ZtbnB2MWxxYlQ?oc=5",
    "source": "tmgm.com",
-   "time": 1795668909000,
+   "time": 1795714431000,
    "tone": "neutre"
+  },
+  {
+   "title": "La Bourse de Toronto était en progression jeudi matin",
+   "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQWTdTaVRrdzZLUVA2VG5wNUl4S3pWR1luVWtKQ0pjaVNrRXVrTVlmYmJxTDdGV3d5cnctVHByOHl5Q3U4UUs0a3RHZWlLcVVVbTJ3TVRTaHNGZTFRbDZoNGlDWnhmU2tKZFpCam8zUE11TXlEMGhJa3lrYy1HbXVCSE52ZENuX0pSem5aeFpLNXBWTUFWMHp0ZVJpcw?oc=5",
+   "source": "Les Affaires",
+   "time": 1795713469000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Le dollar rebondit alors que les marchés se tournent vers la prudence avant l’indice PCE américain ; la tech et le dollar australien sous pression",
+   "link": "https://news.google.com/rss/articles/CBMi0wFBVV95cUxPdGJ1em5qektqUmNvOHBzX2tESTVZRWNXU3ozR0ZqcFJBTUl4SXFjUVFyRDlCRVdFZzNxVGFIR0NVQzBpRlY0LTNfSVNZU1dOYWVRNC05OWd1NHg1bm5GZ2dRQkZoOTBDbEhSbnlacFhHN1BKSEtvMkllYUt3TGdzWnBUM3BUTHBXQm1hdFVnUHk4U0l0Y0tFRkI2X3ZIZkhSb0l3NVFINHdKTnJoRWZfcm92a2JGcDd3bHN2NDJWTHpLaEVlMTQzQV9RMUNJOFVRU2JJ?oc=5",
+   "source": "VT Markets",
+   "time": 1795713142000,
+   "tone": "positif"
+  },
+  {
+   "title": "ACCOR Cours Action AC, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE8wVk5OU0ZmbDV1UE5xb0s3RmVHdFdmOGpjSmJuTXJnZVkzYTV5WjBtYklKY0dwSV9VSmV4aEZsNGp1eFlTc1dYOEtmU3VFNGxV?oc=5",
+   "source": "Boursorama",
+   "time": 1795712999000,
+   "tone": "neutre"
+  },
+  {
+   "title": "Marchés du 26 novembre : rebond à Tokyo et à Paris, Wall Street en pause",
+   "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPblV1V0dEZmpySlBMY1p0aEFsVE5PWUh1dEVQek56cXE2Zk1ydURMb3BicW9xSWplVEoyREhCak00WEd2XzFDQVZzRHZiRDdRcnp2eWdrTlY0MWFtMElyN0ZObHdpc3dHZXlhZEJUaFJkSTQwR3BqZzJfVFlxMGJfcGdEWDBWN2FPRkFBcDU0X1JiazUxNjc4?oc=5",
+   "source": "Libnanews",
+   "time": 1795712880000,
+   "tone": "positif"
   }
  ]
 }

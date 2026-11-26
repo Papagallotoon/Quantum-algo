@@ -1,30 +1,30 @@
 *Quantum Algo – jeudi 26 novembre 2026*
 
-• CAC 40 à 7 981 points : −0,7 % à la dernière séance, +1,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 109 points : +1,6 % à la dernière séance, +2,8 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
-  entrée 237,25-239,74, stop 212,36, objectif 277,19, revoir le 26/02
-  ⚠ résultats pendant la position
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,5 %
-  entrée 76,84-78,02, stop 72,61, objectif 85,47, revoir le 19/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
+  entrée 77,55-78,69, stop 73,48, objectif 85,72, revoir le 23/02
   ⚠ résultats pendant la position
 • BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,6 %
-  entrée 92,39-93,07, stop 85,62, objectif 102,63, revoir le 26/02
+  entrée 91,07-91,77, stop 84,09, objectif 101,54, revoir le 02/03
   ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
-  entrée 54,04-54,75, stop 46,93, objectif 64,71, revoir le 26/02
-• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,5 %
-  entrée 13,80-13,89, stop 12,93, objectif 16,11, revoir le 26/02
+• Airbus – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,7 %
+  entrée 196,30-197,96, stop 179,66, objectif 221,26, revoir le 02/03
+  ⚠ résultats pendant la position
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,3 %
+  entrée 52,76-53,46, stop 45,80, objectif 63,20, revoir le 02/03
+• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,8 %
+  entrée 13,88-13,96, stop 13,06, objectif 16,10, revoir le 02/03
   ⚠ résultats pendant la position
 
 *À lire*
-• Les "rachats à bon compte" sauvent Wall Street in extremis (Zonebourse)
-• Wall Street finit en ordre dispersé, la "tech" pèse (Zonebourse)
-• HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris (Boursorama)
+• L'Europe finit dans le vert, séance calme en l'absence de Wall Street (Zonebourse Suisse)
+• Paris en forte hausse jeudi (Zonebourse)
+• Dollar canadien : les anticipations de hausse des taux soutiennent sa progression face au dollar américain – Scotiabank (www.tmgm.com)
 
 *🎓 Question du jour* : Où placer son stop loss ?
 A. Après l'entrée, si ça baisse
