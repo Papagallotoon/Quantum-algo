@@ -1,50 +1,37 @@
-*Quantum Algo – mercredi 25 novembre 2026*
+*Quantum Algo – jeudi 26 novembre 2026*
 
 • CAC 40 à 7 981 points : −0,7 % à la dernière séance, +1,2 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
-• 5 annonce(s) à fort impact aujourd'hui, la première à 01:30 (Inflation (indice des prix à la consommation) (sur un mois), Australie) : volatilité possible autour de ces horaires.
-• Résultats aujourd'hui : Remy Cointreau.
-• Les indices penchent légèrement à la hausse à 1 mois (1 sur 7).
+• Pas d'annonce macroéconomique majeure aujourd'hui.
+• Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
-*Agenda (fort impact)*
-01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un mois) (prévu 0.4%)
-01:30 🇦🇺 Inflation (indice des prix à la consommation) (sur un an) (prévu 4.7%)
-01:30 🇦🇺 Trimmed Mean CPI m/m (prévu 0.3%)
-14:30 🇺🇸 Inflation PCE sous-jacente (indicateur préféré de la Fed) (sur un mois) (prévu 0.3%)
-14:30 🇺🇸 Croissance du PIB (sur un trimestre) (prévu 3.5%)
-
-*Résultats aujourd'hui* : Remy Cointreau
-
-*À venir (fort impact)*
-jeu. 26/11 14:00 🇺🇸 Jour férié (marché fermé ou réduit)
-
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
-  entrée 228,40-230,99, stop 202,53, objectif 268,09, revoir le 01/03
+• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,8 %
+  entrée 237,25-239,74, stop 212,36, objectif 277,19, revoir le 26/02
   ⚠ résultats pendant la position
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 76,46-77,61, stop 72,34, objectif 84,69, revoir le 22/02
+• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,5 %
+  entrée 76,84-78,02, stop 72,61, objectif 85,47, revoir le 19/02
   ⚠ résultats pendant la position
 • BNP Paribas – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +0,6 %
-  entrée 90,83-91,52, stop 83,98, objectif 101,11, revoir le 01/03
+  entrée 92,39-93,07, stop 85,62, objectif 102,63, revoir le 26/02
   ⚠ résultats pendant la position
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 187,26-191,10, stop 173,53, objectif 214,70, revoir le 22/02
+• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +3,1 %
+  entrée 54,04-54,75, stop 46,93, objectif 64,71, revoir le 26/02
+• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,5 %
+  entrée 13,80-13,89, stop 12,93, objectif 16,11, revoir le 26/02
   ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
-  entrée 51,94-52,64, stop 44,96, objectif 62,40, revoir le 01/03
 
 *À lire*
-• Les bourses en direct | L'Europe termine dans le rouge, le Bel 20 lâche près de 1%, Wall Street à nouveau plombée par la tech (L'Echo)
-• CAC40 : le recul de Wall Street fait basculer Paris dans le rouge (Le Revenu)
-• Wall Street : le Nasdaq chute de 4,2 %, les tarifs inquiètent (Le Revenu)
+• Les "rachats à bon compte" sauvent Wall Street in extremis (Zonebourse)
+• Wall Street finit en ordre dispersé, la "tech" pèse (Zonebourse)
+• HERMES INTL Cours Action RMS, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Trois longues bougies vertes consécutives qui clôturent de plus en plus haut s'appellent…
-A. Trois corbeaux noirs
-B. Trois soldats blancs
-C. Étoile du soir
-D. Harami
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q14
+*🎓 Question du jour* : Où placer son stop loss ?
+A. Après l'entrée, si ça baisse
+B. Avant d'entrer, en fonction de la volatilité
+C. Jamais, il faut toujours attendre
+D. Au même pourcentage pour toutes les actions
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q15
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
