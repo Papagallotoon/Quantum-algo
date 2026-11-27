@@ -1,30 +1,29 @@
 *Quantum Algo – vendredi 27 novembre 2026*
 
-• CAC 40 à 8 109 points : +1,6 % à la dernière séance, +2,8 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 162 points : +0,7 % à la dernière séance, +2,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
-• Schneider Electric – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +1,4 %
-  entrée 228,40-230,99, stop 202,53, objectif 267,21, revoir le 01/03
+• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,9 %
+  entrée 54,71-55,42, stop 47,69, objectif 65,25, revoir le 03/03
+• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,0 %
+  entrée 13,86-13,94, stop 13,06, objectif 16,17, revoir le 03/03
   ⚠ résultats pendant la position
-• TotalEnergies – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +1,0 %
-  entrée 76,46-77,61, stop 72,34, objectif 84,69, revoir le 22/02
+• Credit Agricole – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,5 %
+  entrée 15,62-15,70, stop 14,78, objectif 16,92, revoir le 03/03
   ⚠ résultats pendant la position
-• Airbus – Entrer (3 mois) : 56 % de chances de hausse, variation attendue +0,9 %
-  entrée 187,26-191,10, stop 173,53, objectif 214,70, revoir le 22/02
-  ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,4 %
-  entrée 51,94-52,64, stop 44,96, objectif 62,40, revoir le 01/03
-• Carrefour – Attendre la confirmation (3 mois) : 56 % de chances de hausse, variation attendue +2,1 %
-  entrée 13,96-14,05, stop 13,11, objectif 16,31, revoir le 01/03
+• Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
+  entrée 25,32-25,56, stop 22,89, objectif 29,30, revoir le 03/03
+• Societe Generale – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,8 %
+  entrée 64,65-65,21, stop 59,12, objectif 72,98, revoir le 03/03
   ⚠ résultats pendant la position
 
 *À lire*
-• Les cours mondiaux de l'or ont légèrement progressé, dans l'attente d'une dynamique de reprise durable. (Vietnam.vn)
-• BNP PARIBAS Cours Action BNP, Cotation Bourse Euronext Paris (Boursorama)
-• Qui est Pablo Hernández de Cos, futur président de la BCE ? (Economie Matin)
+• La chute de la tech en Bourse est-elle source d’opportunités ? (Le Figaro)
+• Bourse: Wall Street ouvre en hausse pour terminer une semaine agitée (Les Affaires)
+• Black Friday : Wall Street profite des soldes sur les semi-conducteurs (Zonebourse Suisse)
 
 *🎓 Question du jour* : Capital 10 000 €, règle du 1 %, stop à 5 % sous l'entrée. Quelle taille de position ?
 A. 500 €
