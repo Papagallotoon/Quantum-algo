@@ -1135,6 +1135,7 @@
     }).join("") + '</div><p class="small dimmer" style="margin:8px 0 0">En gros : chances sur 100 que l\'action termine plus haut à cet horizon. En petit : variation moyenne attendue. Exemple : 55 % et +1,2 % = un peu plus d\'une chance sur deux de monter, pour un gain moyen attendu d\'environ 1,2 %. Touche un horizon pour mettre à jour le graphique.</p></div>';
     h += '<div class="card">' + chart(a, st.h) + '</div>';
     h += planCard(a);
+    h += valoCard(a);
     h += dayCard(a);
     h += '<div class="grid2"><div class="card"><h2>Poids de chaque famille dans le score</h2>' + (a.fam || []).map(function (f) {
       var pos = f[1] >= 0, w = Math.min(50, Math.abs(f[1]) / 2);
@@ -1146,6 +1147,23 @@
     if (a.profile) h += '<div class="card"><h2>Secteur · ' + esc(a.sector || "") + '</h2><p style="margin:0;line-height:1.55;color:rgba(238,242,247,.75)">' + esc(a.profile) + '</p></div>';
     if (a.news) h += '<div class="card"><h2>Actualités</h2>' + newsList(a.news) + '</div>';
     return h;
+  }
+  // Valorisation simple : BPA = benefice / nombre d'actions ; PER = cours / BPA ; donc cours = PER x BPA
+  function valoCard(a) {
+    var f = a.fund; if (!f) return "";
+    var eps = f.eps, epsF = ok(f.epsCur) ? f.epsCur : f.epsFwd, pe = ok(f.pe) ? f.pe : (ok(eps) && eps > 0 ? a.price / eps : null), fpe = f.fpe;
+    if (!ok(eps) && !ok(pe)) return "";
+    var px = ok(pe) && ok(eps) ? pe * eps : null;
+    var theo = ok(pe) && ok(epsF) && epsF > 0 ? pe * epsF : null, gap = ok(theo) ? (theo / a.price - 1) * 100 : null;
+    var verdict = !ok(gap) ? null : gap >= 5 ? ["🟢", "Le bénéfice attendu progresse : au même PER, l'action vaudrait plus que son cours actuel.", "up"] : gap <= -5 ? ["🔴", "Le bénéfice attendu recule : au même PER, l'action vaudrait moins que son cours actuel.", "down"] : ["🟡", "Bénéfice attendu proche de l'actuel : prix cohérent avec le PER du moment.", "flat"];
+    var neg = ok(eps) && eps <= 0;
+    var box = function (lab, val, sub, c) { return '<div class="box"><div class="l">' + lab + '</div><div class="v ' + (c || "") + '">' + val + '</div>' + (sub ? '<div class="s dimmer">' + sub + '</div>' : '') + '</div>'; };
+    return '<div class="card"><h2>🧮 Valorisation : BPA, PER et prix</h2>' +
+      '<div class="boxes">' + box("BPA (bénéfice par action)", f2(eps) + ' <span class="unit" style="display:inline">' + esc(a.cur) + '</span>', "12 derniers mois") + box("PER", ok(pe) ? f1(pe) + "×" : "-", "cours ÷ BPA") + box("Prix = PER × BPA", ok(px) ? f2(px) : "-", "cours actuel " + f2(a.price)) + '</div>' +
+      (neg ? '<div class="warn">⚠️ BPA négatif ou nul : l\'entreprise perd de l\'argent, le PER n\'a pas de sens.</div>' : '') +
+      (ok(theo) ? '<div class="boxes" style="grid-template-columns:repeat(2,1fr);margin-top:0">' + box("BPA attendu (année en cours)", f2(epsF) + ' ' + esc(a.cur), ok(eps) && eps > 0 ? "évolution " + sp((epsF / eps - 1) * 100, 1) : "") + box("Prix théorique = PER × BPA attendu", f2(theo), "écart avec le cours " + sp(gap, 1), cls(gap)) + '</div>' : '') +
+      (verdict ? '<p style="margin:8px 0 0;font-size:14px;line-height:1.5"><span class="' + verdict[2] + '">' + verdict[0] + '</span> ' + verdict[1] + (ok(fpe) ? ' <span class="dimmer">PER attendu par le marché : ' + f1(fpe) + '×.</span>' : '') + '</p>' : '') +
+      '<p class="small dimmer" style="margin:10px 0 0;line-height:1.55">BPA = bénéfice net ÷ nombre d\'actions en circulation. PER = cours ÷ BPA : combien d\'années de bénéfices on paie l\'action (plus il est élevé, plus elle est chère). Donc prix = PER × BPA. Le prix théorique garde le PER actuel et l\'applique au bénéfice attendu : ce n\'est pas une prévision, juste un repère.</p></div>';
   }
   function kv(k, v) { return '<div class="kv"><span>' + k + '</span><span>' + v + '</span></div>'; }
 
