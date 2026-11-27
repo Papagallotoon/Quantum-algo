@@ -67,7 +67,7 @@ export function buildSite({ subscribeApi, outDir, templateDir, items, bySym, ind
     const f = fundamentals?.[it.sym];
     stocks[it.sym] = assetData(it, model, {
       name: names[it.sym], index: indexOfSym[it.sym] || [],
-      fund: f ? { pe: r2(f.pe), fpe: r2(f.fpe), yield: r2(f.yield), rating: f.rating, target: r2(f.target), hi52: r2(f.hi52), lo52: r2(f.lo52), cap: f.cap } : null,
+      fund: f ? { pe: r2(f.pe), fpe: r2(f.fpe), eps: r2(f.eps), epsCur: r2(f.epsCur), epsFwd: r2(f.epsFwd), yield: r2(f.yield), rating: f.rating, target: r2(f.target), hi52: r2(f.hi52), lo52: r2(f.lo52), cap: f.cap } : null,
       earnings: f?.earnings ? new Date(f.earnings).toISOString() : null,
       news: newsBySym[it.sym] || null,
     });

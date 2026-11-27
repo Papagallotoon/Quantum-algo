@@ -158,6 +158,7 @@ export async function fetchFundamentals(symbols) {
         info[q.symbol] = {
           name: q.longName || q.shortName,
           pe: q.trailingPE ?? null,
+          eps: q.epsTrailingTwelveMonths ?? null, epsCur: q.epsCurrentYear ?? null, epsFwd: q.epsForward ?? null,
           fpe: q.forwardPE ?? null,
           yield: q.dividendYield != null ? q.dividendYield : q.trailingAnnualDividendYield != null ? q.trailingAnnualDividendYield * 100 : null,
           rating: q.averageAnalystRating || null,         // ex. "2.1 - Buy"

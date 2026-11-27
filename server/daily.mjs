@@ -339,7 +339,7 @@ if (!FAKE) {
   for (const p of [...picks, ...avoid, ...watch]) {
     const f = fundamentals[p.sym];
     if (!f) continue;
-    p.fund = { pe: f.pe, fpe: f.fpe, yield: f.yield, rating: f.rating, target: f.target, hi52: f.hi52, lo52: f.lo52 };
+    p.fund = { pe: f.pe, fpe: f.fpe, eps: f.eps, epsFwd: f.epsFwd, yield: f.yield, rating: f.rating, target: f.target, hi52: f.hi52, lo52: f.lo52 };
     if (f.earnings && f.earnings > Date.now() && p.reviewDate && f.earnings <= new Date(p.reviewDate).getTime()) {
       p.earningsWarning = `Résultats prévus le ${new Date(f.earnings).toLocaleDateString("fr-FR", { timeZone: "Europe/Paris" })}${f.earningsEstimate ? " (date estimée)" : ""} : risque de forte variation pendant la position.`;
     }
