@@ -310,7 +310,7 @@
   .mName { display: block; font-size: 12px; font-weight: 600; color: var(--brand); margin-top: 2px; }
   @keyframes bob { 0%, 100% { transform: translateY(0) rotate(-2deg); } 50% { transform: translateY(-6px) rotate(2deg); } }
   .mBubble { position: relative; flex: 1; background: #FFF7E0; color: #2A2140; border-radius: 24px; padding: 14px 18px; font-size: 15.5px; line-height: 1.45; box-shadow: 0 6px 0 rgba(255,209,102,.3); }
-  .mBubble:before { content: ""; position: absolute; left: -12px; top: 40px; border: 12px solid transparent; border-right-color: #FFF7E0; border-left: 0; }
+  .mBubble:before { display: none; content: ""; position: absolute; left: -12px; top: 40px; border: 12px solid transparent; border-right-color: #FFF7E0; border-left: 0; }
   .mBubble p { margin: 3px 0; } .mBubble b, .qsay b { color: #6E3BD8; }
   .stars { letter-spacing: 1px; color: #F2A900; } .stars i { font-style: normal; color: #D9CFAE; }
   #qfly { position: fixed; left: 0; top: 0; z-index: 60; pointer-events: none; will-change: transform; }
@@ -692,7 +692,7 @@
     return L;
   }
   function quantiHome(t) {
-    return '<div class="mascot"><button class="mBot" id="qhome" title="Fais voler Quanti" aria-label="Relancer Quanti">' + QBOT + '<span class="mName">Quanti</span></button><div class="mBubble">' + quantiLines(t).map(function (l) { return '<p>' + l + '</p>'; }).join("") + '</div></div>';
+    return '<div class="mascot"><div class="mBubble">' + quantiLines(t).map(function (l) { return '<p>' + l + '</p>'; }).join("") + '</div></div>';
   }
   // vol d'accueil : Quanti traverse l'ecran et annonce le resume, puis se pose a sa place
   function flyQuanti(force) {
@@ -1431,7 +1431,6 @@
     else { html = pageToday(); anchor = parts[1] || null; r = "today"; }
     document.getElementById("app").innerHTML = html + '<p class="disc">Information statistique générée automatiquement à partir de données différées (Yahoo Finance, ForexFactory, Google Actualités).<br>Ce n\'est pas un conseil en investissement personnalisé. Tout investissement en actions peut entraîner une perte en capital.<br><a href="#/conditions" style="text-decoration:underline">Conditions</a> · <a href="#/confidentialite" style="text-decoration:underline">Confidentialité</a></p>';
     if (r === "pgm") bindPgm();
-    if (r === "today") { var qh = document.getElementById("qhome"); if (qh) qh.onclick = function () { flyQuanti(true); }; setTimeout(flyQuanti, 400); }
     var ro = document.getElementById("reopen"); if (ro) ro.onclick = function () { if (!document.getElementById("terms")) showTerms(); };
     var rv = document.getElementById("revoke"); if (rv) rv.onclick = function () { if (accepted()) { put("terms", ""); render(); showTerms(); } else showTerms(); };
     [].forEach.call(document.querySelectorAll("#nav a"), function (a) { a.classList.toggle("on", a.getAttribute("data-r") === (r === "v" ? "" : r)); });
