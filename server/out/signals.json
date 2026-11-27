@@ -3,43 +3,172 @@
  "dateLabel": "vendredi 27 novembre 2026",
  "picks": [
   {
+   "sym": "RMS.PA",
+   "name": "Hermes",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "actionLabel": "Attendre la confirmation",
+   "pUp": 0.5544828165752071,
+   "expPct": 0.3332853864758123,
+   "start": "Acheter si le cours depasse 1290,00 en seance (plus haut d'hier)",
+   "zoneLo": 1290,
+   "zoneHi": 1301.570127047374,
+   "stop": 1174.298729526261,
+   "target": 1463.5519057106085,
+   "rr": 1.5,
+   "pTarget": 0.32625,
+   "holdDays": 63,
+   "reviewDate": "2027-03-03T08:00:00.000Z",
+   "validUntil": "2026-12-04T08:00:00.000Z",
+   "cur": "EUR",
+   "expectancy": 0.011450851379971372,
+   "price": 1283.5,
+   "chg": 0.86444007858546,
+   "sizePct": 11.149402203779557,
+   "riskPct": 8.969090734398371,
+   "gainPct": 13.453636101597558,
+   "perf": {
+    "w1": 4.732762137902902,
+    "m1": 1.3823064770932092,
+    "m3": -16.79092382495948,
+    "ytd": -39.514608859566444
+   },
+   "support": 1213,
+   "resistance": 1421,
+   "sma50": 1310.39,
+   "sma200": 1573.775,
+   "rsi": 46.42079833165331,
+   "vol": 34.63778994781873,
+   "rs63": -15.03517332978792,
+   "pros": [
+    "Negative Volume Index",
+    "Force relative 3 mois vs indice (%)",
+    "Momentum 6 mois (%)"
+   ],
+   "cons": [
+    "Croisement SMA 50 / 200",
+    "Position dans le range 52 sem. (%)"
+   ],
+   "why": [
+    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +0,33 %."
+   ],
+   "day": {
+    "ref": {
+     "high": 1290,
+     "low": 1272.5,
+     "close": 1283.5
+    },
+    "pivot": 1282,
+    "r1": 1291.5,
+    "r2": 1299.5,
+    "s1": 1274,
+    "s2": 1264.5,
+    "atr": 38.57,
+    "range": {
+     "lo": 1254.57,
+     "hi": 1312.43
+    },
+    "up": {
+     "trigger": 1290,
+     "stop": 1282,
+     "target": 1302,
+     "text": "Si le cours dépasse 1290 en séance : achat possible, stop 1282, objectif 1302. Contre la tendance de fond : taille réduite."
+    },
+    "down": {
+     "trigger": 1274,
+     "stop": 1282,
+     "target": 1262,
+     "text": "S'il passe sous 1274 : pas d'achat, et sortie si tu détiens (objectif bas 1262, invalidé au-dessus de 1282)."
+    },
+    "trendUp": false,
+    "state": null,
+    "now": null,
+    "alerts": [],
+    "flat": "Entre 1274 et 1290 : rien à faire, c'est du bruit."
+   },
+   "timing": {
+    "age": 60,
+    "since": 1788505200,
+    "gainPct": -11.91,
+    "stage": "frais",
+    "factor": 1
+   },
+   "fund": {
+    "pe": 29.800325,
+    "fpe": 26.78233,
+    "eps": 43.07,
+    "epsFwd": 47.92339,
+    "yield": 1.44,
+    "rating": "2.5 - Buy",
+    "target": null,
+    "hi52": 2300,
+    "lo52": 1213
+   },
+   "earningsWarning": "Résultats prévus le 12/02/2027 : risque de forte variation pendant la position.",
+   "news": [
+    {
+     "title": "KERING Cours Action KER, Cotation Bourse Euronext Paris",
+     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE5jYmZZTEczYXY5cmdWUWNidkszQzI5MnJlOGlGcnBPQUtvb24yVkxJY1dMNFFZd1dxX2hPYTVKVkZKREgwLVZ1QUVkUzdub3RKbEE?oc=5",
+     "source": "Boursorama",
+     "time": 1795797364000,
+     "tone": "neutre"
+    },
+    {
+     "title": "Fortune de la famille Hermès : H51 et Hermès International",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9yWWFqa3BqQUtwNzhSRVY0anpWalVhSEg4UUlFOEY0MUdrQXd6Y3c4YWh2ZEE5TDNtdG1sOTRxeWp2alF0djFEVlZfVEQ0aWF4R2dWM2cwSzJlcFJPREVFajlqcmJMYzFv?oc=5",
+     "source": "Andlil",
+     "time": 1795786084000,
+     "tone": "neutre"
+    }
+   ],
+   "ctx": {
+    "title": "Fortune de la famille Hermès : H51 et Hermès International",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9yWWFqa3BqQUtwNzhSRVY0anpWalVhSEg4UUlFOEY0MUdrQXd6Y3c4YWh2ZEE5TDNtdG1sOTRxeWp2alF0djFEVlZfVEQ0aWF4R2dWM2cwSzJlcFJPREVFajlqcmJMYzFv?oc=5",
+    "source": "Andlil",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   },
+   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 1290,00 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+  },
+  {
    "sym": "MT.AS",
    "name": "ArcelorMittal",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5545816270695793,
-   "expPct": 1.9359284529248733,
-   "start": "Acheter si le cours depasse 54,71 en seance (plus haut d'hier)",
-   "zoneLo": 54.714200716031115,
-   "zoneHi": 55.416804237415484,
-   "stop": 47.6881655021874,
-   "target": 65.25325353679668,
+   "pUp": 0.5544828165752071,
+   "expPct": 1.6285516093168306,
+   "start": "Acheter si le cours depasse 54,69 en seance (plus haut d'hier)",
+   "zoneLo": 54.69420025826744,
+   "zoneHi": 55.39680377965181,
+   "stop": 47.66816504442373,
+   "target": 65.233253079033,
    "rr": 1.499999999999999,
-   "pTarget": 0.31825,
+   "pTarget": 0.306,
    "holdDays": 63,
    "reviewDate": "2027-03-03T08:00:00.000Z",
    "validUntil": "2026-12-04T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.622095479709448,
-   "price": 54.47999954223633,
-   "chg": 4.769229888916016,
-   "sizePct": 7.787350767645637,
-   "riskPct": 12.841337572139846,
-   "gainPct": 19.262006358209756,
+   "expectancy": 0.3432521577254018,
+   "price": 54.459999084472656,
+   "chg": 4.730767470139718,
+   "sizePct": 7.784504146876607,
+   "riskPct": 12.84603336490266,
+   "gainPct": 19.26905004735398,
    "perf": {
-    "w1": 5.5404894799116144,
-    "m1": -0.54764374542835,
-    "m3": -14.527772030728958,
-    "ytd": 39.37068132405614
+    "w1": 5.501743919707192,
+    "m1": -0.584154256945979,
+    "m3": -14.55915021905183,
+    "ytd": 39.319516172647596
    },
    "support": 49.970001220703125,
    "resistance": 60.02000045776367,
-   "sma50": 56.37239990234375,
-   "sma200": 56.01340003967285,
-   "rsi": 48.95755044348416,
-   "vol": 48.119177309632015,
-   "rs63": -12.846947186303048,
+   "sma50": 56.37199989318847,
+   "sma200": 56.013300037384035,
+   "rsi": 48.90713793902613,
+   "vol": 48.08746987472315,
+   "rs63": -12.803399723880272,
    "pros": [
     "Croisement SMA 50 / 200",
     "Negative Volume Index",
@@ -51,52 +180,52 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +1,94 %."
+    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +1,63 %."
    ],
    "day": {
     "ref": {
      "high": 54.62,
      "low": 53.1,
-     "close": 54.48
+     "close": 54.46
     },
-    "pivot": 54.07,
-    "r1": 55.03,
-    "r2": 55.59,
-    "s1": 53.51,
-    "s2": 52.55,
+    "pivot": 54.06,
+    "r1": 55.02,
+    "r2": 55.58,
+    "s1": 53.5,
+    "s2": 52.54,
     "atr": 2.34,
     "range": {
-     "lo": 52.72,
-     "hi": 56.24
+     "lo": 52.7,
+     "hi": 56.22
     },
     "up": {
      "trigger": 54.62,
-     "stop": 54.07,
-     "target": 55.59,
-     "text": "Si le cours dépasse 54,62 en séance : achat possible, stop 54,07, objectif 55,59. Contre la tendance de fond : taille réduite."
+     "stop": 54.06,
+     "target": 55.58,
+     "text": "Si le cours dépasse 54,62 en séance : achat possible, stop 54,06, objectif 55,58. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 53.51,
-     "stop": 54.07,
-     "target": 52.55,
-     "text": "S'il passe sous 53,51 : pas d'achat, et sortie si tu détiens (objectif bas 52,55, invalidé au-dessus de 54,07)."
+     "trigger": 53.5,
+     "stop": 54.06,
+     "target": 52.54,
+     "text": "S'il passe sous 53,50 : pas d'achat, et sortie si tu détiens (objectif bas 52,54, invalidé au-dessus de 54,06)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 53,51 et 54,62 : rien à faire, c'est du bruit."
+    "flat": "Entre 53,50 et 54,62 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
     "since": 1788505200,
-    "gainPct": -18.98,
+    "gainPct": -19.01,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 46.186443,
-    "fpe": 8.513373,
+    "pe": 46.152542,
+    "fpe": 8.507125,
     "eps": 1.18,
     "epsFwd": 6.401693,
     "yield": 1.05,
@@ -128,7 +257,7 @@
     "tone": "neutre",
     "verdict": "Actu à lire avant d'acheter"
    },
-   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 54,71 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 54,69 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
    "sym": "CA.PA",
@@ -136,38 +265,38 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5545816270695793,
-   "expPct": 2.019802707232188,
-   "start": "Acheter si le cours depasse 13,86 en seance (plus haut d'hier)",
-   "zoneLo": 13.861598440747688,
-   "zoneHi": 13.941393648549834,
-   "stop": 13.063646362726235,
-   "target": 16.165613121590447,
-   "rr": 2.8874098386404796,
-   "pTarget": 0.27875,
+   "pUp": 0.5544828165752071,
+   "expPct": 1.749810932095608,
+   "start": "Acheter si le cours depasse 13,87 en seance (plus haut d'hier)",
+   "zoneLo": 13.866598555188606,
+   "zoneHi": 13.946393762990752,
+   "stop": 13.068646477167153,
+   "target": 16.14112505447309,
+   "rr": 2.850455010937804,
+   "pTarget": 0.27525,
    "holdDays": 63,
    "reviewDate": "2027-03-03T08:00:00.000Z",
    "validUntil": "2026-12-04T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.688746175709936,
-   "price": 13.835000038146973,
-   "chg": 0.14477349526720307,
-   "sizePct": 17.371467313072177,
-   "riskPct": 5.756566109113255,
-   "gainPct": 16.62156562023796,
+   "expectancy": 0.5677607240934792,
+   "price": 13.84000015258789,
+   "chg": 0.1809668690840205,
+   "sizePct": 17.377733496942916,
+   "riskPct": 5.754490366513675,
+   "gainPct": 16.40291590062223,
    "perf": {
-    "w1": 2.4814817640516518,
-    "m1": 5.772172162421518,
-    "m3": -13.531249761581421,
-    "ytd": -2.7758223246385216
+    "w1": 2.518519648799189,
+    "m1": 5.810399337269256,
+    "m3": -13.499999046325684,
+    "ytd": -2.740684484850986
    },
    "support": 12.885000228881836,
    "resistance": 14.359999656677246,
-   "sma50": 14.727299976348878,
-   "sma200": 15.813599977493286,
-   "rsi": 45.32735848504591,
-   "vol": 48.44349388212274,
-   "rs63": -11.850424917155511,
+   "sma50": 14.727399978637695,
+   "sma200": 15.81362497806549,
+   "rsi": 45.456173658240736,
+   "vol": 48.44849412038108,
+   "rs63": -11.744248551154124,
    "pros": [
     "Negative Volume Index",
     "ADX (14) directionnel",
@@ -179,7 +308,7 @@
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +2,02 %."
+    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +1,75 %."
    ],
    "day": {
     "ref": {
@@ -187,44 +316,44 @@
      "low": 13.69,
      "close": 13.84
     },
-    "pivot": 13.79,
-    "r1": 13.89,
-    "r2": 13.95,
-    "s1": 13.73,
-    "s2": 13.63,
+    "pivot": 13.8,
+    "r1": 13.9,
+    "r2": 13.96,
+    "s1": 13.74,
+    "s2": 13.64,
     "atr": 0.27,
     "range": {
      "lo": 13.64,
-     "hi": 14.03
+     "hi": 14.04
     },
     "up": {
      "trigger": 13.85,
-     "stop": 13.79,
-     "target": 13.95,
-     "text": "Si le cours dépasse 13,85 en séance : achat possible, stop 13,79, objectif 13,95. Contre la tendance de fond : taille réduite."
+     "stop": 13.8,
+     "target": 13.96,
+     "text": "Si le cours dépasse 13,85 en séance : achat possible, stop 13,80, objectif 13,96. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 13.73,
-     "stop": 13.79,
-     "target": 13.63,
-     "text": "S'il passe sous 13,73 : pas d'achat, et sortie si tu détiens (objectif bas 13,63, invalidé au-dessus de 13,79)."
+     "trigger": 13.74,
+     "stop": 13.8,
+     "target": 13.64,
+     "text": "S'il passe sous 13,74 : pas d'achat, et sortie si tu détiens (objectif bas 13,64, invalidé au-dessus de 13,80)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 13,73 et 13,85 : rien à faire, c'est du bruit."
+    "flat": "Entre 13,74 et 13,85 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
     "since": 1788505200,
-    "gainPct": -15.67,
+    "gainPct": -15.64,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 6.4325576,
-    "fpe": 7.677788,
+    "pe": 6.437209,
+    "fpe": 7.6833396,
     "eps": 2.15,
     "epsFwd": 1.8013,
     "yield": 7.05,
@@ -236,151 +365,22 @@
    "earningsWarning": "Résultats prévus le 16/02/2027 (date estimée) : risque de forte variation pendant la position.",
    "news": [
     {
+     "title": "« On veut ancrer le mouvement dans la durée, on reviendra » : près de Dinan, les agriculteurs mènent une action coup de poing dans la zone commerciale",
+     "link": "https://news.google.com/rss/articles/CBMisgJBVV95cUxNODVWYXA3SzdSMkhDdmpKdnJJQ0lkVnhNcVROMW9IWTZld0s2U0NiNFM1eFVXVU4wdnZCN0k2dGs0c3JQUzhCWU9WQUxsQ2J4TzBscEkxLVJ3QmhJZXUtZGM0MGZQZDNual9uTVFUWThiajV0RENMV1FxYVJpYWJQT0tnNWs0d1lIak5Tc3J4a2ZTcDRINE1WcWFyS3B4VWJWYktFUzFCUE5qdkR3THpZbXl2OUNwc2lORkZDLTFfUmpLX3ZuVnhMZ1pBOGh0Yzhvd1VyWGFxVDJQc3lCSHlweldqbkw1T1F5emVSdTYyWUV1RlNEazBYeWhiNGdwc0I1SmFBOTFqMHROMlhBbjY3ZmlqUmxGSGh3bzFzS0Yxa3lXcFpMcWYxQWZQanVpYmxCc1E?oc=5",
+     "source": "Le Télégramme",
+     "time": 1795800602000,
+     "tone": "neutre"
+    },
+    {
      "title": "\"Comment elles sont censées faire ?\" : les employés de ce magasin en débrayage contre leurs nouveaux horaires dans la Creuse",
      "link": "https://news.google.com/rss/articles/CBMiigJBVV95cUxQTGxTblBuNVQtbXdHR0NHR1hZQno3NmtfWU9ILXhmS19aSHhXVlg4LVIwQlZrb3NCUDZaTFFRamp6SlpaV2JpeGQxWU1XRmM2QVV5eVRhSkpSTjQ0Ri1DRmR4dGVodlJLNEFXTUVQdnBpb0JfUHpsUjI2YXpiUF9VRnh3R2wwVF9kQVdJVkF0SlRFdVlYeVJicmdOSVpXSVNjWTRrTDBQX3hGSmZSYzhhN3lEbk80NFJkeEFyS1RuMnpyTEhqQmtRZDJtY2xZTURYRW5HNU1rTHBDdmY4Q1JDMGJiRXBGZnBjbVFLWDN5R0gtbVdrQUhON1ZEM3YyUk5tMl9tMFJ3RXI3UQ?oc=5",
      "source": "La Montagne",
      "time": 1795797060000,
      "tone": "neutre"
-    },
-    {
-     "title": "STELLANTIS Cours Action STLAP, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiVEFVX3lxTE1NR0Rfci13d0ZjSVNlQXVlSU5WdG9HZTJmNTRzZ1BhWXhiQzlKa1diY25Ebi1KS0ZiN0NLWENYOTRFOUtLRjVvWmRsdk1NUS0zblRQeg?oc=5",
-     "source": "Boursorama",
-     "time": 1795785425000,
-     "tone": "neutre"
     }
    ],
    "ctx": null,
-   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 13,86 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
-  },
-  {
-   "sym": "ACA.PA",
-   "name": "Credit Agricole",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5545816270695793,
-   "expPct": 0.531847434727406,
-   "start": "Acheter si le cours depasse 15,62 en seance (plus haut d'hier)",
-   "zoneLo": 15.618040553201954,
-   "zoneHi": 15.702161755044147,
-   "stop": 14.77682853478003,
-   "target": 16.92274801514897,
-   "rr": 1.550985284773495,
-   "pTarget": 0.34275,
-   "holdDays": 63,
-   "reviewDate": "2027-03-03T08:00:00.000Z",
-   "validUntil": "2026-12-04T08:00:00.000Z",
-   "cur": "EUR",
-   "expectancy": 0.0011806751404869753,
-   "price": 15.59000015258789,
-   "chg": 1.0369400145665564,
-   "sizePct": 18.566116759126547,
-   "riskPct": 5.386155936504223,
-   "gainPct": 8.353848599013453,
-   "perf": {
-    "w1": 1.8621355225699077,
-    "m1": 1.9287353698753673,
-    "m3": -16.092571492980746,
-    "ytd": -11.168086436913926
-   },
-   "support": 14.800000190734863,
-   "resistance": 16.225000381469727,
-   "sma50": 16.054899978637696,
-   "sma200": 17.267125000953673,
-   "rsi": 47.962197781311396,
-   "vol": 19.33295906887421,
-   "rs63": -14.411746648554836,
-   "pros": [
-    "Negative Volume Index",
-    "ADX (14) directionnel",
-    "Force relative 3 mois vs indice (%)"
-   ],
-   "cons": [
-    "Croisement SMA 50 / 200",
-    "SMA 200"
-   ],
-   "why": [
-    "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +0,53 %."
-   ],
-   "day": {
-    "ref": {
-     "high": 15.6,
-     "low": 15.47,
-     "close": 15.59
-    },
-    "pivot": 15.55,
-    "r1": 15.64,
-    "r2": 15.69,
-    "s1": 15.51,
-    "s2": 15.42,
-    "atr": 0.28,
-    "range": {
-     "lo": 15.38,
-     "hi": 15.8
-    },
-    "up": {
-     "trigger": 15.6,
-     "stop": 15.55,
-     "target": 15.69,
-     "text": "Si le cours dépasse 15,60 en séance : achat possible, stop 15,55, objectif 15,69. Contre la tendance de fond : taille réduite."
-    },
-    "down": {
-     "trigger": 15.51,
-     "stop": 15.55,
-     "target": 15.42,
-     "text": "S'il passe sous 15,51 : pas d'achat, et sortie si tu détiens (objectif bas 15,42, invalidé au-dessus de 15,55)."
-    },
-    "trendUp": false,
-    "state": null,
-    "now": null,
-    "alerts": [],
-    "flat": "Entre 15,51 et 15,60 : rien à faire, c'est du bruit."
-   },
-   "timing": {
-    "age": 60,
-    "since": 1788505200,
-    "gainPct": -17.1,
-    "stage": "frais",
-    "factor": 1
-   },
-   "fund": {
-    "pe": 7.533817,
-    "fpe": 6.359492,
-    "eps": 2.07,
-    "epsFwd": 2.45224,
-    "yield": 11.18,
-    "rating": "2.1 - Buy",
-    "target": null,
-    "hi52": 20.4,
-    "lo52": 14.685
-   },
-   "earningsWarning": "Résultats prévus le 04/02/2027 : risque de forte variation pendant la position.",
-   "news": [
-    {
-     "title": "Bloomberg : des investisseurs et des analystes s’interrogent sur le manque de détails concernant l’offre de Crédit Agricole sur Banco BPM",
-     "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZHRGam5sVjNyeUtQYVcteXNubGpQUWJiOWNzN24zUjNjeXNTM0JyQXJFamhWblhFajRnbjc5MVhQemJ6bDRvNmp6MzZQRURJQl9ORGphY2pEd2lXWkxxR3NmQmpTMXJzZVRCeWlhTGd3TkdGbkZzS0pjd2puR3VpTDhXQUpmMnk1dC1IRXRoeW1KbVJRdlFfQnlTNkFLU3RwTkx2cFBhdzVBd1FSSGt4UlRTd0xkd1ZNTTJBbE9KSmZGQks1d0gyeTJ3TGZ2NEstNnZYS2ZoUDJ5MEdXeGhZTHpCSWhIcExXRnRicmhySQ?oc=5",
-     "source": "Zonebourse",
-     "time": 1795793053000,
-     "tone": "neutre"
-    },
-    {
-     "title": "UBISOFT Cours Action UBI, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFAzYVl2bkJhY2piTnlTanhRbW1HdWRCdUlVWEx0QTlZbGdqM2M0dVVkZG5hZUVYdEhWRDRMUGJIdjk1cHdJTUdpd2VTNDBqRkNHV2c?oc=5",
-     "source": "Boursorama",
-     "time": 1795783758000,
-     "tone": "neutre"
-    }
-   ],
-   "ctx": {
-    "title": "Bloomberg : des investisseurs et des analystes s’interrogent sur le manque de détails concernant l’offre de Crédit Agricole sur Banco BPM",
-    "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZHRGam5sVjNyeUtQYVcteXNubGpQUWJiOWNzN24zUjNjeXNTM0JyQXJFamhWblhFajRnbjc5MVhQemJ6bDRvNmp6MzZQRURJQl9ORGphY2pEd2lXWkxxR3NmQmpTMXJzZVRCeWlhTGd3TkdGbkZzS0pjd2puR3VpTDhXQUpmMnk1dC1IRXRoeW1KbVJRdlFfQnlTNkFLU3RwTkx2cFBhdzVBd1FSSGt4UlRTd0xkd1ZNTTJBbE9KSmZGQks1d0gyeTJ3TGZ2NEstNnZYS2ZoUDJ5MEdXeGhZTHpCSWhIcExXRnRicmhySQ?oc=5",
-    "source": "Zonebourse",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   },
-   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 15,62 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 13,87 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
    "sym": "EDEN.PA",
@@ -388,25 +388,25 @@
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5545816270695793,
-   "expPct": 2.280149263209341,
+   "pUp": 0.5544828165752071,
+   "expPct": 2.280217931506434,
    "start": "Acheter si le cours depasse 25,32 en seance (plus haut d'hier)",
    "zoneLo": 25.31999969482422,
    "zoneHi": 25.562676817485777,
    "stop": 22.893228468208644,
-   "target": 29.299220354872734,
-   "rr": 1.6397180815424528,
-   "pTarget": 0.362,
+   "target": 29.40037532742205,
+   "rr": 1.6814010269474013,
+   "pTarget": 0.34625,
    "holdDays": 63,
    "reviewDate": "2027-03-03T08:00:00.000Z",
    "validUntil": "2026-12-04T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.9382447402178682,
+   "expectancy": 0.8145495694131215,
    "price": 25.209999084472656,
    "chg": -0.434441594302426,
    "sizePct": 10.433616245786798,
    "riskPct": 9.584404644016022,
-   "gainPct": 15.715721595612525,
+   "gainPct": 16.11522781112798,
    "perf": {
     "w1": 3.616930388516648,
     "m1": 4.216612351781324,
@@ -419,7 +419,7 @@
    "sma200": 23.948499989509582,
    "rsi": 47.90251978824749,
    "vol": 45.360102378716945,
-   "rs63": -14.285844873998565,
+   "rs63": -14.210919223252915,
    "pros": [
     "Croisement SMA 50 / 200",
     "Negative Volume Index",
@@ -488,7 +488,7 @@
    "news": [
     {
      "title": "Edenred clôture en hausse",
-     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbFBLcERmT2szeUViV0s3N1cyMFBTcVk3QWtkTmVwN1dDNjNueXhWOF9tWlAyVmlwUEc5YXNCMDhBU0VUMVFSRXhIY3ZrNEt2RDZZTTVSLUFmWnRZZFN5bElFbzI1ZUlOTjN5TW16ekhkUkFMTWRPR3k0NlZEY1dEMS1wYUhZYl9LUVcxY3hRZw?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREdrRmVtT3lUZVJlQkFNU2xsSkFzdDlPNmpJcHE4ZVJxNTQ4NDA5LV9YTWRIb2FVWDNlZUpEdXVBNUR5RkZpcW1Kc2p1WXJSR3hsb3JRTVdobG1Vb0pSVnJhVGNBZ3NZMWhvbTNFdXhXaFlzc2ViNzV1aEJWanNaNjVqS3Q?oc=5",
      "source": "Boursier.com",
      "time": 1795711446000,
      "tone": "positif"
@@ -503,7 +503,7 @@
    ],
    "ctx": {
     "title": "Edenred clôture en hausse",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbFBLcERmT2szeUViV0s3N1cyMFBTcVk3QWtkTmVwN1dDNjNueXhWOF9tWlAyVmlwUEc5YXNCMDhBU0VUMVFSRXhIY3ZrNEt2RDZZTTVSLUFmWnRZZFN5bElFbzI1ZUlOTjN5TW16ekhkUkFMTWRPR3k0NlZEY1dEMS1wYUhZYl9LUVcxY3hRZw?oc=5",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREdrRmVtT3lUZVJlQkFNU2xsSkFzdDlPNmpJcHE4ZVJxNTQ4NDA5LV9YTWRIb2FVWDNlZUpEdXVBNUR5RkZpcW1Kc2p1WXJSR3hsb3JRTVdobG1Vb0pSVnJhVGNBZ3NZMWhvbTNFdXhXaFlzc2ViNzV1aEJWanNaNjVqS3Q?oc=5",
     "source": "Boursier.com",
     "tone": "positif",
     "verdict": "L'actu va dans le même sens"
@@ -511,127 +511,133 @@
    "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 25,32 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   },
   {
-   "sym": "GLE.PA",
-   "name": "Societe Generale",
+   "sym": "ML.PA",
+   "name": "Michelin",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
    "actionLabel": "Attendre la confirmation",
-   "pUp": 0.5545816270695793,
-   "expPct": 0.761892413365195,
-   "start": "Acheter si le cours depasse 64,65 en seance (plus haut d'hier)",
-   "zoneLo": 64.65462979720945,
-   "zoneHi": 65.20851552672843,
-   "stop": 59.115772502019695,
-   "target": 72.97936368490726,
-   "rr": 1.502969555638751,
-   "pTarget": 0.3675,
+   "pUp": 0.5544828165752071,
+   "expPct": 0.9769817936233771,
+   "start": "Acheter si le cours depasse 31,69 en seance (plus haut d'hier)",
+   "zoneLo": 31.690000534057617,
+   "zoneHi": 31.87892679393911,
+   "stop": 29.800737935242676,
+   "target": 34.80789416054012,
+   "rr": 1.6503230564338887,
+   "pTarget": 0.3465,
    "holdDays": 63,
    "reviewDate": "2027-03-03T08:00:00.000Z",
    "validUntil": "2026-12-04T08:00:00.000Z",
    "cur": "EUR",
-   "expectancy": 0.2610111875963335,
-   "price": 64.47000122070312,
-   "chg": 2.2359654562413622,
-   "sizePct": 11.672918501323192,
-   "riskPct": 8.566837846821635,
-   "gainPct": 12.875696471866746,
+   "expectancy": 0.1325246410631471,
+   "price": 31.190000534057617,
+   "chg": -1.2662222747647056,
+   "sizePct": 16.773740481569625,
+   "riskPct": 5.961699485566522,
+   "gainPct": 9.838730116560486,
    "perf": {
-    "w1": 4.421767845834834,
-    "m1": 3.300755292945956,
-    "m3": -12.034383387428226,
-    "ytd": -6.184516770234882
+    "w1": -0.06407738225467918,
+    "m1": -2.8651512264293078,
+    "m3": -10.579129647535323,
+    "ytd": 10.17308768083851
    },
-   "support": 60.54999923706055,
-   "resistance": 68.44999694824219,
-   "sma50": 65.07319984436035,
-   "sma200": 70.76429998397828,
-   "rsi": 50.35023638063301,
-   "vol": 33.95721992949144,
-   "rs63": -10.353558543002316,
+   "support": 30.969999313354492,
+   "resistance": 34.29999923706055,
+   "sma50": 32.82900016784668,
+   "sma200": 32.714400091171264,
+   "rsi": 37.5516127476843,
+   "vol": 29.68607232248034,
+   "rs63": -8.823379152363763,
    "pros": [
+    "Croisement SMA 50 / 200",
     "Negative Volume Index",
-    "ADX (14) directionnel",
-    "Force relative 3 mois vs indice (%)"
+    "ADX (14) directionnel"
    ],
    "cons": [
-    "Croisement SMA 50 / 200",
-    "SMA 200"
+    "SMA 200",
+    "Chaikin Money Flow"
    ],
    "why": [
     "Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +0,76 %."
+    "Probabilite de hausse 55 % sur 3 mois, rendement median attendu +0,98 %."
    ],
    "day": {
     "ref": {
-     "high": 64.48,
-     "low": 63.5,
-     "close": 64.47
+     "high": 31.69,
+     "low": 31.19,
+     "close": 31.19
     },
-    "pivot": 64.15,
-    "r1": 64.8,
-    "r2": 65.13,
-    "s1": 63.82,
-    "s2": 63.17,
-    "atr": 1.85,
+    "pivot": 31.36,
+    "r1": 31.52,
+    "r2": 31.86,
+    "s1": 31.02,
+    "s2": 30.86,
+    "atr": 0.63,
     "range": {
-     "lo": 63.09,
-     "hi": 65.85
+     "lo": 30.72,
+     "hi": 31.66
     },
     "up": {
-     "trigger": 64.48,
-     "stop": 64.15,
-     "target": 65.13,
-     "text": "Si le cours dépasse 64,48 en séance : achat possible, stop 64,15, objectif 65,13. Contre la tendance de fond : taille réduite."
+     "trigger": 31.52,
+     "stop": 31.36,
+     "target": 31.86,
+     "text": "Si le cours dépasse 31,52 en séance : achat possible, stop 31,36, objectif 31,86. Contre la tendance de fond : taille réduite."
     },
     "down": {
-     "trigger": 63.82,
-     "stop": 64.15,
-     "target": 63.17,
-     "text": "S'il passe sous 63,82 : pas d'achat, et sortie si tu détiens (objectif bas 63,17, invalidé au-dessus de 64,15)."
+     "trigger": 31.19,
+     "stop": 31.36,
+     "target": 30.86,
+     "text": "S'il passe sous 31,19 : pas d'achat, et sortie si tu détiens (objectif bas 30,86, invalidé au-dessus de 31,36)."
     },
     "trendUp": false,
     "state": null,
     "now": null,
     "alerts": [],
-    "flat": "Entre 63,82 et 64,48 : rien à faire, c'est du bruit."
+    "flat": "Entre 31,19 et 31,52 : rien à faire, c'est du bruit."
    },
    "timing": {
     "age": 60,
     "since": 1788505200,
-    "gainPct": -13.09,
+    "gainPct": -11.29,
     "stage": "frais",
     "factor": 1
    },
    "fund": {
-    "pe": 7.9165645,
-    "fpe": 6.937537,
-    "eps": 8.15,
-    "epsFwd": 9.30013,
-    "yield": 2.85,
-    "rating": "1.9 - Buy",
+    "pe": 3.0458987,
+    "fpe": 8.962644,
+    "eps": 10.24,
+    "epsFwd": 3.48,
+    "yield": 14.245014000000001,
+    "rating": "2.4 - Buy",
     "target": null,
-    "hi52": 84.82,
-    "lo52": 58.59
+    "hi52": 35.72,
+    "lo52": 27.46
    },
-   "earningsWarning": "Résultats prévus le 04/02/2027 : risque de forte variation pendant la position.",
+   "earningsWarning": "Résultats prévus le 11/02/2027 : risque de forte variation pendant la position.",
    "news": [
     {
-     "title": "AIR FRANCE-KLM Cours Action AF, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oZGRqT0RwNDhIdzJYcEN1XzdPa3VfRzlGcmI0OGlhOHk3aVJjdUU5aDE3NUVJS0g5aUdHR3dCaTQtSW9xeVFLUFZCcHVNVkRY?oc=5",
+     "title": "MICHELIN Cours Action ML, Cotation Bourse Euronext Paris",
+     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9hR2Q5ajlWM0tXT20zbkNzRS1wMzRscGs2OWRHQ1NFS2FZaTd2RDdoTDBZUXdkYlFpVFR2QVI5X0t2TVNYYWZLRVRRZG1VOUFW?oc=5",
      "source": "Boursorama",
-     "time": 1795788056000,
+     "time": 1795785682000,
      "tone": "neutre"
     },
     {
-     "title": "TELEPERFORMANCE Cours Action TEP, Cotation Bourse Euronext Paris",
-     "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9qTm15NEw5c0NZVzI1N0gyd1FRZlZSWmZWazNZcjZzRXdYSVBDaGhadFY1bHlwOHE2dEZQb2Y1TnBOY01pU3Y5VEh3TjZyemZEVVE?oc=5",
-     "source": "Boursorama",
-     "time": 1795786766000,
-     "tone": "neutre"
+     "title": "L'action Michelin recule de près de 11 % sur le trimestre, sous ses moyennes",
+     "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOVW5GazFuNVpoeTlJMWpJa1RYdlh6VEFkSi15RzR4QXZLNDRCQmVROU42WVd1X01jdm1aLWxqUm4yQkV5d0dHdVNBS1psT3V3NXo1V1N2dUN2cjliM242b2l4UWRzNUZSY3drYmEyNjJWd2xyQmJaSlBSdjFFOEdZUHJPQXI3SUN3aHYzUElfNVNnY25LS3JlLWlHV3haU1E1ZTl4ZTVRSzJFaGlXcmNKYTZxWUZORHc2dktwc0hJcmNWVHp6MFE?oc=5",
+     "source": "Idéal Investisseur",
+     "time": 1795784220000,
+     "tone": "négatif"
     }
    ],
-   "ctx": null,
-   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 64,65 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
+   "ctx": {
+    "title": "MICHELIN Cours Action ML, Cotation Bourse Euronext Paris",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9hR2Q5ajlWM0tXT20zbkNzRS1wMzRscGs2OWRHQ1NFS2FZaTd2RDdoTDBZUXdkYlFpVFR2QVI5X0t2TVNYYWZLRVRRZG1VOUFW?oc=5",
+    "source": "Boursorama",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   },
+   "summary": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 31,69 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation."
   }
  ],
  "avoid": [],
@@ -639,68 +645,68 @@
   {
    "id": "cac",
    "label": "CAC 40",
-   "price": 8162.31005859375,
-   "chg": 0.6606429934905789,
+   "price": 8156.08984375,
+   "chg": 0.5839329909012703,
    "p1S": 0.5,
-   "p1M": 0.508363565835664,
+   "p1M": 0.5084522587484687,
    "trend": "sous SMA 200",
-   "w1": 2.958721687663579,
-   "m1": 2.4129241981649896
+   "w1": 2.8802603985998543,
+   "m1": 2.3348788425344935
   },
   {
    "id": "spx",
    "label": "S&P 500",
-   "price": 7275.0498046875,
-   "chg": 1.2846004233894703,
+   "price": 7275.77978515625,
+   "chg": 1.2947633476414255,
    "p1S": 0.5,
-   "p1M": 0.5240543446932217,
+   "p1M": 0.5235898305580212,
    "trend": "sous SMA 200",
-   "w1": 1.3826933676281516,
-   "m1": -6.055415651434382
+   "w1": 1.392866134552695,
+   "m1": -6.04598922638433
   },
   {
    "id": "ndx",
    "label": "NASDAQ 100",
-   "price": 26546.046875,
-   "chg": 1.9163373640982417,
+   "price": 26562.955078125,
+   "chg": 1.9812518179158856,
    "p1S": 0.5,
-   "p1M": 0.5248264323467882,
+   "p1M": 0.5248260128834742,
    "trend": "sous SMA 200",
-   "w1": 0.10934886382802933,
-   "m1": -10.958627881536687
+   "w1": 0.17311237683890202,
+   "m1": -10.901913990636213
   },
   {
    "id": "dji",
    "label": "DOW JONES",
-   "price": 50726.62890625,
-   "chg": 1.083395248713015,
+   "price": 50679.46875,
+   "chg": 0.9894187945902688,
    "p1S": 0.5,
-   "p1M": 0.5268529686408268,
+   "p1M": 0.526955560737094,
    "trend": "sous SMA 200",
-   "w1": 3.3190793077519265,
-   "m1": -3.3320043300297364
+   "w1": 3.223024355376425,
+   "m1": -3.4218758211669753
   },
   {
    "id": "dax",
    "label": "DAX 40",
-   "price": 25435.990234375,
-   "chg": 0.8743452731630796,
+   "price": 25441.240234375,
+   "chg": 0.8951657840928551,
    "p1S": 0.5,
-   "p1M": 0.5254330620339126,
+   "p1M": 0.5254424776001664,
    "trend": "au-dessus SMA 200",
-   "w1": 2.5529838004073158,
-   "m1": -2.3183443896769296
+   "w1": 2.5741507830956856,
+   "m1": -2.29818285135156
   },
   {
    "id": "mib",
    "label": "FTSE MIB",
-   "price": 49249.78125,
-   "chg": 1.8357000330838202,
+   "price": 49275.6015625,
+   "chg": 1.8890897036929921,
    "p1S": 0.5,
-   "p1M": 0.5242572699523406,
+   "p1M": 0.5242579104412506,
    "trend": "sous SMA 200",
-   "w1": 1.120608676905377,
-   "m1": -1.5043773249070025
+   "w1": 1.173623444686278,
+   "m1": -1.4527387654493795
   },
   {
    "id": "nkx",
@@ -708,14 +714,14 @@
    "price": 57499.16015625,
    "chg": 0.8551573401119228,
    "p1S": 0.5,
-   "p1M": 0.5242653867965497,
+   "p1M": 0.524268001622811,
    "trend": "sous SMA 200",
    "w1": -2.583887616166436,
    "m1": -7.5422331514928835
   }
  ],
  "brief": [
-  "CAC 40 à 8 162 points : +0,7 % à la dernière séance, +2,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.",
+  "CAC 40 à 8 156 points : +0,6 % à la dernière séance, +2,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.",
   "Pas d'annonce macroéconomique majeure aujourd'hui.",
   "Pas de tendance nette des indices à 1 mois.",
   "5 opportunité(s) retenue(s), surtout sur 3 mois."
@@ -756,30 +762,30 @@
   {
    "sym": "^FCHI",
    "label": "CAC 40",
-   "last": 8163.490234375,
-   "chg": 0.6751973601016426,
-   "m1": 2.4277319244040196
+   "last": 8156.08984375,
+   "chg": 0.5839329909012703,
+   "m1": 2.3348788425344935
   },
   {
    "sym": "^SBF120",
    "label": "SBF 120",
-   "last": 6172.97021484375,
+   "last": 6167.330078125,
    "chg": null,
    "m1": 0
   },
   {
    "sym": "^DJI",
    "label": "Dow Jones",
-   "last": 50690.03125,
-   "chg": 1.010466780339292,
-   "m1": -3.401747227442542
+   "last": 50657.03125,
+   "chg": 0.9447073929103933,
+   "m1": -3.4646341948182835
   },
   {
    "sym": "^IXIC",
    "label": "Nasdaq",
-   "last": 23978.62890625,
-   "chg": 1.665528038006192,
-   "m1": -9.684501949936008
+   "last": 24001.353515625,
+   "chg": 1.7618767250224154,
+   "m1": -9.59890971604639
   },
   {
    "sym": "^N225",
@@ -791,44 +797,44 @@
   {
    "sym": "^STOXX50E",
    "label": "Euro Stoxx 50",
-   "last": 6089.2998046875,
-   "chg": 1.2396141380534242,
-   "m1": -1.8973529034865155
+   "last": 6089.2001953125,
+   "chg": 1.2379580503236287,
+   "m1": -1.8989576763958071
   },
   {
    "sym": "EURUSD=X",
    "label": "Euro / dollar",
-   "last": 1.0943313837051392,
-   "chg": -0.2440348544842874,
-   "m1": -1.904134895643439
+   "last": 1.0938525199890137,
+   "chg": -0.2876866339055595,
+   "m1": -1.9470602390996183
   },
   {
    "sym": "BZ=F",
    "label": "Pétrole Brent",
-   "last": 90.44999694824219,
-   "chg": -4.397002045526055,
-   "m1": -21.566079441897745
+   "last": 90.11000061035156,
+   "chg": -4.756368217915052,
+   "m1": -21.860908039530745
   },
   {
    "sym": "GC=F",
    "label": "Or",
-   "last": 3651.800048828125,
-   "chg": 3.280728502689123,
-   "m1": -9.867707552366767
+   "last": 3662.10009765625,
+   "chg": 3.5720359489780806,
+   "m1": -9.61348579849517
   },
   {
    "sym": "^TNX",
    "label": "Taux US 10 ans",
-   "last": 4.921999931335449,
-   "chg": 1.5264001853842135,
-   "m1": -2.4380603190962025
+   "last": 4.927999973297119,
+   "chg": 1.6501634259018294,
+   "m1": -2.319129855846791
   },
   {
    "sym": "BTC-USD",
    "label": "Bitcoin",
-   "last": 60263.3984375,
-   "chg": -0.38236813833028016,
-   "m1": -20.44113380420638
+   "last": 59542.890625,
+   "chg": -1.573394264968675,
+   "m1": -21.392337787618665
   }
  ],
  "movers": {
@@ -839,31 +845,31 @@
     "chg": 7.32430928982013
    },
    {
-    "sym": "SHOP",
-    "name": "Shopify",
-    "chg": 6.5929638906573995
-   },
-   {
     "sym": "MU",
     "name": "Micron",
-    "chg": 6.558002939838881
+    "chg": 5.94344870712058
+   },
+   {
+    "sym": "SHOP",
+    "name": "Shopify",
+    "chg": 5.813347254595991
+   },
+   {
+    "sym": "SOI.PA",
+    "name": "Soitec",
+    "chg": 5.01318997855198
    },
    {
     "sym": "QCOM",
     "name": "Qualcomm",
-    "chg": 5.923153099408673
-   },
-   {
-    "sym": "PLTR",
-    "name": "Palantir",
-    "chg": 5.614645005323182
+    "chg": 4.99229099141596
    }
   ],
   "down": [
    {
-    "sym": "CBK.DE",
-    "name": "Commerzbank",
-    "chg": -2.942941635703278
+    "sym": "RCO.PA",
+    "name": "Remy Cointreau",
+    "chg": -2.872065281056202
    },
    {
     "sym": "AF.PA",
@@ -876,14 +882,14 @@
     "chg": -2.3541453428863823
    },
    {
-    "sym": "ERA.PA",
-    "name": "Eramet",
-    "chg": -2.1952580733133664
-   },
-   {
     "sym": "6367.T",
     "name": "Daikin",
     "chg": -2.173021730217306
+   },
+   {
+    "sym": "CBK.DE",
+    "name": "Commerzbank",
+    "chg": -1.891895142790534
    }
   ]
  },
@@ -892,121 +898,121 @@
    "sym": "CW8.PA",
    "label": "MSCI World",
    "issuer": "Amundi",
-   "last": 690.08,
-   "chg": 0.92,
-   "w1": 3.43,
-   "m1": -3.47,
-   "ytd": 13.46
+   "last": 691.24,
+   "chg": 1.09,
+   "w1": 3.6,
+   "m1": -3.31,
+   "ytd": 13.66
   },
   {
    "sym": "VWCE.DE",
    "label": "FTSE All-World",
    "issuer": "Vanguard",
-   "last": 165.32,
-   "chg": 1.14,
-   "w1": 3.75,
-   "m1": -3.57,
-   "ytd": 13.68
+   "last": 165.46,
+   "chg": 1.22,
+   "w1": 3.84,
+   "m1": -3.49,
+   "ytd": 13.78
   },
   {
    "sym": "ESE.PA",
    "label": "S&P 500 PEA",
    "issuer": "BNP",
-   "last": 33.71,
-   "chg": 0.78,
-   "w1": 3.35,
-   "m1": -3.84,
-   "ytd": 13.98
+   "last": 33.77,
+   "chg": 0.97,
+   "w1": 3.54,
+   "m1": -3.66,
+   "ytd": 14.2
   },
   {
    "sym": "PUST.PA",
    "label": "Nasdaq-100 PEA",
    "issuer": "Amundi",
-   "last": 97.24,
-   "chg": 1.45,
-   "w1": 3.7,
-   "m1": -7.97,
-   "ytd": 12.05
+   "last": 97.45,
+   "chg": 1.67,
+   "w1": 3.92,
+   "m1": -7.77,
+   "ytd": 12.3
   },
   {
    "sym": "CAC.PA",
    "label": "CAC 40",
    "issuer": "Amundi",
-   "last": 82.93,
-   "chg": 0.64,
-   "w1": 3.1,
-   "m1": 2.78,
-   "ytd": 3.19
+   "last": 82.84,
+   "chg": 0.53,
+   "w1": 2.98,
+   "m1": 2.66,
+   "ytd": 3.07
   },
   {
    "sym": "EXS1.DE",
    "label": "DAX",
    "issuer": "iShares",
-   "last": 209.6,
-   "chg": 0.77,
-   "w1": 2.59,
-   "m1": -2.35,
-   "ytd": 3.23
+   "last": 209.75,
+   "chg": 0.84,
+   "w1": 2.67,
+   "m1": -2.28,
+   "ytd": 3.3
   },
   {
    "sym": "PAEEM.PA",
    "label": "Émergents PEA",
    "issuer": "Amundi",
-   "last": 32.94,
-   "chg": 2.59,
-   "w1": 6.28,
-   "m1": -5.94,
-   "ytd": 14.88
+   "last": 32.92,
+   "chg": 2.52,
+   "w1": 6.21,
+   "m1": -6,
+   "ytd": 14.81
   },
   {
    "sym": "SPY",
    "label": "S&P 500",
    "issuer": "SPDR",
-   "last": 725.4,
-   "chg": 1.21,
-   "w1": 1.33,
-   "m1": -6.07,
-   "ytd": 6.38
+   "last": 725.59,
+   "chg": 1.24,
+   "w1": 1.36,
+   "m1": -6.05,
+   "ytd": 6.4
   },
   {
    "sym": "QQQ",
    "label": "Nasdaq-100",
    "issuer": "Invesco",
-   "last": 645.57,
-   "chg": 1.84,
-   "w1": 0.08,
-   "m1": -11.03,
-   "ytd": 5.09
+   "last": 645.86,
+   "chg": 1.88,
+   "w1": 0.13,
+   "m1": -10.99,
+   "ytd": 5.14
   },
   {
    "sym": "SMH",
    "label": "Semi-conducteurs",
    "issuer": "VanEck",
-   "last": 433.38,
-   "chg": 2.58,
-   "w1": -3.15,
-   "m1": -23.66,
-   "ytd": 20.34
+   "last": 432.27,
+   "chg": 2.32,
+   "w1": -3.4,
+   "m1": -23.85,
+   "ytd": 20.03
   },
   {
    "sym": "GLD",
    "label": "Or",
    "issuer": "SPDR",
-   "last": 332.19,
-   "chg": 1.45,
-   "w1": -0.89,
-   "m1": -11.06,
-   "ytd": -16.18
+   "last": 332.9,
+   "chg": 1.66,
+   "w1": -0.68,
+   "m1": -10.87,
+   "ytd": -16
   },
   {
    "sym": "TLT",
    "label": "Obligations US 20 ans +",
    "issuer": "",
-   "last": 81.29,
-   "chg": -1.16,
-   "w1": 1.16,
-   "m1": 0.36,
-   "ytd": -6.74
+   "last": 81.41,
+   "chg": -1.01,
+   "w1": 1.32,
+   "m1": 0.52,
+   "ytd": -6.6
   }
  ],
  "etfUniverse": [
@@ -1016,13 +1022,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 690.08,
-   "d": 0.92,
-   "w": 3.43,
-   "m": -3.47,
-   "q": 0.24,
-   "y": 13.46,
-   "a": 14.01,
+   "p": 691.24,
+   "d": 1.09,
+   "w": 3.6,
+   "m": -3.31,
+   "q": 0.41,
+   "y": 13.66,
+   "a": 14.2,
    "h": [
     691.7,
     682.5,
@@ -1053,14 +1059,14 @@
     688.7,
     688.7,
     665,
-    690.1
+    691.2
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 0.95,
+   "p3": 0.554,
+   "x3": 0.93,
    "t": {
     "st": "frais",
-    "g": -0.43,
+    "g": -0.26,
     "a": 60
    }
   },
@@ -1070,13 +1076,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 40.89,
-   "d": 0.93,
-   "w": 3.44,
-   "m": -3.47,
-   "q": 0.27,
-   "y": 13.51,
-   "a": 12.71,
+   "p": 40.97,
+   "d": 1.11,
+   "w": 3.63,
+   "m": -3.29,
+   "q": 0.45,
+   "y": 13.72,
+   "a": 12.91,
    "h": [
     40.94,
     40.43,
@@ -1107,14 +1113,14 @@
     40.8,
     40.78,
     39.38,
-    40.89
+    40.97
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 0.94,
+   "p3": 0.554,
+   "x3": 0.93,
    "t": {
     "st": "frais",
-    "g": -0.38,
+    "g": -0.19,
     "a": 60
    }
   },
@@ -1124,13 +1130,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 127,
-   "d": 0.94,
-   "w": 3.5,
-   "m": -3.43,
-   "q": 0.33,
-   "y": 13.87,
-   "a": 14.45,
+   "p": 127.23,
+   "d": 1.12,
+   "w": 3.68,
+   "m": -3.25,
+   "q": 0.51,
+   "y": 14.08,
+   "a": 14.65,
    "h": [
     127.2,
     125.4,
@@ -1161,14 +1167,14 @@
     126.7,
     126.8,
     122.3,
-    127
+    127.2
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.81,
+   "p1": 0.527,
+   "p3": 0.554,
+   "x3": 0.93,
    "t": {
     "st": "frais",
-    "g": -0.35,
+    "g": -0.16,
     "a": 60
    }
   },
@@ -1178,13 +1184,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "EUR",
-   "p": 165.32,
-   "d": 1.14,
-   "w": 3.75,
-   "m": -3.57,
-   "q": -0.78,
-   "y": 13.68,
-   "a": 14.6,
+   "p": 165.46,
+   "d": 1.22,
+   "w": 3.84,
+   "m": -3.49,
+   "q": -0.7,
+   "y": 13.78,
+   "a": 14.7,
    "h": [
     167.6,
     165.3,
@@ -1215,14 +1221,14 @@
     164.9,
     165,
     158.7,
-    165.3
+    165.5
    ],
    "p1": 0.53,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.25,
    "t": {
     "st": "frais",
-    "g": -1.52,
+    "g": -1.44,
     "a": 60
    }
   },
@@ -1232,13 +1238,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "GBp",
-   "p": 8841,
-   "d": 0.88,
-   "w": 3.37,
-   "m": -3.62,
-   "q": -3.26,
-   "y": 8.97,
-   "a": 9.4,
+   "p": 8850,
+   "d": 0.98,
+   "w": 3.47,
+   "m": -3.52,
+   "q": -3.16,
+   "y": 9.08,
+   "a": 9.52,
    "h": [
     9218,
     9097,
@@ -1269,14 +1275,14 @@
     8842,
     8854,
     8517,
-    8841
+    8850
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 0.62,
+   "p3": 0.554,
+   "x3": 0.59,
    "t": {
     "st": "frais",
-    "g": -4.31,
+    "g": -4.21,
     "a": 60
    }
   },
@@ -1288,7 +1294,7 @@
    "cur": "USD",
    "p": 150.04,
    "d": 1.38,
-   "w": 1.55,
+   "w": 1.56,
    "m": -5.77,
    "q": -6.86,
    "y": 6.04,
@@ -1326,8 +1332,8 @@
     150
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 0.94,
+   "p3": 0.554,
+   "x3": 0.88,
    "t": {
     "st": "frais",
     "g": -6.32,
@@ -1340,13 +1346,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 149.57,
-   "d": 1.38,
-   "w": 1.63,
-   "m": -5.51,
-   "q": -7.11,
-   "y": 6.03,
-   "a": 7.54,
+   "p": 149.55,
+   "d": 1.36,
+   "w": 1.62,
+   "m": -5.52,
+   "q": -7.12,
+   "y": 6.02,
+   "a": 7.53,
    "h": [
     161.7,
     159.9,
@@ -1380,11 +1386,11 @@
     149.6
    ],
    "p1": 0.523,
-   "p3": 0.555,
-   "x3": 0.93,
+   "p3": 0.554,
+   "x3": 0.87,
    "t": {
     "st": "frais",
-    "g": -6.58,
+    "g": -6.6,
     "a": 60
    }
   },
@@ -1394,13 +1400,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 196.65,
-   "d": 1.08,
-   "w": 1.41,
-   "m": -5.49,
-   "q": -6.1,
-   "y": 5.85,
-   "a": 7.33,
+   "p": 196.88,
+   "d": 1.2,
+   "w": 1.53,
+   "m": -5.38,
+   "q": -5.99,
+   "y": 5.98,
+   "a": 7.46,
    "h": [
     209.8,
     207.4,
@@ -1431,14 +1437,14 @@
     197.7,
     187.4,
     194.6,
-    196.6
+    196.9
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.43,
+   "p3": 0.554,
+   "x3": 0.47,
    "t": {
     "st": "frais",
-    "g": -5.46,
+    "g": -5.35,
     "a": 60
    }
   },
@@ -1448,13 +1454,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 100.18,
-   "d": 1.01,
-   "w": 1.42,
-   "m": -3.38,
-   "q": -7,
-   "y": 4.32,
-   "a": 6.76,
+   "p": 100.29,
+   "d": 1.12,
+   "w": 1.53,
+   "m": -3.27,
+   "q": -6.9,
+   "y": 4.44,
+   "a": 6.87,
    "h": [
     108.3,
     106.6,
@@ -1485,14 +1491,14 @@
     100.3,
     96.14,
     98.88,
-    100.2
+    100.3
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.4,
    "t": {
     "st": "frais",
-    "g": -6.43,
+    "g": -6.32,
     "a": 60
    }
   },
@@ -1502,13 +1508,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 66.61,
-   "d": 1.44,
-   "w": 1.39,
-   "m": -5.3,
-   "q": -8.82,
-   "y": 6.64,
-   "a": 9.87,
+   "p": 66.67,
+   "d": 1.52,
+   "w": 1.48,
+   "m": -5.22,
+   "q": -8.75,
+   "y": 6.72,
+   "a": 9.96,
    "h": [
     73.76,
     72.82,
@@ -1539,14 +1545,14 @@
     66.68,
     63.62,
     65.53,
-    66.61
+    66.67
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.48,
    "t": {
     "st": "frais",
-    "g": -8.23,
+    "g": -8.16,
     "a": 60
    }
   },
@@ -1556,13 +1562,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 138.92,
-   "d": 0.65,
-   "w": 3.06,
-   "m": -5.34,
-   "q": -5.33,
-   "y": 5.96,
-   "a": 7.47,
+   "p": 139.13,
+   "d": 0.8,
+   "w": 3.22,
+   "m": -5.19,
+   "q": -5.19,
+   "y": 6.12,
+   "a": 7.64,
    "h": [
     147.9,
     145.8,
@@ -1593,14 +1599,14 @@
     139.1,
     138.1,
     134,
-    138.9
+    139.1
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.86,
+   "p3": 0.554,
+   "x3": 0.87,
    "t": {
     "st": "frais",
-    "g": -6.19,
+    "g": -6.05,
     "a": 60
    }
   },
@@ -1610,13 +1616,13 @@
    "k": "monde",
    "e": "🌍",
    "cur": "USD",
-   "p": 9.96,
-   "d": 0.8,
-   "w": 3.82,
-   "m": -3.41,
-   "q": -5.41,
-   "y": 9.68,
-   "a": 11.1,
+   "p": 9.97,
+   "d": 0.94,
+   "w": 3.96,
+   "m": -3.27,
+   "q": -5.27,
+   "y": 9.84,
+   "a": 11.26,
    "h": [
     10.63,
     10.39,
@@ -1647,14 +1653,14 @@
     9.828,
     9.75,
     9.615,
-    9.957
+    9.971
    ],
    "p1": 0.521,
-   "p3": 0.555,
-   "x3": 0.68,
+   "p3": 0.554,
+   "x3": 0.69,
    "t": {
     "st": "frais",
-    "g": -6.4,
+    "g": -6.27,
     "a": 60
    }
   },
@@ -1664,13 +1670,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 725.4,
-   "d": 1.21,
-   "w": 1.33,
-   "m": -6.07,
-   "q": -5.71,
-   "y": 6.38,
-   "a": 7.46,
+   "p": 725.59,
+   "d": 1.24,
+   "w": 1.36,
+   "m": -6.05,
+   "q": -5.69,
+   "y": 6.4,
+   "a": 7.49,
    "h": [
     770.2,
     762.4,
@@ -1701,14 +1707,14 @@
     730.2,
     689.8,
     718.8,
-    725.4
+    725.6
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 0.83,
+   "p3": 0.554,
+   "x3": 0.86,
    "t": {
     "st": "frais",
-    "g": -5.2,
+    "g": -5.17,
     "a": 60
    }
   },
@@ -1718,13 +1724,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 666.72,
-   "d": 1.19,
-   "w": 1.32,
-   "m": -6.08,
-   "q": -5.73,
-   "y": 6.31,
-   "a": 7.42,
+   "p": 666.9,
+   "d": 1.22,
+   "w": 1.35,
+   "m": -6.06,
+   "q": -5.7,
+   "y": 6.34,
+   "a": 7.45,
    "h": [
     708,
     700.9,
@@ -1755,14 +1761,14 @@
     671.3,
     635.5,
     660.7,
-    666.7
+    666.9
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.81,
    "t": {
     "st": "frais",
-    "g": -5.22,
+    "g": -5.19,
     "a": 60
    }
   },
@@ -1772,13 +1778,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 33.71,
-   "d": 0.78,
-   "w": 3.35,
-   "m": -3.84,
-   "q": 0.79,
-   "y": 13.98,
-   "a": 13.85,
+   "p": 33.77,
+   "d": 0.97,
+   "w": 3.54,
+   "m": -3.66,
+   "q": 0.98,
+   "y": 14.2,
+   "a": 14.06,
    "h": [
     33.52,
     33.17,
@@ -1809,14 +1815,14 @@
     33.76,
     33.76,
     32.42,
-    33.71
+    33.77
    ],
    "p1": 0.529,
-   "p3": 0.555,
-   "x3": 1.18,
+   "p3": 0.554,
+   "x3": 1.17,
    "t": {
     "st": "frais",
-    "g": 0.31,
+    "g": 0.5,
     "a": 60
    }
   },
@@ -1826,13 +1832,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 53.33,
-   "d": 0.3,
-   "w": 3.35,
-   "m": -5.66,
-   "q": -2.86,
-   "y": 10.07,
-   "a": 10.29,
+   "p": 53.48,
+   "d": 0.58,
+   "w": 3.64,
+   "m": -5.4,
+   "q": -2.59,
+   "y": 10.38,
+   "a": 10.6,
    "h": [
     55.07,
     54.14,
@@ -1863,14 +1869,14 @@
     53.42,
     53.91,
     51.56,
-    53.33
+    53.48
    ],
-   "p1": 0.529,
-   "p3": 0.555,
-   "x3": 1.02,
+   "p1": 0.53,
+   "p3": 0.554,
+   "x3": 1.17,
    "t": {
     "st": "frais",
-    "g": -3.79,
+    "g": -3.52,
     "a": 60
    }
   },
@@ -1880,13 +1886,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 785.25,
-   "d": 0.51,
-   "w": 3,
-   "m": -5.69,
-   "q": -4.81,
-   "y": 6.33,
-   "a": 7.64,
+   "p": 786.42,
+   "d": 0.66,
+   "w": 3.15,
+   "m": -5.55,
+   "q": -4.67,
+   "y": 6.48,
+   "a": 7.8,
    "h": [
     829.5,
     820.6,
@@ -1917,14 +1923,14 @@
     789.2,
     783.6,
     756.3,
-    785.3
+    786.4
    ],
    "p1": 0.527,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.95,
    "t": {
     "st": "frais",
-    "g": -5.51,
+    "g": -5.37,
     "a": 60
    }
   },
@@ -1934,13 +1940,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 717.7,
-   "d": 0.78,
-   "w": 3.41,
-   "m": -3.8,
-   "q": 0.84,
-   "y": 14.06,
-   "a": 14.1,
+   "p": 719.18,
+   "d": 0.99,
+   "w": 3.62,
+   "m": -3.6,
+   "q": 1.05,
+   "y": 14.3,
+   "a": 14.33,
    "h": [
     713,
     705.8,
@@ -1971,14 +1977,14 @@
     719.3,
     718.7,
     690,
-    717.7
+    719.2
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 1.04,
+   "p3": 0.554,
+   "x3": 0.99,
    "t": {
-    "st": "frais",
-    "g": 0.34,
+    "st": "en cours",
+    "g": 0.54,
     "a": 60
    }
   },
@@ -1988,13 +1994,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 645.57,
-   "d": 1.84,
-   "w": 0.08,
-   "m": -11.03,
-   "q": -9.89,
-   "y": 5.09,
-   "a": 6.02,
+   "p": 645.86,
+   "d": 1.88,
+   "w": 0.13,
+   "m": -10.99,
+   "q": -9.85,
+   "y": 5.14,
+   "a": 6.07,
    "h": [
     719,
     716.3,
@@ -2025,14 +2031,14 @@
     659.5,
     608.5,
     638.1,
-    645.6
+    645.9
    ],
-   "p1": 0.525,
-   "p3": 0.555,
-   "x3": 1.26,
+   "p1": 0.526,
+   "p3": 0.554,
+   "x3": 1.31,
    "t": {
     "st": "frais",
-    "g": -8.98,
+    "g": -8.94,
     "a": 60
    }
   },
@@ -2042,13 +2048,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "EUR",
-   "p": 97.24,
-   "d": 1.45,
-   "w": 3.7,
-   "m": -7.97,
-   "q": -3.76,
-   "y": 12.05,
-   "a": 10.73,
+   "p": 97.45,
+   "d": 1.67,
+   "w": 3.92,
+   "m": -7.77,
+   "q": -3.55,
+   "y": 12.3,
+   "a": 10.97,
    "h": [
     102.1,
     100.9,
@@ -2079,14 +2085,14 @@
     99.4,
     98.62,
     91.83,
-    97.24
+    97.45
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 1.21,
+   "p3": 0.554,
+   "x3": 1.06,
    "t": {
     "st": "frais",
-    "g": -4.44,
+    "g": -4.24,
     "a": 60
    }
   },
@@ -2096,13 +2102,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "GBp",
-   "p": 49500,
-   "d": 1.24,
-   "w": 3.34,
-   "m": -7.94,
-   "q": -6.17,
-   "y": 7.18,
-   "a": 6.22,
+   "p": 49602,
+   "d": 1.45,
+   "w": 3.55,
+   "m": -7.75,
+   "q": -5.97,
+   "y": 7.4,
+   "a": 6.44,
    "h": [
     53420,
     52800,
@@ -2133,14 +2139,14 @@
     50720,
     50320,
     46890,
-    49500
+    49600
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 1.01,
+   "p3": 0.554,
+   "x3": 0.99,
    "t": {
     "st": "frais",
-    "g": -7.09,
+    "g": -6.9,
     "a": 60
    }
   },
@@ -2150,13 +2156,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 506.48,
-   "d": 1.04,
-   "w": 3.2,
-   "m": -3.47,
-   "q": -5.34,
-   "y": 5.39,
-   "a": 7.49,
+   "p": 506.05,
+   "d": 0.95,
+   "w": 3.11,
+   "m": -3.55,
+   "q": -5.42,
+   "y": 5.3,
+   "a": 7.4,
    "h": [
     534.1,
     524.1,
@@ -2187,14 +2193,14 @@
     501.7,
     481.1,
     499.7,
-    506.5
+    506
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.95,
+   "p1": 0.525,
+   "p3": 0.554,
+   "x3": 0.74,
    "t": {
     "st": "frais",
-    "g": -4.55,
+    "g": -4.63,
     "a": 60
    }
   },
@@ -2204,13 +2210,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 272.86,
-   "d": 1.48,
-   "w": 3.27,
-   "m": -3,
-   "q": -7.74,
-   "y": 10.84,
-   "a": 11.31,
+   "p": 272.24,
+   "d": 1.25,
+   "w": 3.04,
+   "m": -3.22,
+   "q": -7.95,
+   "y": 10.59,
+   "a": 11.06,
    "h": [
     296,
     290.6,
@@ -2241,14 +2247,14 @@
     270.1,
     256.6,
     267.1,
-    272.9
+    272.2
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.44,
+   "p3": 0.554,
+   "x3": 0.48,
    "t": {
     "st": "frais",
-    "g": -7.2,
+    "g": -7.4,
     "a": 60
    }
   },
@@ -2258,13 +2264,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 660.27,
-   "d": 1,
-   "w": 2.68,
-   "m": -1.3,
-   "q": -4.38,
-   "y": 9.45,
-   "a": 10.25,
+   "p": 659.66,
+   "d": 0.91,
+   "w": 2.59,
+   "m": -1.39,
+   "q": -4.47,
+   "y": 9.35,
+   "a": 10.15,
    "h": [
     691.5,
     679.7,
@@ -2295,14 +2301,14 @@
     656.2,
     626,
     646.2,
-    660.3
+    659.7
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.34,
+   "p1": 0.521,
+   "p3": 0.554,
+   "x3": 0.44,
    "t": {
     "st": "frais",
-    "g": -3.6,
+    "g": -3.69,
     "a": 60
    }
   },
@@ -2312,13 +2318,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 357.67,
-   "d": 1.27,
-   "w": 1.49,
-   "m": -5.67,
-   "q": -5.72,
-   "y": 6.68,
-   "a": 7.68,
+   "p": 357.71,
+   "d": 1.28,
+   "w": 1.5,
+   "m": -5.66,
+   "q": -5.71,
+   "y": 6.69,
+   "a": 7.69,
    "h": [
     379.7,
     375.6,
@@ -2352,11 +2358,11 @@
     357.7
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.85,
    "t": {
     "st": "frais",
-    "g": -5.1,
+    "g": -5.09,
     "a": 60
    }
   },
@@ -2366,13 +2372,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 217.73,
-   "d": 0.92,
-   "w": 2.88,
-   "m": 0.14,
-   "q": -1.34,
-   "y": 13.66,
-   "a": 15.09,
+   "p": 217.68,
+   "d": 0.9,
+   "w": 2.86,
+   "m": 0.11,
+   "q": -1.37,
+   "y": 13.63,
+   "a": 15.06,
    "h": [
     219,
     214.6,
@@ -2406,11 +2412,11 @@
     217.7
    ],
    "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.53,
+   "p3": 0.554,
+   "x3": 0.52,
    "t": {
     "st": "frais",
-    "g": -0.4,
+    "g": -0.42,
     "a": 60
    }
   },
@@ -2420,13 +2426,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 265.8,
-   "d": 1.82,
-   "w": 0.06,
-   "m": -11.02,
-   "q": -9.9,
-   "y": 5.09,
-   "a": 6.04,
+   "p": 266,
+   "d": 1.9,
+   "w": 0.14,
+   "m": -10.95,
+   "q": -9.83,
+   "y": 5.17,
+   "a": 6.12,
    "h": [
     296.1,
     295,
@@ -2457,14 +2463,14 @@
     271.6,
     251.2,
     262.8,
-    265.8
+    266
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.21,
+   "p1": 0.525,
+   "p3": 0.554,
+   "x3": 1.23,
    "t": {
     "st": "frais",
-    "g": -8.98,
+    "g": -8.91,
     "a": 60
    }
   },
@@ -2474,13 +2480,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 81.56,
-   "d": 1.55,
-   "w": 0.26,
-   "m": -10.3,
-   "q": -9.5,
-   "y": -1.21,
-   "a": -0.51,
+   "p": 81.57,
+   "d": 1.57,
+   "w": 0.28,
+   "m": -10.28,
+   "q": -9.49,
+   "y": -1.19,
+   "a": -0.49,
    "h": [
     90.23,
     89.56,
@@ -2511,14 +2517,14 @@
     83.23,
     76.8,
     81.1,
-    81.56
+    81.57
    ],
    "p1": 0.525,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.27,
    "t": {
     "st": "frais",
-    "g": -8.65,
+    "g": -8.64,
     "a": 60
    }
   },
@@ -2528,13 +2534,13 @@
    "k": "usa",
    "e": "🇺🇸",
    "cur": "USD",
-   "p": 58.08,
-   "d": 1.36,
-   "w": 0.73,
-   "m": -8.66,
-   "q": -7.28,
-   "y": -2.02,
-   "a": -1.43,
+   "p": 58.1,
+   "d": 1.4,
+   "w": 0.77,
+   "m": -8.63,
+   "q": -7.24,
+   "y": -1.98,
+   "a": -1.38,
    "h": [
     63.04,
     62.72,
@@ -2565,14 +2571,14 @@
     59.01,
     55.09,
     57.83,
-    58.08
+    58.1
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 1.14,
+   "p3": 0.554,
+   "x3": 0.98,
    "t": {
     "st": "frais",
-    "g": -7.12,
+    "g": -7.08,
     "a": 60
    }
   },
@@ -2582,13 +2588,13 @@
    "k": "europe",
    "e": "🇫🇷",
    "cur": "EUR",
-   "p": 82.93,
-   "d": 0.64,
-   "w": 3.1,
-   "m": 2.78,
-   "q": -0.99,
-   "y": 3.19,
-   "a": 1.48,
+   "p": 82.84,
+   "d": 0.53,
+   "w": 2.98,
+   "m": 2.66,
+   "q": -1.1,
+   "y": 3.07,
+   "a": 1.37,
    "h": [
     83.93,
     81.98,
@@ -2619,14 +2625,14 @@
     81.98,
     81.7,
     81.06,
-    82.93
+    82.84
    ],
    "p1": 0.51,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.08,
    "t": {
     "st": "frais",
-    "g": -0.77,
+    "g": -0.87,
     "a": 60
    }
   },
@@ -2636,13 +2642,13 @@
    "k": "europe",
    "e": "🇫🇷",
    "cur": "EUR",
-   "p": 143.92,
-   "d": 0.57,
-   "w": 3.27,
-   "m": 3.23,
-   "q": -1.14,
-   "y": 0.15,
-   "a": 1.22,
+   "p": 143.74,
+   "d": 0.45,
+   "w": 3.14,
+   "m": 3.1,
+   "q": -1.26,
+   "y": 0.03,
+   "a": 1.1,
    "h": [
     145.8,
     141.9,
@@ -2673,14 +2679,14 @@
     142.2,
     141.6,
     140.7,
-    143.9
+    143.7
    ],
    "p1": 0.512,
-   "p3": 0.555,
-   "x3": 0.2,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "frais",
-    "g": -1.06,
+    "g": -1.18,
     "a": 60
    }
   },
@@ -2690,13 +2696,13 @@
    "k": "europe",
    "e": "🇩🇪",
    "cur": "EUR",
-   "p": 209.6,
-   "d": 0.77,
-   "w": 2.59,
-   "m": -2.35,
-   "q": -2.06,
-   "y": 3.23,
-   "a": 6.13,
+   "p": 209.75,
+   "d": 0.84,
+   "w": 2.67,
+   "m": -2.28,
+   "q": -1.99,
+   "y": 3.3,
+   "a": 6.2,
    "h": [
     214.3,
     209.1,
@@ -2727,14 +2733,14 @@
     209.9,
     208.8,
     203.4,
-    209.6
+    209.8
    ],
-   "p1": 0.525,
-   "p3": 0.555,
-   "x3": 0.88,
+   "p1": 0.523,
+   "p3": 0.554,
+   "x3": 0.9,
    "t": {
     "st": "frais",
-    "g": -2.38,
+    "g": -2.31,
     "a": 60
    }
   },
@@ -2744,13 +2750,13 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 318.6,
-   "d": 1.03,
-   "w": 3.04,
-   "m": -0.65,
-   "q": -0.17,
-   "y": 11.77,
-   "a": 15.03,
+   "p": 318.7,
+   "d": 1.06,
+   "w": 3.07,
+   "m": -0.62,
+   "q": -0.14,
+   "y": 11.8,
+   "a": 15.07,
    "h": [
     320.3,
     313.5,
@@ -2781,14 +2787,14 @@
     315.5,
     315.4,
     309.6,
-    318.6
+    318.7
    ],
    "p1": 0.521,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.65,
    "t": {
     "st": "frais",
-    "g": -0.58,
+    "g": -0.55,
     "a": 60
    }
   },
@@ -2838,7 +2844,7 @@
     63.95
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.76,
    "t": {
     "st": "frais",
@@ -2852,13 +2858,13 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "USD",
-   "p": 63.41,
-   "d": 0.99,
-   "w": 0.32,
-   "m": -3.19,
-   "q": -11.14,
-   "y": -1.52,
-   "a": 2.32,
+   "p": 63.47,
+   "d": 1.08,
+   "w": 0.41,
+   "m": -3.1,
+   "q": -11.06,
+   "y": -1.43,
+   "a": 2.42,
    "h": [
     70.65,
     69.71,
@@ -2889,14 +2895,14 @@
     64.29,
     61.4,
     63.09,
-    63.41
+    63.47
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.44,
    "t": {
     "st": "frais",
-    "g": -9.62,
+    "g": -9.54,
     "a": 60
    }
   },
@@ -2906,13 +2912,13 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "USD",
-   "p": 85.67,
-   "d": 0.85,
-   "w": 1.3,
-   "m": -1.88,
-   "q": -6.86,
-   "y": 2.46,
-   "a": 6.77,
+   "p": 85.77,
+   "d": 0.97,
+   "w": 1.42,
+   "m": -1.76,
+   "q": -6.75,
+   "y": 2.58,
+   "a": 6.89,
    "h": [
     91.74,
     90.21,
@@ -2943,14 +2949,14 @@
     85.85,
     82.61,
     84.78,
-    85.67
+    85.77
    ],
    "p1": 0.522,
-   "p3": 0.555,
-   "x3": 0.58,
+   "p3": 0.554,
+   "x3": 0.57,
    "t": {
     "st": "frais",
-    "g": -5.82,
+    "g": -5.71,
     "a": 60
    }
   },
@@ -2960,13 +2966,13 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "USD",
-   "p": 63.74,
-   "d": 0.75,
-   "w": 0.29,
-   "m": -3.01,
-   "q": -10.02,
-   "y": -0.55,
-   "a": 3.21,
+   "p": 63.81,
+   "d": 0.85,
+   "w": 0.39,
+   "m": -2.91,
+   "q": -9.93,
+   "y": -0.46,
+   "a": 3.31,
    "h": [
     70.46,
     69.63,
@@ -2997,14 +3003,14 @@
     64.65,
     61.76,
     63.5,
-    63.74
+    63.81
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.45,
+   "p1": 0.519,
+   "p3": 0.554,
+   "x3": 0.43,
    "t": {
     "st": "frais",
-    "g": -8.78,
+    "g": -8.69,
     "a": 60
    }
   },
@@ -3014,13 +3020,13 @@
    "k": "europe",
    "e": "🇬🇧",
    "cur": "GBp",
-   "p": 1046,
-   "d": 0.81,
-   "w": 3.48,
-   "m": 0.19,
-   "q": -1.12,
-   "y": 8.2,
-   "a": 10.04,
+   "p": 1045,
+   "d": 0.71,
+   "w": 3.38,
+   "m": 0.1,
+   "q": -1.21,
+   "y": 8.1,
+   "a": 9.93,
    "h": [
     1060,
     1040,
@@ -3051,14 +3057,14 @@
     1021,
     1024,
     1018,
-    1046
+    1045
    ],
    "p1": 0.516,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.34,
    "t": {
     "st": "frais",
-    "g": -1.47,
+    "g": -1.56,
     "a": 60
    }
   },
@@ -3068,13 +3074,13 @@
    "k": "europe",
    "e": "🇬🇧",
    "cur": "USD",
-   "p": 46.76,
-   "d": 1.39,
-   "w": 2.86,
-   "m": -1.12,
-   "q": -3.69,
-   "y": 6.32,
-   "a": 9.97,
+   "p": 46.78,
+   "d": 1.42,
+   "w": 2.89,
+   "m": -1.09,
+   "q": -3.66,
+   "y": 6.36,
+   "a": 10.01,
    "h": [
     48.59,
     47.83,
@@ -3105,14 +3111,14 @@
     46.09,
     44.74,
     45.87,
-    46.76
+    46.78
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.79,
+   "p3": 0.554,
+   "x3": 0.8,
    "t": {
     "st": "frais",
-    "g": -3.03,
+    "g": -3,
     "a": 60
    }
   },
@@ -3122,13 +3128,13 @@
    "k": "europe",
    "e": "🇩🇪",
    "cur": "USD",
-   "p": 40.43,
-   "d": 0.87,
-   "w": 0.6,
-   "m": -3.28,
-   "q": -9.33,
-   "y": -4.87,
-   "a": 0.6,
+   "p": 40.46,
+   "d": 0.95,
+   "w": 0.67,
+   "m": -3.21,
+   "q": -9.26,
+   "y": -4.8,
+   "a": 0.67,
    "h": [
     43.89,
     43.04,
@@ -3159,14 +3165,14 @@
     41.03,
     39.17,
     40.07,
-    40.43
+    40.46
    ],
    "p1": 0.516,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.11,
    "t": {
     "st": "frais",
-    "g": -7.1,
+    "g": -7.03,
     "a": 60
    }
   },
@@ -3176,13 +3182,13 @@
    "k": "europe",
    "e": "🇫🇷",
    "cur": "USD",
-   "p": 42.28,
-   "d": 0.3,
-   "w": 0.97,
-   "m": 1.04,
-   "q": -8.47,
-   "y": -6.01,
-   "a": -4.03,
+   "p": 42.33,
+   "d": 0.4,
+   "w": 1.07,
+   "m": 1.15,
+   "q": -8.38,
+   "y": -5.91,
+   "a": -3.93,
    "h": [
     45.69,
     44.89,
@@ -3213,14 +3219,14 @@
     42.45,
     40.88,
     42.02,
-    42.28
+    42.33
    ],
-   "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.3,
+   "p1": 0.52,
+   "p3": 0.554,
+   "x3": 0.34,
    "t": {
     "st": "frais",
-    "g": -7.25,
+    "g": -7.15,
     "a": 60
    }
   },
@@ -3230,13 +3236,13 @@
    "k": "europe",
    "e": "🇮🇹",
    "cur": "USD",
-   "p": 55.6,
-   "d": 1.95,
-   "w": 0.39,
-   "m": -0.95,
-   "q": -10.65,
-   "y": 2.35,
-   "a": 6.6,
+   "p": 55.67,
+   "d": 2.07,
+   "w": 0.51,
+   "m": -0.84,
+   "q": -10.54,
+   "y": 2.47,
+   "a": 6.73,
    "h": [
     61.86,
     61.25,
@@ -3267,14 +3273,14 @@
     55.93,
     53.9,
     54.83,
-    55.6
+    55.67
    ],
    "p1": 0.516,
-   "p3": 0.555,
-   "x3": 0.26,
+   "p3": 0.554,
+   "x3": 0.24,
    "t": {
     "st": "frais",
-    "g": -9.41,
+    "g": -9.3,
     "a": 60
    }
   },
@@ -3284,13 +3290,13 @@
    "k": "europe",
    "e": "🇪🇸",
    "cur": "USD",
-   "p": 57.22,
-   "d": 1.76,
-   "w": 1.44,
-   "m": 0.72,
-   "q": -8.23,
-   "y": 6.14,
-   "a": 12.55,
+   "p": 57.36,
+   "d": 2.01,
+   "w": 1.68,
+   "m": 0.97,
+   "q": -8,
+   "y": 6.4,
+   "a": 12.82,
    "h": [
     62.75,
     61.59,
@@ -3321,14 +3327,14 @@
     57.53,
     55.41,
     56.57,
-    57.22
+    57.36
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 0.92,
+   "p3": 0.554,
+   "x3": 0.98,
    "t": {
     "st": "frais",
-    "g": -7.61,
+    "g": -7.38,
     "a": 60
    }
   },
@@ -3338,13 +3344,13 @@
    "k": "europe",
    "e": "🇨🇭",
    "cur": "USD",
-   "p": 63.82,
-   "d": -0.37,
-   "w": 2.14,
-   "m": 0.95,
-   "q": 0.81,
-   "y": 6.44,
-   "a": 11.46,
+   "p": 63.96,
+   "d": -0.16,
+   "w": 2.36,
+   "m": 1.16,
+   "q": 1.02,
+   "y": 6.66,
+   "a": 11.69,
    "h": [
     63.13,
     60.76,
@@ -3375,14 +3381,14 @@
     63.35,
     61.81,
     63.55,
-    63.82
+    63.96
    ],
-   "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.78,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.82,
    "t": {
     "st": "en cours",
-    "g": 1.48,
+    "g": 1.69,
     "a": 60
    }
   },
@@ -3392,13 +3398,13 @@
    "k": "europe",
    "e": "🇳🇱",
    "cur": "USD",
-   "p": 60.54,
-   "d": 1.15,
-   "w": -0.43,
-   "m": -7.7,
-   "q": -11.63,
-   "y": 6.15,
-   "a": 6.45,
+   "p": 60.7,
+   "d": 1.42,
+   "w": -0.16,
+   "m": -7.46,
+   "q": -11.4,
+   "y": 6.44,
+   "a": 6.73,
    "h": [
     69.11,
     68.49,
@@ -3429,14 +3435,14 @@
     62.08,
     58.34,
     60.33,
-    60.54
+    60.7
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.29,
+   "p3": 0.554,
+   "x3": 0.32,
    "t": {
     "st": "frais",
-    "g": -10.97,
+    "g": -10.74,
     "a": 60
    }
   },
@@ -3446,13 +3452,13 @@
    "k": "europe",
    "e": "🇸🇪",
    "cur": "USD",
-   "p": 51,
-   "d": 1.31,
-   "w": 2.04,
-   "m": -0.78,
-   "q": -4.99,
-   "y": 3.6,
-   "a": 8.37,
+   "p": 51.05,
+   "d": 1.41,
+   "w": 2.14,
+   "m": -0.68,
+   "q": -4.9,
+   "y": 3.7,
+   "a": 8.48,
    "h": [
     53.14,
     52.38,
@@ -3483,14 +3489,14 @@
     50.83,
     48.49,
     49.97,
-    51
+    51.05
    ],
-   "p1": 0.521,
-   "p3": 0.555,
-   "x3": 0.65,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "frais",
-    "g": -2.97,
+    "g": -2.87,
     "a": 60
    }
   },
@@ -3500,13 +3506,13 @@
    "k": "europe",
    "e": "🇳🇴",
    "cur": "USD",
-   "p": 35.01,
-   "d": 1.45,
-   "w": 1.21,
-   "m": -7.87,
-   "q": -5.61,
-   "y": 16.54,
-   "a": 23.75,
+   "p": 34.98,
+   "d": 1.37,
+   "w": 1.13,
+   "m": -7.94,
+   "q": -5.68,
+   "y": 16.45,
+   "a": 23.65,
    "h": [
     37.44,
     38.17,
@@ -3537,14 +3543,14 @@
     35.14,
     34.14,
     34.25,
-    35.01
+    34.98
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.4,
+   "p3": 0.554,
+   "x3": 0.39,
    "t": {
     "st": "frais",
-    "g": -6.27,
+    "g": -6.34,
     "a": 60
    }
   },
@@ -3594,7 +3600,7 @@
     114.3
    ],
    "p1": 0.528,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.3,
    "t": {
     "st": "frais",
@@ -3608,13 +3614,13 @@
    "k": "europe",
    "e": "🇬🇷",
    "cur": "USD",
-   "p": 76.51,
-   "d": 2,
-   "w": -1.92,
-   "m": -4.1,
-   "q": -10.26,
-   "y": 16.08,
-   "a": 16.84,
+   "p": 76.57,
+   "d": 2.09,
+   "w": -1.84,
+   "m": -4.02,
+   "q": -10.19,
+   "y": 16.18,
+   "a": 16.94,
    "h": [
     86.97,
     86.53,
@@ -3645,14 +3651,14 @@
     78.3,
     76.06,
     76.81,
-    76.51
+    76.57
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.31,
+   "p3": 0.554,
+   "x3": 1.32,
    "t": {
     "st": "frais",
-    "g": -9.28,
+    "g": -9.21,
     "a": 60
    }
   },
@@ -3662,13 +3668,13 @@
    "k": "europe",
    "e": "🇵🇱",
    "cur": "USD",
-   "p": 40.9,
-   "d": 0.85,
-   "w": -2.38,
-   "m": -7.52,
-   "q": -5.95,
-   "y": 16.21,
-   "a": 21.24,
+   "p": 40.94,
+   "d": 0.96,
+   "w": -2.27,
+   "m": -7.42,
+   "q": -5.84,
+   "y": 16.34,
+   "a": 21.38,
    "h": [
     45.12,
     45.55,
@@ -3699,14 +3705,14 @@
     42.72,
     39.83,
     40.91,
-    40.9
+    40.94
    ],
-   "p1": 0.53,
-   "p3": 0.555,
-   "x3": 1.64,
+   "p1": 0.529,
+   "p3": 0.554,
+   "x3": 1.66,
    "t": {
     "st": "frais",
-    "g": -7.39,
+    "g": -7.29,
     "a": 60
    }
   },
@@ -3756,7 +3762,7 @@
     37.85
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.33,
    "t": {
     "st": "frais",
@@ -3770,13 +3776,13 @@
    "k": "europe",
    "e": "🇧🇪",
    "cur": "USD",
-   "p": 26.45,
-   "d": 0.85,
-   "w": 1.47,
-   "m": 1.12,
-   "q": -4.64,
-   "y": 8.86,
-   "a": 9.86,
+   "p": 26.53,
+   "d": 1.14,
+   "w": 1.76,
+   "m": 1.41,
+   "q": -4.36,
+   "y": 9.18,
+   "a": 10.17,
    "h": [
     27.75,
     27.1,
@@ -3807,14 +3813,14 @@
     26.5,
     25.6,
     26.3,
-    26.45
+    26.53
    ],
    "p1": 0.513,
-   "p3": 0.555,
-   "x3": 0.17,
+   "p3": 0.554,
+   "x3": 0.24,
    "t": {
     "st": "frais",
-    "g": -3.8,
+    "g": -3.53,
     "a": 60
    }
   },
@@ -3824,13 +3830,13 @@
    "k": "europe",
    "e": "🇮🇪",
    "cur": "USD",
-   "p": 78.75,
-   "d": 0,
-   "w": -1.65,
-   "m": -3.97,
-   "q": -4.96,
-   "y": 7.13,
-   "a": 10.27,
+   "p": 79.98,
+   "d": 1.56,
+   "w": -0.11,
+   "m": -2.48,
+   "q": -3.48,
+   "y": 8.8,
+   "a": 11.99,
    "h": [
     84.91,
     83.94,
@@ -3861,14 +3867,14 @@
     80.74,
     78.18,
     79.47,
-    78.75
+    79.98
    ],
-   "p1": 0.524,
-   "p3": 0.555,
-   "x3": 0.89,
+   "p1": 0.528,
+   "p3": 0.554,
+   "x3": 1.01,
    "t": {
     "st": "frais",
-    "g": -5.38,
+    "g": -3.9,
     "a": 60
    }
   },
@@ -3878,13 +3884,13 @@
    "k": "europe",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 39.92,
-   "d": 1.08,
-   "w": 3.05,
-   "m": -0.71,
-   "q": -0.08,
-   "y": 11.57,
-   "a": 14.78,
+   "p": 39.94,
+   "d": 1.11,
+   "w": 3.08,
+   "m": -0.67,
+   "q": -0.04,
+   "y": 11.61,
+   "a": 14.82,
    "h": [
     40.12,
     39.25,
@@ -3915,14 +3921,14 @@
     39.51,
     39.51,
     38.83,
-    39.92
+    39.94
    ],
-   "p1": 0.523,
-   "p3": 0.555,
-   "x3": 0.75,
+   "p1": 0.524,
+   "p3": 0.554,
+   "x3": 0.87,
    "t": {
     "st": "frais",
-    "g": -0.5,
+    "g": -0.46,
     "a": 60
    }
   },
@@ -3972,7 +3978,7 @@
     72.25
    ],
    "p1": 0.516,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.17,
    "t": {
     "st": "frais",
@@ -3986,13 +3992,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "EUR",
-   "p": 32.94,
-   "d": 2.59,
-   "w": 6.28,
-   "m": -5.94,
-   "q": -8.48,
-   "y": 14.88,
-   "a": 16.51,
+   "p": 32.92,
+   "d": 2.52,
+   "w": 6.21,
+   "m": -6,
+   "q": -8.53,
+   "y": 14.81,
+   "a": 16.44,
    "h": [
     36.76,
     35.92,
@@ -4023,14 +4029,14 @@
     32.63,
     33.23,
     30.87,
-    32.94
+    32.92
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 1.63,
+   "p3": 0.554,
+   "x3": 1.6,
    "t": {
     "st": "frais",
-    "g": -9.62,
+    "g": -9.67,
     "a": 60
    }
   },
@@ -4040,13 +4046,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 57.88,
-   "d": 2.63,
-   "w": 2,
-   "m": -8.87,
-   "q": -13.78,
-   "y": 5.8,
-   "a": 7.49,
+   "p": 57.83,
+   "d": 2.54,
+   "w": 1.91,
+   "m": -8.95,
+   "q": -13.86,
+   "y": 5.71,
+   "a": 7.4,
    "h": [
     68.7,
     68.48,
@@ -4077,14 +4083,14 @@
     57.88,
     53.84,
     56.69,
-    57.88
+    57.83
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.62,
    "t": {
     "st": "frais",
-    "g": -13.8,
+    "g": -13.87,
     "a": 60
    }
   },
@@ -4094,13 +4100,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 53.94,
-   "d": 2.2,
-   "w": 2.43,
-   "m": -5.4,
-   "q": -11.27,
-   "y": 0.33,
-   "a": 0.17,
+   "p": 53.92,
+   "d": 2.16,
+   "w": 2.39,
+   "m": -5.44,
+   "q": -11.3,
+   "y": 0.3,
+   "a": 0.13,
    "h": [
     61.44,
     60.87,
@@ -4131,14 +4137,14 @@
     53.76,
     50.62,
     52.87,
-    53.94
+    53.92
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.55,
+   "p3": 0.554,
+   "x3": 0.48,
    "t": {
     "st": "frais",
-    "g": -11.24,
+    "g": -11.27,
     "a": 60
    }
   },
@@ -4148,13 +4154,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 70.55,
-   "d": 2.57,
-   "w": 2,
-   "m": -8.77,
-   "q": -13.77,
-   "y": 4.95,
-   "a": 6.15,
+   "p": 70.52,
+   "d": 2.53,
+   "w": 1.95,
+   "m": -8.81,
+   "q": -13.81,
+   "y": 4.91,
+   "a": 6.11,
    "h": [
     83.65,
     83.25,
@@ -4185,14 +4191,14 @@
     70.57,
     65.69,
     69.07,
-    70.55
+    70.52
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.61,
    "t": {
     "st": "frais",
-    "g": -13.89,
+    "g": -13.93,
     "a": 60
    }
   },
@@ -4202,13 +4208,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "EUR",
-   "p": 43.44,
-   "d": 2.45,
-   "w": 6.06,
-   "m": -5.47,
-   "q": -8.85,
-   "y": 13.27,
-   "a": 14.66,
+   "p": 43.49,
+   "d": 2.59,
+   "w": 6.2,
+   "m": -5.34,
+   "q": -8.72,
+   "y": 13.42,
+   "a": 14.82,
    "h": [
     48.56,
     47.51,
@@ -4239,14 +4245,14 @@
     43.08,
     43.74,
     40.72,
-    43.44
+    43.49
    ],
-   "p1": 0.528,
-   "p3": 0.555,
-   "x3": 1.79,
+   "p1": 0.527,
+   "p3": 0.554,
+   "x3": 1.8,
    "t": {
     "st": "frais",
-    "g": -9.9,
+    "g": -9.78,
     "a": 60
    }
   },
@@ -4256,13 +4262,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 99.63,
-   "d": 2.51,
-   "w": 1.65,
-   "m": -9.72,
-   "q": -14.74,
-   "y": 6.99,
-   "a": 8.54,
+   "p": 99.59,
+   "d": 2.47,
+   "w": 1.61,
+   "m": -9.76,
+   "q": -14.77,
+   "y": 6.95,
+   "a": 8.5,
    "h": [
     119.5,
     119,
@@ -4293,14 +4299,14 @@
     100,
     92.74,
     98.1,
-    99.63
+    99.59
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.61,
+   "p3": 0.554,
+   "x3": 0.67,
    "t": {
     "st": "frais",
-    "g": -14.69,
+    "g": -14.73,
     "a": 60
    }
   },
@@ -4310,13 +4316,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 53.1,
-   "d": 1.41,
-   "w": 1.51,
-   "m": -4.51,
-   "q": -8,
-   "y": 5.21,
-   "a": 5.88,
+   "p": 53.11,
+   "d": 1.43,
+   "w": 1.53,
+   "m": -4.5,
+   "q": -7.99,
+   "y": 5.23,
+   "a": 5.9,
    "h": [
     58.3,
     57.11,
@@ -4347,14 +4353,14 @@
     53.2,
     51.34,
     52.34,
-    53.1
+    53.11
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.38,
+   "p3": 0.554,
+   "x3": 0.34,
    "t": {
     "st": "frais",
-    "g": -8.15,
+    "g": -8.13,
     "a": 60
    }
   },
@@ -4364,13 +4370,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 101.95,
-   "d": 2.22,
-   "w": 1.22,
-   "m": -8.96,
-   "q": -11.59,
-   "y": 12.78,
-   "a": 13.76,
+   "p": 102.03,
+   "d": 2.29,
+   "w": 1.3,
+   "m": -8.89,
+   "q": -11.52,
+   "y": 12.86,
+   "a": 13.84,
    "h": [
     118.4,
     117.7,
@@ -4404,11 +4410,11 @@
     102
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 1.18,
+   "p3": 0.554,
+   "x3": 1.1,
    "t": {
     "st": "frais",
-    "g": -11.54,
+    "g": -11.48,
     "a": 60
    }
   },
@@ -4418,13 +4424,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 100.43,
-   "d": 2.3,
-   "w": 1.99,
-   "m": -8.41,
-   "q": -14.01,
-   "y": 6.82,
-   "a": 8.86,
+   "p": 100.75,
+   "d": 2.61,
+   "w": 2.3,
+   "m": -8.13,
+   "q": -13.75,
+   "y": 7.15,
+   "a": 9.2,
    "h": [
     119.5,
     118.7,
@@ -4455,14 +4461,14 @@
     100.7,
     93.5,
     98.64,
-    100.4
+    100.7
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.81,
+   "p1": 0.521,
+   "p3": 0.554,
+   "x3": 0.62,
    "t": {
     "st": "frais",
-    "g": -14.1,
+    "g": -13.83,
     "a": 60
    }
   },
@@ -4472,13 +4478,13 @@
    "k": "asie",
    "e": "🌏",
    "cur": "USD",
-   "p": 84.43,
-   "d": 2.6,
-   "w": 1.88,
-   "m": -10.63,
-   "q": -13.98,
-   "y": 16.17,
-   "a": 20.19,
+   "p": 84.36,
+   "d": 2.52,
+   "w": 1.8,
+   "m": -10.7,
+   "q": -14.04,
+   "y": 16.08,
+   "a": 20.09,
    "h": [
     101.1,
     101.6,
@@ -4509,14 +4515,14 @@
     84.51,
     77.77,
     82.74,
-    84.43
+    84.36
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 1.61,
+   "p3": 0.554,
+   "x3": 1.5,
    "t": {
     "st": "frais",
-    "g": -14.43,
+    "g": -14.5,
     "a": 60
    }
   },
@@ -4526,13 +4532,13 @@
    "k": "asie",
    "e": "🌎",
    "cur": "USD",
-   "p": 31.73,
-   "d": 5.66,
-   "w": 6.98,
-   "m": -3.79,
-   "q": -8.43,
-   "y": 4.2,
-   "a": 4.58,
+   "p": 31.56,
+   "d": 5.09,
+   "w": 6.41,
+   "m": -4.31,
+   "q": -8.92,
+   "y": 3.65,
+   "a": 4.02,
    "h": [
     36.07,
     36.16,
@@ -4563,14 +4569,14 @@
     30.24,
     28.98,
     29.25,
-    31.73
+    31.56
    ],
    "p1": 0.517,
-   "p3": 0.555,
-   "x3": 0.95,
+   "p3": 0.554,
+   "x3": 0.85,
    "t": {
     "st": "frais",
-    "g": -12.4,
+    "g": -12.87,
     "a": 60
    }
   },
@@ -4580,13 +4586,13 @@
    "k": "asie",
    "e": "🌍",
    "cur": "USD",
-   "p": 24.21,
-   "d": 1.09,
-   "w": 1.21,
-   "m": -8.3,
-   "q": -17.03,
-   "y": -9.5,
-   "a": -0.12,
+   "p": 24.33,
+   "d": 1.59,
+   "w": 1.71,
+   "m": -7.84,
+   "q": -16.62,
+   "y": -9.05,
+   "a": 0.37,
    "h": [
     29.78,
     29.8,
@@ -4617,14 +4623,14 @@
     24.4,
     23.24,
     23.51,
-    24.21
+    24.33
    ],
-   "p1": 0.516,
-   "p3": 0.555,
-   "x3": 0.05,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": 0.1,
    "t": {
     "st": "frais",
-    "g": -17.23,
+    "g": -16.82,
     "a": 60
    }
   },
@@ -4634,13 +4640,13 @@
    "k": "pays",
    "e": "🇯🇵",
    "cur": "USD",
-   "p": 88.71,
-   "d": 1.68,
-   "w": 1.96,
-   "m": -6.61,
-   "q": -7.46,
-   "y": 9.88,
-   "a": 8.29,
+   "p": 88.78,
+   "d": 1.75,
+   "w": 2.03,
+   "m": -6.54,
+   "q": -7.4,
+   "y": 9.95,
+   "a": 8.37,
    "h": [
     98.28,
     97,
@@ -4671,14 +4677,14 @@
     88.04,
     83.43,
     86.64,
-    88.71
+    88.78
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.13,
+   "p1": 0.525,
+   "p3": 0.554,
+   "x3": 1.08,
    "t": {
     "st": "frais",
-    "g": -7.63,
+    "g": -7.56,
     "a": 60
    }
   },
@@ -4688,13 +4694,13 @@
    "k": "pays",
    "e": "🇯🇵",
    "cur": "USD",
-   "p": 57.5,
-   "d": 1.86,
-   "w": 2.33,
-   "m": -3.3,
-   "q": -4.22,
-   "y": 19.66,
-   "a": 24.76,
+   "p": 57.55,
+   "d": 1.94,
+   "w": 2.42,
+   "m": -3.22,
+   "q": -4.14,
+   "y": 19.76,
+   "a": 24.86,
    "h": [
     59.99,
     57.77,
@@ -4725,14 +4731,14 @@
     56.83,
     53.78,
     55.95,
-    57.5
+    57.55
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 0.91,
+   "p3": 0.554,
+   "x3": 0.83,
    "t": {
     "st": "frais",
-    "g": -4.25,
+    "g": -4.17,
     "a": 60
    }
   },
@@ -4742,13 +4748,13 @@
    "k": "pays",
    "e": "🇰🇷",
    "cur": "USD",
-   "p": 134.54,
-   "d": 4.14,
-   "w": -0.04,
-   "m": -18.91,
-   "q": -25.34,
-   "y": 38.39,
-   "a": 49.84,
+   "p": 134.6,
+   "d": 4.19,
+   "w": 0.01,
+   "m": -18.87,
+   "q": -25.31,
+   "y": 38.45,
+   "a": 49.91,
    "h": [
     188.9,
     190.8,
@@ -4779,14 +4785,14 @@
     136.7,
     123.3,
     130.7,
-    134.5
+    134.6
    ],
    "p1": 0.521,
-   "p3": 0.555,
-   "x3": 1.4,
+   "p3": 0.554,
+   "x3": 1.21,
    "t": {
     "st": "frais",
-    "g": -24.78,
+    "g": -24.75,
     "a": 60
    }
   },
@@ -4796,13 +4802,13 @@
    "k": "pays",
    "e": "🇹🇼",
    "cur": "USD",
-   "p": 86.3,
-   "d": 3.38,
-   "w": 2.79,
-   "m": -20.78,
-   "q": -20.02,
-   "y": 35.84,
-   "a": 37.42,
+   "p": 85.97,
+   "d": 2.98,
+   "w": 2.39,
+   "m": -21.09,
+   "q": -20.32,
+   "y": 35.32,
+   "a": 36.89,
    "h": [
     112.2,
     111.8,
@@ -4833,14 +4839,14 @@
     88.73,
     74.77,
     84.55,
-    86.3
+    85.97
    ],
    "p1": 0.526,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 2.73,
    "t": {
     "st": "frais",
-    "g": -21.14,
+    "g": -21.44,
     "a": 60
    }
   },
@@ -4850,13 +4856,13 @@
    "k": "pays",
    "e": "🇨🇳",
    "cur": "USD",
-   "p": 47.94,
-   "d": 3.24,
-   "w": 1.95,
-   "m": -2.25,
-   "q": -13.21,
-   "y": -20.2,
-   "a": -22.93,
+   "p": 47.92,
+   "d": 3.22,
+   "w": 1.92,
+   "m": -2.27,
+   "q": -13.23,
+   "y": -20.22,
+   "a": -22.95,
    "h": [
     54.91,
     53.34,
@@ -4887,14 +4893,14 @@
     47.79,
     46.02,
     46.61,
-    47.94
+    47.92
    ],
    "p1": 0.516,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.15,
    "t": {
     "st": "frais",
-    "g": -12.11,
+    "g": -12.13,
     "a": 60
    }
   },
@@ -4904,13 +4910,13 @@
    "k": "pays",
    "e": "🇨🇳",
    "cur": "USD",
-   "p": 31.99,
-   "d": 2.2,
-   "w": 0.63,
-   "m": -1.45,
-   "q": -9.91,
-   "y": -16.45,
-   "a": -19.22,
+   "p": 31.97,
+   "d": 2.14,
+   "w": 0.57,
+   "m": -1.51,
+   "q": -9.97,
+   "y": -16.51,
+   "a": -19.27,
    "h": [
     35.88,
     34.55,
@@ -4941,14 +4947,14 @@
     32.39,
     31.23,
     31.43,
-    31.99
+    31.97
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.14,
    "t": {
     "st": "frais",
-    "g": -9.99,
+    "g": -10.04,
     "a": 60
    }
   },
@@ -4958,13 +4964,13 @@
    "k": "pays",
    "e": "🇨🇳",
    "cur": "USD",
-   "p": 22.15,
-   "d": 4.61,
-   "w": 3.92,
-   "m": -3.68,
-   "q": -15.86,
-   "y": -34.96,
-   "a": -41.32,
+   "p": 22.11,
+   "d": 4.46,
+   "w": 3.78,
+   "m": -3.81,
+   "q": -15.98,
+   "y": -35.05,
+   "a": -41.4,
    "h": [
     26.05,
     24.78,
@@ -4995,14 +5001,14 @@
     21.71,
     20.72,
     21.15,
-    22.15
+    22.11
    ],
    "p1": 0.514,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.14,
    "t": {
     "st": "frais",
-    "g": -13.83,
+    "g": -13.95,
     "a": 60
    }
   },
@@ -5012,13 +5018,13 @@
    "k": "pays",
    "e": "🇨🇳",
    "cur": "USD",
-   "p": 30.68,
-   "d": 4.02,
-   "w": 4.02,
-   "m": -0.18,
-   "q": -10.51,
-   "y": -6.59,
-   "a": -4.85,
+   "p": 30.7,
+   "d": 4.08,
+   "w": 4.08,
+   "m": -0.11,
+   "q": -10.45,
+   "y": -6.53,
+   "a": -4.79,
    "h": [
     34.2,
     34.04,
@@ -5049,14 +5055,14 @@
     29.83,
     29.22,
     29.68,
-    30.68
+    30.7
    ],
    "p1": 0.513,
-   "p3": 0.555,
-   "x3": 0.16,
+   "p3": 0.554,
+   "x3": 0.15,
    "t": {
     "st": "frais",
-    "g": -9.72,
+    "g": -9.66,
     "a": 60
    }
   },
@@ -5066,13 +5072,13 @@
    "k": "pays",
    "e": "🇭🇰",
    "cur": "USD",
-   "p": 22.39,
-   "d": 1.06,
-   "w": -0.38,
-   "m": 2.54,
-   "q": -2.42,
-   "y": 5.34,
-   "a": 1.06,
+   "p": 22.41,
+   "d": 1.15,
+   "w": -0.29,
+   "m": 2.63,
+   "q": -2.33,
+   "y": 5.44,
+   "a": 1.15,
    "h": [
     23.2,
     22.69,
@@ -5103,14 +5109,14 @@
     22.68,
     22.02,
     22.35,
-    22.39
+    22.41
    ],
    "p1": 0.514,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.28,
    "t": {
     "st": "frais",
-    "g": -2.12,
+    "g": -2.03,
     "a": 60
    }
   },
@@ -5120,13 +5126,13 @@
    "k": "pays",
    "e": "🇮🇳",
    "cur": "USD",
-   "p": 52.69,
-   "d": -0.95,
-   "w": 1.32,
-   "m": 12.62,
-   "q": 6.33,
-   "y": -2.51,
-   "a": -2.92,
+   "p": 52.76,
+   "d": -0.83,
+   "w": 1.44,
+   "m": 12.76,
+   "q": 6.46,
+   "y": -2.39,
+   "a": -2.8,
    "h": [
     49.91,
     48.67,
@@ -5157,14 +5163,14 @@
     51.46,
     52.9,
     52.74,
-    52.69
+    52.76
    ],
    "p1": 0.507,
-   "p3": 0.555,
-   "x3": 0.29,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "tardif",
-    "g": 5.45,
+    "g": 5.58,
     "a": 60
    }
   },
@@ -5174,13 +5180,13 @@
    "k": "pays",
    "e": "🇮🇳",
    "cur": "USD",
-   "p": 71.87,
-   "d": 0.64,
-   "w": 1.84,
-   "m": 7.57,
-   "q": 0.08,
-   "y": 2.8,
-   "a": -0.31,
+   "p": 71.99,
+   "d": 0.81,
+   "w": 2.01,
+   "m": 7.75,
+   "q": 0.25,
+   "y": 2.98,
+   "a": -0.14,
    "h": [
     72.4,
     71.22,
@@ -5211,14 +5217,14 @@
     70.31,
     71.75,
     71.72,
-    71.87
+    71.99
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.89,
+   "p3": 0.554,
+   "x3": 0.83,
    "t": {
     "st": "frais",
-    "g": -0.18,
+    "g": -0.01,
     "a": 60
    }
   },
@@ -5228,13 +5234,13 @@
    "k": "pays",
    "e": "🇸🇬",
    "cur": "USD",
-   "p": 28.47,
-   "d": 1.3,
-   "w": -0.23,
-   "m": -7.82,
-   "q": -16.11,
-   "y": 3.47,
-   "a": 1.7,
+   "p": 28.48,
+   "d": 1.35,
+   "w": -0.18,
+   "m": -7.77,
+   "q": -16.06,
+   "y": 3.53,
+   "a": 1.75,
    "h": [
     34.57,
     33.77,
@@ -5265,14 +5271,14 @@
     28.8,
     27.8,
     28.14,
-    28.47
+    28.48
    ],
-   "p1": 0.525,
-   "p3": 0.555,
-   "x3": 0.75,
+   "p1": 0.526,
+   "p3": 0.554,
+   "x3": 0.78,
    "t": {
     "st": "frais",
-    "g": -16.77,
+    "g": -16.73,
     "a": 60
    }
   },
@@ -5282,13 +5288,13 @@
    "k": "pays",
    "e": "🇲🇾",
    "cur": "USD",
-   "p": 26.15,
-   "d": 1.77,
-   "w": 2.81,
-   "m": -2.44,
-   "q": -7.81,
-   "y": -4.44,
-   "a": -1.3,
+   "p": 26.14,
+   "d": 1.75,
+   "w": 2.79,
+   "m": -2.46,
+   "q": -7.83,
+   "y": -4.46,
+   "a": -1.32,
    "h": [
     28.15,
     28.01,
@@ -5319,14 +5325,14 @@
     25.66,
     25.19,
     25.57,
-    26.15
+    26.14
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.43,
    "t": {
     "st": "frais",
-    "g": -6.92,
+    "g": -6.94,
     "a": 60
    }
   },
@@ -5336,13 +5342,13 @@
    "k": "pays",
    "e": "🇹🇭",
    "cur": "USD",
-   "p": 64.7,
-   "d": 0.31,
-   "w": -1.04,
-   "m": -9.15,
-   "q": -10.5,
-   "y": 8.43,
-   "a": 9.42,
+   "p": 64.82,
+   "d": 0.49,
+   "w": -0.86,
+   "m": -8.99,
+   "q": -10.34,
+   "y": 8.62,
+   "a": 9.61,
    "h": [
     73.39,
     74.83,
@@ -5373,14 +5379,14 @@
     66.01,
     64.41,
     65.23,
-    64.7
+    64.82
    ],
    "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.45,
+   "p3": 0.554,
+   "x3": 0.41,
    "t": {
     "st": "frais",
-    "g": -10.26,
+    "g": -10.1,
     "a": 60
    }
   },
@@ -5390,13 +5396,13 @@
    "k": "pays",
    "e": "🇮🇩",
    "cur": "USD",
-   "p": 10.77,
-   "d": 2.52,
-   "w": 4.72,
-   "m": 3.01,
-   "q": -14.97,
-   "y": -42.43,
-   "a": -42.53,
+   "p": 10.76,
+   "d": 2.43,
+   "w": 4.62,
+   "m": 2.92,
+   "q": -15.05,
+   "y": -42.49,
+   "a": -42.58,
    "h": [
     13.06,
     13.13,
@@ -5427,14 +5433,14 @@
     10.49,
     10.11,
     10.61,
-    10.77
+    10.76
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.93,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.94,
    "t": {
     "st": "frais",
-    "g": -17.19,
+    "g": -17.27,
     "a": 60
    }
   },
@@ -5444,13 +5450,13 @@
    "k": "pays",
    "e": "🇵🇭",
    "cur": "USD",
-   "p": 21.64,
-   "d": 0.49,
-   "w": 2,
-   "m": -2.81,
-   "q": -9.13,
-   "y": -13.18,
-   "a": -13.46,
+   "p": 21.61,
+   "d": 0.37,
+   "w": 1.89,
+   "m": -2.92,
+   "q": -9.24,
+   "y": -13.28,
+   "a": -13.56,
    "h": [
     24.25,
     24.35,
@@ -5481,14 +5487,14 @@
     21.56,
     20.53,
     21.21,
-    21.64
+    21.61
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.55,
+   "p3": 0.554,
+   "x3": 0.49,
    "t": {
     "st": "frais",
-    "g": -10.67,
+    "g": -10.78,
     "a": 60
    }
   },
@@ -5498,13 +5504,13 @@
    "k": "pays",
    "e": "🇻🇳",
    "cur": "USD",
-   "p": 16.13,
-   "d": -2.72,
-   "w": -1.53,
-   "m": -5.06,
-   "q": -11.28,
-   "y": -15.46,
-   "a": -9.13,
+   "p": 16.14,
+   "d": -2.68,
+   "w": -1.5,
+   "m": -5.03,
+   "q": -11.25,
+   "y": -15.44,
+   "a": -9.1,
    "h": [
     18.16,
     17.85,
@@ -5535,14 +5541,14 @@
     16.7,
     16.22,
     16.71,
-    16.13
+    16.14
    ],
-   "p1": 0.514,
-   "p3": 0.555,
+   "p1": 0.515,
+   "p3": 0.554,
    "x3": 0.08,
    "t": {
     "st": "frais",
-    "g": -10.59,
+    "g": -10.56,
     "a": 60
    }
   },
@@ -5552,13 +5558,13 @@
    "k": "pays",
    "e": "🇦🇺",
    "cur": "USD",
-   "p": 27.82,
-   "d": 1.64,
-   "w": 2.32,
-   "m": -5.98,
-   "q": -7.27,
-   "y": 6.22,
-   "a": 8.59,
+   "p": 27.85,
+   "d": 1.75,
+   "w": 2.43,
+   "m": -5.88,
+   "q": -7.17,
+   "y": 6.34,
+   "a": 8.7,
    "h": [
     30.23,
     29.62,
@@ -5589,14 +5595,14 @@
     27.76,
     26.73,
     27.29,
-    27.82
+    27.85
    ],
    "p1": 0.518,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.47,
    "t": {
     "st": "frais",
-    "g": -7.36,
+    "g": -7.26,
     "a": 60
    }
   },
@@ -5606,13 +5612,13 @@
    "k": "pays",
    "e": "🇳🇿",
    "cur": "USD",
-   "p": 44.46,
-   "d": -1.52,
-   "w": -1.12,
-   "m": -0.15,
-   "q": -6.76,
-   "y": -1.8,
-   "a": -0.55,
+   "p": 44.55,
+   "d": -1.31,
+   "w": -0.91,
+   "m": 0.07,
+   "q": -6.56,
+   "y": -1.59,
+   "a": -0.34,
    "h": [
     48.02,
     46.61,
@@ -5643,14 +5649,14 @@
     44.97,
     44.29,
     44.36,
-    44.46
+    44.55
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.07,
+   "p1": 0.514,
+   "p3": 0.554,
+   "x3": 0.09,
    "t": {
     "st": "frais",
-    "g": -7.19,
+    "g": -6.99,
     "a": 60
    }
   },
@@ -5660,13 +5666,13 @@
    "k": "pays",
    "e": "🇨🇦",
    "cur": "USD",
-   "p": 57.63,
-   "d": 1.3,
-   "w": 2.45,
-   "m": -6.31,
-   "q": -6.64,
-   "y": 6.86,
-   "a": 11.77,
+   "p": 57.61,
+   "d": 1.27,
+   "w": 2.42,
+   "m": -6.34,
+   "q": -6.67,
+   "y": 6.82,
+   "a": 11.73,
    "h": [
     62.04,
     60.99,
@@ -5697,14 +5703,14 @@
     57.24,
     54.89,
     56.4,
-    57.63
+    57.61
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.71,
    "t": {
     "st": "frais",
-    "g": -5.94,
+    "g": -5.97,
     "a": 60
    }
   },
@@ -5714,13 +5720,13 @@
    "k": "pays",
    "e": "🇧🇷",
    "cur": "USD",
-   "p": 33.31,
-   "d": 10.45,
-   "w": 12.88,
-   "m": -0.92,
-   "q": -6.3,
-   "y": 4.85,
-   "a": 2.34,
+   "p": 33.01,
+   "d": 9.47,
+   "w": 11.88,
+   "m": -1.8,
+   "q": -7.13,
+   "y": 3.92,
+   "a": 1.43,
    "h": [
     37.86,
     38.07,
@@ -5751,14 +5757,14 @@
     30.07,
     28.54,
     29.3,
-    33.31
+    33.01
    ],
-   "p1": 0.507,
-   "p3": 0.555,
-   "x3": -0.6,
+   "p1": 0.508,
+   "p3": 0.554,
+   "x3": -0.63,
    "t": {
     "st": "frais",
-    "g": -12.55,
+    "g": -13.32,
     "a": 60
    }
   },
@@ -5768,13 +5774,13 @@
    "k": "pays",
    "e": "🇲🇽",
    "cur": "USD",
-   "p": 73.28,
-   "d": -0.08,
-   "w": 1.05,
-   "m": -1.81,
-   "q": -4.18,
-   "y": 5.7,
-   "a": 8.16,
+   "p": 73.55,
+   "d": 0.29,
+   "w": 1.42,
+   "m": -1.45,
+   "q": -3.83,
+   "y": 6.09,
+   "a": 8.56,
    "h": [
     76.63,
     76.5,
@@ -5805,14 +5811,14 @@
     73.63,
     72.18,
     71.89,
-    73.28
+    73.55
    ],
    "p1": 0.517,
-   "p3": 0.555,
-   "x3": 0.34,
+   "p3": 0.554,
+   "x3": 0.33,
    "t": {
     "st": "frais",
-    "g": -3.86,
+    "g": -3.5,
     "a": 60
    }
   },
@@ -5822,13 +5828,13 @@
    "k": "pays",
    "e": "🇨🇱",
    "cur": "USD",
-   "p": 34.6,
-   "d": 3.9,
-   "w": 2.37,
-   "m": -4.39,
-   "q": -15.59,
-   "y": -14.36,
-   "a": -7.16,
+   "p": 34.62,
+   "d": 3.96,
+   "w": 2.43,
+   "m": -4.34,
+   "q": -15.54,
+   "y": -14.31,
+   "a": -7.11,
    "h": [
     40.84,
     40.74,
@@ -5859,14 +5865,14 @@
     34.24,
     33.48,
     33.36,
-    34.6
+    34.62
    ],
    "p1": 0.516,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.09,
    "t": {
     "st": "frais",
-    "g": -15.61,
+    "g": -15.56,
     "a": 60
    }
   },
@@ -5876,13 +5882,13 @@
    "k": "pays",
    "e": "🇦🇷",
    "cur": "USD",
-   "p": 69.83,
-   "d": 3.51,
-   "w": 4.91,
-   "m": -15.18,
-   "q": -25.55,
-   "y": -23.61,
-   "a": -20.77,
+   "p": 70.01,
+   "d": 3.78,
+   "w": 5.18,
+   "m": -14.96,
+   "q": -25.36,
+   "y": -23.41,
+   "a": -20.57,
    "h": [
     96.41,
     96.12,
@@ -5913,14 +5919,14 @@
     69.17,
     64.56,
     66.31,
-    69.83
+    70.01
    ],
-   "p1": 0.517,
-   "p3": 0.555,
-   "x3": 0.51,
+   "p1": 0.516,
+   "p3": 0.554,
+   "x3": 0.53,
    "t": {
     "st": "frais",
-    "g": -28.67,
+    "g": -28.49,
     "a": 60
    }
   },
@@ -5930,13 +5936,13 @@
    "k": "pays",
    "e": "🇵🇪",
    "cur": "USD",
-   "p": 75.81,
-   "d": 3.69,
-   "w": 3.56,
-   "m": -10.42,
-   "q": -17.87,
-   "y": 4.78,
-   "a": 23.14,
+   "p": 75.95,
+   "d": 3.88,
+   "w": 3.76,
+   "m": -10.25,
+   "q": -17.71,
+   "y": 4.98,
+   "a": 23.38,
    "h": [
     92.17,
     93.18,
@@ -5967,14 +5973,14 @@
     75.03,
     71.42,
     72.24,
-    75.81
+    75.95
    ],
-   "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.63,
+   "p1": 0.518,
+   "p3": 0.554,
+   "x3": 0.41,
    "t": {
     "st": "frais",
-    "g": -18.05,
+    "g": -17.89,
     "a": 60
    }
   },
@@ -5984,13 +5990,13 @@
    "k": "pays",
    "e": "🇿🇦",
    "cur": "USD",
-   "p": 60.72,
-   "d": 2.85,
-   "w": 4.75,
-   "m": -5.66,
-   "q": -14.15,
-   "y": -11.75,
-   "a": -8.42,
+   "p": 60.99,
+   "d": 3.32,
+   "w": 5.23,
+   "m": -5.24,
+   "q": -13.76,
+   "y": -11.35,
+   "a": -8.01,
    "h": [
     71.64,
     71.31,
@@ -6021,14 +6027,14 @@
     59.54,
     56.26,
     58.37,
-    60.72
+    60.99
    ],
    "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.7,
+   "p3": 0.554,
+   "x3": 0.71,
    "t": {
     "st": "frais",
-    "g": -13.25,
+    "g": -12.86,
     "a": 60
    }
   },
@@ -6038,13 +6044,13 @@
    "k": "pays",
    "e": "🇹🇷",
    "cur": "USD",
-   "p": 29.63,
-   "d": 1.89,
-   "w": -3.04,
-   "m": -3.7,
-   "q": -27.5,
-   "y": -13.92,
-   "a": -11.66,
+   "p": 29.65,
+   "d": 1.96,
+   "w": -2.98,
+   "m": -3.64,
+   "q": -27.45,
+   "y": -13.86,
+   "a": -11.6,
    "h": [
     39.23,
     40.78,
@@ -6075,14 +6081,14 @@
     31.15,
     29.58,
     29.42,
-    29.63
+    29.65
    ],
    "p1": 0.522,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.77,
    "t": {
     "st": "frais",
-    "g": -25.08,
+    "g": -25.03,
     "a": 60
    }
   },
@@ -6092,13 +6098,13 @@
    "k": "pays",
    "e": "🇸🇦",
    "cur": "USD",
-   "p": 34.81,
-   "d": -0.31,
-   "w": -0.97,
-   "m": 0.26,
-   "q": -11.33,
-   "y": -4.39,
-   "a": -7.4,
+   "p": 34.84,
+   "d": -0.23,
+   "w": -0.88,
+   "m": 0.35,
+   "q": -11.26,
+   "y": -4.31,
+   "a": -7.32,
    "h": [
     38.51,
     38.3,
@@ -6129,14 +6135,14 @@
     35.6,
     34.96,
     34.82,
-    34.81
+    34.84
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.25,
+   "p1": 0.519,
+   "p3": 0.554,
+   "x3": 0.28,
    "t": {
     "st": "frais",
-    "g": -9.42,
+    "g": -9.34,
     "a": 60
    }
   },
@@ -6146,13 +6152,13 @@
    "k": "pays",
    "e": "🇦🇪",
    "cur": "USD",
-   "p": 22.02,
-   "d": -0.18,
-   "w": 5.41,
-   "m": 13.33,
-   "q": 12.4,
-   "y": 15.17,
-   "a": 17.69,
+   "p": 22.13,
+   "d": 0.32,
+   "w": 5.94,
+   "m": 13.9,
+   "q": 12.97,
+   "y": 15.74,
+   "a": 18.28,
    "h": [
     19.47,
     19.71,
@@ -6183,14 +6189,14 @@
     21.2,
     20.81,
     21.64,
-    22.02
+    22.13
    ],
    "p1": 0.509,
-   "p3": 0.555,
-   "x3": 0.61,
+   "p3": 0.554,
+   "x3": 0.59,
    "t": {
     "st": "tardif",
-    "g": 14.45,
+    "g": 15.02,
     "a": 60
    }
   },
@@ -6200,13 +6206,13 @@
    "k": "pays",
    "e": "🇶🇦",
    "cur": "USD",
-   "p": 17.67,
-   "d": -0.23,
-   "w": 0.11,
-   "m": 8.44,
-   "q": 1.64,
-   "y": -6.07,
-   "a": -5.83,
+   "p": 17.69,
+   "d": -0.14,
+   "w": 0.2,
+   "m": 8.53,
+   "q": 1.73,
+   "y": -5.99,
+   "a": -5.75,
    "h": [
     17.23,
     17.34,
@@ -6237,14 +6243,14 @@
     17.82,
     17.57,
     17.73,
-    17.67
+    17.69
    ],
    "p1": 0.504,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.05,
    "t": {
     "st": "tardif",
-    "g": 2.61,
+    "g": 2.7,
     "a": 60
    }
   },
@@ -6254,13 +6260,13 @@
    "k": "pays",
    "e": "🇮🇱",
    "cur": "USD",
-   "p": 107.89,
-   "d": 3.76,
-   "w": 3.95,
-   "m": -8.8,
-   "q": -12.46,
-   "y": -1.94,
-   "a": 6.11,
+   "p": 107.68,
+   "d": 3.55,
+   "w": 3.74,
+   "m": -8.98,
+   "q": -12.63,
+   "y": -2.14,
+   "a": 5.9,
    "h": [
     126.3,
     124.9,
@@ -6291,14 +6297,14 @@
     108.2,
     101.5,
     103.8,
-    107.9
+    107.7
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.68,
+   "p3": 0.554,
+   "x3": 0.63,
    "t": {
     "st": "frais",
-    "g": -13.11,
+    "g": -13.28,
     "a": 60
    }
   },
@@ -6308,13 +6314,13 @@
    "k": "secteur",
    "e": "💻",
    "cur": "USD",
-   "p": 158.66,
-   "d": 1.84,
-   "w": -1.26,
-   "m": -16.93,
-   "q": -14.56,
-   "y": 10.2,
-   "a": 13.14,
+   "p": 158.6,
+   "d": 1.8,
+   "w": -1.3,
+   "m": -16.96,
+   "q": -14.59,
+   "y": 10.16,
+   "a": 13.1,
    "h": [
     187.3,
     187.9,
@@ -6345,14 +6351,14 @@
     163.8,
     149,
     157.1,
-    158.7
+    158.6
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.71,
+   "p3": 0.554,
+   "x3": 1.59,
    "t": {
     "st": "frais",
-    "g": -13.58,
+    "g": -13.62,
     "a": 60
    }
   },
@@ -6362,13 +6368,13 @@
    "k": "secteur",
    "e": "🏦",
    "cur": "USD",
-   "p": 57.17,
-   "d": 1.18,
-   "w": 2.87,
-   "m": 1.86,
-   "q": -1.59,
-   "y": 4.39,
-   "a": 8.82,
+   "p": 57.07,
+   "d": 0.99,
+   "w": 2.68,
+   "m": 1.67,
+   "q": -1.77,
+   "y": 4.2,
+   "a": 8.62,
    "h": [
     58.1,
     57.06,
@@ -6399,14 +6405,14 @@
     56.42,
     54.57,
     56.11,
-    57.17
+    57.07
    ],
-   "p1": 0.515,
-   "p3": 0.555,
+   "p1": 0.514,
+   "p3": 0.554,
    "x3": 0.41,
    "t": {
     "st": "frais",
-    "g": -0.84,
+    "g": -1.02,
     "a": 60
    }
   },
@@ -6416,13 +6422,13 @@
    "k": "secteur",
    "e": "🛢️",
    "cur": "USD",
-   "p": 61.87,
-   "d": 1.59,
-   "w": 1.61,
-   "m": -9.61,
-   "q": -1.29,
-   "y": 38.38,
-   "a": 39.65,
+   "p": 61.63,
+   "d": 1.2,
+   "w": 1.22,
+   "m": -9.96,
+   "q": -1.68,
+   "y": 37.84,
+   "a": 39.1,
    "h": [
     64.06,
     65.31,
@@ -6453,14 +6459,14 @@
     61.29,
     60.51,
     60.45,
-    61.87
+    61.63
    ],
-   "p1": 0.529,
-   "p3": 0.555,
-   "x3": 1.24,
+   "p1": 0.527,
+   "p3": 0.554,
+   "x3": 1.1,
    "t": {
     "st": "frais",
-    "g": -4.96,
+    "g": -5.33,
     "a": 60
    }
   },
@@ -6470,13 +6476,13 @@
    "k": "secteur",
    "e": "💊",
    "cur": "USD",
-   "p": 183.72,
-   "d": 0.02,
-   "w": 3.53,
-   "m": 2.23,
-   "q": 7.34,
-   "y": 18.68,
-   "a": 15.71,
+   "p": 183.99,
+   "d": 0.17,
+   "w": 3.68,
+   "m": 2.38,
+   "q": 7.5,
+   "y": 18.86,
+   "a": 15.88,
    "h": [
     171.4,
     166.6,
@@ -6507,14 +6513,14 @@
     181.2,
     177.2,
     184.7,
-    183.7
+    184
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.72,
+   "p3": 0.554,
+   "x3": 0.73,
    "t": {
     "st": "tardif",
-    "g": 6.23,
+    "g": 6.38,
     "a": 60
    }
   },
@@ -6564,8 +6570,8 @@
     165
    ],
    "p1": 0.521,
-   "p3": 0.555,
-   "x3": 0.5,
+   "p3": 0.554,
+   "x3": 0.44,
    "t": {
     "st": "frais",
     "g": -4.51,
@@ -6578,13 +6584,13 @@
    "k": "secteur",
    "e": "🛍️",
    "cur": "USD",
-   "p": 119.5,
-   "d": 1.71,
-   "w": 3.12,
-   "m": 3.62,
-   "q": 1.95,
-   "y": 0.08,
-   "a": 2.4,
+   "p": 119.71,
+   "d": 1.89,
+   "w": 3.31,
+   "m": 3.8,
+   "q": 2.13,
+   "y": 0.25,
+   "a": 2.58,
    "h": [
     114.9,
     112.5,
@@ -6615,14 +6621,14 @@
     119.2,
     112.5,
     117.7,
-    119.5
+    119.7
    ],
-   "p1": 0.51,
-   "p3": 0.555,
-   "x3": 0.41,
+   "p1": 0.509,
+   "p3": 0.554,
+   "x3": 0.39,
    "t": {
     "st": "en cours",
-    "g": 4.04,
+    "g": 4.22,
     "a": 60
    }
   },
@@ -6632,13 +6638,13 @@
    "k": "secteur",
    "e": "🛒",
    "cur": "USD",
-   "p": 92.36,
-   "d": 0.07,
-   "w": 2.78,
-   "m": 6.36,
-   "q": 8.09,
-   "y": 18.9,
-   "a": 18.32,
+   "p": 92.67,
+   "d": 0.4,
+   "w": 3.13,
+   "m": 6.71,
+   "q": 8.45,
+   "y": 19.3,
+   "a": 18.72,
    "h": [
     84.58,
     83.05,
@@ -6669,14 +6675,14 @@
     91.18,
     90.46,
     91.88,
-    92.36
+    92.67
    ],
-   "p1": 0.506,
-   "p3": 0.555,
-   "x3": 0.08,
+   "p1": 0.509,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "tardif",
-    "g": 7.99,
+    "g": 8.35,
     "a": 60
    }
   },
@@ -6686,13 +6692,13 @@
    "k": "secteur",
    "e": "💡",
    "cur": "USD",
-   "p": 43.65,
-   "d": 0.1,
-   "w": 1.5,
-   "m": 2.74,
-   "q": 2.16,
-   "y": 2.26,
-   "a": -1.69,
+   "p": 43.72,
+   "d": 0.26,
+   "w": 1.66,
+   "m": 2.91,
+   "q": 2.33,
+   "y": 2.42,
+   "a": -1.53,
    "h": [
     43.08,
     42.94,
@@ -6723,14 +6729,14 @@
     43.55,
     42.69,
     43.4,
-    43.65
+    43.72
    ],
    "p1": 0.509,
-   "p3": 0.555,
-   "x3": 0.05,
+   "p3": 0.554,
+   "x3": 0.13,
    "t": {
     "st": "en cours",
-    "g": 2.31,
+    "g": 2.47,
     "a": 60
    }
   },
@@ -6740,13 +6746,13 @@
    "k": "secteur",
    "e": "🧱",
    "cur": "USD",
-   "p": 51.92,
-   "d": 1.4,
-   "w": 5.07,
-   "m": 0.13,
-   "q": -2.36,
-   "y": 14.5,
-   "a": 18.27,
+   "p": 51.98,
+   "d": 1.5,
+   "w": 5.18,
+   "m": 0.23,
+   "q": -2.26,
+   "y": 14.62,
+   "a": 18.39,
    "h": [
     52.44,
     51.39,
@@ -6777,14 +6783,14 @@
     50.46,
     48.34,
     50.17,
-    51.92
+    51.98
    ],
-   "p1": 0.521,
-   "p3": 0.555,
+   "p1": 0.52,
+   "p3": 0.554,
    "x3": 0.66,
    "t": {
     "st": "frais",
-    "g": -1.94,
+    "g": -1.83,
     "a": 60
    }
   },
@@ -6794,13 +6800,13 @@
    "k": "secteur",
    "e": "🏢",
    "cur": "USD",
-   "p": 44.04,
-   "d": 0.41,
-   "w": 2.71,
-   "m": 4.53,
-   "q": -0.99,
-   "y": 9.14,
-   "a": 6.66,
+   "p": 44.1,
+   "d": 0.56,
+   "w": 2.86,
+   "m": 4.69,
+   "q": -0.84,
+   "y": 9.31,
+   "a": 6.82,
    "h": [
     43.93,
     43.41,
@@ -6831,14 +6837,14 @@
     43.62,
     42.46,
     43.46,
-    44.04
+    44.1
    ],
-   "p1": 0.505,
-   "p3": 0.555,
-   "x3": -0.02,
+   "p1": 0.506,
+   "p3": 0.554,
+   "x3": 0.01,
    "t": {
     "st": "en cours",
-    "g": 0.71,
+    "g": 0.86,
     "a": 60
    }
   },
@@ -6848,13 +6854,13 @@
    "k": "secteur",
    "e": "📱",
    "cur": "USD",
-   "p": 107.16,
-   "d": 1.69,
-   "w": 4.28,
-   "m": 3.9,
-   "q": -5.16,
-   "y": -8.97,
-   "a": -6.25,
+   "p": 107.07,
+   "d": 1.6,
+   "w": 4.19,
+   "m": 3.81,
+   "q": -5.24,
+   "y": -9.05,
+   "a": -6.33,
    "h": [
     112,
     110.8,
@@ -6885,14 +6891,14 @@
     105.6,
     100,
     104.4,
-    107.2
+    107.1
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": -0.14,
+   "p3": 0.554,
+   "x3": -0.15,
    "t": {
     "st": "frais",
-    "g": -4.68,
+    "g": -4.76,
     "a": 60
    }
   },
@@ -6902,13 +6908,13 @@
    "k": "secteur",
    "e": "🔌",
    "cur": "USD",
-   "p": 433.38,
-   "d": 2.58,
-   "w": -3.15,
-   "m": -23.66,
-   "q": -21.65,
-   "y": 20.34,
-   "a": 27.46,
+   "p": 432.27,
+   "d": 2.32,
+   "w": -3.4,
+   "m": -23.85,
+   "q": -21.85,
+   "y": 20.03,
+   "a": 27.13,
    "h": [
     567,
     574.3,
@@ -6939,14 +6945,14 @@
     459.5,
     400.1,
     426.8,
-    433.4
+    432.3
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 2.88,
+   "p3": 0.554,
+   "x3": 2.95,
    "t": {
     "st": "frais",
-    "g": -21.27,
+    "g": -21.47,
     "a": 60
    }
   },
@@ -6956,13 +6962,13 @@
    "k": "secteur",
    "e": "🔌",
    "cur": "USD",
-   "p": 132.24,
-   "d": 3.33,
-   "w": -4.14,
-   "m": -23.99,
-   "q": -22,
-   "y": 31.74,
-   "a": 39.9,
+   "p": 131.76,
+   "d": 2.95,
+   "w": -4.49,
+   "m": -24.27,
+   "q": -22.28,
+   "y": 31.26,
+   "a": 39.39,
    "h": [
     173.3,
     177.3,
@@ -6993,14 +6999,14 @@
     141.9,
     123.4,
     128.6,
-    132.2
+    131.8
    ],
-   "p1": 0.525,
-   "p3": 0.555,
-   "x3": 2.94,
+   "p1": 0.526,
+   "p3": 0.554,
+   "x3": 2.95,
    "t": {
     "st": "frais",
-    "g": -20.88,
+    "g": -21.17,
     "a": 60
    }
   },
@@ -7010,13 +7016,13 @@
    "k": "secteur",
    "e": "🖥️",
    "cur": "USD",
-   "p": 96.94,
-   "d": 2.02,
-   "w": 0.87,
-   "m": -13.38,
-   "q": -11.47,
-   "y": -8.28,
-   "a": -6.06,
+   "p": 96.86,
+   "d": 1.94,
+   "w": 0.79,
+   "m": -13.45,
+   "q": -11.54,
+   "y": -8.35,
+   "a": -6.13,
    "h": [
     104.6,
     101.8,
@@ -7047,14 +7053,14 @@
     96.94,
     91.66,
     95.35,
-    96.94
+    96.86
    ],
    "p1": 0.528,
-   "p3": 0.555,
-   "x3": 2.12,
+   "p3": 0.554,
+   "x3": 2.07,
    "t": {
     "st": "frais",
-    "g": -6.27,
+    "g": -6.34,
     "a": 60
    }
   },
@@ -7064,13 +7070,13 @@
    "k": "secteur",
    "e": "🧬",
    "cur": "USD",
-   "p": 218.3,
-   "d": 0.02,
-   "w": 7.16,
-   "m": 0.9,
-   "q": 4.47,
-   "y": 29.35,
-   "a": 26.68,
+   "p": 218.79,
+   "d": 0.24,
+   "w": 7.4,
+   "m": 1.13,
+   "q": 4.71,
+   "y": 29.64,
+   "a": 26.96,
    "h": [
     211.9,
     205.5,
@@ -7101,14 +7107,14 @@
     205.4,
     199.5,
     219.5,
-    218.3
+    218.8
    ],
-   "p1": 0.512,
-   "p3": 0.555,
-   "x3": 1.27,
+   "p1": 0.513,
+   "p3": 0.554,
+   "x3": 1.31,
    "t": {
     "st": "en cours",
-    "g": 2.1,
+    "g": 2.33,
     "a": 60
    }
   },
@@ -7118,13 +7124,13 @@
    "k": "secteur",
    "e": "🧬",
    "cur": "USD",
-   "p": 157.77,
-   "d": 0.75,
-   "w": 9.47,
-   "m": 0.17,
-   "q": -2.84,
-   "y": 29.39,
-   "a": 29.99,
+   "p": 157.73,
+   "d": 0.72,
+   "w": 9.44,
+   "m": 0.14,
+   "q": -2.86,
+   "y": 29.36,
+   "a": 29.96,
    "h": [
     163.8,
     159.4,
@@ -7155,14 +7161,14 @@
     145,
     140.2,
     156.8,
-    157.8
+    157.7
    ],
    "p1": 0.523,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.94,
    "t": {
     "st": "frais",
-    "g": -4.6,
+    "g": -4.62,
     "a": 60
    }
   },
@@ -7172,13 +7178,13 @@
    "k": "secteur",
    "e": "🩺",
    "cur": "USD",
-   "p": 57.81,
-   "d": -0.02,
-   "w": 3.18,
-   "m": 5.8,
-   "q": 4.75,
-   "y": -6.98,
-   "a": -10.33,
+   "p": 57.9,
+   "d": 0.14,
+   "w": 3.34,
+   "m": 5.97,
+   "q": 4.91,
+   "y": -6.84,
+   "a": -10.19,
    "h": [
     53.63,
     51.48,
@@ -7209,14 +7215,14 @@
     56.89,
     55.38,
     57.48,
-    57.81
+    57.9
    ],
-   "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0.85,
+   "p1": 0.513,
+   "p3": 0.554,
+   "x3": 0.87,
    "t": {
     "st": "tardif",
-    "g": 6.23,
+    "g": 6.39,
     "a": 60
    }
   },
@@ -7226,13 +7232,13 @@
    "k": "secteur",
    "e": "✈️",
    "cur": "USD",
-   "p": 69.88,
-   "d": 1.61,
-   "w": 2.46,
-   "m": 0.91,
-   "q": -9.96,
-   "y": -2.35,
-   "a": 3.58,
+   "p": 69.96,
+   "d": 1.74,
+   "w": 2.59,
+   "m": 1.04,
+   "q": -9.85,
+   "y": -2.23,
+   "a": 3.7,
    "h": [
     75.2,
     73.15,
@@ -7263,14 +7269,14 @@
     69.39,
     66.17,
     68.12,
-    69.88
+    69.96
    ],
    "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.23,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "frais",
-    "g": -6.15,
+    "g": -6.03,
     "a": 60
    }
   },
@@ -7280,13 +7286,13 @@
    "k": "secteur",
    "e": "🏦",
    "cur": "USD",
-   "p": 70.3,
-   "d": 0.67,
-   "w": 1.5,
-   "m": -2.51,
-   "q": -5.38,
-   "y": 8.47,
-   "a": 10.87,
+   "p": 70.08,
+   "d": 0.36,
+   "w": 1.18,
+   "m": -2.82,
+   "q": -5.68,
+   "y": 8.13,
+   "a": 10.52,
    "h": [
     75.27,
     73.45,
@@ -7317,14 +7323,14 @@
     70.52,
     68.32,
     69.76,
-    70.3
+    70.08
    ],
-   "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.22,
+   "p1": 0.519,
+   "p3": 0.554,
+   "x3": 0.25,
    "t": {
     "st": "frais",
-    "g": -5.31,
+    "g": -5.6,
     "a": 60
    }
   },
@@ -7334,13 +7340,13 @@
    "k": "secteur",
    "e": "🏦",
    "cur": "USD",
-   "p": 64.58,
-   "d": 0.73,
-   "w": 2.1,
-   "m": -1.61,
-   "q": -5.67,
-   "y": 6.41,
-   "a": 8.87,
+   "p": 64.32,
+   "d": 0.34,
+   "w": 1.7,
+   "m": -2,
+   "q": -6.04,
+   "y": 5.99,
+   "a": 8.44,
    "h": [
     69.34,
     67.67,
@@ -7371,14 +7377,14 @@
     64.42,
     62.33,
     63.87,
-    64.58
+    64.32
    ],
-   "p1": 0.517,
-   "p3": 0.555,
-   "x3": 0.22,
+   "p1": 0.518,
+   "p3": 0.554,
+   "x3": 0.3,
    "t": {
     "st": "frais",
-    "g": -5.52,
+    "g": -5.89,
     "a": 60
    }
   },
@@ -7388,13 +7394,13 @@
    "k": "secteur",
    "e": "📈",
    "cur": "USD",
-   "p": 172.84,
-   "d": 1.49,
-   "w": 0.65,
-   "m": -3.33,
-   "q": -11.43,
-   "y": -3.64,
-   "a": 0.63,
+   "p": 171.85,
+   "d": 0.91,
+   "w": 0.08,
+   "m": -3.88,
+   "q": -11.93,
+   "y": -4.19,
+   "a": 0.06,
    "h": [
     196.5,
     191.6,
@@ -7425,14 +7431,14 @@
     175.2,
     165.8,
     170.4,
-    172.8
+    171.9
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.13,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.2,
    "t": {
     "st": "frais",
-    "g": -9.42,
+    "g": -9.94,
     "a": 60
    }
   },
@@ -7442,13 +7448,13 @@
    "k": "secteur",
    "e": "🏠",
    "cur": "USD",
-   "p": 98.32,
-   "d": -0.02,
-   "w": 8.31,
-   "m": 10.48,
-   "q": 1.98,
-   "y": 2.1,
-   "a": -4.16,
+   "p": 98.36,
+   "d": 0.02,
+   "w": 8.35,
+   "m": 10.53,
+   "q": 2.02,
+   "y": 2.14,
+   "a": -4.12,
    "h": [
     93.91,
     90.31,
@@ -7479,14 +7485,14 @@
     92.66,
     91.15,
     95.56,
-    98.32
+    98.36
    ],
-   "p1": 0.504,
-   "p3": 0.555,
-   "x3": -0.52,
+   "p1": 0.503,
+   "p3": 0.554,
+   "x3": -0.65,
    "t": {
     "st": "en cours",
-    "g": 5.93,
+    "g": 5.97,
     "a": 60
    }
   },
@@ -7496,13 +7502,13 @@
    "k": "secteur",
    "e": "🛍️",
    "cur": "USD",
-   "p": 90.21,
-   "d": 0.61,
-   "w": 2.82,
-   "m": 4,
-   "q": 3.82,
-   "y": 5.77,
-   "a": 8.45,
+   "p": 90.34,
+   "d": 0.76,
+   "w": 2.96,
+   "m": 4.15,
+   "q": 3.97,
+   "y": 5.92,
+   "a": 8.61,
    "h": [
     87.59,
     84.3,
@@ -7533,14 +7539,14 @@
     90.3,
     86.49,
     89.7,
-    90.21
+    90.34
    ],
-   "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0.63,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": 0.7,
    "t": {
     "st": "en cours",
-    "g": 4.43,
+    "g": 4.58,
     "a": 60
    }
   },
@@ -7550,13 +7556,13 @@
    "k": "secteur",
    "e": "🛢️",
    "cur": "USD",
-   "p": 170.39,
-   "d": 1.46,
-   "w": 0.26,
-   "m": -14.96,
-   "q": -8.36,
-   "y": 34.95,
-   "a": 30.85,
+   "p": 169.65,
+   "d": 1.02,
+   "w": -0.17,
+   "m": -15.33,
+   "q": -8.76,
+   "y": 34.37,
+   "a": 30.28,
    "h": [
     190.7,
     195,
@@ -7587,14 +7593,14 @@
     171.6,
     168.1,
     166.3,
-    170.4
+    169.6
    ],
    "p1": 0.527,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.1,
    "t": {
     "st": "frais",
-    "g": -11.79,
+    "g": -12.17,
     "a": 60
    }
   },
@@ -7604,13 +7610,13 @@
    "k": "secteur",
    "e": "🛢️",
    "cur": "USD",
-   "p": 355.48,
-   "d": 2.5,
-   "w": 2.83,
-   "m": -13.11,
-   "q": -15.02,
-   "y": 24.83,
-   "a": 24.71,
+   "p": 354.59,
+   "d": 2.24,
+   "w": 2.58,
+   "m": -13.32,
+   "q": -15.23,
+   "y": 24.52,
+   "a": 24.39,
    "h": [
     427.5,
     429.4,
@@ -7641,14 +7647,14 @@
     351,
     329.7,
     337.7,
-    355.5
+    354.6
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.76,
+   "p3": 0.554,
+   "x3": 0.82,
    "t": {
     "st": "frais",
-    "g": -18.58,
+    "g": -18.78,
     "a": 60
    }
   },
@@ -7698,7 +7704,7 @@
     87.7
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.96,
    "t": {
     "st": "frais",
@@ -7712,13 +7718,13 @@
    "k": "secteur",
    "e": "🚚",
    "cur": "USD",
-   "p": 82.43,
-   "d": 0.81,
-   "w": 1.95,
-   "m": 2.03,
-   "q": -4.58,
-   "y": 10.63,
-   "a": 15.37,
+   "p": 82.29,
+   "d": 0.64,
+   "w": 1.78,
+   "m": 1.86,
+   "q": -4.75,
+   "y": 10.44,
+   "a": 15.17,
    "h": [
     84.17,
     81.71,
@@ -7749,14 +7755,14 @@
     82.87,
     78.62,
     80.49,
-    82.43
+    82.29
    ],
-   "p1": 0.513,
-   "p3": 0.555,
-   "x3": 0.05,
+   "p1": 0.512,
+   "p3": 0.554,
+   "x3": -0.13,
    "t": {
     "st": "frais",
-    "g": -1.07,
+    "g": -1.24,
     "a": 60
    }
   },
@@ -7806,7 +7812,7 @@
     46.96
    ],
    "p1": 0.521,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.4,
    "t": {
     "st": "frais",
@@ -7820,13 +7826,13 @@
    "k": "secteur",
    "e": "🏢",
    "cur": "USD",
-   "p": 96.02,
-   "d": 0.38,
-   "w": 2.73,
-   "m": 4.61,
-   "q": -1.25,
-   "y": 8.51,
-   "a": 5.94,
+   "p": 96.13,
+   "d": 0.49,
+   "w": 2.85,
+   "m": 4.73,
+   "q": -1.14,
+   "y": 8.63,
+   "a": 6.06,
    "h": [
     96.02,
     94.94,
@@ -7857,14 +7863,14 @@
     95.18,
     92.56,
     94.78,
-    96.02
+    96.13
    ],
    "p1": 0.51,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.18,
    "t": {
     "st": "frais",
-    "g": 0.25,
+    "g": 0.37,
     "a": 60
    }
   },
@@ -7874,13 +7880,13 @@
    "k": "secteur",
    "e": "🏦",
    "cur": "EUR",
-   "p": 38.09,
-   "d": 2.01,
-   "w": 2.23,
-   "m": -0.21,
-   "q": -9.72,
-   "y": 8.1,
-   "a": 16.77,
+   "p": 38.1,
+   "d": 2.05,
+   "w": 2.27,
+   "m": -0.17,
+   "q": -9.68,
+   "y": 8.15,
+   "a": 16.81,
    "h": [
     43.15,
     42.43,
@@ -7911,14 +7917,14 @@
     38.49,
     38.26,
     36.42,
-    38.09
+    38.1
    ],
    "p1": 0.527,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.23,
    "t": {
     "st": "frais",
-    "g": -11.69,
+    "g": -11.65,
     "a": 60
    }
   },
@@ -7928,13 +7934,13 @@
    "k": "secteur",
    "e": "🛢️",
    "cur": "EUR",
-   "p": 54.04,
-   "d": 1.01,
-   "w": 1.1,
-   "m": -9.48,
-   "q": -1.51,
-   "y": 32.24,
-   "a": 31.66,
+   "p": 53.99,
+   "d": 0.92,
+   "w": 1.01,
+   "m": -9.56,
+   "q": -1.6,
+   "y": 32.12,
+   "a": 31.54,
    "h": [
     55.77,
     55.8,
@@ -7965,14 +7971,14 @@
     54.44,
     53.73,
     52.47,
-    54.04
+    53.99
    ],
    "p1": 0.528,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.06,
    "t": {
     "st": "frais",
-    "g": -1.21,
+    "g": -1.3,
     "a": 60
    }
   },
@@ -8022,7 +8028,7 @@
     127.6
    ],
    "p1": 0.509,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.53,
    "t": {
     "st": "tardif",
@@ -8036,13 +8042,13 @@
    "k": "secteur",
    "e": "💻",
    "cur": "EUR",
-   "p": 89.13,
-   "d": 1.7,
-   "w": 2.9,
-   "m": -11.23,
-   "q": -6.76,
-   "y": 11.15,
-   "a": 12.44,
+   "p": 89.16,
+   "d": 1.73,
+   "w": 2.93,
+   "m": -11.2,
+   "q": -6.73,
+   "y": 11.19,
+   "a": 12.48,
    "h": [
     97.41,
     94.63,
@@ -8073,14 +8079,14 @@
     91.68,
     90.4,
     85.1,
-    89.13
+    89.16
    ],
    "p1": 0.526,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.19,
    "t": {
     "st": "frais",
-    "g": -8.12,
+    "g": -8.09,
     "a": 60
    }
   },
@@ -8090,13 +8096,13 @@
    "k": "secteur",
    "e": "🏭",
    "cur": "EUR",
-   "p": 110.98,
-   "d": 1.44,
-   "w": 3.05,
-   "m": -3.16,
-   "q": -5.9,
-   "y": 3.84,
-   "a": 6.98,
+   "p": 110.9,
+   "d": 1.37,
+   "w": 2.97,
+   "m": -3.23,
+   "q": -5.97,
+   "y": 3.76,
+   "a": 6.9,
    "h": [
     119.2,
     115.2,
@@ -8127,14 +8133,14 @@
     111.3,
     111.1,
     106.9,
-    111
+    110.9
    ],
-   "p1": 0.513,
-   "p3": 0.555,
+   "p1": 0.514,
+   "p3": 0.554,
    "x3": -0.24,
    "t": {
     "st": "frais",
-    "g": -6.04,
+    "g": -6.11,
     "a": 60
    }
   },
@@ -8144,13 +8150,13 @@
    "k": "secteur",
    "e": "🚗",
    "cur": "EUR",
-   "p": 38.46,
-   "d": 1.06,
-   "w": 5.67,
-   "m": 0.21,
-   "q": -6.43,
-   "y": -18.8,
-   "a": -17.18,
+   "p": 38.38,
+   "d": 0.85,
+   "w": 5.45,
+   "m": 0,
+   "q": -6.63,
+   "y": -18.97,
+   "a": -17.36,
    "h": [
     41.62,
     41.06,
@@ -8181,14 +8187,14 @@
     37.23,
     36.78,
     36.85,
-    38.46
+    38.38
    ],
-   "p1": 0.514,
-   "p3": 0.555,
+   "p1": 0.515,
+   "p3": 0.554,
    "x3": 0.13,
    "t": {
     "st": "frais",
-    "g": -7.84,
+    "g": -8.03,
     "a": 60
    }
   },
@@ -8198,13 +8204,13 @@
    "k": "secteur",
    "e": "💡",
    "cur": "EUR",
-   "p": 59.21,
-   "d": 0.59,
-   "w": 2.65,
-   "m": 2.26,
-   "q": 6.44,
-   "y": 17.53,
-   "a": 18.14,
+   "p": 59.27,
+   "d": 0.7,
+   "w": 2.76,
+   "m": 2.37,
+   "q": 6.54,
+   "y": 17.65,
+   "a": 18.26,
    "h": [
     55.01,
     55.06,
@@ -8235,14 +8241,14 @@
     57.79,
     58.16,
     58.08,
-    59.21
+    59.27
    ],
-   "p1": 0.508,
-   "p3": 0.555,
-   "x3": 0.01,
+   "p1": 0.509,
+   "p3": 0.554,
+   "x3": 0.07,
    "t": {
     "st": "tardif",
-    "g": 7.67,
+    "g": 7.78,
     "a": 60
    }
   },
@@ -8252,13 +8258,13 @@
    "k": "secteur",
    "e": "🧪",
    "cur": "EUR",
-   "p": 136.06,
-   "d": 0.68,
-   "w": 2.41,
-   "m": 2.95,
-   "q": 6.03,
-   "y": 23.92,
-   "a": 22.71,
+   "p": 135.96,
+   "d": 0.61,
+   "w": 2.33,
+   "m": 2.88,
+   "q": 5.95,
+   "y": 23.83,
+   "a": 22.62,
    "h": [
     128.8,
     125.5,
@@ -8289,14 +8295,14 @@
     134.6,
     133.7,
     133.1,
-    136.1
+    136
    ],
    "p1": 0.513,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.39,
    "t": {
     "st": "tardif",
-    "g": 6.5,
+    "g": 6.42,
     "a": 60
    }
   },
@@ -8306,13 +8312,13 @@
    "k": "secteur",
    "e": "🛡️",
    "cur": "EUR",
-   "p": 57.82,
-   "d": 0.63,
-   "w": 2.46,
-   "m": 4.35,
-   "q": 5.36,
-   "y": 13.66,
-   "a": 17.77,
+   "p": 57.77,
+   "d": 0.54,
+   "w": 2.37,
+   "m": 4.26,
+   "q": 5.27,
+   "y": 13.56,
+   "a": 17.67,
    "h": [
     54.35,
     53.63,
@@ -8343,14 +8349,14 @@
     56.61,
     56.89,
     56.73,
-    57.82
+    57.77
    ],
-   "p1": 0.511,
-   "p3": 0.555,
-   "x3": 0.34,
+   "p1": 0.512,
+   "p3": 0.554,
+   "x3": 0.37,
    "t": {
     "st": "tardif",
-    "g": 4.42,
+    "g": 4.33,
     "a": 60
    }
   },
@@ -8360,13 +8366,13 @@
    "k": "secteur",
    "e": "🧱",
    "cur": "EUR",
-   "p": 87.94,
-   "d": 1.08,
-   "w": 3.91,
-   "m": 4.65,
-   "q": 1.86,
-   "y": -1.02,
-   "a": 0.48,
+   "p": 87.95,
+   "d": 1.09,
+   "w": 3.92,
+   "m": 4.66,
+   "q": 1.88,
+   "y": -1.01,
+   "a": 0.49,
    "h": [
     87.16,
     83.47,
@@ -8397,14 +8403,14 @@
     86.44,
     86.71,
     85.39,
-    87.94
+    87.95
    ],
    "p1": 0.503,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.13,
    "t": {
     "st": "en cours",
-    "g": 1.38,
+    "g": 1.39,
     "a": 60
    }
   },
@@ -8414,13 +8420,13 @@
    "k": "secteur",
    "e": "🛡️",
    "cur": "EUR",
-   "p": 49.81,
-   "d": 2.91,
-   "w": 7.07,
-   "m": -6.92,
-   "q": -5.99,
-   "y": -4.66,
-   "a": -0.91,
+   "p": 49.92,
+   "d": 3.16,
+   "w": 7.33,
+   "m": -6.7,
+   "q": -5.77,
+   "y": -4.43,
+   "a": -0.67,
    "h": [
     51.84,
     51.08,
@@ -8451,14 +8457,14 @@
     48.31,
     47.49,
     46.85,
-    49.81
+    49.92
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.45,
+   "p3": 0.554,
+   "x3": 0.46,
    "t": {
     "st": "frais",
-    "g": -4.06,
+    "g": -3.82,
     "a": 60
    }
   },
@@ -8468,13 +8474,13 @@
    "k": "secteur",
    "e": "🛡️",
    "cur": "USD",
-   "p": 39.07,
-   "d": 2.8,
-   "w": 2.72,
-   "m": -0.8,
-   "q": -13.72,
-   "y": -7.25,
-   "a": -3.09,
+   "p": 39.13,
+   "d": 2.93,
+   "w": 2.85,
+   "m": -0.67,
+   "q": -13.61,
+   "y": -7.13,
+   "a": -2.96,
    "h": [
     43.73,
     42.62,
@@ -8505,14 +8511,14 @@
     38.56,
     36.83,
     38.26,
-    39.07
+    39.13
    ],
    "p1": 0.522,
-   "p3": 0.555,
-   "x3": 0.68,
+   "p3": 0.554,
+   "x3": 0.69,
    "t": {
     "st": "frais",
-    "g": -10.32,
+    "g": -10.2,
     "a": 60
    }
   },
@@ -8522,13 +8528,13 @@
    "k": "theme",
    "e": "🚀",
    "cur": "USD",
-   "p": 69.31,
-   "d": 2.89,
-   "w": 0.55,
-   "m": -19.52,
-   "q": -18.06,
-   "y": -9.89,
-   "a": -10.34,
+   "p": 69.15,
+   "d": 2.66,
+   "w": 0.33,
+   "m": -19.7,
+   "q": -18.25,
+   "y": -10.09,
+   "a": -10.54,
    "h": [
     86.22,
     84.56,
@@ -8559,14 +8565,14 @@
     71.06,
     64.22,
     67.46,
-    69.31
+    69.15
    ],
-   "p1": 0.525,
-   "p3": 0.555,
-   "x3": 2.21,
+   "p1": 0.526,
+   "p3": 0.554,
+   "x3": 2.34,
    "t": {
     "st": "frais",
-    "g": -16.88,
+    "g": -17.07,
     "a": 60
    }
   },
@@ -8616,7 +8622,7 @@
     30.1
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.97,
    "t": {
     "st": "frais",
@@ -8630,13 +8636,13 @@
    "k": "theme",
    "e": "🧠",
    "cur": "USD",
-   "p": 55.1,
-   "d": 3.04,
-   "w": 1.26,
-   "m": -14.43,
-   "q": -14.19,
-   "y": 8.35,
-   "a": 11.89,
+   "p": 54.96,
+   "d": 2.77,
+   "w": 0.99,
+   "m": -14.66,
+   "q": -14.42,
+   "y": 8.06,
+   "a": 11.59,
    "h": [
     64.32,
     64.11,
@@ -8667,14 +8673,14 @@
     55.83,
     51.02,
     53.74,
-    55.1
+    54.96
    ],
    "p1": 0.524,
-   "p3": 0.555,
-   "x3": 1.43,
+   "p3": 0.554,
+   "x3": 1.42,
    "t": {
     "st": "frais",
-    "g": -12.64,
+    "g": -12.87,
     "a": 60
    }
   },
@@ -8684,13 +8690,13 @@
    "k": "theme",
    "e": "🤖",
    "cur": "USD",
-   "p": 67.29,
-   "d": 2.98,
-   "w": 0.3,
-   "m": -13.84,
-   "q": -16.56,
-   "y": -2.91,
-   "a": 1.16,
+   "p": 67.23,
+   "d": 2.89,
+   "w": 0.21,
+   "m": -13.92,
+   "q": -16.63,
+   "y": -3,
+   "a": 1.07,
    "h": [
     80.57,
     79.05,
@@ -8721,14 +8727,14 @@
     68.52,
     62.56,
     65.89,
-    67.29
+    67.23
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.96,
+   "p1": 0.521,
+   "p3": 0.554,
+   "x3": 0.91,
    "t": {
     "st": "frais",
-    "g": -14.67,
+    "g": -14.75,
     "a": 60
    }
   },
@@ -8738,13 +8744,13 @@
    "k": "theme",
    "e": "⚛️",
    "cur": "USD",
-   "p": 119.76,
-   "d": 3.21,
-   "w": 0.04,
-   "m": -16.76,
-   "q": -19.21,
-   "y": 9.21,
-   "a": 13.65,
+   "p": 119.33,
+   "d": 2.84,
+   "w": -0.32,
+   "m": -17.06,
+   "q": -19.5,
+   "y": 8.82,
+   "a": 13.24,
    "h": [
     147.9,
     147.8,
@@ -8775,14 +8781,14 @@
     122.9,
     111.4,
     116.1,
-    119.8
+    119.3
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 1.19,
+   "p3": 0.554,
+   "x3": 1.05,
    "t": {
     "st": "frais",
-    "g": -17.25,
+    "g": -17.54,
     "a": 60
    }
   },
@@ -8792,13 +8798,13 @@
    "k": "theme",
    "e": "🔐",
    "cur": "USD",
-   "p": 96.77,
-   "d": 2.05,
-   "w": 0.43,
-   "m": -10.33,
-   "q": -1.82,
-   "y": 35.44,
-   "a": 31.46,
+   "p": 97.07,
+   "d": 2.37,
+   "w": 0.74,
+   "m": -10.05,
+   "q": -1.51,
+   "y": 35.86,
+   "a": 31.88,
    "h": [
     94.59,
     94.48,
@@ -8829,14 +8835,14 @@
     96.06,
     91.43,
     94.36,
-    96.77
+    97.07
    ],
    "p1": 0.522,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.52,
    "t": {
     "st": "en cours",
-    "g": 3.45,
+    "g": 3.78,
     "a": 60
    }
   },
@@ -8846,13 +8852,13 @@
    "k": "theme",
    "e": "🔐",
    "cur": "USD",
-   "p": 123.11,
-   "d": 2.25,
-   "w": 1.54,
-   "m": -6.21,
-   "q": 6.55,
-   "y": 53.18,
-   "a": 47.19,
+   "p": 123.48,
+   "d": 2.56,
+   "w": 1.85,
+   "m": -5.93,
+   "q": 6.87,
+   "y": 53.64,
+   "a": 47.63,
    "h": [
     110.8,
     111,
@@ -8883,14 +8889,14 @@
     119.6,
     115.3,
     119.4,
-    123.1
+    123.5
    ],
    "p1": 0.517,
-   "p3": 0.555,
-   "x3": 1.45,
+   "p3": 0.554,
+   "x3": 1.33,
    "t": {
     "st": "tardif",
-    "g": 12.55,
+    "g": 12.89,
     "a": 60
    }
   },
@@ -8900,13 +8906,13 @@
    "k": "theme",
    "e": "☁️",
    "cur": "USD",
-   "p": 145.97,
-   "d": 2.66,
-   "w": 1.64,
-   "m": -15.29,
-   "q": -11.61,
-   "y": 12.22,
-   "a": 13.62,
+   "p": 145.45,
+   "d": 2.29,
+   "w": 1.28,
+   "m": -15.59,
+   "q": -11.92,
+   "y": 11.82,
+   "a": 13.22,
    "h": [
     161.6,
     158.1,
@@ -8937,14 +8943,14 @@
     146.8,
     136.5,
     142.7,
-    146
+    145.4
    ],
    "p1": 0.528,
-   "p3": 0.555,
-   "x3": 2.02,
+   "p3": 0.554,
+   "x3": 1.96,
    "t": {
     "st": "frais",
-    "g": -8.37,
+    "g": -8.7,
     "a": 60
    }
   },
@@ -8954,13 +8960,13 @@
    "k": "theme",
    "e": "☁️",
    "cur": "USD",
-   "p": 41.61,
-   "d": 1.84,
-   "w": 4.71,
-   "m": -10.11,
-   "q": -3.07,
-   "y": 18.85,
-   "a": 21.76,
+   "p": 41.5,
+   "d": 1.57,
+   "w": 4.43,
+   "m": -10.35,
+   "q": -3.33,
+   "y": 18.54,
+   "a": 21.43,
    "h": [
     40.72,
     38.9,
@@ -8991,14 +8997,14 @@
     40.6,
     38.63,
     40.51,
-    41.61
+    41.5
    ],
-   "p1": 0.523,
-   "p3": 0.555,
-   "x3": 1.43,
+   "p1": 0.524,
+   "p3": 0.554,
+   "x3": 1.57,
    "t": {
     "st": "en cours",
-    "g": 1.61,
+    "g": 1.34,
     "a": 60
    }
   },
@@ -9008,13 +9014,13 @@
    "k": "theme",
    "e": "💳",
    "cur": "USD",
-   "p": 22.81,
-   "d": 2.66,
-   "w": 4.2,
-   "m": -5.49,
-   "q": -15.86,
-   "y": -22.49,
-   "a": -23.07,
+   "p": 22.73,
+   "d": 2.27,
+   "w": 3.81,
+   "m": -5.84,
+   "q": -16.17,
+   "y": -22.78,
+   "a": -23.36,
    "h": [
     27.45,
     26.05,
@@ -9045,14 +9051,14 @@
     22.72,
     20.98,
     21.91,
-    22.81
+    22.73
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.78,
+   "p3": 0.554,
+   "x3": 0.68,
    "t": {
     "st": "frais",
-    "g": -14.9,
+    "g": -15.22,
     "a": 60
    }
   },
@@ -9062,13 +9068,13 @@
    "k": "theme",
    "e": "⛓️",
    "cur": "USD",
-   "p": 45.25,
-   "d": 3.17,
-   "w": -0.75,
-   "m": -18.29,
-   "q": -27.1,
-   "y": -20.46,
-   "a": -23.15,
+   "p": 44.84,
+   "d": 2.23,
+   "w": -1.65,
+   "m": -19.03,
+   "q": -27.76,
+   "y": -21.18,
+   "a": -23.85,
    "h": [
     65.23,
     64.27,
@@ -9099,14 +9105,14 @@
     47,
     42.02,
     43.52,
-    45.25
+    44.84
    ],
-   "p1": 0.521,
-   "p3": 0.555,
-   "x3": 1.27,
+   "p1": 0.522,
+   "p3": 0.554,
+   "x3": 1.18,
    "t": {
     "st": "frais",
-    "g": -26.43,
+    "g": -27.1,
     "a": 60
    }
   },
@@ -9116,13 +9122,13 @@
    "k": "theme",
    "e": "🎮",
    "cur": "USD",
-   "p": 103.4,
-   "d": 0.84,
-   "w": 3,
-   "m": 7.15,
-   "q": 5.79,
-   "y": -0.2,
-   "a": -5.56,
+   "p": 103.35,
+   "d": 0.79,
+   "w": 2.95,
+   "m": 7.1,
+   "q": 5.74,
+   "y": -0.25,
+   "a": -5.61,
    "h": [
     97.88,
     96.06,
@@ -9153,14 +9159,14 @@
     102.2,
     97.5,
     100.2,
-    103.4
+    103.3
    ],
    "p1": 0.513,
-   "p3": 0.555,
-   "x3": 0.28,
+   "p3": 0.554,
+   "x3": 0.27,
    "t": {
     "st": "tardif",
-    "g": 7.47,
+    "g": 7.42,
     "a": 60
    }
   },
@@ -9170,13 +9176,13 @@
    "k": "theme",
    "e": "🌱",
    "cur": "USD",
-   "p": 14.72,
-   "d": 3.63,
-   "w": 1.55,
-   "m": -6.57,
-   "q": -15.82,
-   "y": -10.44,
-   "a": -10.44,
+   "p": 14.7,
+   "d": 3.52,
+   "w": 1.45,
+   "m": -6.67,
+   "q": -15.9,
+   "y": -10.53,
+   "a": -10.53,
    "h": [
     17.77,
     18.01,
@@ -9207,14 +9213,14 @@
     14.72,
     13.84,
     14.06,
-    14.72
+    14.7
    ],
-   "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.71,
+   "p1": 0.518,
+   "p3": 0.554,
+   "x3": 0.4,
    "t": {
     "st": "frais",
-    "g": -15.28,
+    "g": -15.37,
     "a": 60
    }
   },
@@ -9224,13 +9230,13 @@
    "k": "theme",
    "e": "☀️",
    "cur": "USD",
-   "p": 37.02,
-   "d": 5.29,
-   "w": 1.06,
-   "m": -9.66,
-   "q": -23.91,
-   "y": -24.63,
-   "a": -21.37,
+   "p": 36.92,
+   "d": 5.01,
+   "w": 0.79,
+   "m": -9.91,
+   "q": -24.11,
+   "y": -24.84,
+   "a": -21.58,
    "h": [
     48.04,
     47.74,
@@ -9261,14 +9267,14 @@
     37.82,
     33.97,
     34.48,
-    37.02
+    36.92
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": -0.16,
+   "p3": 0.554,
+   "x3": -0.13,
    "t": {
     "st": "frais",
-    "g": -21.68,
+    "g": -21.9,
     "a": 60
    }
   },
@@ -9278,13 +9284,13 @@
    "k": "theme",
    "e": "🌬️",
    "cur": "USD",
-   "p": 20.93,
-   "d": 0.87,
-   "w": -1.09,
-   "m": -5.04,
-   "q": -12.17,
-   "y": 2.25,
-   "a": 7.22,
+   "p": 20.97,
+   "d": 1.06,
+   "w": -0.9,
+   "m": -4.85,
+   "q": -12,
+   "y": 2.44,
+   "a": 7.43,
    "h": [
     23.67,
     23.84,
@@ -9315,14 +9321,14 @@
     21.51,
     20.43,
     20.77,
-    20.93
+    20.97
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.08,
+   "p1": 0.516,
+   "p3": 0.554,
+   "x3": 0.17,
    "t": {
     "st": "frais",
-    "g": -10.33,
+    "g": -10.15,
     "a": 60
    }
   },
@@ -9332,13 +9338,13 @@
    "k": "theme",
    "e": "🔋",
    "cur": "USD",
-   "p": 55.18,
-   "d": 4.39,
-   "w": 1.56,
-   "m": -11.98,
-   "q": -27.46,
-   "y": -14.92,
-   "a": -10.09,
+   "p": 55,
+   "d": 4.05,
+   "w": 1.23,
+   "m": -12.27,
+   "q": -27.7,
+   "y": -15.2,
+   "a": -10.38,
    "h": [
     74.18,
     73.77,
@@ -9369,14 +9375,14 @@
     55.57,
     51.98,
     53.69,
-    55.18
+    55
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.03,
+   "p3": 0.554,
+   "x3": -0.05,
    "t": {
     "st": "frais",
-    "g": -25.69,
+    "g": -25.94,
     "a": 60
    }
   },
@@ -9386,13 +9392,13 @@
    "k": "theme",
    "e": "🚗",
    "cur": "USD",
-   "p": 26.73,
-   "d": 3.24,
-   "w": 1.79,
-   "m": -13.07,
-   "q": -22.7,
-   "y": -9.64,
-   "a": -6.44,
+   "p": 26.72,
+   "d": 3.19,
+   "w": 1.73,
+   "m": -13.12,
+   "q": -22.74,
+   "y": -9.69,
+   "a": -6.5,
    "h": [
     34.76,
     34.53,
@@ -9423,14 +9429,14 @@
     26.82,
     24.59,
     25.89,
-    26.73
+    26.72
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.64,
    "t": {
     "st": "frais",
-    "g": -21.6,
+    "g": -21.65,
     "a": 60
    }
   },
@@ -9440,13 +9446,13 @@
    "k": "theme",
    "e": "☢️",
    "cur": "USD",
-   "p": 80.11,
-   "d": 3.13,
-   "w": -0.84,
-   "m": -16.54,
-   "q": -32.17,
-   "y": -35.5,
-   "a": -36.65,
+   "p": 80.04,
+   "d": 3.03,
+   "w": -0.93,
+   "m": -16.62,
+   "q": -32.24,
+   "y": -35.56,
+   "a": -36.71,
    "h": [
     119.9,
     122.9,
@@ -9477,14 +9483,14 @@
     82.99,
     76.44,
     77.93,
-    80.11
+    80.04
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.67,
+   "p3": 0.554,
+   "x3": 0.54,
    "t": {
     "st": "frais",
-    "g": -31.54,
+    "g": -31.61,
     "a": 60
    }
   },
@@ -9494,13 +9500,13 @@
    "k": "theme",
    "e": "☢️",
    "cur": "USD",
-   "p": 29,
-   "d": 4.67,
-   "w": 1.17,
-   "m": -20.64,
-   "q": -36.35,
-   "y": -32.12,
-   "a": -33.94,
+   "p": 28.97,
+   "d": 4.55,
+   "w": 1.05,
+   "m": -20.74,
+   "q": -36.43,
+   "y": -32.2,
+   "a": -34.02,
    "h": [
     46.06,
     46.86,
@@ -9531,14 +9537,14 @@
     29.42,
     26.79,
     27.6,
-    29
+    28.97
    ],
    "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.58,
+   "p3": 0.554,
+   "x3": 0.72,
    "t": {
     "st": "frais",
-    "g": -34.56,
+    "g": -34.63,
     "a": 60
    }
   },
@@ -9588,7 +9594,7 @@
     37.08
    ],
    "p1": 0.518,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.61,
    "t": {
     "st": "frais",
@@ -9602,13 +9608,13 @@
    "k": "theme",
    "e": "⚡",
    "cur": "USD",
-   "p": 153.12,
-   "d": 2.07,
-   "w": 0.46,
-   "m": -9.62,
-   "q": -14.55,
-   "y": 0.07,
-   "a": 2.75,
+   "p": 152.99,
+   "d": 1.98,
+   "w": 0.37,
+   "m": -9.69,
+   "q": -14.62,
+   "y": -0.02,
+   "a": 2.66,
    "h": [
     179,
     180.1,
@@ -9639,14 +9645,14 @@
     155.2,
     145.4,
     151.2,
-    153.1
+    153
    ],
    "p1": 0.522,
-   "p3": 0.555,
-   "x3": 0.63,
+   "p3": 0.554,
+   "x3": 0.65,
    "t": {
     "st": "frais",
-    "g": -12.77,
+    "g": -12.84,
     "a": 60
    }
   },
@@ -9656,13 +9662,13 @@
    "k": "theme",
    "e": "🛣️",
    "cur": "USD",
-   "p": 52.08,
-   "d": 1.36,
-   "w": 2.2,
-   "m": -2.36,
-   "q": -5.84,
-   "y": 8.98,
-   "a": 8.55,
+   "p": 52.02,
+   "d": 1.25,
+   "w": 2.08,
+   "m": -2.47,
+   "q": -5.95,
+   "y": 8.85,
+   "a": 8.42,
    "h": [
     55.16,
     54.19,
@@ -9693,14 +9699,14 @@
     52.06,
     49.04,
     50.79,
-    52.08
+    52.02
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.59,
+   "p3": 0.554,
+   "x3": 0.51,
    "t": {
     "st": "frais",
-    "g": -4.05,
+    "g": -4.16,
     "a": 60
    }
   },
@@ -9710,13 +9716,13 @@
    "k": "theme",
    "e": "✈️",
    "cur": "USD",
-   "p": 28.66,
-   "d": 1.88,
-   "w": 1.85,
-   "m": 6.27,
-   "q": -1.78,
-   "y": 2.1,
-   "a": 11.47,
+   "p": 28.6,
+   "d": 1.69,
+   "w": 1.65,
+   "m": 6.06,
+   "q": -1.97,
+   "y": 1.91,
+   "a": 11.26,
    "h": [
     28.8,
     28.02,
@@ -9747,14 +9753,14 @@
     28.68,
     27.12,
     28.38,
-    28.66
+    28.6
    ],
-   "p1": 0.507,
-   "p3": 0.555,
-   "x3": -0.13,
+   "p1": 0.506,
+   "p3": 0.554,
+   "x3": -0.08,
    "t": {
     "st": "en cours",
-    "g": 1.16,
+    "g": 0.97,
     "a": 60
    }
   },
@@ -9764,13 +9770,13 @@
    "k": "theme",
    "e": "🛰️",
    "cur": "USD",
-   "p": 38.29,
-   "d": 3.12,
-   "w": 0.84,
-   "m": -7.24,
-   "q": -12.94,
-   "y": -0.93,
-   "a": 17.17,
+   "p": 38.3,
+   "d": 3.15,
+   "w": 0.87,
+   "m": -7.22,
+   "q": -12.91,
+   "y": -0.91,
+   "a": 17.2,
    "h": [
     43.7,
     43.06,
@@ -9801,14 +9807,14 @@
     39.09,
     35.87,
     36.88,
-    38.29
+    38.3
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.59,
+   "p3": 0.554,
+   "x3": 0.48,
    "t": {
     "st": "frais",
-    "g": -11.24,
+    "g": -11.22,
     "a": 60
    }
   },
@@ -9818,13 +9824,13 @@
    "k": "theme",
    "e": "🛰️",
    "cur": "USD",
-   "p": 26.92,
-   "d": 3.6,
-   "w": 1.18,
-   "m": -12.61,
-   "q": -16.8,
-   "y": -7.13,
-   "a": 0.09,
+   "p": 26.83,
+   "d": 3.27,
+   "w": 0.86,
+   "m": -12.89,
+   "q": -17.06,
+   "y": -7.42,
+   "a": -0.22,
    "h": [
     32.22,
     31.84,
@@ -9855,14 +9861,14 @@
     27.47,
     24.87,
     25.8,
-    26.92
+    26.83
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.83,
+   "p3": 0.554,
+   "x3": 0.94,
    "t": {
     "st": "frais",
-    "g": -15.49,
+    "g": -15.76,
     "a": 60
    }
   },
@@ -9872,13 +9878,13 @@
    "k": "theme",
    "e": "💧",
    "cur": "USD",
-   "p": 77.99,
-   "d": 0.91,
-   "w": 3.78,
-   "m": 7.66,
-   "q": 8.47,
-   "y": 10.77,
-   "a": 7.65,
+   "p": 77.78,
+   "d": 0.63,
+   "w": 3.5,
+   "m": 7.37,
+   "q": 8.18,
+   "y": 10.47,
+   "a": 7.36,
    "h": [
     70.55,
     68.82,
@@ -9909,14 +9915,14 @@
     76.24,
     73.77,
     76.56,
-    77.99
+    77.78
    ],
    "p1": 0.51,
-   "p3": 0.555,
-   "x3": 0.42,
+   "p3": 0.554,
+   "x3": 0.4,
    "t": {
     "st": "tardif",
-    "g": 10.72,
+    "g": 10.42,
     "a": 60
    }
   },
@@ -9926,13 +9932,13 @@
    "k": "theme",
    "e": "🌾",
    "cur": "USD",
-   "p": 80.84,
-   "d": 1.27,
-   "w": 1.61,
-   "m": 0.72,
-   "q": -4.88,
-   "y": 11.06,
-   "a": 11.14,
+   "p": 80.88,
+   "d": 1.31,
+   "w": 1.65,
+   "m": 0.77,
+   "q": -4.84,
+   "y": 11.11,
+   "a": 11.18,
    "h": [
     87.83,
     87.69,
@@ -9963,14 +9969,14 @@
     81.01,
     78.49,
     78.58,
-    80.84
+    80.88
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.3,
+   "p3": 0.554,
+   "x3": 0.35,
    "t": {
     "st": "frais",
-    "g": -9.02,
+    "g": -8.98,
     "a": 60
    }
   },
@@ -9980,13 +9986,13 @@
    "k": "theme",
    "e": "🧬",
    "cur": "USD",
-   "p": 62.01,
-   "d": 0.36,
-   "w": 5.84,
-   "m": -13.28,
-   "q": -4.32,
-   "y": 36.42,
-   "a": 35.39,
+   "p": 62.21,
+   "d": 0.69,
+   "w": 6.18,
+   "m": -13,
+   "q": -4.01,
+   "y": 36.86,
+   "a": 35.83,
    "h": [
     64.26,
     62.75,
@@ -10017,14 +10023,14 @@
     59.23,
     57.08,
     62.19,
-    62.01
+    62.21
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 2.48,
+   "p1": 0.525,
+   "p3": 0.554,
+   "x3": 2.09,
    "t": {
     "st": "frais",
-    "g": -5.59,
+    "g": -5.28,
     "a": 60
    }
   },
@@ -10034,13 +10040,13 @@
    "k": "theme",
    "e": "🧬",
    "cur": "USD",
-   "p": 39.98,
-   "d": -0.2,
-   "w": 5.74,
-   "m": -8.03,
-   "q": 1.76,
-   "y": 52.65,
-   "a": 46.72,
+   "p": 40.08,
+   "d": 0.05,
+   "w": 6,
+   "m": -7.8,
+   "q": 2.01,
+   "y": 53.03,
+   "a": 47.08,
    "h": [
     39.77,
     38.6,
@@ -10071,14 +10077,14 @@
     38.42,
     37,
     40.29,
-    39.98
+    40.08
    ],
-   "p1": 0.518,
-   "p3": 0.555,
-   "x3": 0.78,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.7,
    "t": {
     "st": "frais",
-    "g": -0.55,
+    "g": -0.3,
     "a": 60
    }
   },
@@ -10088,13 +10094,13 @@
    "k": "theme",
    "e": "💬",
    "cur": "USD",
-   "p": 39.14,
-   "d": 2.78,
-   "w": 3.82,
-   "m": -5.46,
-   "q": -13.41,
-   "y": -29.11,
-   "a": -29.72,
+   "p": 39.05,
+   "d": 2.55,
+   "w": 3.58,
+   "m": -5.68,
+   "q": -13.61,
+   "y": -29.27,
+   "a": -29.88,
    "h": [
     45.15,
     43.66,
@@ -10125,14 +10131,14 @@
     39.22,
     36.25,
     37.37,
-    39.14
+    39.05
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.06,
+   "p3": 0.554,
+   "x3": 0.1,
    "t": {
     "st": "frais",
-    "g": -12.5,
+    "g": -12.7,
     "a": 60
    }
   },
@@ -10182,7 +10188,7 @@
     68.35
    ],
    "p1": 0.523,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.86,
    "t": {
     "st": "frais",
@@ -10196,13 +10202,13 @@
    "k": "theme",
    "e": "🎮",
    "cur": "USD",
-   "p": 28.77,
-   "d": 0.75,
-   "w": 2.15,
-   "m": 8,
-   "q": 5.58,
-   "y": -3.3,
-   "a": -7.36,
+   "p": 28.72,
+   "d": 0.56,
+   "w": 1.95,
+   "m": 7.79,
+   "q": 5.38,
+   "y": -3.48,
+   "a": -7.53,
    "h": [
     27.11,
     26.87,
@@ -10233,14 +10239,14 @@
     28.35,
     27.04,
     27.68,
-    28.77
+    28.72
    ],
-   "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0.84,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": 0.74,
    "t": {
     "st": "tardif",
-    "g": 7.31,
+    "g": 7.1,
     "a": 60
    }
   },
@@ -10250,13 +10256,13 @@
    "k": "theme",
    "e": "🌿",
    "cur": "USD",
-   "p": 18.78,
-   "d": 1.29,
-   "w": -0.64,
-   "m": -16.46,
-   "q": -29.22,
-   "y": -36.96,
-   "a": -28.22,
+   "p": 19.1,
+   "d": 3.05,
+   "w": 1.08,
+   "m": -15.01,
+   "q": -27.99,
+   "y": -35.87,
+   "a": -26.97,
    "h": [
     25.76,
     26.56,
@@ -10287,14 +10293,14 @@
     20.03,
     17.84,
     18.01,
-    18.78
+    19.1
    ],
    "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.13,
+   "p3": 0.554,
+   "x3": -0.14,
    "t": {
     "st": "frais",
-    "g": -27.8,
+    "g": -26.55,
     "a": 60
    }
   },
@@ -10304,13 +10310,13 @@
    "k": "theme",
    "e": "🧲",
    "cur": "USD",
-   "p": 45.27,
-   "d": 3.36,
-   "w": 2.14,
-   "m": -16.71,
-   "q": -41.53,
-   "y": -38.76,
-   "a": -36.62,
+   "p": 45.24,
+   "d": 3.29,
+   "w": 2.08,
+   "m": -16.76,
+   "q": -41.57,
+   "y": -38.8,
+   "a": -36.67,
    "h": [
     75.66,
     76.34,
@@ -10341,14 +10347,14 @@
     45.29,
     42.06,
     43.73,
-    45.27
+    45.24
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.33,
    "t": {
     "st": "frais",
-    "g": -40.66,
+    "g": -40.7,
     "a": 60
    }
   },
@@ -10358,13 +10364,13 @@
    "k": "theme",
    "e": "🟠",
    "cur": "USD",
-   "p": 60.76,
-   "d": 3.57,
-   "w": 2.49,
-   "m": -20.92,
-   "q": -35.65,
-   "y": -15.37,
-   "a": 0.21,
+   "p": 60.94,
+   "d": 3.89,
+   "w": 2.8,
+   "m": -20.68,
+   "q": -35.46,
+   "y": -15.11,
+   "a": 0.51,
    "h": [
     90.66,
     95.27,
@@ -10395,14 +10401,14 @@
     61.19,
     56.33,
     57.58,
-    60.76
+    60.94
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 1.09,
+   "p3": 0.554,
+   "x3": 1.1,
    "t": {
     "st": "frais",
-    "g": -32.42,
+    "g": -32.21,
     "a": 60
    }
   },
@@ -10412,13 +10418,13 @@
    "k": "theme",
    "e": "🏗️",
    "cur": "USD",
-   "p": 93.4,
-   "d": 3.3,
-   "w": 2.96,
-   "m": -7.91,
-   "q": -14.06,
-   "y": 10.07,
-   "a": 17.09,
+   "p": 93.56,
+   "d": 3.47,
+   "w": 3.13,
+   "m": -7.76,
+   "q": -13.92,
+   "y": 10.25,
+   "a": 17.29,
    "h": [
     111,
     111.1,
@@ -10449,14 +10455,14 @@
     92.34,
     87.16,
     89.23,
-    93.4
+    93.56
    ],
    "p1": 0.521,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.62,
    "t": {
     "st": "frais",
-    "g": -15.29,
+    "g": -15.15,
     "a": 60
    }
   },
@@ -10466,13 +10472,13 @@
    "k": "theme",
    "e": "🌲",
    "cur": "USD",
-   "p": 64.84,
-   "d": 1.6,
-   "w": 3.71,
-   "m": 0.03,
-   "q": -10.12,
-   "y": -9.96,
-   "a": -6.07,
+   "p": 64.92,
+   "d": 1.72,
+   "w": 3.84,
+   "m": 0.15,
+   "q": -10.01,
+   "y": -9.85,
+   "a": -5.95,
    "h": [
     71.73,
     70.97,
@@ -10503,14 +10509,14 @@
     63.77,
     61.27,
     63.01,
-    64.84
+    64.92
    ],
    "p1": 0.517,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.34,
    "t": {
     "st": "frais",
-    "g": -8.98,
+    "g": -8.87,
     "a": 60
    }
   },
@@ -10520,13 +10526,13 @@
    "k": "theme",
    "e": "🔌",
    "cur": "USD",
-   "p": 23.63,
-   "d": 4.14,
-   "w": 1.61,
-   "m": -9.12,
-   "q": -23.6,
-   "y": -22.63,
-   "a": -20.6,
+   "p": 23.66,
+   "d": 4.28,
+   "w": 1.74,
+   "m": -9,
+   "q": -23.5,
+   "y": -22.53,
+   "a": -20.5,
    "h": [
     30.07,
     30.06,
@@ -10557,14 +10563,14 @@
     23.84,
     22.09,
     23.04,
-    23.63
+    23.66
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": 0.01,
+   "p1": 0.517,
+   "p3": 0.554,
+   "x3": 0.16,
    "t": {
     "st": "frais",
-    "g": -21.36,
+    "g": -21.26,
     "a": 60
    }
   },
@@ -10574,13 +10580,13 @@
    "k": "theme",
    "e": "🐞",
    "cur": "USD",
-   "p": 48.83,
-   "d": 2.53,
-   "w": 2.94,
-   "m": -5.93,
-   "q": 13.68,
-   "y": 60.29,
-   "a": 54.75,
+   "p": 49.05,
+   "d": 3,
+   "w": 3.42,
+   "m": -5.5,
+   "q": 14.2,
+   "y": 61.03,
+   "a": 55.47,
    "h": [
     41.37,
     40.87,
@@ -10611,14 +10617,14 @@
     46.56,
     45.03,
     47.05,
-    48.83
+    49.05
    ],
    "p1": 0.513,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.7,
    "t": {
     "st": "tardif",
-    "g": 20.38,
+    "g": 20.93,
     "a": 60
    }
   },
@@ -10628,13 +10634,13 @@
    "k": "matiere",
    "e": "🥇",
    "cur": "USD",
-   "p": 332.19,
-   "d": 1.45,
-   "w": -0.89,
-   "m": -11.06,
-   "q": -18.76,
-   "y": -16.18,
-   "a": -12.6,
+   "p": 332.9,
+   "d": 1.66,
+   "w": -0.68,
+   "m": -10.87,
+   "q": -18.58,
+   "y": -16,
+   "a": -12.41,
    "h": [
     406.8,
     403.4,
@@ -10665,14 +10671,14 @@
     341.2,
     322.9,
     325.5,
-    332.2
+    332.9
    ],
-   "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.48,
+   "p1": 0.519,
+   "p3": 0.554,
+   "x3": 0.38,
    "t": {
     "st": "frais",
-    "g": -17.53,
+    "g": -17.35,
     "a": 60
    }
   },
@@ -10682,13 +10688,13 @@
    "k": "matiere",
    "e": "🥇",
    "cur": "USD",
-   "p": 68.11,
-   "d": 1.41,
-   "w": -0.89,
-   "m": -11.05,
-   "q": -18.74,
-   "y": -16.09,
-   "a": -12.49,
+   "p": 68.24,
+   "d": 1.6,
+   "w": -0.71,
+   "m": -10.89,
+   "q": -18.59,
+   "y": -15.94,
+   "a": -12.33,
    "h": [
     83.39,
     82.69,
@@ -10719,14 +10725,14 @@
     69.96,
     66.23,
     66.73,
-    68.11
+    68.24
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.48,
+   "p3": 0.554,
+   "x3": 0.41,
    "t": {
     "st": "frais",
-    "g": -17.49,
+    "g": -17.34,
     "a": 60
    }
   },
@@ -10736,13 +10742,13 @@
    "k": "matiere",
    "e": "🥇",
    "cur": "USD",
-   "p": 348.36,
-   "d": 1.42,
-   "w": 2.19,
-   "m": -9.7,
-   "q": -16.98,
-   "y": -16.02,
-   "a": -14.05,
+   "p": 348.82,
+   "d": 1.56,
+   "w": 2.32,
+   "m": -9.59,
+   "q": -16.87,
+   "y": -15.91,
+   "a": -13.94,
    "h": [
     423.6,
     420.3,
@@ -10773,14 +10779,14 @@
     354.5,
     353.3,
     332.5,
-    348.4
+    348.8
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.36,
    "t": {
     "st": "frais",
-    "g": -18.43,
+    "g": -18.32,
     "a": 60
    }
   },
@@ -10790,13 +10796,13 @@
    "k": "matiere",
    "e": "🥈",
    "cur": "USD",
-   "p": 39.15,
-   "d": 5.51,
-   "w": -1.25,
-   "m": -20.21,
-   "q": -34.78,
-   "y": -39.23,
-   "a": -16.12,
+   "p": 39.01,
+   "d": 5.15,
+   "w": -1.59,
+   "m": -20.49,
+   "q": -35.01,
+   "y": -39.44,
+   "a": -16.41,
    "h": [
     59.82,
     60.72,
@@ -10827,14 +10833,14 @@
     40.7,
     36.97,
     36.84,
-    39.15
+    39.01
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.6,
    "t": {
     "st": "frais",
-    "g": -33.73,
+    "g": -33.96,
     "a": 60
    }
   },
@@ -10844,13 +10850,13 @@
    "k": "matiere",
    "e": "⚪",
    "cur": "USD",
-   "p": 11.93,
-   "d": 3.16,
-   "w": -2.57,
-   "m": -14.76,
-   "q": -27.68,
-   "y": -36.03,
-   "a": -15.63,
+   "p": 11.9,
+   "d": 2.9,
+   "w": -2.82,
+   "m": -14.97,
+   "q": -27.87,
+   "y": -36.2,
+   "a": -15.85,
    "h": [
     16.5,
     17.15,
@@ -10881,14 +10887,14 @@
     12.4,
     11.75,
     11.52,
-    11.93
+    11.9
    ],
    "p1": 0.52,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.67,
    "t": {
     "st": "frais",
-    "g": -25.38,
+    "g": -25.56,
     "a": 60
    }
   },
@@ -10898,13 +10904,13 @@
    "k": "matiere",
    "e": "⚪",
    "cur": "USD",
-   "p": 16.11,
-   "d": 2.64,
-   "w": -2.86,
-   "m": -13.03,
-   "q": -37.51,
-   "y": -44.58,
-   "a": -36.45,
+   "p": 16.08,
+   "d": 2.39,
+   "w": -3.1,
+   "m": -13.25,
+   "q": -37.67,
+   "y": -44.71,
+   "a": -36.61,
    "h": [
     25.31,
     24.57,
@@ -10935,14 +10941,14 @@
     17.2,
     16.19,
     15.46,
-    16.11
+    16.08
    ],
-   "p1": 0.515,
-   "p3": 0.555,
-   "x3": -0.17,
+   "p1": 0.514,
+   "p3": 0.554,
+   "x3": -0.45,
    "t": {
     "st": "frais",
-    "g": -34.44,
+    "g": -34.6,
     "a": 60
    }
   },
@@ -10952,13 +10958,13 @@
    "k": "matiere",
    "e": "⛏️",
    "cur": "USD",
-   "p": 77.82,
-   "d": 5.33,
-   "w": 8.09,
-   "m": -7.3,
-   "q": -21.9,
-   "y": -9.26,
-   "a": 0.03,
+   "p": 78.27,
+   "d": 5.93,
+   "w": 8.71,
+   "m": -6.77,
+   "q": -21.46,
+   "y": -8.74,
+   "a": 0.6,
    "h": [
     99.26,
     99.47,
@@ -10989,14 +10995,14 @@
     74.82,
     68.4,
     71.37,
-    77.82
+    78.27
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 1.35,
+   "p3": 0.554,
+   "x3": 1.39,
    "t": {
     "st": "frais",
-    "g": -20.29,
+    "g": -19.83,
     "a": 60
    }
   },
@@ -11006,13 +11012,13 @@
    "k": "matiere",
    "e": "⛏️",
    "cur": "USD",
-   "p": 92.81,
-   "d": 5.87,
-   "w": 8.13,
-   "m": -11.12,
-   "q": -27.94,
-   "y": -18.43,
-   "a": -7.33,
+   "p": 93.4,
+   "d": 6.55,
+   "w": 8.82,
+   "m": -10.55,
+   "q": -27.48,
+   "y": -17.91,
+   "a": -6.74,
    "h": [
     129,
     129.3,
@@ -11043,14 +11049,14 @@
     90.07,
     81.26,
     84.17,
-    92.81
+    93.4
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 1.51,
+   "p3": 0.554,
+   "x3": 1.52,
    "t": {
     "st": "frais",
-    "g": -27.52,
+    "g": -27.06,
     "a": 60
    }
   },
@@ -11060,13 +11066,13 @@
    "k": "matiere",
    "e": "⛏️",
    "cur": "USD",
-   "p": 69.09,
-   "d": 5.56,
-   "w": 8.19,
-   "m": -10.89,
-   "q": -30.31,
-   "y": -17.28,
-   "a": -0.39,
+   "p": 69.48,
+   "d": 6.16,
+   "w": 8.8,
+   "m": -10.38,
+   "q": -29.92,
+   "y": -16.81,
+   "a": 0.17,
    "h": [
     99.29,
     100.1,
@@ -11097,14 +11103,14 @@
     66.66,
     60.29,
     62.43,
-    69.09
+    69.48
    ],
    "p1": 0.519,
-   "p3": 0.555,
-   "x3": 1.59,
+   "p3": 0.554,
+   "x3": 1.44,
    "t": {
     "st": "frais",
-    "g": -29.99,
+    "g": -29.6,
     "a": 60
    }
   },
@@ -11114,13 +11120,13 @@
    "k": "matiere",
    "e": "🛢️",
    "cur": "USD",
-   "p": 137.99,
-   "d": -1.36,
-   "w": -0.07,
-   "m": -17.16,
-   "q": 6.39,
-   "y": 99.52,
-   "a": 99.26,
+   "p": 137.39,
+   "d": -1.79,
+   "w": -0.51,
+   "m": -17.52,
+   "q": 5.93,
+   "y": 98.66,
+   "a": 98.4,
    "h": [
     142,
     150,
@@ -11151,14 +11157,14 @@
     136.1,
     139.6,
     135.4,
-    138
+    137.4
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 1.77,
+   "p3": 0.554,
+   "x3": 1.75,
    "t": {
     "st": "frais",
-    "g": -2.24,
+    "g": -2.66,
     "a": 60
    }
   },
@@ -11168,13 +11174,13 @@
    "k": "matiere",
    "e": "🛢️",
    "cur": "USD",
-   "p": 58.91,
-   "d": -0.82,
-   "w": 0.12,
-   "m": -16.01,
-   "q": 14.43,
-   "y": 108.02,
-   "a": 106.56,
+   "p": 58.86,
+   "d": -0.91,
+   "w": 0.03,
+   "m": -16.08,
+   "q": 14.34,
+   "y": 107.84,
+   "a": 106.38,
    "h": [
     56.11,
     59.32,
@@ -11205,14 +11211,14 @@
     58.02,
     59.02,
     57.75,
-    58.91
+    58.86
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.45,
    "t": {
     "st": "en cours",
-    "g": 5.69,
+    "g": 5.6,
     "a": 60
    }
   },
@@ -11262,7 +11268,7 @@
     9.825
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.71,
    "t": {
     "st": "frais",
@@ -11276,13 +11282,13 @@
    "k": "matiere",
    "e": "🟠",
    "cur": "USD",
-   "p": 33.13,
-   "d": 1.89,
-   "w": -1.88,
-   "m": -17.87,
-   "q": -16.5,
-   "y": -5.25,
-   "a": 6.24,
+   "p": 33.15,
+   "d": 1.96,
+   "w": -1.81,
+   "m": -17.81,
+   "q": -16.44,
+   "y": -5.18,
+   "a": 6.31,
    "h": [
     39.95,
     41.05,
@@ -11313,14 +11319,14 @@
     34.1,
     32.92,
     32.5,
-    33.13
+    33.15
    ],
    "p1": 0.525,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.39,
    "t": {
     "st": "frais",
-    "g": -16.2,
+    "g": -16.15,
     "a": 60
    }
   },
@@ -11330,13 +11336,13 @@
    "k": "matiere",
    "e": "🔩",
    "cur": "USD",
-   "p": 22.46,
-   "d": 1.72,
-   "w": -1.32,
-   "m": -11.26,
-   "q": -11.85,
-   "y": -2.09,
-   "a": 4.66,
+   "p": 22.43,
+   "d": 1.61,
+   "w": -1.43,
+   "m": -11.36,
+   "q": -11.95,
+   "y": -2.2,
+   "a": 4.54,
    "h": [
     25.75,
     26.29,
@@ -11367,14 +11373,14 @@
     22.81,
     22.36,
     22,
-    22.46
+    22.43
    ],
    "p1": 0.522,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.59,
    "t": {
     "st": "frais",
-    "g": -12.3,
+    "g": -12.4,
     "a": 60
    }
   },
@@ -11384,13 +11390,13 @@
    "k": "matiere",
    "e": "📦",
    "cur": "USD",
-   "p": 29.56,
-   "d": 0.97,
-   "w": -0.22,
-   "m": -12.53,
-   "q": -4.01,
-   "y": 32.18,
-   "a": 31.24,
+   "p": 29.46,
+   "d": 0.65,
+   "w": -0.54,
+   "m": -12.81,
+   "q": -4.32,
+   "y": 31.75,
+   "a": 30.82,
    "h": [
     31.9,
     32.85,
@@ -11421,14 +11427,14 @@
     29.51,
     29.32,
     29.03,
-    29.56
+    29.46
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.69,
+   "p3": 0.554,
+   "x3": 0.67,
    "t": {
     "st": "frais",
-    "g": -7.44,
+    "g": -7.74,
     "a": 60
    }
   },
@@ -11438,13 +11444,13 @@
    "k": "matiere",
    "e": "📦",
    "cur": "USD",
-   "p": 32.55,
-   "d": 0.4,
-   "w": -0.46,
-   "m": -12.38,
-   "q": -2.52,
-   "y": 41.15,
-   "a": 43.58,
+   "p": 32.47,
+   "d": 0.15,
+   "w": -0.7,
+   "m": -12.6,
+   "q": -2.76,
+   "y": 40.81,
+   "a": 43.23,
    "h": [
     34.83,
     35.89,
@@ -11475,14 +11481,14 @@
     32.53,
     32.57,
     32,
-    32.55
+    32.47
    ],
-   "p1": 0.529,
-   "p3": 0.555,
-   "x3": 1.21,
+   "p1": 0.528,
+   "p3": 0.554,
+   "x3": 1.05,
    "t": {
     "st": "frais",
-    "g": -6.71,
+    "g": -6.94,
     "a": 60
    }
   },
@@ -11492,13 +11498,13 @@
    "k": "matiere",
    "e": "🌾",
    "cur": "USD",
-   "p": 26.79,
-   "d": 1.71,
-   "w": 2.21,
-   "m": -1.18,
-   "q": -8.22,
-   "y": 4.98,
-   "a": 3.64,
+   "p": 26.73,
+   "d": 1.46,
+   "w": 1.96,
+   "m": -1.42,
+   "q": -8.44,
+   "y": 4.72,
+   "a": 3.38,
    "h": [
     28.85,
     29,
@@ -11529,14 +11535,14 @@
     26.02,
     26.15,
     26.28,
-    26.79
+    26.73
    ],
    "p1": 0.516,
-   "p3": 0.555,
-   "x3": 0.16,
+   "p3": 0.554,
+   "x3": 0.15,
    "t": {
     "st": "frais",
-    "g": -8.47,
+    "g": -8.69,
     "a": 60
    }
   },
@@ -11546,13 +11552,13 @@
    "k": "matiere",
    "e": "🌽",
    "cur": "USD",
-   "p": 17.53,
-   "d": 1.8,
-   "w": 2.69,
-   "m": 0.63,
-   "q": -12.13,
-   "y": -1.13,
-   "a": -0.62,
+   "p": 17.48,
+   "d": 1.51,
+   "w": 2.4,
+   "m": 0.34,
+   "q": -12.38,
+   "y": -1.41,
+   "a": -0.91,
    "h": [
     20.07,
     19.83,
@@ -11583,14 +11589,14 @@
     16.88,
     16.9,
     17,
-    17.53
+    17.48
    ],
-   "p1": 0.505,
-   "p3": 0.555,
-   "x3": -0.54,
+   "p1": 0.506,
+   "p3": 0.554,
+   "x3": -0.43,
    "t": {
     "st": "frais",
-    "g": -13.3,
+    "g": -13.55,
     "a": 60
    }
   },
@@ -11600,13 +11606,13 @@
    "k": "matiere",
    "e": "🌾",
    "cur": "USD",
-   "p": 21.49,
-   "d": 0.89,
-   "w": 0.09,
-   "m": -2.85,
-   "q": -23.25,
-   "y": 7.61,
-   "a": 2.87,
+   "p": 21.46,
+   "d": 0.77,
+   "w": -0.03,
+   "m": -2.96,
+   "q": -23.34,
+   "y": 7.48,
+   "a": 2.75,
    "h": [
     26.49,
     26.28,
@@ -11637,14 +11643,14 @@
     21.18,
     21.44,
     21.35,
-    21.49
+    21.46
    ],
    "p1": 0.517,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.07,
    "t": {
     "st": "frais",
-    "g": -22.86,
+    "g": -22.96,
     "a": 60
    }
   },
@@ -11654,13 +11660,13 @@
    "k": "matiere",
    "e": "🫘",
    "cur": "USD",
-   "p": 26.58,
-   "d": 2.33,
-   "w": 4.5,
-   "m": 1.98,
-   "q": -2.26,
-   "y": 21.61,
-   "a": 13.85,
+   "p": 26.49,
+   "d": 1.96,
+   "w": 4.13,
+   "m": 1.61,
+   "q": -2.61,
+   "y": 21.18,
+   "a": 13.45,
    "h": [
     27.65,
     27.66,
@@ -11691,14 +11697,14 @@
     25.58,
     25.57,
     25.89,
-    26.58
+    26.49
    ],
-   "p1": 0.513,
-   "p3": 0.555,
-   "x3": -0.07,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": -0.05,
    "t": {
     "st": "frais",
-    "g": -3.75,
+    "g": -4.09,
     "a": 60
    }
   },
@@ -11708,13 +11714,13 @@
    "k": "matiere",
    "e": "🍬",
    "cur": "USD",
-   "p": 11.36,
-   "d": 2.66,
-   "w": 10.13,
-   "m": -2.45,
-   "q": 1.38,
-   "y": 16.44,
-   "a": 18.39,
+   "p": 11.32,
+   "d": 2.3,
+   "w": 9.74,
+   "m": -2.79,
+   "q": 1.03,
+   "y": 16.03,
+   "a": 17.97,
    "h": [
     11.42,
     11.61,
@@ -11745,14 +11751,14 @@
     10.86,
     10.23,
     10.68,
-    11.36
+    11.32
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.77,
+   "p3": 0.554,
+   "x3": 0.85,
    "t": {
     "st": "frais",
-    "g": -2.53,
+    "g": -2.87,
     "a": 60
    }
   },
@@ -11762,13 +11768,13 @@
    "k": "matiere",
    "e": "⛽",
    "cur": "USD",
-   "p": 114.28,
-   "d": 0.75,
-   "w": -2.37,
-   "m": -20.19,
-   "q": -9.82,
-   "y": 85.13,
-   "a": 76.06,
+   "p": 113.9,
+   "d": 0.41,
+   "w": -2.7,
+   "m": -20.46,
+   "q": -10.12,
+   "y": 84.51,
+   "a": 75.47,
    "h": [
     133.2,
     134,
@@ -11799,14 +11805,14 @@
     114.4,
     116.8,
     113.9,
-    114.3
+    113.9
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 1.4,
+   "p3": 0.554,
+   "x3": 1.37,
    "t": {
     "st": "frais",
-    "g": -11.35,
+    "g": -11.64,
     "a": 60
    }
   },
@@ -11816,13 +11822,13 @@
    "k": "oblig",
    "e": "🏦",
    "cur": "USD",
-   "p": 81.29,
-   "d": -1.16,
-   "w": 1.16,
-   "m": 0.36,
-   "q": -1.92,
-   "y": -6.74,
-   "a": -9.92,
+   "p": 81.41,
+   "d": -1.01,
+   "w": 1.32,
+   "m": 0.52,
+   "q": -1.77,
+   "y": -6.6,
+   "a": -9.79,
    "h": [
     82.21,
     81.73,
@@ -11853,14 +11859,14 @@
     80.22,
     81.45,
     81.49,
-    81.29
+    81.41
    ],
    "p1": 0.503,
-   "p3": 0.555,
-   "x3": -0.11,
+   "p3": 0.554,
+   "x3": -0.1,
    "t": {
     "st": "frais",
-    "g": -0.81,
+    "g": -0.66,
     "a": 60
    }
   },
@@ -11870,13 +11876,13 @@
    "k": "oblig",
    "e": "🏦",
    "cur": "USD",
-   "p": 91.67,
-   "d": -0.42,
-   "w": 0.94,
-   "m": 0.9,
-   "q": -1.27,
-   "y": -4.67,
-   "a": -6.07,
+   "p": 91.71,
+   "d": -0.39,
+   "w": 0.97,
+   "m": 0.94,
+   "q": -1.23,
+   "y": -4.63,
+   "a": -6.03,
    "h": [
     92.25,
     91.9,
@@ -11907,14 +11913,14 @@
     90.67,
     91.65,
     91.64,
-    91.67
+    91.71
    ],
    "p1": 0.505,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.08,
    "t": {
     "st": "frais",
-    "g": -0.55,
+    "g": -0.52,
     "a": 60
    }
   },
@@ -11924,13 +11930,13 @@
    "k": "oblig",
    "e": "🏦",
    "cur": "USD",
-   "p": 81.59,
-   "d": -0.06,
-   "w": 0.26,
-   "m": 0.15,
-   "q": -0.37,
-   "y": -1.49,
-   "a": -1.81,
+   "p": 81.6,
+   "d": -0.05,
+   "w": 0.27,
+   "m": 0.16,
+   "q": -0.35,
+   "y": -1.47,
+   "a": -1.79,
    "h": [
     81.69,
     81.63,
@@ -11961,14 +11967,14 @@
     81.34,
     81.61,
     81.57,
-    81.59
+    81.6
    ],
    "p1": 0.507,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0,
    "t": {
     "st": "frais",
-    "g": -0.06,
+    "g": -0.05,
     "a": 60
    }
   },
@@ -11980,11 +11986,11 @@
    "cur": "USD",
    "p": 91.67,
    "d": 0.03,
-   "w": 0.1,
+   "w": 0.11,
    "m": 0.01,
    "q": 0.02,
-   "y": 0.31,
-   "a": -0.02,
+   "y": 0.32,
+   "a": -0.01,
    "h": [
     91.45,
     91.46,
@@ -12018,11 +12024,11 @@
     91.67
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.03,
    "t": {
     "st": "frais",
-    "g": 0.29,
+    "g": 0.3,
     "a": 60
    }
   },
@@ -12032,13 +12038,13 @@
    "k": "oblig",
    "e": "📈",
    "cur": "USD",
-   "p": 105.62,
-   "d": -0.21,
-   "w": 0.56,
-   "m": -0.6,
-   "q": -1.23,
-   "y": -3.9,
-   "a": -5.08,
+   "p": 105.69,
+   "d": -0.14,
+   "w": 0.63,
+   "m": -0.54,
+   "q": -1.17,
+   "y": -3.84,
+   "a": -5.02,
    "h": [
     107,
     106.8,
@@ -12069,14 +12075,14 @@
     104.9,
     105.7,
     105.4,
-    105.6
+    105.7
    ],
    "p1": 0.506,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.07,
    "t": {
     "st": "frais",
-    "g": -1.16,
+    "g": -1.1,
     "a": 60
    }
   },
@@ -12086,13 +12092,13 @@
    "k": "oblig",
    "e": "🏦",
    "cur": "USD",
-   "p": 96.25,
-   "d": -0.32,
-   "w": 0.72,
-   "m": 0.37,
-   "q": -1.28,
-   "y": -3.64,
-   "a": -4.52,
+   "p": 96.27,
+   "d": -0.29,
+   "w": 0.74,
+   "m": 0.4,
+   "q": -1.25,
+   "y": -3.61,
+   "a": -4.49,
    "h": [
     97,
     96.68,
@@ -12123,14 +12129,14 @@
     95.53,
     96.15,
     96.18,
-    96.25
+    96.27
    ],
-   "p1": 0.512,
-   "p3": 0.555,
-   "x3": 0.1,
+   "p1": 0.511,
+   "p3": 0.554,
+   "x3": 0.05,
    "t": {
     "st": "frais",
-    "g": -0.61,
+    "g": -0.59,
     "a": 60
    }
   },
@@ -12140,13 +12146,13 @@
    "k": "oblig",
    "e": "🏦",
    "cur": "USD",
-   "p": 71.39,
-   "d": -0.3,
-   "w": 0.67,
-   "m": 0.27,
-   "q": -1.28,
-   "y": -3.62,
-   "a": -4.59,
+   "p": 71.42,
+   "d": -0.25,
+   "w": 0.73,
+   "m": 0.33,
+   "q": -1.22,
+   "y": -3.57,
+   "a": -4.54,
    "h": [
     71.95,
     71.73,
@@ -12177,14 +12183,14 @@
     70.87,
     71.33,
     71.36,
-    71.39
+    71.42
    ],
    "p1": 0.511,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.06,
    "t": {
     "st": "frais",
-    "g": -0.62,
+    "g": -0.56,
     "a": 60
    }
   },
@@ -12194,13 +12200,13 @@
    "k": "oblig",
    "e": "🏢",
    "cur": "USD",
-   "p": 103.92,
-   "d": -0.36,
-   "w": 0.81,
-   "m": -0.15,
-   "q": -2.29,
-   "y": -5.69,
-   "a": -6.94,
+   "p": 104.01,
+   "d": -0.26,
+   "w": 0.91,
+   "m": -0.05,
+   "q": -2.2,
+   "y": -5.6,
+   "a": -6.86,
    "h": [
     105.5,
     105.3,
@@ -12231,14 +12237,14 @@
     103.2,
     103.7,
     103.8,
-    103.9
+    104
    ],
    "p1": 0.507,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": -0.04,
    "t": {
     "st": "frais",
-    "g": -1.36,
+    "g": -1.27,
     "a": 60
    }
   },
@@ -12248,13 +12254,13 @@
    "k": "oblig",
    "e": "🔥",
    "cur": "USD",
-   "p": 76.64,
-   "d": 0.16,
-   "w": 0.15,
-   "m": -1.22,
-   "q": -3.88,
-   "y": -4.94,
-   "a": -5.22,
+   "p": 76.6,
+   "d": 0.1,
+   "w": 0.08,
+   "m": -1.28,
+   "q": -3.94,
+   "y": -5,
+   "a": -5.29,
    "h": [
     79.16,
     78.98,
@@ -12285,14 +12291,14 @@
     76.65,
     76.33,
     76.43,
-    76.64
+    76.6
    ],
    "p1": 0.517,
-   "p3": 0.555,
-   "x3": 0.06,
+   "p3": 0.554,
+   "x3": 0.04,
    "t": {
     "st": "frais",
-    "g": -3.12,
+    "g": -3.18,
     "a": 60
    }
   },
@@ -12302,13 +12308,13 @@
    "k": "oblig",
    "e": "🔥",
    "cur": "USD",
-   "p": 91.93,
-   "d": 0.2,
-   "w": 0.09,
-   "m": -1.37,
-   "q": -4.21,
-   "y": -5.43,
-   "a": -5.64,
+   "p": 91.89,
+   "d": 0.15,
+   "w": 0.04,
+   "m": -1.42,
+   "q": -4.26,
+   "y": -5.48,
+   "a": -5.68,
    "h": [
     95.27,
     95.04,
@@ -12339,14 +12345,14 @@
     91.95,
     91.54,
     91.69,
-    91.93
+    91.89
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.07,
    "t": {
     "st": "frais",
-    "g": -3.45,
+    "g": -3.49,
     "a": 60
    }
   },
@@ -12356,13 +12362,13 @@
    "k": "oblig",
    "e": "🌏",
    "cur": "USD",
-   "p": 91.07,
-   "d": 0.37,
-   "w": 0.82,
-   "m": -0.79,
-   "q": -4.03,
-   "y": -5.42,
-   "a": -5.73,
+   "p": 91.1,
+   "d": 0.41,
+   "w": 0.86,
+   "m": -0.75,
+   "q": -3.99,
+   "y": -5.38,
+   "a": -5.69,
    "h": [
     94.47,
     94.17,
@@ -12393,14 +12399,14 @@
     90.79,
     89.92,
     90.39,
-    91.07
+    91.1
    ],
    "p1": 0.518,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.16,
    "t": {
     "st": "frais",
-    "g": -3.28,
+    "g": -3.24,
     "a": 60
    }
   },
@@ -12411,12 +12417,12 @@
    "e": "🌍",
    "cur": "USD",
    "p": 47.6,
-   "d": 0.01,
-   "w": 0.92,
+   "d": 0,
+   "w": 0.91,
    "m": 0.68,
-   "q": 0.01,
-   "y": -1.48,
-   "a": -4.12,
+   "q": 0,
+   "y": -1.49,
+   "a": -4.13,
    "h": [
     47.45,
     47.23,
@@ -12449,12 +12455,12 @@
     47.52,
     47.6
    ],
-   "p1": 0.506,
-   "p3": 0.555,
+   "p1": 0.505,
+   "p3": 0.554,
    "x3": 0.02,
    "t": {
     "st": "en cours",
-    "g": 0.75,
+    "g": 0.74,
     "a": 60
    }
   },
@@ -12464,13 +12470,13 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "GBP",
-   "p": 127.14,
-   "d": -0.38,
-   "w": 0.43,
-   "m": -0.45,
-   "q": -4.3,
-   "y": -11.3,
-   "a": -13.41,
+   "p": 127.26,
+   "d": -0.29,
+   "w": 0.53,
+   "m": -0.35,
+   "q": -4.21,
+   "y": -11.21,
+   "a": -13.33,
    "h": [
     133,
     130.9,
@@ -12501,14 +12507,14 @@
     124.9,
     127.3,
     127.9,
-    127.1
+    127.3
    ],
-   "p1": 0.513,
-   "p3": 0.555,
-   "x3": -0.22,
+   "p1": 0.512,
+   "p3": 0.554,
+   "x3": -0.2,
    "t": {
     "st": "frais",
-    "g": -4.7,
+    "g": -4.6,
     "a": 60
    }
   },
@@ -12518,13 +12524,13 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 117.18,
-   "d": 0.15,
-   "w": 0.36,
-   "m": 0.6,
-   "q": 0.15,
-   "y": -3.34,
-   "a": -3.44,
+   "p": 117.16,
+   "d": 0.13,
+   "w": 0.34,
+   "m": 0.58,
+   "q": 0.14,
+   "y": -3.36,
+   "a": -3.45,
    "h": [
     117.1,
     116,
@@ -12557,12 +12563,12 @@
     117,
     117.2
    ],
-   "p1": 0.506,
-   "p3": 0.555,
+   "p1": 0.507,
+   "p3": 0.554,
    "x3": -0.04,
    "t": {
     "st": "frais",
-    "g": 0.04,
+    "g": 0.03,
     "a": 60
    }
   },
@@ -12572,13 +12578,13 @@
    "k": "oblig",
    "e": "🇪🇺",
    "cur": "EUR",
-   "p": 88.43,
-   "d": 0.3,
-   "w": 0.46,
-   "m": 0.19,
-   "q": -2.95,
-   "y": -5.41,
-   "a": -4.88,
+   "p": 88.54,
+   "d": 0.42,
+   "w": 0.58,
+   "m": 0.31,
+   "q": -2.83,
+   "y": -5.29,
+   "a": -4.76,
    "h": [
     91.02,
     90.43,
@@ -12609,14 +12615,14 @@
     88.39,
     88.48,
     87.9,
-    88.43
+    88.54
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.05,
    "t": {
     "st": "frais",
-    "g": -2.85,
+    "g": -2.73,
     "a": 60
    }
   },
@@ -12626,13 +12632,13 @@
    "k": "oblig",
    "e": "🏛️",
    "cur": "USD",
-   "p": 103.96,
-   "d": -0.22,
-   "w": 0.83,
-   "m": 0.19,
-   "q": -1.2,
-   "y": -2.94,
-   "a": -3.07,
+   "p": 104.06,
+   "d": -0.13,
+   "w": 0.93,
+   "m": 0.28,
+   "q": -1.11,
+   "y": -2.85,
+   "a": -2.98,
    "h": [
     104,
     103.5,
@@ -12663,14 +12669,14 @@
     103.2,
     103.5,
     103.8,
-    104
+    104.1
    ],
    "p1": 0.506,
-   "p3": 0.555,
-   "x3": -0.07,
+   "p3": 0.554,
+   "x3": -0.08,
    "t": {
     "st": "frais",
-    "g": -0.25,
+    "g": -0.16,
     "a": 60
    }
   },
@@ -12680,13 +12686,13 @@
    "k": "style",
    "e": "💰",
    "cur": "USD",
-   "p": 35.62,
-   "d": 0.92,
-   "w": 4.14,
-   "m": 1.5,
-   "q": 2.05,
-   "y": 29.84,
-   "a": 30.36,
+   "p": 35.58,
+   "d": 0.84,
+   "w": 4.05,
+   "m": 1.41,
+   "q": 1.96,
+   "y": 29.73,
+   "a": 30.25,
    "h": [
     34.8,
     34.09,
@@ -12717,14 +12723,14 @@
     34.7,
     33.94,
     34.89,
-    35.62
+    35.58
    ],
-   "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0.55,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": 0.58,
    "t": {
     "st": "en cours",
-    "g": 1.73,
+    "g": 1.64,
     "a": 60
    }
   },
@@ -12734,13 +12740,13 @@
    "k": "style",
    "e": "💰",
    "cur": "USD",
-   "p": 245.13,
-   "d": 0.86,
-   "w": 2.07,
-   "m": -0.34,
-   "q": 0.85,
-   "y": 11.53,
-   "a": 11.43,
+   "p": 245.21,
+   "d": 0.89,
+   "w": 2.1,
+   "m": -0.31,
+   "q": 0.88,
+   "y": 11.57,
+   "a": 11.46,
    "h": [
     242,
     238.8,
@@ -12771,14 +12777,14 @@
     244.4,
     235.7,
     242.1,
-    245.1
+    245.2
    ],
    "p1": 0.52,
-   "p3": 0.555,
-   "x3": 0.47,
+   "p3": 0.554,
+   "x3": 0.46,
    "t": {
     "st": "en cours",
-    "g": 1.44,
+    "g": 1.47,
     "a": 60
    }
   },
@@ -12788,13 +12794,13 @@
    "k": "style",
    "e": "💰",
    "cur": "USD",
-   "p": 160.38,
-   "d": 1.28,
-   "w": 2.09,
-   "m": -1.83,
-   "q": -2.35,
-   "y": 11.75,
-   "a": 12.07,
+   "p": 160.11,
+   "d": 1.11,
+   "w": 1.92,
+   "m": -2,
+   "q": -2.52,
+   "y": 11.56,
+   "a": 11.88,
    "h": [
     164.2,
     162.7,
@@ -12825,14 +12831,14 @@
     159.8,
     153.9,
     157.3,
-    160.4
+    160.1
    ],
    "p1": 0.525,
-   "p3": 0.555,
-   "x3": 0.62,
+   "p3": 0.554,
+   "x3": 0.58,
    "t": {
     "st": "frais",
-    "g": -2.38,
+    "g": -2.54,
     "a": 60
    }
   },
@@ -12842,13 +12848,13 @@
    "k": "style",
    "e": "💰",
    "cur": "USD",
-   "p": 80.24,
-   "d": 0.8,
-   "w": 2.48,
-   "m": 0.17,
-   "q": 1.11,
-   "y": 15.59,
-   "a": 16.1,
+   "p": 80.22,
+   "d": 0.79,
+   "w": 2.46,
+   "m": 0.16,
+   "q": 1.09,
+   "y": 15.56,
+   "a": 16.08,
    "h": [
     79.13,
     78.04,
@@ -12879,14 +12885,14 @@
     79.58,
     77.26,
     79.21,
-    80.24
+    80.22
    ],
-   "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.41,
+   "p1": 0.518,
+   "p3": 0.554,
+   "x3": 0.39,
    "t": {
     "st": "en cours",
-    "g": 1.35,
+    "g": 1.33,
     "a": 60
    }
   },
@@ -12896,13 +12902,13 @@
    "k": "style",
    "e": "👑",
    "cur": "USD",
-   "p": 60.96,
-   "d": 0.3,
-   "w": 3.27,
-   "m": 5.14,
-   "q": 4.49,
-   "y": 17.15,
-   "a": 16.89,
+   "p": 60.99,
+   "d": 0.35,
+   "w": 3.32,
+   "m": 5.19,
+   "q": 4.54,
+   "y": 17.21,
+   "a": 16.95,
    "h": [
     57.7,
     56.51,
@@ -12933,14 +12939,14 @@
     59.9,
     58.77,
     60.19,
-    60.96
+    60.99
    ],
    "p1": 0.513,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.6,
    "t": {
     "st": "tardif",
-    "g": 5.32,
+    "g": 5.37,
     "a": 60
    }
   },
@@ -12950,13 +12956,13 @@
    "k": "style",
    "e": "💰",
    "cur": "USD",
-   "p": 21.24,
-   "d": 2.39,
-   "w": 3.19,
-   "m": -7.27,
-   "q": -14.71,
-   "y": -11.63,
-   "a": -11.59,
+   "p": 21.18,
+   "d": 2.12,
+   "w": 2.92,
+   "m": -7.51,
+   "q": -14.94,
+   "y": -11.86,
+   "a": -11.82,
    "h": [
     25.11,
     24.98,
@@ -12987,14 +12993,14 @@
     20.92,
     20.22,
     20.62,
-    21.24
+    21.18
    ],
-   "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0.11,
+   "p1": 0.515,
+   "p3": 0.554,
+   "x3": 0.08,
    "t": {
     "st": "frais",
-    "g": -15.8,
+    "g": -16.02,
     "a": 60
    }
   },
@@ -13004,13 +13010,13 @@
    "k": "style",
    "e": "🏃",
    "cur": "USD",
-   "p": 62.87,
-   "d": 2.21,
-   "w": -1.61,
-   "m": -17.14,
-   "q": -16.09,
-   "y": 0.47,
-   "a": 2.98,
+   "p": 62.86,
+   "d": 2.19,
+   "w": -1.63,
+   "m": -17.15,
+   "q": -16.11,
+   "y": 0.45,
+   "a": 2.96,
    "h": [
     76.21,
     77.32,
@@ -13041,14 +13047,14 @@
     65.21,
     60.27,
     61.89,
-    62.87
+    62.86
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.74,
+   "p3": 0.554,
+   "x3": 1.62,
    "t": {
     "st": "frais",
-    "g": -15.34,
+    "g": -15.35,
     "a": 60
    }
   },
@@ -13058,13 +13064,13 @@
    "k": "style",
    "e": "💎",
    "cur": "USD",
-   "p": 54.4,
-   "d": 0.68,
-   "w": 2.04,
-   "m": -2.48,
-   "q": -2.7,
-   "y": 9.55,
-   "a": 11.02,
+   "p": 54.44,
+   "d": 0.76,
+   "w": 2.12,
+   "m": -2.4,
+   "q": -2.62,
+   "y": 9.64,
+   "a": 11.11,
    "h": [
     55.65,
     54.89,
@@ -13095,14 +13101,14 @@
     54.42,
     51.87,
     54.06,
-    54.4
+    54.44
    ],
-   "p1": 0.528,
-   "p3": 0.555,
-   "x3": 0.98,
+   "p1": 0.529,
+   "p3": 0.554,
+   "x3": 0.99,
    "t": {
     "st": "frais",
-    "g": -1.73,
+    "g": -1.64,
     "a": 60
    }
   },
@@ -13112,13 +13118,13 @@
    "k": "style",
    "e": "🛟",
    "cur": "USD",
-   "p": 102.21,
-   "d": 0.66,
-   "w": 2.49,
-   "m": -0.68,
-   "q": 0.46,
-   "y": 8.55,
-   "a": 7.98,
+   "p": 102.25,
+   "d": 0.69,
+   "w": 2.52,
+   "m": -0.65,
+   "q": 0.5,
+   "y": 8.59,
+   "a": 8.01,
    "h": [
     100.8,
     99.45,
@@ -13151,12 +13157,12 @@
     101,
     102.2
    ],
-   "p1": 0.519,
-   "p3": 0.555,
-   "x3": 0.44,
+   "p1": 0.521,
+   "p3": 0.554,
+   "x3": 0.49,
    "t": {
     "st": "en cours",
-    "g": 1.22,
+    "g": 1.25,
     "a": 60
    }
   },
@@ -13166,13 +13172,13 @@
    "k": "style",
    "e": "🏷️",
    "cur": "USD",
-   "p": 180.9,
-   "d": 2.23,
-   "w": 1.82,
-   "m": -8.92,
-   "q": -10.13,
-   "y": 32.3,
-   "a": 38.26,
+   "p": 180.32,
+   "d": 1.9,
+   "w": 1.5,
+   "m": -9.21,
+   "q": -10.42,
+   "y": 31.88,
+   "a": 37.82,
    "h": [
     205.5,
     203.3,
@@ -13203,14 +13209,14 @@
     180.6,
     170.6,
     176.6,
-    180.9
+    180.3
    ],
    "p1": 0.524,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.08,
    "t": {
     "st": "frais",
-    "g": -10.48,
+    "g": -10.77,
     "a": 60
    }
   },
@@ -13220,13 +13226,13 @@
    "k": "style",
    "e": "🌱",
    "cur": "USD",
-   "p": 108.63,
-   "d": 1.51,
-   "w": 0.36,
-   "m": -11.69,
-   "q": -11.5,
+   "p": 108.64,
+   "d": 1.52,
+   "w": 0.37,
+   "m": -11.68,
+   "q": -11.49,
    "y": -8.19,
-   "a": -7.75,
+   "a": -7.74,
    "h": [
     123.4,
     122.5,
@@ -13260,11 +13266,11 @@
     108.6
    ],
    "p1": 0.526,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 1.38,
    "t": {
     "st": "frais",
-    "g": -10.82,
+    "g": -10.81,
     "a": 60
    }
   },
@@ -13274,13 +13280,13 @@
    "k": "style",
    "e": "🏷️",
    "cur": "USD",
-   "p": 257.36,
-   "d": 1.01,
-   "w": 2.32,
-   "m": -0.53,
-   "q": -0.38,
-   "y": 22.35,
-   "a": 24.17,
+   "p": 257.51,
+   "d": 1.07,
+   "w": 2.38,
+   "m": -0.47,
+   "q": -0.32,
+   "y": 22.43,
+   "a": 24.24,
    "h": [
     257.6,
     254.1,
@@ -13311,14 +13317,14 @@
     255.8,
     247.4,
     253.9,
-    257.4
+    257.5
    ],
-   "p1": 0.522,
-   "p3": 0.555,
-   "x3": 0.57,
+   "p1": 0.521,
+   "p3": 0.554,
+   "x3": 0.56,
    "t": {
     "st": "frais",
-    "g": 0.11,
+    "g": 0.17,
     "a": 60
    }
   },
@@ -13328,13 +13334,13 @@
    "k": "style",
    "e": "🏃",
    "cur": "USD",
-   "p": 97.14,
-   "d": 1.46,
-   "w": 2.71,
-   "m": -13.94,
-   "q": -14.53,
-   "y": -0.45,
-   "a": 1.46,
+   "p": 97.22,
+   "d": 1.55,
+   "w": 2.79,
+   "m": -13.87,
+   "q": -14.46,
+   "y": -0.37,
+   "a": 1.55,
    "h": [
     117.9,
     116.1,
@@ -13365,14 +13371,14 @@
     99.88,
     98.36,
     92.05,
-    97.14
+    97.22
    ],
    "p1": 0.522,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.61,
    "t": {
     "st": "frais",
-    "g": -16.28,
+    "g": -16.21,
     "a": 60
    }
   },
@@ -13382,13 +13388,13 @@
    "k": "style",
    "e": "💎",
    "cur": "USD",
-   "p": 87.2,
-   "d": 0.14,
-   "w": 3.26,
-   "m": -3.58,
-   "q": -2.53,
-   "y": 8.76,
-   "a": 10.76,
+   "p": 87.41,
+   "d": 0.38,
+   "w": 3.51,
+   "m": -3.35,
+   "q": -2.29,
+   "y": 9.02,
+   "a": 11.03,
    "h": [
     89.55,
     88.46,
@@ -13419,14 +13425,14 @@
     86.66,
     86.32,
     84.73,
-    87.2
+    87.41
    ],
-   "p1": 0.526,
-   "p3": 0.555,
-   "x3": 0.76,
+   "p1": 0.525,
+   "p3": 0.554,
+   "x3": 0.74,
    "t": {
     "st": "frais",
-    "g": -3.12,
+    "g": -2.89,
     "a": 60
    }
   },
@@ -13436,13 +13442,13 @@
    "k": "style",
    "e": "🛟",
    "cur": "USD",
-   "p": 79.84,
-   "d": -0.14,
-   "w": 2.06,
-   "m": 0.38,
-   "q": 1.96,
-   "y": 8.54,
-   "a": 8.38,
+   "p": 79.9,
+   "d": -0.06,
+   "w": 2.13,
+   "m": 0.46,
+   "q": 2.04,
+   "y": 8.62,
+   "a": 8.46,
    "h": [
     77.67,
     77.04,
@@ -13473,14 +13479,14 @@
     78.49,
     78.5,
     78.91,
-    79.84
+    79.9
    ],
-   "p1": 0.512,
-   "p3": 0.555,
-   "x3": 0.21,
+   "p1": 0.511,
+   "p3": 0.554,
+   "x3": 0.18,
    "t": {
     "st": "en cours",
-    "g": 1.88,
+    "g": 1.95,
     "a": 60
    }
   },
@@ -13490,13 +13496,13 @@
    "k": "style",
    "e": "💰",
    "cur": "EUR",
-   "p": 56.36,
-   "d": 0.61,
-   "w": 2.49,
-   "m": 1.4,
-   "q": 1.08,
-   "y": 17.39,
-   "a": 20.3,
+   "p": 56.4,
+   "d": 0.68,
+   "w": 2.56,
+   "m": 1.48,
+   "q": 1.15,
+   "y": 17.48,
+   "a": 20.38,
    "h": [
     55.47,
     54.86,
@@ -13527,14 +13533,14 @@
     55.24,
     55.42,
     55.29,
-    56.36
+    56.4
    ],
    "p1": 0.515,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.29,
    "t": {
     "st": "en cours",
-    "g": 1.18,
+    "g": 1.26,
     "a": 60
    }
   },
@@ -13544,13 +13550,13 @@
    "k": "style",
    "e": "💰",
    "cur": "GBP",
-   "p": 69.12,
-   "d": 0.79,
-   "w": 2.93,
-   "m": -0.56,
-   "q": -1.13,
-   "y": 13.49,
-   "a": 14.78,
+   "p": 69.14,
+   "d": 0.82,
+   "w": 2.95,
+   "m": -0.54,
+   "q": -1.11,
+   "y": 13.51,
+   "a": 14.8,
    "h": [
     70.17,
     69.33,
@@ -13581,14 +13587,14 @@
     67.97,
     68.39,
     67.4,
-    69.12
+    69.14
    ],
    "p1": 0.522,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.44,
    "t": {
     "st": "frais",
-    "g": -2.05,
+    "g": -2.03,
     "a": 60
    }
   },
@@ -13598,13 +13604,13 @@
    "k": "crypto",
    "e": "₿",
    "cur": "USD",
-   "p": 34.07,
-   "d": 0,
-   "w": -2.88,
-   "m": -26.16,
-   "q": -22.39,
-   "y": -31.38,
-   "a": -31.26,
+   "p": 33.7,
+   "d": -1.1,
+   "w": -3.94,
+   "m": -26.97,
+   "q": -23.24,
+   "y": -32.13,
+   "a": -32.01,
    "h": [
     45.23,
     44.29,
@@ -13635,14 +13641,14 @@
     35.36,
     33.02,
     33.76,
-    34.07
+    33.7
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.32,
+   "p3": 0.554,
+   "x3": 1.34,
    "t": {
     "st": "frais",
-    "g": -22.2,
+    "g": -23.05,
     "a": 60
    }
   },
@@ -13652,13 +13658,13 @@
    "k": "crypto",
    "e": "₿",
    "cur": "USD",
-   "p": 52.37,
-   "d": 0.04,
-   "w": -2.84,
-   "m": -26.08,
-   "q": -22.35,
-   "y": -31.3,
-   "a": -31.16,
+   "p": 51.78,
+   "d": -1.08,
+   "w": -3.92,
+   "m": -26.91,
+   "q": -23.21,
+   "y": -32.07,
+   "a": -31.93,
    "h": [
     69.41,
     68.04,
@@ -13689,14 +13695,14 @@
     54.35,
     50.58,
     51.9,
-    52.37
+    51.78
    ],
    "p1": 0.526,
-   "p3": 0.555,
-   "x3": 1.34,
+   "p3": 0.554,
+   "x3": 1.37,
    "t": {
     "st": "frais",
-    "g": -22.17,
+    "g": -23.04,
     "a": 60
    }
   },
@@ -13706,13 +13712,13 @@
    "k": "crypto",
    "e": "💠",
    "cur": "USD",
-   "p": 37.91,
-   "d": -0.68,
-   "w": -4.61,
-   "m": -29.27,
-   "q": -31.21,
-   "y": -43.66,
-   "a": -42.9,
+   "p": 37.53,
+   "d": -1.68,
+   "w": -5.56,
+   "m": -29.98,
+   "q": -31.9,
+   "y": -44.23,
+   "a": -43.47,
    "h": [
     55.56,
     55.74,
@@ -13743,14 +13749,14 @@
     39.58,
     36.1,
     37.83,
-    37.91
+    37.53
    ],
    "p1": 0.522,
-   "p3": 0.555,
-   "x3": 0.75,
+   "p3": 0.554,
+   "x3": 0.77,
    "t": {
     "st": "frais",
-    "g": -29.99,
+    "g": -30.69,
     "a": 60
    }
   },
@@ -13760,13 +13766,13 @@
    "k": "crypto",
    "e": "₿",
    "cur": "USD",
-   "p": 15.99,
-   "d": -0.03,
-   "w": -2.94,
-   "m": -26.49,
-   "q": -23.47,
-   "y": -34.23,
-   "a": -41.45,
+   "p": 15.81,
+   "d": -1.16,
+   "w": -4.04,
+   "m": -27.32,
+   "q": -24.33,
+   "y": -34.97,
+   "a": -42.11,
    "h": [
     21.48,
     21.02,
@@ -13797,14 +13803,14 @@
     16.62,
     15.5,
     15.85,
-    15.99
+    15.81
    ],
    "p1": 0.527,
-   "p3": 0.555,
-   "x3": 1.38,
+   "p3": 0.554,
+   "x3": 1.41,
    "t": {
     "st": "frais",
-    "g": -23.1,
+    "g": -23.97,
     "a": 60
    }
   },
@@ -13814,13 +13820,13 @@
    "k": "crypto",
    "e": "💵",
    "cur": "USD",
-   "p": 29.7,
-   "d": 0.35,
-   "w": 0.25,
-   "m": 2.22,
-   "q": 5.41,
-   "y": 9.9,
-   "a": 4.93,
+   "p": 29.72,
+   "d": 0.39,
+   "w": 0.29,
+   "m": 2.25,
+   "q": 5.45,
+   "y": 9.93,
+   "a": 4.96,
    "h": [
     28.08,
     27.98,
@@ -13851,14 +13857,14 @@
     29.62,
     29.62,
     29.63,
-    29.7
+    29.72
    ],
    "p1": 0.514,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.22,
    "t": {
     "st": "tardif",
-    "g": 5.45,
+    "g": 5.48,
     "a": 60
    }
   },
@@ -13868,13 +13874,13 @@
    "k": "crypto",
    "e": "💶",
    "cur": "USD",
-   "p": 101.02,
-   "d": -0.36,
-   "w": -0.28,
-   "m": -1.95,
-   "q": -5.57,
-   "y": -6.86,
-   "a": -5.32,
+   "p": 100.98,
+   "d": -0.39,
+   "w": -0.32,
+   "m": -1.99,
+   "q": -5.61,
+   "y": -6.9,
+   "a": -5.36,
    "h": [
     107.2,
     107.3,
@@ -13908,11 +13914,11 @@
     101
    ],
    "p1": 0.516,
-   "p3": 0.555,
-   "x3": 0.01,
+   "p3": 0.554,
+   "x3": 0,
    "t": {
     "st": "frais",
-    "g": -5.5,
+    "g": -5.54,
     "a": 60
    }
   },
@@ -13923,11 +13929,11 @@
    "e": "💴",
    "cur": "USD",
    "p": 57.47,
-   "d": -0.13,
-   "w": 0.17,
-   "m": -1.04,
-   "q": 0.39,
-   "y": -2.04,
+   "d": -0.14,
+   "w": 0.16,
+   "m": -1.05,
+   "q": 0.38,
+   "y": -2.05,
    "a": -2.44,
    "h": [
     58.67,
@@ -13962,11 +13968,11 @@
     57.47
    ],
    "p1": 0.519,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.21,
    "t": {
     "st": "frais",
-    "g": -0.44,
+    "g": -0.45,
     "a": 60
    }
   },
@@ -13976,13 +13982,13 @@
    "k": "crypto",
    "e": "🇨🇭",
    "cur": "USD",
-   "p": 105.18,
-   "d": -0.68,
-   "w": 0.93,
-   "m": -1.04,
-   "q": -3.43,
-   "y": -5.75,
-   "a": -4,
+   "p": 105.14,
+   "d": -0.72,
+   "w": 0.89,
+   "m": -1.07,
+   "q": -3.47,
+   "y": -5.79,
+   "a": -4.03,
    "h": [
     108.8,
     108.7,
@@ -14013,14 +14019,14 @@
     104.3,
     104.8,
     105.3,
-    105.2
+    105.1
    ],
    "p1": 0.514,
-   "p3": 0.555,
-   "x3": 0,
+   "p3": 0.554,
+   "x3": -0.02,
    "t": {
     "st": "frais",
-    "g": -2.95,
+    "g": -2.99,
     "a": 60
    }
   },
@@ -14070,7 +14076,7 @@
     126.2
    ],
    "p1": 0.517,
-   "p3": 0.555,
+   "p3": 0.554,
    "x3": 0.04,
    "t": {
     "st": "frais",
@@ -14135,15 +14141,44 @@
    "baseUp21": 53.9,
    "baseAvg21": 1.1
   },
-  "hits": []
+  "hits": [
+   {
+    "sym": "SPM.MI",
+    "name": "Saipem",
+    "day": 0,
+    "chg": 3.8048361405858655,
+    "gain20": 3.503683702767746,
+    "vol": 1.5125815294148193,
+    "trigger": 4.638000011444092,
+    "model": {
+     "h": "3M",
+     "p": 0.5544828165752071,
+     "action": "ATTENDRE_REPLI"
+    }
+   }
+  ]
  },
  "summary": [
+  {
+   "sym": "RMS.PA",
+   "name": "Hermes",
+   "h": "3M",
+   "action": "ATTENDRE_CONFIRMATION",
+   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 1290,00 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "ctx": {
+    "title": "Fortune de la famille Hermès : H51 et Hermès International",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9yWWFqa3BqQUtwNzhSRVY0anpWalVhSEg4UUlFOEY0MUdrQXd6Y3c4YWh2ZEE5TDNtdG1sOTRxeWp2alF0djFEVlZfVEQ0aWF4R2dWM2cwSzJlcFJPREVFajlqcmJMYzFv?oc=5",
+    "source": "Andlil",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   }
+  },
   {
    "sym": "MT.AS",
    "name": "ArcelorMittal",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 54,71 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 54,69 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
    "ctx": {
     "title": "ARCELORMITTAL Cours Action MT, Cotation Bourse Euronext Amsterdam",
     "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE5ZR1doelFQQkEzcXg4QzhWY01xSHBkcnZOVmx6NTk1UFFYV3MyeUlkZHVOZ1FkajdfanMxYkI3VzlqenprU0ZlRGNrUWRuZER0?oc=5",
@@ -14157,22 +14192,8 @@
    "name": "Carrefour",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 13,86 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 13,87 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
    "ctx": null
-  },
-  {
-   "sym": "ACA.PA",
-   "name": "Credit Agricole",
-   "h": "3M",
-   "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 15,62 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": {
-    "title": "Bloomberg : des investisseurs et des analystes s’interrogent sur le manque de détails concernant l’offre de Crédit Agricole sur Banco BPM",
-    "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZHRGam5sVjNyeUtQYVcteXNubGpQUWJiOWNzN24zUjNjeXNTM0JyQXJFamhWblhFajRnbjc5MVhQemJ6bDRvNmp6MzZQRURJQl9ORGphY2pEd2lXWkxxR3NmQmpTMXJzZVRCeWlhTGd3TkdGbkZzS0pjd2puR3VpTDhXQUpmMnk1dC1IRXRoeW1KbVJRdlFfQnlTNkFLU3RwTkx2cFBhdzVBd1FSSGt4UlRTd0xkd1ZNTTJBbE9KSmZGQks1d0gyeTJ3TGZ2NEstNnZYS2ZoUDJ5MEdXeGhZTHpCSWhIcExXRnRicmhySQ?oc=5",
-    "source": "Zonebourse",
-    "tone": "neutre",
-    "verdict": "Actu à lire avant d'acheter"
-   }
   },
   {
    "sym": "EDEN.PA",
@@ -14182,76 +14203,82 @@
    "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 25,32 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
    "ctx": {
     "title": "Edenred clôture en hausse",
-    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPbFBLcERmT2szeUViV0s3N1cyMFBTcVk3QWtkTmVwN1dDNjNueXhWOF9tWlAyVmlwUEc5YXNCMDhBU0VUMVFSRXhIY3ZrNEt2RDZZTTVSLUFmWnRZZFN5bElFbzI1ZUlOTjN5TW16ekhkUkFMTWRPR3k0NlZEY1dEMS1wYUhZYl9LUVcxY3hRZw?oc=5",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxOREdrRmVtT3lUZVJlQkFNU2xsSkFzdDlPNmpJcHE4ZVJxNTQ4NDA5LV9YTWRIb2FVWDNlZUpEdXVBNUR5RkZpcW1Kc2p1WXJSR3hsb3JRTVdobG1Vb0pSVnJhVGNBZ3NZMWhvbTNFdXhXaFlzc2ViNzV1aEJWanNaNjVqS3Q?oc=5",
     "source": "Boursier.com",
     "tone": "positif",
     "verdict": "L'actu va dans le même sens"
    }
   },
   {
-   "sym": "GLE.PA",
-   "name": "Societe Generale",
+   "sym": "ML.PA",
+   "name": "Michelin",
    "h": "3M",
    "action": "ATTENDRE_CONFIRMATION",
-   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 64,65 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
-   "ctx": null
+   "text": "3 mois · 55 % de chances de hausse. Acheter si le cours depasse 31,69 en seance (plus haut d'hier). Les indicateurs sont positifs mais la tendance de fond (SMA 50) baisse encore : on attend la confirmation.",
+   "ctx": {
+    "title": "MICHELIN Cours Action ML, Cotation Bourse Euronext Paris",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9hR2Q5ajlWM0tXT20zbkNzRS1wMzRscGs2OWRHQ1NFS2FZaTd2RDdoTDBZUXdkYlFpVFR2QVI5X0t2TVNYYWZLRVRRZG1VOUFW?oc=5",
+    "source": "Boursorama",
+    "tone": "neutre",
+    "verdict": "Actu à lire avant d'acheter"
+   }
   }
  ],
  "news": [
   {
-   "title": "La chute de la tech en Bourse est-elle source d’opportunités ?",
-   "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQRWlwaHNjeTh6T0JwZzItN0RCdTdvSndsdkFXejlYTUp2TXFEWFNKNnZ1bS15N2ptbzdPTktRTmVqZDB3WjFwQU1KZlJTaERZTkpUbnRLSDRCSEJ6bG9vc3hYOXBLNElsem9FaUE4ck5YSmZ1aGVsLTNkYVRkUVJGUzRrMzFGTjVQQ1FyRng5MjRnNmY4dWplS05WQnhvd25BSENFdA?oc=5",
-   "source": "Le Figaro",
-   "time": 1795796100000,
+   "title": "Dollar australien : de nouvelles pertes face au dollar américain sont probables – Rabobank",
+   "link": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQSVZ2R3E1MHFITkFVeGozM01mM2pyZmphVWdTbmJSX1J2RTltdERIU0FzYXVtYm9yUzEtR3hRSFJJb2MxUE82SURoODNzRTFocUhUV0dQSG1BUFNpUjg3RVc4eUx2Z1dGek50UXJXZmc4QXVlcHVDVXdvTDEyR1ZwTXFsNGdVdWZtT3lLaEx0WWU0WEItMG9oYURiVjZaQV9pMTJoUk45dnVpQTFscS00czlrLVBDeWZJVnQwbWZvbjBkS2w0Nkw5N2lfVE4?oc=5",
+   "source": "www.tmgm.com",
+   "time": 1795800844000,
    "tone": "négatif"
   },
   {
-   "title": "Bourse: Wall Street ouvre en hausse pour terminer une semaine agitée",
-   "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNLWV6RlBjVTlmRnBVcVVjdS0xcU92X0dnRmxoRjh3Y0g0TmZ5em9RZlZySjdVbzBNN3lVOU5iR0U5TUhJOFc2VHhaWS1SLWVwVlYtS1ZfS3Y5cDdYNkp4bWdPcnZrX1AtMTA4aUZXT2Z6RGZiek9KdkN2U05NNFoyajRDVkh4Tzl4VC1fYUllelVSczBNb0g5ZzFLZFBtcFU?oc=5",
-   "source": "Les Affaires",
-   "time": 1795794555000,
+   "title": "Le rebond du dollar australien s’essouffle, les anticipations d’une Fed restrictive soutenant le dollar américain",
+   "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxNTXh1cVRtX2xIR2NaZlJRVUE4LVc4SHN1VzJDNEgwWHBoaHJkRnJoSHZLV29qdjlLbnUwaVBhTWIzd2lYTHdqRW1NNFd0TXNYMGZueDhncXM5Z1l2T2k1cUxsMkIxU1F0dTRyMU45NnllZGZmdEJVT25SZWFLMGRyYzhZMmlBSFVVUFBGWUVzTkcyRkhjMU1LYUYtdnk4ZVd0eUZwVTFFMzM1a0Y4b3Y4aGxsS2hsbF9qRlo3dXliZjVFUk8zanROeFZJUFJzVWZPdHlSSGJHclYyempodEItMmVNZnk?oc=5",
+   "source": "www.tmgm.com",
+   "time": 1795800844000,
    "tone": "positif"
   },
   {
-   "title": "Black Friday : Wall Street profite des soldes sur les semi-conducteurs",
-   "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQdG1Ba0l0bHQ2TkpHeXE2b0RrVjhKRzBJc0JxV1Q3OUR4dTJCMTVYclpWVl9QbFpVX1gyOWc3bzdDdDYxbXViZFZIRXdqZ19lUkpBNjhMREZJWDRRRDktQlhSUjJhTk1idzY5cGM0dnBDeTFhSzRXTUJVc2dPdmJKWEsyckF0M25yRGM4VW00QXVaemF0OXBwdDdhUnUxRzJSeTBjWnRVZC1ZTEd3dU5hUnN0dnhnNVhQTzhpbXlvNXdYa1VXeFNN?oc=5",
-   "source": "Zonebourse Suisse",
-   "time": 1795793661000,
+   "title": "Bourse Zurich: le SMI dans le vert, soutenu par Wall Street",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOS1U1ekZ6bmV3ektoV24yX1lHbm13RkZfdDhfd1lQeU5yLVFjN0w5ZWdDWlFlZDM0bm1USF90dHlaZklXYWU5X3FEX0IzeWJkNE16QnpUYml0R21LVTJWdXpvUWFEV3R6M0pjU29sX1V3RTBrQ255RUc3VnhDN3dHMHdGSDNJcVE5WFhUa0V3akZ0M1o4SmV5RzVPLU5KeG1TYzdtanhMVzA0Z05OVkl4LUctRWNORmpIWkE?oc=5",
+   "source": "Zonebourse",
+   "time": 1795799790000,
    "tone": "neutre"
   },
   {
-   "title": "Wall Street ouvre dans le vert mais reste prudente sur les valeurs de l'IA",
-   "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxOYVpXOVlrU3ZDU1VqRFNnQWs5X3YxUVlTYlB5cC1jeEVXZ1BreTFoSnRSX3V0S1dEd0pSTTh2S1JIanNidXNfeHJmN1VYX0dUZ1ZlaTltcHpZN0hKeXBlbmszZ19WMXJKSjNWYUNzenVjdGVTRjl3NnQ5VFM0eDBnQVVqZUN2clhlcFZzT29mSFdVejg0d2xqdEczaFlhckdILXNKMU5iWEFvNUdHRmhxRUMxYUNFNXpUQ0NfUFJHNUdQazAyZ1d2QzZBVFZGaFU?oc=5",
-   "source": "Zonebourse Suisse",
-   "time": 1795791559000,
-   "tone": "neutre"
+   "title": "Wall Street : le S&P 500 peut-il rebondir de 45 % après sa correction ?",
+   "link": "https://news.google.com/rss/articles/CBMivAFBVV95cUxQeVUtZWFidVVJdHlKaW0xNTNNdkxDTHhGdGktMWwwZUlxRHQwU01qdkQtME5pOFJOSHExX1BlMy15aHc5TmNaWFB6ZTlRVHY0Zl9GcE82UHZKN1gxNG5Sc1pycDRjV0VpUEtTbmUzSVFOUWZ3OG80X2hwM3NKd2hIM011aFllY1I2NG1VRmV5ZERhUnRMamZvRXdtczRpT1lmQ2xoZzN1VC1aLUFjWmtHRzJFX0cyQVUtNTJBSg?oc=5",
+   "source": "Le Revenu",
+   "time": 1795799400000,
+   "tone": "positif"
   },
   {
-   "title": "AIR FRANCE-KLM Cours Action AF, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9oZGRqT0RwNDhIdzJYcEN1XzdPa3VfRzlGcmI0OGlhOHk3aVJjdUU5aDE3NUVJS0g5aUdHR3dCaTQtSW9xeVFLUFZCcHVNVkRY?oc=5",
+   "title": "L'Europe finit dans le vert, se redresse après des jours agités",
+   "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxPZHNMdW10Sk9YVC04Nmp4UTdMZVNXWmlXaEVaOHJIQnNOM3M5djdTU0NVbTBVcy04ZTJmU25LUmZCb04yQkNmV2hMbGJVM3R1dFlBS1ZlTmIyZ0RFUUxDSjNDNi11U2MxWmM2MGNCbFVDRzNka3gzeWxXRWsyMk91Qjh2dTlLSDhaVmtBMkZRaWZOdEF5YUFGVEhSay1EN0VpTFk4U2dhOFZHU2lOdUYycUZGN21EUmhmd0JGUmpfdTdDX2h3YlRNd2JPbjVHYWJkcFVhcmdxc9IB3AFBVV95cUxQU0xrTk9QX3ZaTHVlQUNsZHlYX0R3aTctejFCWHR4Z1QxQWNjSmdQRHJud1NnaUVvN3ZDUWx5ZFgyckxMMUd3aktjZF9LczJfbHVhd2JobVMwZXZySWd0N3NnUllRakRkQmt5U3MtdnZJVmtPWE1EdmpoenRnUk5jQTdHVm5BYVRLWFZTbElqaVoyeEZ1YnBaal94MWY3cGM0R1lBOTJQU21fTXFWakxfcVM4Rm1uN2ZfY2V3Y0U1VU5ZN3BzY01EVnY4WXVaMUhYek5PYUpWRDBjSExt?oc=5",
    "source": "Boursorama",
-   "time": 1795791341000,
+   "time": 1795799199000,
    "tone": "neutre"
   },
   {
-   "title": "Dollar canadien : stable face au dollar américain – Scotiabank",
-   "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPUTJYU201ODUtaDNwcWlmYk5QM1RuTFRkVFVOV293cUlNTFlneVZSNTQySHIwZGduWW92N3ZheEx5aVJfdmYwTmV3NGVXeGJuNExiXzh1MmpFbE41LXRfVF9pZXJBNFdvb3BpY0hmWXoxVGJna1pJcTIxeldTRDNndG9ibmwzMkNNYXlac0s2bzl4dmhHZlk3dmVTQ0NMMjF2ZzNBTDl4cF9SNTRaMlhaVTJaUmR5YjZlY3R6QWZKVTk?oc=5",
-   "source": "www.tmgm.com",
-   "time": 1795791105000,
+   "title": "Donald Trump, à la fois bourreau et sauveur de Wall Street",
+   "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxOa2FCZVhsZ2Ezb0hnblFqbktvX1g5ZlNUR0p1S0lKa3dLUnZQN2dXVjZ5SlhBUDJpNGxNelE4U3R3cWNqUGxONWhPLTZaNnM3MGlqVXBhUXVpM3NGelIzZlBZNTMxWUxBbUpzZ3VpOEVnLXp1Y21veEVHa0ZJT29OVTVHUmlydC12NkhfYkEwSUtFOHA2YzFlbThBb1ExZkNoaGItM28tbDVGYWdqenBmdXJlZXZMcnh6ckE?oc=5",
+   "source": "Zonebourse",
+   "time": 1795799186000,
    "tone": "neutre"
   },
   {
-   "title": "EUTELSAT Cours Action ETL, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9WRU5JRXJEOGFQWk94cFB5TVlIM2xYMG1ZX2NmRGV6dVpnTDZOc0tKWVlFcEVLWG91SjVHZ2RqZEgwNFhpZFNsQ2NlNXprbEc5Tnc?oc=5",
+   "title": "Clôture Paris : le CAC 40 prolonge son rebond mais attention à la mise à jour de la note de la France par S&P Global Ratings",
+   "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxOMnFpSkFFNEhQOUtPTEI2OEFmZGI5bEMtOFFEcUI1QnJxOWlvQ0tKTlY3NjJPSXcxQTRlT1RiTzhGMTFRLVk1LTYwdm1vY1lJbU9OWHRaaUxXamhhOXprMXk4Y3hQR0RyREp5V09uTUxvZlhBN25oZEUxSmxCTXkwbVZrVl94NmZ0X1lrdWJHMkVpcU9jQzAtNkEwTmp1Zm9VNEdHV3lwM0k2ZzI4QUo1R2RIbXJVLXFqQ3gyMUFJRWlOQkFoZVdhTTBWSHpFN1kzT1Q3Z25WOHE4NFNoaE5sQjFNQURpb2xoMVh5WW81d3JiVjNvekRjRG5HNWI3bGhKRzlNcmtGcHR0Qm41bU9R?oc=5",
+   "source": "Boursier.com",
+   "time": 1795798803000,
+   "tone": "positif"
+  },
+  {
+   "title": "PUBLICIS GROUPE Cours Action PUB, Cotation Bourse Euronext Paris",
+   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1KV1FrZlU2RWM2V2VxOWQyT2N5d2cyNnMxTlk4WC13aGh4X0xpZ2xGNEtkUGI4OHZOUXh6YmxqRWdrVXdaVlMzWU9jTXFqN1RqTHc?oc=5",
    "source": "Boursorama",
-   "time": 1795790147000,
-   "tone": "neutre"
-  },
-  {
-   "title": "UNIBAIL-RODAMCO-WESTFIELD Cours Action URW, Cotation Bourse Euronext Paris",
-   "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1ZVDFrUHBST0plNURtb3dSOGhYS2Y3ZjRTcnBURTFKbklmTnZBQWZuVk1IVFk3bjVBSnN3anlqUk9BZFNldGVWREJDT2dQOHp6OEE?oc=5",
-   "source": "Boursorama",
-   "time": 1795788694000,
+   "time": 1795798438000,
    "tone": "neutre"
   }
  ]

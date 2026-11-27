@@ -1,29 +1,29 @@
 *Quantum Algo – vendredi 27 novembre 2026*
 
-• CAC 40 à 8 162 points : +0,7 % à la dernière séance, +2,4 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
+• CAC 40 à 8 156 points : +0,6 % à la dernière séance, +2,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
 • Pas de tendance nette des indices à 1 mois.
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
-• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,9 %
-  entrée 54,71-55,42, stop 47,69, objectif 65,25, revoir le 03/03
-• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,0 %
-  entrée 13,86-13,94, stop 13,06, objectif 16,17, revoir le 03/03
+• Hermes – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,3 %
+  entrée 1290,00-1301,57, stop 1174,30, objectif 1463,55, revoir le 03/03
   ⚠ résultats pendant la position
-• Credit Agricole – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,5 %
-  entrée 15,62-15,70, stop 14,78, objectif 16,92, revoir le 03/03
+• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,6 %
+  entrée 54,69-55,40, stop 47,67, objectif 65,23, revoir le 03/03
+• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,7 %
+  entrée 13,87-13,95, stop 13,07, objectif 16,14, revoir le 03/03
   ⚠ résultats pendant la position
 • Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
-  entrée 25,32-25,56, stop 22,89, objectif 29,30, revoir le 03/03
-• Societe Generale – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,8 %
-  entrée 64,65-65,21, stop 59,12, objectif 72,98, revoir le 03/03
+  entrée 25,32-25,56, stop 22,89, objectif 29,40, revoir le 03/03
+• Michelin – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,0 %
+  entrée 31,69-31,88, stop 29,80, objectif 34,81, revoir le 03/03
   ⚠ résultats pendant la position
 
 *À lire*
-• La chute de la tech en Bourse est-elle source d’opportunités ? (Le Figaro)
-• Bourse: Wall Street ouvre en hausse pour terminer une semaine agitée (Les Affaires)
-• Black Friday : Wall Street profite des soldes sur les semi-conducteurs (Zonebourse Suisse)
+• Dollar australien : de nouvelles pertes face au dollar américain sont probables – Rabobank (www.tmgm.com)
+• Le rebond du dollar australien s’essouffle, les anticipations d’une Fed restrictive soutenant le dollar américain (www.tmgm.com)
+• Bourse Zurich: le SMI dans le vert, soutenu par Wall Street (Zonebourse)
 
 *🎓 Question du jour* : Capital 10 000 €, règle du 1 %, stop à 5 % sous l'entrée. Quelle taille de position ?
 A. 500 €
