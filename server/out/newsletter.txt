@@ -1,4 +1,4 @@
-*Quantum Algo – vendredi 27 novembre 2026*
+*Quantum Algo – samedi 28 novembre 2026*
 
 • CAC 40 à 8 156 points : +0,6 % à la dernière séance, +2,3 % sur un mois, sous sa moyenne 200 jours ; pas d'avis net à 1 mois (≈ pile ou face), climat de marché nerveux.
 • Pas d'annonce macroéconomique majeure aujourd'hui.
@@ -6,31 +6,31 @@
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
-• Hermes – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +0,3 %
-  entrée 1290,00-1301,57, stop 1174,30, objectif 1463,55, revoir le 03/03
+• TotalEnergies – Entrer (3 mois) : 55 % de chances de hausse, variation attendue +0,9 %
+  entrée 77,55-78,69, stop 73,48, objectif 85,76, revoir le 23/02
   ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,6 %
-  entrée 54,69-55,40, stop 47,67, objectif 65,23, revoir le 03/03
-• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,7 %
-  entrée 13,87-13,95, stop 13,07, objectif 16,14, revoir le 03/03
+• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
+  entrée 52,76-53,46, stop 45,80, objectif 63,20, revoir le 02/03
+• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,8 %
+  entrée 13,89-13,97, stop 13,06, objectif 16,14, revoir le 02/03
   ⚠ résultats pendant la position
-• Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
-  entrée 25,32-25,56, stop 22,89, objectif 29,40, revoir le 03/03
-• Michelin – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,0 %
-  entrée 31,69-31,88, stop 29,80, objectif 34,81, revoir le 03/03
+• Dassault Systemes – Entrer (3 mois) : 55 % de chances de hausse, variation attendue +2,1 %
+  entrée 21,95-22,44, stop 20,23, objectif 25,99, revoir le 23/02
   ⚠ résultats pendant la position
+• Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,0 %
+  entrée 25,56-25,81, stop 23,02, objectif 29,54, revoir le 02/03
 
 *À lire*
-• Dollar australien : de nouvelles pertes face au dollar américain sont probables – Rabobank (www.tmgm.com)
-• Le rebond du dollar australien s’essouffle, les anticipations d’une Fed restrictive soutenant le dollar américain (www.tmgm.com)
-• Bourse Zurich: le SMI dans le vert, soutenu par Wall Street (Zonebourse)
+• NVIDIA Cours Action NVDA, Cotation Bourse NASDAQ (Boursorama)
+• VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris (Boursorama)
+• SANOFI Cours Action SAN, Cotation Bourse Euronext Paris (Boursorama)
 
-*🎓 Question du jour* : Capital 10 000 €, règle du 1 %, stop à 5 % sous l'entrée. Quelle taille de position ?
-A. 500 €
-B. 1 000 €
-C. 2 000 €
-D. 5 000 €
-Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q16
+*🎓 Question du jour* : Ratio gain/risque de 2 : cela veut dire…
+A. on gagne 2 fois sur 3
+B. le gain visé vaut deux fois la perte acceptée
+C. on double sa mise
+D. le stop est à 2 %
+Réponse : https://papagallotoon.github.io/Quantum-algo/#/apprendre/q/q17
 
 Détails : https://papagallotoon.github.io/Quantum-algo/
 
