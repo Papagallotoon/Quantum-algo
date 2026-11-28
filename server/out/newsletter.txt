@@ -6,24 +6,23 @@
 • 5 opportunité(s) retenue(s), surtout sur 3 mois.
 
 *Opportunités*
-• TotalEnergies – Entrer (3 mois) : 55 % de chances de hausse, variation attendue +0,9 %
-  entrée 77,55-78,69, stop 73,48, objectif 85,76, revoir le 23/02
+• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,6 %
+  entrée 54,69-55,40, stop 47,67, objectif 65,23, revoir le 03/03
+• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,7 %
+  entrée 13,87-13,95, stop 13,07, objectif 16,09, revoir le 03/03
   ⚠ résultats pendant la position
-• ArcelorMittal – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
-  entrée 52,76-53,46, stop 45,80, objectif 63,20, revoir le 02/03
-• Carrefour – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,8 %
-  entrée 13,89-13,97, stop 13,06, objectif 16,14, revoir le 02/03
+• Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,3 %
+  entrée 25,32-25,56, stop 22,89, objectif 29,57, revoir le 03/03
+• STMicroelectronics – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +1,0 %
+  entrée 37,69-38,41, stop 30,46, objectif 48,53, revoir le 03/03
   ⚠ résultats pendant la position
-• Dassault Systemes – Entrer (3 mois) : 55 % de chances de hausse, variation attendue +2,1 %
-  entrée 21,95-22,44, stop 20,23, objectif 25,99, revoir le 23/02
-  ⚠ résultats pendant la position
-• Edenred – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,0 %
-  entrée 25,56-25,81, stop 23,02, objectif 29,54, revoir le 02/03
+• Teleperformance – Attendre la confirmation (3 mois) : 55 % de chances de hausse, variation attendue +2,4 %
+  entrée 69,44-70,22, stop 61,67, objectif 83,36, revoir le 03/03
 
 *À lire*
-• NVIDIA Cours Action NVDA, Cotation Bourse NASDAQ (Boursorama)
-• VEOLIA Cours Action VIE, Cotation Bourse Euronext Paris (Boursorama)
-• SANOFI Cours Action SAN, Cotation Bourse Euronext Paris (Boursorama)
+• Le président de la Bundesbank prévoit que la BCE pourrait continuer à relever ses taux d'intérêt. (Vietnam.vn)
+• CLARIANE Cours Action CLARI, Cotation Bourse Euronext Paris (Boursorama)
+• BIC Cours Action BB, Cotation Bourse Euronext Paris (Boursorama)
 
 *🎓 Question du jour* : Ratio gain/risque de 2 : cela veut dire…
 A. on gagne 2 fois sur 3
